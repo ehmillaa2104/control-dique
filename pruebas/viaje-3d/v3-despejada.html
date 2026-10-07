@@ -36,36 +36,28 @@
     .panel { position: fixed; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
     button:focus-visible, input:focus-visible, [role="button"]:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
-    /* --- Barra superior: los datos más importantes, siempre a la vista --- */
-    .topbar { top: 12px; left: 12px; right: 12px; padding: 8px 12px; display: flex; align-items: center; gap: 14px; overflow-x: auto; scrollbar-width: none; }
-    .topbar::-webkit-scrollbar { display: none; }
+    /* --- Tarjeta principal: solo lo esencial de la fase --- */
+    .hud { top: 16px; left: 16px; padding: 12px 14px; width: min(340px, calc(100vw - 32px)); }
+    .hud-top { display: flex; align-items: center; gap: 8px; }
     .sp { flex: 1; }
-    .tb-id { flex: none; }
-    .tb-id b { display: block; font-size: 13px; font-weight: 900; letter-spacing: -.01em; white-space: nowrap; }
-    .tb-id span { display: block; font-size: 10.5px; color: var(--ink-3); white-space: nowrap; }
-    .tb-sep { width: 1px; align-self: stretch; background: var(--border); flex: none; }
-    .tb-phase { display: flex; align-items: center; gap: 10px; flex: none; }
-    .phase { font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0a0a0a; background: #9cd3e6; border-radius: 6px; padding: 3px 8px; white-space: nowrap; }
+    .tag { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; }
+    .phase { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0a0a0a; background: #9cd3e6; border-radius: 6px; padding: 3px 8px; }
     .phase.dique { background: var(--dock); }
     .phase.sail { background: #ffffff; }
-    .tb-t { font-size: 15px; font-weight: 800; white-space: nowrap; }
-    .tb-s { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
-    .tb-s img { width: 18px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
-    .tb-kpis { display: flex; gap: 18px; align-items: center; flex: 1; justify-content: center; }
-    .tk { flex: none; }
-    .tk .l { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
-    .tk .v { font-size: 16px; font-weight: 800; white-space: nowrap; line-height: 1.2; }
-    .tk .s { font-size: 10.5px; color: var(--ink-3); white-space: nowrap; }
-    .mini { position: relative; width: 92px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.14); margin: 3px 0 1px; overflow: hidden; }
-    .mini i { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 3px; }
-    .tb-actions { display: flex; gap: 6px; flex: none; }
-    a.btn { text-decoration: none; display: inline-flex; align-items: center; }
-    .btn[aria-expanded="true"] { background: #fff; color: #0a0a0a; border-color: #fff; }
+    .date { font-size: 12px; color: var(--ink-3); }
+    h1 { margin: 8px 0 0; font-size: 21px; font-weight: 900; letter-spacing: -.02em; line-height: 1.15; }
+    .loc { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 13px; color: var(--ink-2); }
+    .loc img { width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
+    .hud-main { display: flex; align-items: center; gap: 12px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .ring { width: 58px; height: 58px; flex: none; }
+    .hud-kpis { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hk .l { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+    .hk .v { font-size: 17px; font-weight: 800; white-space: nowrap; }
+    .more { margin-top: 10px; width: 100%; font: inherit; font-size: 12.5px; font-weight: 700; color: var(--ink); background: rgba(255,255,255,.08); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .more:hover { background: rgba(255,255,255,.14); }
+    .more[aria-expanded="true"] { background: #fff; color: #0a0a0a; }
     .alert { color: var(--alert) !important; }
     .muted { color: var(--ink-3); font-size: 12px; }
-    @media (max-width: 1500px) { .tb-id, .tb-id + .tb-sep { display: none; } .tb-kpis { gap: 11px; } .tk .v { font-size: 15px; } .tb-t { font-size: 14px; } .topbar { gap: 11px; } }
-    @media (max-width: 1360px) { .tb-s .tb-date { display: none; } .tb-kpis { gap: 9px; } .tk .v { font-size: 14px; } .tk .s { font-size: 10px; } .mini { width: 78px; } }
-    @media (max-width: 1180px) { .tk.cost { display: none; } }
 
     /* --- Cajón de detalles: se despliega a pedido, secciones plegables --- */
     .drawer { top: 16px; right: 16px; width: 330px; overflow: auto; padding: 4px 14px 10px; scrollbar-width: thin;
@@ -102,7 +94,7 @@
 
     /* --- Línea de tiempo: los tramos de color sirven para saltar de fase --- */
     .timeline { left: 16px; right: 16px; bottom: 16px; padding: 10px 14px 12px; }
-    .tl-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .tl-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
     .tl-head b { font-size: 14px; }
     .tl-note { color: var(--ink-3); font-size: 12px; }
     .btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
@@ -125,11 +117,7 @@
 
     /* --- Modo cine: durante el viaje completo solo queda lo esencial --- */
     .hud, .timeline { transition: opacity .4s; }
-    body.cine #more, body.cine .tl-note { display: none; }
-    /* hitos sobre la línea de tiempo */
-    .hito { position: absolute; top: -11px; width: 8px; height: 8px; margin-left: -4px; transform: rotate(45deg); background: #8f99a3; border: 1px solid #0a0a0a; z-index: 5; cursor: help; }
-    .hito.ok { background: #fff; }
-    .hito.late { background: var(--alert); }
+    body.cine .more, body.cine .tl-note { display: none; }
     body.cine .drawer { transform: translateX(calc(100% + 32px)); visibility: hidden; }
 
     /* --- Etiquetas 3D --- */
@@ -140,18 +128,15 @@
     .city { color: #fff; font-weight: 700; font-size: 11.5px; text-shadow: 0 1px 4px rgba(0,0,0,.85); transform: translate(8px, -2px); }
     .port { color: #0a0a0a; background: #fff; font-weight: 800; font-size: 11px; padding: 3px 8px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
     .ship { font-size: 12.5px; font-weight: 800; padding: 5px 10px; background: #0a0a0a; color: #fff; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-    .work { font-size: 11px; font-weight: 700; color: #0a0a0a; background: rgba(255,255,255,.94); padding: 2px 8px 2px 6px; border-radius: 999px; border-left: 4px solid #999; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
-    .work.ING { border-left-color: #5aa9e6; } .work.CUB { border-left-color: #f2a541; } .work.TEC { border-left-color: #4cc9a0; }
-    .work small { font-weight: 600; color: #474747; }
     .bar3d { font-weight: 800; font-size: 11.5px; color: #0a0a0a; background: var(--dock); padding: 3px 8px; border-radius: 6px; }
 
     .fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #0a0a0a; font-weight: 600; }
 
-    @media (max-width: 760px) {
-      .topbar { top: 8px; left: 8px; right: 8px; flex-wrap: wrap; gap: 8px 14px; }
-      .tb-sep, .tk.opt { display: none; }
-      .tb-kpis { justify-content: flex-start; }
-      .tb-actions { margin-left: auto; }
+    @media (max-width: 700px) {
+      .hud { top: 8px; left: 8px; width: calc(100vw - 16px); padding: 10px 12px; }
+      h1 { font-size: 18px; }
+      .ring { width: 50px; height: 50px; }
+      .hk .v { font-size: 15px; }
       .drawer { left: 8px; right: 8px; top: auto; width: auto; transform: translateY(calc(100% + 220px)); }
       .timeline { left: 8px; right: 8px; bottom: 8px; padding: 10px; }
       .seg { font-size: 0; }
@@ -164,18 +149,21 @@
   <div id="scene" role="img" aria-label="Mapa 3D del viaje del buque entre Panamá y el astillero de Cartagena, Colombia"></div>
   <div id="labels"></div>
 
-  <header class="panel topbar" aria-live="polite">
-    <div class="tb-id"><b>Cronograma visual</b><span>M/V Austral Trader · prueba 3D</span></div>
-    <div class="tb-sep"></div>
-    <div class="tb-phase"><span class="phase" id="phase"></span>
-      <div><div class="tb-t" id="title"></div><div class="tb-s"><img id="flag" alt=""><span id="loc"></span><span class="tb-date">·</span><span class="tb-date" id="date"></span></div></div></div>
-    <div class="tb-sep"></div>
-    <div class="tb-kpis" id="tb-kpis"></div>
-    <div class="tb-actions">
-      <button class="btn" type="button" id="more" aria-expanded="false" aria-controls="drawer">Detalles</button>
-      <a class="btn" href="../../index.html" target="_blank" rel="noopener" title="Abrir el dashboard (Rev. 1) en otra pestaña">Dashboard ↗</a>
+  <section class="panel hud" aria-live="polite">
+    <div class="hud-top"><span class="phase" id="phase"></span><span class="date" id="date"></span><span class="sp"></span><span class="tag">Prueba 3D</span></div>
+    <h1 id="title"></h1>
+    <div class="loc"><img id="flag" alt=""><span id="loc"></span></div>
+    <div class="hud-main">
+      <svg class="ring" id="ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="11"/>
+        <circle id="ring-plan" cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="11" stroke-dasharray="0 264" transform="rotate(-90 50 50)"/>
+        <circle id="ring-real" cx="50" cy="50" r="42" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 264" transform="rotate(-90 50 50)"/>
+        <text id="ring-txt" x="50" y="58" text-anchor="middle" fill="#fff" font-size="24" font-weight="900" font-family="Inter, sans-serif">0%</text>
+      </svg>
+      <div class="hud-kpis" id="hud-kpis"></div>
     </div>
-  </header>
+    <button class="more" id="more" type="button" aria-expanded="false" aria-controls="drawer"><span>Ver detalles · plazo, costos, áreas</span><span aria-hidden="true">›</span></button>
+  </section>
 
   <aside class="panel drawer" id="drawer" aria-label="Detalles del proyecto">
     <div class="drawer-h"><b>Detalles</b><span class="muted" id="drawer-scope"></span><button class="x" id="close" type="button" aria-label="Cerrar detalles">✕</button></div>
@@ -364,7 +352,6 @@
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.05;
-    renderer.localClippingEnabled = true; // para mostrar el casco granallado/pintado según el avance
     host.appendChild(renderer.domElement);
     const labelRenderer = new CSS2DRenderer({ element: document.getElementById("labels") });
     labelRenderer.setSize(innerWidth, innerHeight);
@@ -427,7 +414,7 @@
     const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
 
     // --- Dique seco en Cartagena y muelle en Colón (posiciones según las coordenadas reales) ---
-    const DOCK = { x0: 21, x1: 28, z0: -10.5, z1: -7.5, floor: -1.6, top: 0.55 }; // ancho para ver el costado del casco
+    const DOCK = { x0: 21, x1: 28, z0: -10.1, z1: -7.9, floor: -1.6, top: 0.55 };
     const DOCK_ZC = (DOCK.z0 + DOCK.z1) / 2;
     const COLON = V(-79.9, 9.36);
     const BERTH = new THREE.Vector3(COLON.x + 1.1, 0, -2.6);
@@ -649,9 +636,6 @@
     for (let i = 0; i <= 90; i++) { const m = new THREE.Mesh(dotGeo, DOT_OFF); m.position.copy(route.getPointAt(i / 90)); m.userData.f = i / 90; scene.add(m); dots.push(m); }
 
     // --- Barco low-poly (granelero con bandera panameña en la popa) ---
-    // La obra viva tiene tres capas: sucia (base), granallada y pintada. Las dos últimas se
-    // recortan con planos según el avance de sus OT, así el trabajo se ve avanzar de popa a proa.
-    const CLIP = { blast: new THREE.Plane(new THREE.Vector3(-1, 0, 0), -1e4), paint: new THREE.Plane(new THREE.Vector3(-1, 0, 0), -1e4) };
     function makeShip() {
       const ship = new THREE.Group();
       const M = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.55, metalness: 0.12, ...opts });
@@ -660,14 +644,11 @@
       hs.lineTo(-7, 1.25); hs.quadraticCurveTo(-7.45, 0, -7, -1.25);
       const ext = (depth) => new THREE.ExtrudeGeometry(hs, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2);
       const add = (mesh, x, y, z) => { mesh.position.set(x, y, z); mesh.castShadow = true; ship.add(mesh); return mesh; };
-      add(new THREE.Mesh(ext(0.75), M(0x5d5a3c, { roughness: 0.95 })), 0, -0.75, 0);                                        // obra viva sucia (incrustaciones)
-      add(new THREE.Mesh(ext(0.75), M(0x9c9c98, { roughness: 0.6, metalness: 0.35, clippingPlanes: [CLIP.blast] })), 0, -0.75, 0).scale.set(1.004, 1.002, 1.02); // granallada
-      add(new THREE.Mesh(ext(0.75), M(0xb3312a, { roughness: 0.45, clippingPlanes: [CLIP.paint] })), 0, -0.75, 0).scale.set(1.008, 1.004, 1.04);               // pintada (antifouling)
+      add(new THREE.Mesh(ext(0.75), M(0x9b2c22)), 0, -0.75, 0);                                   // obra viva
       add(new THREE.Mesh(ext(0.95), M(0x1f2328, { roughness: 0.4, metalness: 0.3 })), 0, 0, 0);   // obra muerta
-      const boot = add(new THREE.Mesh(ext(0.16), M(0xd23a2e)), 0, -0.05, 0); boot.scale.set(1.012, 1, 1.05);
+      const boot = add(new THREE.Mesh(ext(0.16), M(0xd23a2e)), 0, -0.05, 0); boot.scale.set(1.006, 1, 1.03);
       add(new THREE.Mesh(new THREE.ShapeGeometry(hs).rotateX(-Math.PI / 2), M(0x6f7a73)), 0, 0.96, 0);
-      const hatches = [];
-      for (let i = 0; i < 5; i++) hatches.push(add(new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.3, 1.7), M(0x2e5c7a)), -2.6 + i * 1.75, 1.12, 0));
+      for (let i = 0; i < 5; i++) add(new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.3, 1.7), M(0x2e5c7a)), -2.6 + i * 1.75, 1.12, 0);
       for (const x of [-1.75, 1.75, 5.1]) {
         add(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.14, 1.6, 8), M(0xf2c14e)), x, 1.75, 0.95);
         add(new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.1), M(0xf2c14e)), x + 0.8, 2.3, 0.95).rotation.z = 0.35;
@@ -683,209 +664,12 @@
       const fg = new THREE.PlaneGeometry(0.9, 0.6, 8, 5).translate(-0.45, 0, 0);
       add(new THREE.Mesh(fg, new THREE.MeshStandardMaterial({ map: ft, side: THREE.DoubleSide })), -7.1, 2.0, 0);
       waving.push({ geo: fg, base: Float32Array.from(fg.attributes.position.array), w: -0.9 });
-      // hélice (bronce) y timón
-      const bronze = M(0xc99a4b, { metalness: 0.65, roughness: 0.3 });
-      const prop = new THREE.Group(); prop.position.set(-7.2, -0.42, 0); ship.add(prop);
-      prop.add(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.3, 10).rotateZ(Math.PI / 2), bronze));
-      for (let k = 0; k < 4; k++) {
-        const b = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.52, 0.22), bronze);
-        b.position.set(0, Math.cos(k * Math.PI / 2) * 0.3, Math.sin(k * Math.PI / 2) * 0.3); b.rotation.x = k * Math.PI / 2; b.rotation.y = 0.35;
-        b.castShadow = true; prop.add(b);
-      }
-      add(new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.62, 0.07), M(0x5d5a3c)), -7.62, -0.36, 0); // timón
-      ship.userData = { hatches, prop };
       return ship;
     }
     const SCALE = 0.4;
     const ship = makeShip(); ship.scale.setScalar(SCALE); scene.add(ship);
     const shipLbl = label("", "ship", ship, new THREE.Vector3(0, 8.5, 0));
     const REST_Y = DOCK.floor + 0.3 + 0.75 * SCALE; // apoyado en los picaderos
-
-    // =========================================================
-    // Obras en el dique: lo que se ve depende de qué OT están activas en la fecha
-    // =========================================================
-    const SHIP_X = DOCKED.x, DECK_Y = REST_Y + 0.96 * SCALE + 0.02;
-    const STERN_X = SHIP_X - 7.45 * SCALE, HULL_LEN = 14.75 * SCALE;
-    const HOLD3_X = SHIP_X + 0.9 * SCALE, HOUSE_X = SHIP_X - 5.6 * SCALE;
-    const QUAY_Z = DOCK.z1 + 0.55, NQUAY_Z = DOCK.z0 - 0.7;
-    const OT = Object.fromEntries(ots.map((o) => [o.id, o]));
-    // Avance de una OT en el instante d: real hasta el corte; después, plan desplazado por el atraso de su área
-    function otProg(id, d) {
-      const o = OT[id];
-      if (!o) return 0;
-      if (d <= AT) return lastAt(o, Math.max(0, Math.min(AT, Math.ceil(d)))).p;
-      return Math.max(lastAt(o, AT).p, planFrac(o, d - S[o.area].delay) * 100);
-    }
-
-    // Trabajadores: overol de color de su área y casco
-    const AREA_COL = { ING: 0x5aa9e6, CUB: 0xf2a541, TEC: 0x4cc9a0 };
-    const skin = new THREE.MeshStandardMaterial({ color: 0xd4a27c, roughness: 0.8 });
-    function worker(tag, helmet = 0xf2c14e) {
-      const g = new THREE.Group();
-      const body = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.042, 0.14, 7), new THREE.MeshStandardMaterial({ color: AREA_COL[tag], roughness: 0.7 }));
-      body.position.y = 0.07; body.castShadow = true; g.add(body);
-      const head = new THREE.Mesh(new THREE.SphereGeometry(0.028, 8, 6), skin); head.position.y = 0.17; g.add(head);
-      const hat = new THREE.Mesh(new THREE.SphereGeometry(0.034, 8, 5, 0, Math.PI * 2, 0, Math.PI / 2), new THREE.MeshStandardMaterial({ color: helmet, roughness: 0.4 }));
-      hat.position.y = 0.18; g.add(hat);
-      g.scale.setScalar(1.8); g.visible = false; scene.add(g);
-      return g;
-    }
-
-    // Andamios a ambos costados del casco
-    const scaffold = new THREE.Group(); scene.add(scaffold);
-    {
-      const pole = new THREE.MeshStandardMaterial({ color: 0xc8c8c8, metalness: 0.5, roughness: 0.4 });
-      const plank = new THREE.MeshStandardMaterial({ color: 0xd9a441, roughness: 0.8 });
-      for (const side of [-1, 1]) {
-        const z = DOCK_ZC + side * 0.68;
-        for (let x = 22.2; x <= 27.21; x += 0.5) box(0.025, 1.0, 0.025, pole, x, DOCK.floor + 0.5, z, scaffold);
-        for (const y of [-1.3, -1.0, -0.7]) box(5.05, 0.02, 0.14, plank, 24.7, y, z, scaffold);
-      }
-      scaffold.traverse((m) => { m.castShadow = false; });
-    }
-    // Hélice en el piso del dique, tapa de escotilla en el muelle, módulo BWTS y oficina técnica
-    const propFloor = ship.userData.prop.clone(); propFloor.scale.setScalar(SCALE); propFloor.rotation.z = Math.PI / 2;
-    propFloor.position.set(22.35, DOCK.floor + 0.07, DOCK_ZC + 0.78); propFloor.visible = false; scene.add(propFloor);
-    const hatchQuay = box(1.5 * SCALE, 0.3 * SCALE, 1.7 * SCALE, new THREE.MeshStandardMaterial({ color: 0x2e5c7a }), 25.7, DOCK.top + 0.07, QUAY_Z + 0.35); hatchQuay.visible = false;
-    const bwts = new THREE.Group(); bwts.position.set(23.2, DOCK.top, QUAY_Z + 0.35); bwts.visible = false; scene.add(bwts);
-    box(0.95, 0.42, 0.5, new THREE.MeshStandardMaterial({ color: 0xe9eef2, roughness: 0.6 }), 0, 0.21, 0, bwts);
-    box(0.97, 0.06, 0.52, new THREE.MeshStandardMaterial({ color: 0x2e5c7a }), 0, 0.3, 0, bwts);
-    const office = new THREE.Group(); office.position.set(28.2, DOCK.top, QUAY_Z + 0.75); scene.add(office);
-    box(1.1, 0.5, 0.55, new THREE.MeshStandardMaterial({ color: 0xf4f4f4, roughness: 0.6 }), 0, 0.25, 0, office);
-    const officeWin = box(0.8, 0.14, 0.02, new THREE.MeshStandardMaterial({ color: 0x9cd3e6, emissive: 0x000000 }), 0, 0.3, 0.285, office);
-    // Grúa del astillero izando piezas del motor principal
-    const hook = new THREE.Group(); hook.visible = false; scene.add(hook);
-    box(0.06, 0.06, 0.06, dark, 0, 0.12, 0, hook);
-    box(0.24, 0.16, 0.24, new THREE.MeshStandardMaterial({ color: 0x4a4f55, metalness: 0.6, roughness: 0.4 }), 0, 0, 0, hook);
-    const cable = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()]), new THREE.LineBasicMaterial({ color: 0x222222 }));
-    cable.visible = false; scene.add(cable);
-    // Chispas de soldadura (bodega 3) y agua del hidrolavado
-    function particles(n, color, size) {
-      const geo = new THREE.BufferGeometry();
-      geo.setAttribute("position", new THREE.BufferAttribute(new Float32Array(n * 3), 3));
-      const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color, size, transparent: true, opacity: 0.95, depthWrite: false, blending: THREE.AdditiveBlending }));
-      pts.userData = { v: new Float32Array(n * 3), life: new Float32Array(n) }; pts.visible = false; scene.add(pts);
-      return pts;
-    }
-    const sparks = particles(70, 0xffc46b, 0.05);
-    const spray = particles(90, 0xdff4ff, 0.04);
-    const arc = new THREE.PointLight(0xbfe6ff, 0, 3); arc.position.set(HOLD3_X, DECK_Y + 0.15, DOCK_ZC); scene.add(arc);
-    const polishLight = new THREE.PointLight(0xffe2a6, 0, 1.6); polishLight.position.set(22.35, DOCK.floor + 0.25, DOCK_ZC + 0.78); scene.add(polishLight);
-    function emit(pts, dt, origin, spread, speed, gravity, lifeMax, rate) {
-      const pos = pts.geometry.attributes.position, { v, life } = pts.userData;
-      for (let i = 0; i < life.length; i++) {
-        if (life[i] <= 0) {
-          if (Math.random() > rate) { pos.array[i * 3 + 1] = -99; continue; }
-          const o = typeof origin === "function" ? origin() : origin;
-          pos.array[i * 3] = o.x; pos.array[i * 3 + 1] = o.y; pos.array[i * 3 + 2] = o.z;
-          v[i * 3] = (Math.random() - 0.5) * spread.x; v[i * 3 + 1] = speed * (0.4 + Math.random()); v[i * 3 + 2] = (Math.random() - 0.5) * spread.z;
-          life[i] = lifeMax * (0.5 + Math.random() * 0.5);
-        }
-        life[i] -= dt;
-        v[i * 3 + 1] -= gravity * dt;
-        pos.array[i * 3] += v[i * 3] * dt; pos.array[i * 3 + 1] += v[i * 3 + 1] * dt; pos.array[i * 3 + 2] += v[i * 3 + 2] * dt;
-      }
-      pos.needsUpdate = true;
-    }
-
-    // Trabajos que se ven en el dique (OT → qué se muestra). Solo las principales llevan etiqueta.
-    const WORKS = [
-      { ot: "CUB-01", tag: "CUB", nombre: "Granallado de casco", lbl: [26.9, -0.25, DOCK_ZC + 0.95], crew: [[23.4, "floor", 1], [25.8, "floor", -1]] },
-      { ot: "CUB-02", tag: "CUB", nombre: "Pintura de casco", lbl: [26.9, -0.25, DOCK_ZC + 0.95], crew: [[0, "paint", 1], [0.25, "paint", -1], [-0.2, "paint", 1]] },
-      { ot: "CUB-03", tag: "CUB", nombre: "Acero bodega 3", lbl: [HOLD3_X, DECK_Y + 0.75, DOCK_ZC - 0.2], crew: [[HOLD3_X - 0.25, "deck", 0.2], [HOLD3_X + 0.2, "deck", -0.25]] },
-      { ot: "CUB-07", tag: "CUB", nombre: "Tapas de escotilla", lbl: [25.7, DOCK.top + 0.75, QUAY_Z + 0.5], crew: [[25.4, "quay", 0.3]] },
-      { ot: "TEC-01", tag: "TEC", nombre: "Motor principal", lbl: [HOUSE_X, DECK_Y + 1.55, DOCK_ZC - 0.3], crew: [[HOUSE_X + 0.45, "deck", 0.25]] },
-      { ot: "TEC-02", tag: "TEC", nombre: "Eje y hélice", lbl: [21.7, DOCK.top + 0.45, DOCK_ZC - 0.9], crew: [[21.95, "floor", -0.75], [22.6, "floor", 0.78]] },
-      { ot: "TEC-06", tag: "TEC", nombre: "Módulo BWTS", lbl: [23.2, DOCK.top + 0.9, QUAY_Z + 0.4], crew: [[23.8, "quay", 0.3]] },
-      { ot: "ING-04", tag: "ING", nombre: "Inspección de clase", lbl: [28.2, DOCK.top + 0.8, QUAY_Z + 0.75], crew: [[24.6, "inspect", -0.8]] },
-      // sin etiqueta: trabajos menores bajo el casco y en cubierta
-      { ot: "CUB-04", tag: "CUB", crew: [[26.4, "floor", 0.75]] },
-      { ot: "CUB-06", tag: "CUB", crew: [[24.2, "floor", -0.78]] },
-      { ot: "TEC-04", tag: "TEC", crew: [[21.7, "floor", 0.45]] },
-      { ot: "TEC-05", tag: "TEC", crew: [[25.1, "floor", 0.8]] },
-      { ot: "TEC-07", tag: "TEC", crew: [[HOUSE_X + 0.1, "deck", -0.3]] },
-      { ot: "CUB-09", tag: "CUB", crew: [[HOUSE_X - 0.3, "deck", 0.35]] },
-      { ot: "ING-01", tag: "ING", crew: [[23.0, "inspect", 0.8]] }
-    ];
-    WORKS.forEach((w) => {
-      w.workers = w.crew.map(([x, where, z], i) => {
-        const g = worker(w.tag, w.tag === "ING" ? 0xffffff : 0xf2c14e);
-        g.userData = { x, where, z, ph: Math.random() * 6.28, i };
-        return g;
-      });
-      if (w.lbl) {
-        w.div = label("", "work " + w.tag, scene, new THREE.Vector3(...w.lbl));
-        w.div.style.visibility = "hidden";
-      }
-    });
-
-    function updateWorks(st, t, dt, dist) {
-      const inDock = st.fase === "dique";
-      const d = state.d;
-      const p = {}; WORKS.forEach((w) => { p[w.ot] = otProg(w.ot, d); });
-      const on = (id) => inDock && p[id] > 0 && p[id] < 100;
-      // capas del casco: sucio antes del dique, granallado/pintado según avance, todo pintado después
-      const before = st.fase === "pre" || st.fase === "ida", after = st.fase === "regreso" || st.fase === "post";
-      const cut = (pct) => (before ? -1e4 : after ? 1e4 : STERN_X + (HULL_LEN * pct) / 100);
-      CLIP.blast.constant = cut(otProg("CUB-01", d));
-      CLIP.paint.constant = cut(otProg("CUB-02", d));
-      const paintEdge = Math.min(27.1, Math.max(22.2, CLIP.paint.constant));
-      scaffold.visible = on("CUB-01") || on("CUB-02");
-      // hélice afuera mientras se trabaja el eje de cola
-      const propOut = on("TEC-02") || on("TEC-03");
-      ship.userData.prop.visible = !propOut; propFloor.visible = propOut;
-      if (st.sailing) ship.userData.prop.rotation.x += dt * 9;
-      polishLight.intensity = on("TEC-03") ? 1.5 + Math.random() * 2.5 : 0;
-      ship.userData.hatches[3].visible = !on("CUB-07"); hatchQuay.visible = on("CUB-07");
-      bwts.visible = on("TEC-06") || (inDock && p["TEC-06"] === 0 && d > dn("2026-09-20"));
-      officeWin.material.emissive.setHex(inDock && ["ING-01", "ING-02", "ING-03", "ING-04", "ING-05"].some((id) => otProg(id, d) > 0 && otProg(id, d) < 100) ? 0x2a6f8a : 0x000000);
-      // chispas de soldadura y arco eléctrico
-      sparks.visible = on("CUB-03");
-      if (sparks.visible && !reduce) emit(sparks, dt, new THREE.Vector3(HOLD3_X, DECK_Y + 0.08, DOCK_ZC), { x: 1.4, z: 1.4 }, 1.1, 3.5, 0.6, 0.35);
-      arc.intensity = sparks.visible ? (Math.random() < 0.7 ? 2 + Math.random() * 5 : 0) : 0;
-      // hidrolavado: chorros hacia el casco
-      spray.visible = on("CUB-01");
-      if (spray.visible && !reduce) {
-        const sx = 23.4 + Math.sin(t * 0.6) * 1.6;
-        emit(spray, dt, () => new THREE.Vector3(sx + (Math.random() - 0.5) * 0.2, DOCK.floor + 0.25, DOCK_ZC + (Math.random() < 0.5 ? -0.75 : 0.75)), { x: 0.6, z: 0.6 }, 0.9, 1.4, 0.5, 0.5);
-      }
-      // grúa del astillero izando piezas del motor principal
-      const lifting = on("TEC-01");
-      const jib = cranes[0];
-      if (lifting) {
-        const target = -1.584 + Math.sin(t * 0.25) * 0.08;
-        jib.rotation.y += (target - jib.rotation.y) * Math.min(1, dt * 1.5);
-        const base = jib.parent.position, r = 2.9;
-        const hx = base.x + Math.cos(jib.rotation.y) * r, hz = base.z - Math.sin(jib.rotation.y) * r;
-        const hy = DECK_Y + 0.9 + (1 + Math.sin(t * 0.7)) * 1.2;
-        hook.position.set(hx, hy, hz);
-        const cp = cable.geometry.attributes.position;
-        cp.setXYZ(0, hx, base.y + 5, hz); cp.setXYZ(1, hx, hy + 0.14, hz); cp.needsUpdate = true;
-      }
-      hook.visible = cable.visible = lifting;
-      // trabajadores y etiquetas
-      WORKS.forEach((w) => {
-        const act = on(w.ot);
-        w.workers.forEach((g) => {
-          g.visible = act;
-          if (!act) return;
-          const u = g.userData, wob = Math.sin(t * 1.3 + u.ph);
-          if (u.where === "paint") g.position.set(Math.min(27.1, Math.max(22.2, paintEdge + u.x + wob * 0.08)), [-1.3, -1.0, -0.7][u.i % 3] + 0.01, DOCK_ZC + u.z * 0.68);
-          else if (u.where === "floor") g.position.set(u.x + wob * 0.15, DOCK.floor, DOCK_ZC + u.z);
-          else if (u.where === "deck") g.position.set(u.x + wob * 0.05, DECK_Y, DOCK_ZC + u.z * SCALE);
-          else if (u.where === "quay") g.position.set(u.x + wob * 0.1, DOCK.top, QUAY_Z + u.z);
-          else if (u.where === "inspect") g.position.set(u.x + Math.sin(t * 0.35 + u.ph) * 2.2, DOCK.floor, DOCK_ZC + u.z);
-          g.rotation.y = Math.sin(t * 0.9 + u.ph) * 0.8;
-          g.position.y += Math.abs(Math.sin(t * 4 + u.ph)) * 0.01;
-        });
-        if (w.div) {
-          const show = act && dist < 34 && !(w.ot === "CUB-01" && on("CUB-02"));
-          w.div.style.visibility = show ? "visible" : "hidden";
-          if (show) { const txt = `${w.nombre} <small>${p[w.ot].toFixed(0)}%</small>`; if (w.div.innerHTML !== txt) w.div.innerHTML = txt; }
-        }
-      });
-      return lifting;
-    }
 
     // Estela de espuma
     const foam = [];
@@ -955,27 +739,19 @@
       `<div class="mk" style="left:${pctX(HOY)}%"><span>Hoy · ${fmt(dateOf(HOY))}</span></div>` +
       (dDesv !== N ? `<div class="mk plan" style="left:${pctX(N)}%"><span>Desvarada plan</span></div>` : ""));
     tl.addEventListener("click", (e) => { const b = e.target.closest(".seg"); if (b) jump(b.dataset.seg); });
-    // Hitos del cronograma sobre la línea de tiempo (blanco = completado, rojo = vencido, gris = pendiente)
-    tl.insertAdjacentHTML("beforeend", D.hitos.map((h) => {
-      const late = !h.fechaReal && h.fechaPlan < D.proyecto.corte;
-      const cls = h.fechaReal ? "ok" : late ? "late" : "";
-      const area = D.areas.find((a) => a.id === h.area).nombre;
-      return `<i class="hito ${cls}" style="left:${pctX(dn(h.fechaPlan) + 0.5)}%" title="${esc(h.nombre)} · ${fmt(parse(h.fechaPlan))} · ${area}${h.fechaReal ? " · completado" : late ? " · vencido" : ""}"></i>`;
-    }).join(""));
 
     // Encuadres de cámara
     const VIEWS = {
       mapa: { pos: new THREE.Vector3(11, 80, 64), target: new THREE.Vector3(11, 0, 0) },
       puerto: { pos: new THREE.Vector3(COLON.x + 13, 12.5, COLON.z + 10), target: new THREE.Vector3(COLON.x - 0.6, 0.4, -1.2) },
-      dique: { pos: new THREE.Vector3(23.2, 8.2, -3.6), target: new THREE.Vector3(24.7, -1.1, -9.2) } // alto sobre el muro sur: se ve el costado del casco
+      dique: { pos: new THREE.Vector3(18.5, 12.5, 1.5), target: new THREE.Vector3(24.8, -1, -9.2) }
     };
-    let cam = null, cine = false, lastView = "";
+    let cam = null, cine = false;
     const viewFor = (f) => (f === "dique" ? "dique" : f === "pre" || f === "post" ? "puerto" : "mapa");
     // En pantallas angostas (celular vertical) la cámara se aleja para que entre la misma escena
     const widen = () => Math.pow(Math.max(1, 1.3 / camera.aspect), 0.65);
     function frameView(name, dur = 1800) {
       const v = VIEWS[name], pos = v.target.clone().add(v.pos.clone().sub(v.target).multiplyScalar(widen()));
-      lastView = name;
       cam = { fromPos: camera.position.clone(), fromTarget: controls.target.clone(), pos, target: v.target.clone(), t0: performance.now(), dur: reduce ? 1 : dur };
     }
     let anim = null;
@@ -994,12 +770,7 @@
     }
     document.getElementById("today").addEventListener("click", () => { stopPlay(); resetPlay(); cine = false; frameView(viewFor(shipState(HOY).fase)); animateTo(HOY); });
     document.getElementById("map").addEventListener("click", () => { cine = false; frameView("mapa"); });
-    sim.addEventListener("input", () => {
-      stopPlay(); resetPlay(); anim = null; cine = false; state.d = +sim.value;
-      // Al arrastrar a otra fase, la cámara va a donde está el barco (puerto, mar o dique)
-      const v = viewFor(shipState(state.d).fase);
-      if (v !== lastView) frameView(v, 1200);
-    });
+    sim.addEventListener("input", () => { stopPlay(); resetPlay(); anim = null; state.d = +sim.value; });
     playBtn.addEventListener("click", () => {
       if (state.playing) return stopPlay(true);
       anim = null; cam = null;
@@ -1007,12 +778,10 @@
       state.paused = false; state.playing = true; cine = true;
       playBtn.setAttribute("aria-pressed", "true"); playBtn.textContent = "❚❚ Pausar";
     });
-    const drawer = document.getElementById("drawer"), moreBtn = document.getElementById("more"), tlPanel = document.querySelector(".timeline"), topbar = document.querySelector(".topbar");
-    function placeDrawer() { // el cajón va entre la barra superior y la línea de tiempo
-      const top = topbar.offsetHeight + 24, bottom = tlPanel.offsetHeight + 28;
-      drawer.style.top = top + "px";
-      drawer.style.bottom = bottom + "px";
-      drawer.style.maxHeight = `calc(100vh - ${top + bottom}px)`;
+    const drawer = document.getElementById("drawer"), moreBtn = document.getElementById("more"), tlPanel = document.querySelector(".timeline");
+    function placeDrawer() { // el cajón termina justo encima de la línea de tiempo
+      drawer.style.bottom = tlPanel.offsetHeight + 28 + "px";
+      drawer.style.maxHeight = `calc(100vh - ${tlPanel.offsetHeight + 48}px)`;
     }
     function setDrawer(open) {
       drawer.classList.toggle("open", open);
@@ -1050,7 +819,7 @@
         : (Math.abs(dl) < 0.5 ? "En plazo" : dl > 0 ? days(dl) + " de atraso" : days(-dl) + " de adelanto") + (state.d > AT ? " (proy.)" : "");
       const isLate = (dl) => !before && !after && dl >= 2;
 
-      // --- barra superior: lo más importante, siempre a la vista ---
+      // --- tarjeta principal ---
       const ph = document.getElementById("phase");
       ph.textContent = f.corto; ph.className = "phase " + f.cls;
       document.getElementById("date").textContent = fmtY(fecha) + (state.d > AT ? " · simulación" : "");
@@ -1058,29 +827,21 @@
       const fl = document.getElementById("flag");
       if (f.pais) { fl.src = FLAG_URL[f.pais]; fl.alt = "Bandera de " + f.pais; fl.style.display = ""; } else fl.style.display = "none";
       document.getElementById("loc").textContent = f.loc;
+      const ring = document.getElementById("ring");
+      ring.style.display = st.fase === "dique" ? "" : "none";
+      document.getElementById("ring-real").setAttribute("stroke-dasharray", `${(prog.real / 100) * C} ${C}`);
+      document.getElementById("ring-plan").setAttribute("stroke-dasharray", `${(prog.plan / 100) * C} ${C}`);
+      document.getElementById("ring-txt").textContent = prog.real.toFixed(0) + "%";
+      const hk = (l, v, cls = "") => `<div class="hk"><div class="l">${l}</div><div class="v ${cls}">${v}</div></div>`;
       const scopeTag = state.scope === "resumen" ? "" : " · " + esc(area);
-      const tk = (l, v, sub = "", cls = "", extra = "", kcls = "") => `<div class="tk ${kcls}"><div class="l">${l}</div><div class="v ${cls}">${v}</div>${extra}${sub ? `<div class="s">${sub}</div>` : ""}</div>`;
-      const mini = (r, pl) => `<div class="mini"><i style="width:${pl}%;background:rgba(255,255,255,.32)"></i><i style="width:${r}%;background:#fff"></i></div>`;
-      const fase = {
-        pre: tk("Zarpa a dique", fmt(dateOf(T.zarpe)), "desde Colón"),
-        ida: tk("Llega a dique", fmt(dateOf(T.llegada)), "Cartagena"),
-        regreso: tk("Llega a Colón", fmt(dateOf(T.regreso)), "trabajos 100%"),
-        post: tk("Post-dique", `día ${Math.min(VIAJE.diasPostDique, Math.max(1, Math.ceil(state.d - T.regreso)))} de ${VIAJE.diasPostDique}`, `garantía hasta ${fmt(dateOf(T.fin))}`)
-      }[st.fase] || "";
-      const avance = before
-        ? tk("Avance" + scopeTag, "Por iniciar", `entra a dique ${fmt(dateOf(T.entrada))}`)
-        : tk("Avance" + scopeTag, prog.real.toFixed(1) + "%" + (prog.proj ? " <small class='muted'>proy.</small>" : ""), `plan ${prog.plan.toFixed(1)}%`, "", mini(prog.real, prog.plan));
-      const atraso = tk("Atraso", before ? "—" : after ? "Terminado" : Math.abs(s.delay) < 0.5 ? "En plazo" : days(s.delay), before ? "aún no entra" : state.d > AT && !after ? "proyectado" : "", isLate(s.delay) ? "alert" : "");
-      const desv = tk(after && AT >= N ? "Desvaró" : "Desvarada", fmt(dateOf(T.desvarada)), `plan ${fmt(dateOf(N))}`, T.desvarada > N ? "alert" : "", "", "opt");
-      const corte = fmt(parse(D.proyecto.corte));
-      const costos = [
-        tk("Costo plan", money(s.pv), `al ${corte}`, "", "", "cost opt"),
-        tk("Incurrido", money(s.ac), s.cpi ? `CPI ${s.cpi.toFixed(2)}` : "", "", "", "cost opt"),
-        tk("Desembolsado", money(s.paid), `por pagar ${money(Math.max(0, s.ac - s.paid))}`, "", "", "cost opt")
-      ];
-      const pv = PART[state.scope];
-      const part = pv == null ? "" : tk("Participación", `<span style="color:hsl(${partHue(pv)} 75% 64%)">${pv.toFixed(0)}% ${partLevel(pv)}</span>`, "equipo", "", "", "opt");
-      document.getElementById("tb-kpis").innerHTML = [fase, avance, atraso, desv, ...costos, part].join("");
+      const kp = {
+        pre: [hk("Zarpa a dique", fmt(dateOf(T.zarpe))), hk("Entra a dique", fmt(dateOf(T.entrada)))],
+        ida: [hk("Llega", fmt(dateOf(T.llegada))), hk("Entra a dique", fmt(dateOf(T.entrada)))],
+        dique: [hk("Avance" + scopeTag, prog.real.toFixed(1) + "%" + (prog.proj ? " <span class='muted'>proy.</span>" : "")), hk("Plan", prog.plan.toFixed(1) + "%"), hk("Atraso", statusTxt(s.delay).replace(" de atraso", ""), isLate(s.delay) ? "alert" : "")],
+        regreso: [hk("Desvaró", fmt(dateOf(T.desvarada)), T.desvarada > N ? "alert" : ""), hk("Llega a Colón", fmt(dateOf(T.regreso)))],
+        post: [hk("Post-dique", `día ${Math.min(VIAJE.diasPostDique, Math.max(1, Math.ceil(state.d - T.regreso)))} de ${VIAJE.diasPostDique}`), hk("Garantía hasta", fmt(dateOf(T.fin)))]
+      }[st.fase];
+      document.getElementById("hud-kpis").innerHTML = kp.join("");
 
       // --- cajón de detalles ---
       const mbar = (v, cls, max = 100) => `<div class="mbar"><i class="${cls}" style="width:${Math.max(0, Math.min(100, (v / max) * 100))}%"></i></div>`;
@@ -1184,7 +945,6 @@
       showGroup(LBL.city, dist > 19);
       showGroup(LBL.port, dist < 75);
       barLbl.style.visibility = st.fase === "dique" && dist < 60 ? "visible" : "hidden";
-      const craneBusy = updateWorks(st, t, dt, dist);
 
       const shipTxt = {
         pre: `${VIAJE.origen.pais} · en el agua`,
@@ -1194,7 +954,6 @@
         post: `${VIAJE.origen.pais} · post-dique`
       }[st.fase];
       if (shipLbl.textContent !== shipTxt) shipLbl.textContent = shipTxt;
-      shipLbl.style.visibility = st.fase === "dique" && dist < 34 ? "hidden" : ""; // de cerca hablan las etiquetas de cada trabajo
       document.body.classList.toggle("cine", state.playing);
 
       // banderas ondeando, grúas y nubes
@@ -1203,7 +962,7 @@
         for (let i = 0; i < p.count; i++) { const x = base[i * 3], k = Math.abs(x / w); p.array[i * 3 + 2] = Math.sin(x * 5 - t * 6) * 0.09 * k * Math.abs(w); }
         p.needsUpdate = true; geo.computeVertexNormals();
       });
-      cranes.forEach((j, i) => { if (!(i === 0 && craneBusy)) j.rotation.y += Math.sin(t * 0.3 + i * 2) * dt * 0.15; });
+      cranes.forEach((j, i) => { j.rotation.y += Math.sin(t * 0.3 + i * 2) * dt * 0.15; });
       clouds.forEach((c) => { c.position.x += c.userData.v * dt; if (c.position.x > 70) c.position.x = -70; });
 
       // cámara
