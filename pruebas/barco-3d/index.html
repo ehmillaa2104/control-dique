@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba 3D Avance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Prueba 3D: escena siempre oscura (el mar y el barco se leen mejor sobre fondo nocturno) */
+    :root {
+      color-scheme: dark;
+      --bg: #05070a;
+      --panel: rgba(12, 14, 18, 0.82);
+      --border: rgba(255, 255, 255, 0.14);
+      --ink: #f5f5f5;
+      --ink-2: #c2c2c2;
+      --ink-3: #8f8f8f;
+      --alert: #ef5350;
+    }
+    :root[data-theme="light"], :root[data-theme="dark"] { color-scheme: dark; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #05070a; } }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: radial-gradient(120% 90% at 50% 0%, #1b2430 0%, #0b0f14 55%, var(--bg) 100%);
+      color: var(--ink);
+      font: 14px/1.4 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-variant-numeric: tabular-nums;
+      overflow: hidden;
+    }
+    #scene { position: fixed; inset: 0; }
+    #scene canvas { display: block; }
+    #labels { position: fixed; inset: 0; pointer-events: none; }
+
+    .panel { position: fixed; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .top { top: 16px; left: 16px; padding: 14px 16px; width: min(440px, calc(100vw - 32px)); }
+    .pill { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; color: var(--ink-2); }
+    h1 { margin: 8px 0 2px; font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+    .sub { color: var(--ink-3); font-size: 12.5px; }
+    .tabs { display: flex; gap: 4px; margin: 12px 0 10px; flex-wrap: wrap; }
+    .tab { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink-2); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+    .tab:hover { color: var(--ink); border-color: rgba(255,255,255,.35); }
+    .tab[aria-pressed="true"] { background: var(--ink); color: #0a0a0a; border-color: var(--ink); }
+    .tab:focus-visible, .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .k { border-top: 1px solid var(--border); padding-top: 8px; min-width: 0; }
+    .k .l { font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+    .k .v { font-size: 20px; font-weight: 800; white-space: nowrap; }
+    .k .v.alert { color: var(--alert); }
+
+    .bottom-l { left: 16px; bottom: 16px; padding: 10px 12px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; max-width: calc(100vw - 32px); }
+    .btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+    .btn[aria-pressed="true"] { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.4); }
+    .hint { color: var(--ink-3); font-size: 12px; }
+    .bottom-r { right: 16px; bottom: 16px; padding: 10px 14px; font-size: 12.5px; color: var(--ink-2); display: grid; gap: 5px; }
+    .bottom-r span { display: inline-flex; align-items: center; gap: 8px; }
+    .sw { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex: none; }
+
+    /* Etiquetas que siguen a los objetos 3D */
+    .l3d { font-family: "Inter", system-ui, sans-serif; color: #fff; background: rgba(0,0,0,.72); border: 1px solid rgba(255,255,255,.18); border-radius: 6px; padding: 3px 8px; font-size: 11.5px; white-space: nowrap; transform: translateY(-6px); }
+    .l3d.ship { font-size: 13px; font-weight: 800; padding: 5px 10px; background: #f5f5f5; color: #0a0a0a; border: 0; }
+    .l3d.ship small { display: block; font-weight: 600; font-size: 10.5px; color: #474747; }
+    .l3d.ghost { font-weight: 700; background: rgba(255,255,255,.12); }
+    .l3d.mark { background: transparent; border: 0; color: var(--ink-2); font-weight: 700; font-size: 12px; text-align: center; }
+    .l3d.mark small { display: block; font-weight: 500; color: var(--ink-3); font-size: 10.5px; }
+    .l3d.flag { font-size: 10.5px; padding: 2px 6px; opacity: .9; }
+    .l3d.flag.late { border-color: var(--alert); color: #ffb4b0; }
+
+    .fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--ink-2); }
+
+    @media (max-width: 640px) {
+      .top { top: 8px; left: 8px; width: calc(100vw - 16px); padding: 10px 12px; }
+      h1 { font-size: 18px; }
+      .k .v { font-size: 16px; }
+      .bottom-r { display: none; }
+      .bottom-l { left: 8px; bottom: 8px; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scene" aria-label="Escena 3D: un barco avanza por una ruta según el avance del proyecto" role="img"></div>
+  <div id="labels"></div>
+
+  <section class="panel top">
+    <span class="pill">Prueba 3D · no es una revisión</span>
+    <h1 id="title">Avance del proyecto de dique</h1>
+    <div class="sub" id="sub"></div>
+    <div class="tabs" id="tabs" role="group" aria-label="Vista"></div>
+    <div class="kpis">
+      <div class="k"><div class="l">Real</div><div class="v" id="k-real">—</div></div>
+      <div class="k"><div class="l">Plan</div><div class="v" id="k-plan">—</div></div>
+      <div class="k"><div class="l">Atraso</div><div class="v" id="k-delay">—</div></div>
+      <div class="k"><div class="l" id="k-fin-l">Desvarada</div><div class="v" id="k-fin">—</div></div>
+    </div>
+  </section>
+
+  <section class="panel bottom-l">
+    <button class="btn" id="replay" type="button">↻ Reproducir</button>
+    <button class="btn" id="follow" type="button" aria-pressed="true">Seguir barco</button>
+    <span class="hint">Arrastra para girar · rueda para acercar</span>
+  </section>
+
+  <section class="panel bottom-r" aria-label="Leyenda">
+    <span><i class="sw" style="background:#262626;border:2px solid #f5f5f5"></i>Barco = avance real</span>
+    <span><i class="sw" style="background:rgba(255,255,255,.25);border:1px dashed #fff"></i>Barco transparente = plan</span>
+    <span><i class="sw" style="background:#fff"></i>Boyas blancas = recorrido</span>
+    <span><i class="sw" style="background:#ef5350"></i>Boyas rojas = atraso</span>
+  </section>
+
+  <div class="fallback" id="fallback"></div>
+
+  <!-- Mismos datos que la Rev. 0 y la Rev. 1 -->
+  <script src="../../data.js"></script>
+
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+
+    // =========================================================
+    // Cálculo de avance (mismas reglas que el dashboard)
+    // =========================================================
+    const D = window.DIQUE_DATA;
+    const DAY = 864e5;
+    const parse = (s) => new Date(s + "T00:00:00");
+    const start = parse(D.proyecto.entrada);
+    const dn = (s) => Math.round((parse(s) - start) / DAY);
+    const N = dn(D.proyecto.salidaPlan);
+    const AT = dn(D.proyecto.corte) + 1;
+    const fmtShort = (d) => d.toLocaleDateString("es-ES", { day: "2-digit", month: "short" });
+    const addDays = (d, n) => new Date(d.getTime() + n * DAY);
+
+    const ots = D.ordenes.map((o) => {
+      const hist = D.avances.filter((r) => r[1] === o.id && r[0] <= D.proyecto.corte).sort((a, b) => a[0].localeCompare(b[0]));
+      return { ...o, i0: dn(o.inicio), dur: dn(o.fin) - dn(o.inicio) + 1, real: hist.length ? hist[hist.length - 1][2] : 0 };
+    });
+    const planFrac = (o, t) => Math.max(0, Math.min(1, (t - o.i0) / o.dur));
+
+    function scope(areaId) {
+      const list = ots.filter((o) => !areaId || o.area === areaId);
+      const bac = list.reduce((s, o) => s + o.bac, 0);
+      const PD = Math.max(...list.map((o) => o.i0 + o.dur));
+      const H = Math.max(N, PD);
+      const plan = [];
+      for (let t = 0; t <= H; t++) plan.push(list.reduce((s, o) => s + o.bac * planFrac(o, t), 0) / bac * 100);
+      const pPlan = plan[Math.min(AT, H)];
+      const pReal = list.reduce((s, o) => s + o.bac * o.real, 0) / bac;
+      // Plazo ganado: día en que el plan alcanzaba el avance real de hoy
+      const E = 1e-9;
+      let C = 0; while (C < H && plan[C + 1] <= pReal + E) C++;
+      let ES = C >= H ? H : C + (plan[C + 1] > plan[C] ? (pReal - plan[C]) / (plan[C + 1] - plan[C]) : 0);
+      let L = 0; while (L < H && plan[L] < pReal - E) L++;
+      const Lf = L > 0 && plan[L] > plan[L - 1] ? L - 1 + (pReal - plan[L - 1]) / (plan[L] - plan[L - 1]) : L;
+      if (AT >= Lf - E && AT <= ES + E) ES = AT;
+      const delay = pReal >= 99.95 ? 0 : AT - ES;
+      const projEnd = addDays(start, Math.round(PD + delay) - 1);
+      const fin = areaId ? projEnd : addDays(projEnd, Math.max(1, N - PD + 1));
+      return { pPlan, pReal, delay, fin, plan };
+    }
+
+    const AREAS = [{ id: null, nombre: "Resumen" }].concat(D.areas.map((a) => ({ id: a.id, nombre: a.nombre })));
+    const S = Object.fromEntries(AREAS.map((a) => [a.id || "resumen", scope(a.id)]));
+
+    // =========================================================
+    // Escena
+    // =========================================================
+    const host = document.getElementById("scene");
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch (e) {
+      const fb = document.getElementById("fallback");
+      fb.style.display = "flex";
+      fb.textContent = "Este navegador no permite gráficos 3D (WebGL). Abre la prueba en Chrome o Edge actualizados.";
+      throw e;
+    }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    host.appendChild(renderer.domElement);
+
+    const labelRenderer = new CSS2DRenderer({ element: document.getElementById("labels") });
+    labelRenderer.setSize(innerWidth, innerHeight);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0f151c, 80, 190);
+
+    const camera = new THREE.PerspectiveCamera(38, innerWidth / innerHeight, 0.1, 500);
+    camera.position.set(-14, 20, 42);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.maxPolarAngle = Math.PI * 0.46; // no bajar bajo el agua
+    controls.minDistance = 18;
+    controls.maxDistance = 140;
+    controls.target.set(0, 0, 0);
+
+    scene.add(new THREE.HemisphereLight(0xe6eef6, 0x1a2633, 1.35));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.25));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+    sun.position.set(-30, 40, 25);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(2048, 2048);
+    Object.assign(sun.shadow.camera, { left: -70, right: 70, top: 40, bottom: -40, near: 1, far: 140 });
+    scene.add(sun);
+
+    // --- Mar low-poly con olas ---
+    const water = new THREE.Mesh(
+      new THREE.PlaneGeometry(260, 140, 104, 56).rotateX(-Math.PI / 2),
+      new THREE.MeshStandardMaterial({ color: 0x35506a, roughness: 0.5, metalness: 0.15, flatShading: true })
+    );
+    water.receiveShadow = true;
+    scene.add(water);
+    const wPos = water.geometry.attributes.position;
+    const wBase = Float32Array.from(wPos.array);
+    const waveAt = (x, z, t) => 0.22 * Math.sin(x * 0.16 + t * 0.9) + 0.16 * Math.sin(z * 0.23 + t * 1.25) + 0.08 * Math.sin((x + z) * 0.4 + t * 1.7);
+
+    // --- Ruta: de x0 (0 %) a x1 (100 %) ---
+    const X0 = -55, X1 = 55;
+    const xAt = (p) => X0 + (Math.max(0, Math.min(100, p)) / 100) * (X1 - X0);
+
+    function label(html, cls, obj, y) {
+      const div = document.createElement("div");
+      div.className = "l3d " + cls;
+      div.innerHTML = html;
+      const o = new CSS2DObject(div);
+      o.position.set(0, y, 0);
+      obj.add(o);
+      return div;
+    }
+
+    // Muelle de inicio y faro de llegada
+    const concrete = new THREE.MeshStandardMaterial({ color: 0x9a9a9a, roughness: 0.9 });
+    const pier = new THREE.Mesh(new THREE.BoxGeometry(4, 1.6, 14), concrete);
+    pier.position.set(X0 - 6, 0.4, 0); pier.castShadow = pier.receiveShadow = true; scene.add(pier);
+    const pier2 = pier.clone(); pier2.scale.set(1, 1, 0.4); pier2.position.set(X0 - 6, 0.4, -9); scene.add(pier2);
+    const tower = new THREE.Group();
+    const tw = new THREE.Mesh(new THREE.CylinderGeometry(0.7, 1, 7, 16), new THREE.MeshStandardMaterial({ color: 0xf5f5f5, roughness: 0.6 }));
+    tw.position.y = 3.5; tw.castShadow = true; tower.add(tw);
+    const band = new THREE.Mesh(new THREE.CylinderGeometry(0.82, 0.9, 1.2, 16), new THREE.MeshStandardMaterial({ color: 0x0a0a0a }));
+    band.position.y = 3.6; tower.add(band);
+    const lamp = new THREE.Mesh(new THREE.SphereGeometry(0.55, 16, 12), new THREE.MeshBasicMaterial({ color: 0xfff3c4 }));
+    lamp.position.y = 7.5; tower.add(lamp);
+    const lampLight = new THREE.PointLight(0xfff3c4, 30, 30); lampLight.position.y = 7.5; tower.add(lampLight);
+    const rock = new THREE.Mesh(new THREE.DodecahedronGeometry(2.4, 0), concrete); rock.position.y = -0.6; rock.scale.y = 0.6; tower.add(rock);
+    tower.position.set(X1 + 6, 0, -5);
+    scene.add(tower);
+
+    // Marcas grandes cada 25 %
+    const markText = { 0: ["0 %", "Entrada a dique · " + fmtShort(start)], 25: ["25 %", ""], 50: ["50 %", ""], 75: ["75 %", ""], 100: ["100 %", "Desvarada · " + fmtShort(parse(D.proyecto.salidaPlan))] };
+    Object.entries(markText).forEach(([p, [a, b]]) => {
+      const g = new THREE.Group();
+      const post = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 3.2, 8), new THREE.MeshStandardMaterial({ color: 0xf5f5f5 }));
+      post.position.y = 1.4; g.add(post);
+      g.position.set(xAt(+p), 0, 5.2);
+      label(`${a}${b ? `<small>${b}</small>` : ""}`, "mark", g, 3.6);
+      scene.add(g);
+    });
+
+    // Boyas cada 2.5 %: recorridas (negras), atraso (rojas), pendientes (blancas)
+    const buoyGeo = new THREE.SphereGeometry(0.42, 14, 10);
+    const BUOY = { done: new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x3a3a3a, roughness: 0.35 }), gap: new THREE.MeshStandardMaterial({ color: 0xef5350, emissive: 0x6a1414, roughness: 0.4 }), todo: new THREE.MeshStandardMaterial({ color: 0x5b6670, roughness: 0.6, transparent: true, opacity: 0.55 }) };
+    const buoys = [];
+    for (let p = 0; p <= 100; p += 2.5) {
+      for (const z of [-3.4, 3.4]) {
+        const b = new THREE.Mesh(buoyGeo, BUOY.todo);
+        b.position.set(xAt(p), 0, z); b.castShadow = true; b.userData.p = p;
+        scene.add(b); buoys.push(b);
+      }
+    }
+
+    // Banderas de hitos clave, ubicadas en el % que el plan tenía en su fecha
+    const flags = [];
+    function buildFlags(key) {
+      flags.forEach((f) => scene.remove(f)); flags.length = 0;
+      const s = S[key];
+      const areaId = key === "resumen" ? null : key;
+      const list = D.hitos.filter((h) => (areaId ? h.area === areaId : h.clave));
+      list.forEach((h, i) => {
+        const t = Math.min(s.plan.length - 1, Math.max(0, dn(h.fechaPlan) + 1));
+        const p = s.plan[t];
+        const late = !h.fechaReal && h.fechaPlan < D.proyecto.corte;
+        const color = h.fechaReal ? 0x0a0a0a : late ? 0xef5350 : 0xf5f5f5;
+        const g = new THREE.Group();
+        const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 2.6, 6), new THREE.MeshStandardMaterial({ color: 0xc2c2c2 }));
+        pole.position.y = 1.3; g.add(pole);
+        const flag = new THREE.Mesh(new THREE.PlaneGeometry(1, 0.6), new THREE.MeshStandardMaterial({ color, side: THREE.DoubleSide }));
+        flag.position.set(0.5, 2.3, 0); g.add(flag);
+        g.position.set(xAt(p), 0, -5.6 - (i % 2) * 1.6);
+        label(`${h.nombre} · ${fmtShort(parse(h.fechaPlan))}`, "flag" + (late ? " late" : ""), g, 3.1);
+        g.userData.flag = flag;
+        g.userData.p = p;
+        g.userData.lbl = g.children[g.children.length - 1].element;
+        scene.add(g); flags.push(g);
+      });
+    }
+
+    // --- Barco low-poly (granelero) ---
+    function makeShip(ghost) {
+      const ship = new THREE.Group();
+      const M = (color, opts = {}) => ghost
+        ? new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.22, depthWrite: false })
+        : new THREE.MeshStandardMaterial({ color, roughness: 0.6, metalness: 0.1, ...opts });
+      const hullShape = new THREE.Shape();
+      hullShape.moveTo(-7, -1.25); hullShape.lineTo(4.4, -1.25);
+      hullShape.quadraticCurveTo(6.7, -1.05, 7.3, 0); hullShape.quadraticCurveTo(6.7, 1.05, 4.4, 1.25);
+      hullShape.lineTo(-7, 1.25); hullShape.quadraticCurveTo(-7.45, 0, -7, -1.25);
+      const ext = (depth) => new THREE.ExtrudeGeometry(hullShape, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2);
+      const add = (mesh, x, y, z) => { mesh.position.set(x, y, z); mesh.castShadow = !ghost; ship.add(mesh); return mesh; };
+
+      add(new THREE.Mesh(ext(1.7), M(0x262626, { roughness: 0.45, metalness: 0.25 })), 0, -0.75, 0);                       // casco
+      const boot = add(new THREE.Mesh(ext(0.32), M(0xc62828)), 0, -0.2, 0);         // franja roja de flotación
+      boot.scale.set(1.006, 1, 1.03);
+      add(new THREE.Mesh(new THREE.ShapeGeometry(hullShape).rotateX(-Math.PI / 2), M(0x6e6e6e)), 0, 0.96, 0); // cubierta
+      for (let i = 0; i < 5; i++) add(new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.28, 1.7), M(0x3a3a3a)), -2.6 + i * 1.75, 1.1, 0); // escotillas
+      for (const x of [-1.75, 1.75, 5.1]) {                                           // grúas
+        add(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.14, 1.6, 8), M(0xf5f5f5)), x, 1.75, 0.95);
+        const jib = add(new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.1), M(0xf5f5f5)), x + 0.8, 2.3, 0.95);
+        jib.rotation.z = 0.35;
+      }
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.9, 2.2), M(0xf5f5f5)), -5.6, 1.9, 0); // superestructura
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.55, 2.8), M(0xf5f5f5)), -5.4, 3.1, 0); // puente
+      add(new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.22, 2.4), M(0x111111)), -4.74, 3.12, 0); // ventanas
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.4, 1.3, 14), M(0x0a0a0a)), -6.45, 3.25, 0); // chimenea
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.385, 0.385, 0.22, 14), M(0xf5f5f5)), -6.45, 3.45, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.6, 6), M(0xf5f5f5)), 6.3, 1.75, 0); // mástil de proa
+      if (ghost) {
+        const edges = new THREE.LineSegments(new THREE.EdgesGeometry(ext(1.7)), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.55 }));
+        edges.position.y = -0.75; ship.add(edges);
+      }
+      return ship;
+    }
+    const ship = makeShip(false), ghost = makeShip(true);
+    ship.scale.setScalar(0.65); ghost.scale.setScalar(0.65); // 10 puntos de avance > largo del barco
+    scene.add(ship, ghost);
+    const shipLbl = label("", "ship", ship, 6.2);
+    const ghostLbl = label("", "ghost", ghost, 5.4);
+
+    // Estela
+    const wake = new THREE.Mesh(new THREE.PlaneGeometry(7, 1.8).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.12, depthWrite: false }));
+    scene.add(wake);
+
+    // =========================================================
+    // Estado, animación e interfaz
+    // =========================================================
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const state = { key: "resumen", shown: { real: 0, plan: 0 }, from: { real: 0, plan: 0 }, to: { real: 0, plan: 0 }, t0: 0, dur: 2600, follow: true };
+    const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+
+    function setScope(key, fromZero = false) {
+      state.key = key;
+      const s = S[key];
+      state.from = fromZero ? { real: 0, plan: 0 } : { ...state.shown };
+      state.to = { real: s.pReal, plan: s.pPlan };
+      state.t0 = performance.now();
+      if (reduce) state.shown = { ...state.to };
+      const a = AREAS.find((x) => (x.id || "resumen") === key);
+      document.getElementById("title").textContent = key === "resumen" ? "Avance del proyecto de dique" : "Avance de " + a.nombre;
+      document.getElementById("sub").textContent = `${D.proyecto.buque} · corte ${fmtShort(parse(D.proyecto.corte))} · día ${AT} de ${N}`;
+      document.getElementById("k-real").textContent = s.pReal.toFixed(1) + "%";
+      document.getElementById("k-plan").textContent = s.pPlan.toFixed(1) + "%";
+      const kd = document.getElementById("k-delay");
+      kd.textContent = Math.abs(s.delay) < 0.5 ? "En plazo" : s.delay > 0 ? s.delay.toFixed(1).replace(/\.0$/, "") + " d" : "+" + (-s.delay).toFixed(1) + " d";
+      kd.classList.toggle("alert", s.delay >= 2);
+      document.getElementById("k-fin-l").textContent = key === "resumen" ? "Desvarada" : "Fin área";
+      document.getElementById("k-fin").textContent = fmtShort(s.fin);
+      [...document.querySelectorAll(".tab")].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.k === key)));
+      buildFlags(key);
+    }
+
+    const tabs = document.getElementById("tabs");
+    tabs.innerHTML = AREAS.map((a) => `<button class="tab" type="button" data-k="${a.id || "resumen"}" aria-pressed="false">${a.nombre}</button>`).join("");
+    tabs.addEventListener("click", (e) => { const b = e.target.closest(".tab"); if (b) setScope(b.dataset.k); });
+    document.getElementById("replay").addEventListener("click", () => setScope(state.key, true));
+    const followBtn = document.getElementById("follow");
+    followBtn.addEventListener("click", () => { state.follow = !state.follow; followBtn.setAttribute("aria-pressed", String(state.follow)); });
+
+    function frame(now) {
+      const t = now / 1000;
+      // olas
+      for (let i = 0; i < wPos.count; i++) wPos.array[i * 3 + 1] = waveAt(wBase[i * 3], wBase[i * 3 + 2], t);
+      wPos.needsUpdate = true;
+      water.geometry.computeVertexNormals();
+
+      // avance animado
+      if (!reduce) {
+        const k = Math.min(1, (now - state.t0) / state.dur), e = ease(k);
+        state.shown.real = state.from.real + (state.to.real - state.from.real) * e;
+        state.shown.plan = state.from.plan + (state.to.plan - state.from.plan) * e;
+      }
+      const s = S[state.key];
+      const xr = xAt(state.shown.real), xp = xAt(state.shown.plan);
+      const moving = Math.abs(state.shown.real - state.to.real) > 0.05;
+      for (const [obj, x, phase] of [[ship, xr, 0], [ghost, xp, 1.3]]) {
+        obj.position.set(x, waveAt(x, 0, t) * 0.8 - 0.05, 0);
+        obj.rotation.z = Math.sin(t * 1.1 + phase) * 0.025;
+        obj.rotation.x = Math.sin(t * 0.8 + phase) * 0.03;
+      }
+      wake.position.set(xr - 7.6, 0.3, 0);
+      wake.material.opacity = moving ? 0.22 : 0.08;
+      shipLbl.innerHTML = `Real ${state.shown.real.toFixed(1)}%<small>${Math.abs(s.delay) < 0.5 ? "en plazo" : s.delay > 0 ? s.delay.toFixed(1) + " días de atraso" : (-s.delay).toFixed(1) + " días de adelanto"}</small>`;
+      ghostLbl.textContent = `Plan ${state.shown.plan.toFixed(1)}%`;
+      ghost.visible = Math.abs(state.shown.plan - state.shown.real) > 0.6;
+
+      // boyas: recorridas, tramo de atraso y pendientes
+      const lo = Math.min(state.shown.real, state.shown.plan), hi = Math.max(state.shown.real, state.shown.plan);
+      buoys.forEach((b, i) => {
+        const p = b.userData.p;
+        b.material = p <= state.shown.real ? BUOY.done : p <= hi && state.shown.plan > state.shown.real ? BUOY.gap : BUOY.todo;
+        b.position.y = waveAt(b.position.x, b.position.z, t) + 0.1 + Math.sin(t * 2 + i) * 0.04;
+      });
+      flags.forEach((f, i) => {
+        f.position.y = waveAt(f.position.x, f.position.z, t) * 0.6;
+        f.userData.flag.rotation.y = Math.sin(t * 2.2 + i) * 0.25;
+        // solo se rotulan los hitos cercanos al barco, para que no se amontonen
+        f.userData.lbl.style.visibility = Math.abs(f.userData.p - state.shown.real) <= 22 ? "visible" : "hidden";
+      });
+      lampLight.intensity = 22 + Math.sin(t * 3) * 10;
+
+      // cámara que acompaña al barco
+      if (state.follow) controls.target.x += ((xr + xp) / 2 * 0.7 - controls.target.x) * 0.04;
+      controls.update();
+      renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);
+      requestAnimationFrame(frame);
+    }
+
+    addEventListener("resize", () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+      labelRenderer.setSize(innerWidth, innerHeight);
+    });
+
+    setScope("resumen", true);
+    renderer.render(scene, camera);
+    requestAnimationFrame(frame);
+    window.__barco3d = { S, state, setScope }; // para pruebas
+  </script>
+</body>
+</html>

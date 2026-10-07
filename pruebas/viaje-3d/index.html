@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba 3D Viaje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Prueba 3D: escena de día; los paneles son vidrio oscuro para leerse sobre el mapa */
+    :root {
+      color-scheme: dark;
+      --panel: rgba(10, 13, 18, 0.80);
+      --border: rgba(255, 255, 255, 0.16);
+      --ink: #f5f5f5;
+      --ink-2: #c9ced4;
+      --ink-3: #939aa3;
+      --alert: #ff6b5f;
+      --dock: #f2c14e;
+    }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #f5f5f5; } }
+    :root[data-theme="dark"], :root[data-theme="light"] { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: linear-gradient(180deg, #6fa6cf 0%, #a9cbe3 45%, #dce9f1 100%);
+      color: var(--ink);
+      font: 14px/1.4 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-variant-numeric: tabular-nums;
+      overflow: hidden;
+    }
+    #scene { position: fixed; inset: 0; }
+    #scene canvas { display: block; }
+    #labels { position: fixed; inset: 0; pointer-events: none; }
+    .panel { position: fixed; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    button:focus-visible, input:focus-visible, [role="button"]:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+    /* --- Tarjeta principal: solo lo esencial de la fase --- */
+    .hud { top: 16px; left: 16px; padding: 12px 14px; width: min(340px, calc(100vw - 32px)); }
+    .hud-top { display: flex; align-items: center; gap: 8px; }
+    .sp { flex: 1; }
+    .tag { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; }
+    .phase { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #0a0a0a; background: #9cd3e6; border-radius: 6px; padding: 3px 8px; }
+    .phase.dique { background: var(--dock); }
+    .phase.sail { background: #ffffff; }
+    .date { font-size: 12px; color: var(--ink-3); }
+    h1 { margin: 8px 0 0; font-size: 21px; font-weight: 900; letter-spacing: -.02em; line-height: 1.15; }
+    .loc { display: flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 13px; color: var(--ink-2); }
+    .loc img { width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
+    .hud-main { display: flex; align-items: center; gap: 12px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .ring { width: 58px; height: 58px; flex: none; }
+    .hud-kpis { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hk .l { font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+    .hk .v { font-size: 17px; font-weight: 800; white-space: nowrap; }
+    .more { margin-top: 10px; width: 100%; font: inherit; font-size: 12.5px; font-weight: 700; color: var(--ink); background: rgba(255,255,255,.08); border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .more:hover { background: rgba(255,255,255,.14); }
+    .more[aria-expanded="true"] { background: #fff; color: #0a0a0a; }
+    .alert { color: var(--alert) !important; }
+    .muted { color: var(--ink-3); font-size: 12px; }
+
+    /* --- Cajón de detalles: se despliega a pedido, secciones plegables --- */
+    .drawer { top: 16px; right: 16px; width: 330px; overflow: auto; padding: 4px 14px 10px; scrollbar-width: thin;
+      transform: translateX(calc(100% + 32px)); visibility: hidden; transition: transform .35s cubic-bezier(.2,.8,.2,1), visibility 0s linear .35s; }
+    .drawer.open { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+    .drawer-h { display: flex; align-items: center; gap: 8px; padding: 8px 0 6px; position: sticky; top: 0; background: rgba(10,13,18,.92); z-index: 1; }
+    .drawer-h b { font-size: 14px; }
+    .x { margin-left: auto; font: inherit; font-size: 14px; color: var(--ink-2); background: transparent; border: 1px solid var(--border); border-radius: 6px; width: 28px; height: 28px; cursor: pointer; }
+    .x:hover { color: #fff; border-color: rgba(255,255,255,.45); }
+    details.sec { border-top: 1px solid var(--border); }
+    details.sec summary { list-style: none; cursor: pointer; padding: 10px 0; display: flex; align-items: center; gap: 8px; }
+    details.sec summary::-webkit-details-marker { display: none; }
+    details.sec summary .t { font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); flex: none; }
+    details.sec summary .peek { margin-left: auto; font-size: 12.5px; font-weight: 700; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    details.sec summary::after { content: "+"; color: var(--ink-3); font-weight: 700; width: 12px; text-align: center; flex: none; }
+    details.sec[open] summary::after { content: "–"; }
+    details.sec[open] summary .peek { visibility: hidden; }
+    .sec-b { padding: 0 0 10px; }
+    .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 3px 0; font-size: 13px; }
+    .row b { font-size: 14px; white-space: nowrap; }
+    .mbar { position: relative; height: 7px; background: rgba(255,255,255,.12); border-radius: 4px; margin: 3px 0 6px; overflow: hidden; }
+    .mbar i { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 4px; }
+    .mbar i.plan { background: rgba(255,255,255,.3); }
+    .mbar i.real { background: #fff; }
+    .mbar i.cost { background: #9cd3e6; }
+    .mbar i.paid { background: #5fb3a6; }
+    .area { padding: 6px 6px 4px; margin: 0 -6px; border-radius: 6px; cursor: pointer; }
+    .area:hover { background: rgba(255,255,255,.06); }
+    .area[aria-pressed="true"] { background: rgba(255,255,255,.1); box-shadow: inset 3px 0 0 #fff; }
+    .an { font-weight: 700; font-size: 13px; }
+    .pc { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12px; }
+    .pc i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+    .next b { display: block; font-size: 13.5px; }
+
+    /* --- Línea de tiempo: los tramos de color sirven para saltar de fase --- */
+    .timeline { left: 16px; right: 16px; bottom: 16px; padding: 10px 14px 12px; }
+    .tl-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .tl-head b { font-size: 14px; }
+    .tl-note { color: var(--ink-3); font-size: 12px; }
+    .btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+    .btn:hover { border-color: rgba(255,255,255,.45); }
+    .btn[aria-pressed="true"] { background: #fff; color: #0a0a0a; border-color: #fff; }
+    .tl { position: relative; height: 44px; }
+    .seg { position: absolute; top: 0; height: 24px; border-radius: 5px; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; color: #0a0a0a; overflow: hidden; white-space: nowrap; padding: 0 4px; cursor: pointer; border: 0; font-family: inherit; z-index: 2; transition: filter .15s; }
+    .seg:hover { filter: brightness(1.12); }
+    .seg.water { background: #9cd3e6; }
+    .seg.sail { background: #e8eef2; }
+    .seg.dock { background: var(--dock); }
+    .mk { position: absolute; top: -3px; height: 30px; width: 2px; background: #fff; pointer-events: none; z-index: 3; }
+    .mk span { position: absolute; top: 31px; left: 50%; transform: translateX(-50%); font-size: 10.5px; color: var(--ink-2); white-space: nowrap; }
+    .mk.plan { background: transparent; border-left: 2px dashed var(--ink-3); }
+    #sim { position: absolute; left: 0; right: 0; top: 26px; width: 100%; margin: 0; height: 14px; background: transparent; -webkit-appearance: none; appearance: none; cursor: grab; z-index: 4; }
+    #sim::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: rgba(255,255,255,.18); }
+    #sim::-moz-range-track { height: 4px; border-radius: 2px; background: rgba(255,255,255,.18); }
+    #sim::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; margin-top: -5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,.5); }
+    #sim::-moz-range-thumb { width: 14px; height: 14px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,.5); }
+
+    /* --- Modo cine: durante el viaje completo solo queda lo esencial --- */
+    .hud, .timeline { transition: opacity .4s; }
+    body.cine .more, body.cine .tl-note { display: none; }
+    body.cine .drawer { transform: translateX(calc(100% + 32px)); visibility: hidden; }
+
+    /* --- Etiquetas 3D --- */
+    .l3d { font-family: "Inter", system-ui, sans-serif; white-space: nowrap; }
+    .country { color: #fff; font-weight: 900; font-size: 22px; letter-spacing: .32em; text-shadow: 0 2px 10px rgba(0,0,0,.55), 0 0 2px rgba(0,0,0,.6); }
+    .country.small { font-size: 12px; letter-spacing: .25em; opacity: .85; }
+    .sea { color: #f0fafd; font-weight: 600; font-style: italic; font-size: 15px; letter-spacing: .18em; text-shadow: 0 1px 6px rgba(0,40,70,.7); }
+    .city { color: #fff; font-weight: 700; font-size: 11.5px; text-shadow: 0 1px 4px rgba(0,0,0,.85); transform: translate(8px, -2px); }
+    .port { color: #0a0a0a; background: #fff; font-weight: 800; font-size: 11px; padding: 3px 8px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+    .ship { font-size: 12.5px; font-weight: 800; padding: 5px 10px; background: #0a0a0a; color: #fff; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+    .bar3d { font-weight: 800; font-size: 11.5px; color: #0a0a0a; background: var(--dock); padding: 3px 8px; border-radius: 6px; }
+
+    .fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #0a0a0a; font-weight: 600; }
+
+    @media (max-width: 700px) {
+      .hud { top: 8px; left: 8px; width: calc(100vw - 16px); padding: 10px 12px; }
+      h1 { font-size: 18px; }
+      .ring { width: 50px; height: 50px; }
+      .hk .v { font-size: 15px; }
+      .drawer { left: 8px; right: 8px; top: auto; width: auto; transform: translateY(calc(100% + 220px)); }
+      .timeline { left: 8px; right: 8px; bottom: 8px; padding: 10px; }
+      .seg { font-size: 0; }
+      .country { font-size: 15px; }
+      .tl-note { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scene" role="img" aria-label="Mapa 3D del viaje del buque entre Panamá y el astillero de Cartagena, Colombia"></div>
+  <div id="labels"></div>
+
+  <section class="panel hud" aria-live="polite">
+    <div class="hud-top"><span class="phase" id="phase"></span><span class="date" id="date"></span><span class="sp"></span><span class="tag">Prueba 3D</span></div>
+    <h1 id="title"></h1>
+    <div class="loc"><img id="flag" alt=""><span id="loc"></span></div>
+    <div class="hud-main">
+      <svg class="ring" id="ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="11"/>
+        <circle id="ring-plan" cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="11" stroke-dasharray="0 264" transform="rotate(-90 50 50)"/>
+        <circle id="ring-real" cx="50" cy="50" r="42" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-dasharray="0 264" transform="rotate(-90 50 50)"/>
+        <text id="ring-txt" x="50" y="58" text-anchor="middle" fill="#fff" font-size="24" font-weight="900" font-family="Inter, sans-serif">0%</text>
+      </svg>
+      <div class="hud-kpis" id="hud-kpis"></div>
+    </div>
+    <button class="more" id="more" type="button" aria-expanded="false" aria-controls="drawer"><span>Ver detalles · plazo, costos, áreas</span><span aria-hidden="true">›</span></button>
+  </section>
+
+  <aside class="panel drawer" id="drawer" aria-label="Detalles del proyecto">
+    <div class="drawer-h"><b>Detalles</b><span class="muted" id="drawer-scope"></span><button class="x" id="close" type="button" aria-label="Cerrar detalles">✕</button></div>
+    <div id="drawer-body"></div>
+  </aside>
+
+  <section class="panel timeline" aria-label="Línea de tiempo">
+    <div class="tl-head">
+      <b id="tl-date"></b><span class="tl-note" id="tl-note"></span>
+      <span class="sp"></span>
+      <button class="btn" type="button" id="today">Hoy</button>
+      <button class="btn" type="button" id="map">Mapa</button>
+      <button class="btn" type="button" id="play" aria-pressed="false">▶ Viaje completo</button>
+    </div>
+    <div class="tl" id="tl"><input type="range" id="sim" aria-label="Fecha simulada"></div>
+  </section>
+
+  <div class="fallback" id="fallback"></div>
+
+  <!-- Mismos datos que la Rev. 0 y la Rev. 1 -->
+  <script src="../../data.js"></script>
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+
+    // =========================================================
+    // Configuración del viaje (datos de ejemplo de la prueba)
+    // =========================================================
+    const VIAJE = {
+      origen: { pais: "Panamá", puerto: "Puerto de Colón" },
+      astillero: { pais: "Colombia", puerto: "Astillero · Cartagena" },
+      diasNavegacion: 3,   // Colón → Cartagena y regreso
+      diasPreZarpe: 4,     // días visibles atracado antes de zarpar
+      diasPostDique: 14    // post-dique en Panamá (garantía y pruebas)
+    };
+
+    // =========================================================
+    // Datos y cálculos (mismas reglas que el dashboard)
+    // =========================================================
+    const D = window.DIQUE_DATA;
+    const DAY = 864e5;
+    const parse = (s) => new Date(s + "T00:00:00");
+    const start = parse(D.proyecto.entrada);
+    const dn = (s) => Math.round((parse(s) - start) / DAY);
+    const N = dn(D.proyecto.salidaPlan);
+    const AT = dn(D.proyecto.corte) + 1;
+    const addDays = (d, n) => new Date(d.getTime() + n * DAY);
+    const fmt = (d) => d.toLocaleDateString("es-ES", { day: "2-digit", month: "short" });
+    const fmtY = (d) => d.toLocaleDateString("es-ES", { weekday: "short", day: "2-digit", month: "short", year: "numeric" });
+    const days = (v) => v.toFixed(1).replace(/\.0$/, "") + (Math.abs(v) === 1 ? " día" : " días");
+    const money = (v) => v >= 1e6 ? "US$ " + (v / 1e6).toFixed(2) + " M" : "US$ " + (v / 1e3).toFixed(0) + " k";
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    const ots = D.ordenes.map((o) => {
+      const hist = D.avances.filter((r) => r[1] === o.id && r[0] <= D.proyecto.corte).map((r) => ({ t: dn(r[0]) + 1, p: r[2], c: r[3] })).sort((a, b) => a.t - b.t);
+      return { ...o, i0: dn(o.inicio), dur: dn(o.fin) - dn(o.inicio) + 1, hist };
+    });
+    const planFrac = (o, t) => Math.max(0, Math.min(1, (t - o.i0) / o.dur));
+    const lastAt = (o, t) => { let r = { p: 0, c: 0 }; for (const h of o.hist) { if (h.t <= t) r = h; else break; } return r; };
+
+    function scope(areaId) {
+      const list = ots.filter((o) => !areaId || o.area === areaId);
+      const bac = list.reduce((s, o) => s + o.bac, 0);
+      const PD = Math.max(...list.map((o) => o.i0 + o.dur));
+      const H = Math.max(N, PD);
+      const plan = [], real = [];
+      for (let t = 0; t <= H; t++) {
+        plan.push(list.reduce((s, o) => s + o.bac * planFrac(o, t), 0) / bac * 100);
+        real.push(t <= AT ? list.reduce((s, o) => s + o.bac * lastAt(o, t).p, 0) / bac : null);
+      }
+      const pPlan = plan[Math.min(AT, H)], pReal = real[Math.min(AT, H)];
+      // Plazo ganado: día en que el plan alcanzaba el avance real de hoy
+      const E = 1e-9;
+      let C = 0; while (C < H && plan[C + 1] <= pReal + E) C++;
+      let ES = C >= H ? H : C + (plan[C + 1] > plan[C] ? (pReal - plan[C]) / (plan[C + 1] - plan[C]) : 0);
+      let L = 0; while (L < H && plan[L] < pReal - E) L++;
+      const Lf = L > 0 && plan[L] > plan[L - 1] ? L - 1 + (pReal - plan[L - 1]) / (plan[L] - plan[L - 1]) : L;
+      if (AT >= Lf - E && AT <= ES + E) ES = AT;
+      const delay = pReal >= 99.95 ? 0 : AT - ES;
+      // costos al corte
+      const pv = (pPlan / 100) * bac;
+      const ac = list.reduce((s, o) => s + (lastAt(o, AT).c || 0), 0);
+      const paid = (D.desembolsos || []).filter((p) => (!areaId || p.area === areaId) && p.fecha <= D.proyecto.corte).reduce((s, p) => s + p.monto, 0);
+      const ev = (pReal / 100) * bac;
+      return { plan, real, pPlan, pReal, delay, PD, H, bac, pv, ac, paid, cpi: ac ? ev / ac : null };
+    }
+    const interp = (arr, x) => {
+      if (x <= 0) return arr[0];
+      if (x >= arr.length - 1) return arr[arr.length - 1];
+      const i = Math.floor(x), f = x - i;
+      return arr[i] + (arr[i + 1] - arr[i]) * f;
+    };
+    // Avance en el instante d: real hasta el corte; después, proyectado (plan desplazado por el atraso)
+    function progressAt(s, d) {
+      if (d < 0) return { real: 0, plan: 0, proj: false };
+      if (d <= AT) { const td = Math.max(0, Math.min(AT, Math.ceil(d))); return { real: s.real[td], plan: s.plan[td], proj: false }; }
+      return { real: Math.min(100, interp(s.plan, d - s.delay)), plan: interp(s.plan, d), proj: true };
+    }
+
+    // Participación del equipo (mismo cálculo que la Rev. 1)
+    function participacion(areaId) {
+      const ids = new Set((D.equipo || []).filter((e) => !areaId || e.area === areaId).map((e) => e.id));
+      let c = 0, a = 0, e = 0, h = 0;
+      (D.reuniones || []).forEach((r) => r.convocados.forEach((id) => { if (ids.has(id)) { c++; if (r.asistentes.includes(id)) a++; } }));
+      (D.actualizaciones || []).forEach(([, id, es, he]) => { if (ids.has(id)) { e += es; h += Math.min(he, es); } });
+      if (!c && !e) return null;
+      const r = c ? a / c * 100 : null, p = e ? h / e * 100 : null;
+      return r != null && p != null ? (r + p) / 2 : r != null ? r : p;
+    }
+    const U = (D.proyecto.participacion && D.proyecto.participacion.umbrales) || [60, 80];
+    function partHue(v) {
+      const [u1, u2] = U, st = [[u1 - 20, 2], [u1, 28], [(u1 + u2) / 2, 46], [u2, 100], [Math.min(100, u2 + 12), 135]];
+      if (v <= st[0][0]) return st[0][1];
+      for (let i = 1; i < st.length; i++) if (v <= st[i][0]) { const [x0, h0] = st[i - 1], [x1, h1] = st[i]; return Math.round(h0 + (v - x0) / (x1 - x0) * (h1 - h0)); }
+      return 135;
+    }
+    const partLevel = (v) => (v < U[0] ? "Baja" : v < U[1] ? "Media" : "Alta");
+
+    const AREAS = [{ id: null, nombre: "Todo el dique" }].concat(D.areas.map((a) => ({ id: a.id, nombre: a.nombre })));
+    const key = (a) => a.id || "resumen";
+    const S = Object.fromEntries(AREAS.map((a) => [key(a), scope(a.id)]));
+    const PART = Object.fromEntries(AREAS.map((a) => [key(a), participacion(a.id)]));
+
+    // Fechas del viaje, en días desde la entrada a dique (0 = entrada)
+    const dDesv = AT >= N ? N : Math.round(N + Math.max(0, S.resumen.delay)); // desvarada proyectada mientras no ocurra
+    const T = {
+      ini: -VIAJE.diasPreZarpe - VIAJE.diasNavegacion - 1,
+      zarpe: -VIAJE.diasNavegacion - 1,
+      llegada: -1,
+      entrada: 0,
+      desvarada: dDesv,
+      salida: dDesv + 0.5,
+      regreso: dDesv + 0.5 + VIAJE.diasNavegacion,
+      fin: dDesv + 0.5 + VIAJE.diasNavegacion + VIAJE.diasPostDique
+    };
+    const dateOf = (d) => addDays(start, Math.floor(d));
+    const HOY = AT - 0.5; // mediodía de la fecha de corte
+
+    // =========================================================
+    // Banderas (canvas → textura 3D y miniatura del panel)
+    // =========================================================
+    function star(ctx, cx, cy, r, color) {
+      ctx.beginPath();
+      for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * 0.4 : r; ctx.lineTo(cx + rr * Math.cos(a), cy + rr * Math.sin(a)); }
+      ctx.closePath(); ctx.fillStyle = color; ctx.fill();
+    }
+    function flagCanvas(pais) {
+      const c = document.createElement("canvas"); c.width = 300; c.height = 200;
+      const g = c.getContext("2d");
+      if (pais === "Panamá") {
+        g.fillStyle = "#fff"; g.fillRect(0, 0, 300, 200);
+        g.fillStyle = "#DA121A"; g.fillRect(150, 0, 150, 100);
+        g.fillStyle = "#072357"; g.fillRect(0, 100, 150, 100);
+        star(g, 75, 50, 26, "#072357"); star(g, 225, 150, 26, "#DA121A");
+      } else {
+        g.fillStyle = "#FCD116"; g.fillRect(0, 0, 300, 100);
+        g.fillStyle = "#003893"; g.fillRect(0, 100, 300, 50);
+        g.fillStyle = "#CE1126"; g.fillRect(0, 150, 300, 50);
+      }
+      return c;
+    }
+    const FLAG = { "Panamá": flagCanvas("Panamá"), "Colombia": flagCanvas("Colombia") };
+    const FLAG_URL = Object.fromEntries(Object.entries(FLAG).map(([k, c]) => [k, c.toDataURL()]));
+
+    // =========================================================
+    // Escena
+    // =========================================================
+    const host = document.getElementById("scene");
+    let renderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
+    catch (e) {
+      const fb = document.getElementById("fallback"); fb.style.display = "flex";
+      fb.textContent = "Este navegador no permite gráficos 3D (WebGL). Abre la prueba en Chrome o Edge actualizados.";
+      throw e;
+    }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.05;
+    host.appendChild(renderer.domElement);
+    const labelRenderer = new CSS2DRenderer({ element: document.getElementById("labels") });
+    labelRenderer.setSize(innerWidth, innerHeight);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0xcfe0ea, 95, 230);
+    const camera = new THREE.PerspectiveCamera(36, innerWidth / innerHeight, 0.1, 600);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.maxPolarAngle = Math.PI * 0.45;
+    controls.minDistance = 5;
+    controls.maxDistance = 160;
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x3f6280, 1.15));
+    const sun = new THREE.DirectionalLight(0xfff1dc, 2.3);
+    sun.position.set(-45, 70, 40);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(4096, 4096);
+    Object.assign(sun.shadow.camera, { left: -70, right: 70, top: 45, bottom: -45, near: 1, far: 220 });
+    sun.shadow.bias = -0.0004;
+    scene.add(sun);
+
+    // --- Proyección del mapa: longitud/latitud → x/z (10 unidades por grado; norte = -z) ---
+    const LON0 = -78.45, LAT0 = 9.5, K = 10;
+    const P = (lon, lat) => [(lon - LON0) * K, -(lat - LAT0) * K];
+    const V = (lon, lat, y = 0) => { const [x, z] = P(lon, lat); return new THREE.Vector3(x, y, z); };
+
+    // Costas simplificadas (lon, lat)
+    const GEO = {
+      "Panamá": [[-82.56, 9.57], [-82.25, 9.33], [-82.2, 9.0], [-81.6, 8.85], [-81.0, 8.85], [-80.5, 9.05], [-79.9, 9.36], [-79.55, 9.6], [-79.0, 9.55], [-78.5, 9.4], [-78.0, 9.2], [-77.6, 8.85], [-77.37, 8.67],
+        [-77.45, 8.2], [-77.75, 7.7], [-77.9, 7.22], [-78.2, 8.0], [-78.45, 8.35], [-78.95, 8.6], [-79.52, 8.97], [-79.9, 8.75], [-80.2, 8.4], [-80.45, 8.0], [-80.15, 7.55], [-80.45, 7.22],
+        [-80.95, 7.25], [-81.15, 7.65], [-81.75, 8.1], [-82.3, 8.2], [-82.9, 8.05], [-82.9, 8.6], [-82.75, 9.1]],
+      "Colombia": [[-77.37, 8.67], [-76.95, 8.55], [-76.75, 7.95], [-76.6, 8.4], [-76.35, 8.9], [-75.95, 9.35], [-75.75, 9.75], [-75.6, 10.15], [-75.55, 10.42], [-75.3, 10.8], [-74.85, 11.05],
+        [-74.4, 11.0], [-74.2, 11.28], [-73.6, 11.28], [-73.0, 11.45], [-72.4, 11.8], [-72.4, 6.4], [-77.35, 6.4], [-77.6, 6.9], [-77.9, 7.22], [-77.75, 7.7], [-77.45, 8.2]],
+      "Costa Rica": [[-82.56, 9.57], [-82.75, 9.1], [-82.9, 8.6], [-82.9, 8.05], [-83.3, 8.35], [-83.7, 8.65], [-84.6, 9.5], [-84.6, 10.95], [-83.65, 10.92], [-83.3, 10.4], [-83.0, 10.0]]
+    };
+    const POLY = Object.fromEntries(Object.entries(GEO).map(([k, pts]) => [k, pts.map(([lo, la]) => P(lo, la))]));
+    const inside = (poly, x, z) => {
+      let c = false;
+      for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+        const [xi, zi] = poly[i], [xj, zj] = poly[j];
+        if ((zi > z) !== (zj > z) && x < ((xj - xi) * (z - zi)) / (zj - zi) + xi) c = !c;
+      }
+      return c;
+    };
+    const onLand = (x, z) => Object.values(POLY).some((p) => inside(p, x, z));
+    const segDist = (px, pz, [ax, az], [bx, bz]) => {
+      const dx = bx - ax, dz = bz - az, l2 = dx * dx + dz * dz;
+      const t = l2 ? Math.max(0, Math.min(1, ((px - ax) * dx + (pz - az) * dz) / l2)) : 0;
+      return Math.hypot(px - (ax + t * dx), pz - (az + t * dz));
+    };
+    const coastDist = (x, z) => {
+      let m = Infinity;
+      for (const p of Object.values(POLY)) for (let i = 0; i < p.length; i++) m = Math.min(m, segDist(x, z, p[i], p[(i + 1) % p.length]));
+      return m;
+    };
+
+    // RNG con semilla para que el mapa sea siempre igual
+    let seed = 7;
+    const rnd = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+
+    // --- Dique seco en Cartagena y muelle en Colón (posiciones según las coordenadas reales) ---
+    const DOCK = { x0: 21, x1: 28, z0: -10.1, z1: -7.9, floor: -1.6, top: 0.55 };
+    const DOCK_ZC = (DOCK.z0 + DOCK.z1) / 2;
+    const COLON = V(-79.9, 9.36);
+    const BERTH = new THREE.Vector3(COLON.x + 1.1, 0, -2.6);
+
+    // --- Mar con olas, degradado de profundidad y hueco donde está el dique ---
+    const SEA_W = 130, SEA_H = 74;
+    const seaGeo = new THREE.PlaneGeometry(SEA_W, SEA_H, SEA_W, SEA_H).rotateX(-Math.PI / 2);
+    {
+      const pos = seaGeo.attributes.position, idx = seaGeo.index.array, keep = [];
+      for (let i = 0; i < idx.length; i += 3) {
+        const cx = (pos.getX(idx[i]) + pos.getX(idx[i + 1]) + pos.getX(idx[i + 2])) / 3;
+        const cz = (pos.getZ(idx[i]) + pos.getZ(idx[i + 1]) + pos.getZ(idx[i + 2])) / 3;
+        if (cx > DOCK.x0 && cx < DOCK.x1 + 0.5 && cz > DOCK.z0 - 0.5 && cz < DOCK.z1 + 0.5) continue; // dentro del dique
+        keep.push(idx[i], idx[i + 1], idx[i + 2]);
+      }
+      seaGeo.setIndex(keep);
+      const cols = new Float32Array(pos.count * 3);
+      const stops = [[0, new THREE.Color(0x7fd8cf)], [1.2, new THREE.Color(0x3fb0bf)], [4, new THREE.Color(0x1f80a8)], [11, new THREE.Color(0x12507c)]];
+      const col = new THREE.Color();
+      for (let i = 0; i < pos.count; i++) {
+        const x = pos.getX(i), z = pos.getZ(i);
+        const d = onLand(x, z) ? 0 : coastDist(x, z);
+        let k = stops.length - 1;
+        for (let s = 1; s < stops.length; s++) if (d <= stops[s][0]) { k = s; break; }
+        const [d0, c0] = stops[k - 1], [d1, c1] = stops[k];
+        col.copy(c0).lerp(c1, Math.max(0, Math.min(1, (d - d0) / (d1 - d0))));
+        cols[i * 3] = col.r; cols[i * 3 + 1] = col.g; cols[i * 3 + 2] = col.b;
+      }
+      seaGeo.setAttribute("color", new THREE.BufferAttribute(cols, 3));
+    }
+    const sea = new THREE.Mesh(seaGeo, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.25, metalness: 0.08, flatShading: true }));
+    sea.receiveShadow = true;
+    scene.add(sea);
+    const sPos = seaGeo.attributes.position, sBase = Float32Array.from(sPos.array);
+    const waveAt = (x, z, t) => 0.09 * Math.sin(x * 0.5 + t * 1.1) + 0.07 * Math.sin(z * 0.62 + t * 1.4) + 0.035 * Math.sin((x - z) * 1.1 + t * 2.1);
+
+    // --- Tierra: países extruidos con borde de playa ---
+    const LAND = {
+      "Panamá": new THREE.MeshStandardMaterial({ color: 0x6f9e58, roughness: 0.9, flatShading: true }),
+      "Colombia": new THREE.MeshStandardMaterial({ color: 0x86a355, roughness: 0.9, flatShading: true }),
+      "Costa Rica": new THREE.MeshStandardMaterial({ color: 0x8e978a, roughness: 0.95, flatShading: true })
+    };
+    const sand = new THREE.MeshStandardMaterial({ color: 0xe6d6a8, roughness: 0.95, flatShading: true });
+    const LAND_TOP = 0.85;
+    Object.entries(POLY).forEach(([pais, poly]) => {
+      const shape = new THREE.Shape(poly.map(([x, z]) => new THREE.Vector2(x, -z)));
+      const geo = new THREE.ExtrudeGeometry(shape, { depth: 1.1, bevelEnabled: true, bevelThickness: 0.15, bevelSize: 0.3, bevelSegments: 2 }).rotateX(-Math.PI / 2);
+      const m = new THREE.Mesh(geo, [LAND[pais], sand]);
+      m.position.y = -0.4; m.receiveShadow = true; m.castShadow = true;
+      scene.add(m);
+    });
+
+    // --- Relieve: cordilleras low-poly; Sierra Nevada de Santa Marta con nieve ---
+    const MT = { low: 0x5e8a4f, mid: 0x4c7240, high: 0x7d6e55, gray: 0x868f84 };
+    const coneGeo = new THREE.ConeGeometry(1, 1, 6);
+    const canalMid = P(-79.7, 9.12);
+    const avoid = [[COLON.x, COLON.z + 2], [(DOCK.x0 + DOCK.x1) / 2, DOCK_ZC], canalMid, P(-79.52, 8.99)];
+    function mountain(x, z, h, r, color, snow) {
+      const m = new THREE.Mesh(coneGeo, new THREE.MeshStandardMaterial({ color, roughness: 0.9, flatShading: true }));
+      m.scale.set(r, h, r); m.position.set(x, LAND_TOP + h / 2 - 0.05, z); m.rotation.y = rnd() * Math.PI;
+      m.castShadow = m.receiveShadow = true; scene.add(m);
+      if (snow) {
+        const cap = new THREE.Mesh(coneGeo, new THREE.MeshStandardMaterial({ color: 0xf7f7f4, roughness: 0.7, flatShading: true }));
+        cap.scale.set(r * 0.36, h * 0.36, r * 0.36); cap.position.set(x, LAND_TOP + h * 0.82 - 0.05, z); cap.rotation.y = m.rotation.y; scene.add(cap);
+      }
+    }
+    function scatter(pais, n, hFn) {
+      const poly = POLY[pais];
+      const xs = poly.map((p) => p[0]), zs = poly.map((p) => p[1]);
+      const [x0, x1, z0, z1] = [Math.min(...xs), Math.max(...xs), Math.min(...zs), Math.max(...zs)];
+      let placed = 0, tries = 0;
+      while (placed < n && tries++ < n * 80) {
+        const x = x0 + rnd() * (x1 - x0), z = z0 + rnd() * (z1 - z0);
+        if (!inside(poly, x, z) || coastDist(x, z) < 1.4 || avoid.some(([ax, az]) => Math.hypot(x - ax, z - az) < 4)) continue;
+        const [h, color] = hFn(x, z);
+        mountain(x, z, h, 0.7 + rnd() * 0.9, color, false);
+        placed++;
+      }
+    }
+    scatter("Panamá", 46, () => { const h = 0.5 + rnd() * 1.3; return [h, h > 1.3 ? MT.mid : MT.low]; });
+    scatter("Costa Rica", 26, () => [0.6 + rnd() * 1.4, MT.gray]);
+    const andesZ = P(0, 7.9)[1];
+    scatter("Colombia", 140, (x, z) => {
+      const h = z > andesZ ? 1.4 + rnd() * 2.2 : 0.4 + rnd() * 1.1; // al sur, estribaciones de los Andes
+      return [h, h > 2.4 ? MT.high : h > 1.2 ? MT.mid : MT.low];
+    });
+    const SNM = V(-73.75, 10.85);
+    [[0, 0, 4.6], [1.6, 0.9, 3.6], [-1.4, 1.1, 3.3], [0.6, -1.5, 3]].forEach(([dx, dz, h]) => mountain(SNM.x + dx, SNM.z + dz, h, 1.7, MT.high, true));
+
+    // --- Canal de Panamá y fronteras ---
+    const canal = new THREE.CatmullRomCurve3([V(-79.92, 9.33, LAND_TOP + 0.02), V(-79.88, 9.2, LAND_TOP + 0.02), V(-79.75, 9.12, LAND_TOP + 0.02), V(-79.65, 9.03, LAND_TOP + 0.02), V(-79.55, 8.96, LAND_TOP + 0.02)]);
+    const canalMesh = new THREE.Mesh(new THREE.TubeGeometry(canal, 30, 0.18, 6, false), new THREE.MeshStandardMaterial({ color: 0x3fb0bf, roughness: 0.3 }));
+    canalMesh.scale.y = 0.25; canalMesh.position.y = LAND_TOP * 0.75;
+    scene.add(canalMesh);
+    function border(pts) {
+      const g = new THREE.BufferGeometry().setFromPoints(pts.map(([lo, la]) => V(lo, la, LAND_TOP + 0.08)));
+      const l = new THREE.Line(g, new THREE.LineDashedMaterial({ color: 0xffffff, dashSize: 0.5, gapSize: 0.35, transparent: true, opacity: 0.9 }));
+      l.computeLineDistances(); scene.add(l);
+    }
+    border([[-77.37, 8.67], [-77.45, 8.2], [-77.75, 7.7], [-77.9, 7.22]]);
+    border([[-82.56, 9.57], [-82.75, 9.1], [-82.9, 8.6], [-82.9, 8.05]]);
+
+    // --- Etiquetas del mapa ---
+    // Las etiquetas se agrupan para mostrarlas según el zoom (lejos: países y mares; cerca: puertos)
+    const LBL = { mapa: [], city: [], port: [] };
+    function label(html, cls, obj, pos) {
+      const div = document.createElement("div");
+      div.className = "l3d " + cls; div.innerHTML = html;
+      const o = new CSS2DObject(div); o.position.copy(pos); obj.add(o);
+      const g = /country|sea/.test(cls) ? "mapa" : cls === "city" ? "city" : cls === "port" ? "port" : null;
+      if (g) LBL[g].push(div);
+      return div;
+    }
+    function showGroup(list, on) {
+      if (list.on === on) return;
+      list.on = on;
+      list.forEach((d) => { d.style.visibility = on ? "" : "hidden"; });
+    }
+    label("PANAMÁ", "country", scene, V(-80.7, 8.35, 2.2));
+    label("COLOMBIA", "country", scene, V(-75.6, 8.1, 3));
+    label("COSTA RICA", "country small", scene, V(-83.8, 9.9, 2));
+    label("Mar Caribe", "sea", scene, V(-77.6, 11.7, 0.5));
+    label("Océano Pacífico", "sea", scene, V(-79.3, 7.65, 0.5));
+    const cityDot = new THREE.CylinderGeometry(0.22, 0.22, 0.2, 12);
+    const cityMat = new THREE.MeshStandardMaterial({ color: 0xffffff });
+    [["Ciudad de Panamá", -79.52, 8.99, true], ["Colón", -79.9, 9.36, true], ["Canal de Panamá", -79.74, 9.12, false], ["Cartagena", -75.5, 10.39, true], ["Barranquilla", -74.8, 10.96, true], ["Santa Marta", -74.2, 11.24, true], ["Sierra Nevada", -73.75, 10.55, false]].forEach(([n, lo, la, dot]) => {
+      const p = V(lo, la, LAND_TOP + 0.12);
+      if (dot) { const d = new THREE.Mesh(cityDot, cityMat); d.position.copy(p); scene.add(d); }
+      label(n, "city", scene, p);
+    });
+
+    // --- Utilidades de construcción ---
+    const concrete = new THREE.MeshStandardMaterial({ color: 0xb9b9b4, roughness: 0.9 });
+    const white = new THREE.MeshStandardMaterial({ color: 0xf4f4f4, roughness: 0.6 });
+    const dark = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, roughness: 0.7 });
+    const yellow = new THREE.MeshStandardMaterial({ color: 0xf2c14e, roughness: 0.6 });
+    const box = (w, h, d, mat, x, y, z, parent = scene) => {
+      const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+      m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; parent.add(m); return m;
+    };
+    const waving = [];
+    function flagPole(pais, x, z, baseY, h = 3, w = 1.5) {
+      const g = new THREE.Group();
+      box(0.08, h, 0.08, white, 0, h / 2, 0, g);
+      const geo = new THREE.PlaneGeometry(w, w / 1.5, 16, 10).translate(w / 2, 0, 0);
+      const tex = new THREE.CanvasTexture(FLAG[pais]); tex.colorSpace = THREE.SRGBColorSpace;
+      const f = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, side: THREE.DoubleSide, roughness: 0.8 }));
+      f.position.y = h - w / 3; f.castShadow = true; g.add(f);
+      g.position.set(x, baseY, z); scene.add(g);
+      waving.push({ geo, base: Float32Array.from(geo.attributes.position.array), w });
+      return g;
+    }
+
+    // --- Puerto de Colón (Panamá) ---
+    box(1.2, 1.3, 6.8, concrete, COLON.x, -0.15, -1.6);  // muelle hacia el norte
+    const contMats = [0xb34a3a, 0x2e5c7a, 0xd9a441, 0x6e6e6e].map((c) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.8 }));
+    for (let i = 0; i < 16; i++) box(1.1, 0.5, 0.5, contMats[(i * 3) % 4], COLON.x - 2.6 - Math.floor(i / 8) * 1.3, LAND_TOP + 0.25 + Math.floor((i % 8) / 4) * 0.5, COLON.z + 2.4 + (i % 4) * 0.6);
+    box(0.18, 3, 0.18, white, COLON.x - 0.4, 2, -1.2); box(0.18, 3, 0.18, white, COLON.x - 0.4, 2, -2.6); // grúa pórtico
+    box(3.4, 0.2, 0.2, white, COLON.x + 0.6, 3.4, -1.9);
+    flagPole("Panamá", COLON.x - 0.9, COLON.z + 1.6, LAND_TOP, 3.4, 1.6);
+    label(VIAJE.origen.puerto, "port", scene, new THREE.Vector3(COLON.x - 0.5, 4.8, COLON.z + 1.6));
+
+    // --- Astillero con dique seco (Cartagena, Colombia) ---
+    const yard = new THREE.Group(); scene.add(yard);
+    const YH = DOCK.top + 2, YC = (DOCK.top - 2) / 2;
+    box(11, YH, DOCK.z0 + 13, concrete, 25, YC, (DOCK.z0 - 13) / 2, yard);              // bloque norte
+    box(11, YH, -5.5 - DOCK.z1, concrete, 25, YC, (DOCK.z1 - 5.5) / 2, yard);           // bloque sur
+    box(30.5 - DOCK.x1, YH, DOCK.z1 - DOCK.z0, concrete, (DOCK.x1 + 30.5) / 2, YC, DOCK_ZC, yard); // cabecera
+    box(DOCK.x1 - DOCK.x0 + 0.5, 0.6, DOCK.z1 - DOCK.z0, new THREE.MeshStandardMaterial({ color: 0x8f8f8a, roughness: 0.95 }), (DOCK.x0 + DOCK.x1 + 0.5) / 2, DOCK.floor - 0.3, DOCK_ZC, yard); // piso
+    for (let i = 0; i < 6; i++) box(0.28, 0.3, 0.45, dark, 22.6 + i * 0.85, DOCK.floor + 0.15, DOCK_ZC, yard); // picaderos
+    const gate = box(0.25, 2.3, DOCK.z1 - DOCK.z0, new THREE.MeshStandardMaterial({ color: 0x3a3a3a, roughness: 0.6 }), DOCK.x0 + 0.13, -0.55, DOCK_ZC, yard);
+    const dockWater = new THREE.Mesh(new THREE.PlaneGeometry(DOCK.x1 - DOCK.x0 + 0.5, DOCK.z1 - DOCK.z0).rotateX(-Math.PI / 2),
+      new THREE.MeshStandardMaterial({ color: 0x2f8fae, roughness: 0.25, metalness: 0.1, transparent: true, opacity: 0.88 }));
+    dockWater.position.set((DOCK.x0 + DOCK.x1 + 0.5) / 2, 0, DOCK_ZC); yard.add(dockWater);
+    const cranes = [];
+    for (const [x, z, a] of [[22.5, -11.9, 0.4], [26.8, -6.6, -2.4]]) {
+      const g = new THREE.Group(); g.position.set(x, DOCK.top, z); yard.add(g);
+      box(0.25, 5, 0.25, yellow, 0, 2.5, 0, g);
+      const jib = new THREE.Group(); jib.position.y = 5; g.add(jib);
+      box(5, 0.18, 0.18, yellow, 1.4, 0, 0, jib);
+      box(0.6, 0.45, 0.5, dark, -1.1, -0.1, 0, jib);
+      jib.rotation.y = a; cranes.push(jib);
+    }
+    for (let i = 0; i < 4; i++) box(0.9, 0.55, 0.6, new THREE.MeshStandardMaterial({ color: 0x9a9a9a, roughness: 0.8 }), 20.4 + i * 1.1, DOCK.top + 0.28, -12.2, yard); // talleres
+    flagPole("Colombia", 29.4, -6.3, DOCK.top, 3.4, 1.6);
+    label(VIAJE.astillero.puerto, "port", scene, new THREE.Vector3(30.5, 4.6, -12.8));
+    // Barra de avance sobre el borde del dique
+    const BAR = { x0: DOCK.x0, len: DOCK.x1 - DOCK.x0, z: DOCK.z0 - 0.45, y: DOCK.top + 0.1 };
+    box(BAR.len, 0.16, 0.4, new THREE.MeshStandardMaterial({ color: 0x1b1b1b }), BAR.x0 + BAR.len / 2, BAR.y, BAR.z, yard);
+    const barFill = box(1, 0.22, 0.46, new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x666666 }), 0, BAR.y + 0.02, BAR.z, yard);
+    const barGap = box(1, 0.2, 0.44, new THREE.MeshStandardMaterial({ color: 0xef5350, emissive: 0x7a1717 }), 0, BAR.y + 0.01, BAR.z, yard);
+    const barLbl = label("", "bar3d", yard, new THREE.Vector3(BAR.x0 + BAR.len + 0.6, BAR.y + 0.5, BAR.z - 0.2));
+
+    // --- Nubes que proyectan sombra sobre el mapa ---
+    const clouds = [];
+    const cloudMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 1, flatShading: true, transparent: true, opacity: 0.85 });
+    for (let i = 0; i < 7; i++) {
+      const g = new THREE.Group();
+      const n = 3 + Math.floor(rnd() * 3);
+      for (let j = 0; j < n; j++) {
+        const s = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 0), cloudMat);
+        s.scale.setScalar(0.6 + rnd() * 0.7); s.position.set(j * 0.9 - n * 0.45, rnd() * 0.4, rnd() * 0.8 - 0.4);
+        g.add(s);
+      }
+      // al norte (mar abierto) o al sur (Pacífico), lejos de la ruta Colón–Cartagena
+      g.position.set(-60 + rnd() * 120, 22 + rnd() * 4, i % 2 ? -26 + rnd() * 8 : 16 + rnd() * 12);
+      g.userData.v = 0.6 + rnd() * 0.6;
+      scene.add(g); clouds.push(g);
+    }
+
+    // --- Ruta marítima Colón → Cartagena ---
+    const MOUTH = new THREE.Vector3(DOCK.x0 - 2.2, 0, DOCK_ZC);
+    const DOCKED = new THREE.Vector3((DOCK.x0 + DOCK.x1) / 2 + 0.2, 0, DOCK_ZC);
+    const route = new THREE.CatmullRomCurve3([BERTH, V(-79.86, 9.95), V(-79.1, 10.18), V(-78.2, 10.22), V(-77.1, 10.18), V(-76.7, 10.22), MOUTH], false, "centripetal");
+    const dots = [];
+    const dotGeo = new THREE.SphereGeometry(0.12, 8, 6);
+    const DOT_ON = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x555555 });
+    const DOT_OFF = new THREE.MeshStandardMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 });
+    for (let i = 0; i <= 90; i++) { const m = new THREE.Mesh(dotGeo, DOT_OFF); m.position.copy(route.getPointAt(i / 90)); m.userData.f = i / 90; scene.add(m); dots.push(m); }
+
+    // --- Barco low-poly (granelero con bandera panameña en la popa) ---
+    function makeShip() {
+      const ship = new THREE.Group();
+      const M = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.55, metalness: 0.12, ...opts });
+      const hs = new THREE.Shape();
+      hs.moveTo(-7, -1.25); hs.lineTo(4.4, -1.25); hs.quadraticCurveTo(6.7, -1.05, 7.3, 0); hs.quadraticCurveTo(6.7, 1.05, 4.4, 1.25);
+      hs.lineTo(-7, 1.25); hs.quadraticCurveTo(-7.45, 0, -7, -1.25);
+      const ext = (depth) => new THREE.ExtrudeGeometry(hs, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2);
+      const add = (mesh, x, y, z) => { mesh.position.set(x, y, z); mesh.castShadow = true; ship.add(mesh); return mesh; };
+      add(new THREE.Mesh(ext(0.75), M(0x9b2c22)), 0, -0.75, 0);                                   // obra viva
+      add(new THREE.Mesh(ext(0.95), M(0x1f2328, { roughness: 0.4, metalness: 0.3 })), 0, 0, 0);   // obra muerta
+      const boot = add(new THREE.Mesh(ext(0.16), M(0xd23a2e)), 0, -0.05, 0); boot.scale.set(1.006, 1, 1.03);
+      add(new THREE.Mesh(new THREE.ShapeGeometry(hs).rotateX(-Math.PI / 2), M(0x6f7a73)), 0, 0.96, 0);
+      for (let i = 0; i < 5; i++) add(new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.3, 1.7), M(0x2e5c7a)), -2.6 + i * 1.75, 1.12, 0);
+      for (const x of [-1.75, 1.75, 5.1]) {
+        add(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.14, 1.6, 8), M(0xf2c14e)), x, 1.75, 0.95);
+        add(new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.1), M(0xf2c14e)), x + 0.8, 2.3, 0.95).rotation.z = 0.35;
+      }
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.9, 2.2), M(0xf7f7f7)), -5.6, 1.9, 0);
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.55, 2.8), M(0xf7f7f7)), -5.4, 3.1, 0);
+      add(new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.22, 2.4), M(0x111111)), -4.74, 3.12, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.4, 1.3, 14), M(0x1f2328)), -6.45, 3.25, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.385, 0.385, 0.25, 14), M(0xd23a2e)), -6.45, 3.45, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.6, 6), M(0xf7f7f7)), 6.3, 1.75, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, 1.4, 6), M(0xf7f7f7)), -7.1, 1.6, 0);
+      const ft = new THREE.CanvasTexture(FLAG["Panamá"]); ft.colorSpace = THREE.SRGBColorSpace;
+      const fg = new THREE.PlaneGeometry(0.9, 0.6, 8, 5).translate(-0.45, 0, 0);
+      add(new THREE.Mesh(fg, new THREE.MeshStandardMaterial({ map: ft, side: THREE.DoubleSide })), -7.1, 2.0, 0);
+      waving.push({ geo: fg, base: Float32Array.from(fg.attributes.position.array), w: -0.9 });
+      return ship;
+    }
+    const SCALE = 0.4;
+    const ship = makeShip(); ship.scale.setScalar(SCALE); scene.add(ship);
+    const shipLbl = label("", "ship", ship, new THREE.Vector3(0, 8.5, 0));
+    const REST_Y = DOCK.floor + 0.3 + 0.75 * SCALE; // apoyado en los picaderos
+
+    // Estela de espuma
+    const foam = [];
+    const foamGeo = new THREE.CircleGeometry(0.13, 10).rotateX(-Math.PI / 2);
+    for (let i = 0; i < 140; i++) { const m = new THREE.Mesh(foamGeo, new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false })); m.visible = false; scene.add(m); foam.push({ m, life: 0 }); }
+    let foamI = 0, foamT = 0;
+
+    // =========================================================
+    // Estado del buque en el instante d (días desde la entrada a dique)
+    // =========================================================
+    const heading = (v) => Math.atan2(-v.z, v.x);
+    const smooth = (x) => x * x * (3 - 2 * x);
+    const lerpAng = (a, b, f) => { const d = ((b - a + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI; return a + d * f; };
+    const H_BERTH = Math.PI / 2; // atracado con proa al norte
+    const H_IN = heading(route.getTangentAt(1));
+
+    function shipState(d) {
+      if (d < T.zarpe) return { fase: "pre", pos: BERTH.clone(), rot: H_BERTH, sailing: false, f: 0 };
+      if (d < T.llegada) { const f = (d - T.zarpe) / (T.llegada - T.zarpe); const h = heading(route.getTangentAt(f)); return { fase: "ida", pos: route.getPointAt(f), rot: f < 0.04 ? lerpAng(H_BERTH, h, f / 0.04) : h, sailing: true, f }; }
+      if (d < T.entrada) { const f = smooth((d - T.llegada) / (T.entrada - T.llegada)); return { fase: "ida", pos: MOUTH.clone().lerp(DOCKED, f), rot: lerpAng(H_IN, 0, f), sailing: true, f: 1 }; }
+      if (d < T.desvarada) return { fase: "dique", pos: DOCKED.clone(), rot: 0, sailing: false, f: 1 };
+      if (d < T.salida) { const f = smooth((d - T.desvarada) / (T.salida - T.desvarada)); return { fase: "regreso", pos: DOCKED.clone().lerp(MOUTH, f), rot: 0, sailing: true, f: 1 }; } // sale de popa, remolcado
+      if (d < T.regreso) {
+        const f = (d - T.salida) / (T.regreso - T.salida), rf = 1 - f;
+        let rot = lerpAng(0, heading(route.getTangentAt(rf).negate()), smooth(Math.min(1, f / 0.1)));
+        if (f > 0.96) rot = lerpAng(rot, -H_BERTH, (f - 0.96) / 0.04);
+        return { fase: "regreso", pos: route.getPointAt(rf), rot, sailing: true, f: rf };
+      }
+      return { fase: "post", pos: BERTH.clone(), rot: -H_BERTH, sailing: false, f: 0 };
+    }
+    // Nivel del agua dentro del dique: se vacía al entrar y se inunda para la desvarada
+    function dockLevel(d) {
+      const dry = DOCK.floor + 0.05;
+      if (d <= T.entrada || d >= T.desvarada) return 0;
+      if (d < T.entrada + 0.6) return dry * smooth((d - T.entrada) / 0.6);
+      if (d > T.desvarada - 0.6) return dry * (1 - smooth((d - (T.desvarada - 0.6)) / 0.6));
+      return dry;
+    }
+
+    const FASES = {
+      pre: { titulo: "En el agua · pre-dique", corto: "Pre-dique", cls: "", pais: VIAJE.origen.pais, loc: `${VIAJE.origen.puerto}, ${VIAJE.origen.pais}` },
+      ida: { titulo: `Navegando a ${VIAJE.astillero.pais}`, corto: "Navegación", cls: "sail", pais: null, loc: "Mar Caribe · rumbo a Cartagena" },
+      dique: { titulo: "En dique seco", corto: "En dique", cls: "dique", pais: VIAJE.astillero.pais, loc: `${VIAJE.astillero.puerto}, ${VIAJE.astillero.pais}` },
+      regreso: { titulo: `Regreso a ${VIAJE.origen.pais}`, corto: "Navegación", cls: "sail", pais: null, loc: "Mar Caribe · rumbo a Colón" },
+      post: { titulo: "En el agua · post-dique", corto: "Post-dique", cls: "", pais: VIAJE.origen.pais, loc: `${VIAJE.origen.puerto}, ${VIAJE.origen.pais}` }
+    };
+
+    // =========================================================
+    // Interfaz
+    // =========================================================
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const state = { d: HOY, scope: "resumen", playing: false, paused: false };
+    const sim = document.getElementById("sim");
+    sim.min = T.ini; sim.max = T.fin; sim.step = 0.05;
+    const pctX = (d) => ((d - T.ini) / (T.fin - T.ini)) * 100;
+
+    const tl = document.getElementById("tl");
+    const segs = [
+      ["water", T.ini, T.zarpe, "Pre-dique · " + VIAJE.origen.pais, "pre"],
+      ["sail", T.zarpe, T.entrada, "Navegación", "ida"],
+      ["dock", T.entrada, T.desvarada, "En dique · " + VIAJE.astillero.pais, "dique"],
+      ["sail", T.desvarada, T.regreso, "Regreso", "regreso"],
+      ["water", T.regreso, T.fin, "Post-dique · " + VIAJE.origen.pais, "post"]
+    ];
+    tl.insertAdjacentHTML("afterbegin", segs.map(([c, a, b, txt, f]) =>
+      `<button type="button" class="seg ${c}" data-seg="${f}" style="left:${pctX(a)}%;width:calc(${pctX(b) - pctX(a)}% - 2px)" title="${txt}">${txt}</button>`).join("") +
+      `<div class="mk" style="left:${pctX(HOY)}%"><span>Hoy · ${fmt(dateOf(HOY))}</span></div>` +
+      (dDesv !== N ? `<div class="mk plan" style="left:${pctX(N)}%"><span>Desvarada plan</span></div>` : ""));
+    tl.addEventListener("click", (e) => { const b = e.target.closest(".seg"); if (b) jump(b.dataset.seg); });
+
+    // Encuadres de cámara
+    const VIEWS = {
+      mapa: { pos: new THREE.Vector3(11, 80, 64), target: new THREE.Vector3(11, 0, 0) },
+      puerto: { pos: new THREE.Vector3(COLON.x + 13, 12.5, COLON.z + 10), target: new THREE.Vector3(COLON.x - 0.6, 0.4, -1.2) },
+      dique: { pos: new THREE.Vector3(18.5, 12.5, 1.5), target: new THREE.Vector3(24.8, -1, -9.2) }
+    };
+    let cam = null, cine = false;
+    const viewFor = (f) => (f === "dique" ? "dique" : f === "pre" || f === "post" ? "puerto" : "mapa");
+    // En pantallas angostas (celular vertical) la cámara se aleja para que entre la misma escena
+    const widen = () => Math.pow(Math.max(1, 1.3 / camera.aspect), 0.65);
+    function frameView(name, dur = 1800) {
+      const v = VIEWS[name], pos = v.target.clone().add(v.pos.clone().sub(v.target).multiplyScalar(widen()));
+      cam = { fromPos: camera.position.clone(), fromTarget: controls.target.clone(), pos, target: v.target.clone(), t0: performance.now(), dur: reduce ? 1 : dur };
+    }
+    let anim = null;
+    function animateTo(target) { if (reduce) { state.d = target; return; } anim = { from: state.d, to: target, t0: performance.now(), dur: 1800 }; }
+    const playBtn = document.getElementById("play");
+    function resetPlay() { state.paused = false; playBtn.textContent = "▶ Viaje completo"; }
+    function stopPlay(byUser = false) {
+      if (state.playing) state.paused = byUser; // solo se reanuda si el usuario lo pausó a mitad de camino
+      state.playing = false; playBtn.setAttribute("aria-pressed", "false");
+      playBtn.textContent = state.paused ? "▶ Continuar viaje" : "▶ Viaje completo";
+    }
+    function jump(f) {
+      stopPlay(); resetPlay(); cine = false;
+      frameView(viewFor(f));
+      animateTo({ pre: T.zarpe - 2, ida: (T.zarpe + T.llegada) / 2, dique: Math.min(HOY, T.desvarada - 1), regreso: (T.salida + T.regreso) / 2, post: T.regreso + 3 }[f]);
+    }
+    document.getElementById("today").addEventListener("click", () => { stopPlay(); resetPlay(); cine = false; frameView(viewFor(shipState(HOY).fase)); animateTo(HOY); });
+    document.getElementById("map").addEventListener("click", () => { cine = false; frameView("mapa"); });
+    sim.addEventListener("input", () => { stopPlay(); resetPlay(); anim = null; state.d = +sim.value; });
+    playBtn.addEventListener("click", () => {
+      if (state.playing) return stopPlay(true);
+      anim = null; cam = null;
+      if (!state.paused || state.d >= T.fin - 0.1) { state.d = T.ini; frameView("puerto", 1200); }
+      state.paused = false; state.playing = true; cine = true;
+      playBtn.setAttribute("aria-pressed", "true"); playBtn.textContent = "❚❚ Pausar";
+    });
+    const drawer = document.getElementById("drawer"), moreBtn = document.getElementById("more"), tlPanel = document.querySelector(".timeline");
+    function placeDrawer() { // el cajón termina justo encima de la línea de tiempo
+      drawer.style.bottom = tlPanel.offsetHeight + 28 + "px";
+      drawer.style.maxHeight = `calc(100vh - ${tlPanel.offsetHeight + 48}px)`;
+    }
+    function setDrawer(open) {
+      drawer.classList.toggle("open", open);
+      moreBtn.setAttribute("aria-expanded", String(open));
+      drawer.inert = !open;
+      placeDrawer();
+    }
+    moreBtn.addEventListener("click", () => setDrawer(!drawer.classList.contains("open")));
+    document.getElementById("close").addEventListener("click", () => { setDrawer(false); moreBtn.focus(); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && drawer.classList.contains("open")) setDrawer(false); });
+    setDrawer(false);
+    const pickScope = (e) => { const a = e.target.closest("[data-k]"); if (a) { state.scope = a.dataset.k; lastUi = ""; } };
+    drawer.addEventListener("click", pickScope);
+    drawer.addEventListener("keydown", (e) => { if ((e.key === "Enter" || e.key === " ") && e.target.closest("[data-k]")) { e.preventDefault(); pickScope(e); } });
+    // Solo una sección abierta a la vez; se recuerda cuál al refrescar los datos
+    let openSec = "plazo";
+    drawer.addEventListener("toggle", (e) => {
+      const d = e.target;
+      if (!d.matches || !d.matches("details.sec")) return;
+      if (d.open) { openSec = d.dataset.sec; drawer.querySelectorAll("details.sec[open]").forEach((o) => { if (o !== d) o.open = false; }); }
+      else if (openSec === d.dataset.sec) openSec = null;
+    }, true);
+
+    // Tarjeta principal (contextual por fase) + cajón de detalles
+    const C = 2 * Math.PI * 42;
+    let lastUi = "";
+    function updateUi(st, prog) {
+      const f = FASES[st.fase], s = S[state.scope], fecha = dateOf(state.d);
+      const sig = [st.fase, state.scope, fmt(fecha), prog.real.toFixed(1), prog.plan.toFixed(1)].join("|");
+      if (sig === lastUi) return;
+      lastUi = sig;
+      const area = AREAS.find((a) => key(a) === state.scope).nombre;
+      const before = st.fase === "pre" || st.fase === "ida", after = st.fase === "regreso" || st.fase === "post";
+      const statusTxt = (dl) => before ? "Aún no entra a dique" : after ? "Terminado"
+        : (Math.abs(dl) < 0.5 ? "En plazo" : dl > 0 ? days(dl) + " de atraso" : days(-dl) + " de adelanto") + (state.d > AT ? " (proy.)" : "");
+      const isLate = (dl) => !before && !after && dl >= 2;
+
+      // --- tarjeta principal ---
+      const ph = document.getElementById("phase");
+      ph.textContent = f.corto; ph.className = "phase " + f.cls;
+      document.getElementById("date").textContent = fmtY(fecha) + (state.d > AT ? " · simulación" : "");
+      document.getElementById("title").textContent = f.titulo;
+      const fl = document.getElementById("flag");
+      if (f.pais) { fl.src = FLAG_URL[f.pais]; fl.alt = "Bandera de " + f.pais; fl.style.display = ""; } else fl.style.display = "none";
+      document.getElementById("loc").textContent = f.loc;
+      const ring = document.getElementById("ring");
+      ring.style.display = st.fase === "dique" ? "" : "none";
+      document.getElementById("ring-real").setAttribute("stroke-dasharray", `${(prog.real / 100) * C} ${C}`);
+      document.getElementById("ring-plan").setAttribute("stroke-dasharray", `${(prog.plan / 100) * C} ${C}`);
+      document.getElementById("ring-txt").textContent = prog.real.toFixed(0) + "%";
+      const hk = (l, v, cls = "") => `<div class="hk"><div class="l">${l}</div><div class="v ${cls}">${v}</div></div>`;
+      const scopeTag = state.scope === "resumen" ? "" : " · " + esc(area);
+      const kp = {
+        pre: [hk("Zarpa a dique", fmt(dateOf(T.zarpe))), hk("Entra a dique", fmt(dateOf(T.entrada)))],
+        ida: [hk("Llega", fmt(dateOf(T.llegada))), hk("Entra a dique", fmt(dateOf(T.entrada)))],
+        dique: [hk("Avance" + scopeTag, prog.real.toFixed(1) + "%" + (prog.proj ? " <span class='muted'>proy.</span>" : "")), hk("Plan", prog.plan.toFixed(1) + "%"), hk("Atraso", statusTxt(s.delay).replace(" de atraso", ""), isLate(s.delay) ? "alert" : "")],
+        regreso: [hk("Desvaró", fmt(dateOf(T.desvarada)), T.desvarada > N ? "alert" : ""), hk("Llega a Colón", fmt(dateOf(T.regreso)))],
+        post: [hk("Post-dique", `día ${Math.min(VIAJE.diasPostDique, Math.max(1, Math.ceil(state.d - T.regreso)))} de ${VIAJE.diasPostDique}`), hk("Garantía hasta", fmt(dateOf(T.fin)))]
+      }[st.fase];
+      document.getElementById("hud-kpis").innerHTML = kp.join("");
+
+      // --- cajón de detalles ---
+      const mbar = (v, cls, max = 100) => `<div class="mbar"><i class="${cls}" style="width:${Math.max(0, Math.min(100, (v / max) * 100))}%"></i></div>`;
+      const pc = (v) => v == null ? '<span class="muted">—</span>' : `<span class="pc" style="color:hsl(${partHue(v)} 75% 64%)"><i style="background:hsl(${partHue(v)} 70% 50%)"></i>${v.toFixed(0)}% ${partLevel(v)}</span>`;
+      const sec = (id, titulo, peek, body) => `<details class="sec" data-sec="${id}" ${openSec === id ? "open" : ""}><summary><span class="t">${titulo}</span><span class="peek">${peek}</span></summary><div class="sec-b">${body}</div></details>`;
+      const areaRows = AREAS.slice(1).map((a) => {
+        const sa = S[key(a)];
+        const pa = st.fase === "dique" ? progressAt(sa, state.d) : before ? { real: 0, plan: 0 } : { real: 100, plan: 100 };
+        return `<div class="area" data-k="${key(a)}" role="button" tabindex="0" aria-pressed="${state.scope === key(a)}">
+          <div class="row"><span class="an">${esc(a.nombre)}</span><span class="muted">${pa.real.toFixed(0)}% / ${pa.plan.toFixed(0)}%</span></div>
+          <div class="mbar"><i class="plan" style="width:${pa.plan}%"></i><i class="real" style="width:${pa.real}%"></i></div>
+          <div class="row"><span class="${isLate(sa.delay) ? "alert" : "muted"}">${statusTxt(sa.delay)}</span>${pc(PART[key(a)])}</div></div>`;
+      }).join("");
+      const lowest = AREAS.slice(1).filter((a) => PART[key(a)] != null).sort((a, b) => PART[key(a)] - PART[key(b)])[0];
+      const next = D.hitos.filter((h) => !h.fechaReal && (state.scope === "resumen" ? h.clave : h.area === state.scope) && dn(h.fechaPlan) >= Math.floor(state.d))
+        .sort((a, b) => a.fechaPlan.localeCompare(b.fechaPlan))[0];
+      document.getElementById("drawer-scope").textContent = area;
+      document.getElementById("drawer-body").innerHTML =
+        sec("plazo", "Plazo", `<span class="${isLate(s.delay) ? "alert" : ""}">${statusTxt(s.delay)}</span>`, `
+          <div class="row"><span>Atraso</span><b class="${isLate(s.delay) ? "alert" : ""}">${statusTxt(s.delay)}</b></div>
+          <div class="row"><span>${after && AT >= N ? "Desvarada" : "Desvarada proyectada"}</span><b class="${T.desvarada > N ? "alert" : ""}">${fmt(dateOf(T.desvarada))}</b></div>
+          <div class="row"><span class="muted">Desvarada plan ${fmt(dateOf(N))}</span><span class="muted">día ${Math.min(Math.max(0, Math.ceil(state.d)), N)} de ${N} en dique</span></div>`) +
+        sec("costos", "Costos", `Incurrido ${money(s.ac)}`, `
+          <div class="muted" style="margin-bottom:4px">Al ${fmt(parse(D.proyecto.corte))} · presupuesto ${money(s.bac)}</div>
+          <div class="row"><span>Costo plan</span><b>${money(s.pv)}</b></div>${mbar(s.pv, "plan", s.bac)}
+          <div class="row"><span>Incurrido</span><b>${money(s.ac)}</b></div>${mbar(s.ac, "cost", s.bac)}
+          <div class="row"><span>Desembolsado</span><b>${money(s.paid)}</b></div>${mbar(s.paid, "paid", s.bac)}
+          <div class="row"><span class="muted">Por pagar ${money(Math.max(0, s.ac - s.paid))}</span><span class="muted">CPI ${s.cpi ? s.cpi.toFixed(2) : "—"}</span></div>`) +
+        sec("areas", "Áreas y equipo", lowest ? `<span style="color:hsl(${partHue(PART[key(lowest)])} 75% 64%)">${esc(lowest.nombre)} ${PART[key(lowest)].toFixed(0)}% ${partLevel(PART[key(lowest)])}</span>` : "", `
+          <div class="area" data-k="resumen" role="button" tabindex="0" aria-pressed="${state.scope === "resumen"}"><div class="row"><span class="an">Todo el dique</span>${pc(PART.resumen)}</div></div>
+          ${areaRows}
+          <div class="muted" style="margin-top:6px">Clic en un área para ver su avance y costos.</div>`) +
+        sec("hito", "Próximo hito", next ? esc(next.nombre) : "—",
+          next ? `<div class="next"><b>${esc(next.nombre)}</b><span class="muted">${fmt(parse(next.fechaPlan))} · ${esc(D.areas.find((a) => a.id === next.area).nombre)}</span></div>` : '<span class="muted">Sin hitos pendientes</span>');
+
+      document.getElementById("tl-date").textContent = fmtY(fecha);
+      document.getElementById("tl-note").textContent = Math.abs(state.d - HOY) < 0.5 ? "fecha de corte · datos reales" : state.d > AT ? "futuro · proyectado con el atraso actual" : "pasado · avance real registrado";
+    }
+
+    // =========================================================
+    // Bucle de animación
+    // =========================================================
+    let prev = performance.now();
+    const tmpV = new THREE.Vector3();
+    function frame(now) {
+      const t = now / 1000, dt = Math.min(0.1, (now - prev) / 1000); prev = now;
+      if (anim) { const k = Math.min(1, (now - anim.t0) / anim.dur), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; state.d = anim.from + (anim.to - anim.from) * e; if (k >= 1) anim = null; }
+      if (state.playing) {
+        const inDock = state.d > T.entrada + 0.6 && state.d < T.desvarada - 0.6;
+        const sailing = (state.d > T.zarpe && state.d < T.entrada) || (state.d > T.desvarada && state.d < T.regreso);
+        state.d += dt * (inDock ? 4.5 : sailing ? 0.55 : 1.6); // la navegación va más lenta para lucirse
+        if (state.d >= T.fin) { state.d = T.fin; stopPlay(); resetPlay(); cine = false; frameView("mapa", 2400); }
+      }
+      sim.value = state.d;
+
+      for (let i = 0; i < sPos.count; i++) sPos.array[i * 3 + 1] = waveAt(sBase[i * 3], sBase[i * 3 + 2], t);
+      sPos.needsUpdate = true; seaGeo.computeVertexNormals();
+
+      const st = shipState(state.d), lev = dockLevel(state.d);
+      dockWater.position.y = lev + (lev > -0.3 ? waveAt(24, DOCK_ZC, t) * 0.4 : 0);
+      dockWater.material.opacity = lev < DOCK.floor + 0.2 ? 0.55 : 0.88;
+      const closed = state.d > T.entrada + 0.05 && state.d < T.desvarada - 0.05;
+      gate.position.y += ((closed ? -0.55 : -2.9) - gate.position.y) * Math.min(1, dt * 3);
+
+      const inDockZone = st.pos.x > DOCK.x0 - 0.8 && Math.abs(st.pos.z - DOCK_ZC) < 1.5;
+      const y = inDockZone ? Math.max(lev + (lev > -0.3 ? waveAt(st.pos.x, st.pos.z, t) * 0.5 : 0), REST_Y) : waveAt(st.pos.x, st.pos.z, t) * 0.9 - 0.02;
+      ship.position.set(st.pos.x, y, st.pos.z);
+      ship.rotation.y = st.rot;
+      const afloat = y > REST_Y + 0.03;
+      ship.rotation.z = afloat ? Math.sin(t * 1.1) * 0.03 : 0;
+      ship.rotation.x = afloat ? Math.sin(t * 0.8) * 0.035 : 0;
+
+      // espuma de la estela
+      foamT += dt;
+      if (st.sailing && !inDockZone && foamT > 0.025 && !reduce) {
+        foamT = 0;
+        const fo = foam[foamI++ % foam.length];
+        const back = 2.9, sideOff = (Math.random() < 0.5 ? -1 : 1) * (0.15 + Math.random() * 0.25);
+        fo.m.position.set(st.pos.x - Math.cos(st.rot) * back + Math.sin(st.rot) * sideOff, 0.12, st.pos.z + Math.sin(st.rot) * back + Math.cos(st.rot) * sideOff);
+        fo.m.visible = true; fo.life = 1;
+      }
+      foam.forEach((fo) => { if (!fo.m.visible) return; fo.life -= dt * 0.4; if (fo.life <= 0) { fo.m.visible = false; return; } fo.m.material.opacity = fo.life * 0.55; fo.m.scale.set(1 + (1 - fo.life) * 2.6, 1, 1 + (1 - fo.life) * 1.4); });
+
+      // ruta recorrida
+      dots.forEach((m) => {
+        const on = st.fase === "ida" ? m.userData.f <= st.f + 1e-6 : st.fase === "dique" ? true : st.fase === "regreso" ? m.userData.f >= st.f - 1e-6 : st.fase === "post";
+        m.material = on ? DOT_ON : DOT_OFF;
+        m.position.y = waveAt(m.position.x, m.position.z, t) + 0.06;
+      });
+
+      // avance de los trabajos
+      const s = S[state.scope];
+      const prog = state.d < T.entrada ? { real: 0, plan: 0, proj: false } : state.d >= T.desvarada ? { real: 100, plan: 100, proj: state.d > AT } : progressAt(s, state.d);
+      const wr = Math.max(0.001, (prog.real / 100) * BAR.len), wp = Math.max(0, ((prog.plan - prog.real) / 100) * BAR.len);
+      barFill.scale.x = wr; barFill.position.x = BAR.x0 + wr / 2;
+      barGap.visible = wp > 0.03; barGap.scale.x = Math.max(0.001, wp); barGap.position.x = BAR.x0 + wr + wp / 2;
+      barLbl.textContent = `Trabajos ${prog.real.toFixed(0)}%${prog.proj ? " proy." : ""} · plan ${prog.plan.toFixed(0)}%`;
+      // Etiquetas según el zoom: de lejos países y mares; de cerca puertos y la barra de trabajos
+      const dist = camera.position.distanceTo(controls.target);
+      showGroup(LBL.mapa, dist > 38);
+      showGroup(LBL.city, dist > 19);
+      showGroup(LBL.port, dist < 75);
+      barLbl.style.visibility = st.fase === "dique" && dist < 60 ? "visible" : "hidden";
+
+      const shipTxt = {
+        pre: `${VIAJE.origen.pais} · en el agua`,
+        ida: `Rumbo a ${VIAJE.astillero.pais}`,
+        dique: lev > -0.4 ? (state.d < T.entrada + 1 ? "Vaciando el dique" : "Inundando el dique") : `En dique · ${prog.real.toFixed(0)}%`,
+        regreso: `Rumbo a ${VIAJE.origen.pais}`,
+        post: `${VIAJE.origen.pais} · post-dique`
+      }[st.fase];
+      if (shipLbl.textContent !== shipTxt) shipLbl.textContent = shipTxt;
+      document.body.classList.toggle("cine", state.playing);
+
+      // banderas ondeando, grúas y nubes
+      waving.forEach(({ geo, base, w }) => {
+        const p = geo.attributes.position;
+        for (let i = 0; i < p.count; i++) { const x = base[i * 3], k = Math.abs(x / w); p.array[i * 3 + 2] = Math.sin(x * 5 - t * 6) * 0.09 * k * Math.abs(w); }
+        p.needsUpdate = true; geo.computeVertexNormals();
+      });
+      cranes.forEach((j, i) => { j.rotation.y += Math.sin(t * 0.3 + i * 2) * dt * 0.15; });
+      clouds.forEach((c) => { c.position.x += c.userData.v * dt; if (c.position.x > 70) c.position.x = -70; });
+
+      // cámara
+      if (cam) {
+        const k = Math.min(1, (now - cam.t0) / cam.dur), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        camera.position.lerpVectors(cam.fromPos, cam.pos, e); controls.target.lerpVectors(cam.fromTarget, cam.target, e);
+        if (k >= 1) cam = null;
+      } else if (state.playing && cine) {
+        // cámara cinemática: acompaña al barco desde atrás y de costado mientras navega
+        let wantPos, wantTarget;
+        const fixed = (v) => [v.target.clone().add(v.pos.clone().sub(v.target).multiplyScalar(widen())), v.target];
+        if (st.fase === "dique" || inDockZone) [wantPos, wantTarget] = fixed(VIEWS.dique);
+        else if (!st.sailing) [wantPos, wantTarget] = fixed(VIEWS.puerto);
+        else {
+          const dir = tmpV.set(Math.cos(st.rot), 0, -Math.sin(st.rot));
+          wantTarget = st.pos.clone().addScaledVector(dir, 3);
+          wantPos = st.pos.clone().addScaledVector(dir, -14).add(new THREE.Vector3(dir.z * 10, 10, -dir.x * 10));
+        }
+        const k = 1 - Math.exp(-dt * 1.6);
+        camera.position.lerp(wantPos, k); controls.target.lerp(wantTarget, k);
+      }
+      controls.update();
+      updateUi(st, prog);
+      renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);
+      requestAnimationFrame(frame);
+    }
+
+    addEventListener("resize", () => {
+      camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight); labelRenderer.setSize(innerWidth, innerHeight);
+      placeDrawer();
+    });
+    renderer.domElement.addEventListener("pointerdown", () => { cam = null; cine = false; }); // si el usuario mueve la cámara, manda él
+
+    // Arranque: vista general del mapa y luego acercamiento a la fase de hoy (en dique)
+    camera.position.copy(VIEWS.mapa.target).add(VIEWS.mapa.pos.clone().sub(VIEWS.mapa.target).multiplyScalar(widen())); controls.target.copy(VIEWS.mapa.target);
+    setTimeout(() => { if (!cam && !state.playing) frameView(viewFor(shipState(state.d).fase), 2600); }, 1400);
+    requestAnimationFrame(frame);
+    window.__viaje3d = { S, T, state, shipState, dockLevel, progressAt, PART, frameView, onLand }; // para pruebas
+  </script>
+</body>
+</html>

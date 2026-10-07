@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba 3D Viaje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Prueba 3D: escena siempre nocturna para que el mar, la tierra y el barco se distingan */
+    :root {
+      color-scheme: dark;
+      --bg: #05070a;
+      --panel: rgba(12, 14, 18, 0.84);
+      --border: rgba(255, 255, 255, 0.14);
+      --ink: #f5f5f5;
+      --ink-2: #c2c2c2;
+      --ink-3: #8f8f8f;
+      --alert: #ef5350;
+    }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #05070a; } }
+    :root[data-theme="dark"], :root[data-theme="light"] { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: radial-gradient(120% 90% at 50% 0%, #1b2430 0%, #0b0f14 55%, var(--bg) 100%);
+      color: var(--ink);
+      font: 14px/1.4 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-variant-numeric: tabular-nums;
+      overflow: hidden;
+    }
+    #scene { position: fixed; inset: 0; }
+    #scene canvas { display: block; }
+    #labels { position: fixed; inset: 0; pointer-events: none; }
+
+    .panel { position: fixed; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .top { top: 16px; left: 16px; padding: 14px 16px; width: min(460px, calc(100vw - 32px)); }
+    .pill { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; color: var(--ink-2); }
+    h1 { margin: 8px 0 2px; font-size: 21px; font-weight: 800; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .phase { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #0a0a0a; background: var(--ink); border-radius: 6px; padding: 3px 8px; }
+    .phase.dique { background: #f2c14e; }
+    .sub { color: var(--ink-3); font-size: 12.5px; }
+    .tabs { display: flex; gap: 4px; margin: 10px 0 10px; flex-wrap: wrap; }
+    .tab { font: inherit; font-size: 12px; font-weight: 600; color: var(--ink-2); background: transparent; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+    .tab:hover { color: var(--ink); border-color: rgba(255,255,255,.35); }
+    .tab[aria-pressed="true"] { background: var(--ink); color: #0a0a0a; border-color: var(--ink); }
+    .tabs.off { opacity: .45; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .k { border-top: 1px solid var(--border); padding-top: 8px; min-width: 0; }
+    .k .l { font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .k .v { font-size: 18px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .k .v.alert { color: var(--alert); }
+    button:focus-visible, input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+    /* Línea de tiempo */
+    .timeline { left: 16px; right: 16px; bottom: 16px; padding: 12px 16px 14px; }
+    .tl-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .tl-head b { font-size: 15px; }
+    .tl-head .sp { flex: 1; }
+    .btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--ink); background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; cursor: pointer; }
+    .btn:hover { border-color: rgba(255,255,255,.4); }
+    .btn[aria-pressed="true"] { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.45); }
+    .tl { position: relative; height: 46px; }
+    .seg { position: absolute; top: 0; height: 22px; border-radius: 4px; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; color: #0a0a0a; overflow: hidden; white-space: nowrap; padding: 0 4px; cursor: pointer; border: 0; font-family: inherit; }
+    .seg.water { background: #5d8bb0; }
+    .seg.sail { background: #9cb8cf; }
+    .seg.dock { background: #f2c14e; }
+    .mk { position: absolute; top: -4px; height: 30px; width: 2px; background: var(--ink); }
+    .mk span { position: absolute; top: 31px; left: 50%; transform: translateX(-50%); font-size: 10.5px; color: var(--ink-2); white-space: nowrap; }
+    .mk.plan { background: transparent; border-left: 2px dashed var(--ink-3); }
+    #sim { position: absolute; left: 0; right: 0; top: -2px; width: 100%; margin: 0; height: 26px; background: transparent; -webkit-appearance: none; appearance: none; cursor: grab; }
+    #sim::-webkit-slider-runnable-track { height: 26px; background: transparent; }
+    #sim::-moz-range-track { height: 26px; background: transparent; }
+    #sim::-webkit-slider-thumb { -webkit-appearance: none; width: 6px; height: 30px; margin-top: -2px; border-radius: 3px; background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,.55); }
+    #sim::-moz-range-thumb { width: 6px; height: 30px; border: 0; border-radius: 3px; background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,.55); }
+
+    /* Etiquetas que siguen a los objetos 3D */
+    .l3d { font-family: "Inter", system-ui, sans-serif; color: #fff; background: rgba(0,0,0,.72); border: 1px solid rgba(255,255,255,.18); border-radius: 6px; padding: 3px 8px; font-size: 11.5px; white-space: nowrap; }
+    .l3d.ship { font-size: 13px; font-weight: 800; padding: 5px 10px; background: #f5f5f5; color: #0a0a0a; border: 0; text-align: center; }
+    .l3d.ship small { display: block; font-weight: 600; font-size: 10.5px; color: #474747; }
+    .l3d.land { background: transparent; border: 0; font-size: 15px; font-weight: 800; letter-spacing: .12em; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,.8); }
+    .l3d.land small { display: block; font-size: 11px; font-weight: 600; letter-spacing: .02em; color: var(--ink-2); }
+    .l3d.bar { font-weight: 700; }
+
+    .fallback { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--ink-2); }
+
+    @media (max-width: 700px) {
+      .top { top: 8px; left: 8px; width: calc(100vw - 16px); padding: 10px 12px; }
+      h1 { font-size: 17px; }
+      .k .v { font-size: 15px; }
+      .timeline { left: 8px; right: 8px; bottom: 8px; padding: 10px; }
+      .seg { font-size: 0; }
+      .hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="scene" role="img" aria-label="Escena 3D del viaje del buque: Panamá, navegación, dique en Colombia y regreso"></div>
+  <div id="labels"></div>
+
+  <section class="panel top">
+    <span class="pill">Prueba 3D · no es una revisión</span>
+    <h1><span id="title">Viaje del buque</span> <span class="phase" id="phase"></span></h1>
+    <div class="sub" id="sub"></div>
+    <div class="tabs" id="tabs" role="group" aria-label="Avance de"></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section class="panel timeline" aria-label="Línea de tiempo">
+    <div class="tl-head">
+      <b id="tl-date"></b><span class="sub" id="tl-note"></span>
+      <span class="sp"></span>
+      <button class="btn" type="button" data-go="pre">En el agua</button>
+      <button class="btn" type="button" data-go="dique">En dique</button>
+      <button class="btn" type="button" data-go="post">Post-dique</button>
+      <button class="btn" type="button" id="today">Hoy</button>
+      <button class="btn" type="button" id="play" aria-pressed="false">▶ Viaje completo</button>
+      <button class="btn hide-sm" type="button" id="follow" aria-pressed="true">Seguir barco</button>
+    </div>
+    <div class="tl" id="tl">
+      <input type="range" id="sim" min="0" max="1" step="0.01" aria-label="Fecha simulada">
+    </div>
+  </section>
+
+  <div class="fallback" id="fallback"></div>
+
+  <!-- Mismos datos que la Rev. 0 y la Rev. 1 -->
+  <script src="../../data.js"></script>
+
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+  </script>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+    import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+
+    // =========================================================
+    // Configuración del viaje (datos de ejemplo de la prueba)
+    // =========================================================
+    const VIAJE = {
+      origen: { nombre: "Panamá", detalle: "Puerto de Balboa" },
+      astillero: { nombre: "Colombia", detalle: "Astillero en Cartagena" },
+      diasNavegacion: 3,   // Panamá → Cartagena y regreso
+      diasPreZarpe: 4,     // días visibles atracado en Panamá antes de zarpar
+      diasPostDique: 14    // período post-dique en Panamá (garantía y pruebas)
+    };
+
+    // =========================================================
+    // Cálculo de avance (mismas reglas que el dashboard)
+    // =========================================================
+    const D = window.DIQUE_DATA;
+    const DAY = 864e5;
+    const parse = (s) => new Date(s + "T00:00:00");
+    const start = parse(D.proyecto.entrada);
+    const dn = (s) => Math.round((parse(s) - start) / DAY);
+    const N = dn(D.proyecto.salidaPlan);
+    const AT = dn(D.proyecto.corte) + 1;
+    const addDays = (d, n) => new Date(d.getTime() + n * DAY);
+    const fmt = (d) => d.toLocaleDateString("es-ES", { day: "2-digit", month: "short" });
+    const fmtY = (d) => d.toLocaleDateString("es-ES", { day: "2-digit", month: "short", year: "numeric" });
+    const days = (v) => v.toFixed(1).replace(/\.0$/, "") + (Math.abs(v) === 1 ? " día" : " días");
+
+    const ots = D.ordenes.map((o) => ({
+      ...o, i0: dn(o.inicio), dur: dn(o.fin) - dn(o.inicio) + 1,
+      hist: D.avances.filter((r) => r[1] === o.id && r[0] <= D.proyecto.corte).map((r) => ({ t: dn(r[0]) + 1, p: r[2] })).sort((a, b) => a.t - b.t)
+    }));
+    const planFrac = (o, t) => Math.max(0, Math.min(1, (t - o.i0) / o.dur));
+    const realOf = (o, t) => { let p = 0; for (const h of o.hist) { if (h.t <= t) p = h.p; else break; } return p; };
+
+    function scope(areaId) {
+      const list = ots.filter((o) => !areaId || o.area === areaId);
+      const bac = list.reduce((s, o) => s + o.bac, 0);
+      const PD = Math.max(...list.map((o) => o.i0 + o.dur));
+      const H = Math.max(N, PD);
+      const plan = [], real = [];
+      for (let t = 0; t <= H; t++) {
+        plan.push(list.reduce((s, o) => s + o.bac * planFrac(o, t), 0) / bac * 100);
+        real.push(t <= AT ? list.reduce((s, o) => s + o.bac * realOf(o, t), 0) / bac : null);
+      }
+      const pPlan = plan[Math.min(AT, H)], pReal = real[Math.min(AT, H)];
+      // Plazo ganado: día en que el plan alcanzaba el avance real de hoy
+      const E = 1e-9;
+      let C = 0; while (C < H && plan[C + 1] <= pReal + E) C++;
+      let ES = C >= H ? H : C + (plan[C + 1] > plan[C] ? (pReal - plan[C]) / (plan[C + 1] - plan[C]) : 0);
+      let L = 0; while (L < H && plan[L] < pReal - E) L++;
+      const Lf = L > 0 && plan[L] > plan[L - 1] ? L - 1 + (pReal - plan[L - 1]) / (plan[L] - plan[L - 1]) : L;
+      if (AT >= Lf - E && AT <= ES + E) ES = AT;
+      const delay = pReal >= 99.95 ? 0 : AT - ES;
+      return { plan, real, pPlan, pReal, delay, PD, H };
+    }
+    const interp = (arr, x) => {
+      if (x <= 0) return arr[0];
+      if (x >= arr.length - 1) return arr[arr.length - 1];
+      const i = Math.floor(x), f = x - i;
+      return arr[i] + (arr[i + 1] - arr[i]) * f;
+    };
+    // Avance en un instante d: real hasta el corte, proyectado (plan desplazado por el atraso) después
+    function progressAt(s, d) {
+      if (d <= AT) { const td = Math.max(0, Math.min(AT, Math.ceil(d))); return { real: s.real[td], plan: s.plan[td], proj: false }; }
+      const plan = interp(s.plan, d);
+      return { real: Math.min(100, interp(s.plan, d - s.delay)), plan, proj: true };
+    }
+
+    const AREAS = [{ id: null, nombre: "Todo el dique" }].concat(D.areas.map((a) => ({ id: a.id, nombre: a.nombre })));
+    const S = Object.fromEntries(AREAS.map((a) => [a.id || "resumen", scope(a.id)]));
+
+    // Fechas del viaje, en días desde la entrada a dique (0 = entrada)
+    const total = S.resumen;
+    const dDesv = AT >= N ? N : Math.round(N + Math.max(0, total.delay)); // desvarada proyectada si aún no ocurre
+    const T = {
+      ini: -VIAJE.diasPreZarpe - VIAJE.diasNavegacion - 1,
+      zarpe: -VIAJE.diasNavegacion - 1,
+      llegada: -1,              // llega a la boca del dique
+      entrada: 0,
+      desvarada: dDesv,
+      salida: dDesv + 0.5,      // remolque fuera del dique
+      regreso: dDesv + 0.5 + VIAJE.diasNavegacion,
+      fin: dDesv + 0.5 + VIAJE.diasNavegacion + VIAJE.diasPostDique
+    };
+    const dateOf = (d) => addDays(start, Math.floor(d));
+
+    // =========================================================
+    // Escena
+    // =========================================================
+    const host = document.getElementById("scene");
+    let renderer;
+    try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
+    catch (e) {
+      const fb = document.getElementById("fallback");
+      fb.style.display = "flex";
+      fb.textContent = "Este navegador no permite gráficos 3D (WebGL). Abre la prueba en Chrome o Edge actualizados.";
+      throw e;
+    }
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    host.appendChild(renderer.domElement);
+    const labelRenderer = new CSS2DRenderer({ element: document.getElementById("labels") });
+    labelRenderer.setSize(innerWidth, innerHeight);
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0f151c, 120, 280);
+    const camera = new THREE.PerspectiveCamera(38, innerWidth / innerHeight, 0.1, 600);
+    camera.position.set(-4, 84, 84);
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.maxPolarAngle = Math.PI * 0.46;
+    controls.minDistance = 14;
+    controls.maxDistance = 200;
+    controls.target.set(4, 0, 0);
+
+    scene.add(new THREE.HemisphereLight(0xe6eef6, 0x1a2633, 1.35));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.25));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+    sun.position.set(-40, 60, 35);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(2048, 2048);
+    Object.assign(sun.shadow.camera, { left: -90, right: 90, top: 60, bottom: -60, near: 1, far: 200 });
+    scene.add(sun);
+
+    function label(html, cls, obj, y, x = 0, z = 0) {
+      const div = document.createElement("div");
+      div.className = "l3d " + cls;
+      div.innerHTML = html;
+      const o = new CSS2DObject(div);
+      o.position.set(x, y, z);
+      obj.add(o);
+      return div;
+    }
+    const box = (w, h, d, mat, x, y, z, parent = scene) => {
+      const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat);
+      m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; parent.add(m); return m;
+    };
+
+    // --- Mar (solo hasta la costa de Colombia, para no cubrir el dique) ---
+    const SEA_RIGHT = 40;
+    const water = new THREE.Mesh(
+      new THREE.PlaneGeometry(220, 170, 110, 84).rotateX(-Math.PI / 2).translate(SEA_RIGHT - 110, 0, 0),
+      new THREE.MeshStandardMaterial({ color: 0x35506a, roughness: 0.5, metalness: 0.15, flatShading: true })
+    );
+    water.receiveShadow = true;
+    scene.add(water);
+    const wPos = water.geometry.attributes.position;
+    const wBase = Float32Array.from(wPos.array);
+    const waveAt = (x, z, t) => 0.22 * Math.sin(x * 0.16 + t * 0.9) + 0.16 * Math.sin(z * 0.23 + t * 1.25) + 0.08 * Math.sin((x + z) * 0.4 + t * 1.7);
+
+    const landMat = new THREE.MeshStandardMaterial({ color: 0x5a5f55, roughness: 0.95, flatShading: true });
+    const concrete = new THREE.MeshStandardMaterial({ color: 0x9a9a9a, roughness: 0.9 });
+    const white = new THREE.MeshStandardMaterial({ color: 0xf0f0f0, roughness: 0.6 });
+    const dark = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, roughness: 0.7 });
+
+    // --- Panamá: costa, muelle, contenedores y grúa pórtico ---
+    const PA = new THREE.Group(); scene.add(PA);
+    box(60, 5, 90, landMat, -78, -1.5, 0, PA);
+    box(14, 2, 3, concrete, -41, 0.2, 12, PA); // muelle
+    const contMats = [0x8a8a8a, 0x6e6e6e, 0xb0b0b0, 0x505050].map((c) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.8 }));
+    for (let i = 0; i < 18; i++) box(3, 1.2, 1.3, contMats[i % 4], -60 + (i % 6) * 3.3, 1.6 + Math.floor(i / 12) * 1.2, 16 + Math.floor((i % 12) / 6) * 1.6, PA);
+    const gantry = new THREE.Group(); PA.add(gantry);
+    box(0.5, 9, 0.5, white, -45.5, 5.5, 13.2, gantry); box(0.5, 9, 0.5, white, -45.5, 5.5, 10.8, gantry);
+    box(0.6, 0.6, 12, white, -45.5, 10, 15, gantry); // la pluma sale sobre el barco
+    label(`${VIAJE.origen.nombre.toUpperCase()}<small>${VIAJE.origen.detalle}</small>`, "land", PA, 4, -62, -8);
+
+    // --- Colombia: astillero con dique seco (cavidad dentro de la tierra) ---
+    const CO = new THREE.Group(); scene.add(CO);
+    const DOCK = { x0: 41, x1: 58, z: 4.4, floor: -3 };   // cavidad del dique
+    box(26, 5.4, 90, landMat, 71, -1.5, 0, CO);                                   // tierra detrás del dique
+    box(DOCK.x1 - SEA_RIGHT, 4.6, 45 - DOCK.z, landMat, (SEA_RIGHT + DOCK.x1) / 2, -1.9, (45 + DOCK.z) / 2, CO);   // lado cercano a la cámara, más bajo
+    box(DOCK.x1 - SEA_RIGHT, 5.4, 45 - DOCK.z, landMat, (SEA_RIGHT + DOCK.x1) / 2, -1.5, -(45 + DOCK.z) / 2, CO);  // lado sur
+    box(DOCK.x1 - SEA_RIGHT, 1, DOCK.z * 2, concrete, (SEA_RIGHT + DOCK.x1) / 2, DOCK.floor - 0.5, 0, CO);          // piso del dique
+    // muros de concreto del dique
+    box(DOCK.x1 - DOCK.x0, 3.6, 0.3, concrete, (DOCK.x0 + DOCK.x1) / 2, -1.2, DOCK.z - 0.15, CO);
+    box(DOCK.x1 - DOCK.x0, 4.4, 0.3, concrete, (DOCK.x0 + DOCK.x1) / 2, -0.8, -DOCK.z + 0.15, CO);
+    box(0.3, 4.4, DOCK.z * 2, concrete, DOCK.x1 - 0.15, -0.8, 0, CO);
+    // picaderos
+    for (let i = 0; i < 6; i++) box(0.6, 0.5, 0.9, dark, 45.5 + i * 1.6, DOCK.floor + 0.25, 0, CO);
+    // compuerta (barco-puerta): sube cuando el dique está seco
+    const gate = box(0.8, 4.2, DOCK.z * 2, new THREE.MeshStandardMaterial({ color: 0x3a3a3a, roughness: 0.6 }), SEA_RIGHT + 0.4, -0.9, 0, CO);
+    // agua dentro del dique (sube y baja)
+    const dockWater = new THREE.Mesh(new THREE.PlaneGeometry(DOCK.x1 - SEA_RIGHT, DOCK.z * 2).rotateX(-Math.PI / 2),
+      new THREE.MeshStandardMaterial({ color: 0x35506a, roughness: 0.35, metalness: 0.2, transparent: true, opacity: 0.9 }));
+    dockWater.position.set((SEA_RIGHT + DOCK.x1) / 2, 0, 0);
+    CO.add(dockWater);
+    // grúas torre del astillero
+    for (const [x, z] of [[45, -8.5], [55, -8.5]]) {
+      const g = new THREE.Group(); CO.add(g);
+      box(0.6, 12, 0.6, white, x, 6.2, z, g);
+      const jib = box(12, 0.4, 0.4, white, x - 3, 12, z, g);
+      box(1.2, 1, 1.2, dark, x + 3.5, 11.7, z, g);
+      g.userData.jib = jib;
+    }
+    label(`${VIAJE.astillero.nombre.toUpperCase()}<small>${VIAJE.astillero.detalle}</small>`, "land", CO, 4, 70, -12);
+
+    // Barra de avance de los trabajos, sobre el borde del dique
+    const BAR = { x0: DOCK.x0, len: DOCK.x1 - DOCK.x0, z: -DOCK.z - 1.4, y: 1.35 };
+    const barTrack = box(BAR.len, 0.35, 0.7, new THREE.MeshStandardMaterial({ color: 0x1a1a1a }), BAR.x0 + BAR.len / 2, BAR.y, BAR.z, CO);
+    const barFill = box(1, 0.45, 0.8, new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x555555 }), 0, BAR.y + 0.02, BAR.z, CO);
+    const barGap = box(1, 0.42, 0.76, new THREE.MeshStandardMaterial({ color: 0xef5350, emissive: 0x6a1414 }), 0, BAR.y + 0.01, BAR.z, CO);
+    const barLbl = label("", "bar", CO, BAR.y + 1.4, BAR.x0 + BAR.len / 2, BAR.z - 0.6);
+
+    // --- Ruta en el mar ---
+    const BERTH = new THREE.Vector3(-41, 0, 14.7); // atracado del lado del muelle que mira la cámara
+    const MOUTH = new THREE.Vector3(36, 0, 0);
+    const DOCKED = new THREE.Vector3((DOCK.x0 + DOCK.x1) / 2 + 0.6, 0, 0);
+    const route = new THREE.CatmullRomCurve3([BERTH, new THREE.Vector3(-28, 0, 19), new THREE.Vector3(-8, 0, 22), new THREE.Vector3(14, 0, 16), new THREE.Vector3(28, 0, 5), MOUTH], false, "centripetal");
+    const dots = [];
+    const dotGeo = new THREE.SphereGeometry(0.28, 10, 8);
+    const DOT_ON = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x444444 });
+    const DOT_OFF = new THREE.MeshStandardMaterial({ color: 0x8aa2b6, transparent: true, opacity: 0.45 });
+    for (let i = 0; i <= 60; i++) {
+      const p = route.getPointAt(i / 60);
+      const m = new THREE.Mesh(dotGeo, DOT_OFF); m.position.copy(p); m.userData.f = i / 60;
+      scene.add(m); dots.push(m);
+    }
+
+    // --- Barco low-poly (granelero) ---
+    function makeShip() {
+      const ship = new THREE.Group();
+      const M = (color, opts = {}) => new THREE.MeshStandardMaterial({ color, roughness: 0.6, metalness: 0.1, ...opts });
+      const hs = new THREE.Shape();
+      hs.moveTo(-7, -1.25); hs.lineTo(4.4, -1.25); hs.quadraticCurveTo(6.7, -1.05, 7.3, 0); hs.quadraticCurveTo(6.7, 1.05, 4.4, 1.25);
+      hs.lineTo(-7, 1.25); hs.quadraticCurveTo(-7.45, 0, -7, -1.25);
+      const ext = (depth) => new THREE.ExtrudeGeometry(hs, { depth, bevelEnabled: false }).rotateX(-Math.PI / 2);
+      const add = (mesh, x, y, z) => { mesh.position.set(x, y, z); mesh.castShadow = true; ship.add(mesh); return mesh; };
+      add(new THREE.Mesh(ext(0.75), M(0x8c2a22)), 0, -0.75, 0);                                   // obra viva (antifouling)
+      add(new THREE.Mesh(ext(0.95), M(0x262626, { roughness: 0.45, metalness: 0.25 })), 0, 0, 0); // obra muerta
+      const boot = add(new THREE.Mesh(ext(0.18), M(0xc62828)), 0, -0.06, 0); boot.scale.set(1.006, 1, 1.03);
+      add(new THREE.Mesh(new THREE.ShapeGeometry(hs).rotateX(-Math.PI / 2), M(0x6e6e6e)), 0, 0.96, 0);
+      for (let i = 0; i < 5; i++) add(new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.28, 1.7), M(0x3a3a3a)), -2.6 + i * 1.75, 1.1, 0);
+      for (const x of [-1.75, 1.75, 5.1]) {
+        add(new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.14, 1.6, 8), M(0xf5f5f5)), x, 1.75, 0.95);
+        add(new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.1), M(0xf5f5f5)), x + 0.8, 2.3, 0.95).rotation.z = 0.35;
+      }
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.8, 1.9, 2.2), M(0xf5f5f5)), -5.6, 1.9, 0);
+      add(new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.55, 2.8), M(0xf5f5f5)), -5.4, 3.1, 0);
+      add(new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.22, 2.4), M(0x111111)), -4.74, 3.12, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.4, 1.3, 14), M(0x0a0a0a)), -6.45, 3.25, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.385, 0.385, 0.22, 14), M(0xf5f5f5)), -6.45, 3.45, 0);
+      add(new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.05, 1.6, 6), M(0xf5f5f5)), 6.3, 1.75, 0);
+      return ship;
+    }
+    const SCALE = 0.62;
+    const ship = makeShip(); ship.scale.setScalar(SCALE); scene.add(ship);
+    const shipLbl = label("", "ship", ship, 6.4);
+    const HULL_BOTTOM = 0.75 * SCALE;
+    const REST_Y = DOCK.floor + 0.5 + HULL_BOTTOM; // apoyado en los picaderos
+    const wake = new THREE.Mesh(new THREE.PlaneGeometry(6, 1.6).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.18, depthWrite: false }));
+    scene.add(wake);
+
+    // =========================================================
+    // Estado del buque en el instante d (días desde la entrada a dique)
+    // =========================================================
+    const heading = (v) => Math.atan2(-v.z, v.x);
+    const smooth = (x) => x * x * (3 - 2 * x);
+    const lerpAng = (a, b, f) => { let d = ((b - a + Math.PI) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI) - Math.PI; return a + d * f; };
+    const H_OUT = heading(route.getTangentAt(0)), H_IN = heading(route.getTangentAt(1));
+
+    function shipState(d) {
+      if (d < T.zarpe) return { fase: "pre", pos: BERTH.clone(), rot: H_OUT, sailing: false };
+      if (d < T.llegada) { const f = (d - T.zarpe) / (T.llegada - T.zarpe); return { fase: "ida", pos: route.getPointAt(f), rot: heading(route.getTangentAt(f)), sailing: true, f }; }
+      if (d < T.entrada) { const f = smooth((d - T.llegada) / (T.entrada - T.llegada)); return { fase: "ida", pos: MOUTH.clone().lerp(DOCKED, f), rot: lerpAng(H_IN, 0, f), sailing: true, f: 1 }; }
+      if (d < T.desvarada) return { fase: "dique", pos: DOCKED.clone(), rot: 0, sailing: false };
+      if (d < T.salida) { const f = smooth((d - T.desvarada) / (T.salida - T.desvarada)); return { fase: "regreso", pos: DOCKED.clone().lerp(MOUTH, f), rot: 0, sailing: true, f: 1 }; } // sale de popa, remolcado
+      if (d < T.regreso) {
+        const f = (d - T.salida) / (T.regreso - T.salida), rf = 1 - f;
+        const tan = route.getTangentAt(rf).negate();
+        return { fase: "regreso", pos: route.getPointAt(rf), rot: lerpAng(0, heading(tan), smooth(Math.min(1, f / 0.12))), sailing: true, f: rf };
+      }
+      return { fase: "post", pos: BERTH.clone(), rot: heading(route.getTangentAt(0).negate()), sailing: false };
+    }
+    // Nivel del agua dentro del dique: se vacía al entrar y se inunda para la desvarada
+    function dockLevel(d) {
+      const dry = DOCK.floor + 0.08;
+      if (d <= T.entrada || d >= T.desvarada) return 0;
+      if (d < T.entrada + 0.6) return 0 + (dry - 0) * smooth((d - T.entrada) / 0.6);
+      if (d > T.desvarada - 0.6) return dry + (0 - dry) * smooth((d - (T.desvarada - 0.6)) / 0.6);
+      return dry;
+    }
+
+    const FASES = {
+      pre: { titulo: "En el agua · pre-dique", corto: "Pre-dique" },
+      ida: { titulo: "Navegación a dique", corto: "Navegando" },
+      dique: { titulo: "En dique", corto: "En dique" },
+      regreso: { titulo: "Regreso a " + VIAJE.origen.nombre, corto: "Regreso" },
+      post: { titulo: "En el agua · post-dique", corto: "Post-dique" }
+    };
+
+    // =========================================================
+    // Interfaz
+    // =========================================================
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const HOY = AT - 0.5; // mediodía de la fecha de corte
+    const state = { d: HOY, scope: "resumen", follow: true, playing: false };
+    const sim = document.getElementById("sim");
+    sim.min = T.ini; sim.max = T.fin; sim.step = 0.05;
+    const pctX = (d) => ((d - T.ini) / (T.fin - T.ini)) * 100;
+
+    // segmentos de la línea de tiempo
+    const tl = document.getElementById("tl");
+    const segs = [
+      ["water", T.ini, T.zarpe, "Pre-dique", "pre"],
+      ["sail", T.zarpe, T.entrada, "Navegación", "ida"],
+      ["dock", T.entrada, T.desvarada, "En dique · " + VIAJE.astillero.nombre, "dique"],
+      ["sail", T.desvarada, T.regreso, "Regreso", "regreso"],
+      ["water", T.regreso, T.fin, "Post-dique · " + VIAJE.origen.nombre, "post"]
+    ];
+    tl.insertAdjacentHTML("afterbegin", segs.map(([c, a, b, txt, f]) =>
+      `<button type="button" class="seg ${c}" data-seg="${f}" style="left:${pctX(a)}%;width:calc(${pctX(b) - pctX(a)}% - 2px)" title="${txt}">${txt}</button>`).join("") +
+      `<div class="mk" style="left:${pctX(HOY)}%"><span>Hoy · ${fmt(dateOf(HOY))}</span></div>` +
+      (dDesv !== N ? `<div class="mk plan" style="left:${pctX(N)}%"><span>Desvarada plan</span></div>` : ""));
+    tl.addEventListener("click", (e) => { const b = e.target.closest(".seg"); if (b) jump(b.dataset.seg); });
+
+    const tabs = document.getElementById("tabs");
+    tabs.innerHTML = AREAS.map((a) => `<button class="tab" type="button" data-k="${a.id || "resumen"}" aria-pressed="${!a.id}">${a.nombre}</button>`).join("");
+    tabs.addEventListener("click", (e) => {
+      const b = e.target.closest(".tab"); if (!b) return;
+      state.scope = b.dataset.k;
+      [...tabs.children].forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    });
+
+    // Encuadres de cámara por fase
+    const VIEWS = {
+      dique: { pos: new THREE.Vector3(30, 30, 34), target: new THREE.Vector3(49, -1.5, 0) },
+      puerto: { pos: new THREE.Vector3(-52, 24, 46), target: new THREE.Vector3(-40, 0, 12) },
+      general: { pos: new THREE.Vector3(-4, 84, 84), target: new THREE.Vector3(4, 0, 0) }
+    };
+    let cam = null;
+    const viewFor = (f) => (f === "dique" ? "dique" : f === "pre" || f === "post" ? "puerto" : "general");
+    function frameView(name) {
+      cam = { fromPos: camera.position.clone(), fromTarget: controls.target.clone(), pos: VIEWS[name].pos.clone(), target: VIEWS[name].target.clone(), t0: performance.now(), dur: reduce ? 1 : 1600 };
+    }
+
+    function jump(f) {
+      stopPlay(); state.paused = false; playBtn.textContent = "▶ Viaje completo";
+      frameView(viewFor(f));
+      const target = { pre: T.zarpe - 2, ida: (T.zarpe + T.llegada) / 2, dique: Math.min(HOY, T.desvarada - 1), regreso: (T.salida + T.regreso) / 2, post: T.regreso + 3 }[f];
+      animateTo(target);
+    }
+    let anim = null;
+    function animateTo(target) {
+      if (reduce) { state.d = target; return; }
+      anim = { from: state.d, to: target, t0: performance.now(), dur: 1800 };
+    }
+    document.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => jump(b.dataset.go)));
+    document.getElementById("today").addEventListener("click", () => { stopPlay(); state.paused = false; playBtn.textContent = "▶ Viaje completo"; frameView(viewFor(shipState(HOY).fase)); animateTo(HOY); });
+    sim.addEventListener("input", () => { stopPlay(); state.paused = false; playBtn.textContent = "▶ Viaje completo"; anim = null; state.d = +sim.value; });
+    const playBtn = document.getElementById("play");
+    function stopPlay(byUser = false) {
+      if (state.playing) state.paused = byUser; // solo se reanuda si el usuario lo pausó a mitad de camino
+      state.playing = false; playBtn.setAttribute("aria-pressed", "false");
+      playBtn.textContent = state.paused ? "▶ Continuar viaje" : "▶ Viaje completo";
+    }
+    playBtn.addEventListener("click", () => {
+      if (state.playing) return stopPlay(true);
+      anim = null;
+      if (!state.paused || state.d >= T.fin - 0.1) state.d = T.ini;
+      state.paused = false;
+      frameView("general");
+      state.playing = true; playBtn.setAttribute("aria-pressed", "true"); playBtn.textContent = "❚❚ Pausar";
+    });
+    const followBtn = document.getElementById("follow");
+    followBtn.addEventListener("click", () => { state.follow = !state.follow; followBtn.setAttribute("aria-pressed", String(state.follow)); });
+
+    const kpi = (l, v, cls = "") => `<div class="k"><div class="l">${l}</div><div class="v ${cls}">${v}</div></div>`;
+    let lastUi = "";
+    function updateUi(st, prog) {
+      const s = S[state.scope];
+      const fecha = dateOf(state.d);
+      let k;
+      if (st.fase === "pre") k = [kpi("Ubicación", VIAJE.origen.nombre), kpi("Zarpa a dique", fmt(dateOf(T.zarpe))), kpi("Entrada a dique", fmt(dateOf(T.entrada))), kpi("Desvarada plan", fmt(dateOf(N)))];
+      else if (st.fase === "ida") k = [kpi("Ubicación", "En navegación"), kpi("Destino", VIAJE.astillero.nombre), kpi("Llega", fmt(dateOf(T.llegada))), kpi("Entrada a dique", fmt(dateOf(T.entrada)))];
+      else if (st.fase === "dique") k = [
+        kpi(prog.proj ? "Real proyect." : "Avance real", prog.real.toFixed(1) + "%"),
+        kpi("Plan", prog.plan.toFixed(1) + "%"),
+        kpi("Atraso", Math.abs(s.delay) < 0.5 ? "En plazo" : days(s.delay), s.delay >= 2 ? "alert" : ""),
+        kpi("Desvarada", fmt(dateOf(T.desvarada)), T.desvarada > N ? "alert" : "")];
+      else if (st.fase === "regreso") k = [kpi("Ubicación", "En navegación"), kpi("Destino", VIAJE.origen.nombre), kpi("Desvaró", fmt(dateOf(T.desvarada))), kpi("Llega", fmt(dateOf(T.regreso)))];
+      else k = [kpi("Ubicación", VIAJE.origen.nombre), kpi("Post-dique", `día ${Math.min(VIAJE.diasPostDique, Math.max(1, Math.ceil(state.d - T.regreso)))} de ${VIAJE.diasPostDique}`), kpi("Trabajos", "100%"), kpi("Garantía hasta", fmt(dateOf(T.fin)))];
+      const html = k.join("") + st.fase + state.scope + fmt(fecha);
+      if (html === lastUi) return;
+      lastUi = html;
+      document.getElementById("kpis").innerHTML = k.join("");
+      const ph = document.getElementById("phase");
+      ph.textContent = FASES[st.fase].corto;
+      ph.classList.toggle("dique", st.fase === "dique");
+      document.getElementById("title").textContent = FASES[st.fase].titulo;
+      document.getElementById("sub").textContent = `${D.proyecto.buque} · ${fmtY(fecha)}${state.d > AT ? " · simulación" : ""}`;
+      document.getElementById("tl-date").textContent = fmtY(fecha);
+      document.getElementById("tl-note").textContent = Math.abs(state.d - HOY) < 0.5 ? "fecha de corte (datos reales)" : state.d > AT ? "futuro: avance proyectado con el atraso actual" : "pasado: avance real registrado";
+      tabs.classList.toggle("off", st.fase !== "dique");
+    }
+
+    // =========================================================
+    // Bucle de animación
+    // =========================================================
+    let prevNow = performance.now();
+    function frame(now) {
+      const t = now / 1000, dt = Math.min(0.1, (now - prevNow) / 1000); prevNow = now;
+      if (anim) {
+        const k = Math.min(1, (now - anim.t0) / anim.dur), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        state.d = anim.from + (anim.to - anim.from) * e;
+        if (k >= 1) anim = null;
+      }
+      if (state.playing) {
+        const inDock = state.d > T.entrada + 0.6 && state.d < T.desvarada - 0.6;
+        state.d += dt * (inDock ? 4 : 1.2); // los días en dique pasan más rápido
+        if (state.d >= T.fin) { state.d = T.fin; stopPlay(); state.paused = false; playBtn.textContent = "▶ Viaje completo"; }
+      }
+      sim.value = state.d;
+
+      for (let i = 0; i < wPos.count; i++) wPos.array[i * 3 + 1] = waveAt(wBase[i * 3], wBase[i * 3 + 2], t);
+      wPos.needsUpdate = true;
+      water.geometry.computeVertexNormals();
+
+      const st = shipState(state.d);
+      const lev = dockLevel(state.d);
+      dockWater.position.y = lev + (lev > -0.3 ? waveAt(48, 0, t) * 0.3 : 0);
+      dockWater.material.opacity = lev < DOCK.floor + 0.3 ? 0.55 : 0.9;
+      const closed = state.d > T.entrada + 0.05 && state.d < T.desvarada - 0.05;
+      gate.position.y += ((closed ? -0.9 : -4.6) - gate.position.y) * 0.08;
+
+      let y;
+      if (st.fase === "dique" || (st.pos.x > SEA_RIGHT - 1)) y = Math.max(lev + (lev > -0.3 ? waveAt(st.pos.x, 0, t) * 0.5 : 0), REST_Y);
+      else y = waveAt(st.pos.x, st.pos.z, t) * 0.8 - 0.05;
+      ship.position.set(st.pos.x, y, st.pos.z);
+      ship.rotation.y = st.rot;
+      const afloat = y > REST_Y + 0.05;
+      ship.rotation.z = afloat ? Math.sin(t * 1.1) * 0.025 : 0;
+      ship.rotation.x = afloat ? Math.sin(t * 0.8) * 0.03 : 0;
+      wake.visible = st.sailing && st.pos.x < SEA_RIGHT - 2;
+      wake.position.set(st.pos.x - Math.cos(st.rot) * 6, 0.3, st.pos.z + Math.sin(st.rot) * 6);
+      wake.rotation.y = st.rot;
+
+      // ruta recorrida
+      const along = st.fase === "pre" ? 0 : st.fase === "ida" ? st.f : st.fase === "regreso" ? st.f : st.fase === "post" ? 0 : 1;
+      dots.forEach((m, i) => {
+        m.material = (st.fase === "ida" || st.fase === "dique") && m.userData.f <= along + 1e-6 ? DOT_ON
+          : st.fase === "regreso" && m.userData.f >= along - 1e-6 ? DOT_ON : st.fase === "post" ? DOT_ON : DOT_OFF;
+        m.position.y = waveAt(m.position.x, m.position.z, t) + 0.05 + Math.sin(t * 2 + i) * 0.03;
+      });
+
+      // avance de los trabajos (solo tiene sentido desde la entrada a dique)
+      const s = S[state.scope];
+      const prog = state.d < T.entrada ? { real: 0, plan: 0, proj: false } : state.d >= T.desvarada ? { real: 100, plan: 100, proj: state.d > AT } : progressAt(s, state.d);
+      const wr = Math.max(0.001, (prog.real / 100) * BAR.len), wp = Math.max(0, ((prog.plan - prog.real) / 100) * BAR.len);
+      barFill.scale.x = wr; barFill.position.x = BAR.x0 + wr / 2;
+      barGap.visible = wp > 0.05; barGap.scale.x = Math.max(0.001, wp); barGap.position.x = BAR.x0 + wr + wp / 2;
+      const areaName = AREAS.find((a) => (a.id || "resumen") === state.scope).nombre;
+      barLbl.innerHTML = `Trabajos · ${areaName}: ${prog.real.toFixed(0)}%${prog.proj ? " proyectado" : ""} · plan ${prog.plan.toFixed(0)}%`;
+      barLbl.style.visibility = st.fase === "dique" || st.fase === "regreso" ? "visible" : "hidden";
+
+      const shipText = {
+        pre: [`En el agua · ${VIAJE.origen.nombre}`, `Pre-dique · zarpa el ${fmt(dateOf(T.zarpe))}`],
+        ida: [`Navegando a ${VIAJE.astillero.nombre}`, `Entrada a dique ${fmt(dateOf(T.entrada))}`],
+        dique: [`En dique · ${prog.real.toFixed(1)}%${prog.proj ? " proy." : ""}`, `plan ${prog.plan.toFixed(1)}% · ${lev > -0.5 ? (state.d < T.entrada + 1 ? "vaciando el dique" : "inundando el dique") : Math.abs(s.delay) < 0.5 ? "en plazo" : days(s.delay) + " de atraso"}`],
+        regreso: [`Regreso a ${VIAJE.origen.nombre}`, `Desvarada ${fmt(dateOf(T.desvarada))} · trabajos 100%`],
+        post: [`En el agua · ${VIAJE.origen.nombre}`, `Post-dique · garantía hasta ${fmt(dateOf(T.fin))}`]
+      }[st.fase];
+      shipLbl.innerHTML = `${shipText[0]}<small>${shipText[1]}</small>`;
+
+      CO.children.forEach((g) => { if (g.userData && g.userData.jib) g.rotation.y = Math.sin(t * 0.15 + g.position.x) * 0.25; });
+
+      // la cámara acompaña al barco desplazándose junto con el objetivo (respeta zoom y giro del usuario)
+      if (cam) {
+        // transición suave al encuadre elegido; al llegar, el usuario vuelve a tener el control
+        const k = Math.min(1, (now - cam.t0) / cam.dur), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        camera.position.lerpVectors(cam.fromPos, cam.pos, e);
+        controls.target.lerpVectors(cam.fromTarget, cam.target, e);
+        if (k >= 1) cam = null;
+      } else if (state.follow && state.playing) {
+        const want = new THREE.Vector3(st.pos.x * 0.4, 0, st.pos.z * 0.4);
+        const delta = want.sub(controls.target).multiplyScalar(0.035);
+        delta.y = 0;
+        controls.target.add(delta); camera.position.add(delta);
+      }
+      controls.update();
+      updateUi(st, prog);
+      renderer.render(scene, camera);
+      labelRenderer.render(scene, camera);
+      requestAnimationFrame(frame);
+    }
+
+    addEventListener("resize", () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+      labelRenderer.setSize(innerWidth, innerHeight);
+    });
+    frameView(viewFor(shipState(state.d).fase));
+    camera.position.copy(cam.pos); controls.target.copy(cam.target); cam = null; // arranca encuadrado en la fase de hoy
+    renderer.domElement.addEventListener("pointerdown", () => { cam = null; }); // si el usuario mueve la cámara, manda él
+    requestAnimationFrame(frame);
+    window.__viaje3d = { S, T, state, shipState, dockLevel, progressAt }; // para pruebas
+  </script>
+</body>
+</html>
