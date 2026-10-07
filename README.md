@@ -31,6 +31,10 @@ Después se abre en el navegador:
 
 Las pruebas 3D necesitan conexión a internet para cargar la librería Three.js.
 
+## Versiones
+
+Cada vez que Claude termina un trabajo en este proyecto, los cambios se guardan como una versión (commit) y se suben a este repositorio. El historial completo está en la pestaña **Commits** de GitHub, y desde ahí se puede volver a cualquier versión anterior.
+
 ## Datos reales
 
 Para usar datos reales se reemplaza `data.js` con el mismo formato, o se abre `index.html?datos=URL_DEL_JSON`. El detalle está en [DATOS-REQUERIDOS.md](DATOS-REQUERIDOS.md).
