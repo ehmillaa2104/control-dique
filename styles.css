@@ -360,6 +360,8 @@ footer { max-width: 1480px; margin: 8px auto 0; padding: 12px 24px 20px; display
 .brand { padding: 9px 14px; }
 .brand b { font-size: 14px; }
 .brand .ic { width: 28px; height: 28px; }
+.brand .rev { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #555; }
+@media (max-width: 1000px) { .hero-text h1::after { content: " · Rev. 2"; font-size: .55em; font-weight: 600; opacity: .55; } }
 .updated { border: 0; padding: 0; display: block; text-align: right; }
 .updated small { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; }
 .updated b { font-size: 15px; }
