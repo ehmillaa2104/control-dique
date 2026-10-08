@@ -4,6 +4,14 @@ Dashboard para controlar un proyecto de mantenimiento en dique seco de un buque.
 
 > Todos los datos del repositorio son **de ejemplo** (buque M/V Austral Trader ficticio).
 
+## Ver en línea (GitHub Pages)
+
+Se actualiza solo cada vez que se sube una versión a `main`:
+
+- Dashboard Rev. 1: https://ehmillaa2104.github.io/control-dique/
+- Rev. 0: https://ehmillaa2104.github.io/control-dique/rev0/
+- Cronograma 3D: https://ehmillaa2104.github.io/control-dique/pruebas/viaje-3d/
+
 ## Contenido
 
 | Carpeta / archivo | Qué es |
