@@ -480,10 +480,23 @@
 
   // =========================================================
   // Cabecera · Rev. 2: cronograma y avance con el buque navegando
-  //   La barra es el cronograma (fases a escala de tiempo; las fases cortas tienen un ancho mínimo
-  //   para que se lean). El buque va en el punto del plan que corresponde al avance real (plazo
-  //   ganado): si hay atraso queda detrás de la línea "Hoy" tantos días como el atraso.
+  //   Fuente: el tablero "Cronograma" de Monday (monday.js); si no está, la tabla "cronograma" de data.js.
+  //   Cada fase tiene su color y un ancho según sus días (las fases cortas tienen un mínimo para
+  //   que se lean). Lo ya navegado se pinta lleno; lo que falta, tenue.
+  //   Tiempo y avance van separados: el buque marca HOY en el cronograma (dónde está el buque y en
+  //   qué fase, con su estado según la columna Diferencia) y el avance de los trabajos va aparte,
+  //   real contra plan. Así, si pasan los días y el avance no sube, la diferencia se ve.
   // =========================================================
+  const FASE_CORTO = { plan: "Plan", pre: "Pre", ida: "Ida", dique: "Dique", regreso: "Vta", post: "Post", cierre: "Cierre" };
+  const rowT = (k, v) => `<div class="row"><span>${k}</span><span>${v}</span></div>`;
+  const difTxt = (d, html = true) => {
+    if (d == null || Math.abs(d) < 0.5) return "en plazo";
+    if (d > 0) return html ? `<span class="vy-late">${days1(d)} de atraso</span>` : `${days1(d)} de atraso`;
+    return `${days1(-d)} de adelanto`;
+  };
+  const dateRange = (r) => (r ? (r[0] === r[1] ? fmtShort(r[0]) : `${fmtShort(r[0])} – ${fmtShort(r[1])}`) : "—");
+  const hitoCls = (done, late) => (done ? "ok" : late ? "late" : "");
+
   function cronoScale(segs) {
     const tot = segs.reduce((a, f) => a + (f.b - f.a), 0);
     const ws = segs.map((f) => Math.max(f.b - f.a, tot * 0.09));
@@ -500,6 +513,99 @@
     };
     return { geo, at };
   }
+
+  // Tablero Cronograma de Monday → fases e hitos. Cada elemento de fase ("PLANIFICACIÓN",
+  // "PRE-DIQUE (Ejecución)", traslados, "DIQUE (Ejecución)", "POST-DIQUE (Ejecución)") es un tramo;
+  // los de duración 0 son hitos; el resto se muestra dentro del tramo donde empieza.
+  let mondayCache = null;
+  function cronoMonday(V) {
+    const MD = window.DIQUE_MONDAY;
+    if (!MD || !Array.isArray(MD.cronograma)) return null;
+    if (!mondayCache) {
+      const items = MD.cronograma.filter((r) => r && r.nombre && Array.isArray(r.real) && isDate(r.real[0]) && isDate(r.real[1]));
+      if (!items.length) return null;
+      const origin = parse(items.reduce((m, r) => (r.real[0] < m ? r.real[0] : m), items[0].real[0]));
+      const dn = (s) => Math.round((parse(s) - origin) / DAY);
+      const faseOf = (r) => {
+        const g = (r.grupo || "").toLowerCase(), n = r.nombre.toLowerCase();
+        if (/traslado/.test(n)) return /pre/.test(g) ? "ida" : /post/.test(g) ? "regreso" : null;
+        if (/planificaci/.test(n)) return "plan";
+        if (!/ejecuci/.test(n)) return null;
+        return /pre/.test(g) ? "pre" : /post/.test(g) ? "post" : /dique/.test(g) ? "dique" : null;
+      };
+      const segs = [], hitos = [], subs = [];
+      items.forEach((r) => {
+        const f = faseOf(r);
+        if (r.duracion === 0) hitos.push(r);
+        else if (f && !segs.some((s) => s.fase === f)) segs.push({ fase: f, r, a: dn(r.real[0]), end: dn(r.real[1]) + 1 });
+        else subs.push(r);
+      });
+      if (!segs.some((s) => s.fase === "dique")) return null;
+      segs.sort((x, y) => x.a - y.a);
+      const lastHito = hitos.reduce((m, h) => Math.max(m, dn(h.real[0]) + 1), 0);
+      // En Monday las fases se traslapan o dejan huecos: en la barra cada una llega hasta donde empieza la siguiente
+      segs.forEach((s, i) => { s.b = i < segs.length - 1 ? Math.max(s.a + 1, segs[i + 1].a) : Math.max(s.a + 1, s.end, lastHito); });
+      const dest = (f) => { const s = segs.find((x) => x.fase === f); const m = s && s.r.nombre.match(/traslado a (.+)/i); return m ? m[1].trim().replace(/^panama$/i, "Panamá") : ""; };
+      const NOMBRE = { plan: "Planificación", pre: "Pre-dique", ida: "Traslado", dique: "En dique", regreso: "Traslado", post: "Post-dique" };
+      const LUGAR = { pre: dest("regreso"), dique: dest("ida"), post: dest("regreso") };
+      segs.forEach((s) => {
+        s.nombre = NOMBRE[s.fase];
+        s.lugar = LUGAR[s.fase] || "";
+        s.label = s.fase === "dique" && s.lugar ? `${s.nombre} · ${s.lugar}` : s.nombre;
+        const grupos = segs.filter((o) => o.r.grupo === s.r.grupo);
+        const inside = subs.filter((x) => (x.grupo && segs.some((o) => o.r.grupo === x.grupo)
+          ? x.grupo === s.r.grupo && grupos[grupos.length - 1] === s // va con la última fase de su grupo
+          : dn(x.real[0]) >= s.a && dn(x.real[0]) < s.b));
+        s.tip = tipAttr(`<b>${esc(s.r.nombre)}</b>${rowT("Línea base", dateRange(s.r.base))}${rowT("Real / proyectada", dateRange(s.r.real))}${rowT("Estado", esc(s.r.estado || "—"))}${rowT("Diferencia", difTxt(s.r.diferencia, false))}` +
+          (inside.length ? `<div class="small" style="margin-top:4px;opacity:.75">${inside.map((x) => esc(x.nombre.split("*")[0].trim()) + " · " + dateRange(x.real)).join("<br>")}</div>` : ""));
+      });
+      mondayCache = { MD, segs, hitos, dn };
+    }
+    const { MD: D, segs, hitos, dn } = mondayCache;
+    const today = iso(new Date());
+    const hoy = Math.max(0, Math.min(segs[segs.length - 1].b, dn(today) + 0.5));
+    const cur = segs.find((s) => hoy >= s.a && hoy < s.b) || segs[segs.length - 1];
+    const av = (D.avance && (D.avance[V.key] || D.avance.total)) || null;
+    const avPct = av && av.duracion > 0 ? (av.avanceDias / av.duracion) * 100 : 0;
+    const dia = Math.floor(hoy - cur.a) + 1, dias = cur.end - cur.a;
+    const quien = V.isArea ? " · " + esc(V.area.nombre) : "";
+    return {
+      segs, hoy, shipT: hoy, fuente: `${D.fuente || "Monday"} · ${fmtShort(D.extraido || today)}`,
+      tag: `<b>${esc(cur.nombre)}</b> · ${difTxt(cur.r.diferencia)}`,
+      shipTip: `<b>Hoy · ${esc(cur.r.nombre)}</b>${rowT("Día", `${Math.min(dia, dias)} de ${dias}`)}${rowT("Fechas", dateRange(cur.r.real))}${rowT("Estado", esc(cur.r.estado || "—"))}${rowT("Diferencia", difTxt(cur.r.diferencia, false))}`,
+      avance: { real: av ? avPct : null, plan: null, quien,
+        nota: av ? `Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. ${av.conDuracion} de ${av.lineas} trabajos tienen duración cargada en Monday.` : "Sin datos de P1, P2 y P3." },
+      hitos: hitos.map((h) => {
+        const done = /listo/i.test(h.estado || ""), late = !done && ((h.base && h.base[0] < today) || h.diferencia > 0);
+        return { t: dn(h.real[0]) + 0.5, cls: hitoCls(done, late),
+          tip: tipAttr(`<b>${esc(h.nombre)}</b>${rowT("Línea base", dateRange(h.base))}${rowT("Real / proyectada", dateRange(h.real))}${rowT("Estado", esc(h.estado || "—"))}${rowT("Diferencia", difTxt(h.diferencia, false))}`) };
+      })
+    };
+  }
+
+  // Sin Monday: fases de data.js, hitos clave del proyecto y el buque según el plazo ganado
+  function cronoSample(V) {
+    const M = V.M, s = V.s;
+    const segs = M.cronograma.map((f) => Object.assign({}, f, {
+      label: f.fase === "dique" && f.lugar ? f.nombre + " · " + f.lugar.split(",")[0] : f.fase === "ida" || f.fase === "regreso" ? "Traslado" : f.nombre,
+      tip: tipAttr(`<b>${esc(f.nombre)}${f.lugar ? " · " + esc(f.lugar) : ""}</b>${rowT("Plan", dateRange([f.inicio, f.fin]))}${f.inicioReal ? rowT("Real", fmtShort(f.inicioReal) + " – " + (f.finReal ? fmtShort(f.finReal) : "en curso")) : ""}`)
+    }));
+    const done = !s.empty && s.pReal >= 99.95;
+    const dl = delaySt(s.delay || 0);
+    const cur = segs.find((f) => M.AT > f.a && M.AT <= f.b) || (M.AT > segs[segs.length - 1].b ? segs[segs.length - 1] : segs[0]);
+    return {
+      segs, hoy: M.AT, shipT: M.AT, fuente: "Datos de ejemplo",
+      tag: `<b>${esc(cur.nombre)}</b> · ${s.empty ? "sin órdenes" : done ? "terminado" : difTxt(s.delay)}`,
+      shipTip: `<b>Hoy · ${fmtShort(M.corte)}</b>${rowT("Fase", esc(cur.nombre))}${cur.fase === "dique" ? rowT("Día", `${Math.min(M.AT, M.N)} de ${M.N}`) : ""}${s.empty ? "" : rowT(dl.txt, dl.val)}`,
+      avance: s.empty ? { real: null, plan: null, nota: "Sin órdenes de trabajo." } : { real: s.pReal, plan: s.pPlan, quien: V.isArea ? " · " + esc(V.area.nombre) : "",
+        nota: "Σ (% real × duración) / Σ duración de las órdenes de trabajo." },
+      hitos: V.hitos.filter((h) => h.clave).map((h) => ({
+        t: M.dn(h.fechaPlan) + 0.5, cls: hitoCls(!!h.fechaReal, !h.fechaReal && h.fechaPlan < M.corte),
+        tip: tipAttr(`<b>${esc(h.nombre)}</b>${rowT("Plan", fmtShort(h.fechaPlan))}${rowT("Estado", h.fechaReal ? "cumplido " + fmtShort(h.fechaReal) : h.fechaPlan < M.corte ? "vencido" : "pendiente")}`)
+      }))
+    };
+  }
+
   // Tanquero moderno de perfil, proa a la derecha: puente y chimenea a popa, manifold y pasarela en cubierta
   const SHIP = `<svg class="vy-boat" viewBox="0 0 120 40" aria-hidden="true">
       <path class="vy-wake" d="M6 34c-8 0-14 1.6-22 1.6M8 37.5c-10 0-19 .8-30 .8"/>
@@ -511,87 +617,46 @@
       <path class="dl" d="M38 19.2h66M50 21v-4h4v4M72 21v-4h4v4M94 21v-4h4v4M64 21v-9l8 4"/>
       <path class="hl" d="M107 21v-10"/>
     </svg>`;
-  const shipTxt = (s) => {
-    if (s.empty) return "Sin órdenes de trabajo";
-    if (s.pReal >= 99.95) return "<b>100%</b> avance · terminado";
-    const d = s.delay;
-    const dl = Math.abs(d) < 0.5 ? "en plazo" : d > 0 ? `<span class="vy-late">${days1(d)} de atraso</span>` : `${days1(-d)} de adelanto`;
-    return `<b>${pct(s.pReal)}</b> avance · ${dl}`;
-  };
+
   function voyageHTML(V) {
-    const M = V.M, s = V.s, segs = M.cronograma;
-    const { geo, at } = cronoScale(segs);
-    const done = !s.empty && s.pReal >= 99.95;
-    const tShip = s.empty || done ? M.AT : Math.max(0, s.ES);
-    const shipX = at(tShip), hoyX = at(M.AT);
-    const cur = segs.find((f) => M.AT > f.a && M.AT <= f.b) || (M.AT > segs[segs.length - 1].b ? segs[segs.length - 1] : segs[0]);
-    const lugar = (f) => (f.lugar ? " · " + esc(f.lugar) : "");
-    const now = cur.fase === "dique" ? `${esc(cur.nombre)}${lugar(cur)} · día ${Math.min(M.AT, M.N)} de ${M.N}` : esc(cur.nombre) + lugar(cur);
-
-    const segTip = (f) => {
-      const real = f.inicioReal ? `<div class="row"><span>Real</span><span>${fmtShort(f.inicioReal)} – ${f.finReal ? fmtShort(f.finReal) : "en curso"}</span></div>` : "";
-      return tipAttr(`<b>${esc(f.nombre)}${lugar(f)}</b><div class="row"><span>Plan</span><span>${fmtShort(f.inicio)} – ${fmtShort(f.fin)}</span></div>${real}`);
-    };
-    const bands = geo.map((g) => `<i class="${g.f.fase === "dique" ? "dk" : ""}" style="left:${g.x0}%;width:${g.x1 - g.x0}%"></i>`).join("");
+    const T = cronoMonday(V) || cronoSample(V);
+    const { geo, at } = cronoScale(T.segs);
+    const shipX = at(T.shipT);
+    const segs = geo.map((g) => `<i class="f-${g.f.fase || "otra"}" style="left:${g.x0}%;width:${g.x1 - g.x0}%" ${g.f.tip || ""}><b class="lf">${esc(g.f.label || g.f.nombre)}</b><b class="ls">${esc(FASE_CORTO[g.f.fase] || g.f.nombre)}</b></i>`).join("");
     const seps = geo.slice(1).map((g) => `<i style="left:${g.x0}%"></i>`).join("");
-    const segName = (f) => (f.fase === "dique" && f.lugar ? f.nombre + " · " + f.lugar.split(",")[0] : f.fase === "ida" || f.fase === "regreso" ? "Traslado" : f.nombre);
-    const CORTO = { plan: "Plan", pre: "Pre", ida: "Ida", dique: "Dique", regreso: "Vta", post: "Post", cierre: "Cierre" };
-    const labels = geo.map((g) => `<span style="left:${g.x0}%;width:${g.x1 - g.x0}%" ${segTip(g.f)}><b class="lf">${esc(segName(g.f))}</b><b class="ls">${esc(CORTO[g.f.fase] || g.f.nombre)}</b></span>`).join("");
-
-    // Marcas: hoy, desvarada plan y proyectada (si quedan muy cerca se muestran en una sola etiqueta)
-    const marks = [`<div class="vy-mk now" style="left:${hoyX}%"><span>Hoy · ${fmtShort(M.corte)}</span></div>`];
-    const planX = at(M.dn(M.P.salidaPlan) + 0.5);
-    const proj = s.empty ? null : desvaradaProj(V);
-    const projLate = !!proj && iso(proj) > M.P.salidaPlan;
-    const projX = projLate ? at(M.dn(iso(proj)) + 0.5) : null;
-    if (projLate && Math.abs(projX - planX) < 12) {
-      marks.push(`<div class="vy-mk plan" style="left:${planX}%"></div>`);
-      marks.push(`<div class="vy-mk proj" style="left:${projX}%"><span>Desvarada ${fmtShort(proj)} <em>plan ${fmtShort(M.P.salidaPlan)}</em></span></div>`);
-    } else {
-      marks.push(`<div class="vy-mk plan" style="left:${planX}%"><span>Desvarada plan ${fmtShort(M.P.salidaPlan)}</span></div>`);
-      if (projLate) marks.push(`<div class="vy-mk proj" style="left:${projX}%"><span>Proyectada ${fmtShort(proj)}</span></div>`);
-    }
-    const hitos = V.hitos.filter((h) => h.clave).map((h) => {
-      const late = !h.fechaReal && h.fechaPlan < M.corte;
-      const cls = h.fechaReal ? "ok" : late ? "late" : "";
-      const est = h.fechaReal ? "cumplido " + fmtShort(h.fechaReal) : late ? "vencido" : "pendiente";
-      return `<i class="vy-hito ${cls}" style="left:${at(M.dn(h.fechaPlan) + 0.5)}%" ${tipAttr(`<b>${esc(h.nombre)}</b><div class="row"><span>Plan</span><span>${fmtShort(h.fechaPlan)}</span></div><div class="row"><span>Estado</span><span>${est}</span></div>`)}></i>`;
-    }).join("");
+    const hitos = T.hitos.map((h) => `<i class="vy-hito ${h.cls}" style="left:${at(h.t)}%" ${h.tip}></i>`).join("");
     const align = shipX < 14 ? "l" : shipX > 86 ? "r" : "";
-    const dl = delaySt(s.delay || 0);
-    const shipTip = `<b>Avance real${V.isArea ? " · " + esc(V.area.nombre) : ""}</b>` + (s.empty ? "" :
-      `<div class="row"><span>Real</span><span>${pct(s.pReal)}</span></div><div class="row"><span>Plan a hoy</span><span>${pct(s.pPlan)}</span></div><div class="row"><span>${dl.txt}</span><span>${dl.val}</span></div>`) +
-      `<div class="small" style="margin-top:4px;opacity:.75">Avance ponderado por duración de cada trabajo. El buque va donde el plan indica para este avance: la distancia hasta "Hoy" es el atraso.</div>`;
-
-    return `<div class="vy-h"><span class="vy-t">Cronograma y avance</span><span class="vy-now">Fase actual: <b>${now}</b></span></div>
-      <div class="vy-track">
-        <div class="vy-ship ${align}" data-x="${shipX}" style="left:${shipX}%" ${tipAttr(shipTip)}>
-          <div class="vy-tag">${shipTxt(s)}</div>${SHIP}
-        </div>
-        <div class="vy-bar">
-          <div class="vy-bands">${bands}</div>
-          <div class="vy-fill" style="width:${shipX}%"></div>
-          <div class="vy-seps">${seps}</div>
-          <div class="vy-labels">${labels}</div>
-        </div>
-        <div class="vy-axis">${hitos}${marks.join("")}
-          <span class="vy-edge l">${fmtShort(segs[0].inicio)}</span><span class="vy-edge r">${fmtShort(segs[segs.length - 1].fin)}</span>
-        </div>
+    const A = T.avance, late = A.real != null && A.plan != null && A.real < A.plan - 5;
+    const avTip = tipAttr(`<b>Avance de los trabajos${A.quien || ""}</b>${rowT("Real", A.real == null ? "—" : pct(A.real))}${A.plan != null ? rowT("Plan a hoy", pct(A.plan)) : ""}<div class="small" style="margin-top:4px;opacity:.75">${A.nota}</div>`);
+    const avance = `<div class="vy-av" ${avTip}>
+        <div class="l">Avance trabajos</div>
+        <div class="v ${late ? "t-late" : ""}">${A.real == null ? "—" : pct(A.real, 0)}${A.plan != null ? `<small>plan ${pct(A.plan, 0)}</small>` : ""}</div>
+        <div class="m"><i class="r ${late ? "late" : ""}" style="width:${A.real || 0}%"></i>${A.plan != null ? `<i class="p" style="left:${A.plan}%"></i>` : ""}</div>
       </div>`;
+    return `<div class="vy-row"><div class="vy-track">
+        <div class="vy-ship ${align}" data-x="${shipX}" style="left:${shipX}%" ${tipAttr(T.shipTip)}><div class="vy-tag">${T.tag}</div>${SHIP}</div>
+        <div class="vy-bar">
+          <div class="vy-segs dim">${segs}</div>
+          <div class="vy-segs solid" style="clip-path:inset(0 ${100 - shipX}% 0 0)">${segs}</div>
+          <div class="vy-seps">${seps}</div>
+        </div>
+        <div class="vy-axis">${hitos}<span class="vy-src">${esc(T.fuente)}</span></div>
+      </div>${avance}</div>`;
   }
   // El buque navega desde su posición anterior (al abrir, desde el inicio del cronograma)
   let lastShipX = 0;
   function sailShip() {
-    const ship = document.querySelector(".vy-ship"), fill = document.querySelector(".vy-fill");
-    if (!ship || !fill) return;
+    const ship = document.querySelector(".vy-ship"), solid = document.querySelector(".vy-segs.solid");
+    if (!ship || !solid) return;
     const x = +ship.dataset.x;
-    ship.style.transition = fill.style.transition = "none";
+    const clip = (v) => `inset(0 ${100 - v}% 0 0)`;
+    ship.style.transition = solid.style.transition = "none";
     ship.style.left = lastShipX + "%";
-    fill.style.width = lastShipX + "%";
+    solid.style.clipPath = clip(lastShipX);
     void ship.offsetWidth; // aplica la posición inicial antes de animar
-    ship.style.transition = fill.style.transition = "";
+    ship.style.transition = solid.style.transition = "";
     ship.style.left = x + "%";
-    fill.style.width = x + "%";
+    solid.style.clipPath = clip(x);
     lastShipX = x;
   }
 
@@ -959,7 +1024,6 @@
     $("hero-title").textContent = V.isArea ? "Área de " + V.area.nombre : "Proyecto de dique";
     $("hero-sub").textContent = [M.P.buque, V.isArea ? V.area.descripcion : [M.P.tipo, M.P.dique].filter(Boolean).join(" · ")].filter(Boolean).join(" · ");
     $("upd-date").textContent = fmtDate(M.corte);
-    $("upd-day").textContent = `Día ${Math.min(M.AT, M.N)} de ${M.N} · desvarada ${fmtShort(M.P.salidaPlan)}`;
     document.title = (V.isArea ? V.area.nombre + " · " : "") + "Control de Dique · Rev. 2";
     $("foot-src").textContent = M.P.fuente || (fuente ? "Fuente: " + fuente : "Datos de ejemplo");
     $("rev-link").href = "rev1/index.html" + location.search + "#" + encodeURIComponent(V.key);

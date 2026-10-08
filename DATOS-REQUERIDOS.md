@@ -49,8 +49,9 @@ base de datos o de la herramienta de gestión. Solo 4 son obligatorias para los 
 - `fase`: `pre`, `ida`, `dique`, `regreso`, `post` (también `plan` y `cierre`). Tiene que haber una fase `dique`.
 - `inicio` / `fin`: línea base. `inicioReal` / `finReal`: fechas reales (opcionales).
 - Si la tabla no viene, la barra muestra solo la estadía en dique (`entrada` a `salidaPlan`).
+- **Si existe `monday.js`**, la barra usa el tablero Cronograma real de Monday en vez de esta tabla (ver [MAPEO-MONDAY.md](MAPEO-MONDAY.md)).
 
-**Cómo se dibuja la barra:** cada fase ocupa un ancho proporcional a sus días (las fases cortas tienen un ancho mínimo para que se lean). La línea **Hoy** marca la fecha de corte. El **buque** se ubica en el punto del plan que corresponde al avance real (plazo ganado). Si hay atraso, queda detrás de "Hoy" tantos días como el atraso. También se marcan la desvarada plan, la desvarada proyectada y los hitos clave.
+**Cómo se dibuja la barra:** cada fase tiene su color y un ancho proporcional a sus días (las fases cortas tienen un ancho mínimo para que se lean). Lo ya recorrido se ve lleno y lo que falta, tenue. **El buque marca hoy** (tiempo). Su etiqueta dice la fase y si va en plazo según la columna Diferencia de Monday. **El avance de los trabajos va aparte**, real contra plan: si pasan los días y el avance no sube, la diferencia se ve. Los rombos son los hitos: blanco = cumplido, rojo = vencido.
 
 ### areas
 `{ "id": "cubierta", "nombre": "Cubierta", "icono": "anchor", "descripcion": "..." }`

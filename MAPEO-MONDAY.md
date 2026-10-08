@@ -64,6 +64,27 @@ Las tres tablas usan las mismas columnas. Algunas cambian de ID según el tabler
 
 El avance se calcula igual que la fórmula **Avance** de Monday: Σ (Estado % × Duración) / Σ Duración, sumando P1, P2 y P3. Se pondera por duración porque no todos los trabajos tienen costo. La Rev. 2 ya lo calcula así.
 
+### Gastos generales ← CC. Centros de Costo
+
+Los gastos generales son los **centros de costo** de este tablero, con los mismos nombres:
+
+- **1.x Cubierta y casco:** 1.1 Limpieza de tanques · 1.2 Medición espesores · 1.3 Mant tanques lastre · 1.4 Pintura & Ánodos · 1.5 Mat Cubierta/Seguridad · 1.6 Reparaciones cubierta · 1.7 Carga materiales · 1.8 Bajada slops/Basura
+- **2.1.x Viaje:** 2.1.1 Tránsitos · 2.1.2 Combustibles · 2.1.3 Agenciamiento · 2.1.4 Estadía/viáticos · 2.1.5 Alimentación
+- **2.2.x Astillero y repuestos:** 2.2.1 Cuenta astillero · 2.2.2 Repuestos de Máquinas y trabajos de soldadura
+- **3.x Otros:** 3.1 Mant acomodaciones · 3.2 Gastos Clase BV · 3.3 Calibración tanques · 3.4 Pintura cubierta · 3.5 Bonificación tripulac
+
+| Dato del dashboard | Columna Monday | ID columna |
+|---|---|---|
+| Nombre del gasto | Name | `name` |
+| Revisado (gerencia) | $ Revisado | `formula_mm7d91f2` |
+| Costo plan aprobado | $ Aprobado | `formula_mm7dehmt` |
+| Comprometido (PO) | $ PO Total | `formula_mm7yshcc` |
+| Incurrido | $ Incurrido | `formula_mm7yyr9q` |
+| Proyectado | $ Proyectado | `formula_mm7ydqr4` |
+| Estado de aprobación | Estado Aprobación | `estado_dir` |
+
+Cada centro de costo suma las líneas de P1, P2 y P3 conectadas a él y las POs enlazadas. Al 2026-10-08 todos estaban en US$ 0.
+
 ### `incurrido` y `desembolsos` ← POs Kelly Trader
 
 | Dato del dashboard | Columna Monday | ID columna |
@@ -85,6 +106,10 @@ El avance se calcula igual que la fórmula **Avance** de Monday: Σ (Estado % ×
 | Días de impacto | Días | `numeric_mm2epnk4` |
 | `estado` | Estado (Solicitado, Aprobado, Rechazado, Pospuesto) | `color_mm2e3n8w` |
 | `area` | Actividad Relacionada (P1/P2/P3) | `board_relation_mm2ebzc8` |
+
+## Archivo `monday.js`
+
+Contiene los datos reales que ya usa el dashboard: el tablero Cronograma completo y el resumen de avance de P1, P2 y P3. Lo leí de Monday el 2026-10-08. Para actualizarlo hay que volver a leer Monday: a pedido o con una tarea automática que necesita un token de la API de Monday.
 
 ## Lo que falta o está incompleto
 
