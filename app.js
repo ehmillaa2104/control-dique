@@ -609,11 +609,11 @@
   // Tanquero moderno de perfil, proa a la derecha: puente y chimenea a popa, manifold y pasarela en cubierta
   const SHIP = `<svg class="vy-boat" viewBox="0 0 120 40" aria-hidden="true">
       <path class="vy-wake" d="M6 34c-8 0-14 1.6-22 1.6M8 37.5c-10 0-19 .8-30 .8"/>
-      <rect class="h" x="17" y="1" width="8" height="8" rx="1"/><rect class="d" x="17" y="3.6" width="8" height="2.2"/>
+      <rect class="h" x="17" y="1" width="8" height="8" rx="1"/><rect class="fun" x="17" y="3.4" width="8" height="2.6"/>
       <path class="h" d="M12 9h22v12H12z"/><path class="d" d="M9.5 10.5h27v2.6h-27z"/>
       <path class="dl" d="M15 16h2.6M19.6 16h2.6M24.2 16h2.6M28.8 16h2.6"/>
       <path class="h" d="M4 21h106c4 0 6.5 1.6 5.6 4.2L112 34.5c-.6 1.7-2 2.5-4 2.5H12c-3.2 0-5.4-1.6-6.2-4.4z"/>
-      <path class="d" d="M8.6 31h105.8l-1.1 3H9.6z"/>
+      <path class="hull-b" d="M8.6 31h105.8L112 34.5c-.6 1.7-2 2.5-4 2.5H12c-1.9 0-3.4-.6-4.4-1.8z"/>
       <path class="dl" d="M38 19.2h66M50 21v-4h4v4M72 21v-4h4v4M94 21v-4h4v4M64 21v-9l8 4"/>
       <path class="hl" d="M107 21v-10"/>
     </svg>`;
