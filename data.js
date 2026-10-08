@@ -24,6 +24,15 @@ window.DIQUE_DATA = {
       "moneda": "US$"
   },
 
+  // Fases del viaje (tablero "Cronograma" de Monday): fechas de línea base y reales
+  "cronograma": [
+    {"fase": "pre", "nombre": "Pre-dique", "lugar": "Colón, Panamá", "inicio": "2026-09-06", "fin": "2026-09-10", "inicioReal": "2026-09-06", "finReal": "2026-09-10"},
+    {"fase": "ida", "nombre": "Traslado a Cartagena", "lugar": "", "inicio": "2026-09-11", "fin": "2026-09-13", "inicioReal": "2026-09-11", "finReal": "2026-09-13"},
+    {"fase": "dique", "nombre": "En dique", "lugar": "Cartagena, Colombia", "inicio": "2026-09-14", "fin": "2026-10-25", "inicioReal": "2026-09-14", "finReal": null},
+    {"fase": "regreso", "nombre": "Traslado a Panamá", "lugar": "", "inicio": "2026-10-26", "fin": "2026-10-28", "inicioReal": null, "finReal": null},
+    {"fase": "post", "nombre": "Post-dique", "lugar": "Colón, Panamá", "inicio": "2026-10-29", "fin": "2026-11-11", "inicioReal": null, "finReal": null}
+  ],
+
   "areas": [
     {"id": "ingenieria", "nombre": "Ingeniería", "icono": "ruler", "descripcion": "Planos, clase, inspecciones y documentación técnica"},
     {"id": "cubierta", "nombre": "Cubierta", "icono": "anchor", "descripcion": "Casco, acero, pintura, fondeo, escotillas y equipos de cubierta"},

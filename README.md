@@ -8,7 +8,8 @@ Dashboard para controlar un proyecto de mantenimiento en dique seco de un buque.
 
 Se actualiza solo cada vez que se sube una versión a `main`:
 
-- Dashboard Rev. 1: https://ehmillaa2104.github.io/control-dique/
+- Dashboard Rev. 2 (actual): https://ehmillaa2104.github.io/control-dique/
+- Rev. 1: https://ehmillaa2104.github.io/control-dique/rev1/
 - Rev. 0: https://ehmillaa2104.github.io/control-dique/rev0/
 - Cronograma 3D: https://ehmillaa2104.github.io/control-dique/pruebas/viaje-3d/
 
@@ -16,7 +17,8 @@ Se actualiza solo cada vez que se sube una versión a `main`:
 
 | Carpeta / archivo | Qué es |
 |---|---|
-| `index.html` | **Rev. 1 · vista ejecutiva**: atraso, avance, costo plan, incurrido, desembolsado y participación del equipo |
+| `index.html` | **Rev. 2 · cronograma y avance**: la vista ejecutiva con una barra de cronograma en la cabecera y el buque avanzando según el avance (ponderado por duración, como Monday) |
+| `rev1/` | **Rev. 1 · vista ejecutiva** (congelada): atraso, avance, costo plan, incurrido, desembolsado y participación del equipo |
 | `rev0/` | **Rev. 0 · vista completa** (base congelada): valor ganado, todas las órdenes de trabajo, riesgos, adicionales y acciones |
 | `pruebas/viaje-3d/` | Prueba 3D: el viaje del buque de Panamá al dique en Cartagena y de vuelta, con la información del proyecto |
 | `pruebas/barco-3d/` | Primera prueba 3D: el barco avanza por una ruta según el avance |

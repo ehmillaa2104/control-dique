@@ -4,19 +4,21 @@
 
 | Revisión | Archivo | Para quién |
 |---|---|---|
-| **Rev. 1 · vista ejecutiva** | `index.html` | Gerencia y pantalla de sala: plazo, avance, costo plan, incurrido, desembolsado y participación del equipo |
-| **Rev. 0 · vista completa** | `rev0/index.html` | Control de proyecto: valor ganado, todas las OT, riesgos, adicionales y acciones |
+| **Rev. 2 · cronograma y avance** | `index.html` | La Rev. 1 más una barra de cronograma en la cabecera con el buque navegando según el avance. El avance se pondera por **duración**, como en Monday |
+| **Rev. 1 · vista ejecutiva** (congelada) | `rev1/index.html` | Gerencia y pantalla de sala: plazo, avance, costo plan, incurrido, desembolsado y participación del equipo. Avance ponderado por costo |
+| **Rev. 0 · vista completa** (congelada) | `rev0/index.html` | Control de proyecto: valor ganado, todas las OT, riesgos, adicionales y acciones |
 
-Las dos leen **el mismo `data.js`**, así que siempre muestran los mismos números.
+Las tres leen **el mismo `data.js`**. La Rev. 2 calcula el avance por duración, así que su % puede diferir un poco del de la Rev. 0 y la Rev. 1, que lo calculan por costo.
 
 ## 1. Qué datos necesita
 
-El dashboard recibe **12 tablas planas**. Cada una puede salir directamente de una planilla, de una
+El dashboard recibe **13 tablas planas**. Cada una puede salir directamente de una planilla, de una
 base de datos o de la herramienta de gestión. Solo 4 son obligatorias para los indicadores.
 
 | Tabla | Obligatoria | Para qué sirve |
 |---|---|---|
 | `proyecto` | Sí | Fechas del dique y datos del buque |
+| `cronograma` | No | Fases del viaje (pre-dique, traslados, dique, post-dique). Lo usa la barra de la Rev. 2 |
 | `areas` | Sí | Ingeniería, Cubierta, Técnico (se pueden agregar más) |
 | `ordenes` | Sí | La base de todos los cálculos |
 | `avances` | Sí | Avance real y costo de cada OT en cada fecha de corte |
@@ -38,6 +40,17 @@ base de datos o de la herramienta de gestión. Solo 4 son obligatorias para los 
 | `buque`, `tipo`, `eslora`, `dique` | | Solo se muestran en el encabezado |
 | `moneda` | `"US$"` | Opcional |
 | `fuente` | `"Sistema X · 02-10 08:00"` | Opcional. Se muestra en el pie de página |
+| `pesoAvance` | `"duracion"` | Rev. 2. Cómo se pondera el avance físico: `"duracion"` (por defecto, como Monday) o `"costo"` |
+
+### cronograma (una fila por fase · tablero "Cronograma" de Monday)
+```json
+{ "fase": "dique", "nombre": "En dique", "lugar": "Cartagena, Colombia", "inicio": "2026-09-14", "fin": "2026-10-25", "inicioReal": "2026-09-14", "finReal": null }
+```
+- `fase`: `pre`, `ida`, `dique`, `regreso`, `post` (también `plan` y `cierre`). Tiene que haber una fase `dique`.
+- `inicio` / `fin`: línea base. `inicioReal` / `finReal`: fechas reales (opcionales).
+- Si la tabla no viene, la barra muestra solo la estadía en dique (`entrada` a `salidaPlan`).
+
+**Cómo se dibuja la barra:** cada fase ocupa un ancho proporcional a sus días (las fases cortas tienen un ancho mínimo para que se lean). La línea **Hoy** marca la fecha de corte. El **buque** se ubica en el punto del plan que corresponde al avance real (plazo ganado). Si hay atraso, queda detrás de "Hoy" tantos días como el atraso. También se marcan la desvarada plan, la desvarada proyectada y los hitos clave.
 
 ### areas
 `{ "id": "cubierta", "nombre": "Cubierta", "icono": "anchor", "descripcion": "..." }`
@@ -50,8 +63,9 @@ base de datos o de la herramienta de gestión. Solo 4 son obligatorias para los 
 | `area` | `"cubierta"` | Debe existir en `areas` |
 | `nombre` | `"Renovación de acero bodega 3"` | |
 | `ejecuta` | `"Astillero"` | Opcional |
-| `bac` | `340000` | Presupuesto aprobado. Es también el **peso** de la OT en el avance |
+| `bac` | `340000` | Presupuesto aprobado. **Opcional en la Rev. 2**: no todos los trabajos tienen costo. Sin monto, cuenta en el avance y en costos vale 0 |
 | `inicio`, `fin` | `"2026-09-20"`, `"2026-10-09"` | Programa base. El % planificado se calcula solo |
+| `duracion` | `12` | Opcional. "Duración (días)" de Monday: es el **peso** de la OT en el avance (Rev. 2). Si falta, se usan los días entre inicio y fin |
 
 ### avances (una fila por OT y fecha de corte)
 `[fecha, id_ot, % avance real acumulado, costo real acumulado]`
@@ -142,7 +156,8 @@ desplegable con cada observación. Si falta algo esencial, como las fechas del p
 | PV (valor planificado) | Σ presupuesto × % planificado |
 | EV (valor ganado) | Σ presupuesto × % real |
 | AC (costo real) | Σ costo real acumulado |
-| % avance físico | EV / presupuesto total |
+| % avance físico (Rev. 2) | Σ (% real × duración) / Σ duración, igual que la fórmula "Avance" de P1, P2 y P3 en Monday |
+| % avance físico (Rev. 0 y 1) | EV / presupuesto total |
 | SV / CV | EV − PV / EV − AC |
 | SPI / CPI | EV / PV / EV / AC |
 | EAC | presupuesto / CPI |

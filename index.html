@@ -3,40 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Control de Dique Rev 1</title>
+  <title>Control de Dique Rev 2</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='6' r='2'/%3E%3Cpath d='M12 8v12M6 14a6 6 0 0 0 12 0M9 11h6'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2.6">
+  <link rel="stylesheet" href="styles.css?v=3.3">
 </head>
 <body>
   <header class="hero">
-    <svg class="hero-art" viewBox="0 0 520 150" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2">
-      <!-- muros y piso del dique -->
-      <path d="M6 20v122h508V20" />
-      <path d="M6 142h508" stroke-width="4" />
-      <!-- picaderos -->
-      <path d="M120 142v-12h16v12M200 142v-12h16v12M280 142v-12h16v12M360 142v-12h16v12" />
-      <!-- casco -->
-      <path d="M60 58h400l-10 34c-12 30-40 36-80 38H130c-30-2-52-10-62-34z" fill="rgba(255,255,255,.18)" />
-      <path d="M66 92h388" stroke-dasharray="6 5" />
-      <!-- superestructura y chimenea -->
-      <path d="M388 58V22h52v36M400 22V10h14v12" />
-      <path d="M396 32h36M396 44h36" />
-      <!-- grúas de cubierta -->
-      <path d="M150 58V30l30 18M240 58V30l30 18M330 58V30l30 18" />
-      <!-- grúa del dique -->
-      <path d="M40 20V2h120M60 2l-20 18M150 2v24" />
-    </svg>
     <div class="hero-inner">
       <div class="brand">
         <svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M5 13a7 7 0 0 0 14 0M8 11h8"/></svg>
         <div><b>CONTROL DE DIQUE</b><small>Mantenimiento · Clase · Costos</small></div>
       </div>
       <div class="hero-text">
-        <span class="pill">Rev. 1 · Vista ejecutiva</span>
-        <a class="revlink" id="rev-link" href="rev0/index.html">Ver Rev. 0 (completa)</a>
+        <span class="pill">Rev. 2 · Cronograma y avance</span>
+        <a class="revlink" id="rev-link" href="rev1/index.html">Ver Rev. 1</a>
+        <a class="revlink" href="rev0/index.html">Rev. 0 (completa)</a>
         <h1 id="hero-title">Proyecto de dique</h1>
         <p id="hero-sub"></p>
       </div>
@@ -45,6 +29,7 @@
         <div><small>Actualizado al</small><b id="upd-date"></b><small id="upd-day"></small></div>
       </div>
     </div>
+    <div class="voyage" id="voyage" aria-label="Cronograma y avance"></div>
   </header>
 
   <div class="tabs-wrap">
@@ -58,13 +43,13 @@
   <main id="app"></main>
 
   <footer>
-    <span>Control de proyectos | Rev. 1 · vista ejecutiva</span>
+    <span>Control de proyectos | Rev. 2 · cronograma y avance</span>
     <span id="foot-src"></span>
   </footer>
 
   <div id="tip" class="tip" hidden></div>
 
-  <script src="data.js?v=2.6"></script>
-  <script src="app.js?v=2.6"></script>
+  <script src="data.js?v=3.3"></script>
+  <script src="app.js?v=3.3"></script>
 </body>
 </html>

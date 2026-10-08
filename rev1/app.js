@@ -77,44 +77,6 @@
   ];
   const isScore = (v) => Number.isInteger(v) && v >= 1 && v <= 5;
 
-  // =========================================================
-  // Cronograma de fases (tablero "Cronograma" de Monday). Es opcional:
-  // sin él, la barra de la cabecera muestra solo la estadía en dique.
-  //   a, b = día de inicio y día siguiente al fin, contados desde la entrada a dique
-  // =========================================================
-  const FASE_NOMBRE = { plan: "Planificación", pre: "Pre-dique", ida: "Traslado", dique: "En dique", regreso: "Traslado", post: "Post-dique", cierre: "Cierre" };
-  function buildCrono(rows, P, dn, warn) {
-    const dock = () => ({ fase: "dique", nombre: "En dique", lugar: P.dique || "", inicio: P.entrada, fin: P.salidaPlan, inicioReal: P.entrada, finReal: null, a: 0, b: dn(P.salidaPlan) + 1 });
-    if (rows == null) return [dock()];
-    if (!Array.isArray(rows)) { warn.push("cronograma debe ser una lista de fases; se muestra solo la estadía en dique."); return [dock()]; }
-    const out = [];
-    rows.forEach((r, i) => {
-      const tag = `Cronograma fila ${i + 1}${r && r.nombre ? " (" + r.nombre + ")" : ""}`;
-      if (!r || !isDate(r.inicio) || !isDate(r.fin) || r.fin < r.inicio) return warn.push(`${tag}: fechas de inicio y fin inválidas; se omite.`);
-      const real = (k) => {
-        if (r[k] == null || r[k] === "") return null;
-        if (isDate(r[k])) return r[k];
-        warn.push(`${tag}: ${k} inválida; se ignora.`);
-        return null;
-      };
-      out.push({ fase: r.fase || "", nombre: r.nombre || FASE_NOMBRE[r.fase] || "Fase", lugar: r.lugar || "", inicio: r.inicio, fin: r.fin,
-        inicioReal: real("inicioReal"), finReal: real("finReal"), a: dn(r.inicio), b: dn(r.fin) + 1 });
-    });
-    out.sort((x, y) => x.a - y.a);
-    for (let k = 1; k < out.length; k++) {
-      if (out[k].a < out[k - 1].b) {
-        warn.push(`Cronograma: "${out[k].nombre}" empieza antes de que termine "${out[k - 1].nombre}"; se ajusta su inicio.`);
-        out[k].a = out[k - 1].b;
-        if (out[k].b <= out[k].a) out[k].b = out[k].a + 1;
-      }
-    }
-    if (!out.some((f) => f.fase === "dique")) {
-      warn.push('cronograma no tiene una fase "dique"; se muestra solo la estadía en dique.');
-      return [dock()];
-    }
-    return out;
-  }
-
   function build(raw) {
     if (!raw || typeof raw !== "object") throw new Error("No se recibieron datos.");
     const warn = [];
@@ -148,20 +110,11 @@
       if (!o || !o.id) return warn.push(`${tag}: sin id; se omite.`);
       if (seen.has(o.id)) return warn.push(`${tag}: id duplicado; se omite.`);
       if (!areaIds.has(o.area)) return warn.push(`${tag}: el área "${o.area}" no existe; se omite.`);
-      // No todos los trabajos tienen costo: sin monto cuentan en el avance (por duración) con costo 0
-      if (o.bac != null && !(typeof o.bac === "number" && o.bac >= 0)) { warn.push(`${tag}: el presupuesto (bac) no es un número válido; se toma como 0.`); o = Object.assign({}, o, { bac: 0 }); }
-      else if (o.bac == null) o = Object.assign({}, o, { bac: 0 });
+      if (!(typeof o.bac === "number" && o.bac > 0)) return warn.push(`${tag}: el presupuesto (bac) debe ser un número mayor que 0; se omite.`);
       if (!isDate(o.inicio) || !isDate(o.fin) || o.fin < o.inicio) return warn.push(`${tag}: fechas de inicio y fin inválidas; se omite.`);
       if (dn(o.inicio) < 0 || dn(o.fin) >= N) warn.push(`${tag}: sus fechas quedan fuera del período en dique.`);
       seen.add(o.id);
-      const dur = dn(o.fin) - dn(o.inicio) + 1;
-      // Peso en el avance: "Duración (días)" de Monday si viene; si no, los días entre inicio y fin
-      let peso = dur;
-      if (o.duracion != null) {
-        if (typeof o.duracion === "number" && o.duracion > 0) peso = o.duracion;
-        else warn.push(`${tag}: la duración debe ser un número mayor que 0; se usan los días entre inicio y fin.`);
-      }
-      ots.push(Object.assign({}, o, { i0: dn(o.inicio), dur, peso, hist: [] }));
+      ots.push(Object.assign({}, o, { i0: dn(o.inicio), dur: dn(o.fin) - dn(o.inicio) + 1, hist: [] }));
     });
     const byId = new Map(ots.map((o) => [o.id, o]));
 
@@ -283,11 +236,7 @@
     });
     const team = { cfg, people, reuniones, actualizaciones, has: people.size > 0 && (reuniones.length > 0 || actualizaciones.length > 0) };
 
-    // Avance físico ponderado por duración (como la columna "Avance" de Monday) o por costo
-    if (P.pesoAvance != null && P.pesoAvance !== "duracion" && P.pesoAvance !== "costo") warn.push('proyecto.pesoAvance debe ser "duracion" o "costo": se usa "duracion".');
-    const pesoAvance = P.pesoAvance === "costo" ? "costo" : "duracion";
-
-    return { P, start, dn, N, AT, corte: P.corte, pesoAvance, cronograma: buildCrono(raw.cronograma, P, dn, warn), areas, ots, hasCost, hasPaid, pagos, team, hitos, riesgos, adicionales, acciones, warn };
+    return { P, start, dn, N, AT, corte: P.corte, areas, ots, hasCost, hasPaid, pagos, team, hitos, riesgos, adicionales, acciones, warn };
   }
 
   // =========================================================
@@ -312,21 +261,15 @@
     if (!ots.length) return { empty: true, ots: [], rows: [], bac: 0, n: 0, nDone: 0, nLate: 0, pReal: 0, paid: 0 };
     const AT = M.AT;
     const bac = ots.reduce((s, o) => s + o.bac, 0);
-    const wOf = M.pesoAvance === "costo" ? (o) => o.bac : (o) => o.peso; // peso de cada OT en el avance
-    const W = ots.reduce((s, o) => s + wOf(o), 0);
     const PD = ots.length ? Math.max(...ots.map((o) => o.i0 + o.dur)) : M.N; // fin del plan (días desde la entrada)
     const H = Math.max(M.N, PD);
 
-    // plan = avance físico planificado (%); planCost = costo planificado (%), para la curva de costos
-    const plan = [], planCost = [];
-    for (let t = 0; t <= H; t++) {
-      plan.push(W ? (ots.reduce((s, o) => s + wOf(o) * planFrac(o, t), 0) / W) * 100 : 0);
-      planCost.push(bac ? (ots.reduce((s, o) => s + o.bac * planFrac(o, t), 0) / bac) * 100 : 0);
-    }
+    const plan = [];
+    for (let t = 0; t <= H; t++) plan.push(bac ? (ots.reduce((s, o) => s + o.bac * planFrac(o, t), 0) / bac) * 100 : 0);
 
     const ts = [...new Set(ots.flatMap((o) => o.hist.map((h) => h.t)))].sort((a, b) => a - b);
     const real = [{ t: 0, v: 0 }].concat(ts.map((t) => ({
-      t, v: W ? (ots.reduce((s, o) => s + wOf(o) * realAt(o, t).p, 0) / W) : 0
+      t, v: bac ? (ots.reduce((s, o) => s + o.bac * realAt(o, t).p, 0) / bac) : 0
     })));
 
     // Costo incurrido acumulado en cada fecha de corte, y desembolsos acumulados por fecha de pago
@@ -339,13 +282,12 @@
       if (last.t === p.t) last.v = paid; else paidPts.push({ t: p.t, v: paid });
     });
 
-    let pv = 0, ev = 0, ac = 0, wPlan = 0, wReal = 0;
+    let pv = 0, ev = 0, ac = 0;
     const rows = ots.map((o) => {
       const pf = planFrac(o, AT) * 100;
       const r = realAt(o, AT);
       const opv = (o.bac * pf) / 100, oev = (o.bac * r.p) / 100;
       pv += opv; ev += oev; ac += r.c || 0;
-      wPlan += (wOf(o) * pf) / 100; wReal += (wOf(o) * r.p) / 100;
       return {
         o, plan: pf, real: r.p, pv: opv, ev: oev, ac: r.c,
         spi: opv > 0 ? oev / opv : null,
@@ -356,8 +298,8 @@
       };
     });
 
-    const pPlan = W ? (wPlan / W) * 100 : 0;
-    const pReal = W ? (wReal / W) * 100 : 0;
+    const pPlan = bac ? (pv / bac) * 100 : 0;
+    const pReal = bac ? (ev / bac) * 100 : 0;
 
     // Plazo ganado (Earned Schedule): instante en que el plan alcanzaba el avance real de hoy.
     // Si el plan está plano en ese valor (p. ej. 0 % antes de empezar), cualquier instante del
@@ -381,7 +323,7 @@
 
     const cpi = M.hasCost && ac > 0 ? ev / ac : null;
     return {
-      ots, rows, bac, pv, ev, ac: M.hasCost ? ac : null, plan, planCost, real, PD, H, costPts, paidPts, paid,
+      ots, rows, bac, pv, ev, ac: M.hasCost ? ac : null, plan, real, PD, H, costPts, paidPts, paid,
       pPlan, pReal, sv: ev - pv, cv: M.hasCost ? ev - ac : null,
       spi: pv > 0 ? ev / pv : null, cpi, eac: cpi ? bac / cpi : null,
       ES, spiT, delay, projEnd, planEnd,
@@ -459,7 +401,7 @@
     late: '<svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="var(--alert)" stroke="none"/><path d="M10 5.5v5.5M10 14v.01" fill="none" stroke="#fff" stroke-width="2.2"/></svg>'
   };
   // =========================================================
-  // Componentes · vista ejecutiva (Rev. 1, se mantienen en Rev. 2)
+  // Componentes · Rev. 1 (vista ejecutiva)
   // =========================================================
   const tipAttr = (html) => `data-tip="${esc(html)}"`;
   const card = (title, body, o = {}) =>
@@ -477,123 +419,6 @@
   }
   const needUpOf = (s) => (s.ratePlan > 0 && s.rateNeed != null ? (s.rateNeed / s.ratePlan - 1) * 100 : null);
   const extrasOf = (V) => V.adicionales.reduce((a, x) => a + x.monto, 0);
-
-  // =========================================================
-  // Cabecera · Rev. 2: cronograma y avance con el buque navegando
-  //   La barra es el cronograma (fases a escala de tiempo; las fases cortas tienen un ancho mínimo
-  //   para que se lean). El buque va en el punto del plan que corresponde al avance real (plazo
-  //   ganado): si hay atraso queda detrás de la línea "Hoy" tantos días como el atraso.
-  // =========================================================
-  function cronoScale(segs) {
-    const tot = segs.reduce((a, f) => a + (f.b - f.a), 0);
-    const ws = segs.map((f) => Math.max(f.b - f.a, tot * 0.09));
-    const sum = ws.reduce((a, w) => a + w, 0);
-    let x = 0;
-    const geo = segs.map((f, i) => { const g = { f, x0: x, x1: x + (ws[i] / sum) * 100 }; x = g.x1; return g; });
-    const at = (t) => {
-      if (t <= geo[0].f.a) return 0;
-      for (const g of geo) {
-        if (t < g.f.a) return g.x0; // hueco entre dos fases
-        if (t <= g.f.b) return g.x0 + ((t - g.f.a) / (g.f.b - g.f.a)) * (g.x1 - g.x0);
-      }
-      return 100;
-    };
-    return { geo, at };
-  }
-  // Tanquero moderno de perfil, proa a la derecha: puente y chimenea a popa, manifold y pasarela en cubierta
-  const SHIP = `<svg class="vy-boat" viewBox="0 0 120 40" aria-hidden="true">
-      <path class="vy-wake" d="M6 34c-8 0-14 1.6-22 1.6M8 37.5c-10 0-19 .8-30 .8"/>
-      <rect class="h" x="17" y="1" width="8" height="8" rx="1"/><rect class="d" x="17" y="3.6" width="8" height="2.2"/>
-      <path class="h" d="M12 9h22v12H12z"/><path class="d" d="M9.5 10.5h27v2.6h-27z"/>
-      <path class="dl" d="M15 16h2.6M19.6 16h2.6M24.2 16h2.6M28.8 16h2.6"/>
-      <path class="h" d="M4 21h106c4 0 6.5 1.6 5.6 4.2L112 34.5c-.6 1.7-2 2.5-4 2.5H12c-3.2 0-5.4-1.6-6.2-4.4z"/>
-      <path class="d" d="M8.6 31h105.8l-1.1 3H9.6z"/>
-      <path class="dl" d="M38 19.2h66M50 21v-4h4v4M72 21v-4h4v4M94 21v-4h4v4M64 21v-9l8 4"/>
-      <path class="hl" d="M107 21v-10"/>
-    </svg>`;
-  const shipTxt = (s) => {
-    if (s.empty) return "Sin órdenes de trabajo";
-    if (s.pReal >= 99.95) return "<b>100%</b> avance · terminado";
-    const d = s.delay;
-    const dl = Math.abs(d) < 0.5 ? "en plazo" : d > 0 ? `<span class="vy-late">${days1(d)} de atraso</span>` : `${days1(-d)} de adelanto`;
-    return `<b>${pct(s.pReal)}</b> avance · ${dl}`;
-  };
-  function voyageHTML(V) {
-    const M = V.M, s = V.s, segs = M.cronograma;
-    const { geo, at } = cronoScale(segs);
-    const done = !s.empty && s.pReal >= 99.95;
-    const tShip = s.empty || done ? M.AT : Math.max(0, s.ES);
-    const shipX = at(tShip), hoyX = at(M.AT);
-    const cur = segs.find((f) => M.AT > f.a && M.AT <= f.b) || (M.AT > segs[segs.length - 1].b ? segs[segs.length - 1] : segs[0]);
-    const lugar = (f) => (f.lugar ? " · " + esc(f.lugar) : "");
-    const now = cur.fase === "dique" ? `${esc(cur.nombre)}${lugar(cur)} · día ${Math.min(M.AT, M.N)} de ${M.N}` : esc(cur.nombre) + lugar(cur);
-
-    const segTip = (f) => {
-      const real = f.inicioReal ? `<div class="row"><span>Real</span><span>${fmtShort(f.inicioReal)} – ${f.finReal ? fmtShort(f.finReal) : "en curso"}</span></div>` : "";
-      return tipAttr(`<b>${esc(f.nombre)}${lugar(f)}</b><div class="row"><span>Plan</span><span>${fmtShort(f.inicio)} – ${fmtShort(f.fin)}</span></div>${real}`);
-    };
-    const bands = geo.map((g) => `<i class="${g.f.fase === "dique" ? "dk" : ""}" style="left:${g.x0}%;width:${g.x1 - g.x0}%"></i>`).join("");
-    const seps = geo.slice(1).map((g) => `<i style="left:${g.x0}%"></i>`).join("");
-    const segName = (f) => (f.fase === "dique" && f.lugar ? f.nombre + " · " + f.lugar.split(",")[0] : f.fase === "ida" || f.fase === "regreso" ? "Traslado" : f.nombre);
-    const CORTO = { plan: "Plan", pre: "Pre", ida: "Ida", dique: "Dique", regreso: "Vta", post: "Post", cierre: "Cierre" };
-    const labels = geo.map((g) => `<span style="left:${g.x0}%;width:${g.x1 - g.x0}%" ${segTip(g.f)}><b class="lf">${esc(segName(g.f))}</b><b class="ls">${esc(CORTO[g.f.fase] || g.f.nombre)}</b></span>`).join("");
-
-    // Marcas: hoy, desvarada plan y proyectada (si quedan muy cerca se muestran en una sola etiqueta)
-    const marks = [`<div class="vy-mk now" style="left:${hoyX}%"><span>Hoy · ${fmtShort(M.corte)}</span></div>`];
-    const planX = at(M.dn(M.P.salidaPlan) + 0.5);
-    const proj = s.empty ? null : desvaradaProj(V);
-    const projLate = !!proj && iso(proj) > M.P.salidaPlan;
-    const projX = projLate ? at(M.dn(iso(proj)) + 0.5) : null;
-    if (projLate && Math.abs(projX - planX) < 12) {
-      marks.push(`<div class="vy-mk plan" style="left:${planX}%"></div>`);
-      marks.push(`<div class="vy-mk proj" style="left:${projX}%"><span>Desvarada ${fmtShort(proj)} <em>plan ${fmtShort(M.P.salidaPlan)}</em></span></div>`);
-    } else {
-      marks.push(`<div class="vy-mk plan" style="left:${planX}%"><span>Desvarada plan ${fmtShort(M.P.salidaPlan)}</span></div>`);
-      if (projLate) marks.push(`<div class="vy-mk proj" style="left:${projX}%"><span>Proyectada ${fmtShort(proj)}</span></div>`);
-    }
-    const hitos = V.hitos.filter((h) => h.clave).map((h) => {
-      const late = !h.fechaReal && h.fechaPlan < M.corte;
-      const cls = h.fechaReal ? "ok" : late ? "late" : "";
-      const est = h.fechaReal ? "cumplido " + fmtShort(h.fechaReal) : late ? "vencido" : "pendiente";
-      return `<i class="vy-hito ${cls}" style="left:${at(M.dn(h.fechaPlan) + 0.5)}%" ${tipAttr(`<b>${esc(h.nombre)}</b><div class="row"><span>Plan</span><span>${fmtShort(h.fechaPlan)}</span></div><div class="row"><span>Estado</span><span>${est}</span></div>`)}></i>`;
-    }).join("");
-    const align = shipX < 14 ? "l" : shipX > 86 ? "r" : "";
-    const dl = delaySt(s.delay || 0);
-    const shipTip = `<b>Avance real${V.isArea ? " · " + esc(V.area.nombre) : ""}</b>` + (s.empty ? "" :
-      `<div class="row"><span>Real</span><span>${pct(s.pReal)}</span></div><div class="row"><span>Plan a hoy</span><span>${pct(s.pPlan)}</span></div><div class="row"><span>${dl.txt}</span><span>${dl.val}</span></div>`) +
-      `<div class="small" style="margin-top:4px;opacity:.75">Avance ponderado por duración de cada trabajo. El buque va donde el plan indica para este avance: la distancia hasta "Hoy" es el atraso.</div>`;
-
-    return `<div class="vy-h"><span class="vy-t">Cronograma y avance</span><span class="vy-now">Fase actual: <b>${now}</b></span></div>
-      <div class="vy-track">
-        <div class="vy-ship ${align}" data-x="${shipX}" style="left:${shipX}%" ${tipAttr(shipTip)}>
-          <div class="vy-tag">${shipTxt(s)}</div>${SHIP}
-        </div>
-        <div class="vy-bar">
-          <div class="vy-bands">${bands}</div>
-          <div class="vy-fill" style="width:${shipX}%"></div>
-          <div class="vy-seps">${seps}</div>
-          <div class="vy-labels">${labels}</div>
-        </div>
-        <div class="vy-axis">${hitos}${marks.join("")}
-          <span class="vy-edge l">${fmtShort(segs[0].inicio)}</span><span class="vy-edge r">${fmtShort(segs[segs.length - 1].fin)}</span>
-        </div>
-      </div>`;
-  }
-  // El buque navega desde su posición anterior (al abrir, desde el inicio del cronograma)
-  let lastShipX = 0;
-  function sailShip() {
-    const ship = document.querySelector(".vy-ship"), fill = document.querySelector(".vy-fill");
-    if (!ship || !fill) return;
-    const x = +ship.dataset.x;
-    ship.style.transition = fill.style.transition = "none";
-    ship.style.left = lastShipX + "%";
-    fill.style.width = lastShipX + "%";
-    void ship.offsetWidth; // aplica la posición inicial antes de animar
-    ship.style.transition = fill.style.transition = "";
-    ship.style.left = x + "%";
-    fill.style.width = x + "%";
-    lastShipX = x;
-  }
 
   function kpisHTML(V) {
     const s = V.s, M = V.M;
@@ -671,7 +496,7 @@
     const s = V.s, M = V.M;
     const extra = extrasOf(V);
     const fin = (s.eac != null ? s.eac : s.bac) + extra;
-    const over = s.bac ? ((fin - s.bac) / s.bac) * 100 : 0;
+    const over = ((fin - s.bac) / s.bac) * 100;
     return card("Costo acumulado · plan, incurrido y desembolsado", `<div class="card-b" style="padding-bottom:6px">
         <div class="legend">
           <span><i class="sw-dash"></i>Costo plan</span>
@@ -683,7 +508,7 @@
       </div>
       <div class="stats3">
         <div><div class="t">Presupuesto</div><div class="n">${moneyK(s.bac)}</div><div class="small t-muted">${plural(s.n, "orden", "órdenes")} de trabajo</div></div>
-        <div><div class="t">Adicionales</div><div class="n">${extra ? "+ " + moneyK(extra) : "—"}</div><div class="small t-muted">${extra ? (s.bac ? pct((extra / s.bac) * 100) + " del presupuesto" : "sin presupuesto base") : "sin adicionales"}</div></div>
+        <div><div class="t">Adicionales</div><div class="n">${extra ? "+ " + moneyK(extra) : "—"}</div><div class="small t-muted">${extra ? pct((extra / s.bac) * 100) + " del presupuesto" : "sin adicionales"}</div></div>
         <div><div class="t">${s.eac != null ? "Costo final estimado" : "Presupuesto + adicionales"}</div>
           <div class="n ${over > 5 ? "t-alert" : ""}">${moneyK(fin)}</div>
           <div class="small ${over > 5 ? "t-alert" : "t-muted"}">${sgn(over, (x) => pct(x))} vs presupuesto</div></div>
@@ -801,14 +626,14 @@
     el.innerHTML = "";
     const W = Math.max(280, el.clientWidth), Hh = Math.max(210, el.clientHeight);
     const X = Math.max(M.N, s.H);
-    const ticks = niceTicks(Math.max(s.bac, s.eac || 0, s.ac || 0, s.paid || 0, 1000) * 1.03);
+    const ticks = niceTicks(Math.max(s.bac, s.eac || 0) * 1.03);
     const ymax = ticks[ticks.length - 1];
     const side = W >= 480; // en pantallas chicas las cifras al corte ya están en los indicadores
     const m = { l: 50, r: side ? 104 : 14, t: 18, b: 28 };
     const x = (t) => m.l + ((W - m.l - m.r) * t) / X;
     const y = (v) => m.t + (Hh - m.t - m.b) * (1 - v / ymax);
     const dateOfT = (t) => addDays(M.start, Math.max(0, t - 1));
-    const planAt = (t) => (s.planCost[Math.min(t, s.planCost.length - 1)] / 100) * s.bac;
+    const planAt = (t) => (s.plan[Math.min(t, s.plan.length - 1)] / 100) * s.bac;
     const lastAt = (pts, t) => { let r = null; for (const p of pts) { if (p.t <= t) r = p; else break; } return r; };
     const toPath = (pts) => pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + "," + p[1].toFixed(1)).join("");
 
@@ -954,15 +779,13 @@
     const V = viewFor(M, key);
     VIEW = V;
     renderTabs(M, V.key);
-    $("voyage").innerHTML = voyageHTML(V);
-    sailShip();
     $("hero-title").textContent = V.isArea ? "Área de " + V.area.nombre : "Proyecto de dique";
     $("hero-sub").textContent = [M.P.buque, V.isArea ? V.area.descripcion : [M.P.tipo, M.P.dique].filter(Boolean).join(" · ")].filter(Boolean).join(" · ");
     $("upd-date").textContent = fmtDate(M.corte);
     $("upd-day").textContent = `Día ${Math.min(M.AT, M.N)} de ${M.N} · desvarada ${fmtShort(M.P.salidaPlan)}`;
-    document.title = (V.isArea ? V.area.nombre + " · " : "") + "Control de Dique · Rev. 2";
+    document.title = (V.isArea ? V.area.nombre + " · " : "") + "Control de Dique · Rev. 1";
     $("foot-src").textContent = M.P.fuente || (fuente ? "Fuente: " + fuente : "Datos de ejemplo");
-    $("rev-link").href = "rev1/index.html" + location.search + "#" + encodeURIComponent(V.key);
+    $("rev-link").href = "../rev0/index.html" + location.search + "#" + encodeURIComponent(V.key);
 
     const notice = M.warn.length
       ? `<details class="notice"><summary>${plural(M.warn.length, "observación", "observaciones")} en los datos de entrada</summary><ul>${M.warn.map((w) => `<li>${esc(w)}</li>`).join("")}</ul></details>`
@@ -1003,7 +826,6 @@
     VIEW = null;
     rotSet(false);
     $("rot").innerHTML = "";
-    $("voyage").innerHTML = "";
     $("tabs").innerHTML = "";
     app.innerHTML = `<div class="notice fatal"><b class="t-alert">No se pudo cargar el dashboard</b><p>${esc(msg)}</p></div>`;
   }
@@ -1165,7 +987,7 @@
     MODEL.areas.forEach((a) => { out.areas[a.id] = pick(compute(MODEL, MODEL.ots.filter((o) => o.area === a.id), MODEL.pagos.filter((p) => p.area === a.id)), partOf(MODEL, teamIds(MODEL, a.id))); });
     return out;
   }
-  window.Dique = { cargar, cargarDesdeUrl, indicadores, version: "2.0", revision: 2 };
+  window.Dique = { cargar, cargarDesdeUrl, indicadores, version: "1.1", revision: 1 };
 
   const params = new URLSearchParams(location.search);
   const fuente = params.get("datos");

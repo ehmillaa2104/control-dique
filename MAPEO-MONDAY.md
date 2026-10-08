@@ -29,6 +29,18 @@ Revisado el 2026-10-08 en Monday, espacio **GESTIÓN DE DIQUES**, carpeta **KELL
 | Hitos | Elementos de duración 0: Off hire, Aprobación de presupuesto, Entrada al muelle, Salida del astillero, On hire | `numeric_mm6zgcqw` = 0 |
 | Hito cumplido | Estado = Listo → `fechaReal` = Fecha Real | `color_mm6v6vf2` |
 
+**`cronograma`** (barra de la Rev. 2): una fila por elemento de fase.
+
+| Elemento del Cronograma | `fase` |
+|---|---|
+| PRE-DIQUE (Ejecución) | `pre` |
+| Traslado a Cartagena | `ida` |
+| DIQUE (Ejecución) | `dique` |
+| Traslado a Panama | `regreso` |
+| POST-DIQUE (Ejecución) | `post` |
+
+`inicio`/`fin` salen de **Linea Base** y `inicioReal`/`finReal` salen de **Fecha Real**. El fin real solo se toma cuando el Estado es "Listo".
+
 ### `ordenes` y `avances` ← P1 / P2 / P3
 
 Las tres tablas usan las mismas columnas. Algunas cambian de ID según el tablero:
@@ -40,17 +52,17 @@ Las tres tablas usan las mismas columnas. Algunas cambian de ID según el tabler
 | `fase` | Fase | `color_mm6wsp0z` | `color_mm6wsp0z` | `color_mm6wsp0z` |
 | `ejecuta` | Proveedor | `dropdown_mm70s99n` | `dropdown_mm70s99n` | `dropdown_mm70s99n` |
 | Responsable (equipo) | Responsable | `multiple_person_mm781bx8` | `multiple_person_mm781bx8` | `multiple_person_mm781bx8` |
-| `bac` (costo plan) | **$ Aprobado Dirección** (si está vacío: $ Revisado Gerencia y después $ Solicitado) | `numeric_mm78s0hd` | `numeric_mm78s0hd` | `numeric_mm78s0hd` |
+| `bac` (costo plan, opcional) | **$ Aprobado Dirección** (si está vacío: $ Revisado Gerencia y después $ Solicitado; si no hay ninguno, 0) | `numeric_mm78s0hd` | `numeric_mm78s0hd` | `numeric_mm78s0hd` |
 | Costo proyectado (EAC) | $ Proyectado | `numeric_mm7y9v4k` | `numeric_mm7yw4b3` | `numeric_mm7y6h6f` |
 | `fin` | Fecha Fin | `date_mm7yv15j` | `date_mm7ya280` | `date_mm7yw7ca` |
-| Duración (peso del avance) | Duración (días) | `numeric_mm7yw5hx` | `numeric_mm7y9sbv` | `numeric_mm7v7xt9` |
+| `duracion` (peso del avance) | Duración (días) | `numeric_mm7yw5hx` | `numeric_mm7y9sbv` | `numeric_mm7v7xt9` |
 | `inicio` | **No existe**: se calcula como Fecha Fin − Duración | — | — | — |
 | `pct` de avance | Estado (0 · 25 · 50 · 75 · 100 % · Cancelado) | `color_mm7yb2cs` | `color_mm7y4j97` | `color_mm7vv5nh` |
 | Aprobación | Estado Aprobación | `color_mm6v621m` | `color_mm6v621m` | `color_mm6v621m` |
 | Centro de costo | Centro de Costo (conexión) | `board_relation_mm7am925` | `board_relation_mm7am925` | `board_relation_mm7am925` |
 | Fecha de actualización (participación) | Última actualización | `pulse_updated_mm7g2q1g` | `pulse_updated_mm7ga065` | `pulse_updated_mm7ge32a` |
 
-El avance del área se calcula igual que la fórmula **Avance** de Monday: el % de cada trabajo ponderado por su duración.
+El avance se calcula igual que la fórmula **Avance** de Monday: Σ (Estado % × Duración) / Σ Duración, sumando P1, P2 y P3. Se pondera por duración porque no todos los trabajos tienen costo. La Rev. 2 ya lo calcula así.
 
 ### `incurrido` y `desembolsos` ← POs Kelly Trader
 
