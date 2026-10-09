@@ -1,0 +1,99 @@
+{
+ "board": {
+  "id": "18432105438",
+  "name": "P3. Técnico"
+ },
+ "extraido": "2026-10-09",
+ "items": [
+  {
+   "name": "Gasto de Clase",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Limpieza de casco para dique",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Aceros y soldadura",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Compra de pintura",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Tanque de lastre",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Clase",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Bono dique",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Compra de ánodos",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Medición de espesores y cadenas",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  },
+  {
+   "name": "Astillero",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7vv5nh": "0%",
+    "numeric_mm7v7xt9": null,
+    "formula_mm7vp9rc": "0"
+   }
+  }
+ ]
+}

@@ -107,9 +107,25 @@ Cada centro de costo suma las líneas de P1, P2 y P3 conectadas a él y las POs 
 | `estado` | Estado (Solicitado, Aprobado, Rechazado, Pospuesto) | `color_mm2e3n8w` |
 | `area` | Actividad Relacionada (P1/P2/P3) | `board_relation_mm2ebzc8` |
 
-## Archivo `monday.js`
+## Cómo se leen los datos (paquete `monday/`)
 
-Contiene los datos reales que ya usa el dashboard: el tablero Cronograma completo y el resumen de avance de P1, P2 y P3. Lo leí de Monday el 2026-10-08. Para actualizarlo hay que volver a leer Monday: a pedido o con una tarea automática que necesita un token de la API de Monday.
+```
+Monday ──lectura──▶ monday/crudo/*.json ──python monday/generar.py──▶ monday.js ──▶ dashboard
+                         (tal cual)              (convierte y revisa)                verificar.html
+```
+
+1. **`monday/crudo/`**: lo que devuelve Monday, sin tocar: nombre, grupo y el texto de cada columna. Están `cronograma.json`, `p1.json`, `p2.json` y `p3.json`.
+2. **`monday/generar.py`**: convierte esos datos en `monday.js` según las columnas de la tabla `COLUMNAS`. Revisa:
+   - fechas legibles;
+   - Diferencia = fin real − fin base;
+   - Duración contra el rango de la fecha real;
+   - hitos sin fecha;
+   - trabajos sin duración.
+
+   Si encuentra un error, termina con código 1 y no se debe publicar.
+3. **`verificar.html`**: vuelve a hacer las cuentas en el navegador, con un cálculo independiente del script, y muestra lado a lado el texto de Monday y lo que usa el dashboard, con ✓ / ⚠ / ✗.
+
+Para actualizar, se vuelve a leer Monday hacia `monday/crudo/` y se corre el script. Se puede hacer a pedido o con una tarea automática que necesita un token de la API de Monday.
 
 ## Lo que falta o está incompleto
 

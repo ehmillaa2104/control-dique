@@ -1,0 +1,2437 @@
+{
+ "board": {
+  "id": "18431019817",
+  "name": "P1. Ingeniería"
+ },
+ "extraido": "2026-10-08",
+ "items": [
+  {
+   "name": "Motor bomba de aceite máquina principal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T20:45:27.572Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba recirculación de aceite",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Toma de deflexión del cigüeñal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T20:45:27.572Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Compra de repuestos motor principal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T20:45:27.572Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Inspección cojinetes de bielas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T20:45:27.572Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento válvulas de arranque y distribuidor de aire",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento de cabezotes / inspección por horas del motor principal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento y timbrado de inyectores M/P",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento y timbrado de bombas de inyección M/P",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Enfriador de aceite lubricante M/P",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de aceite lubricante M/P (mecánica)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "After cooler / enfriador de aire",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Gobernador del motor principal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Tanques de LDO de máquinas — inspección y limpieza",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Enfriadores de agua de enfriamiento HT/LT",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Análisis y cambio de aceite M/P",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Reparación junta de expansión ducto de escape M/P",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Turbocargador — repuestos",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Turbocargador — mano de obra",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de bomba de aceite (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de bomba de agua (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de cabezote (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de cooler de aceite (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de cooler de coolant (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de inyector (generadores)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Alternador generador #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Alternador generador #3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación sistema Smartgen generador 1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación sistema Smartgen generador 2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación sistema Smartgen generador 3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento gobernador y bomba de inyección gen 1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento gobernador y bomba de inyección gen 2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento gobernador y bomba de inyección gen 3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento preventivo del generador de emergencia",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Overhaul moto-generador #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Overhaul moto-generador #3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Generador de emergencia — radiador y bomba de inyección",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Moto-generador #1 — mantenimiento preventivo",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Moto-generador — reparación / puesta a tiempo",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Moto-generador — repuestos",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:39:28.443Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Limpieza variador de frecuencia bomba de carga 1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:30.987Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Limpieza variador de frecuencia bomba de carga 2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:21.980Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Limpieza variador de frecuencia bomba de carga 3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:29.755Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Limpieza variador de frecuencia bomba de carga 4",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:22.564Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba contraincendios",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba contraincendios de emergencia",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "0",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:49:47.177Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de carga #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de carga #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:30.331Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de carga #3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:28.520Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de carga #4",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:50:12.637Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de lastre #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:31.054Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de lastre #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:31.658Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba servicios generales / bilge",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba transferencia Diesel",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba transferencia de IFO",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba transferencia sewage",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistema de tratamiento de agua de lastre",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de hidróforo de agua dulce",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:39.810Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de enfriamiento generadores — reemplazo",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:20.449Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de servicios generales — revisión mecánica",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:25.964Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de transferencia sewage — mantenimiento mecánico",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:41.352Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Pasamamparos de bombas de carga",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:31.274Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bombas de agua salada M/P — revisión mecánica",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:05.613Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba de lastre — revisión mecánica",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:09.308Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bombas de carga — repuestos",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:40.336Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bombas de carga — mantenimiento mecánico (aceite, rodamientos, sellos)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:37.711Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bomba contra incendios — revisión mecánica",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:06.300Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Alineación láser conjuntos de bombeo",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:40.832Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento motor eléctrico del thruster",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:12.165Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Ducto, álabes y parrillas del bow thruster",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:26.659Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:31.609Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor compresor de aire #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor compresor de aire #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Purificadora de F.O.",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:41.903Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Purificadora de L.D.O.",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:21.035Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Purificadora de aceite",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:42.436Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Caldera — cascada, alimentación, inspección, quemador, válvula de seguridad, prueba hidrostática",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:02.525Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Fabricación de tubería contraincendio",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:11.585Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación de pantalla en el control room",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "index": 5,
+     "post_id": null,
+     "changed_at": "2026-09-22T16:49:20.734Z"
+    },
+    "numeric_mm78s0hd": "0",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:42.983Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Bombas hidráulicas de winches — sellos, filtros y aceite",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:16.165Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Tanques y válvulas del sistema de aire comprimido",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:22.250Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Cambio de baterías sistema de emergencia, GMDSS y generador de emergencia",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:26.541Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Cambio de luces acomodaciones, cuarto de máquinas y proa",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:35.691Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación de reflectores cubierta medianía",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:17.239Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mantenimiento preventivo tablero principal",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor extractor thruster",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador cocina",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador cuarto de bombas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:13.456Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador cuarto de máquinas #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador cuarto de máquinas #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador cuarto de máquinas #3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador generador de emergencia",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor ventilador pañol de pintura",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mástil de señales",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistemas de UPS — mano de obra",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:18.415Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "UPS cargo control",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:19.058Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "UPS control room cuarto de máquinas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:45:19.753Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Luces de navegación",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:33.665Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Mecanismos de accionamiento de dampers",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:11.745Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Grúa del bote de rescate",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:35.322Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Grúa principal de cubierta",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:10.566Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba winche de popa #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba winche de popa #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba winche de proa #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba winche de proa #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Winche de popa",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:20.156Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Winche de proa",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": "",
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:19.507Z"
+    },
+    "numeric_mm78s0hd": "",
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Válvulas de control de winches de proa y popa",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:36.716Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Winches — mantenimiento mecánico e hidráulico",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:36.105Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba de aceite reductora",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Reductora — inspección de engranajes, discos y rodamientos",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:22.892Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Enfriador de aceite de la reductora",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:34.697Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Cambio de aceite de la reductora",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:14.936Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba timones #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba timones #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Actuadores hidráulicos del timón",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:21.616Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Pala y mecha del timón — inspección, sellos y rodamientos",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:14.314Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Aceite del eje de cola / stern tube",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:34.189Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Eje de cola — sellos e inspección",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:33.188Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de bomba LT 3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de bomba LT 4",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Fabricación de manifold para cuatro bombas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Fabricación de tubería de agua de mar enfriador LT",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:11.006Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Instalación de bombas LT 3 y LT 4",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba enfriamiento LT #1",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba enfriamiento LT #2",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Motor bomba enfriamiento LT #3",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistema de control box cooler 1 y 2 (transducer y cableado)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:14.051Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistema de control box cooler 3 y 4 (transducer y cableado)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:46:12.724Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Aire acondicionado central — enfriador de agua",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:24.184Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Box coolers — limpieza y prueba hidrostática",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:12.360Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistema de enfriamiento — cambio de válvulas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:11.168Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Válvulas de tomas de mar y línea madre de enfriamiento",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:13.451Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Sistema de agua salada de enfriamiento — tuberías",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:24.793Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Enfriador de platos adicional",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:15.565Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Niveles tanques de carga",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Tubería de sensores de tanques de carga",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Adquisición de materiales de soldadura",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": null,
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Cambio de válvulas menores en sala de máquinas",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:37.171Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Asistencia de personal (eventuales)",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:09.894Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  },
+  {
+   "name": "Material extra",
+   "column_values": {
+    "multiple_person_mm781bx8": null,
+    "color_mm6wsp0z": "No Aplica",
+    "numeric_mm6vjdrd": null,
+    "numeric_mm78kpas": null,
+    "color_mm6v621m": {
+     "changed_at": "2026-09-21T16:47:23.588Z"
+    },
+    "numeric_mm78s0hd": null,
+    "color_mm7yb2cs": "0%",
+    "date_mm7yv15j": null,
+    "numeric_mm7yw5hx": null,
+    "numeric_mm7y9v4k": null
+   }
+  }
+ ]
+}

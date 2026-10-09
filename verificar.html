@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verificación de datos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23000'/%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; --bg: #f3f3f3; --surface: #fff; --border: #e0e0e0; --ink: #0a0a0a; --ink-2: #474747; --ink-3: #6e6e6e; --ok: #1b7f3b; --warn: #a15c00; --err: #b3261e; --head: #0a0a0a; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; --bg: #000; --surface: #111; --border: #2b2b2b; --ink: #f5f5f5; --ink-2: #c2c2c2; --ink-3: #8f8f8f; --ok: #4ade80; --warn: #fbbf24; --err: #ff7a74; --head: #1d1d1d; } }
+    :root[data-theme="dark"] { color-scheme: dark; --bg: #000; --surface: #111; --border: #2b2b2b; --ink: #f5f5f5; --ink-2: #c2c2c2; --ink-3: #8f8f8f; --ok: #4ade80; --warn: #fbbf24; --err: #ff7a74; --head: #1d1d1d; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 "Inter", system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+    header { background: #000; color: #fff; padding: 18px 24px; }
+    header .in, main { max-width: 1400px; margin: 0 auto; }
+    header h1 { margin: 0; font-size: 22px; }
+    header p { margin: 4px 0 0; color: rgba(255,255,255,.75); }
+    header a { color: #fff; }
+    main { padding: 18px 24px 40px; }
+    .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+    .chip { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; min-width: 150px; }
+    .chip b { display: block; font-size: 22px; }
+    .chip small { color: var(--ink-3); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+    section { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 16px; overflow: hidden; }
+    section h2 { margin: 0; padding: 10px 14px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; background: var(--head); color: #fff; }
+    section .note { padding: 10px 14px; color: var(--ink-2); font-size: 13px; border-bottom: 1px solid var(--border); }
+    .scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+    th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+    td.n { text-align: right; white-space: nowrap; }
+    td.d { white-space: nowrap; }
+    .ok { color: var(--ok); font-weight: 700; }
+    .warn { color: var(--warn); font-weight: 700; }
+    .err { color: var(--err); font-weight: 700; }
+    .muted { color: var(--ink-3); }
+    code { font-size: 11.5px; background: rgba(127,127,127,.12); padding: 1px 4px; border-radius: 4px; }
+    ul { margin: 0; padding: 10px 14px 12px 32px; }
+    li { margin: 2px 0; }
+    @media (max-width: 760px) { header, main { padding-left: 16px; padding-right: 16px; } }
+  </style>
+</head>
+<body>
+  <header><div class="in">
+    <h1>Verificación de datos · Monday → Dashboard</h1>
+    <p id="sub">Compara lo que dice Monday con lo que muestra el dashboard. <a href="index.html">Volver al dashboard</a></p>
+  </div></header>
+  <main id="app"><p class="muted">Cargando…</p></main>
+
+  <script src="monday.js"></script>
+  <script>
+  (async function () {
+    const app = document.getElementById("app");
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const DAY = 864e5, days = (a, b) => Math.round((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / DAY);
+    const rango = (t) => { const m = t && String(t).match(/^\s*(\d{4}-\d{2}-\d{2})\s*-\s*(\d{4}-\d{2}-\d{2})\s*$/); return m ? [m[1], m[2]] : null; };
+    const num = (t) => (t == null || t === "" || t === "null" ? null : Number(t));
+    const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+    const fr = (r) => (r ? (r[0] === r[1] ? r[0] : r[0] + " → " + r[1]) : "—");
+    const get = async (p) => { const r = await fetch(p, { cache: "no-store" }); if (!r.ok) throw new Error(p + ": HTTP " + r.status); return r.json(); };
+    const MD = window.DIQUE_MONDAY;
+    let crudo, P;
+    try {
+      crudo = await get("monday/crudo/cronograma.json");
+      P = { ingenieria: await get("monday/crudo/p1.json"), cubierta: await get("monday/crudo/p2.json"), tecnico: await get("monday/crudo/p3.json") };
+    } catch (e) {
+      app.innerHTML = `<p class="err">No se pudieron leer los datos crudos (${esc(e.message)}). Abre esta página desde el servidor o desde GitHub Pages.</p>`;
+      return;
+    }
+    if (!MD) { app.innerHTML = '<p class="err">Falta monday.js.</p>'; return; }
+    document.getElementById("sub").innerHTML = `Lectura de Monday: <b>${esc(crudo.extraido || MD.extraido)}</b> · tablero <b>${esc(crudo.board.name)}</b> (${esc(crudo.board.id)}). <a href="index.html">Volver al dashboard</a>`;
+
+    let nOk = 0, nWarn = 0, nErr = 0;
+    // Si todo está bien se muestra una sola línea; los avisos y errores siempre se listan
+    const resumen = (cs) => { const bad = cs.filter((c) => !c.includes('class="ok"')); return (bad.length < cs.length && !bad.some((c) => c.includes('class="err"')) ? `<div class="ok">✓ ${cs.length - bad.length} de ${cs.length} coinciden</div>` : "") + bad.join(""); };
+    const mark = (lvl, txt) => { if (lvl === "ok") nOk++; else if (lvl === "warn") nWarn++; else nErr++; return `<div class="${lvl === "ok" ? "ok" : lvl === "warn" ? "warn" : "err"}">${lvl === "ok" ? "✓" : lvl === "warn" ? "⚠" : "✗"} ${txt}</div>`; };
+
+    // 1. Cronograma: Monday (texto crudo) contra lo que usa el dashboard (monday.js) y cómo se dibuja
+    const C = { estado: "color_mm6v6vf2", duracion: "numeric_mm6zgcqw", real: "timerange_mm78kjs", base: "timerange_mm7yfj5p", dif: "formula_mm7ygv4s" };
+    const dibujo = (d, nombre) => {
+      if (!d.real) return "No se dibuja (sin Fecha Real)";
+      if (d.duracion === 0) return "Hito ◆ · fila " + d.grupo;
+      if (/traslado|planificaci|ejecuci/i.test(nombre)) return "Barra · fila " + d.grupo + '<div class="muted">fina si se monta sobre otra de la fila</div>';
+      return "Barra fina (actividad) · fila " + d.grupo;
+    };
+    const rows = crudo.items.map((it, i) => {
+      const cv = it.column_values, d = MD.cronograma[i] || {};
+      const nombre = it.name.replace(/\s+/g, " ").trim();
+      const realM = rango(cv[C.real]), baseM = rango(cv[C.base]), difM = num(cv[C.dif]), durM = num(cv[C.duracion]);
+      const checks = [];
+      checks.push(d.nombre === nombre ? mark("ok", "mismo elemento") : mark("err", `en el dashboard es "${esc(d.nombre)}"`));
+      checks.push(same(d.real, realM) ? mark("ok", "Fecha Real igual") : mark("err", "Fecha Real distinta"));
+      checks.push(same(d.base, baseM) ? mark("ok", "Línea Base igual") : mark("err", "Línea Base distinta"));
+      checks.push(d.estado === (cv[C.estado] || "") ? mark("ok", "Estado igual") : mark("err", "Estado distinto"));
+      let calc = null;
+      if (realM && baseM) {
+        calc = days(baseM[1], realM[1]);
+        checks.push(difM === calc ? mark("ok", "Diferencia coincide") : mark("err", `Diferencia: Monday ${difM}, recalculada ${calc}`));
+      }
+      if (realM && durM > 0 && Math.abs(days(realM[0], realM[1]) + 1 - durM) > 1) checks.push(mark("warn", `Duración ${durM} d, la Fecha Real cubre ${days(realM[0], realM[1]) + 1} d`));
+      if (!realM) checks.push(mark("warn", "sin fechas en Monday"));
+      const atraso = difM > 0 ? `<span class="err">+${difM} d</span>` : difM < 0 ? `${difM} d` : difM === 0 ? "0" : "—";
+      return `<tr><td><b>${esc(nombre)}</b><div class="muted">${esc(it.group)} · ${esc(cv[C.estado] || "")}</div></td>
+        <td class="d">${esc(cv[C.real] || "—")}<div class="muted">${fr(d.real)}</div></td>
+        <td class="d">${esc(cv[C.base] || "—")}<div class="muted">${fr(d.base)}</div></td>
+        <td class="n">${atraso}<div class="muted">${calc == null ? "—" : "calc. " + calc}</div></td>
+        <td class="n">${durM == null ? "—" : durM}</td>
+        <td>${dibujo(d, nombre)}</td><td>${resumen(checks)}</td></tr>`;
+    }).join("");
+    const extra = MD.cronograma.length !== crudo.items.length ? mark("err", `Monday tiene ${crudo.items.length} elementos y el dashboard ${MD.cronograma.length}`) : "";
+
+    // 2. Avance de P1, P2 y P3: recalculado aquí desde los datos crudos y comparado con monday.js
+    const COL = { ingenieria: ["color_mm7yb2cs", "numeric_mm7yw5hx"], cubierta: ["color_mm7y4j97", "numeric_mm7y9sbv"], tecnico: ["color_mm7vv5nh", "numeric_mm7v7xt9"] };
+    const PCT = { "0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100 };
+    const tot = { lineas: 0, conDuracion: 0, duracion: 0, avanceDias: 0 };
+    const avRows = Object.keys(COL).map((k) => {
+      const [ce, cd] = COL[k], r = { lineas: 0, conDuracion: 0, duracion: 0, avanceDias: 0 }, est = {};
+      P[k].items.forEach((it) => {
+        const e = it.column_values[ce];
+        est[e || "(vacío)"] = (est[e || "(vacío)"] || 0) + 1;
+        if (e === "Cancelado") return;
+        r.lineas++;
+        const d = num(it.column_values[cd]);
+        if (d > 0) { r.conDuracion++; r.duracion += d; r.avanceDias += (d * (PCT[e] || 0)) / 100; }
+      });
+      Object.keys(tot).forEach((x) => (tot[x] += r[x]));
+      const m = MD.avance[k] || {};
+      const pc = r.duracion ? (r.avanceDias / r.duracion) * 100 : 0, pm = m.duracion ? (m.avanceDias / m.duracion) * 100 : 0;
+      const ok = r.lineas === m.lineas && r.conDuracion === m.conDuracion && Math.abs(pc - pm) < 0.05;
+      return `<tr><td><b>${esc(P[k].board.name)}</b><div class="muted">${Object.entries(est).map(([e, n]) => esc(e) + ": " + n).join(" · ")}</div></td>
+        <td class="n">${r.lineas}</td><td class="n">${r.conDuracion}</td><td class="n">${r.duracion}</td>
+        <td class="n"><b>${pc.toFixed(1)}%</b></td><td class="n">${pm.toFixed(1)}%</td>
+        <td>${ok ? mark("ok", "coincide") : mark("err", "no coincide")}${r.lineas && !r.conDuracion ? mark("warn", "ningún trabajo tiene Duración: el avance se muestra 0 %") : ""}</td></tr>`;
+    }).join("");
+
+    app.innerHTML = `
+      <div class="chips">
+        <div class="chip"><small>Coincidencias</small><b class="ok">${nOk}</b></div>
+        <div class="chip"><small>Avisos</small><b class="warn">${nWarn}</b></div>
+        <div class="chip"><small>Errores</small><b class="${nErr ? "err" : "ok"}">${nErr}</b></div>
+        <div class="chip"><small>Elementos del Cronograma</small><b>${crudo.items.length}</b></div>
+        <div class="chip"><small>Trabajos P1 + P2 + P3</small><b>${tot.lineas}</b></div>
+      </div>
+      <section><h2>1 · Tablero Cronograma</h2>
+        <div class="note">Arriba de cada celda está el texto tal como viene de Monday; debajo, lo que usa el dashboard. La barra del cronograma usa la <b>Fecha Real</b> y muestra la <b>Línea Base</b> como referencia. El atraso es la columna <b>Diferencia</b>: se recalcula como fin real − fin base para comprobarla. ${extra}</div>
+        <div class="scroll"><table><thead><tr><th>Elemento</th><th>Fecha Real</th><th>Línea Base</th><th>Diferencia</th><th>Duración</th><th>Cómo se muestra</th><th>Revisión</th></tr></thead><tbody>${rows}</tbody></table></div>
+      </section>
+      <section><h2>2 · Avance de los trabajos (P1, P2 y P3)</h2>
+        <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Se recalcula aquí desde los datos crudos y se compara con lo que muestra el dashboard.</div>
+        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Con duración</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows}</tbody></table></div>
+      </section>
+      <section><h2>Cómo se actualiza</h2>
+        <ul>
+          <li>Los datos de Monday quedan guardados tal cual en <code>monday/crudo/</code>.</li>
+          <li><code>python monday/generar.py</code> los convierte en <code>monday.js</code> y revisa que sean coherentes.</li>
+          <li>Esta página vuelve a hacer las cuentas por su lado y las compara.</li>
+        </ul>
+      </section>`;
+  })();
+  </script>
+</body>
+</html>

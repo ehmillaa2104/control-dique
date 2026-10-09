@@ -354,7 +354,8 @@ footer { max-width: 1480px; margin: 8px auto 0; padding: 12px 24px 20px; display
 
 /* =========================================================
    Rev. 2 · cronograma y avance en la cabecera
-   El buque marca hoy en el cronograma; el avance va aparte.
+   Mini Gantt del tablero Cronograma de Monday: barras = fecha real,
+   línea fina = línea base, rojo = atraso. El buque marca hoy.
    Las fases son el único lugar de la cabecera con color.
    ========================================================= */
 .brand { padding: 9px 14px; }
@@ -370,16 +371,77 @@ footer a { color: inherit; text-underline-offset: 2px; }
 .voyage { position: relative; z-index: 1; max-width: 1480px; margin: 10px auto 0; }
 .voyage:empty { display: none; }
 .vy-row { display: flex; align-items: flex-end; gap: 22px; }
-.vy-track { position: relative; flex: 1; min-width: 0; padding-top: 60px; margin: 0 4px; }
+.vy-gantt { flex: 1; min-width: 0; }
+
+/* Filas: nombre del grupo a la izquierda, línea de tiempo a la derecha */
+.vy-lane { display: flex; align-items: stretch; }
+.vy-ln { flex: none; width: 104px; padding-right: 10px; display: flex; flex-direction: column; justify-content: center; line-height: 1.1; }
+.vy-ln b { font-size: 11px; font-weight: 700; color: #fff; white-space: nowrap; }
+.vy-ln small { font-size: 9.5px; color: rgba(255,255,255,.5); white-space: nowrap; }
+.vy-lt { position: relative; flex: 1; min-width: 0; height: 26px; border-top: 1px solid rgba(255,255,255,.07); }
+.vy-lane.top .vy-lt { height: 58px; border: 0; }
+.vy-lane.axis .vy-lt { height: 22px; border-top: 1px solid rgba(255,255,255,.18); }
+.vy-lane.mls .vy-lt { height: 30px; border: 0; }
+
+/* Barras: fecha real (color por fase), línea base debajo, atraso rayado en rojo */
+.k-plan { --c: #a78bfa; }
+.k-pre { --c: #38bdf8; }
+.k-tras { --c: #cbd5e1; }
+.k-dique { --c: #fbbf24; }
+.k-post { --c: #34d399; }
+.k-otra { --c: #9ca3af; }
+.vy-lt .bar { position: absolute; top: 6px; height: 13px; border-radius: 3px; background: var(--c); overflow: hidden; z-index: 1; font-style: normal; }
+.vy-lt .bar b { display: block; padding: 0 5px; font-size: 10px; font-weight: 800; line-height: 13px; color: #0a0a0a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vy-lt .bar.thin { top: 1px; height: 4px; z-index: 2; border-radius: 2px; background: color-mix(in srgb, var(--c) 75%, #fff); }
+.vy-lt .bar.over { box-shadow: 0 0 0 1.5px #ef5350; }
+.vy-lt .base { position: absolute; top: 21px; height: 2px; border-radius: 1px; background: rgba(255,255,255,.55); }
+.vy-lt .atr { position: absolute; top: 6px; height: 13px; z-index: 3; border-radius: 0 3px 3px 0; background: repeating-linear-gradient(135deg, #ef5350 0 3px, rgba(239,83,80,.25) 3px 6px); box-shadow: inset 0 0 0 1px #ef5350; }
+.vy-lt .atr.thin { top: 1px; height: 4px; }
+.vy-lt .dly { position: absolute; top: 5px; margin-left: 4px; z-index: 4; font-size: 10.5px; font-weight: 800; color: #ff8a80; white-space: nowrap; }
+
+/* Hitos: rombo en la fecha real; rombo hueco en la fecha base unido por una línea si se movió */
+.vy-lt .hd { position: absolute; top: 7.5px; width: 10px; height: 10px; margin-left: -5px; transform: rotate(45deg); background: #000; border: 1.5px solid #fff; z-index: 5; }
+.vy-lt .hd.ok { background: #fff; }
+.vy-lt .hd.late { background: #ef5350; border-color: #ff8a80; }
+.vy-lt .hg { position: absolute; top: 9px; width: 7px; height: 7px; margin-left: -3.5px; transform: rotate(45deg); border: 1.5px dashed rgba(255,255,255,.7); z-index: 4; }
+.vy-lt .hc { position: absolute; top: 12.5px; border-top: 1.5px dashed rgba(255,255,255,.5); z-index: 4; }
+.vy-lt .hc.late { border-top-color: #ef5350; }
+
+/* Hoy: línea blanca y lo que falta más oscuro */
+.vy-lt .veil { position: absolute; top: 0; bottom: 0; right: 0; background: rgba(0,0,0,.42); z-index: 6; pointer-events: none; }
+.vy-lt .now { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #fff; z-index: 7; pointer-events: none; }
+
+/* Eje semanal y etiquetas de hitos */
+.vy-lt .tk { position: absolute; top: 0; height: 4px; width: 1px; background: rgba(255,255,255,.35); }
+.vy-lt .tk span { position: absolute; top: 6px; left: 0; transform: translateX(-50%); font-style: normal; font-size: 10px; color: rgba(255,255,255,.5); white-space: nowrap; }
+.vy-lt .ml { position: absolute; transform: translateX(-50%); max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,.85); cursor: default; }
+.vy-lt .ml::before { content: "◆ "; font-size: 8px; vertical-align: 1px; }
+.vy-lt .ml.r0 { top: 0; }
+.vy-lt .ml.r1 { top: 15px; }
+.vy-lt .ml.hide { display: none; }
+.vy-lt .ml.l { transform: none; }
+.vy-lt .ml.r { transform: translateX(-100%); }
+.vy-lt .ml em { font-style: normal; font-weight: 500; color: rgba(255,255,255,.55); }
+.vy-lt .ml.late, .vy-lt .ml.late em { color: #ff8a80; }
+.vy-lt .ml.ok::before { color: #fff; }
+
+.vy-foot { display: flex; gap: 14px; align-items: center; margin: 2px 0 0 104px; font-size: 10.5px; color: rgba(255,255,255,.55); }
+.vy-foot span { display: inline-flex; align-items: center; gap: 5px; }
+.vy-foot i { display: inline-block; }
+.vy-foot .lg-bar { width: 16px; height: 8px; border-radius: 2px; background: #fbbf24; }
+.vy-foot .lg-base { width: 16px; height: 2px; background: rgba(255,255,255,.55); }
+.vy-foot .lg-late { width: 16px; height: 8px; border-radius: 2px; background: repeating-linear-gradient(135deg, #ef5350 0 3px, rgba(239,83,80,.25) 3px 6px); box-shadow: inset 0 0 0 1px #ef5350; }
+.vy-foot .vy-src { margin-left: auto; color: rgba(255,255,255,.4); }
 
 /* Buque (hoy) */
-.vy-ship { position: absolute; top: 0; width: 0; height: 60px; z-index: 3; cursor: default; transition: left 1.8s cubic-bezier(.25,.7,.2,1); }
+.vy-ship { position: absolute; top: 0; width: 0; height: 58px; z-index: 8; cursor: default; transition: left 1.8s cubic-bezier(.25,.7,.2,1); }
 .vy-tag { position: absolute; top: 0; left: 0; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 500; color: #0a0a0a; background: #fff; border-radius: 999px; padding: 2px 10px; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
 .vy-tag b { font-weight: 800; }
+.vy-hoy { font-weight: 700; color: #555; margin-right: 2px; }
 .vy-late { color: #b3261e; font-weight: 700; }
 .vy-ship.l .vy-tag { transform: translateX(-14%); }
 .vy-ship.r .vy-tag { transform: translateX(-86%); }
-.vy-boat { position: absolute; top: 25px; left: 0; width: 112px; height: 37px; overflow: visible; transform: translateX(-50%); animation: vy-bob 3.4s ease-in-out infinite; }
+.vy-boat { position: absolute; top: 23px; left: 0; width: 104px; height: 35px; overflow: visible; transform: translateX(-50%); animation: vy-bob 3.4s ease-in-out infinite; }
 .vy-boat .h { fill: #fff; stroke: #0a0a0a; stroke-width: .9; stroke-linejoin: round; }
 .vy-boat .d { fill: #0a0a0a; }
 .vy-boat .hull-b { fill: #d32f2f; }
@@ -390,32 +452,8 @@ footer a { color: inherit; text-underline-offset: 2px; }
 @keyframes vy-bob { 0%, 100% { transform: translateX(-50%) translateY(0) rotate(0deg); } 50% { transform: translateX(-50%) translateY(1.4px) rotate(-.7deg); } }
 @keyframes vy-wake { to { stroke-dashoffset: -22; } }
 
-/* Barra de fases: capa tenue (lo que falta) y capa llena recortada hasta hoy (lo navegado) */
-.vy-bar { position: relative; height: 26px; border-radius: 7px; overflow: hidden; background: #111; }
-.vy-segs { position: absolute; inset: 0; }
-.vy-segs.solid { transition: clip-path 1.8s cubic-bezier(.25,.7,.2,1); }
-.vy-segs i { position: absolute; top: 0; bottom: 0; display: block; overflow: hidden; padding: 0 6px; line-height: 26px; text-align: center; font-style: normal; font-size: 11.5px; font-weight: 700; white-space: nowrap; text-overflow: ellipsis; }
-.vy-segs.dim i { background: color-mix(in srgb, var(--c) 48%, #161616); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.45); }
-.vy-segs.solid i { background: var(--c); color: #0a0a0a; text-shadow: none; }
-.vy-segs b { font-weight: inherit; }
-.vy-segs .ls { display: none; }
-.f-plan { --c: #a78bfa; }
-.f-pre { --c: #38bdf8; }
-.f-ida, .f-regreso { --c: #cbd5e1; }
-.f-dique { --c: #fbbf24; }
-.f-post { --c: #34d399; }
-.f-cierre, .f-otra { --c: #9ca3af; }
-.vy-seps i { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #000; pointer-events: none; }
-
-/* Hitos y fuente */
-.vy-axis { position: relative; height: 18px; }
-.vy-hito { position: absolute; top: -4px; width: 8px; height: 8px; margin-left: -4px; transform: rotate(45deg); background: #000; border: 1.5px solid rgba(255,255,255,.85); z-index: 1; }
-.vy-hito.ok { background: #fff; }
-.vy-hito.late { background: #ef5350; border-color: #ef5350; }
-.vy-src { position: absolute; right: 0; top: 5px; font-size: 10.5px; color: rgba(255,255,255,.45); }
-
 /* Avance de los trabajos (aparte del cronograma) */
-.vy-av { flex: none; width: 190px; margin-bottom: 18px; cursor: default; }
+.vy-av { flex: none; width: 180px; margin-bottom: 64px; cursor: default; }
 .vy-av .l { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); }
 .vy-av .v { font-size: 22px; font-weight: 800; line-height: 1.15; }
 .vy-av .v small { font-size: 12px; font-weight: 500; color: rgba(255,255,255,.6); margin-left: 6px; }
@@ -427,19 +465,22 @@ footer a { color: inherit; text-underline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   .vy-boat, .vy-wake { animation: none; }
-  .vy-ship, .vy-segs.solid { transition: none; }
+  .vy-ship { transition: none; }
 }
 @media (max-width: 760px) {
   .updated { text-align: left; }
-  .vy-row { flex-direction: column; align-items: stretch; gap: 6px; }
+  .vy-row { flex-direction: column; align-items: stretch; gap: 8px; }
   .vy-av { width: auto; margin: 0; display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 10px; }
   .vy-av .l { grid-column: 1 / -1; }
   .vy-av .v { font-size: 18px; }
-  .vy-track { padding-top: 52px; margin: 0; }
-  .vy-ship { height: 52px; }
+  .vy-ln { width: 62px; padding-right: 6px; }
+  .vy-ln small { display: none; }
+  .vy-lt .bar b { display: none; }
+  .vy-lt .tk.odd span { display: none; }
+  .vy-lane.mls { display: none; }
+  .vy-foot { margin-left: 0; flex-wrap: wrap; gap: 4px 12px; }
+  .vy-foot .vy-src { margin-left: 0; flex-basis: 100%; }
   .vy-tag { font-size: 11px; padding: 2px 8px; }
-  .vy-boat { top: 25px; width: 84px; height: 28px; }
-  .vy-segs i { font-size: 10px; padding: 0 3px; }
-  .vy-segs .lf { display: none; }
-  .vy-segs .ls { display: inline; }
+  .vy-hoy { display: none; }
+  .vy-boat { width: 80px; height: 27px; top: 31px; }
 }

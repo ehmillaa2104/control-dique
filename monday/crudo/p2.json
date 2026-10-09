@@ -1,0 +1,180 @@
+{
+ "board": {
+  "id": "18432105237",
+  "name": "P2. Cubierta"
+ },
+ "extraido": "2026-10-09",
+ "items": [
+  {
+   "name": "Limpieza de tanques de carga",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Bajada de slop y basura",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Limpieza de Tanques de Lastre",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Entrada y salida de Muelle",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Calibración de tanques de carga",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Entrada y Salida de muelle/Carga de Materiales",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Caja menuda para capitán",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Materiales cubierta",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Reparaciones en cubierta (aceros y soldadura)",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Pintura de la cubierta",
+   "column_values": {
+    "color_mm6wsp0z": "Post-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Reparación de líneas de venteo",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Mantenimiento a acomodaciones",
+   "column_values": {
+    "color_mm6wsp0z": "Pre-dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Materiales seguridad",
+   "column_values": {
+    "color_mm6wsp0z": "No Aplica",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Foam – Agente Espumógeno",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Bote de Rescate – Casco",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Bote Salvavidas – Sistema Davit y Hook",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Compás Magnético – Esfera Kelvin",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Speed Log – Doppler",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  },
+  {
+   "name": "Bote Salvavidas – Casco",
+   "column_values": {
+    "color_mm6wsp0z": "Dique",
+    "color_mm7y4j97": "0%",
+    "numeric_mm7y9sbv": null,
+    "formula_mm7y7wsm": "0"
+   }
+  }
+ ]
+}

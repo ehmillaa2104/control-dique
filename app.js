@@ -479,15 +479,15 @@
   const extrasOf = (V) => V.adicionales.reduce((a, x) => a + x.monto, 0);
 
   // =========================================================
-  // Cabecera · Rev. 2: cronograma y avance con el buque navegando
-  //   Fuente: el tablero "Cronograma" de Monday (monday.js); si no está, la tabla "cronograma" de data.js.
-  //   Cada fase tiene su color y un ancho según sus días (las fases cortas tienen un mínimo para
-  //   que se lean). Lo ya navegado se pinta lleno; lo que falta, tenue.
-  //   Tiempo y avance van separados: el buque marca HOY en el cronograma (dónde está el buque y en
-  //   qué fase, con su estado según la columna Diferencia) y el avance de los trabajos va aparte,
-  //   real contra plan. Así, si pasan los días y el avance no sube, la diferencia se ve.
+  // Cabecera · Rev. 2: cronograma (mini Gantt del tablero Cronograma de Monday) y avance
+  //   · Escala de tiempo real (lineal), una fila por grupo de Monday (Plan, Pre-Dique, Dique, Post Dique).
+  //   · Cada barra va en su FECHA REAL; la línea fina de abajo es la LÍNEA BASE.
+  //   · Atraso (Diferencia > 0): tramo rayado en rojo entre el fin base y el fin real, con los días.
+  //   · Hitos (duración 0): rombo en la fecha real; si se movió, rombo hueco en la fecha base unido por una línea.
+  //   · El buque marca HOY; a la derecha de hoy el cronograma se ve más oscuro (lo que falta).
+  //   · El avance de los trabajos va aparte (real contra plan): el tiempo puede pasar sin que el avance suba.
+  //   Si no hay monday.js, se usa la tabla "cronograma" de data.js con el mismo dibujo.
   // =========================================================
-  const FASE_CORTO = { plan: "Plan", pre: "Pre", ida: "Ida", dique: "Dique", regreso: "Vta", post: "Post", cierre: "Cierre" };
   const rowT = (k, v) => `<div class="row"><span>${k}</span><span>${v}</span></div>`;
   const difTxt = (d, html = true) => {
     if (d == null || Math.abs(d) < 0.5) return "en plazo";
@@ -495,114 +495,84 @@
     return `${days1(-d)} de adelanto`;
   };
   const dateRange = (r) => (r ? (r[0] === r[1] ? fmtShort(r[0]) : `${fmtShort(r[0])} – ${fmtShort(r[1])}`) : "—");
-  const hitoCls = (done, late) => (done ? "ok" : late ? "late" : "");
-
-  function cronoScale(segs) {
-    const tot = segs.reduce((a, f) => a + (f.b - f.a), 0);
-    const ws = segs.map((f) => Math.max(f.b - f.a, tot * 0.09));
-    const sum = ws.reduce((a, w) => a + w, 0);
-    let x = 0;
-    const geo = segs.map((f, i) => { const g = { f, x0: x, x1: x + (ws[i] / sum) * 100 }; x = g.x1; return g; });
-    const at = (t) => {
-      if (t <= geo[0].f.a) return 0;
-      for (const g of geo) {
-        if (t < g.f.a) return g.x0; // hueco entre dos fases
-        if (t <= g.f.b) return g.x0 + ((t - g.f.a) / (g.f.b - g.f.a)) * (g.x1 - g.x0);
-      }
-      return 100;
-    };
-    return { geo, at };
+  const daysBetween = (a, b) => Math.round((parse(b) - parse(a)) / DAY);
+  const GRUPO_NOMBRE = (g) => ({ "plan": "Plan", "pre-dique": "Pre-dique", "dique": "Dique", "post dique": "Post-dique", "post-dique": "Post-dique" }[(g || "").toLowerCase()] || g || "Otros");
+  const KIND_NOMBRE = { plan: "Planificación", pre: "Pre-dique", dique: "En dique", post: "Post-dique" };
+  function kindOf(nombre, grupo) {
+    const g = (grupo || "").toLowerCase(), n = nombre.toLowerCase();
+    if (/traslado/.test(n)) return "tras";
+    if (/planificaci/.test(n)) return "plan";
+    const gk = /pre/.test(g) ? "pre" : /post/.test(g) ? "post" : /dique/.test(g) ? "dique" : /plan/.test(g) ? "plan" : "otra";
+    return /ejecuci/.test(n) ? gk : "sub " + gk; // "sub" = actividad dentro de una fase (barra fina)
   }
+  const itemTip = (o) => tipAttr(`<b>${esc(o.nombre)}</b>${rowT("Fecha real", dateRange(o.real))}${rowT("Línea base", dateRange(o.base))}${rowT("Estado", esc(o.estado || "—"))}${rowT("Diferencia", difTxt(o.dif, false))}` +
+    (o.dur > 0 && o.real && Math.abs(daysBetween(o.real[0], o.real[1]) + 1 - o.dur) > 1 ? `<div class="small" style="margin-top:4px;color:#ff8a80">En Monday la duración dice ${o.dur} días, pero la fecha real cubre ${daysBetween(o.real[0], o.real[1]) + 1}.</div>` : ""));
 
-  // Tablero Cronograma de Monday → fases e hitos. Cada elemento de fase ("PLANIFICACIÓN",
-  // "PRE-DIQUE (Ejecución)", traslados, "DIQUE (Ejecución)", "POST-DIQUE (Ejecución)") es un tramo;
-  // los de duración 0 son hitos; el resto se muestra dentro del tramo donde empieza.
-  let mondayCache = null;
-  function cronoMonday(V) {
+  // El elemento de fase que contiene hoy (si hay dos, el que empezó más tarde: p. ej. Pre-dique sobre Planificación)
+  function currentItem(lanes, today) {
+    const fases = lanes.flatMap((l) => l.items).filter((o) => !/sub/.test(o.kind));
+    const inn = fases.filter((o) => o.real[0] <= today && today <= o.real[1]).sort((a, b) => (a.real[0] < b.real[0] ? 1 : -1));
+    if (inn.length) return inn[0];
+    const next = fases.filter((o) => o.real[0] > today).sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1))[0];
+    return next || fases.sort((a, b) => (a.real[1] < b.real[1] ? 1 : -1))[0] || null;
+  }
+  const itemName = (o) => (o.kind === "tras" ? o.nombre : KIND_NOMBRE[o.kind] || o.nombre);
+
+  function ganttMonday(V) {
     const MD = window.DIQUE_MONDAY;
     if (!MD || !Array.isArray(MD.cronograma)) return null;
-    if (!mondayCache) {
-      const items = MD.cronograma.filter((r) => r && r.nombre && Array.isArray(r.real) && isDate(r.real[0]) && isDate(r.real[1]));
-      if (!items.length) return null;
-      const origin = parse(items.reduce((m, r) => (r.real[0] < m ? r.real[0] : m), items[0].real[0]));
-      const dn = (s) => Math.round((parse(s) - origin) / DAY);
-      const faseOf = (r) => {
-        const g = (r.grupo || "").toLowerCase(), n = r.nombre.toLowerCase();
-        if (/traslado/.test(n)) return /pre/.test(g) ? "ida" : /post/.test(g) ? "regreso" : null;
-        if (/planificaci/.test(n)) return "plan";
-        if (!/ejecuci/.test(n)) return null;
-        return /pre/.test(g) ? "pre" : /post/.test(g) ? "post" : /dique/.test(g) ? "dique" : null;
-      };
-      const segs = [], hitos = [], subs = [];
-      items.forEach((r) => {
-        const f = faseOf(r);
-        if (r.duracion === 0) hitos.push(r);
-        else if (f && !segs.some((s) => s.fase === f)) segs.push({ fase: f, r, a: dn(r.real[0]), end: dn(r.real[1]) + 1 });
-        else subs.push(r);
-      });
-      if (!segs.some((s) => s.fase === "dique")) return null;
-      segs.sort((x, y) => x.a - y.a);
-      const lastHito = hitos.reduce((m, h) => Math.max(m, dn(h.real[0]) + 1), 0);
-      // En Monday las fases se traslapan o dejan huecos: en la barra cada una llega hasta donde empieza la siguiente
-      segs.forEach((s, i) => { s.b = i < segs.length - 1 ? Math.max(s.a + 1, segs[i + 1].a) : Math.max(s.a + 1, s.end, lastHito); });
-      const dest = (f) => { const s = segs.find((x) => x.fase === f); const m = s && s.r.nombre.match(/traslado a (.+)/i); return m ? m[1].trim().replace(/^panama$/i, "Panamá") : ""; };
-      const NOMBRE = { plan: "Planificación", pre: "Pre-dique", ida: "Traslado", dique: "En dique", regreso: "Traslado", post: "Post-dique" };
-      const LUGAR = { pre: dest("regreso"), dique: dest("ida"), post: dest("regreso") };
-      segs.forEach((s) => {
-        s.nombre = NOMBRE[s.fase];
-        s.lugar = LUGAR[s.fase] || "";
-        s.label = s.fase === "dique" && s.lugar ? `${s.nombre} · ${s.lugar}` : s.nombre;
-        const grupos = segs.filter((o) => o.r.grupo === s.r.grupo);
-        const inside = subs.filter((x) => (x.grupo && segs.some((o) => o.r.grupo === x.grupo)
-          ? x.grupo === s.r.grupo && grupos[grupos.length - 1] === s // va con la última fase de su grupo
-          : dn(x.real[0]) >= s.a && dn(x.real[0]) < s.b));
-        s.tip = tipAttr(`<b>${esc(s.r.nombre)}</b>${rowT("Línea base", dateRange(s.r.base))}${rowT("Real / proyectada", dateRange(s.r.real))}${rowT("Estado", esc(s.r.estado || "—"))}${rowT("Diferencia", difTxt(s.r.diferencia, false))}` +
-          (inside.length ? `<div class="small" style="margin-top:4px;opacity:.75">${inside.map((x) => esc(x.nombre.split("*")[0].trim()) + " · " + dateRange(x.real)).join("<br>")}</div>` : ""));
-      });
-      mondayCache = { MD, segs, hitos, dn };
-    }
-    const { MD: D, segs, hitos, dn } = mondayCache;
+    const okR = (r) => Array.isArray(r) && isDate(r[0]) && isDate(r[1]) && r[0] <= r[1];
+    const rows = MD.cronograma.filter((r) => r && r.nombre && okR(r.real));
+    if (!rows.some((r) => /dique/i.test(r.grupo || "") && r.duracion !== 0)) return null;
+    const lanes = [];
+    rows.forEach((r) => {
+      let L = lanes.find((l) => l.grupo === r.grupo);
+      if (!L) lanes.push((L = { grupo: r.grupo, nombre: GRUPO_NOMBRE(r.grupo), items: [], hitos: [] }));
+      const o = { nombre: r.nombre.replace(/\s+/g, " ").trim(), estado: r.estado || "", real: r.real, base: okR(r.base) ? r.base : null,
+        dif: typeof r.diferencia === "number" ? r.diferencia : null, done: /listo/i.test(r.estado || ""), dur: r.duracion };
+      if (r.duracion === 0) L.hitos.push(o);
+      else { o.kind = kindOf(o.nombre, r.grupo); L.items.push(o); }
+    });
     const today = iso(new Date());
-    const hoy = Math.max(0, Math.min(segs[segs.length - 1].b, dn(today) + 0.5));
-    const cur = segs.find((s) => hoy >= s.a && hoy < s.b) || segs[segs.length - 1];
-    const av = (D.avance && (D.avance[V.key] || D.avance.total)) || null;
+    const cur = currentItem(lanes, today);
+    const av = (MD.avance && (MD.avance[V.key] || MD.avance.total)) || null;
     const avPct = av && av.duracion > 0 ? (av.avanceDias / av.duracion) * 100 : 0;
-    const dia = Math.floor(hoy - cur.a) + 1, dias = cur.end - cur.a;
-    const quien = V.isArea ? " · " + esc(V.area.nombre) : "";
+    const dia = cur ? daysBetween(cur.real[0], today) + 1 : 0, dias = cur ? daysBetween(cur.real[0], cur.real[1]) + 1 : 0;
     return {
-      segs, hoy, shipT: hoy, fuente: `${D.fuente || "Monday"} · ${fmtShort(D.extraido || today)}`,
-      tag: `<b>${esc(cur.nombre)}</b> · ${difTxt(cur.r.diferencia)}`,
-      shipTip: `<b>Hoy · ${esc(cur.r.nombre)}</b>${rowT("Día", `${Math.min(dia, dias)} de ${dias}`)}${rowT("Fechas", dateRange(cur.r.real))}${rowT("Estado", esc(cur.r.estado || "—"))}${rowT("Diferencia", difTxt(cur.r.diferencia, false))}`,
-      avance: { real: av ? avPct : null, plan: null, quien,
-        nota: av ? `Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. ${av.conDuracion} de ${av.lineas} trabajos tienen duración cargada en Monday.` : "Sin datos de P1, P2 y P3." },
-      hitos: hitos.map((h) => {
-        const done = /listo/i.test(h.estado || ""), late = !done && ((h.base && h.base[0] < today) || h.diferencia > 0);
-        return { t: dn(h.real[0]) + 0.5, cls: hitoCls(done, late),
-          tip: tipAttr(`<b>${esc(h.nombre)}</b>${rowT("Línea base", dateRange(h.base))}${rowT("Real / proyectada", dateRange(h.real))}${rowT("Estado", esc(h.estado || "—"))}${rowT("Diferencia", difTxt(h.diferencia, false))}`) };
-      })
+      lanes, today, fuente: `${MD.fuente || "Monday"} · leído ${fmtShort(MD.extraido || today)}`,
+      tag: cur ? `<b>${esc(itemName(cur))}</b> · ${difTxt(cur.dif)}` : "Sin fase en curso",
+      shipTip: cur ? `<b>Hoy ${fmtShort(today)} · ${esc(cur.nombre)}</b>${dia >= 1 && dia <= dias ? rowT("Día", `${dia} de ${dias}`) : ""}${rowT("Fecha real", dateRange(cur.real))}${rowT("Línea base", dateRange(cur.base))}${rowT("Estado", esc(cur.estado || "—"))}${rowT("Diferencia", difTxt(cur.dif, false))}` : "",
+      avance: { real: av ? avPct : null, plan: null, quien: V.isArea ? " · " + esc(V.area.nombre) : "",
+        nota: av ? `Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. ${av.conDuracion} de ${av.lineas} trabajos tienen duración cargada en Monday.` : "Sin datos de P1, P2 y P3." }
     };
   }
 
-  // Sin Monday: fases de data.js, hitos clave del proyecto y el buque según el plazo ganado
-  function cronoSample(V) {
+  // Sin Monday: las fases de data.js y los hitos clave, con el mismo dibujo
+  function ganttSample(V) {
     const M = V.M, s = V.s;
-    const segs = M.cronograma.map((f) => Object.assign({}, f, {
-      label: f.fase === "dique" && f.lugar ? f.nombre + " · " + f.lugar.split(",")[0] : f.fase === "ida" || f.fase === "regreso" ? "Traslado" : f.nombre,
-      tip: tipAttr(`<b>${esc(f.nombre)}${f.lugar ? " · " + esc(f.lugar) : ""}</b>${rowT("Plan", dateRange([f.inicio, f.fin]))}${f.inicioReal ? rowT("Real", fmtShort(f.inicioReal) + " – " + (f.finReal ? fmtShort(f.finReal) : "en curso")) : ""}`)
-    }));
+    const lanes = [];
+    const laneOf = (n) => { let L = lanes.find((l) => l.nombre === n); if (!L) lanes.push((L = { nombre: n, items: [], hitos: [] })); return L; };
+    const GRP = { plan: "Plan", pre: "Pre-dique", ida: "Pre-dique", dique: "Dique", regreso: "Post-dique", post: "Post-dique", cierre: "Cierre" };
+    M.cronograma.forEach((f) => {
+      const real = [f.inicioReal || f.inicio, f.finReal || f.fin];
+      const kind = f.fase === "ida" || f.fase === "regreso" ? "tras" : f.fase in KIND_NOMBRE ? f.fase : "otra";
+      laneOf(GRP[f.fase] || "Otros").items.push({ nombre: f.nombre + (f.lugar ? " · " + f.lugar : ""), kind, real, base: [f.inicio, f.fin],
+        estado: f.finReal ? "Listo" : f.inicioReal ? "En curso" : "No Iniciado", done: !!f.finReal, dif: f.finReal ? daysBetween(f.fin, f.finReal) : 0 });
+    });
+    const dl = laneOf("Dique");
+    V.hitos.filter((h) => h.clave).forEach((h) => {
+      const real = h.fechaReal || h.fechaPlan;
+      dl.hitos.push({ nombre: h.nombre, real: [real, real], base: [h.fechaPlan, h.fechaPlan], done: !!h.fechaReal,
+        estado: h.fechaReal ? "Listo" : h.fechaPlan < M.corte ? "Vencido" : "Pendiente", dif: h.fechaReal ? daysBetween(h.fechaPlan, h.fechaReal) : 0 });
+    });
+    const cur = currentItem(lanes, M.corte);
     const done = !s.empty && s.pReal >= 99.95;
-    const dl = delaySt(s.delay || 0);
-    const cur = segs.find((f) => M.AT > f.a && M.AT <= f.b) || (M.AT > segs[segs.length - 1].b ? segs[segs.length - 1] : segs[0]);
     return {
-      segs, hoy: M.AT, shipT: M.AT, fuente: "Datos de ejemplo",
-      tag: `<b>${esc(cur.nombre)}</b> · ${s.empty ? "sin órdenes" : done ? "terminado" : difTxt(s.delay)}`,
-      shipTip: `<b>Hoy · ${fmtShort(M.corte)}</b>${rowT("Fase", esc(cur.nombre))}${cur.fase === "dique" ? rowT("Día", `${Math.min(M.AT, M.N)} de ${M.N}`) : ""}${s.empty ? "" : rowT(dl.txt, dl.val)}`,
+      lanes, today: M.corte, fuente: "Datos de ejemplo",
+      tag: `<b>${esc(cur ? itemName(cur).split(" · ")[0] : "—")}</b> · ${s.empty ? "sin órdenes" : done ? "terminado" : difTxt(s.delay)}`,
+      shipTip: `<b>Hoy ${fmtShort(M.corte)}${cur ? " · " + esc(cur.nombre) : ""}</b>${rowT("Día en dique", `${Math.min(M.AT, M.N)} de ${M.N}`)}${s.empty ? "" : rowT(delaySt(s.delay).txt, delaySt(s.delay).val)}`,
       avance: s.empty ? { real: null, plan: null, nota: "Sin órdenes de trabajo." } : { real: s.pReal, plan: s.pPlan, quien: V.isArea ? " · " + esc(V.area.nombre) : "",
-        nota: "Σ (% real × duración) / Σ duración de las órdenes de trabajo." },
-      hitos: V.hitos.filter((h) => h.clave).map((h) => ({
-        t: M.dn(h.fechaPlan) + 0.5, cls: hitoCls(!!h.fechaReal, !h.fechaReal && h.fechaPlan < M.corte),
-        tip: tipAttr(`<b>${esc(h.nombre)}</b>${rowT("Plan", fmtShort(h.fechaPlan))}${rowT("Estado", h.fechaReal ? "cumplido " + fmtShort(h.fechaReal) : h.fechaPlan < M.corte ? "vencido" : "pendiente")}`)
-      }))
+        nota: "Σ (% real × duración) / Σ duración de las órdenes de trabajo." }
     };
   }
 
@@ -619,44 +589,107 @@
     </svg>`;
 
   function voyageHTML(V) {
-    const T = cronoMonday(V) || cronoSample(V);
-    const { geo, at } = cronoScale(T.segs);
-    const shipX = at(T.shipT);
-    const segs = geo.map((g) => `<i class="f-${g.f.fase || "otra"}" style="left:${g.x0}%;width:${g.x1 - g.x0}%" ${g.f.tip || ""}><b class="lf">${esc(g.f.label || g.f.nombre)}</b><b class="ls">${esc(FASE_CORTO[g.f.fase] || g.f.nombre)}</b></i>`).join("");
-    const seps = geo.slice(1).map((g) => `<i style="left:${g.x0}%"></i>`).join("");
-    const hitos = T.hitos.map((h) => `<i class="vy-hito ${h.cls}" style="left:${at(h.t)}%" ${h.tip}></i>`).join("");
-    const align = shipX < 14 ? "l" : shipX > 86 ? "r" : "";
-    const A = T.avance, late = A.real != null && A.plan != null && A.real < A.plan - 5;
+    const G = ganttMonday(V) || ganttSample(V);
+    const lanes = G.lanes.filter((l) => l.items.length || l.hitos.length);
+    const all = lanes.flatMap((l) => l.items.concat(l.hitos));
+    const dates = all.flatMap((o) => o.real.concat(o.base || [])).concat([G.today]).sort();
+    const origin = addDays(parse(dates[0]), -1), span = daysBetween(dates[0], dates[dates.length - 1]) + 3;
+    const t = (s) => (parse(s) - origin) / DAY;
+    const X = (v) => Math.max(0, Math.min(100, (v / span) * 100));
+    const xs = (s) => X(t(s)), xe = (s) => X(t(s) + 1), xm = (s) => X(t(s) + 0.5);
+    const hoyX = xm(G.today);
+    const today = G.today;
+
+    const laneHTML = (L) => {
+      const starts = L.items.concat(L.hitos).map((o) => o.real[0]).sort(), ends = L.items.concat(L.hitos).map((o) => o.real[1]).sort();
+      const range = dateRange([starts[0], ends[ends.length - 1]]);
+      const drawn = [];
+      const bars = L.items.slice().sort((a, b) => daysBetween(b.real[0], b.real[1]) - daysBetween(a.real[0], a.real[1])).map((o) => {
+        // Una actividad que se monta más de un día sobre otra de la misma fila va como barra fina
+        const over = drawn.some((d) => Math.min(t(d.real[1]), t(o.real[1])) + 1 - Math.max(t(d.real[0]), t(o.real[0])) > 1);
+        drawn.push(o);
+        const thin = over || /sub/.test(o.kind);
+        const vencido = !o.done && o.real[1] < today;
+        const l = xs(o.real[0]), w = xe(o.real[1]) - l;
+        let h = `<i class="bar k-${o.kind.replace("sub ", "")} ${thin ? "thin" : ""} ${vencido ? "over" : ""}" style="left:${l}%;width:${w}%" ${itemTip(o)}>${!thin && w > 9 ? `<b>${esc(itemName(o))}</b>` : ""}</i>`;
+        if (o.base && !thin) h += `<i class="base" style="left:${xs(o.base[0])}%;width:${xe(o.base[1]) - xs(o.base[0])}%"></i>`;
+        if (o.base && o.dif > 0 && o.real[1] > o.base[1]) {
+          h += `<i class="atr ${thin ? "thin" : ""}" style="left:${xe(o.base[1])}%;width:${xe(o.real[1]) - xe(o.base[1])}%" ${itemTip(o)}></i>`;
+          h += `<span class="dly" style="left:${xe(o.real[1])}%">+${o.dif} d</span>`;
+        }
+        return h;
+      }).join("");
+      const hitos = L.hitos.map((o) => {
+        const late = !o.done && (o.dif > 0 || o.real[0] < today);
+        const x = xm(o.real[0]);
+        let h = "";
+        if (o.base && o.base[0] !== o.real[0]) {
+          const bx = xm(o.base[0]);
+          h += `<i class="hc ${o.dif > 0 ? "late" : ""}" style="left:${Math.min(x, bx)}%;width:${Math.abs(x - bx)}%"></i><i class="hg" style="left:${bx}%" ${itemTip(o)}></i>`;
+        }
+        return h + `<i class="hd ${o.done ? "ok" : late ? "late" : ""}" style="left:${x}%" ${itemTip(o)}></i>`;
+      }).join("");
+      return `<div class="vy-lane"><div class="vy-ln"><b>${esc(L.nombre)}</b><small>${range}</small></div>
+        <div class="vy-lt">${bars}${hitos}<i class="veil" style="left:${hoyX}%"></i><i class="now" style="left:${hoyX}%"></i></div></div>`;
+    };
+
+    // Eje: una marca por semana (lunes)
+    const ticks = [];
+    for (let d = new Date(origin); t(iso(d)) <= span; d = addDays(d, 1)) if (d.getDay() === 1) ticks.push(iso(d));
+    const axis = ticks.map((d, i) => `<i class="tk ${i % 2 ? "odd" : ""}" style="left:${xs(d)}%"><span>${fmtShort(d)}</span></i>`).join("");
+
+    // Etiquetas de los hitos (nombre y fecha real); layoutMl() las reparte en dos filas ya dibujadas
+    const hit = lanes.flatMap((l) => l.hitos).sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1));
+    const mlabels = hit.map((o) => {
+      const late = !o.done && (o.dif > 0 || o.real[0] < today);
+      const al = xm(o.real[0]) < 8 ? "l" : xm(o.real[0]) > 92 ? "r" : "";
+      return `<span class="ml r0 ${al} ${late ? "late" : o.done ? "ok" : ""}" style="left:${xm(o.real[0])}%" ${itemTip(o)}>${esc(o.nombre)} <em>${fmtShort(o.real[0])}${o.dif > 0 ? ` · +${o.dif} d` : ""}</em></span>`;
+    }).join("");
+
+    const A = G.avance, behind = A.real != null && A.plan != null && A.real < A.plan - 5;
     const avTip = tipAttr(`<b>Avance de los trabajos${A.quien || ""}</b>${rowT("Real", A.real == null ? "—" : pct(A.real))}${A.plan != null ? rowT("Plan a hoy", pct(A.plan)) : ""}<div class="small" style="margin-top:4px;opacity:.75">${A.nota}</div>`);
     const avance = `<div class="vy-av" ${avTip}>
         <div class="l">Avance trabajos</div>
-        <div class="v ${late ? "t-late" : ""}">${A.real == null ? "—" : pct(A.real, 0)}${A.plan != null ? `<small>plan ${pct(A.plan, 0)}</small>` : ""}</div>
-        <div class="m"><i class="r ${late ? "late" : ""}" style="width:${A.real || 0}%"></i>${A.plan != null ? `<i class="p" style="left:${A.plan}%"></i>` : ""}</div>
+        <div class="v ${behind ? "t-late" : ""}">${A.real == null ? "—" : pct(A.real, 0)}${A.plan != null ? `<small>plan ${pct(A.plan, 0)}</small>` : ""}</div>
+        <div class="m"><i class="r ${behind ? "late" : ""}" style="width:${A.real || 0}%"></i>${A.plan != null ? `<i class="p" style="left:${A.plan}%"></i>` : ""}</div>
       </div>`;
-    return `<div class="vy-row"><div class="vy-track">
-        <div class="vy-ship ${align}" data-x="${shipX}" style="left:${shipX}%" ${tipAttr(T.shipTip)}><div class="vy-tag">${T.tag}</div>${SHIP}</div>
-        <div class="vy-bar">
-          <div class="vy-segs dim">${segs}</div>
-          <div class="vy-segs solid" style="clip-path:inset(0 ${100 - shipX}% 0 0)">${segs}</div>
-          <div class="vy-seps">${seps}</div>
-        </div>
-        <div class="vy-axis">${hitos}<span class="vy-src">${esc(T.fuente)}</span></div>
+    const align = hoyX < 12 ? "l" : hoyX > 88 ? "r" : "";
+
+    return `<div class="vy-row"><div class="vy-gantt">
+        <div class="vy-lane top"><div class="vy-ln"></div><div class="vy-lt">
+          <div class="vy-ship ${align}" data-x="${hoyX}" style="left:${hoyX}%" ${tipAttr(G.shipTip)}><div class="vy-tag"><span class="vy-hoy">Hoy ${fmtShort(today)}</span> ${G.tag}</div>${SHIP}</div>
+        </div></div>
+        ${lanes.map(laneHTML).join("")}
+        <div class="vy-lane axis"><div class="vy-ln"></div><div class="vy-lt">${axis}</div></div>
+        <div class="vy-lane mls"><div class="vy-ln"></div><div class="vy-lt">${mlabels}</div></div>
+        <div class="vy-foot"><span><i class="lg-bar"></i>Fecha real</span><span><i class="lg-base"></i>Línea base</span><span><i class="lg-late"></i>Atraso</span><span class="vy-src">${esc(G.fuente)}</span></div>
       </div>${avance}</div>`;
+  }
+  // Reparte las etiquetas de hitos en dos filas midiendo su ancho real; si no caben, se ocultan (queda el rombo con su detalle)
+  function layoutMl() {
+    const ends = [-1e9, -1e9];
+    document.querySelectorAll(".vy-lt .ml").forEach((el) => {
+      el.classList.remove("r0", "r1", "hide");
+      for (let r = 0; r < 2; r++) {
+        el.classList.add("r" + r);
+        const b = el.getBoundingClientRect();
+        if (b.left > ends[r] + 8) { ends[r] = b.right; return; }
+        el.classList.remove("r" + r);
+      }
+      el.classList.add("hide");
+    });
   }
   // El buque navega desde su posición anterior (al abrir, desde el inicio del cronograma)
   let lastShipX = 0;
   function sailShip() {
-    const ship = document.querySelector(".vy-ship"), solid = document.querySelector(".vy-segs.solid");
-    if (!ship || !solid) return;
+    const ship = document.querySelector(".vy-ship");
+    if (!ship) return;
     const x = +ship.dataset.x;
-    const clip = (v) => `inset(0 ${100 - v}% 0 0)`;
-    ship.style.transition = solid.style.transition = "none";
+    ship.style.transition = "none";
     ship.style.left = lastShipX + "%";
-    solid.style.clipPath = clip(lastShipX);
     void ship.offsetWidth; // aplica la posición inicial antes de animar
-    ship.style.transition = solid.style.transition = "";
+    ship.style.transition = "";
     ship.style.left = x + "%";
-    solid.style.clipPath = clip(x);
     lastShipX = x;
   }
 
@@ -1020,6 +1053,7 @@
     VIEW = V;
     renderTabs(M, V.key);
     $("voyage").innerHTML = voyageHTML(V);
+    layoutMl();
     sailShip();
     $("hero-title").textContent = V.isArea ? "Área de " + V.area.nombre : "Proyecto de dique";
     $("hero-sub").textContent = [M.P.buque, V.isArea ? V.area.descripcion : [M.P.tipo, M.P.dique].filter(Boolean).join(" · ")].filter(Boolean).join(" · ");
