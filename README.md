@@ -8,7 +8,9 @@ Dashboard para controlar un proyecto de mantenimiento en dique seco de un buque.
 
 Se actualiza solo cada vez que se sube una versión a `main`:
 
-- Dashboard Rev. 2 (actual): https://ehmillaa2104.github.io/control-dique/
+- Dashboard Rev. 3 (actual): https://ehmillaa2104.github.io/control-dique/
+- Verificación de datos: https://ehmillaa2104.github.io/control-dique/verificar.html
+- Rev. 2: https://ehmillaa2104.github.io/control-dique/rev2/
 - Rev. 1: https://ehmillaa2104.github.io/control-dique/rev1/
 - Rev. 0: https://ehmillaa2104.github.io/control-dique/rev0/
 - Cronograma 3D: https://ehmillaa2104.github.io/control-dique/pruebas/viaje-3d/
@@ -17,7 +19,9 @@ Se actualiza solo cada vez que se sube una versión a `main`:
 
 | Carpeta / archivo | Qué es |
 |---|---|
-| `index.html` | **Rev. 2 · cronograma y avance**: la vista ejecutiva con una barra de cronograma en la cabecera y el buque avanzando según el avance (ponderado por duración, como Monday) |
+| `index.html` | **Rev. 3 · datos reales de Monday (Kelly Trader)**: resumen gerencial (costo aprobado, proyectado, PO, incurrido, atraso del cronograma, avance físico, centros de costo desplegables, cambios recientes y resumen por área), una pestaña por área y otra para el cronograma |
+| `rev2/` | **Rev. 2** (congelada): vista ejecutiva con datos de ejemplo y el cronograma de Monday en la cabecera |
+| `monday/`, `monday.js`, `verificar.html` | Lectura de Monday tal cual (`monday/crudo/kelly.json`), conversor (`monday/generar.py`) y página de verificación |
 | `rev1/` | **Rev. 1 · vista ejecutiva** (congelada): atraso, avance, costo plan, incurrido, desembolsado y participación del equipo |
 | `rev0/` | **Rev. 0 · vista completa** (base congelada): valor ganado, todas las órdenes de trabajo, riesgos, adicionales y acciones |
 | `pruebas/viaje-3d/` | Prueba 3D: el viaje del buque de Panamá al dique en Cartagena y de vuelta, con la información del proyecto |

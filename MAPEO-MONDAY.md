@@ -110,22 +110,23 @@ Cada centro de costo suma las líneas de P1, P2 y P3 conectadas a él y las POs 
 ## Cómo se leen los datos (paquete `monday/`)
 
 ```
-Monday ──lectura──▶ monday/crudo/*.json ──python monday/generar.py──▶ monday.js ──▶ dashboard
-                         (tal cual)              (convierte y revisa)                verificar.html
+Monday API ──una consulta──▶ monday/crudo/kelly.json ──python monday/generar.py──▶ monday.js ──▶ dashboard (Rev. 3)
+                               (los 7 tableros, tal cual)      (convierte y revisa)                  verificar.html
 ```
 
-1. **`monday/crudo/`**: lo que devuelve Monday, sin tocar: nombre, grupo y el texto de cada columna. Están `cronograma.json`, `p1.json`, `p2.json` y `p3.json`.
-2. **`monday/generar.py`**: convierte esos datos en `monday.js` según las columnas de la tabla `COLUMNAS`. Revisa:
-   - fechas legibles;
+1. **`monday/crudo/kelly.json`**: respuesta de la API de Monday para los 7 tableros del Kelly Trader, en una sola consulta GraphQL. Incluye el texto de cada columna, las fórmulas y espejos (`display_value`) y las conexiones (`linked_item_ids`). Solo se guardan las columnas que usa el dashboard: no hay nombres de personas, descripciones ni enlaces a archivos.
+2. **`monday/generar.py`**: convierte el crudo en `monday.js` según la tabla `TABLEROS`, donde está el ID de cada columna. Revisa:
+   - lectura completa, sin páginas pendientes;
+   - columnas existentes;
    - Diferencia = fin real − fin base;
-   - Duración contra el rango de la fecha real;
-   - hitos sin fecha;
-   - trabajos sin duración.
+   - duración contra el rango de fechas;
+   - cada centro de costo = suma de sus líneas;
+   - trabajos sin centro de costo o sin duración.
 
    Si encuentra un error, termina con código 1 y no se debe publicar.
-3. **`verificar.html`**: vuelve a hacer las cuentas en el navegador, con un cálculo independiente del script, y muestra lado a lado el texto de Monday y lo que usa el dashboard, con ✓ / ⚠ / ✗.
+3. **`verificar.html`**: vuelve a leer el crudo con un cálculo propio y lo compara con lo que muestra el dashboard: cronograma, avance, costos por área y centros de costo.
 
-Para actualizar, se vuelve a leer Monday hacia `monday/crudo/` y se corre el script. Se puede hacer a pedido o con una tarea automática que necesita un token de la API de Monday.
+Para actualizar, se repite la consulta a Monday, se guarda en `monday/crudo/kelly.json` y se corre `python monday/generar.py --recortar`.
 
 ## Lo que falta o está incompleto
 

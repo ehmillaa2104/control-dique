@@ -4,7 +4,8 @@
 
 | Revisión | Archivo | Para quién |
 |---|---|---|
-| **Rev. 2 · cronograma y avance** | `index.html` | La Rev. 1 más una barra de cronograma en la cabecera con el buque navegando según el avance. El avance se pondera por **duración**, como en Monday |
+| **Rev. 3 · Monday** | `index.html` | Dashboard con datos reales de Monday (Kelly Trader). Lee `monday.js`; el detalle está en [MAPEO-MONDAY.md](MAPEO-MONDAY.md) |
+| **Rev. 2 · cronograma y avance** (congelada) | `rev2/index.html` | La Rev. 1 más una barra de cronograma en la cabecera con el buque navegando según el avance. El avance se pondera por **duración**, como en Monday |
 | **Rev. 1 · vista ejecutiva** (congelada) | `rev1/index.html` | Gerencia y pantalla de sala: plazo, avance, costo plan, incurrido, desembolsado y participación del equipo. Avance ponderado por costo |
 | **Rev. 0 · vista completa** (congelada) | `rev0/index.html` | Control de proyecto: valor ganado, todas las OT, riesgos, adicionales y acciones |
 

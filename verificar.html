@@ -35,7 +35,7 @@
     td.d { white-space: nowrap; }
     .ok { color: var(--ok); font-weight: 700; }
     .warn { color: var(--warn); font-weight: 700; }
-    .err { color: var(--err); font-weight: 700; }
+    .err, .late { color: var(--err); font-weight: 700; }
     .muted { color: var(--ink-3); }
     code { font-size: 11.5px; background: rgba(127,127,127,.12); padding: 1px 4px; border-radius: 4px; }
     ul { margin: 0; padding: 10px 14px 12px 32px; }
@@ -52,113 +52,160 @@
 
   <script src="monday.js"></script>
   <script>
+  // Verificación independiente: vuelve a leer el crudo de Monday (monday/crudo/kelly.json) con su propio código
+  // y lo compara con monday.js, que es lo que usa el dashboard.
   (async function () {
     const app = document.getElementById("app");
     const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     const DAY = 864e5, days = (a, b) => Math.round((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / DAY);
     const rango = (t) => { const m = t && String(t).match(/^\s*(\d{4}-\d{2}-\d{2})\s*-\s*(\d{4}-\d{2}-\d{2})\s*$/); return m ? [m[1], m[2]] : null; };
-    const num = (t) => (t == null || t === "" || t === "null" ? null : Number(t));
+    const num = (t) => (t == null || t === "" || t === "null" || isNaN(Number(String(t).replace(/,/g, ""))) ? null : Number(String(t).replace(/,/g, "")));
     const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
     const fr = (r) => (r ? (r[0] === r[1] ? r[0] : r[0] + " → " + r[1]) : "—");
-    const get = async (p) => { const r = await fetch(p, { cache: "no-store" }); if (!r.ok) throw new Error(p + ": HTTP " + r.status); return r.json(); };
+    const m$ = (v) => "US$ " + Math.round(v || 0).toLocaleString("en-US");
     const MD = window.DIQUE_MONDAY;
-    let crudo, P;
+    let raw;
     try {
-      crudo = await get("monday/crudo/cronograma.json");
-      P = { ingenieria: await get("monday/crudo/p1.json"), cubierta: await get("monday/crudo/p2.json"), tecnico: await get("monday/crudo/p3.json") };
+      const r = await fetch("monday/crudo/kelly.json", { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      raw = await r.json();
     } catch (e) {
-      app.innerHTML = `<p class="err">No se pudieron leer los datos crudos (${esc(e.message)}). Abre esta página desde el servidor o desde GitHub Pages.</p>`;
+      app.innerHTML = `<p class="err">No se pudo leer monday/crudo/kelly.json (${esc(e.message)}). Abre esta página desde el servidor o desde GitHub Pages.</p>`;
       return;
     }
-    if (!MD) { app.innerHTML = '<p class="err">Falta monday.js.</p>'; return; }
-    document.getElementById("sub").innerHTML = `Lectura de Monday: <b>${esc(crudo.extraido || MD.extraido)}</b> · tablero <b>${esc(crudo.board.name)}</b> (${esc(crudo.board.id)}). <a href="index.html">Volver al dashboard</a>`;
+    if (!MD || !MD.areas) { app.innerHTML = '<p class="err">Falta monday.js o está en un formato anterior.</p>'; return; }
+
+    // Lectura del crudo: valor de cada columna tal como lo muestra Monday
+    const board = (id) => raw.boards.find((b) => b.id === id);
+    const val = (it, cid) => { const c = it.column_values.find((x) => x.id === cid); if (!c) return undefined; return c.type === "mirror" || c.type === "formula" ? c.display_value : c.type === "board_relation" ? c.linked_item_ids || [] : c.text; };
 
     let nOk = 0, nWarn = 0, nErr = 0;
-    // Si todo está bien se muestra una sola línea; los avisos y errores siempre se listan
-    const resumen = (cs) => { const bad = cs.filter((c) => !c.includes('class="ok"')); return (bad.length < cs.length && !bad.some((c) => c.includes('class="err"')) ? `<div class="ok">✓ ${cs.length - bad.length} de ${cs.length} coinciden</div>` : "") + bad.join(""); };
     const mark = (lvl, txt) => { if (lvl === "ok") nOk++; else if (lvl === "warn") nWarn++; else nErr++; return `<div class="${lvl === "ok" ? "ok" : lvl === "warn" ? "warn" : "err"}">${lvl === "ok" ? "✓" : lvl === "warn" ? "⚠" : "✗"} ${txt}</div>`; };
+    const resumen = (cs) => { const bad = cs.filter((c) => !c.includes('class="ok"')); return (bad.length < cs.length && !bad.some((c) => c.includes('class="err"')) ? `<div class="ok">✓ ${cs.length - bad.length} de ${cs.length} coinciden</div>` : "") + bad.join(""); };
+    const eq = (a, b) => Math.abs((a || 0) - (b || 0)) < 0.5;
 
-    // 1. Cronograma: Monday (texto crudo) contra lo que usa el dashboard (monday.js) y cómo se dibuja
+    // 1. Cronograma
+    const CB = board("18431008651");
     const C = { estado: "color_mm6v6vf2", duracion: "numeric_mm6zgcqw", real: "timerange_mm78kjs", base: "timerange_mm7yfj5p", dif: "formula_mm7ygv4s" };
-    const dibujo = (d, nombre) => {
-      if (!d.real) return "No se dibuja (sin Fecha Real)";
-      if (d.duracion === 0) return "Hito ◆ · fila " + d.grupo;
-      if (/traslado|planificaci|ejecuci/i.test(nombre)) return "Barra · fila " + d.grupo + '<div class="muted">fina si se monta sobre otra de la fila</div>';
-      return "Barra fina (actividad) · fila " + d.grupo;
-    };
-    const rows = crudo.items.map((it, i) => {
-      const cv = it.column_values, d = MD.cronograma[i] || {};
+    const cronoRows = CB.items_page.items.map((it) => {
+      const d = MD.cronograma.find((x) => x.id === it.id) || {};
       const nombre = it.name.replace(/\s+/g, " ").trim();
-      const realM = rango(cv[C.real]), baseM = rango(cv[C.base]), difM = num(cv[C.dif]), durM = num(cv[C.duracion]);
-      const checks = [];
-      checks.push(d.nombre === nombre ? mark("ok", "mismo elemento") : mark("err", `en el dashboard es "${esc(d.nombre)}"`));
-      checks.push(same(d.real, realM) ? mark("ok", "Fecha Real igual") : mark("err", "Fecha Real distinta"));
-      checks.push(same(d.base, baseM) ? mark("ok", "Línea Base igual") : mark("err", "Línea Base distinta"));
-      checks.push(d.estado === (cv[C.estado] || "") ? mark("ok", "Estado igual") : mark("err", "Estado distinto"));
+      const realM = rango(val(it, C.real)), baseM = rango(val(it, C.base)), difM = num(val(it, C.dif)), durM = num(val(it, C.duracion));
+      const ck = [];
+      ck.push(d.id ? mark("ok", "está en el dashboard") : mark("err", "no está en el dashboard"));
+      ck.push(same(d.real || null, realM) ? mark("ok", "Fecha Real igual") : mark("err", "Fecha Real distinta"));
+      ck.push(same(d.base || null, baseM) ? mark("ok", "Línea Base igual") : mark("err", "Línea Base distinta"));
+      ck.push((d.estado || "") === (val(it, C.estado) || "") ? mark("ok", "Estado igual") : mark("err", "Estado distinto"));
       let calc = null;
-      if (realM && baseM) {
-        calc = days(baseM[1], realM[1]);
-        checks.push(difM === calc ? mark("ok", "Diferencia coincide") : mark("err", `Diferencia: Monday ${difM}, recalculada ${calc}`));
-      }
-      if (realM && durM > 0 && Math.abs(days(realM[0], realM[1]) + 1 - durM) > 1) checks.push(mark("warn", `Duración ${durM} d, la Fecha Real cubre ${days(realM[0], realM[1]) + 1} d`));
-      if (!realM) checks.push(mark("warn", "sin fechas en Monday"));
-      const atraso = difM > 0 ? `<span class="err">+${difM} d</span>` : difM < 0 ? `${difM} d` : difM === 0 ? "0" : "—";
-      return `<tr><td><b>${esc(nombre)}</b><div class="muted">${esc(it.group)} · ${esc(cv[C.estado] || "")}</div></td>
-        <td class="d">${esc(cv[C.real] || "—")}<div class="muted">${fr(d.real)}</div></td>
-        <td class="d">${esc(cv[C.base] || "—")}<div class="muted">${fr(d.base)}</div></td>
-        <td class="n">${atraso}<div class="muted">${calc == null ? "—" : "calc. " + calc}</div></td>
-        <td class="n">${durM == null ? "—" : durM}</td>
-        <td>${dibujo(d, nombre)}</td><td>${resumen(checks)}</td></tr>`;
+      if (realM && baseM) { calc = days(baseM[1], realM[1]); ck.push(difM === calc ? mark("ok", "Diferencia coincide") : mark("err", `Diferencia: Monday ${difM}, recalculada ${calc}`)); }
+      if (realM && durM > 0 && Math.abs(days(realM[0], realM[1]) + 1 - durM) > 1) ck.push(mark("warn", `Duración ${durM} d, la Fecha Real cubre ${days(realM[0], realM[1]) + 1} d`));
+      if (!realM) ck.push(mark("warn", "sin fechas en Monday: no se dibuja"));
+      const atr = difM > 0 ? `<span class="late">+${difM} d</span>` : difM == null ? "—" : difM + " d";
+      return `<tr><td><b>${esc(nombre)}</b><div class="muted">${esc(it.group.title)} · ${esc(val(it, C.estado) || "")}${durM === 0 ? " · hito" : ""}</div></td>
+        <td class="d">${esc(val(it, C.real) || "—")}<div class="muted">${fr(d.real)}</div></td><td class="d">${esc(val(it, C.base) || "—")}<div class="muted">${fr(d.base)}</div></td>
+        <td class="n">${atr}<div class="muted">${calc == null ? "—" : "calc. " + calc}</div></td><td>${resumen(ck)}</td></tr>`;
     }).join("");
-    const extra = MD.cronograma.length !== crudo.items.length ? mark("err", `Monday tiene ${crudo.items.length} elementos y el dashboard ${MD.cronograma.length}`) : "";
 
-    // 2. Avance de P1, P2 y P3: recalculado aquí desde los datos crudos y comparado con monday.js
-    const COL = { ingenieria: ["color_mm7yb2cs", "numeric_mm7yw5hx"], cubierta: ["color_mm7y4j97", "numeric_mm7y9sbv"], tecnico: ["color_mm7vv5nh", "numeric_mm7v7xt9"] };
+    // 2 y 3. Trabajos de P1, P2 y P3: avance y costos, recalculados desde el crudo
+    const P = {
+      ingenieria: { id: "18431019817", e: "color_mm7yb2cs", d: "numeric_mm7yw5hx", pr: "numeric_mm7y9v4k", po: "lookup_mm7yk7y7", inc: "lookup_mm7yh3hm" },
+      cubierta: { id: "18432105237", e: "color_mm7y4j97", d: "numeric_mm7y9sbv", pr: "numeric_mm7yw4b3", po: "lookup_mm7y2awx", inc: "lookup_mm7ybkjg" },
+      tecnico: { id: "18432105438", e: "color_mm7vv5nh", d: "numeric_mm7v7xt9", pr: "numeric_mm7y6h6f", po: "lookup_mm7ywkfv", inc: "lookup_mm7ym614" }
+    };
     const PCT = { "0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100 };
-    const tot = { lineas: 0, conDuracion: 0, duracion: 0, avanceDias: 0 };
-    const avRows = Object.keys(COL).map((k) => {
-      const [ce, cd] = COL[k], r = { lineas: 0, conDuracion: 0, duracion: 0, avanceDias: 0 }, est = {};
-      P[k].items.forEach((it) => {
-        const e = it.column_values[ce];
+    const lineas = new Map(); // id -> costos leídos del crudo (para comprobar los centros de costo)
+    const tot = { n: 0, conD: 0, dur: 0, avd: 0, sol: 0, apr: 0, pro: 0, po: 0, inc: 0 };
+    const avRows = [], costRows = [];
+    Object.entries(P).forEach(([k, c]) => {
+      const b = board(c.id), a = MD.areas.find((x) => x.id === k) || { trabajos: [] };
+      const r = { n: 0, conD: 0, dur: 0, avd: 0, sol: 0, apr: 0, pro: 0, po: 0, inc: 0 }, est = {};
+      b.items_page.items.forEach((it) => {
+        const e = val(it, c.e) || "";
         est[e || "(vacío)"] = (est[e || "(vacío)"] || 0) + 1;
+        const L = { sol: num(val(it, "numeric_mm6vjdrd")) || 0, rev: num(val(it, "numeric_mm78kpas")) || 0, apr: num(val(it, "numeric_mm78s0hd")) || 0, pro: num(val(it, c.pr)) || 0, po: num(val(it, c.po)) || 0, inc: num(val(it, c.inc)) || 0 };
+        lineas.set(it.id, L);
         if (e === "Cancelado") return;
-        r.lineas++;
-        const d = num(it.column_values[cd]);
-        if (d > 0) { r.conDuracion++; r.duracion += d; r.avanceDias += (d * (PCT[e] || 0)) / 100; }
+        r.n++;
+        const d = num(val(it, c.d));
+        if (d > 0) { r.conD++; r.dur += d; r.avd += (d * (PCT[e] || 0)) / 100; }
+        r.sol += L.sol; r.apr += L.apr; r.pro += L.pro; r.po += L.po; r.inc += L.inc;
       });
       Object.keys(tot).forEach((x) => (tot[x] += r[x]));
-      const m = MD.avance[k] || {};
-      const pc = r.duracion ? (r.avanceDias / r.duracion) * 100 : 0, pm = m.duracion ? (m.avanceDias / m.duracion) * 100 : 0;
-      const ok = r.lineas === m.lineas && r.conDuracion === m.conDuracion && Math.abs(pc - pm) < 0.05;
-      return `<tr><td><b>${esc(P[k].board.name)}</b><div class="muted">${Object.entries(est).map(([e, n]) => esc(e) + ": " + n).join(" · ")}</div></td>
-        <td class="n">${r.lineas}</td><td class="n">${r.conDuracion}</td><td class="n">${r.duracion}</td>
-        <td class="n"><b>${pc.toFixed(1)}%</b></td><td class="n">${pm.toFixed(1)}%</td>
-        <td>${ok ? mark("ok", "coincide") : mark("err", "no coincide")}${r.lineas && !r.conDuracion ? mark("warn", "ningún trabajo tiene Duración: el avance se muestra 0 %") : ""}</td></tr>`;
+      const act = a.trabajos.filter((t) => !t.cancelado), s = (f) => act.reduce((x, t) => x + (t[f] || 0), 0);
+      const dCon = act.filter((t) => t.duracion > 0), dDur = dCon.reduce((x, t) => x + t.duracion, 0);
+      const pc = r.dur ? (r.avd / r.dur) * 100 : 0, pm = dDur ? (dCon.reduce((x, t) => x + t.duracion * t.pct, 0) / dDur) : 0;
+      avRows.push(`<tr><td><b>${esc(b.name)}</b><div class="muted">${Object.entries(est).map(([e, n]) => esc(e) + ": " + n).join(" · ")}</div></td>
+        <td class="n">${r.n}</td><td class="n">${r.conD}</td><td class="n">${r.dur}</td><td class="n"><b>${pc.toFixed(1)}%</b></td><td class="n">${pm.toFixed(1)}%</td>
+        <td>${resumen([r.n === act.length ? mark("ok", "trabajos") : mark("err", `trabajos: ${r.n} en Monday, ${act.length} en el dashboard`), Math.abs(pc - pm) < 0.05 ? mark("ok", "avance") : mark("err", "avance distinto")].concat(r.n && !r.conD ? [mark("warn", "ningún trabajo tiene Duración: el avance se muestra 0 %")] : []))}</td></tr>`);
+      const cmp = [["sol", "solicitado"], ["apr", "aprobado"], ["pro", "proyectado"], ["po", "po"], ["inc", "incurrido"]].map(([x, f]) => (eq(r[x], s(f)) ? mark("ok", f) : mark("err", `${f}: Monday ${m$(r[x])}, dashboard ${m$(s(f))}`)));
+      costRows.push(`<tr><td><b>${esc(b.name)}</b></td><td class="n">${m$(r.sol)}</td><td class="n">${m$(r.apr)}</td><td class="n">${m$(r.pro)}</td><td class="n">${m$(r.po)}</td><td class="n">${m$(r.inc)}</td><td>${resumen(cmp)}</td></tr>`);
+    });
+
+    // 4. Centros de costo: el tablero CC contra el dashboard y contra la suma de sus líneas
+    const CCB = board("18431746322");
+    const F = { rev: "formula_mm7d91f2", apr: "formula_mm7dehmt", po: "formula_mm7yshcc", inc: "formula_mm7yyr9q", pro: "formula_mm7ydqr4", lin: "board_relation_mm7a4ck0" };
+    const ccTot = { apr: 0, pro: 0, po: 0, inc: 0 };
+    const ccRows = CCB.items_page.items.map((it) => {
+      const d = MD.centros.find((x) => x.id === it.id) || {};
+      const v = { rev: num(val(it, F.rev)) || 0, apr: num(val(it, F.apr)) || 0, po: num(val(it, F.po)) || 0, inc: num(val(it, F.inc)) || 0, pro: num(val(it, F.pro)) || 0 };
+      Object.keys(ccTot).forEach((x) => (ccTot[x] += v[x]));
+      const ids = val(it, F.lin) || [];
+      const sl = (x) => ids.reduce((a, id) => a + ((lineas.get(id) || {})[x] || 0), 0);
+      const ck = [
+        eq(v.apr, d.aprobado) && eq(v.pro, d.proyectado) && eq(v.po, d.po) && eq(v.inc, d.incurrido) ? mark("ok", "montos iguales en el dashboard") : mark("err", "montos distintos en el dashboard"),
+        eq(v.apr, sl("apr")) ? mark("ok", "aprobado = Σ líneas") : mark("err", `aprobado ${m$(v.apr)} ≠ Σ líneas ${m$(sl("apr"))}`),
+        eq(v.rev, sl("rev")) ? mark("ok", "revisado = Σ líneas") : mark("err", `revisado ${m$(v.rev)} ≠ Σ líneas ${m$(sl("rev"))}`),
+        eq(v.pro, sl("pro")) ? mark("ok", "proyectado = Σ líneas") : mark("err", `proyectado ${m$(v.pro)} ≠ Σ líneas ${m$(sl("pro"))}`)
+      ];
+      const sinLinea = ids.filter((id) => !lineas.has(id)).length;
+      if (sinLinea) ck.push(mark("warn", `${sinLinea} línea(s) conectada(s) fuera de P1, P2 y P3`));
+      return `<tr><td><b>${esc(it.name)}</b><div class="muted">Grupo ${esc(it.group.title)} · ${ids.length} línea(s)</div></td><td class="n">${m$(v.apr)}</td><td class="n">${m$(v.pro)}</td><td class="n">${m$(v.po)}</td><td class="n">${m$(v.inc)}</td><td>${resumen(ck)}</td></tr>`;
     }).join("");
+    const dashTot = ["aprobado", "proyectado", "po", "incurrido"].map((f) => MD.centros.reduce((a, c) => a + (c[f] || 0), 0));
+
+    // 5. Lo que no tiene datos en Monday (no son errores de lectura)
+    const sinCC = MD.areas.flatMap((a) => a.trabajos.filter((t) => !t.cancelado && !t.cc.length).map((t) => `${esc(t.nombre)} <span class="muted">(${esc(a.nombre)})</span>`));
+    const pend = MD.areas.flatMap((a) => a.trabajos).filter((t) => !t.cancelado && t.solicitado && !t.aprobado);
+    const nPos = board("18431381932").items_page.items.length, nCam = board("18431380804").items_page.items.length;
+    // Se calcula antes de armar la página para que los contadores incluyan estos avisos
+    const falta = [
+      pend.length ? mark("warn", `${pend.length} trabajo(s) con monto solicitado sin aprobar: ${m$(pend.reduce((a, t) => a + t.solicitado, 0))}`) : mark("ok", "sin montos pendientes de aprobación"),
+      sinCC.length ? mark("warn", `${sinCC.length} trabajo(s) sin Centro de Costo: ${sinCC.join(", ")}`) : mark("ok", "todos los trabajos tienen Centro de Costo"),
+      nPos ? mark("ok", `${nPos} órdenes de compra`) : mark("warn", "el tablero POs no tiene órdenes de compra: PO e Incurrido quedan en 0"),
+      nCam ? mark("ok", `${nCam} cambios o imprevistos`) : '<span class="muted">El tablero Cambios/Imprevistos no tiene registros.</span>'
+    ];
+    const totOk = eq(ccTot.apr, dashTot[0]) && eq(ccTot.pro, dashTot[1]) && eq(ccTot.po, dashTot[2]) && eq(ccTot.inc, dashTot[3]) ? mark("ok", "totales iguales") : mark("err", "totales distintos");
 
     app.innerHTML = `
       <div class="chips">
         <div class="chip"><small>Coincidencias</small><b class="ok">${nOk}</b></div>
         <div class="chip"><small>Avisos</small><b class="warn">${nWarn}</b></div>
         <div class="chip"><small>Errores</small><b class="${nErr ? "err" : "ok"}">${nErr}</b></div>
-        <div class="chip"><small>Elementos del Cronograma</small><b>${crudo.items.length}</b></div>
-        <div class="chip"><small>Trabajos P1 + P2 + P3</small><b>${tot.lineas}</b></div>
+        <div class="chip"><small>Trabajos P1 + P2 + P3</small><b>${tot.n}</b></div>
+        <div class="chip"><small>Centros de costo</small><b>${CCB.items_page.items.length}</b></div>
+        <div class="chip"><small>POs · Cambios</small><b>${nPos} · ${nCam}</b></div>
       </div>
       <section><h2>1 · Tablero Cronograma</h2>
-        <div class="note">Arriba de cada celda está el texto tal como viene de Monday; debajo, lo que usa el dashboard. La barra del cronograma usa la <b>Fecha Real</b> y muestra la <b>Línea Base</b> como referencia. El atraso es la columna <b>Diferencia</b>: se recalcula como fin real − fin base para comprobarla. ${extra}</div>
-        <div class="scroll"><table><thead><tr><th>Elemento</th><th>Fecha Real</th><th>Línea Base</th><th>Diferencia</th><th>Duración</th><th>Cómo se muestra</th><th>Revisión</th></tr></thead><tbody>${rows}</tbody></table></div>
-      </section>
-      <section><h2>2 · Avance de los trabajos (P1, P2 y P3)</h2>
-        <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Se recalcula aquí desde los datos crudos y se compara con lo que muestra el dashboard.</div>
-        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Con duración</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows}</tbody></table></div>
-      </section>
+        <div class="note">Arriba de cada celda está el texto tal como viene de Monday; debajo, lo que usa el dashboard. El atraso es la columna <b>Diferencia</b>, que aquí se recalcula como fin real − fin base.</div>
+        <div class="scroll"><table><thead><tr><th>Elemento</th><th>Fecha Real</th><th>Línea Base</th><th>Diferencia</th><th>Revisión</th></tr></thead><tbody>${cronoRows}</tbody></table></div></section>
+      <section><h2>2 · Avance físico (P1, P2 y P3)</h2>
+        <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Total recalculado: <b>${(tot.dur ? (tot.avd / tot.dur) * 100 : 0).toFixed(1)}%</b> con ${tot.conD} de ${tot.n} trabajos con duración.</div>
+        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Con duración</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows.join("")}</tbody></table></div></section>
+      <section><h2>3 · Costos por área</h2>
+        <div class="note">Suma de las columnas de cada trabajo: $ Solicitado, $ Aprobado Dirección, $ Proyectado, $PO Total e $Incurrido (las dos últimas vienen de las POs enlazadas).</div>
+        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Solicitado</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${costRows.join("")}</tbody></table></div></section>
+      <section><h2>4 · Centros de costo</h2>
+        <div class="note">Los totales del resumen gerencial salen de este tablero. Cada centro debe sumar sus líneas conectadas de P1, P2 y P3. Total en Monday: aprobado ${m$(ccTot.apr)} · proyectado ${m$(ccTot.pro)} · PO ${m$(ccTot.po)} · incurrido ${m$(ccTot.inc)}. En el dashboard: ${dashTot.map(m$).join(" · ")} ${totOk}</div>
+        <div class="scroll"><table><thead><tr><th>Centro de costo</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${ccRows}</tbody></table></div></section>
+      <section><h2>5 · Datos que faltan en Monday</h2>
+        <ul>${falta.map((x) => `<li>${x}</li>`).join("")}</ul></section>
       <section><h2>Cómo se actualiza</h2>
         <ul>
-          <li>Los datos de Monday quedan guardados tal cual en <code>monday/crudo/</code>.</li>
-          <li><code>python monday/generar.py</code> los convierte en <code>monday.js</code> y revisa que sean coherentes.</li>
-          <li>Esta página vuelve a hacer las cuentas por su lado y las compara.</li>
-        </ul>
-      </section>`;
+          <li>La lectura de Monday queda guardada tal cual en <code>monday/crudo/kelly.json</code> (leída el ${esc(raw.extraido || "—")}).</li>
+          <li><code>python monday/generar.py</code> la convierte en <code>monday.js</code> y revisa que sea coherente.</li>
+          <li>Esta página vuelve a leer el crudo con su propio cálculo y lo compara con el dashboard.</li>
+        </ul></section>`;
+    document.getElementById("sub").innerHTML = `Lectura de Monday: <b>${esc(raw.extraido || MD.extraido)}</b> · espacio GESTIÓN DE DIQUES / KELLY TRADER · 7 tableros. <a href="index.html">Volver al dashboard</a>`;
   })();
   </script>
 </body>
