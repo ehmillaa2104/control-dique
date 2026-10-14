@@ -72,7 +72,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 ## Diseño
 
 - Paleta corporativa blanco y negro. El rojo solo para alertas (atrasos, vencidos, datos faltantes) y el ámbar para lo pendiente de aprobar. Las fases del cronograma y el semáforo de participación son los únicos lugares con color propio.
-- Poca información a la vista. El detalle va en desplegables y tooltips. No mostrar "última actividad en Monday": el usuario pidió quitarla.
+- Poca información a la vista. El detalle va en desplegables y tooltips. No mostrar "última actividad en Monday" ni la tarjeta de participación por equipo a la derecha del resumen: el usuario pidió quitarlas (la participación va en el indicador del equipo y en una línea de cada tarjeta de área).
 - Debe verse bien en celular.
 
 ## Publicación

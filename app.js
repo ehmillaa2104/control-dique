@@ -430,7 +430,7 @@
     const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
-      <div class="row-b">${centrosCard(M)}<div class="stack">${partCard(M)}${cambiosCard(M)}</div></div>
+      <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
 
