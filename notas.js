@@ -8,6 +8,6 @@ window.DIQUE_NOTAS = {
   "presupuesto": {
     "estado": "Dirección solicitó cambios",
     "fecha": "2026-10-14",
-    "detalle": "Dirección revisó el presupuesto preliminar y pidió cambios antes de aprobarlo."
+    "detalle": "Dirección revisó el presupuesto preliminar de US$ 1.09 M y pidió cambios antes de aprobarlo."
   }
 };
