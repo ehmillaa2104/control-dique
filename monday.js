@@ -4741,7 +4741,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4765,7 +4765,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 35,
      "tipo": "",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -5442,18 +5442,47 @@ window.DIQUE_MONDAY = {
   },
   "tecnico": {
    "lineas": 9,
-   "conDuracion": 6,
-   "duracion": 40,
+   "conDuracion": 8,
+   "duracion": 76,
    "avanceDias": 0.0
   },
   "total": {
    "lineas": 195,
-   "conDuracion": 43,
-   "duracion": 123,
+   "conDuracion": 45,
+   "duracion": 159,
    "avanceDias": 12.0
   }
  },
+ "_huella": "6746af067d97",
+ "cambiosLectura": [
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Gasto de Clase",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "35"
+  }
+ ],
  "observaciones": [
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico: columna nueva \"link to POs Kelly Trader\" (board_relation_mm845vmr, board_relation); revisar si el dashboard debe usarla."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8458dc, board_relation); revisar si el dashboard debe usarla."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8418w8, board_relation); revisar si el dashboard debe usarla."
+  },
   {
    "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-09) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
@@ -5488,7 +5517,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 6 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 6 por iniciar."
+   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 8 por iniciar."
   },
   {
    "nivel": "info",

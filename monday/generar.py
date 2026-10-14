@@ -22,6 +22,7 @@ from pathlib import Path
 AQUI = Path(__file__).resolve().parent
 CRUDO = AQUI / "crudo" / "kelly.json"
 SALIDA = AQUI.parent / "monday.js"
+CONOCIDAS = AQUI / "columnas_conocidas.json"  # estructura de los tableros la última vez que se revisó
 
 # Tableros del Kelly Trader y sus columnas (ID de columna en Monday)
 TABLEROS = {
@@ -252,6 +253,82 @@ def cambios(tab):
     return sorted(out, key=lambda c: c["creado"] or "", reverse=True)
 
 
+def revisar_columnas(raw):
+    """Compara las columnas de cada tablero con las conocidas: nuevas, borradas, renombradas o con otro tipo.
+    Si cambia una columna que usa el dashboard, es un aviso fuerte: hay que revisar el mapeo antes de publicar."""
+    actual = {b["id"]: {c["id"]: {"title": c["title"], "type": c["type"]} for c in b.get("columns", [])} for b in raw["boards"]}
+    if not any(actual.values()):
+        obs.append(("aviso", "La lectura no trae las columnas de los tableros; no se pudo revisar si cambiaron (usar la consulta con columns { id title type })."))
+        return actual
+    conocidas = json.loads(CONOCIDAS.read_text(encoding="utf-8")) if CONOCIDAS.exists() else {}
+    nombres = {b["id"]: b["name"] for b in raw["boards"]}
+    usadas = {t["id"]: set(t["col"].values()) for t in TABLEROS.values()}
+    for bid, cols in actual.items():
+        antes = conocidas.get(bid)
+        if antes is None:
+            continue
+        tb = nombres.get(bid, bid)
+        for cid, c in cols.items():
+            if cid not in antes:
+                obs.append(("aviso", f'{tb}: columna nueva "{c["title"]}" ({cid}, {c["type"]}); revisar si el dashboard debe usarla.'))
+            elif antes[cid]["title"] != c["title"]:
+                nivel = "aviso" if cid in usadas.get(bid, ()) else "info"
+                obs.append((nivel, f'{tb}: la columna "{antes[cid]["title"]}" ahora se llama "{c["title"]}" ({cid}){"; la usa el dashboard: revisar que siga significando lo mismo" if nivel == "aviso" else ""}.'))
+            elif antes[cid]["type"] != c["type"]:
+                obs.append(("aviso", f'{tb}: la columna "{c["title"]}" cambió de tipo {antes[cid]["type"]} → {c["type"]}.'))
+        for cid, c in antes.items():
+            if cid not in cols:
+                nivel = "error" if cid in usadas.get(bid, ()) else "aviso"
+                obs.append((nivel, f'{tb}: se borró la columna "{c["title"]}" ({cid}){"; la usa el dashboard" if nivel == "error" else ""}.'))
+    return actual
+
+
+# Campos que se comparan contra la lectura anterior (lo que más interesa revisar: duración, avance, fechas y montos)
+CAMPOS_TRABAJO = {"duracion": "Duración", "estado": "Estado", "fase": "Fase", "fin": "Fecha Fin", "solicitado": "$ Solicitado",
+                  "revisado": "$ Revisado Gerencia", "aprobado": "$ Aprobado", "proyectado": "$ Proyectado", "po": "$ PO",
+                  "incurrido": "$ Incurrido", "aprobacion": "Estado Aprobación", "cc": "Centro de Costo"}
+CAMPOS_CRONO = {"estado": "Estado", "real": "Fecha Real", "base": "Línea Base", "diferencia": "Diferencia", "duracion": "Duración"}
+
+
+def comparar_con_anterior(datos):
+    """Lista lo que cambió desde la lectura anterior (la que está hoy en monday.js)."""
+    if not SALIDA.exists():
+        return []
+    txt = SALIDA.read_text(encoding="utf-8")
+    m = re.search(r"window\.DIQUE_MONDAY = (\{.*\});\s*$", txt, re.S)
+    if not m:
+        return []
+    ant = json.loads(m.group(1))
+    if ant.get("extraido") == datos["extraido"] and ant.get("cambiosLectura") and ant.get("_huella") == datos["_huella"]:
+        return ant["cambiosLectura"]  # misma lectura: se conserva la comparación ya hecha
+    cambios = []
+    fmt = lambda v: "—" if v in (None, "", []) else (" → ".join(v) if isinstance(v, list) and v and isinstance(v[0], str) and re.match(r"\d{4}-", v[0]) else str(v))
+    a_crono = {r["id"]: r for r in ant.get("cronograma", [])}
+    for r in datos["cronograma"]:
+        o = a_crono.get(r["id"])
+        if not o:
+            cambios.append({"tablero": "Cronograma", "trabajo": r["nombre"], "campo": "nuevo", "antes": "", "ahora": ""})
+            continue
+        for k, n in CAMPOS_CRONO.items():
+            if o.get(k) != r.get(k):
+                cambios.append({"tablero": "Cronograma", "trabajo": r["nombre"], "campo": n, "antes": fmt(o.get(k)), "ahora": fmt(r.get(k))})
+    a_trab = {t["id"]: t for a in ant.get("areas", []) for t in a["trabajos"]}
+    for a in datos["areas"]:
+        ids = set()
+        for t in a["trabajos"]:
+            ids.add(t["id"])
+            o = a_trab.get(t["id"])
+            if not o:
+                cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": "nuevo", "antes": "", "ahora": ""})
+                continue
+            for k, n in CAMPOS_TRABAJO.items():
+                if o.get(k) != t.get(k):
+                    cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": n, "antes": fmt(o.get(k)), "ahora": fmt(t.get(k))})
+        for o in [x for x in next((y["trabajos"] for y in ant.get("areas", []) if y["id"] == a["id"]), []) if x["id"] not in ids]:
+            cambios.append({"tablero": a["tablero"], "trabajo": o["nombre"], "campo": "borrado", "antes": "", "ahora": ""})
+    return cambios
+
+
 def recortar(raw):
     """Deja en el crudo solo las columnas que usa el dashboard (sin personas, descripciones ni archivos)."""
     usadas = {t["id"]: set(t["col"].values()) for t in TABLEROS.values()}
@@ -264,6 +341,7 @@ def recortar(raw):
 
 def main():
     raw, tab = leer()
+    columnas = revisar_columnas(raw)
     if "--recortar" in sys.argv:
         CRUDO.write_text(json.dumps(recortar(raw), ensure_ascii=False, indent=1), encoding="utf-8")
     hoy = raw.get("extraido") or date.today().isoformat()
@@ -288,6 +366,12 @@ def main():
             tot[k] += r[k]
     av["total"] = tot
     datos["avance"] = av
+    import hashlib
+    datos["_huella"] = hashlib.sha1(CRUDO.read_bytes()).hexdigest()[:12]
+    datos["cambiosLectura"] = comparar_con_anterior(datos)
+    if "--aceptar-columnas" in sys.argv or not CONOCIDAS.exists():
+        CONOCIDAS.write_text(json.dumps(columnas, ensure_ascii=False, indent=1), encoding="utf-8")
+        obs.append(("info", "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."))
     datos["observaciones"] = [{"nivel": n, "texto": t} for n, t in obs]
 
     SALIDA.write_text(
@@ -299,6 +383,12 @@ def main():
     print(f"monday.js generado · cronograma {n['cronograma']} · trabajos {tot['lineas']} · centros de costo {n['centros']} · POs {n['pos']} · cambios {n['cambios']}")
     for nivel, txt in obs:
         print(f"  [{nivel}] {txt}")
+    cl = datos["cambiosLectura"]
+    print(f"Cambios desde la lectura anterior: {len(cl)}")
+    for c in cl[:60]:
+        print(f'  · {c["tablero"]} · {c["trabajo"][:60]} · {c["campo"]}' + (f': {c["antes"]} → {c["ahora"]}' if c["campo"] not in ("nuevo", "borrado") else ""))
+    if len(cl) > 60:
+        print(f"  … y {len(cl) - 60} más (ver verificar.html)")
     errores = [o for o in obs if o[0] == "error"]
     if errores:
         print(f"{len(errores)} error(es): revisar antes de publicar.")

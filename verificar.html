@@ -199,7 +199,10 @@
         <div class="scroll"><table><thead><tr><th>Centro de costo</th><th>Preliminar</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${ccRows}</tbody></table></div></section>
       <section><h2>5 · Datos que faltan en Monday</h2>
         <ul>${falta.map((x) => `<li>${x}</li>`).join("")}</ul></section>
-      <section><h2>6 · Observaciones del conversor (monday/generar.py)</h2>
+      <section><h2>6 · Cambios desde la lectura anterior</h2>
+        <div class="note">Lo que cambió en Monday entre la lectura anterior y esta: duración, estado, fase, fechas, montos y centro de costo de cada trabajo, y fechas y estado del cronograma. Los cambios de columnas de los tableros aparecen en la sección 7.</div>
+        ${(MD.cambiosLectura || []).length ? `<div class="scroll"><table><thead><tr><th>Tablero</th><th>Elemento</th><th>Campo</th><th>Antes</th><th>Ahora</th></tr></thead><tbody>${MD.cambiosLectura.map((c) => `<tr><td>${esc(c.tablero)}</td><td><b>${esc(c.trabajo)}</b></td><td class="${/duraci/i.test(c.campo) ? "warn" : ""}">${esc(c.campo)}</td><td>${esc(c.antes)}</td><td>${esc(c.ahora)}</td></tr>`).join("")}</tbody></table></div>` : '<ul><li class="muted">Sin cambios desde la lectura anterior.</li></ul>'}</section>
+      <section><h2>7 · Observaciones del conversor (monday/generar.py)</h2>
         <ul>${(MD.observaciones || []).map((o) => `<li class="${o.nivel === "error" ? "err" : o.nivel === "aviso" ? "warn" : "muted"}">${o.nivel === "error" ? "✗" : o.nivel === "aviso" ? "⚠" : "·"} ${esc(o.texto)}</li>`).join("") || '<li class="ok">✓ Sin observaciones</li>'}</ul></section>
       <section><h2>Cómo se actualiza</h2>
         <ul>

@@ -128,6 +128,11 @@ Monday API ──una consulta──▶ monday/crudo/kelly.json ──python mond
 
 Para actualizar, se repite la consulta a Monday, se guarda en `monday/crudo/kelly.json` y se corre `python monday/generar.py --recortar`.
 
+## Cambios de columnas detectados
+
+- **14 oct 2026:** en P1, P2 y P3 se agregó una columna nueva, "link to POs Kelly Trader" (`board_relation_mm8418w8`, `board_relation_mm8458dc` y `board_relation_mm845vmr`). Es aparte de la conexión a POs que ya existía y que alimenta `$PO Total` e `$Incurrido`. Por ahora está vacía: falta definir cuál de las dos se va a usar.
+- **14 oct 2026:** en POs, "Conectar tableros" pasó a llamarse "Actividad relacionada" (`board_relation_mm7y2fcq`). Significa lo mismo.
+
 ## Lo que falta o está incompleto
 
 1. **P1 Ingeniería y P3 Técnico están vacíos.** Ninguna de sus 152 líneas tiene montos, responsable, Fecha Fin ni Duración. Todas están en 0 % y P1 tiene la Fase en "No Aplica".

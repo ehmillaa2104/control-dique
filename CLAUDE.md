@@ -33,11 +33,13 @@ Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 7 tableros:
 
 IDs y columnas en `MAPEO-MONDAY.md`.
 
+**Antes de cualquier revisión o cambio, volver a leer Monday (datos y columnas).** Los tableros cambian seguido (duraciones, columnas nuevas o renombradas) y no se puede revisar con datos viejos. Siempre informar qué cambió en las **duraciones** y en las **columnas**.
+
 **Para actualizar los datos:**
 
-1. Leer los 7 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`):
+1. Leer los 7 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
    ```graphql
-   query ($ids: [ID!]) { boards(ids: $ids) { id name items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } } }
+   query ($ids: [ID!]) { boards(ids: $ids) { id name columns { id title type } items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } } }
    ```
    con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804"]}`.
 2. La respuesta es grande y se guarda en un archivo. Copiarla tal cual a `monday/crudo/kelly.json` y agregarle `"extraido": "AAAA-MM-DD"` al inicio.
@@ -46,7 +48,11 @@ IDs y columnas en `MAPEO-MONDAY.md`.
    - genera `monday.js`;
    - revisa la coherencia de los datos.
 
-   Si termina con errores, no publicar.
+   Si termina con errores, no publicar. Además:
+   - compara las columnas de cada tablero con `monday/columnas_conocidas.json` y avisa si alguna es nueva, se renombró, cambió de tipo o se borró. Si se borró una columna que usa el dashboard, es un error;
+   - lista los **cambios desde la lectura anterior** (duración, estado, fase, fechas, montos y centro de costo). Esa lista se ve en `verificar.html`, sección 6.
+
+   Cuando un cambio de columnas ya se revisó y se ajustó el mapeo, correr `python monday/generar.py --aceptar-columnas` para darlo por conocido.
 4. Abrir `verificar.html` y confirmar **0 errores**.
 5. Revisar el dashboard en el navegador y contarle al usuario qué cambió en Monday.
 

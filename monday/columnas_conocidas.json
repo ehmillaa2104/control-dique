@@ -1,0 +1,576 @@
+{
+ "18432105438": {
+  "name": {
+   "title": "Trabajo",
+   "type": "name"
+  },
+  "subtasks_mm71a78e": {
+   "title": "Subelementos",
+   "type": "subtasks"
+  },
+  "multiple_person_mm781bx8": {
+   "title": "Responsable",
+   "type": "people"
+  },
+  "color_mm6wsp0z": {
+   "title": "Fase",
+   "type": "status"
+  },
+  "long_text_mm6vvcjh": {
+   "title": "Descripción",
+   "type": "long_text"
+  },
+  "dropdown_mm70s99n": {
+   "title": "Proveedor",
+   "type": "dropdown"
+  },
+  "color_mm781mjk": {
+   "title": "$ Tipo",
+   "type": "status"
+  },
+  "numeric_mm6vjdrd": {
+   "title": "$ Solicitado (Equipo)",
+   "type": "numbers"
+  },
+  "color_mm6v621m": {
+   "title": "Estado Aprobación",
+   "type": "status"
+  },
+  "numeric_mm78s0hd": {
+   "title": "$ Aprobado Dirección",
+   "type": "numbers"
+  },
+  "date_mm78wmtn": {
+   "title": "Fecha Aprobación Final",
+   "type": "date"
+  },
+  "dropdown_mm6v7b5n": {
+   "title": "Equipo / Sistema",
+   "type": "dropdown"
+  },
+  "color_mm6we1w8": {
+   "title": "Área",
+   "type": "status"
+  },
+  "color_mm6wywg4": {
+   "title": "Disciplina",
+   "type": "status"
+  },
+  "board_relation_mm786g2b": {
+   "title": "Cambios/Imprevistos",
+   "type": "board_relation"
+  },
+  "numeric_mm78kpas": {
+   "title": "$ Revisado Gerencia",
+   "type": "numbers"
+  },
+  "board_relation_mm7am925": {
+   "title": "Centro de Costo",
+   "type": "board_relation"
+  },
+  "file_mm7d65bv": {
+   "title": "Cotizaciones",
+   "type": "file"
+  },
+  "pulse_updated_mm7ge32a": {
+   "title": "Última actualización",
+   "type": "last_updated"
+  },
+  "color_mm7vv5nh": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "numeric_mm7v7xt9": {
+   "title": "Duración (días)",
+   "type": "numbers"
+  },
+  "formula_mm7vp9rc": {
+   "title": "Avance",
+   "type": "formula"
+  },
+  "numeric_mm7y6h6f": {
+   "title": "$ Proyectado",
+   "type": "numbers"
+  },
+  "date_mm7yw7ca": {
+   "title": "Fecha Fin",
+   "type": "date"
+  },
+  "board_relation_mm7yw6we": {
+   "title": "POs Kelly Trader",
+   "type": "board_relation"
+  },
+  "lookup_mm7ywkfv": {
+   "title": "$PO Total",
+   "type": "mirror"
+  },
+  "lookup_mm7ym614": {
+   "title": "$Incurrido",
+   "type": "mirror"
+  }
+ },
+ "18432105237": {
+  "name": {
+   "title": "Trabajo",
+   "type": "name"
+  },
+  "subtasks_mm71a78e": {
+   "title": "Subelementos",
+   "type": "subtasks"
+  },
+  "multiple_person_mm781bx8": {
+   "title": "Responsable",
+   "type": "people"
+  },
+  "color_mm6wsp0z": {
+   "title": "Fase",
+   "type": "status"
+  },
+  "long_text_mm6vvcjh": {
+   "title": "Descripción",
+   "type": "long_text"
+  },
+  "dropdown_mm70s99n": {
+   "title": "Proveedor",
+   "type": "dropdown"
+  },
+  "color_mm781mjk": {
+   "title": "$ Tipo",
+   "type": "status"
+  },
+  "numeric_mm6vjdrd": {
+   "title": "$ Solicitado (Equipo)",
+   "type": "numbers"
+  },
+  "numeric_mm78kpas": {
+   "title": "$ Revisado Gerencia",
+   "type": "numbers"
+  },
+  "color_mm6v621m": {
+   "title": "Estado Aprobación",
+   "type": "status"
+  },
+  "numeric_mm78s0hd": {
+   "title": "$ Aprobado Dirección",
+   "type": "numbers"
+  },
+  "date_mm78wmtn": {
+   "title": "Fecha Aprobación Final",
+   "type": "date"
+  },
+  "dropdown_mm6v7b5n": {
+   "title": "Equipo / Sistema",
+   "type": "dropdown"
+  },
+  "color_mm6we1w8": {
+   "title": "Área",
+   "type": "status"
+  },
+  "color_mm6wywg4": {
+   "title": "Disciplina",
+   "type": "status"
+  },
+  "board_relation_mm786g2b": {
+   "title": "Cambios/Imprevistos",
+   "type": "board_relation"
+  },
+  "board_relation_mm7am925": {
+   "title": "Centro de Costo",
+   "type": "board_relation"
+  },
+  "file_mm7d65bv": {
+   "title": "Cotizaciones",
+   "type": "file"
+  },
+  "pulse_updated_mm7ga065": {
+   "title": "Última actualización",
+   "type": "last_updated"
+  },
+  "date_mm7ya280": {
+   "title": "Fecha Fin",
+   "type": "date"
+  },
+  "color_mm7y4j97": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "board_relation_mm7y6q4g": {
+   "title": "POs Kelly Trader",
+   "type": "board_relation"
+  },
+  "numeric_mm7yw4b3": {
+   "title": "$ Proyectado",
+   "type": "numbers"
+  },
+  "numeric_mm7y9sbv": {
+   "title": "Duración (días)",
+   "type": "numbers"
+  },
+  "formula_mm7y7wsm": {
+   "title": "Avance",
+   "type": "formula"
+  },
+  "lookup_mm7ybkjg": {
+   "title": "$Incurrido",
+   "type": "mirror"
+  },
+  "lookup_mm7y2awx": {
+   "title": "$PO Total",
+   "type": "mirror"
+  }
+ },
+ "18431746322": {
+  "name": {
+   "title": "Name",
+   "type": "name"
+  },
+  "estado_dir": {
+   "title": "Estado Aprobación",
+   "type": "status"
+  },
+  "formula_mm7d91f2": {
+   "title": "$ Preliminar",
+   "type": "formula"
+  },
+  "formula_mm7dehmt": {
+   "title": "$ Aprobado",
+   "type": "formula"
+  },
+  "formula_mm7yshcc": {
+   "title": "$ PO Total",
+   "type": "formula"
+  },
+  "formula_mm7yyr9q": {
+   "title": "$ Incurrido",
+   "type": "formula"
+  },
+  "formula_mm7ydqr4": {
+   "title": "$ Proyectado",
+   "type": "formula"
+  },
+  "coment_dir": {
+   "title": "Comentarios",
+   "type": "long_text"
+  },
+  "board_relation_mm7a4ck0": {
+   "title": "Líneas de presupuesto",
+   "type": "board_relation"
+  },
+  "lookup_mm7azrff": {
+   "title": "Σ Revisado Gerencia",
+   "type": "mirror"
+  },
+  "lookup_mm7a63mn": {
+   "title": "Σ Aprobado Dirección",
+   "type": "mirror"
+  },
+  "board_relation_mm7yxa9r": {
+   "title": "POs Kelly Trader",
+   "type": "board_relation"
+  },
+  "lookup_mm7yvdys": {
+   "title": "$PO Total",
+   "type": "mirror"
+  },
+  "lookup_mm7yeaj1": {
+   "title": "$ Incurrido",
+   "type": "mirror"
+  },
+  "lookup_mm7ybn18": {
+   "title": "$ Proyectado",
+   "type": "mirror"
+  }
+ },
+ "18431381932": {
+  "name": {
+   "title": "Name",
+   "type": "name"
+  },
+  "subtasks_mm387vpy": {
+   "title": "Subelementos",
+   "type": "subtasks"
+  },
+  "dropdown_mm334y96": {
+   "title": "Area",
+   "type": "dropdown"
+  },
+  "long_text_mm2pf3g0": {
+   "title": "Descripción",
+   "type": "long_text"
+  },
+  "text_mm2p9mx7": {
+   "title": "Proveedor",
+   "type": "text"
+  },
+  "numeric_mm2pfpzs": {
+   "title": "$ PO Total",
+   "type": "numbers"
+  },
+  "numeric_mm322fqy": {
+   "title": "$ Incurrido",
+   "type": "numbers"
+  },
+  "numeric_mm39rhnj": {
+   "title": "$ Saldo",
+   "type": "numbers"
+  },
+  "date_mm2ptpmb": {
+   "title": "Fecha Orden de Compra",
+   "type": "date"
+  },
+  "dropdown_mm328rrg": {
+   "title": "Estatus PO",
+   "type": "dropdown"
+  },
+  "color_mm32ajy1": {
+   "title": "Estatus de Pago",
+   "type": "status"
+  },
+  "long_text_mm33ryq6": {
+   "title": "Description Det",
+   "type": "long_text"
+  },
+  "pulse_updated_mm3j8vr0": {
+   "title": "Última actualización",
+   "type": "last_updated"
+  },
+  "color_mm4s40ra": {
+   "title": "Casilla de verificación",
+   "type": "status"
+  },
+  "board_relation_mm7yq0et": {
+   "title": "link to CC. Centros de Costo - Kelly Trader",
+   "type": "board_relation"
+  },
+  "board_relation_mm7y2fcq": {
+   "title": "Actividad relacionada",
+   "type": "board_relation"
+  }
+ },
+ "18431380804": {
+  "name": {
+   "title": "Name",
+   "type": "name"
+  },
+  "subtasks_mm389vzb": {
+   "title": "Subelementos",
+   "type": "subtasks"
+  },
+  "multiple_person_mm32367r": {
+   "title": "Reportado por",
+   "type": "people"
+  },
+  "pulse_log_mm2ebjby": {
+   "title": "Fecha de Registro (Automática)",
+   "type": "creation_log"
+  },
+  "board_relation_mm2ebzc8": {
+   "title": "Actividad Relacionada",
+   "type": "board_relation"
+  },
+  "long_text_mkzb6776": {
+   "title": "Descripción del Imprevisto/Cambio e impacto",
+   "type": "long_text"
+  },
+  "file_mm1hn10q": {
+   "title": "Doc. Anexos",
+   "type": "file"
+  },
+  "dropdown_mkzbgqr7": {
+   "title": "Tipo de Impacto",
+   "type": "dropdown"
+  },
+  "numeric_mm268zat": {
+   "title": "Costo",
+   "type": "numbers"
+  },
+  "numeric_mm2epnk4": {
+   "title": "Días",
+   "type": "numbers"
+  },
+  "multiple_person_mm2e1fs4": {
+   "title": "Aprobación",
+   "type": "people"
+  },
+  "color_mm2e3n8w": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "date_mkzbjkxq": {
+   "title": "Fecha Aprobación",
+   "type": "date"
+  },
+  "long_text_mm2k3gjp": {
+   "title": "Observaciones Dique Owner",
+   "type": "long_text"
+  },
+  "wf_edit_link_rfurk": {
+   "title": "Formulario link",
+   "type": "link"
+  },
+  "dropdown_mm2ns80c": {
+   "title": "Centro de Costo",
+   "type": "dropdown"
+  },
+  "board_relation_mm2p6c7j": {
+   "title": "(Requisiciones/POs)",
+   "type": "board_relation"
+  }
+ },
+ "18431019817": {
+  "name": {
+   "title": "Trabajo",
+   "type": "name"
+  },
+  "familia": {
+   "title": "Familia",
+   "type": "status"
+  },
+  "subtasks_mm71a78e": {
+   "title": "Subelementos",
+   "type": "subtasks"
+  },
+  "multiple_person_mm781bx8": {
+   "title": "Responsable",
+   "type": "people"
+  },
+  "color_mm6wsp0z": {
+   "title": "Fase",
+   "type": "status"
+  },
+  "long_text_mm6vvcjh": {
+   "title": "Descripción",
+   "type": "long_text"
+  },
+  "dropdown_mm70s99n": {
+   "title": "Proveedor",
+   "type": "dropdown"
+  },
+  "color_mm781mjk": {
+   "title": "$ Tipo",
+   "type": "status"
+  },
+  "numeric_mm6vjdrd": {
+   "title": "$ Solicitado (Equipo)",
+   "type": "numbers"
+  },
+  "numeric_mm78kpas": {
+   "title": "$ Revisado Gerencia",
+   "type": "numbers"
+  },
+  "color_mm6v621m": {
+   "title": "Estado Aprobación",
+   "type": "status"
+  },
+  "numeric_mm78s0hd": {
+   "title": "$ Aprobado Dirección",
+   "type": "numbers"
+  },
+  "date_mm78wmtn": {
+   "title": "Fecha Aprobación Final",
+   "type": "date"
+  },
+  "color_mm6we1w8": {
+   "title": "Área",
+   "type": "status"
+  },
+  "color_mm6wywg4": {
+   "title": "Disciplina",
+   "type": "status"
+  },
+  "board_relation_mm786g2b": {
+   "title": "liCambios/Imprevistos",
+   "type": "board_relation"
+  },
+  "board_relation_mm7am925": {
+   "title": "Centro de Costo",
+   "type": "board_relation"
+  },
+  "file_mm7d65bv": {
+   "title": "Cotizaciones",
+   "type": "file"
+  },
+  "pulse_updated_mm7g2q1g": {
+   "title": "Última actualización",
+   "type": "last_updated"
+  },
+  "color_mm7yb2cs": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "date_mm7yv15j": {
+   "title": "Fecha Fin",
+   "type": "date"
+  },
+  "board_relation_mm7ypye0": {
+   "title": "link to POs Kelly Trader",
+   "type": "board_relation"
+  },
+  "numeric_mm7yw5hx": {
+   "title": "Duración (días)",
+   "type": "numbers"
+  },
+  "numeric_mm7y9v4k": {
+   "title": "$ Proyectado",
+   "type": "numbers"
+  },
+  "dropdown_mm7ye593": {
+   "title": "Equipo / Sistema",
+   "type": "dropdown"
+  },
+  "formula_mm7yx80r": {
+   "title": "Avance",
+   "type": "formula"
+  },
+  "lookup_mm7yh3hm": {
+   "title": "$Incurrido",
+   "type": "mirror"
+  },
+  "lookup_mm7yk7y7": {
+   "title": "$PO Total",
+   "type": "mirror"
+  }
+ },
+ "18431008651": {
+  "name": {
+   "title": "Fase",
+   "type": "name"
+  },
+  "color_mm6v6vf2": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "numeric_mm6zgcqw": {
+   "title": "Duración",
+   "type": "numbers"
+  },
+  "timerange_mm78kjs": {
+   "title": "Fecha Real",
+   "type": "timeline"
+  },
+  "timerange_mm7yfj5p": {
+   "title": "Linea Base (08 Oct '26)",
+   "type": "timeline"
+  },
+  "formula_mm7ygv4s": {
+   "title": "Diferencia",
+   "type": "formula"
+  },
+  "dependency_mm6z7ctn": {
+   "title": "Dependencia",
+   "type": "dependency"
+  },
+  "numeric_mm6vrh6r": {
+   "title": "Avance %",
+   "type": "numbers"
+  },
+  "long_text_mm6vtdhs": {
+   "title": "Notas y evidencia",
+   "type": "long_text"
+  },
+  "pulse_updated_mm7gn7r8": {
+   "title": "Última actualización",
+   "type": "last_updated"
+  }
+ }
+}
