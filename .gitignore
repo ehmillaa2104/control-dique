@@ -1,6 +1,8 @@
-# Configuración local del editor y de Claude Code
-.claude/
+# Configuración personal de Claude Code (lo compartido sí se sube: .claude/settings.json, hooks y launch.json)
+.claude/settings.local.json
+.claude/worktrees/
 
 # Sistema
 Thumbs.db
 .DS_Store
+__pycache__/
