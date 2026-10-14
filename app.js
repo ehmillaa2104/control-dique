@@ -69,6 +69,7 @@
     }));
     const hitos = crono.filter((r) => r.hito).sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1));
     const fases = crono.filter((r) => !r.hito && !/sub/.test(r.kind));
+    const actividades = crono.filter((r) => !r.hito && /sub/.test(r.kind)); // p. ej. "Trabajos adicionales de dique"
     // Etapa actual: la fase que contiene hoy (si hay dos, la que empezó más tarde)
     const inn = fases.filter((o) => o.real[0] <= TODAY && TODAY <= o.real[1]).sort((a, b) => (a.real[0] < b.real[0] ? 1 : -1));
     const cur = inn[0] || fases.filter((o) => o.real[0] > TODAY).sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1))[0] || fases[fases.length - 1] || null;
@@ -77,7 +78,7 @@
     // Atraso del proyecto = Diferencia del último hito (fin del proyecto, p. ej. On Hire)
     const finHito = hitos[hitos.length - 1] || null;
     const abiertos = crono.filter((r) => !r.done && r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia);
-    return { D, areas, byId, centros, crono, hitos, fases, cur, lastHito, nextHito, finHito, peorAtraso: abiertos[0] || null };
+    return { D, areas, byId, centros, crono, hitos, fases, actividades, cur, lastHito, nextHito, finHito, peorAtraso: abiertos[0] || null };
   }
 
   const costos = (arr) => ({
@@ -205,14 +206,18 @@
     const S = timeScale(M.crono);
     const hoyX = S.xm(TODAY);
     // Franja de fases en su fecha real (si se traslapan, la que empieza después queda encima) y los hitos
-    const bands = M.fases.map((o) => `<i class="vb k-${o.kind}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>`).join("");
+    const bands = M.fases.map((o) => `<i class="vb k-${o.kind}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>`).join("") +
+      M.actividades.map((o) => `<i class="vb sub k-${o.kind.replace("sub ", "")} ${o.diferencia > 0 ? "late" : ""}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>` +
+        `<span class="vs-lbl" style="left:${S.xs(o.real[0])}%" ${itemTip(o)}>${esc(o.nombre.split("*")[0].trim())} · ${dateRange(o.real)}</span>`).join("");
     const hs = M.hitos.map((o) => {
       const late = !o.done && (o.diferencia > 0 || o.real[0] < TODAY);
       return `<i class="vh ${o.done ? "ok" : late ? "late" : ""}" style="left:${S.xm(o.real[0])}%" ${itemTip(o)}></i>`;
     }).join("");
     const c = M.cur;
     const dia = c ? daysBetween(c.real[0], TODAY) + 1 : 0, dias = c ? daysBetween(c.real[0], c.real[1]) + 1 : 0;
-    const etapa = c ? `<b>${esc(itemName(c))}</b>${dia >= 1 && dia <= dias ? ` · día ${dia} de ${dias}` : ""}` : "—";
+    // Si hoy cae dentro de una actividad (p. ej. trabajos adicionales), la etiqueta del buque también la nombra
+    const enCurso = M.actividades.filter((o) => o.real[0] <= TODAY && TODAY <= o.real[1]).map((o) => o.nombre.split("*")[0].trim());
+    const etapa = c ? `<b>${esc(itemName(c))}</b>${dia >= 1 && dia <= dias ? ` · día ${dia} de ${dias}` : ""}${enCurso.length ? ` · ${esc(enCurso.join(", "))}` : ""}` : "—";
     const hitoTxt = (h, prox) => {
       if (!h) return '<b class="muted">—</b>';
       const cuando = h.real[0] === TODAY ? "hoy" : fmtShort(h.real[0]);
