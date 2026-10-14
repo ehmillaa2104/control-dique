@@ -5433,9 +5433,9 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 16,
+   "puntos": 17,
    "maximo": 24,
-   "pct": 66.7,
+   "pct": 70.8,
    "nivel": "Medio"
   },
   "semanas": [
@@ -5501,10 +5501,10 @@ window.DIQUE_MONDAY = {
     "id": "13289219799",
     "nombre": "Ingeniería",
     "area": "ingenieria",
-    "puntos": 2,
+    "puntos": 3,
     "maximo": 6,
-    "pct": 33.3,
-    "nivel": "Bajo",
+    "pct": 50.0,
+    "nivel": "Medio",
     "semanas": [
      {
       "semana": "S1",
@@ -5523,9 +5523,9 @@ window.DIQUE_MONDAY = {
      {
       "semana": "S3",
       "reunion": "No asistió",
-      "act": "0 - No actualizó",
+      "act": "1 - Actualización indirecta",
       "pr": 0,
-      "pa": 0
+      "pa": 1
      },
      {
       "semana": "S4",
@@ -5797,133 +5797,14 @@ window.DIQUE_MONDAY = {
    "avanceDias": 13.25
   }
  },
- "_huella": "f7b8f80ed2ac",
+ "_huella": "09a8f30ca384",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Fecha Real",
-   "antes": "2026-10-09 a 2026-10-09",
-   "ahora": "2026-10-16 a 2026-10-16"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Diferencia",
-   "antes": "10",
-   "ahora": "17"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-10-14"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de máquina principal",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de los generadores",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de agua salada de los generadores",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de overflow hacia el sludge tank",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "9000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado Gerencia"
+   "tablero": "Participación del Equipo",
+   "trabajo": "Ingeniería",
+   "campo": "Actualización S3",
+   "antes": "0 - No actualizó",
+   "ahora": "1 - Actualización indirecta"
   }
  ],
  "observaciones": [
@@ -5985,7 +5866,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "Participación del equipo: 66.7% (16 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+   "texto": "Participación del equipo: 70.8% (17 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
   }
  ]
 };
