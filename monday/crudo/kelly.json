@@ -119,7 +119,7 @@
       "id": "13289219799",
       "name": "Ingeniería",
       "created_at": "2026-10-14T14:49:07Z",
-      "updated_at": "2026-10-14T19:07:39Z",
+      "updated_at": "2026-10-14T19:08:27Z",
       "group": {
        "id": "group_mm849jzc",
        "title": "Equipos"
@@ -133,12 +133,222 @@
        {
         "id": "color_mm8453y",
         "type": "status",
-        "text": "0 - No actualizó"
+        "text": null
        },
        {
         "id": "color_mm84nsqk",
         "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "0 - No actualizó"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
         "text": "No asistió"
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "2"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "33.3%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Bajo"
+       }
+      ]
+     },
+     {
+      "id": "13289219805",
+      "name": "Cubierta",
+      "created_at": "2026-10-14T14:49:08Z",
+      "updated_at": "2026-10-14T19:08:28Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "2 - Actualización directa"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": "2 - Actualización directa"
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "6"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "100%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Alto"
+       }
+      ]
+     },
+     {
+      "id": "13289252803",
+      "name": "Técnico",
+      "created_at": "2026-10-14T14:49:08Z",
+      "updated_at": "2026-10-14T19:08:34Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": null
        },
        {
         "id": "color_mm84ew0p",
@@ -148,7 +358,7 @@
        {
         "id": "color_mm84nny7",
         "type": "status",
-        "text": null
+        "text": "No asistió"
        },
        {
         "id": "color_mm84p83r",
@@ -210,216 +420,6 @@
         "id": "formula_mm84c488",
         "type": "formula",
         "text": "",
-        "display_value": "37.5%"
-       },
-       {
-        "id": "formula_mm84jbkq",
-        "type": "formula",
-        "text": "",
-        "display_value": "Bajo"
-       }
-      ]
-     },
-     {
-      "id": "13289219805",
-      "name": "Cubierta",
-      "created_at": "2026-10-14T14:49:08Z",
-      "updated_at": "2026-10-14T18:55:01Z",
-      "group": {
-       "id": "group_mm849jzc",
-       "title": "Equipos"
-      },
-      "column_values": [
-       {
-        "id": "color_mm84znsc",
-        "type": "status",
-        "text": "Asistió"
-       },
-       {
-        "id": "color_mm8453y",
-        "type": "status",
-        "text": "2 - Actualización directa"
-       },
-       {
-        "id": "color_mm84nsqk",
-        "type": "status",
-        "text": "Asistió"
-       },
-       {
-        "id": "color_mm84ew0p",
-        "type": "status",
-        "text": "2 - Actualización directa"
-       },
-       {
-        "id": "color_mm84nny7",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84p83r",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm843kqp",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm8477zb",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84283c",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm8484yw",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84kjd3",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84pstd",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84fk4y",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84sz49",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84fex0",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "formula_mm84qsjp",
-        "type": "formula",
-        "text": "",
-        "display_value": "8"
-       },
-       {
-        "id": "formula_mm84c488",
-        "type": "formula",
-        "text": "",
-        "display_value": "100%"
-       },
-       {
-        "id": "formula_mm84jbkq",
-        "type": "formula",
-        "text": "",
-        "display_value": "Alto"
-       }
-      ]
-     },
-     {
-      "id": "13289252803",
-      "name": "Técnico",
-      "created_at": "2026-10-14T14:49:08Z",
-      "updated_at": "2026-10-14T19:01:03Z",
-      "group": {
-       "id": "group_mm849jzc",
-       "title": "Equipos"
-      },
-      "column_values": [
-       {
-        "id": "color_mm84znsc",
-        "type": "status",
-        "text": "Asistió"
-       },
-       {
-        "id": "color_mm8453y",
-        "type": "status",
-        "text": "1 - Actualización indirecta"
-       },
-       {
-        "id": "color_mm84nsqk",
-        "type": "status",
-        "text": "No asistió"
-       },
-       {
-        "id": "color_mm84ew0p",
-        "type": "status",
-        "text": "1 - Actualización indirecta"
-       },
-       {
-        "id": "color_mm84nny7",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84p83r",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm843kqp",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm8477zb",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84283c",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm8484yw",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84kjd3",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84pstd",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84fk4y",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84sz49",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "color_mm84fex0",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "formula_mm84qsjp",
-        "type": "formula",
-        "text": "",
-        "display_value": "4"
-       },
-       {
-        "id": "formula_mm84c488",
-        "type": "formula",
-        "text": "",
         "display_value": "50%"
        },
        {
@@ -434,7 +434,7 @@
       "id": "13289252808",
       "name": "Seguridad",
       "created_at": "2026-10-14T14:49:08Z",
-      "updated_at": "2026-10-14T19:00:43Z",
+      "updated_at": "2026-10-14T19:08:33Z",
       "group": {
        "id": "group_mm849jzc",
        "title": "Equipos"
@@ -448,12 +448,12 @@
        {
         "id": "color_mm8453y",
         "type": "status",
-        "text": "1 - Actualización indirecta"
+        "text": null
        },
        {
         "id": "color_mm84nsqk",
         "type": "status",
-        "text": "No asistió"
+        "text": null
        },
        {
         "id": "color_mm84ew0p",
@@ -463,12 +463,12 @@
        {
         "id": "color_mm84nny7",
         "type": "status",
-        "text": null
+        "text": "No asistió"
        },
        {
         "id": "color_mm84p83r",
         "type": "status",
-        "text": null
+        "text": "1 - Actualización indirecta"
        },
        {
         "id": "color_mm843kqp",
@@ -519,7 +519,7 @@
         "id": "formula_mm84qsjp",
         "type": "formula",
         "text": "",
-        "display_value": "4"
+        "display_value": "3"
        },
        {
         "id": "formula_mm84c488",

@@ -353,8 +353,9 @@ def comparar_con_anterior(datos):
 
 
 def participacion(raw):
-    """% de cumplimiento por equipo = puntos / máximo posible de las semanas ya cargadas (reunión 1 pt, actualización 2 pts).
-    Es la misma regla de la fórmula "% Cumplimiento" de Monday; aquí se recalcula y se compara."""
+    """% de cumplimiento por equipo = puntos / máximo, con el MISMO máximo para todos los equipos:
+    una columna (reunión 1 pt, actualización 2 pts) cuenta solo cuando TODOS los equipos tienen el dato cargado.
+    Si a algún equipo le falta, esa columna no cuenta para nadie hasta que se complete (y se avisa a quién le falta)."""
     b = next((x for x in raw["boards"] if x["id"] == TABLEROS["participacion"]["id"]), None)
     if not b:
         obs.append(("aviso", "No está el tablero Participación del Equipo en la lectura."))
@@ -363,42 +364,63 @@ def participacion(raw):
     if not semanas:
         obs.append(("error", "Participación del Equipo: no se encontraron columnas de reunión ni de actualización."))
     col = TABLEROS["participacion"]["col"]
+    items = b["items_page"]["items"]
+    cvs = [{c["id"]: c for c in it["column_values"]} for it in items]
+    txt = lambda cv, cid: (cv.get(cid, {}).get("text") or "").strip() if cid else ""
+    ok_r = lambda t: t in ("Asistió", "No asistió")
+    ok_a = lambda t: t[:1] in PTS_ACT and bool(t)
+    # Qué columnas cuentan: las que tienen dato válido en todos los equipos
+    for s_ in semanas:
+        for tipo, ok in (("reunion", ok_r), ("act", ok_a)):
+            cid = s_.get(tipo)
+            if not cid:
+                s_["cuenta_" + tipo] = False
+                continue
+            tienen = [ok(txt(cv, cid)) for cv in cvs]
+            s_["cuenta_" + tipo] = all(tienen) and bool(tienen)
+            if any(tienen) and not all(tienen):
+                faltan = [texto(it["name"]) for it, t in zip(items, tienen) if not t]
+                nombre = ("Kick Off" if s_["semana"] == "S1" else s_["semana"]) + (" · reunión" if tipo == "reunion" else " · actualización")
+                obs.append(("aviso", f'Participación · {nombre}: falta cargar {", ".join(faltan)}; esa columna no cuenta para nadie hasta que estén todos.'))
+    parcial = any(s_.get("reunion") and not s_["cuenta_reunion"] and any(ok_r(txt(cv, s_["reunion"])) for cv in cvs) or
+                  s_.get("act") and not s_["cuenta_act"] and any(ok_a(txt(cv, s_["act"])) for cv in cvs) for s_ in semanas)
     equipos = []
-    for it in b["items_page"]["items"]:
-        cv = {c["id"]: c for c in it["column_values"]}
+    for it, cv in zip(items, cvs):
         det, pts, mx = [], 0, 0
         for s_ in semanas:
-            r = cv.get(s_.get("reunion"), {}).get("text") if s_.get("reunion") else None
-            a = cv.get(s_.get("act"), {}).get("text") if s_.get("act") else None
-            pr = (1 if r == "Asistió" else 0) if r in ("Asistió", "No asistió") else None
-            pa = PTS_ACT.get((a or "").strip()[:1]) if a else None
+            r, a = txt(cv, s_.get("reunion")), txt(cv, s_.get("act"))
+            pr = (1 if r == "Asistió" else 0) if ok_r(r) else None
+            pa = PTS_ACT[a[:1]] if ok_a(a) else None
             if r and pr is None:
                 obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: reunión "{r}" no se reconoce.'))
             if a and pa is None:
                 obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: actualización "{a}" no se reconoce.'))
-            if pr is not None:
+            if s_["cuenta_reunion"]:
                 pts += pr; mx += 1
-            if pa is not None:
+            if s_["cuenta_act"]:
                 pts += pa; mx += 2
-            det.append({"semana": s_["semana"], "reunion": r, "act": a, "pr": pr, "pa": pa})
+            det.append({"semana": s_["semana"], "reunion": r or None, "act": a or None, "pr": pr, "pa": pa})
         pct = round(pts / mx * 100, 1) if mx else None
         nivel = None if pct is None else "Alto" if pct >= 75 else "Medio" if pct >= 50 else "Bajo"
         mon_pct = num(str(valor(cv.get(col["cumplimiento"])) or "").replace("%", ""))
         mon_niv = valor(cv.get(col["nivel"]))
         nombre = texto(it["name"])
+        # La fórmula de Monday cuenta las casillas cargadas de cada equipo; coincide cuando no hay columnas a medio cargar
         if pct is not None and (mon_pct is None or abs(mon_pct - pct) > 0.15):
-            obs.append(("error", f'Participación · {nombre}: % Cumplimiento en Monday = {mon_pct}, recalculado = {pct}.'))
-        if nivel and mon_niv and mon_niv != nivel:
+            obs.append(("aviso" if parcial else "error", f'Participación · {nombre}: % en Monday = {mon_pct}, en el dashboard = {pct}' + (" (Monday cuenta también las columnas que a otros equipos les faltan)." if parcial else ".")))
+        elif nivel and mon_niv and mon_niv != nivel:
             obs.append(("error", f'Participación · {nombre}: nivel en Monday = {mon_niv}, recalculado = {nivel}.'))
         equipos.append({"id": it["id"], "nombre": nombre, "area": EQUIPO_AREA.get(nombre.lower()), "puntos": pts, "maximo": mx,
                         "pct": pct, "nivel": nivel, "semanas": det})
-    con = [s_["semana"] for i, s_ in enumerate(semanas) if any(e["semanas"][i]["pr"] is not None or e["semanas"][i]["pa"] is not None for e in equipos)]
     tp, tm = sum(e["puntos"] for e in equipos), sum(e["maximo"] for e in equipos)
     tot = round(tp / tm * 100, 1) if tm else None
-    obs.append(("info", f'Participación del equipo: {tot}% ({tp} de {tm} puntos) · semanas con datos: {", ".join(con) or "ninguna"}.'))
+    cuentan = [("KO" if s_["semana"] == "S1" else s_["semana"]) + ("" if s_["cuenta_reunion"] and s_["cuenta_act"] else " (reunión)" if s_["cuenta_reunion"] else " (actualización)" if s_["cuenta_act"] else "")
+               for s_ in semanas if s_["cuenta_reunion"] or s_["cuenta_act"]]
+    obs.append(("info", f'Participación del equipo: {tot}% ({tp} de {tm} puntos) · máximo igual para todos: {equipos[0]["maximo"] if equipos else 0} pts · cuentan: {", ".join(cuentan) or "ninguna"}.'))
     return {"total": {"puntos": tp, "maximo": tm, "pct": tot, "nivel": None if tot is None else "Alto" if tot >= 75 else "Medio" if tot >= 50 else "Bajo"},
-            "semanas": [{"semana": s_["semana"], "conDatos": s_["semana"] in con} for s_ in semanas], "equipos": equipos,
-            "umbrales": {"alto": 75, "medio": 50}}
+            "semanas": [{"semana": s_["semana"], "reunion": s_["cuenta_reunion"], "act": s_["cuenta_act"],
+                         "conDatos": s_["cuenta_reunion"] or s_["cuenta_act"]} for s_ in semanas],
+            "equipos": equipos, "umbrales": {"alto": 75, "medio": 50}}
 
 
 def recortar(raw):

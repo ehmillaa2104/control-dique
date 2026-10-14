@@ -5429,42 +5429,58 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 15,
-   "maximo": 26,
-   "pct": 57.7,
+   "puntos": 14,
+   "maximo": 24,
+   "pct": 58.3,
    "nivel": "Medio"
   },
   "semanas": [
    {
     "semana": "S1",
+    "reunion": true,
+    "act": false,
     "conDatos": true
    },
    {
     "semana": "S2",
-    "conDatos": true
+    "reunion": false,
+    "act": false,
+    "conDatos": false
    },
    {
     "semana": "S3",
+    "reunion": true,
+    "act": true,
     "conDatos": true
    },
    {
     "semana": "S4",
+    "reunion": false,
+    "act": true,
     "conDatos": true
    },
    {
     "semana": "S5",
+    "reunion": false,
+    "act": false,
     "conDatos": false
    },
    {
     "semana": "S6",
+    "reunion": false,
+    "act": false,
     "conDatos": false
    },
    {
     "semana": "S7",
+    "reunion": false,
+    "act": false,
     "conDatos": false
    },
    {
     "semana": "S8",
+    "reunion": false,
+    "act": false,
     "conDatos": false
    }
   ],
@@ -5473,9 +5489,9 @@ window.DIQUE_MONDAY = {
     "id": "13289219799",
     "nombre": "Ingeniería",
     "area": "ingenieria",
-    "puntos": 3,
-    "maximo": 8,
-    "pct": 37.5,
+    "puntos": 2,
+    "maximo": 6,
+    "pct": 33.3,
     "nivel": "Bajo",
     "semanas": [
      {
@@ -5487,17 +5503,17 @@ window.DIQUE_MONDAY = {
      },
      {
       "semana": "S2",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S3",
       "reunion": "No asistió",
       "act": "0 - No actualizó",
       "pr": 0,
       "pa": 0
-     },
-     {
-      "semana": "S3",
-      "reunion": null,
-      "act": "1 - Actualización indirecta",
-      "pr": null,
-      "pa": 1
      },
      {
       "semana": "S4",
@@ -5554,24 +5570,24 @@ window.DIQUE_MONDAY = {
      },
      {
       "semana": "S2",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S3",
       "reunion": "Asistió",
       "act": "2 - Actualización directa",
       "pr": 1,
       "pa": 2
      },
      {
-      "semana": "S3",
+      "semana": "S4",
       "reunion": null,
       "act": "2 - Actualización directa",
       "pr": null,
       "pa": 2
-     },
-     {
-      "semana": "S4",
-      "reunion": null,
-      "act": null,
-      "pr": null,
-      "pa": null
      },
      {
       "semana": "S5",
@@ -5621,24 +5637,24 @@ window.DIQUE_MONDAY = {
      },
      {
       "semana": "S2",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S3",
       "reunion": "No asistió",
       "act": "1 - Actualización indirecta",
       "pr": 0,
       "pa": 1
      },
      {
-      "semana": "S3",
+      "semana": "S4",
       "reunion": null,
       "act": "1 - Actualización indirecta",
       "pr": null,
       "pa": 1
-     },
-     {
-      "semana": "S4",
-      "reunion": null,
-      "act": null,
-      "pr": null,
-      "pa": null
      },
      {
       "semana": "S5",
@@ -5688,24 +5704,24 @@ window.DIQUE_MONDAY = {
      },
      {
       "semana": "S2",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S3",
       "reunion": "No asistió",
       "act": "1 - Actualización indirecta",
       "pr": 0,
       "pa": 1
      },
      {
-      "semana": "S3",
+      "semana": "S4",
       "reunion": null,
       "act": "1 - Actualización indirecta",
       "pr": null,
       "pa": 1
-     },
-     {
-      "semana": "S4",
-      "reunion": null,
-      "act": null,
-      "pr": null,
-      "pa": null
      },
      {
       "semana": "S5",
@@ -5769,7 +5785,7 @@ window.DIQUE_MONDAY = {
    "avanceDias": 12.0
   }
  },
- "_huella": "fdf5b30df0e4",
+ "_huella": "2cc1e4f260b2",
  "cambiosLectura": [],
  "observaciones": [
   {
@@ -5834,7 +5850,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "Participación del equipo: 57.7% (15 de 26 puntos) · semanas con datos: S1, S2, S3, S4."
+   "texto": "Participación del equipo: 58.3% (14 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3, S4 (actualización)."
   }
  ]
 };

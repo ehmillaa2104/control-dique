@@ -349,8 +349,10 @@
   // =========================================================
   const semCls = (n) => (n === "Alto" ? "sem-alto" : n === "Medio" ? "sem-medio" : n === "Bajo" ? "sem-bajo" : "");
   const partDe = (M, areaId) => (M.part ? M.part.equipos.find((e) => e.area === areaId) || null : null);
-  const reunAct = (e) => {
-    const r = e.semanas.filter((s) => s.pr != null), a = e.semanas.filter((s) => s.pa != null);
+  // Solo cuentan las columnas que tienen dato en todos los equipos (máximo igual para todos)
+  const reunAct = (e, P) => {
+    const c = (s) => P.semanas.find((x) => x.semana === s.semana) || {};
+    const r = e.semanas.filter((s) => c(s).reunion), a = e.semanas.filter((s) => c(s).act);
     return { asis: r.filter((s) => s.pr === 1).length, reun: r.length, pa: sum(a, (s) => s.pa), pam: a.length * 2 };
   };
   function partKpi(M, e, titulo) {
@@ -359,8 +361,8 @@
     const x = e || P.total;
     if (x.pct == null) return kpi("users", titulo, "—", "sin semanas cargadas");
     const u = P.umbrales || { alto: 75, medio: 50 };
-    const det = e ? (() => { const k = reunAct(e); return `${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts`; })() : `${x.puntos} de ${x.maximo} puntos · ${P.equipos.length} equipos`;
-    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b><div class="tnote">% de cumplimiento = puntos / máximo posible de las semanas cargadas. Reunión: asistió = 1 punto. Actualización: directa = 2, indirecta = 1, no actualizó = 0.</div>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}${rowT("Alto (verde)", `≥ ${u.alto} %`)}${rowT("Medio (amarillo)", `≥ ${u.medio} %`)}${rowT("Bajo (rojo)", `< ${u.medio} %`)}`)}>
+    const det = e ? (() => { const k = reunAct(e, P); return `${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts`; })() : `${x.puntos} de ${x.maximo} puntos · ${P.equipos.length} equipos`;
+    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b><div class="tnote">% de cumplimiento = puntos / máximo. El máximo es igual para todos los equipos: una reunión o actualización cuenta cuando todos los equipos la tienen cargada. Reunión: asistió = 1 punto. Actualización: directa = 2, indirecta = 1, no actualizó = 0.</div>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}${rowT("Alto (verde)", `≥ ${u.alto} %`)}${rowT("Medio (amarillo)", `≥ ${u.medio} %`)}${rowT("Bajo (rojo)", `< ${u.medio} %`)}`)}>
       ${icon("users")}<div style="min-width:0"><div class="lbl">${esc(titulo)}</div><div class="val">${pct(x.pct, 0)} <span class="sem-chip">${esc(x.nivel)}</span></div><div class="sub">${det}</div></div></div>`;
   }
   function partCard(M) {
@@ -368,11 +370,11 @@
     if (!P) return "";
     const semanas = P.semanas.filter((s) => s.conDatos);
     const fila = (e) => {
-      const k = reunAct(e);
+      const k = reunAct(e, P);
       const celdas = semanas.map((s) => {
         const d = e.semanas.find((x) => x.semana === s.semana) || {};
-        const r = d.pr == null ? '<i class="pc-na">·</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
-        const a = d.pa == null ? '<i class="pc-na">·</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
+        const r = !s.reunion || d.pr == null ? '<i class="pc-na">·</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
+        const a = !s.act || d.pa == null ? '<i class="pc-na">·</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
         return `<span class="pc-cell" ${tipAttr(`<b>${esc(e.nombre)} · ${esc(s.semana === "S1" ? "Kick Off" : s.semana)}</b>${rowT("Reunión", esc(d.reunion || "—"))}${rowT("Actualización", esc(d.act || "—"))}`)}>${r}${a}</span>`;
       }).join("");
       return `<div class="pc-row ${semCls(e.nivel)}">
