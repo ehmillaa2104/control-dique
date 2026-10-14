@@ -5425,23 +5425,7 @@ window.DIQUE_MONDAY = {
    "pos": []
   }
  ],
- "pos": [
-  {
-   "id": "13283825385",
-   "nombre": "tf",
-   "area": "",
-   "proveedor": "",
-   "po": 0,
-   "incurrido": 0,
-   "saldo": null,
-   "fecha": null,
-   "estatus": "",
-   "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-14"
-  }
- ],
+ "pos": [],
  "cambios": [],
  "avance": {
   "ingenieria": {
@@ -5524,7 +5508,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"tf\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "POs Kelly Trader: sin órdenes de compra; PO e Incurrido quedan en 0."
   },
   {
    "nivel": "info",

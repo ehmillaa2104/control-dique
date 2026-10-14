@@ -60,5 +60,4 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 - "Aprobación de presupuesto" está vencido desde el 09 oct y sigue En curso.
 - En "Trabajos adicionales de dique" se movió la línea base (16–22 nov) en vez de la fecha real (16–22 oct). Además dice Duración 38 días, pero las fechas cubren 7.
 - Hay US$ 1,10 M solicitados sin aprobar y no hay nada aprobado.
-- La orden de compra "tf" está vacía; parece de prueba.
 - "Caja menuda para capitán" (Cubierta) no tiene Centro de Costo.

@@ -3999,77 +3999,7 @@
    "name": "POs Kelly Trader",
    "items_page": {
     "cursor": null,
-    "items": [
-     {
-      "id": "13283825385",
-      "name": "tf",
-      "created_at": "2026-10-14T01:42:40Z",
-      "updated_at": "2026-10-14T01:42:40Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-14 01:42:40 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       }
-      ]
-     }
-    ]
+    "items": []
    }
   },
   {
