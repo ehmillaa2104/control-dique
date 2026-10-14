@@ -440,7 +440,7 @@ def participacion(raw):
                         "pct": pct, "nivel": nivel, "semanas": det})
     tp, tm = sum(e["puntos"] for e in equipos), sum(e["maximo"] for e in equipos)
     tot = round(tp / tm * 100, 1) if tm else None
-    cuentan = [("KO" if s_["semana"] == "S1" else s_["semana"]) + ("" if s_["cuenta_reunion"] and s_["cuenta_act"] else " (reunión)" if s_["cuenta_reunion"] else " (actualización)" if s_["cuenta_act"] else "")
+    cuentan = [("KO" if s_["semana"] == "S1" else s_["semana"]) + (" (reunión y actualización)" if s_["cuenta_reunion"] and s_["cuenta_act"] else " (reunión)" if s_["cuenta_reunion"] else " (actualización)" if s_["cuenta_act"] else "")
                for s_ in semanas if s_["cuenta_reunion"] or s_["cuenta_act"]]
     obs.append(("info", f'Participación del equipo: {tot}% ({tp} de {tm} puntos) · máximo igual para todos: {equipos[0]["maximo"] if equipos else 0} pts · cuentan: {", ".join(cuentan) or "ninguna"}.'))
     return {"total": {"puntos": tp, "maximo": tm, "pct": tot, "nivel": None if tot is None else "Alto" if tot >= 75 else "Medio" if tot >= 50 else "Bajo"},

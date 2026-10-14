@@ -95,10 +95,11 @@
     const dur = sum(con, (t) => t.duracion);
     return {
       pct: dur ? sum(con, (t) => t.duracion * t.pct) / dur : 0, n: act.length, conDur: con.length, dur,
-      ejec: con.filter((t) => t.pct > 0 && t.pct < 100).length, fin: con.filter((t) => t.pct >= 100).length
+      ejec: con.filter((t) => t.pct > 0 && t.pct < 100).length, fin: con.filter((t) => t.pct >= 100).length,
+      sinDur: act.filter((t) => conFase(t) && !(t.duracion > 0)).length // con fase pero sin Duración: no cuentan
     };
   }
-  const planTxt = (av) => (av.conDur ? `${plural(av.conDur, "trabajo planificado", "trabajos planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}` : '<span class="t-warn">sin trabajos planificados (ninguno tiene duración)</span>');
+  const planTxt = (av) => (av.conDur ? `${plural(av.conDur, "trabajo planificado", "trabajos planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}${av.sinDur ? ` · <span class="t-warn">${av.sinDur} con fase sin duración</span>` : ""}` : '<span class="t-warn">sin trabajos planificados (ninguno tiene duración)</span>');
 
   // =========================================================
   // Cronograma: filas por grupo de Monday, barras en Fecha Real, Línea Base debajo, atraso en rojo
@@ -465,7 +466,7 @@
     const pa = partDe(M, a.id);
     return `<div class="kpis ${pa ? "k7" : "k6"}">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
-        <span class="muted sm">${plural(plan.length, "trabajo planificado", "trabajos planificados")} (con fase) · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos ? ` · no se muestran ${plural(ocultos, "trabajo", "trabajos")} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${plural(sinDur, "planificado", "planificados")} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
+        <span class="muted sm">${plural(plan.length, "trabajo con fase", "trabajos con fase")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
 
   function viewCrono(M) {

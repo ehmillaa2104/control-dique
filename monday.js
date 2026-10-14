@@ -5985,7 +5985,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "Participación del equipo: 66.7% (16 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3, S4 (actualización)."
+   "texto": "Participación del equipo: 66.7% (16 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
   }
  ]
 };
