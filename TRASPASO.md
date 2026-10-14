@@ -55,7 +55,5 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 
 ## 5. Pendiente en Monday al 14 oct 2026
 
-- **Presupuesto preliminar:** US$ 1,09 M, revisado por Gerencia. Dirección solicitó cambios y no hay nada aprobado. Eso se muestra con la nota de `notas.js`; cuando Dirección marque los centros de costo como "Revisar" o "Aprobado" en Monday, conviene borrar la nota.
-- "Aprobación de presupuesto" está vencido desde el 09 oct y sigue En curso.
-- Hay US$ 1,10 M solicitados sin aprobar y no hay nada aprobado.
-- "Caja menuda para capitán" (Cubierta, US$ 9 k) ya tiene Centro de Costo (2.1.4 · Estadía/viáticos), pero falta que Gerencia la revise: por eso no entra en el preliminar.
+- **Presupuesto preliminar:** US$ 1,10 M, todo revisado por Gerencia. Dirección solicitó cambios y no hay nada aprobado. Eso se muestra con la nota de `notas.js`; cuando Dirección marque los centros de costo como "Revisar" o "Aprobado" en Monday, conviene borrar la nota.
+- "Aprobación de presupuesto" se movió al 16 oct: +17 días contra la línea base del 29 sep.

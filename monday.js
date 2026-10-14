@@ -69,11 +69,11 @@ window.DIQUE_MONDAY = {
     "2026-09-29"
    ],
    "real": [
-    "2026-10-09",
-    "2026-10-09"
+    "2026-10-16",
+    "2026-10-16"
    ],
-   "diferencia": 10,
-   "actualizado": "2026-10-08"
+   "diferencia": 17,
+   "actualizado": "2026-10-14"
   },
   {
    "id": "13095528121",
@@ -717,7 +717,7 @@ window.DIQUE_MONDAY = {
      "id": "13256760608",
      "nombre": "Codo de entrada al cooler de aceite de máquina principal",
      "grupo": "1.1 Motores Principales",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -741,7 +741,7 @@ window.DIQUE_MONDAY = {
      "id": "13256760158",
      "nombre": "Codo de entrada de aceite al cooler de aceite de máquina principal",
      "grupo": "1.1 Motores Principales",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -1102,8 +1102,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Mantenimiento preventivo del generador de emergencia",
      "grupo": "1.2 Generadores",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Preventivo",
@@ -1115,7 +1115,7 @@ window.DIQUE_MONDAY = {
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-14",
      "cc": [
       "13081201432"
      ],
@@ -1941,7 +1941,7 @@ window.DIQUE_MONDAY = {
      "id": "13256760157",
      "nombre": "Línea de descarga de bomba de lastre de estribor",
      "grupo": "1.3 Bombas",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -1965,7 +1965,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755192",
      "nombre": "Válvula de succión de bomba de lastre de babor",
      "grupo": "1.3 Bombas",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -2013,7 +2013,7 @@ window.DIQUE_MONDAY = {
      "id": "13256744926",
      "nombre": "Línea de succión de bomba de servicios generales",
      "grupo": "1.3 Bombas",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -3933,7 +3933,7 @@ window.DIQUE_MONDAY = {
      "id": "13256760623",
      "nombre": "Válvula de descarga de agua salada de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -3957,7 +3957,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755233",
      "nombre": "Válvula de descarga de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -3981,7 +3981,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755205",
      "nombre": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -4005,7 +4005,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755234",
      "nombre": "Línea de succión de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -4077,7 +4077,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755103",
      "nombre": "Línea de overflow hacia el sludge tank",
      "grupo": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -4125,9 +4125,9 @@ window.DIQUE_MONDAY = {
      "id": "13256755193",
      "nombre": "Reparación de fuga en el tanque de sewage",
      "grupo": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales",
-     "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "fase": "Dique",
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -4426,10 +4426,10 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": null,
      "tipo": "",
-     "aprobacion": "Pendiente",
+     "aprobacion": "Revisado Gerencia",
      "proveedor": "",
      "solicitado": 9000,
-     "revisado": null,
+     "revisado": 9000,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -5134,7 +5134,7 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.4 · Estadía/viáticos",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "revisado": 9000,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5776,7 +5776,7 @@ window.DIQUE_MONDAY = {
    "lineas": 167,
    "conDuracion": 31,
    "duracion": 31,
-   "avanceDias": 0.0
+   "avanceDias": 1.25
   },
   "cubierta": {
    "lineas": 19,
@@ -5794,101 +5794,136 @@ window.DIQUE_MONDAY = {
    "lineas": 195,
    "conDuracion": 53,
    "duracion": 167,
-   "avanceDias": 12.0
+   "avanceDias": 13.25
   }
  },
- "_huella": "6d24f49d849e",
+ "_huella": "f7b8f80ed2ac",
  "cambiosLectura": [
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Fecha Real",
+   "antes": "2026-10-09 a 2026-10-09",
+   "ahora": "2026-10-16 a 2026-10-16"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Diferencia",
+   "antes": "10",
+   "ahora": "17"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
    "campo": "Fase",
-   "antes": "No Aplica",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Mantenimiento preventivo del generador de emergencia",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Mantenimiento preventivo del generador de emergencia",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-14"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de succión de bomba de lastre de babor",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de succión de bomba de servicios generales",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de descarga de agua salada de máquina principal",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de descarga de agua salada de los generadores",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de succión de agua salada de los generadores",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de overflow hacia el sludge tank",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación de fuga en el tanque de sewage",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación de fuga en el tanque de sewage",
+   "campo": "Fase",
+   "antes": "Pre-dique",
    "ahora": "Dique"
   },
   {
    "tablero": "P2. Cubierta",
    "trabajo": "Caja menuda para capitán",
-   "campo": "Centro de Costo",
+   "campo": "$ Revisado Gerencia",
    "antes": "—",
-   "ahora": "2.1.4 · Estadía/viáticos"
+   "ahora": "9000"
   },
   {
    "tablero": "P2. Cubierta",
-   "trabajo": "Materiales cubierta",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "Fase",
-   "antes": "No Aplica",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Técnico",
-   "campo": "Actualización S3",
-   "antes": "1 - Actualización indirecta",
-   "ahora": "2 - Actualización directa"
-  },
-  {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Técnico",
-   "campo": "Actualización S4",
-   "antes": "1 - Actualización indirecta",
-   "ahora": "2 - Actualización directa"
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "Revisado Gerencia"
   }
  ],
  "observaciones": [
@@ -5905,10 +5940,6 @@ window.DIQUE_MONDAY = {
    "texto": "P1. Ingeniería: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8418w8, board_relation); revisar si el dashboard debe usarla."
   },
   {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-09) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
-  },
-  {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
   },
@@ -5918,7 +5949,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 31 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 31 por iniciar."
+   "texto": "P1. Ingeniería: 31 trabajo(s) planificado(s) · 1 en ejecución · 1 finalizado(s) · 29 por iniciar."
   },
   {
    "nivel": "info",

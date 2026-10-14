@@ -2221,7 +2221,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-14T20:29:58Z",
+      "updated_at": "2026-10-14T20:31:17Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2250,12 +2250,12 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": ""
+        "text": "9000"
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Pendiente"
+        "text": "Revisado Gerencia"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2273,7 +2273,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 20:29:58 UTC"
+        "text": "2026-10-14 20:31:17 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4198,7 +4198,7 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "9000"
        },
        {
         "id": "formula_mm7dehmt",
@@ -6985,7 +6985,7 @@
       "id": "13256760608",
       "name": "Codo de entrada al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:16Z",
+      "updated_at": "2026-10-14T20:39:54Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -6994,7 +6994,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -7037,7 +7037,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:16 UTC"
+        "text": "2026-10-14 20:39:54 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -7077,7 +7077,7 @@
       "id": "13256760158",
       "name": "Codo de entrada de aceite al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:16Z",
+      "updated_at": "2026-10-14T20:39:54Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -7086,7 +7086,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -7129,7 +7129,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:16 UTC"
+        "text": "2026-10-14 20:39:54 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -8457,7 +8457,7 @@
       "id": "13043922222",
       "name": "Mantenimiento preventivo del generador de emergencia",
       "created_at": "2026-09-14T19:46:30Z",
-      "updated_at": "2026-10-14T14:20:16Z",
+      "updated_at": "2026-10-14T20:39:54Z",
       "group": {
        "id": "group_mm7d5fgv",
        "title": "1.2 Generadores"
@@ -8509,17 +8509,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:16 UTC"
+        "text": "2026-10-14 20:39:54 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-10-14"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -11677,7 +11677,7 @@
       "id": "13256760157",
       "name": "Línea de descarga de bomba de lastre de estribor",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:17Z",
+      "updated_at": "2026-10-14T20:40:09Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -11686,7 +11686,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -11729,7 +11729,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:17 UTC"
+        "text": "2026-10-14 20:40:09 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -11769,7 +11769,7 @@
       "id": "13256755192",
       "name": "Válvula de succión de bomba de lastre de babor",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:17Z",
+      "updated_at": "2026-10-14T20:40:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -11778,7 +11778,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -11821,7 +11821,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:17 UTC"
+        "text": "2026-10-14 20:40:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -11861,7 +11861,7 @@
       "id": "13256755203",
       "name": "Bomba de carga #5 de babor — fuga interna",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:18Z",
+      "updated_at": "2026-10-14T20:40:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -11913,7 +11913,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:18 UTC"
+        "text": "2026-10-14 20:40:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -11953,7 +11953,7 @@
       "id": "13256744926",
       "name": "Línea de succión de bomba de servicios generales",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:18Z",
+      "updated_at": "2026-10-14T20:40:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -11962,7 +11962,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -12005,7 +12005,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:18 UTC"
+        "text": "2026-10-14 20:40:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -12045,7 +12045,7 @@
       "id": "13256760609",
       "name": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:19Z",
+      "updated_at": "2026-10-14T20:40:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -12097,7 +12097,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:19 UTC"
+        "text": "2026-10-14 20:40:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -12137,7 +12137,7 @@
       "id": "13256744868",
       "name": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
       "created_at": "2026-10-10T20:08:13Z",
-      "updated_at": "2026-10-14T14:20:20Z",
+      "updated_at": "2026-10-14T20:40:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -12189,7 +12189,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:20 UTC"
+        "text": "2026-10-14 20:40:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19037,7 +19037,7 @@
       "id": "13095603679",
       "name": "Válvulas de tomas de mar y línea madre de enfriamiento",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-14T14:20:27Z",
+      "updated_at": "2026-10-14T20:41:34Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -19089,7 +19089,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:27 UTC"
+        "text": "2026-10-14 20:41:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19313,7 +19313,7 @@
       "id": "13256760623",
       "name": "Válvula de descarga de agua salada de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:28Z",
+      "updated_at": "2026-10-14T20:41:28Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -19322,7 +19322,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -19365,7 +19365,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:28 UTC"
+        "text": "2026-10-14 20:41:28 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19405,7 +19405,7 @@
       "id": "13256755233",
       "name": "Válvula de descarga de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:29Z",
+      "updated_at": "2026-10-14T20:41:34Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -19414,7 +19414,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -19457,7 +19457,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:29 UTC"
+        "text": "2026-10-14 20:41:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19497,7 +19497,7 @@
       "id": "13256755205",
       "name": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:29Z",
+      "updated_at": "2026-10-14T20:41:34Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -19506,7 +19506,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -19549,7 +19549,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:29 UTC"
+        "text": "2026-10-14 20:41:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19589,7 +19589,7 @@
       "id": "13256755234",
       "name": "Línea de succión de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:30Z",
+      "updated_at": "2026-10-14T20:41:34Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -19598,7 +19598,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -19641,7 +19641,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:30 UTC"
+        "text": "2026-10-14 20:41:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19865,7 +19865,7 @@
       "id": "13256755103",
       "name": "Línea de overflow hacia el sludge tank",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:30Z",
+      "updated_at": "2026-10-14T20:41:48Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -19874,7 +19874,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -19917,7 +19917,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:30 UTC"
+        "text": "2026-10-14 20:41:48 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20049,7 +20049,7 @@
       "id": "13256755193",
       "name": "Reparación de fuga en el tanque de sewage",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-14T14:20:31Z",
+      "updated_at": "2026-10-14T20:41:59Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -20058,7 +20058,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -20101,12 +20101,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:31 UTC"
+        "text": "2026-10-14 20:41:59 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20791,7 +20791,7 @@
       "id": "13109464924",
       "name": "Aprobación de presupuesto",
       "created_at": "2026-09-22T21:01:07Z",
-      "updated_at": "2026-10-08T14:10:51Z",
+      "updated_at": "2026-10-14T20:42:48Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -20810,7 +20810,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-09 - 2026-10-09"
+        "text": "2026-10-16 - 2026-10-16"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -20821,12 +20821,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "10"
+        "display_value": "17"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:10:51 UTC"
+        "text": "2026-10-14 20:42:48 UTC"
        }
       ]
      },

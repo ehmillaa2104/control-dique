@@ -336,7 +336,7 @@ def comparar_con_anterior(datos):
     if ant.get("extraido") == datos["extraido"] and ant.get("cambiosLectura") and ant.get("_huella") == datos["_huella"]:
         return ant["cambiosLectura"]  # misma lectura: se conserva la comparación ya hecha
     cambios = []
-    fmt = lambda v: "—" if v in (None, "", []) else (" → ".join(v) if isinstance(v, list) and v and isinstance(v[0], str) and re.match(r"\d{4}-", v[0]) else str(v))
+    fmt = lambda v: "—" if v in (None, "", []) else (" a ".join(v) if isinstance(v, list) and v and isinstance(v[0], str) and re.match(r"\d{4}-", v[0]) else str(v))
     a_crono = {r["id"]: r for r in ant.get("cronograma", [])}
     for r in datos["cronograma"]:
         o = a_crono.get(r["id"])
