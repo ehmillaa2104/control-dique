@@ -15,7 +15,7 @@ Se actualiza solo cada vez que se sube una versión a `main`:
 - Rev. 0: https://ehmillaa2104.github.io/control-dique/rev0/
 - Cronograma 3D: https://ehmillaa2104.github.io/control-dique/pruebas/viaje-3d/
 
-> **¿Recibes este proyecto?** Empieza por [TRASPASO.md](TRASPASO.md). Las reglas de trabajo para Claude están en [CLAUDE.md](CLAUDE.md).
+> **¿Vas a trabajar este proyecto?** Empieza por [TRASPASO.md](TRASPASO.md). Las reglas de trabajo para Claude están en [CLAUDE.md](CLAUDE.md).
 
 ## Contenido
 

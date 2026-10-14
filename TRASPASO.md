@@ -1,4 +1,4 @@
-# Traspaso del dashboard de dique (Kelly Trader)
+# Guía para trabajar el dashboard de dique (Kelly Trader)
 
 Este proyecto es el dashboard de control del dique seco del M/V Kelly Trader. Lee los datos de Monday y se publica solo en internet. Se trabaja con **Claude Code**: se le pide en español lo que se necesita y Claude lo hace, lo verifica y lo guarda en GitHub.
 
@@ -15,9 +15,9 @@ Este proyecto es el dashboard de control del dique seco del M/V Kelly Trader. Le
 
 ## 2. Preparar el equipo (una sola vez)
 
-1. **Accesos que da el dueño actual:**
-   - En **GitHub**, invitación al repositorio o traspaso del repositorio a tu cuenta.
-   - En **Monday**, ser miembro del espacio **GESTIÓN DE DIQUES**, porque es un espacio cerrado.
+1. **Accesos** (los da Esteban Millaa, dueño del proyecto):
+   - En **GitHub**, invitación como colaborador del repositorio. Llega un correo de GitHub, hay que **aceptarla**.
+   - En **Monday**, ser miembro del espacio **GESTIÓN DE DIQUES**, porque es cerrado. Yelko Gomez ya está agregado.
 2. **Instalar:**
    - [Git](https://git-scm.com/downloads), con las opciones por defecto.
    - [Python 3](https://www.python.org/downloads/), marcando "Add Python to PATH".
@@ -49,6 +49,7 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 - **Los datos no se actualizan solos.** Se actualizan cada vez que se le pide a Claude que lea Monday. La fecha de la última lectura aparece arriba en el dashboard ("datos de Monday leídos el …").
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. Si los trabajos no tienen la **Duración** cargada en Monday, no cuentan.
 - **Costos:** salen del tablero CC. Centros de Costo, que suma lo aprobado en P1, P2 y P3.
+- **Dos personas trabajan el mismo proyecto.** Antes de subir, el guardado automático trae lo que haya subido el otro. Si los dos cambian el mismo archivo a la vez, Claude avisa y lo resuelve cuando se le pide.
 - **El repositorio es público.** Cualquiera con el enlace ve montos y nombres de trabajos. Por eso no se guardan nombres de personas, descripciones ni archivos. Si se prefiere privado, GitHub Pages necesita una cuenta paga, o se puede publicar en otro servicio.
 - **Si algo se ve viejo** en el navegador, recargar con **Ctrl + F5**.
 
