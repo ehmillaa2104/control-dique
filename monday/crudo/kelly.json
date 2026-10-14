@@ -329,7 +329,7 @@
       "id": "13289252803",
       "name": "Técnico",
       "created_at": "2026-10-14T14:49:08Z",
-      "updated_at": "2026-10-14T19:08:34Z",
+      "updated_at": "2026-10-14T19:33:45Z",
       "group": {
        "id": "group_mm849jzc",
        "title": "Equipos"
@@ -353,7 +353,7 @@
        {
         "id": "color_mm84ew0p",
         "type": "status",
-        "text": "1 - Actualización indirecta"
+        "text": "2 - Actualización directa"
        },
        {
         "id": "color_mm84nny7",
@@ -363,7 +363,7 @@
        {
         "id": "color_mm84p83r",
         "type": "status",
-        "text": "1 - Actualización indirecta"
+        "text": "2 - Actualización directa"
        },
        {
         "id": "color_mm843kqp",
@@ -414,19 +414,19 @@
         "id": "formula_mm84qsjp",
         "type": "formula",
         "text": "",
-        "display_value": "3"
+        "display_value": "5"
        },
        {
         "id": "formula_mm84c488",
         "type": "formula",
         "text": "",
-        "display_value": "50%"
+        "display_value": "83.3%"
        },
        {
         "id": "formula_mm84jbkq",
         "type": "formula",
         "text": "",
-        "display_value": "Medio"
+        "display_value": "Alto"
        }
       ]
      },
@@ -2221,7 +2221,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-08T14:46:55Z",
+      "updated_at": "2026-10-14T20:29:58Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2230,7 +2230,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "No Aplica"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -2266,12 +2266,14 @@
         "id": "board_relation_mm7am925",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081177348"
+        ]
        },
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-08 14:46:55 UTC"
+        "text": "2026-10-14 20:29:58 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2311,7 +2313,7 @@
       "id": "13098338467",
       "name": "Materiales cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T14:11:45Z",
+      "updated_at": "2026-10-14T19:20:44Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2363,7 +2365,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:45 UTC"
+        "text": "2026-10-14 19:20:44 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2383,7 +2385,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -2403,7 +2405,7 @@
       "id": "13098367009",
       "name": "Reparaciones en cubierta (aceros y soldadura)",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-14T19:20:46Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2455,7 +2457,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-14 19:20:46 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2475,7 +2477,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -2771,7 +2773,7 @@
       "id": "13098334516",
       "name": "Materiales seguridad",
       "created_at": "2026-09-21T19:58:42Z",
-      "updated_at": "2026-10-05T20:47:53Z",
+      "updated_at": "2026-10-14T19:39:56Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2780,7 +2782,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "No Aplica"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -2823,7 +2825,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-05 20:47:53 UTC"
+        "text": "2026-10-14 19:39:56 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2863,7 +2865,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-14T19:20:50Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2915,7 +2917,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-14 19:20:50 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2935,7 +2937,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -2955,7 +2957,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:45Z",
+      "updated_at": "2026-10-14T19:20:51Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3007,7 +3009,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:45 UTC"
+        "text": "2026-10-14 19:20:51 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3027,7 +3029,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3047,7 +3049,7 @@
       "id": "13212044850",
       "name": "Bote Salvavidas – Sistema Davit y Hook",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-14T19:20:53Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3099,7 +3101,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-14 19:20:53 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3119,7 +3121,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3139,7 +3141,7 @@
       "id": "13212040785",
       "name": "Compás Magnético – Esfera Kelvin",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:45Z",
+      "updated_at": "2026-10-14T19:20:55Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3191,7 +3193,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:45 UTC"
+        "text": "2026-10-14 19:20:55 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3211,7 +3213,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3231,7 +3233,7 @@
       "id": "13212064416",
       "name": "Speed Log – Doppler",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-14T19:20:56Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3283,7 +3285,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-14 19:20:56 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3303,7 +3305,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3323,7 +3325,7 @@
       "id": "13212053198",
       "name": "Bote Salvavidas – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-14T19:20:57Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3375,7 +3377,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-14 19:20:57 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3395,7 +3397,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -4226,7 +4228,9 @@
         "id": "board_relation_mm7a4ck0",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13238699549"
+        ]
        },
        {
         "id": "board_relation_mm7yxa9r",

@@ -347,6 +347,7 @@ def comparar_con_anterior(datos):
             if o.get(k) != r.get(k):
                 cambios.append({"tablero": "Cronograma", "trabajo": r["nombre"], "campo": n, "antes": fmt(o.get(k)), "ahora": fmt(r.get(k))})
     a_trab = {t["id"]: t for a in ant.get("areas", []) for t in a["trabajos"]}
+    cc_nombre = {c["id"]: c["nombre"] for c in datos.get("centros", [])}
     for a in datos["areas"]:
         ids = set()
         for t in a["trabajos"]:
@@ -357,9 +358,23 @@ def comparar_con_anterior(datos):
                 continue
             for k, n in CAMPOS_TRABAJO.items():
                 if o.get(k) != t.get(k):
-                    cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": n, "antes": fmt(o.get(k)), "ahora": fmt(t.get(k))})
+                    f2 = (lambda v: ", ".join(cc_nombre.get(i, i) for i in v) or "—") if k == "cc" else fmt
+                    cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": n, "antes": f2(o.get(k)), "ahora": f2(t.get(k))})
         for o in [x for x in next((y["trabajos"] for y in ant.get("areas", []) if y["id"] == a["id"]), []) if x["id"] not in ids]:
             cambios.append({"tablero": a["tablero"], "trabajo": o["nombre"], "campo": "borrado", "antes": "", "ahora": ""})
+    # Participación: cada reunión y actualización por equipo y semana
+    a_eq = {e["id"]: e for e in (ant.get("participacion") or {}).get("equipos", [])}
+    for e in (datos.get("participacion") or {}).get("equipos", []):
+        o = a_eq.get(e["id"])
+        if not o:
+            continue
+        a_sem = {x["semana"]: x for x in o["semanas"]}
+        for x in e["semanas"]:
+            p = a_sem.get(x["semana"], {})
+            for k, n in (("reunion", "Reunión"), ("act", "Actualización")):
+                if p.get(k) != x.get(k):
+                    cambios.append({"tablero": "Participación del Equipo", "trabajo": e["nombre"], "campo": f'{n} {"Kick Off" if x["semana"] == "S1" else x["semana"]}',
+                                    "antes": p.get(k) or "—", "ahora": x.get(k) or "—"})
     return cambios
 
 

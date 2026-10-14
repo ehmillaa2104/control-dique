@@ -4420,7 +4420,7 @@ window.DIQUE_MONDAY = {
      "id": "13238699549",
      "nombre": "Caja menuda para capitán",
      "grupo": "Operaciones",
-     "fase": "No Aplica",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -4435,8 +4435,10 @@ window.DIQUE_MONDAY = {
      "po": null,
      "incurrido": null,
      "fin": null,
-     "cc": [],
-     "actualizado": "2026-10-08"
+     "cc": [
+      "13081177348"
+     ],
+     "actualizado": "2026-10-14"
     },
     {
      "id": "13098338467",
@@ -4446,7 +4448,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Correctivo",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4470,7 +4472,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Correctivo",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4562,7 +4564,7 @@ window.DIQUE_MONDAY = {
      "id": "13098334516",
      "nombre": "Materiales seguridad",
      "grupo": "Seguridad",
-     "fase": "No Aplica",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
@@ -4580,7 +4582,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-05"
+     "actualizado": "2026-10-14"
     },
     {
      "id": "13212064635",
@@ -4590,7 +4592,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4614,7 +4616,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4638,7 +4640,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4662,7 +4664,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4686,7 +4688,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -4710,7 +4712,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -5137,7 +5139,9 @@ window.DIQUE_MONDAY = {
    "po": 0,
    "incurrido": 0,
    "proyectado": 0,
-   "lineas": [],
+   "lineas": [
+    "13238699549"
+   ],
    "pos": []
   },
   {
@@ -5429,9 +5433,9 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 14,
+   "puntos": 16,
    "maximo": 24,
-   "pct": 58.3,
+   "pct": 66.7,
    "nivel": "Medio"
   },
   "semanas": [
@@ -5631,10 +5635,10 @@ window.DIQUE_MONDAY = {
     "id": "13289252803",
     "nombre": "Técnico",
     "area": "tecnico",
-    "puntos": 3,
+    "puntos": 5,
     "maximo": 6,
-    "pct": 50.0,
-    "nivel": "Medio",
+    "pct": 83.3,
+    "nivel": "Alto",
     "semanas": [
      {
       "semana": "S1",
@@ -5653,16 +5657,16 @@ window.DIQUE_MONDAY = {
      {
       "semana": "S3",
       "reunion": "No asistió",
-      "act": "1 - Actualización indirecta",
+      "act": "2 - Actualización directa",
       "pr": 0,
-      "pa": 1
+      "pa": 2
      },
      {
       "semana": "S4",
       "reunion": null,
-      "act": "1 - Actualización indirecta",
+      "act": "2 - Actualización directa",
       "pr": null,
-      "pa": 1
+      "pa": 2
      },
      {
       "semana": "S5",
@@ -5776,8 +5780,8 @@ window.DIQUE_MONDAY = {
   },
   "cubierta": {
    "lineas": 19,
-   "conDuracion": 6,
-   "duracion": 52,
+   "conDuracion": 14,
+   "duracion": 60,
    "avanceDias": 12.0
   },
   "tecnico": {
@@ -5788,13 +5792,105 @@ window.DIQUE_MONDAY = {
   },
   "total": {
    "lineas": 195,
-   "conDuracion": 45,
-   "duracion": 159,
+   "conDuracion": 53,
+   "duracion": 167,
    "avanceDias": 12.0
   }
  },
- "_huella": "d3996e7c56fb",
- "cambiosLectura": [],
+ "_huella": "6d24f49d849e",
+ "cambiosLectura": [
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Fase",
+   "antes": "No Aplica",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Centro de Costo",
+   "antes": "—",
+   "ahora": "2.1.4 · Estadía/viáticos"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales cubierta",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales seguridad",
+   "campo": "Fase",
+   "antes": "No Aplica",
+   "ahora": "Dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Foam – Agente Espumógeno",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote de Rescate – Casco",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Compás Magnético – Esfera Kelvin",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Speed Log – Doppler",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Casco",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Técnico",
+   "campo": "Actualización S3",
+   "antes": "1 - Actualización indirecta",
+   "ahora": "2 - Actualización directa"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Técnico",
+   "campo": "Actualización S4",
+   "antes": "1 - Actualización indirecta",
+   "ahora": "2 - Actualización directa"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "aviso",
@@ -5830,15 +5926,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 6 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 3 por iniciar."
+   "texto": "P2. Cubierta: 14 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 11 por iniciar."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta: 8 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Materiales cubierta, Reparaciones en cubierta (aceros y soldadura), Foam – Agente Espumógeno, Bote de Rescate – Casco, Bote Salvavidas – Sistema Davit y Hook…."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: 1 trabajo(s) sin Centro de Costo: Caja menuda para capitán."
+   "texto": "P2. Cubierta: 2 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Caja menuda para capitán, Materiales seguridad."
   },
   {
    "nivel": "info",
@@ -5862,7 +5954,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "Participación del equipo: 58.3% (14 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3, S4 (actualización)."
+   "texto": "Participación del equipo: 66.7% (16 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3, S4 (actualización)."
   }
  ]
 };
