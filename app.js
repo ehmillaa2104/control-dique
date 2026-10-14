@@ -110,7 +110,7 @@
     const gk = /pre/.test(g) ? "pre" : /post/.test(g) ? "post" : /dique/.test(g) ? "dique" : /plan/.test(g) ? "plan" : "otra";
     return /ejecuci/.test(n) ? gk : "sub " + gk; // "sub" = actividad dentro de una fase (barra fina)
   }
-  const itemName = (o) => (o.kind === "tras" ? o.nombre : KIND_NOMBRE[o.kind] || o.nombre);
+  const itemName = (o) => (o.kind === "tras" ? o.nombre : KIND_NOMBRE[o.kind] || o.nombre.split("*")[0].trim());
   const itemTip = (o) => tipAttr(`<b>${esc(o.nombre)}</b>${rowT("Fecha real", dateRange(o.real))}${rowT("Línea base", dateRange(o.base))}${rowT("Estado", esc(o.estado || "—"))}${rowT("Diferencia", difTxt(o.diferencia, false))}` +
     (o.duracion > 0 && Math.abs(daysBetween(o.real[0], o.real[1]) + 1 - o.duracion) > 1 ? `<div class="tnote alert">En Monday la duración dice ${o.duracion} días, pero la fecha real cubre ${daysBetween(o.real[0], o.real[1]) + 1}.</div>` : ""));
 
@@ -137,7 +137,7 @@
         // Una actividad que se monta más de un día sobre otra de la misma fila va como barra fina
         const over = drawn.some((d) => Math.min(S.t(d.real[1]), S.t(o.real[1])) + 1 - Math.max(S.t(d.real[0]), S.t(o.real[0])) > 1);
         drawn.push(o);
-        const thin = over || /sub/.test(o.kind), vencido = !o.done && o.real[1] < TODAY;
+        const thin = over, vencido = !o.done && o.real[1] < TODAY;
         const l = S.xs(o.real[0]), w = S.xe(o.real[1]) - l;
         let h = `<i class="bar k-${o.kind.replace("sub ", "")} ${thin ? "thin" : ""} ${vencido ? "over" : ""}" style="left:${l}%;width:${w}%" ${itemTip(o)}>${!thin && w > 8 ? `<b>${esc(itemName(o))}</b>` : ""}</i>`;
         if (o.base && !thin) h += `<i class="base" style="left:${S.xs(o.base[0])}%;width:${S.xe(o.base[1]) - S.xs(o.base[0])}%"></i>`;
@@ -207,8 +207,7 @@
     const hoyX = S.xm(TODAY);
     // Franja de fases en su fecha real (si se traslapan, la que empieza después queda encima) y los hitos
     const bands = M.fases.map((o) => `<i class="vb k-${o.kind}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>`).join("") +
-      M.actividades.map((o) => `<i class="vb sub k-${o.kind.replace("sub ", "")} ${o.diferencia > 0 ? "late" : ""}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>` +
-        `<span class="vs-lbl" style="left:${S.xs(o.real[0])}%" ${itemTip(o)}>${esc(o.nombre.split("*")[0].trim())} · ${dateRange(o.real)}</span>`).join("");
+      M.actividades.map((o) => `<i class="vb act k-${o.kind.replace("sub ", "")} ${o.diferencia > 0 ? "late" : ""}" style="left:${S.xs(o.real[0])}%;width:${S.xe(o.real[1]) - S.xs(o.real[0])}%" ${itemTip(o)}></i>`).join("");
     const hs = M.hitos.map((o) => {
       const late = !o.done && (o.diferencia > 0 || o.real[0] < TODAY);
       return `<i class="vh ${o.done ? "ok" : late ? "late" : ""}" style="left:${S.xm(o.real[0])}%" ${itemTip(o)}></i>`;

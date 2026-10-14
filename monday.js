@@ -148,17 +148,17 @@ window.DIQUE_MONDAY = {
    "grupo": "Dique",
    "nombre": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
    "estado": "No Iniciado",
-   "duracion": 38,
+   "duracion": 7,
    "base": [
     "2026-11-16",
     "2026-11-22"
    ],
    "real": [
-    "2026-10-16",
-    "2026-10-22"
+    "2026-11-16",
+    "2026-11-22"
    ],
-   "diferencia": -31,
-   "actualizado": "2026-10-13"
+   "diferencia": 0,
+   "actualizado": "2026-10-14"
   },
   {
    "id": "13095528125",
@@ -5459,24 +5459,12 @@ window.DIQUE_MONDAY = {
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-09) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
   },
   {
-   "nivel": "aviso",
-   "texto": "Cronograma · \"Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos\": Duración = 38 días, pero la Fecha Real cubre 7."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma · \"Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos\": la Línea Base termina 31 días después de la Fecha Real; revisar si la línea base o la fecha real están bien cargadas."
-  },
-  {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
   },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma: entre 2026-11-17 y 2026-11-22 no hay ninguna actividad cargada (hueco de 6 días)."
   },
   {
    "nivel": "info",
