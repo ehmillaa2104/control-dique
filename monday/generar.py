@@ -76,6 +76,9 @@ def columnas_semana(board):
         m = re.match(r"(?i)kick\s*off", t)
         r = re.match(r"(?i)reuni[oó]n\s+(S\d+)", t)
         a = re.match(r"(?i)act\.?\s+(S\d+)", t)
+        f = re.search(r"\(([^)]+)\)", t)
+        if f and (m or r or a):
+            sem.setdefault("S1" if m else (r or a).group(1).upper(), {"semana": "S1" if m else (r or a).group(1).upper()})["fecha"] = f.group(1).strip()
         if m:
             sem.setdefault("S1", {"semana": "S1", "titulo": t})["reunion"] = c["id"]
         elif r:
@@ -207,6 +210,14 @@ def area(key, tab):
         ejec = sum(1 for t in con if 0 < t["pct"] < 100)
         fin = sum(1 for t in con if t["pct"] >= 100)
         obs.append(("info", f'{b["name"]}: {len(con)} trabajo(s) planificado(s) · {ejec} en ejecución · {fin} finalizado(s) · {len(con) - ejec - fin} por iniciar.'))
+    # Un trabajo con fase (Pre-dique, Dique, Post-dique…) está planificado: debería tener Duración para contar en el avance
+    con_fase = [t for t in act if t["fase"] and not re.search(r"no aplica", t["fase"], re.I)]
+    sin_dur = [t for t in con_fase if not (t["duracion"] and t["duracion"] > 0)]
+    if sin_dur:
+        obs.append(("aviso", f'{b["name"]}: {len(sin_dur)} trabajo(s) con fase pero sin Duración; no cuentan en el avance: {", ".join(t["nombre"] for t in sin_dur[:5])}{"…" if len(sin_dur) > 5 else ""}.'))
+    sin_fase_dur = [t for t in act if t not in con_fase and t["duracion"] and t["duracion"] > 0]
+    if sin_fase_dur:
+        obs.append(("aviso", f'{b["name"]}: {len(sin_fase_dur)} trabajo(s) con Duración pero sin fase (No Aplica): {", ".join(t["nombre"] for t in sin_fase_dur[:5])}.'))
     sin_cc = [t for t in act if not t["cc"]]
     if sin_cc:
         obs.append(("aviso", f'{b["name"]}: {len(sin_cc)} trabajo(s) sin Centro de Costo: {", ".join(t["nombre"] for t in sin_cc[:4])}{"…" if len(sin_cc) > 4 else ""}.'))
@@ -418,7 +429,7 @@ def participacion(raw):
                for s_ in semanas if s_["cuenta_reunion"] or s_["cuenta_act"]]
     obs.append(("info", f'Participación del equipo: {tot}% ({tp} de {tm} puntos) · máximo igual para todos: {equipos[0]["maximo"] if equipos else 0} pts · cuentan: {", ".join(cuentan) or "ninguna"}.'))
     return {"total": {"puntos": tp, "maximo": tm, "pct": tot, "nivel": None if tot is None else "Alto" if tot >= 75 else "Medio" if tot >= 50 else "Bajo"},
-            "semanas": [{"semana": s_["semana"], "reunion": s_["cuenta_reunion"], "act": s_["cuenta_act"],
+            "semanas": [{"semana": s_["semana"], "fecha": s_.get("fecha"), "reunion": s_["cuenta_reunion"], "act": s_["cuenta_act"],
                          "conDatos": s_["cuenta_reunion"] or s_["cuenta_act"]} for s_ in semanas],
             "equipos": equipos, "umbrales": {"alto": 75, "medio": 50}}
 

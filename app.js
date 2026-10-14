@@ -380,7 +380,7 @@
       return `<div class="pc-row ${semCls(e.nivel)}">
         <div class="pc-nm"><b>${esc(e.nombre)}</b><small>${k.asis}/${k.reun} reuniones · ${k.pa}/${k.pam} pts de actualización</small></div>
         <div class="pc-bar"><span class="sbar"><i style="width:${e.pct || 0}%"></i></span><b>${e.pct == null ? "—" : pct(e.pct, 0)}</b><span class="sem-chip">${esc(e.nivel || "—")}</span></div>
-        <details class="pc-det"><summary>Ver por semana</summary><div class="pc-weeks"><span class="pc-head">${semanas.map((s) => `<i>${s.semana === "S1" ? "KO" : s.semana}</i>`).join("")}</span><span class="pc-vals">${celdas}</span></div>
+        <details class="pc-det"><summary>Ver por semana</summary><div class="pc-weeks"><span class="pc-head">${semanas.map((s) => `<i>${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</i>`).join("")}</span><span class="pc-vals">${celdas}</span></div>
           <div class="pc-ley">✓ asistió · ✗ no asistió · 2 actualización directa · 1 indirecta · 0 no actualizó</div></details>
       </div>`;
     };
@@ -401,11 +401,18 @@
     return `<div class="areas">${M.areas.map((a) => {
       const C = costos(a.act), av = avance(a.trabajos);
       const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado), sinCC = a.act.filter((t) => !t.cc.length).length;
-      const est = {};
-      a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
+      const est = {}; // estados de los trabajos planificados (con fase)
+      a.act.filter(conFase).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
       return `<a class="card area" href="#${a.id}">
-        <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b>${(() => { const e = partDe(M, a.id); return e && e.pct != null ? `<span class="sem-pill ${semCls(e.nivel)}" title="Participación del equipo">${icon("users", "ic sm")}${pct(e.pct, 0)} · ${esc(e.nivel)}</span>` : ""; })()}<small>${esc(a.tablero)}</small></div>
+        <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
+        ${(() => {
+          const e = partDe(M, a.id);
+          if (!e || e.pct == null) return "";
+          const k = reunAct(e, M.part);
+          return `<div class="area-pt ${semCls(e.nivel)}"><small>${icon("users", "ic sm")}Participación</small><span class="sbar"><i style="width:${e.pct}%"></i></span><b>${pct(e.pct, 0)}</b><span class="sem-chip">${esc(e.nivel)}</span>
+            <small class="det">${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts</small></div>`;
+        })()}
         <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
       </a>`;
@@ -427,10 +434,12 @@
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
 
+  // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
+  const conFase = (t) => !!t.fase && !/no aplica/i.test(t.fase);
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();
     const grupos = [];
-    a.trabajos.filter((t) => !ql || (t.nombre + " " + t.grupo + " " + t.fase).toLowerCase().includes(ql)).forEach((t) => {
+    a.trabajos.filter(conFase).filter((t) => !ql || (t.nombre + " " + t.grupo + " " + t.fase).toLowerCase().includes(ql)).forEach((t) => {
       let g = grupos.find((x) => x.nombre === t.grupo); if (!g) grupos.push((g = { nombre: t.grupo, items: [] })); g.items.push(t);
     });
     const ccName = (ids) => ids.map((id) => (M.centros.find((c) => c.id === id) || {}).nombre || "?").join(", ");
@@ -450,12 +459,13 @@
   function viewArea(M, a, q) {
     const C = costos(a.act), av = avance(a.trabajos);
     const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado);
-    const est = {};
-    a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
+    const est = {}, plan = a.trabajos.filter(conFase), ocultos = a.trabajos.length - plan.length;
+    plan.filter((t) => !t.cancelado).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
+    const sinDur = plan.filter((t) => !t.cancelado && !(t.duracion > 0)).length;
     const pa = partDe(M, a.id);
     return `<div class="kpis ${pa ? "k7" : "k6"}">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
-        <span class="muted sm">${plural(a.trabajos.length, "trabajo", "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
+        <span class="muted sm">${plural(plan.length, "trabajo planificado", "trabajos planificados")} (con fase) · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos ? ` · no se muestran ${plural(ocultos, "trabajo", "trabajos")} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${plural(sinDur, "planificado", "planificados")} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
 
   function viewCrono(M) {

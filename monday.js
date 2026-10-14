@@ -5437,48 +5437,56 @@ window.DIQUE_MONDAY = {
   "semanas": [
    {
     "semana": "S1",
+    "fecha": "23 Sep",
     "reunion": true,
     "act": false,
     "conDatos": true
    },
    {
     "semana": "S2",
+    "fecha": null,
     "reunion": false,
     "act": false,
     "conDatos": false
    },
    {
     "semana": "S3",
+    "fecha": "9 Oct",
     "reunion": true,
     "act": true,
     "conDatos": true
    },
    {
     "semana": "S4",
+    "fecha": "16 Oct",
     "reunion": false,
     "act": true,
     "conDatos": true
    },
    {
     "semana": "S5",
+    "fecha": null,
     "reunion": false,
     "act": false,
     "conDatos": false
    },
    {
     "semana": "S6",
+    "fecha": null,
     "reunion": false,
     "act": false,
     "conDatos": false
    },
    {
     "semana": "S7",
+    "fecha": null,
     "reunion": false,
     "act": false,
     "conDatos": false
    },
    {
     "semana": "S8",
+    "fecha": null,
     "reunion": false,
     "act": false,
     "conDatos": false
@@ -5785,7 +5793,7 @@ window.DIQUE_MONDAY = {
    "avanceDias": 12.0
   }
  },
- "_huella": "2cc1e4f260b2",
+ "_huella": "d3996e7c56fb",
  "cambiosLectura": [],
  "observaciones": [
   {
@@ -5823,6 +5831,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P2. Cubierta: 6 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 3 por iniciar."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta: 8 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Materiales cubierta, Reparaciones en cubierta (aceros y soldadura), Foam – Agente Espumógeno, Bote de Rescate – Casco, Bote Salvavidas – Sistema Davit y Hook…."
   },
   {
    "nivel": "aviso",
