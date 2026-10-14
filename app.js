@@ -85,12 +85,17 @@
     incurrido: sum(arr, (x) => x.incurrido), revisado: sum(arr, (x) => x.revisado), solicitado: sum(arr, (x) => x.solicitado)
   });
   // Avance físico = Σ (Estado % × Duración) / Σ Duración (como la columna "Avance" de Monday)
+  //   Un trabajo con Duración es un trabajo planificado para ejecutarse: de esos se cuenta cuántos están en ejecución y finalizados
   function avance(trabajos) {
     const act = trabajos.filter((t) => !t.cancelado);
     const con = act.filter((t) => t.duracion > 0);
     const dur = sum(con, (t) => t.duracion);
-    return { pct: dur ? sum(con, (t) => t.duracion * t.pct) / dur : 0, n: act.length, conDur: con.length, dur };
+    return {
+      pct: dur ? sum(con, (t) => t.duracion * t.pct) / dur : 0, n: act.length, conDur: con.length, dur,
+      ejec: con.filter((t) => t.pct > 0 && t.pct < 100).length, fin: con.filter((t) => t.pct >= 100).length
+    };
   }
+  const planTxt = (av) => (av.conDur ? `${plural(av.conDur, "trabajo planificado", "trabajos planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}` : '<span class="t-warn">sin trabajos planificados (ninguno tiene duración)</span>');
 
   // =========================================================
   // Cronograma: filas por grupo de Monday, barras en Fecha Real, Línea Base debajo, atraso en rojo
@@ -280,8 +285,8 @@
       kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido"),
       ...(extra.extraKpis || []),
-      kpi("gauge", "Avance físico", pct(av.pct), av.conDur < av.n ? `<span class="t-warn">solo ${av.conDur} de ${av.n} trabajos tienen duración</span>` : `${av.n} trabajos con duración`,
-        { tip: `<b>Avance físico</b><div class="tnote">Σ (Estado % × Duración) / Σ Duración, como la columna "Avance" de Monday.</div>${rowT("Trabajos", av.n)}${rowT("Con duración", av.conDur)}${rowT("Días totales", av.dur)}` })
+      kpi("gauge", "Avance físico", pct(av.pct), planTxt(av),
+        { tip: `<b>Avance físico</b><div class="tnote">Σ (Estado % × Duración) / Σ Duración de los trabajos planificados (los que tienen Duración), como la columna "Avance" de Monday.</div>${rowT("Planificados", av.conDur)}${rowT("Por iniciar (0 %)", av.conDur - av.ejec - av.fin)}${rowT("En ejecución (25–75 %)", av.ejec)}${rowT("Finalizados (100 %)", av.fin)}${rowT("Sin planificar (sin duración)", av.n - av.conDur)}${rowT("Días planificados", av.dur)}` })
     ].join("");
   }
 
@@ -340,7 +345,7 @@
       a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
-        <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${av.conDur < av.n ? `<span class="t-warn">${av.conDur} de ${av.n} trabajos con duración</span>` : plural(av.n, "trabajo", "trabajos")}</small></div>
+        <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
         <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
       </a>`;

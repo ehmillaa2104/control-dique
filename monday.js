@@ -5495,16 +5495,16 @@ window.DIQUE_MONDAY = {
    "texto": "Cronograma: entre 2026-11-17 y 2026-11-22 no hay ninguna actividad cargada (hueco de 6 días)."
   },
   {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: 136 de 167 trabajos no tienen Duración y no cuentan en el avance."
+   "nivel": "info",
+   "texto": "P1. Ingeniería: 31 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 31 por iniciar."
   },
   {
    "nivel": "info",
    "texto": "P1. Ingeniería: 31 trabajo(s) con monto solicitado aún sin aprobar (US$ 99,950)."
   },
   {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: 13 de 19 trabajos no tienen Duración y no cuentan en el avance."
+   "nivel": "info",
+   "texto": "P2. Cubierta: 6 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 3 por iniciar."
   },
   {
    "nivel": "aviso",
@@ -5515,8 +5515,8 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: 15 trabajo(s) con monto solicitado aún sin aprobar (US$ 135,920)."
   },
   {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: 3 de 9 trabajos no tienen Duración y no cuentan en el avance."
+   "nivel": "info",
+   "texto": "P3. Técnico: 6 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 6 por iniciar."
   },
   {
    "nivel": "info",

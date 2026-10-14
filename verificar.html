@@ -136,7 +136,7 @@
       const pc = r.dur ? (r.avd / r.dur) * 100 : 0, pm = dDur ? (dCon.reduce((x, t) => x + t.duracion * t.pct, 0) / dDur) : 0;
       avRows.push(`<tr><td><b>${esc(b.name)}</b><div class="muted">${Object.entries(est).map(([e, n]) => esc(e) + ": " + n).join(" · ")}</div></td>
         <td class="n">${r.n}</td><td class="n">${r.conD}</td><td class="n">${r.dur}</td><td class="n"><b>${pc.toFixed(1)}%</b></td><td class="n">${pm.toFixed(1)}%</td>
-        <td>${resumen([r.n === act.length ? mark("ok", "trabajos") : mark("err", `trabajos: ${r.n} en Monday, ${act.length} en el dashboard`), Math.abs(pc - pm) < 0.05 ? mark("ok", "avance") : mark("err", "avance distinto")].concat(r.n && !r.conD ? [mark("warn", "ningún trabajo tiene Duración: el avance se muestra 0 %")] : []))}</td></tr>`);
+        <td>${resumen([r.n === act.length ? mark("ok", "trabajos") : mark("err", `trabajos: ${r.n} en Monday, ${act.length} en el dashboard`), Math.abs(pc - pm) < 0.05 ? mark("ok", "avance") : mark("err", "avance distinto")].concat(r.n && !r.conD ? [mark("warn", "ningún trabajo planificado (sin Duración): el avance se muestra 0 %")] : []))}</td></tr>`);
       const cmp = [["sol", "solicitado"], ["rev", "revisado"], ["apr", "aprobado"], ["pro", "proyectado"], ["po", "po"], ["inc", "incurrido"]].map(([x, f]) => (eq(r[x], s(f)) ? mark("ok", f) : mark("err", `${f}: Monday ${m$(r[x])}, dashboard ${m$(s(f))}`)));
       costRows.push(`<tr><td><b>${esc(b.name)}</b></td><td class="n">${m$(r.sol)}</td><td class="n">${m$(r.rev)}</td><td class="n">${m$(r.apr)}</td><td class="n">${m$(r.pro)}</td><td class="n">${m$(r.po)}</td><td class="n">${m$(r.inc)}</td><td>${resumen(cmp)}</td></tr>`);
     });
@@ -189,8 +189,8 @@
         <div class="note">Arriba de cada celda está el texto tal como viene de Monday; debajo, lo que usa el dashboard. El atraso es la columna <b>Diferencia</b>, que aquí se recalcula como fin real − fin base.</div>
         <div class="scroll"><table><thead><tr><th>Elemento</th><th>Fecha Real</th><th>Línea Base</th><th>Diferencia</th><th>Revisión</th></tr></thead><tbody>${cronoRows}</tbody></table></div></section>
       <section><h2>2 · Avance físico (P1, P2 y P3)</h2>
-        <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Total recalculado: <b>${(tot.dur ? (tot.avd / tot.dur) * 100 : 0).toFixed(1)}%</b> con ${tot.conD} de ${tot.n} trabajos con duración.</div>
-        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Con duración</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows.join("")}</tbody></table></div></section>
+        <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Total recalculado: <b>${(tot.dur ? (tot.avd / tot.dur) * 100 : 0).toFixed(1)}%</b> con ${tot.conD} trabajos planificados (con duración) de ${tot.n}.</div>
+        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Planificados (con duración)</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows.join("")}</tbody></table></div></section>
       <section><h2>3 · Costos por área</h2>
         <div class="note">Suma de las columnas de cada trabajo: $ Solicitado, $ Revisado Gerencia (preliminar), $ Aprobado Dirección, $ Proyectado, $PO Total e $Incurrido (las dos últimas vienen de las POs enlazadas).</div>
         <div class="scroll"><table><thead><tr><th>Tablero</th><th>Solicitado</th><th>Preliminar</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${costRows.join("")}</tbody></table></div></section>

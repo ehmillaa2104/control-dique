@@ -176,10 +176,13 @@ def area(key, tab):
             "fin": fecha(v["fin"]), "cc": v["cc"], "actualizado": fecha(v["actualizado"])})
     act = [t for t in trabajos if not t["cancelado"]]
     con = [t for t in act if t["duracion"] and t["duracion"] > 0]
+    # Un trabajo con Duración es un trabajo planificado para ejecutarse
     if act and not con:
-        obs.append(("aviso", f'{b["name"]}: ninguno de sus {len(act)} trabajos tiene Duración; el avance no se puede ponderar y se muestra 0 %.'))
-    elif len(con) < len(act):
-        obs.append(("aviso", f'{b["name"]}: {len(act) - len(con)} de {len(act)} trabajos no tienen Duración y no cuentan en el avance.'))
+        obs.append(("aviso", f'{b["name"]}: ningún trabajo planificado (ninguno tiene Duración); el avance se muestra 0 %.'))
+    elif con:
+        ejec = sum(1 for t in con if 0 < t["pct"] < 100)
+        fin = sum(1 for t in con if t["pct"] >= 100)
+        obs.append(("info", f'{b["name"]}: {len(con)} trabajo(s) planificado(s) · {ejec} en ejecución · {fin} finalizado(s) · {len(con) - ejec - fin} por iniciar.'))
     sin_cc = [t for t in act if not t["cc"]]
     if sin_cc:
         obs.append(("aviso", f'{b["name"]}: {len(sin_cc)} trabajo(s) sin Centro de Costo: {", ".join(t["nombre"] for t in sin_cc[:4])}{"…" if len(sin_cc) > 4 else ""}.'))

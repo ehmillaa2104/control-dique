@@ -47,7 +47,7 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 ## 4. Cosas a saber
 
 - **Los datos no se actualizan solos.** Se actualizan cada vez que se le pide a Claude que lea Monday. La fecha de la última lectura aparece arriba en el dashboard ("datos de Monday leídos el …").
-- **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. Si los trabajos no tienen la **Duración** cargada en Monday, no cuentan.
+- **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3. Un trabajo con **Duración** es un trabajo planificado para ejecutarse. El dashboard muestra cuántos de los planificados están en ejecución y cuántos finalizaron.
 - **Costos:** salen del tablero CC. Centros de Costo, que suma lo aprobado en P1, P2 y P3.
 - **Dos personas trabajan el mismo proyecto.** Antes de subir, el guardado automático trae lo que haya subido el otro. Si los dos cambian el mismo archivo a la vez, Claude avisa y lo resuelve cuando se le pide.
 - **El repositorio es público.** Cualquiera con el enlace ve montos y nombres de trabajos. Por eso no se guardan nombres de personas, descripciones ni archivos. Si se prefiere privado, GitHub Pages necesita una cuenta paga, o se puede publicar en otro servicio.
@@ -59,7 +59,6 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 - **Cronograma con un hueco del 17 al 22 nov:** el hueco cae justo donde quedó la línea base de "Trabajos adicionales de dique". Probablemente su fecha real debería ser 16–22 nov.
 - "Aprobación de presupuesto" está vencido desde el 09 oct y sigue En curso.
 - En "Trabajos adicionales de dique" se movió la línea base (16–22 nov) en vez de la fecha real (16–22 oct). Además dice Duración 38 días, pero las fechas cubren 7.
-- 189 de 195 trabajos no tienen Duración, así que el avance total todavía no es representativo.
 - Hay US$ 1,10 M solicitados sin aprobar y no hay nada aprobado.
 - La orden de compra "tf" está vacía; parece de prueba.
 - "Caja menuda para capitán" (Cubierta) no tiene Centro de Costo.
