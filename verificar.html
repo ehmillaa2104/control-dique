@@ -199,6 +199,8 @@
         <div class="scroll"><table><thead><tr><th>Centro de costo</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${ccRows}</tbody></table></div></section>
       <section><h2>5 · Datos que faltan en Monday</h2>
         <ul>${falta.map((x) => `<li>${x}</li>`).join("")}</ul></section>
+      <section><h2>6 · Observaciones del conversor (monday/generar.py)</h2>
+        <ul>${(MD.observaciones || []).map((o) => `<li class="${o.nivel === "error" ? "err" : o.nivel === "aviso" ? "warn" : "muted"}">${o.nivel === "error" ? "✗" : o.nivel === "aviso" ? "⚠" : "·"} ${esc(o.texto)}</li>`).join("") || '<li class="ok">✓ Sin observaciones</li>'}</ul></section>
       <section><h2>Cómo se actualiza</h2>
         <ul>
           <li>La lectura de Monday queda guardada tal cual en <code>monday/crudo/kelly.json</code> (leída el ${esc(raw.extraido || "—")}).</li>

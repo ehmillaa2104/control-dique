@@ -126,7 +126,7 @@ def leer():
     return raw, out
 
 
-def cronograma(tab):
+def cronograma(tab, hoy):
     b, items = tab
     filas = []
     for it, v in items:
@@ -143,6 +143,10 @@ def cronograma(tab):
             obs.append(("aviso", f'Cronograma · "{nombre}": Duración = {dur} días, pero la Fecha Real cubre {dias(real[0], real[1]) + 1}.'))
         if not base:
             obs.append(("aviso", f'Cronograma · "{nombre}": sin Línea Base; no se puede medir el atraso.'))
+        if base and dif is not None and dif <= -14:
+            obs.append(("aviso", f'Cronograma · "{nombre}": la Línea Base termina {-dif} días después de la Fecha Real; revisar si la línea base o la fecha real están bien cargadas.'))
+        if dur == 0 and real[0] < hoy and not re.search(r"listo", v["estado"] or "", re.I):
+            obs.append(("aviso", f'Cronograma · hito "{nombre}": su fecha ({real[0]}) ya pasó y sigue "{v["estado"] or "sin estado"}"; actualizar la fecha o marcarlo Listo.'))
     return filas
 
 
@@ -216,6 +220,10 @@ def pos(tab):
                     "cc": v["cc"], "trabajos": v["trabajos"], "actualizado": fecha(v["actualizado"])})
     if not out:
         obs.append(("aviso", f'{b["name"]}: sin órdenes de compra; PO e Incurrido quedan en 0.'))
+    for p in out:
+        falta = [n for n, ok in (("monto", p["po"]), ("centro de costo", p["cc"]), ("trabajo enlazado", p["trabajos"])) if not ok]
+        if falta:
+            obs.append(("aviso", f'{b["name"]} · "{p["nombre"]}": sin {", ".join(falta)}; no suma en los totales.'))
     return out
 
 
@@ -246,7 +254,8 @@ def main():
     raw, tab = leer()
     if "--recortar" in sys.argv:
         CRUDO.write_text(json.dumps(recortar(raw), ensure_ascii=False, indent=1), encoding="utf-8")
-    crono = cronograma(tab["cronograma"])
+    hoy = raw.get("extraido") or date.today().isoformat()
+    crono = cronograma(tab["cronograma"], hoy)
     areas = [area(k, tab[k]) for k in AREAS]
     datos = {
         "proyecto": "Kelly Trader", "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",

@@ -125,7 +125,8 @@
     const lane = (L) => {
       const all = L.items.concat(L.hitos), st = all.map((o) => o.real[0]).sort(), en = all.map((o) => o.real[1]).sort();
       const drawn = [];
-      const bars = L.items.slice().sort((a, b) => daysBetween(b.real[0], b.real[1]) - daysBetween(a.real[0], a.real[1])).map((o) => {
+      const orden = (o) => (/sub/.test(o.kind) ? 1 : 0);
+      const bars = L.items.slice().sort((a, b) => orden(a) - orden(b) || (a.real[0] < b.real[0] ? -1 : a.real[0] > b.real[0] ? 1 : 0)).map((o) => {
         // Una actividad que se monta más de un día sobre otra de la misma fila va como barra fina
         const over = drawn.some((d) => Math.min(S.t(d.real[1]), S.t(o.real[1])) + 1 - Math.max(S.t(d.real[0]), S.t(o.real[0])) > 1);
         drawn.push(o);
@@ -209,8 +210,10 @@
     const hitoTxt = (h, prox) => {
       if (!h) return '<b class="muted">—</b>';
       const cuando = h.real[0] === TODAY ? "hoy" : fmtShort(h.real[0]);
-      const late = !h.done && (h.diferencia > 0 || h.real[0] < TODAY);
-      return `<b>${esc(h.nombre)}</b><span>${cuando}${h.done ? " · cumplido" : ""}${prox && h.diferencia > 0 ? ` · <em class="v-late">+${h.diferencia} d</em>` : prox && late ? ' · <em class="v-late">vencido</em>' : ""}</span>`;
+      if (h.done || !prox) return `<b>${esc(h.nombre)}</b><span>${cuando}${h.done ? " · cumplido" : ""}</span>`;
+      const vencido = h.real[0] < TODAY ? daysBetween(h.real[0], TODAY) : 0;
+      const extra = vencido ? ` · <em class="v-late">vencido hace ${days1(vencido)}</em>` : h.diferencia > 0 ? ` · <em class="v-late">+${h.diferencia} d vs plan</em>` : "";
+      return `<b>${esc(h.nombre)}</b><span>${cuando}${extra}</span>`;
     };
     const fin = M.finHito;
     const align = hoyX < 12 ? "l" : hoyX > 88 ? "r" : "";
@@ -257,10 +260,10 @@
         { tip: `<b>Costo aprobado</b>${rowT("Aprobado Dirección", money(C.aprobado))}${rowT("Revisado Gerencia", money(C.revisado))}${rowT("Solicitado sin aprobar", money(pend))}` }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? vsAprob(C.po) : "sin órdenes de compra"),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido"),
       ...(extra.extraKpis || []),
-      kpi("gauge", "Avance físico", pct(av.pct), av.n && !av.conDur ? `<span class="t-warn">0 de ${av.n} trabajos con duración</span>` : `${av.conDur} de ${av.n} trabajos con duración`,
+      kpi("gauge", "Avance físico", pct(av.pct), av.conDur < av.n ? `<span class="t-warn">solo ${av.conDur} de ${av.n} trabajos tienen duración</span>` : `${av.n} trabajos con duración`,
         { tip: `<b>Avance físico</b><div class="tnote">Σ (Estado % × Duración) / Σ Duración, como la columna "Avance" de Monday.</div>${rowT("Trabajos", av.n)}${rowT("Con duración", av.conDur)}${rowT("Días totales", av.dur)}` })
     ].join("");
   }
@@ -308,10 +311,13 @@
     const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small>${[c.tipo, c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : "", c.creado ? fmtShort(c.creado) : ""].filter(Boolean).map(esc).join(" · ")}</small></div>${chip(c.estado)}</div>`).join("")
       : empty("Sin cambios ni imprevistos registrados en Monday.");
     // Última actividad: lo que se actualizó más recientemente en los tableros
-    const recientes = M.areas.flatMap((a) => a.trabajos.map((t) => ({ n: t.nombre, b: a.nombre, f: t.actualizado })))
+    const items = M.areas.flatMap((a) => a.trabajos.map((t) => ({ n: t.nombre, b: a.nombre, f: t.actualizado })))
       .concat(M.D.cronograma.map((r) => ({ n: r.nombre.split("*")[0].trim(), b: "Cronograma", f: r.actualizado })))
-      .filter((x) => x.f).sort((a, b) => (a.f < b.f ? 1 : a.f > b.f ? -1 : 0)).slice(0, 6);
-    const act = recientes.map((x) => `<div class="li"><div><b>${esc(x.n)}</b><small>${esc(x.b)}</small></div><span class="muted sm nw">${fmtShort(x.f)}</span></div>`).join("");
+      .filter((x) => x.f);
+    const grupos = [];
+    items.forEach((x) => { let g = grupos.find((y) => y.b === x.b && y.f === x.f); if (!g) grupos.push((g = { b: x.b, f: x.f, n: [] })); g.n.push(x.n); });
+    grupos.sort((a, b) => (a.f < b.f ? 1 : a.f > b.f ? -1 : b.n.length - a.n.length));
+    const act = grupos.slice(0, 5).map((g) => `<div class="li"><div><b>${esc(g.b)} · ${plural(g.n.length, "elemento actualizado", "elementos actualizados")}</b><small>${esc(g.n.slice(0, 3).join(" · "))}${g.n.length > 3 ? " …" : ""}</small></div><span class="muted sm nw">${fmtShort(g.f)}</span></div>`).join("");
     return card("Cambios recientes", `<div class="list">${cambios}</div><div class="sub-h">Última actividad en Monday</div><div class="list">${act || empty("Sin actividad.")}</div>`,
       { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
   }
@@ -324,7 +330,7 @@
       a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
-        <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${plural(av.n, "trabajo", "trabajos")}${av.n && !av.conDur ? " sin duración" : ""}</small></div>
+        <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${av.conDur < av.n ? `<span class="t-warn">${av.conDur} de ${av.n} trabajos con duración</span>` : plural(av.n, "trabajo", "trabajos")}</small></div>
         <div class="area-c"><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
       </a>`;
@@ -338,7 +344,9 @@
     const all = M.areas.flatMap((a) => a.trabajos);
     const C = costos(M.centros);
     const pend = sum(all.filter((t) => !t.cancelado && !t.aprobado), (t) => t.solicitado);
-    return `<div class="kpis k6">${costKpis(C, avance(all), { pendiente: pend, extraKpis: [atrasoKpi(M)] })}</div>
+    const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
+    const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
+    return `<div class="kpis k6">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, extraKpis: [atrasoKpi(M)] })}</div>
       <div class="row-b">${centrosCard(M)}${cambiosCard(M)}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }

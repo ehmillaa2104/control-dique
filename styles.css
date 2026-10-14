@@ -102,7 +102,7 @@ a { color: inherit; }
 .k-plan { --c: #a78bfa; } .k-pre { --c: #38bdf8; } .k-tras { --c: #cbd5e1; } .k-dique { --c: #fbbf24; } .k-post { --c: #34d399; } .k-otra { --c: #9ca3af; }
 
 /* ---------- Pestañas ---------- */
-.tabs-wrap { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 5; }
+.tabs-wrap { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 20; }
 .tabs-bar { max-width: 1480px; margin: 0 auto; padding: 0 24px; }
 .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .tab { display: flex; align-items: center; gap: 8px; padding: 12px 14px; color: var(--ink-3); font-weight: 600; border-bottom: 3px solid transparent; white-space: nowrap; text-decoration: none; }
