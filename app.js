@@ -273,6 +273,14 @@
     return null;
   }
 
+  // Trabajos cuyo monto solicitado no coincide con el preliminar (revisado por Gerencia)
+  function difTip(trabajos) {
+    const d = (trabajos || []).filter((t) => !t.cancelado && Math.abs((t.solicitado || 0) - (t.revisado || 0)) > 0.5);
+    if (!d.length) return "";
+    return `<div class="tnote warn" style="margin-top:6px">Diferencia solicitado → preliminar: ${money(sum(d, (t) => (t.revisado || 0) - (t.solicitado || 0)))}</div>` +
+      d.slice(0, 6).map((t) => rowT(`${esc(t.nombre)}${t.cc && !t.cc.length ? " · sin CC" : ""}`, `${moneyK(t.solicitado || 0)} → ${moneyK(t.revisado || 0)}`)).join("") + (d.length > 6 ? `<div class="tnote">y ${d.length - 6} más</div>` : "");
+  }
+
   function costKpis(C, av, extra = {}) {
     const vsAprob = (v) => (C.aprobado ? `${((v / C.aprobado) * 100).toFixed(0)}% del aprobado` : "sin monto aprobado");
     const pend = extra.pendiente || 0;
@@ -282,9 +290,9 @@
     const chipPrel = E ? `<span class="chip warn">${esc(E.txt)}</span>${E.sub ? ` ${esc(E.sub)}` : ""}` : '<span class="chip warn">Pendiente de aprobación</span> revisado por Gerencia';
     return [
       kpi("coin", "Presupuesto preliminar", moneyK(C.revisado), porAprobar ? chipPrel : C.revisado ? "revisado por Gerencia y aprobado" : "revisado por Gerencia",
-        { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b>${eTip}<div class="tnote">Columna "$ Preliminar" del tablero CC: suma de "$ Revisado Gerencia" de los trabajos de P1, P2 y P3.</div>${rowT("Solicitado por los equipos", money(C.solicitado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Aprobado Dirección", money(C.aprobado))}` }),
-      kpi("check", "Costo aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${E ? esc(E.txt) + " · " : ""}${moneyK(porAprobar)} del preliminar sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
-        { tip: `<b>Costo aprobado</b>${eTip}${rowT("Aprobado Dirección", money(C.aprobado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Preliminar sin aprobar", money(porAprobar))}` }),
+        { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b>${eTip}<div class="tnote">Columna "$ Preliminar" del tablero CC: suma de "$ Revisado Gerencia" de los trabajos de P1, P2 y P3.</div>${rowT("Solicitado por los equipos", money(C.solicitado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Aprobado Dirección", money(C.aprobado))}${difTip(extra.trabajos)}` }),
+      kpi("check", "Presupuesto aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${E ? esc(E.txt) + " · " : ""}${moneyK(porAprobar)} del preliminar sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
+        { tip: `<b>Presupuesto aprobado</b>${eTip}${rowT("Aprobado Dirección", money(C.aprobado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Preliminar sin aprobar", money(porAprobar))}` }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
       kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
@@ -367,7 +375,7 @@
     const pend = sum(all.filter((t) => !t.cancelado && !t.aprobado), (t) => t.solicitado);
     const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
-    return `<div class="kpis k7">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), extraKpis: [atrasoKpi(M)] })}</div>
+    return `<div class="kpis k7">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}</div>
       <div class="row-b">${centrosCard(M)}${cambiosCard(M)}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
@@ -397,7 +405,7 @@
     const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado);
     const est = {};
     a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
-    return `<div class="kpis k6">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M) })}</div>
+    return `<div class="kpis k6">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}</div>
       ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(a.trabajos.length, "trabajo", "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
