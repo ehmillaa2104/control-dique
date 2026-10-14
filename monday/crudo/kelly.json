@@ -21176,9 +21176,9 @@
      },
      {
       "id": "13095528127",
-      "name": "On Hire",
+      "name": "On Hire (Estimado)",
       "created_at": "2026-09-21T16:11:13Z",
-      "updated_at": "2026-10-08T14:07:53Z",
+      "updated_at": "2026-10-14T21:36:12Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -21213,7 +21213,7 @@
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:07:53 UTC"
+        "text": "2026-10-14 21:36:12 UTC"
        }
       ]
      },

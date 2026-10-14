@@ -214,7 +214,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13095528127",
    "grupo": "Post Dique",
-   "nombre": "On Hire",
+   "nombre": "On Hire (Estimado)",
    "estado": "No Iniciado",
    "duracion": 0,
    "base": [
@@ -226,7 +226,7 @@ window.DIQUE_MONDAY = {
     "2026-12-01"
    ],
    "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "actualizado": "2026-10-14"
   },
   {
    "id": "13095528128",
@@ -5797,37 +5797,8 @@ window.DIQUE_MONDAY = {
    "avanceDias": 13.25
   }
  },
- "_huella": "3fe3bf9eb02b",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Fecha Real",
-   "antes": "2026-09-22 a 2026-10-15",
-   "ahora": "2026-09-22 a 2026-10-16"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Diferencia",
-   "antes": "13",
-   "ahora": "14"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Duración",
-   "antes": "24",
-   "ahora": "25"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  }
- ],
+ "_huella": "e53a4d4e18e4",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "aviso",
