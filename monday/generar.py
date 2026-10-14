@@ -147,6 +147,15 @@ def cronograma(tab, hoy):
             obs.append(("aviso", f'Cronograma · "{nombre}": la Línea Base termina {-dif} días después de la Fecha Real; revisar si la línea base o la fecha real están bien cargadas.'))
         if dur == 0 and real[0] < hoy and not re.search(r"listo", v["estado"] or "", re.I):
             obs.append(("aviso", f'Cronograma · hito "{nombre}": su fecha ({real[0]}) ya pasó y sigue "{v["estado"] or "sin estado"}"; actualizar la fecha o marcarlo Listo.'))
+    # Huecos: días entre el inicio y el fin del proyecto sin ninguna actividad cargada
+    tramos = sorted((f["real"][0], f["real"][1]) for f in filas if f["real"] and f["duracion"] != 0)
+    hitos = {f["real"][0] for f in filas if f["real"] and f["duracion"] == 0}
+    hasta = None
+    for ini, fin in tramos:
+        if hasta and dias(hasta, ini) > 2:
+            desde = (date.fromisoformat(hasta).toordinal() + 1)
+            obs.append(("aviso", f'Cronograma: entre {date.fromordinal(desde).isoformat()} y {date.fromordinal(date.fromisoformat(ini).toordinal() - 1).isoformat()} no hay ninguna actividad cargada (hueco de {dias(hasta, ini) - 1} días).'))
+        hasta = fin if not hasta or fin > hasta else hasta
     return filas
 
 

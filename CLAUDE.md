@@ -55,6 +55,8 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 ## Reglas de cálculo acordadas
 
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3, igual que la columna "Avance" de Monday. Se pondera por duración porque no todos los trabajos tienen costo. Siempre decir cuántos trabajos tienen duración.
+- **Presupuesto preliminar**: columna **"$ Preliminar"** del tablero CC (`formula_mm7d91f2`, en el código `revisado`). Es la suma de "$ Revisado Gerencia" de los trabajos. Se muestra en **amarillo** mientras no esté aprobado.
+- **Estado ante Dirección**: si un centro de costo tiene Estado Aprobación = "Revisar", se muestra "Dirección solicitó cambios". Si Monday no lo tiene, sale la nota de **`notas.js`**, que se edita a mano y se borra cuando el dato ya esté en Monday.
 - **Costos** (aprobado, proyectado, PO, incurrido): salen del tablero **CC. Centros de Costo**. Cada centro debe sumar sus líneas de P1, P2 y P3. Los **gastos generales** son los centros de costo, con sus mismos nombres.
 - **Cronograma:** las barras usan la **Fecha Real** y la **Línea Base** se muestra como referencia. El atraso es la columna **Diferencia**. Los hitos son los elementos con duración 0.
 - **Tiempo y avance se muestran separados**, porque el tiempo puede pasar sin que suba el avance. El buque de la cabecera marca hoy en el cronograma; el avance va aparte.
@@ -62,7 +64,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 ## Diseño
 
 - Paleta corporativa blanco y negro. El rojo solo para alertas (atrasos, vencidos, datos faltantes) y el ámbar para lo pendiente de aprobar. Las fases del cronograma son el único lugar con color.
-- Poca información a la vista. El detalle va en desplegables y tooltips.
+- Poca información a la vista. El detalle va en desplegables y tooltips. No mostrar "última actividad en Monday": el usuario pidió quitarla.
 - Debe verse bien en celular.
 
 ## Publicación

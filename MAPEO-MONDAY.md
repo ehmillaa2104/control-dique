@@ -76,7 +76,7 @@ Los gastos generales son los **centros de costo** de este tablero, con los mismo
 | Dato del dashboard | Columna Monday | ID columna |
 |---|---|---|
 | Nombre del gasto | Name | `name` |
-| Revisado (gerencia) | $ Revisado | `formula_mm7d91f2` |
+| Presupuesto preliminar (revisado por Gerencia) | $ Preliminar (antes "$ Revisado") | `formula_mm7d91f2` |
 | Costo plan aprobado | $ Aprobado | `formula_mm7dehmt` |
 | Comprometido (PO) | $ PO Total | `formula_mm7yshcc` |
 | Incurrido | $ Incurrido | `formula_mm7yyr9q` |

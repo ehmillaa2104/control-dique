@@ -55,6 +55,8 @@ Al terminar cada pedido, Claude guarda la versión en GitHub y la página public
 
 ## 5. Pendiente en Monday al 14 oct 2026
 
+- **Presupuesto preliminar:** US$ 1,09 M, revisado por Gerencia. Dirección solicitó cambios y no hay nada aprobado. Eso se muestra con la nota de `notas.js`; cuando Dirección marque los centros de costo como "Revisar" o "Aprobado" en Monday, conviene borrar la nota.
+- **Cronograma con un hueco del 17 al 22 nov:** el hueco cae justo donde quedó la línea base de "Trabajos adicionales de dique". Probablemente su fecha real debería ser 16–22 nov.
 - "Aprobación de presupuesto" está vencido desde el 09 oct y sigue En curso.
 - En "Trabajos adicionales de dique" se movió la línea base (16–22 nov) en vez de la fecha real (16–22 oct). Además dice Duración 38 días, pero las fechas cubren 7.
 - 189 de 195 trabajos no tienen Duración, así que el avance total todavía no es representativo.

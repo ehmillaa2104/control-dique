@@ -37,6 +37,7 @@
 
   const ICONS = {
     check: '<path d="M5 12.5l4.2 4L19 7"/>',
+    coin: '<circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2s1.2 1.7 2.8 2 2.8.9 2.8 2.1-1.2 2-2.8 2c-1.3 0-2.4-.6-2.9-1.5M12 6v1.8M12 16.2V18"/>',
     trend: '<path d="M4 17l5-5 4 3 7-8"/><path d="M15 7h5v5"/>', doc: '<path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10.5a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/><path d="M14 3.5V8h4M9 12.5h6M9 16h6"/>',
     wallet: '<path d="M4 7.5h14.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18V6.5A1.5 1.5 0 0 1 5.5 5H16"/><path d="M15.5 13.5h2"/>',
     clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>', gauge: '<path d="M4.5 16a7.5 7.5 0 1 1 15 0"/><path d="M12 16l3.5-4.5"/><circle cx="12" cy="16" r="1.2"/>',
@@ -246,18 +247,34 @@
   // Componentes
   // =========================================================
   const card = (title, body, o = {}) => `<section class="card ${o.cls || ""}"><div class="card-h"><span>${title}</span>${o.right ? `<small>${o.right}</small>` : ""}</div>${body}</section>`;
-  const kpi = (ic, lbl, val, sub, o = {}) => `<div class="card kpi ${o.alert ? "alert" : ""}" ${o.tip ? tipAttr(o.tip) : ""}>${icon(ic)}<div style="min-width:0"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="sub">${sub}</div></div></div>`;
+  const kpi = (ic, lbl, val, sub, o = {}) => `<div class="card kpi ${o.alert ? "alert" : o.warn ? "warn" : ""}" ${o.tip ? tipAttr(o.tip) : ""}>${icon(ic)}<div style="min-width:0"><div class="lbl">${lbl}</div><div class="val">${val}</div><div class="sub">${sub}</div></div></div>`;
   const empty = (txt) => `<div class="empty">${txt}</div>`;
   const bar = (p) => `<span class="pbar"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></span>`;
   const mcell = (v) => (v ? moneyK(v) : '<span class="muted">—</span>');
   const chipAprob = (e) => (e ? `<span class="chip ${/aprob/i.test(e) ? "ok" : /descart|rechaz/i.test(e) ? "alert" : /revis/i.test(e) ? "warn" : ""}">${esc(e)}</span>` : '<span class="muted">—</span>');
 
+  // Estado del presupuesto ante Dirección. Primero lo que dice Monday (CC con Estado Aprobación "Revisar");
+  // si Monday no lo tiene, la nota de gestión de notas.js.
+  function estadoDireccion(M) {
+    const rev = M.centros.filter((c) => /revis/i.test(c.estado || ""));
+    if (rev.length) return { txt: "Dirección solicitó cambios", sub: `${plural(rev.length, "centro de costo", "centros de costo")} en "Revisar"`, fuente: "Monday · tablero CC (Estado Aprobación = Revisar)", centros: rev.map((c) => c.nombre) };
+    const n = (window.DIQUE_NOTAS || {}).presupuesto;
+    if (n && n.estado) return { txt: n.estado, sub: n.fecha ? fmtShort(n.fecha) : "", detalle: n.detalle || "", fuente: "Nota de gestión (notas.js); aún no está en Monday" };
+    return null;
+  }
+
   function costKpis(C, av, extra = {}) {
     const vsAprob = (v) => (C.aprobado ? `${((v / C.aprobado) * 100).toFixed(0)}% del aprobado` : "sin monto aprobado");
     const pend = extra.pendiente || 0;
+    const porAprobar = Math.max(0, C.revisado - C.aprobado);
+    const E = porAprobar ? extra.direccion : null;
+    const eTip = E ? `<div class="tnote warn">${esc(E.txt)}${E.sub ? " · " + esc(E.sub) : ""}${E.detalle ? "<br>" + esc(E.detalle) : ""}${E.centros ? "<br>" + E.centros.map(esc).join(", ") : ""}<br><span style="opacity:.7">Fuente: ${esc(E.fuente)}</span></div>` : "";
+    const chipPrel = E ? `<span class="chip warn">${esc(E.txt)}</span>${E.sub ? ` ${esc(E.sub)}` : ""}` : '<span class="chip warn">Pendiente de aprobación</span> revisado por Gerencia';
     return [
-      kpi("check", "Costo aprobado", moneyK(C.aprobado), pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
-        { tip: `<b>Costo aprobado</b>${rowT("Aprobado Dirección", money(C.aprobado))}${rowT("Revisado Gerencia", money(C.revisado))}${rowT("Solicitado sin aprobar", money(pend))}` }),
+      kpi("coin", "Presupuesto preliminar", moneyK(C.revisado), porAprobar ? chipPrel : C.revisado ? "revisado por Gerencia y aprobado" : "revisado por Gerencia",
+        { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b>${eTip}<div class="tnote">Columna "$ Preliminar" del tablero CC: suma de "$ Revisado Gerencia" de los trabajos de P1, P2 y P3.</div>${rowT("Solicitado por los equipos", money(C.solicitado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Aprobado Dirección", money(C.aprobado))}` }),
+      kpi("check", "Costo aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${E ? esc(E.txt) + " · " : ""}${moneyK(porAprobar)} del preliminar sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
+        { tip: `<b>Costo aprobado</b>${eTip}${rowT("Aprobado Dirección", money(C.aprobado))}${rowT("Preliminar (revisado Gerencia)", money(C.revisado))}${rowT("Preliminar sin aprobar", money(porAprobar))}` }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
       kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
@@ -283,10 +300,11 @@
 
   // Centros de costo, desplegables por grupo y por centro (con sus trabajos de P1, P2 y P3)
   function centrosCard(M) {
-    const cols = (c, cls = "") => `<span class="n ${cls}">${mcell(c.aprobado)}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
+    const cols = (c, cls = "") => `<span class="n ${cls} ${c.revisado > (c.aprobado || 0) ? "t-warn" : ""}">${mcell(c.revisado)}</span><span class="n ${cls}">${mcell(c.aprobado)}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
     const grupos = [];
     M.centros.forEach((c) => { let g = grupos.find((x) => x.nombre === c.grupo); if (!g) grupos.push((g = { nombre: c.grupo, items: [] })); g.items.push(c); });
-    const estadoCC = (c) => `<span class="chip ${/aprob/i.test(c.estado) ? "ok" : /revis/i.test(c.estado) ? "warn" : ""}">${esc(c.estado || "Pendiente")}</span>`;
+    const estadoCC = (c) => (/revis/i.test(c.estado) ? '<span class="chip warn">Cambios solicitados</span>'
+      : `<span class="chip ${/aprob/i.test(c.estado) ? "ok" : ""}">${esc(c.estado || "Pendiente")}</span>`);
     const linea = (t) => `<div class="cc-line"><span class="nm">${esc(t.nombre)}<small>${esc(t.areaNombre)}${t.aprobacion ? " · " + esc(t.aprobacion) : ""}${t.solicitado && !t.aprobado ? ` · solicitado ${moneyK(t.solicitado)}` : ""}</small></span>${cols(t)}<span class="st"></span></div>`;
     const body = grupos.map((g) => {
       const G = costos(g.items);
@@ -299,7 +317,7 @@
     }).join("");
     const T = costos(M.centros);
     return card("Centros de costo", `<div class="cc-table">
-        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
+        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n">Preliminar</span><span class="n">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
         ${body}
         <div class="cc-total"><span class="nm">Total</span>${cols(T, "b")}<span class="st"></span></div>
       </div>`, { cls: "wide", right: "clic en un grupo o centro para desplegar" });
@@ -310,15 +328,7 @@
     const chip = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
     const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small>${[c.tipo, c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : "", c.creado ? fmtShort(c.creado) : ""].filter(Boolean).map(esc).join(" · ")}</small></div>${chip(c.estado)}</div>`).join("")
       : empty("Sin cambios ni imprevistos registrados en Monday.");
-    // Última actividad: lo que se actualizó más recientemente en los tableros
-    const items = M.areas.flatMap((a) => a.trabajos.map((t) => ({ n: t.nombre, b: a.nombre, f: t.actualizado })))
-      .concat(M.D.cronograma.map((r) => ({ n: r.nombre.split("*")[0].trim(), b: "Cronograma", f: r.actualizado })))
-      .filter((x) => x.f);
-    const grupos = [];
-    items.forEach((x) => { let g = grupos.find((y) => y.b === x.b && y.f === x.f); if (!g) grupos.push((g = { b: x.b, f: x.f, n: [] })); g.n.push(x.n); });
-    grupos.sort((a, b) => (a.f < b.f ? 1 : a.f > b.f ? -1 : b.n.length - a.n.length));
-    const act = grupos.slice(0, 5).map((g) => `<div class="li"><div><b>${esc(g.b)} · ${plural(g.n.length, "elemento actualizado", "elementos actualizados")}</b><small>${esc(g.n.slice(0, 3).join(" · "))}${g.n.length > 3 ? " …" : ""}</small></div><span class="muted sm nw">${fmtShort(g.f)}</span></div>`).join("");
-    return card("Cambios recientes", `<div class="list">${cambios}</div><div class="sub-h">Última actividad en Monday</div><div class="list">${act || empty("Sin actividad.")}</div>`,
+    return card("Cambios recientes", `<div class="list">${cambios}</div>`,
       { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
   }
 
@@ -331,7 +341,7 @@
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${av.conDur < av.n ? `<span class="t-warn">${av.conDur} de ${av.n} trabajos con duración</span>` : plural(av.n, "trabajo", "trabajos")}</small></div>
-        <div class="area-c"><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
+        <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
       </a>`;
     }).join("")}</div>`;
@@ -342,11 +352,12 @@
   // =========================================================
   function viewResumen(M) {
     const all = M.areas.flatMap((a) => a.trabajos);
-    const C = costos(M.centros);
+    // Montos de los centros de costo; el solicitado no está en CC y se suma de los trabajos
+    const C = Object.assign(costos(M.centros), { solicitado: sum(all.filter((t) => !t.cancelado), (t) => t.solicitado) });
     const pend = sum(all.filter((t) => !t.cancelado && !t.aprobado), (t) => t.solicitado);
     const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
-    return `<div class="kpis k6">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, extraKpis: [atrasoKpi(M)] })}</div>
+    return `<div class="kpis k7">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), extraKpis: [atrasoKpi(M)] })}</div>
       <div class="row-b">${centrosCard(M)}${cambiosCard(M)}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
@@ -360,13 +371,13 @@
     const ccName = (ids) => ids.map((id) => (M.centros.find((c) => c.id === id) || {}).nombre || "?").join(", ");
     const row = (t) => `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${t.cc.length ? esc(ccName(t.cc)) : '<span class="t-alert">sin centro de costo</span>'}</small></td>
       <td>${esc(t.fase || "—")}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td><td class="n">${t.duracion || '<span class="muted">—</span>'}</td>
-      <td>${chipAprob(t.aprobacion)}</td><td class="n">${mcell(t.solicitado)}</td><td class="n">${mcell(t.aprobado)}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
+      <td>${chipAprob(t.aprobacion)}</td><td class="n">${mcell(t.solicitado)}</td><td class="n ${t.revisado > (t.aprobado || 0) ? "t-warn" : ""}">${mcell(t.revisado)}</td><td class="n">${mcell(t.aprobado)}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
       <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`;
     if (!grupos.length) return empty("Ningún trabajo coincide con la búsqueda.");
     return grupos.map((g) => {
       const G = costos(g.items.filter((t) => !t.cancelado)), gav = avance(g.items);
-      return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · aprobado ${moneyK(G.aprobado)}${G.solicitado && !G.aprobado ? ` · solicitado ${moneyK(G.solicitado)}` : ""}</span></summary>
-        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Aprobación</th><th class="n">Solicitado</th><th class="n">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
+      return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · preliminar ${moneyK(G.revisado)} · aprobado ${moneyK(G.aprobado)}</span></summary>
+        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Aprobación</th><th class="n">Solicitado</th><th class="n">Preliminar</th><th class="n">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
         <tbody>${g.items.map(row).join("")}</tbody></table></div></details>`;
     }).join("");
   }
@@ -376,7 +387,7 @@
     const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado);
     const est = {};
     a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
-    return `<div class="kpis k5">${costKpis(C, av, { pendiente: pend })}</div>
+    return `<div class="kpis k6">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M) })}</div>
       ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(a.trabajos.length, "trabajo", "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }

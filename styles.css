@@ -123,8 +123,8 @@ h2.sec { margin: 6px 0 -4px; font-size: 12px; font-weight: 800; letter-spacing: 
 
 /* KPIs */
 .kpis { display: grid; gap: 10px; }
+.kpis.k7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
 .kpis.k6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-.kpis.k5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .kpi { display: flex; gap: 10px; align-items: flex-start; padding: 12px; }
 .kpi > .ic { width: 28px; height: 28px; margin-top: 2px; }
 .kpi .lbl { font-size: 10.5px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-2); }
@@ -132,6 +132,9 @@ h2.sec { margin: 6px 0 -4px; font-size: 12px; font-weight: 800; letter-spacing: 
 .kpi .sub { font-size: 11.5px; color: var(--ink-3); line-height: 1.35; }
 .kpi.alert { border-color: var(--alert); }
 .kpi.alert .val { color: var(--alert-t); }
+.kpi.warn { border-color: var(--warn-t); background: linear-gradient(var(--warn-soft), var(--warn-soft)) top / 100% 4px no-repeat, var(--surface); }
+.kpi.warn .val, .kpi.warn > .ic { color: var(--warn-t); }
+.kpi .sub .chip { margin: 0 4px 2px 0; white-space: normal; }
 
 .row-b { display: grid; grid-template-columns: 1.65fr 1fr; gap: 14px; align-items: start; }
 
@@ -145,7 +148,7 @@ h2.sec { margin: 6px 0 -4px; font-size: 12px; font-weight: 800; letter-spacing: 
 
 /* Centros de costo desplegables */
 .cc-table { font-size: 13px; }
-.cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { display: grid; grid-template-columns: minmax(0, 1fr) repeat(4, 104px) 104px; gap: 8px; align-items: center; padding: 8px 14px; }
+.cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { display: grid; grid-template-columns: minmax(0, 1fr) repeat(5, 98px) 96px; gap: 8px; align-items: center; padding: 8px 14px; }
 .cc-head { font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--border); }
 .cc-table .n { text-align: right; white-space: nowrap; }
 .cc-table .st { text-align: right; }
@@ -182,7 +185,7 @@ h2.sec { margin: 6px 0 -4px; font-size: 12px; font-weight: 800; letter-spacing: 
 .area-av .big { font-size: 24px; font-weight: 800; grid-row: span 2; }
 .area-av .pbar { width: 100%; height: 8px; }
 .area-av small { font-size: 11.5px; color: var(--ink-3); }
-.area-c { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; border-top: 1px solid var(--border); padding-top: 10px; }
+.area-c { display: grid; grid-template-columns: repeat(auto-fit, minmax(82px, 1fr)); gap: 8px; border-top: 1px solid var(--border); padding-top: 10px; }
 .area-c small { display: block; font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3); }
 .area-c b { font-size: 14px; white-space: nowrap; }
 .area-f { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -263,6 +266,7 @@ h2.sec { margin: 6px 0 -4px; font-size: 12px; font-weight: 800; letter-spacing: 
 .tip .row span:first-child { color: rgba(255,255,255,.65); }
 .tip .tnote { margin: 4px 0; color: rgba(255,255,255,.7); }
 .tip .tnote.alert { color: #ff8a80; }
+.tip .tnote.warn { color: #fbbf24; }
 
 footer { max-width: 1480px; margin: 4px auto 0; padding: 12px 24px 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--ink-3); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 footer a { text-underline-offset: 2px; }
@@ -272,8 +276,8 @@ footer a { text-underline-offset: 2px; }
   .vy-ship { transition: none; }
 }
 @media (max-width: 1280px) {
+  .kpis.k7 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .kpis.k6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .kpis.k5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .row-b { grid-template-columns: 1fr; }
 }
 @media (max-width: 1000px) {
@@ -290,7 +294,7 @@ footer a { text-underline-offset: 2px; }
   .vy-tag { font-size: 11px; padding: 2px 8px; }
   .tabs-bar { padding: 0 8px; }
   main { padding: 12px 16px; }
-  .kpis.k6, .kpis.k5 { grid-template-columns: 1fr 1fr; }
+  .kpis.k7, .kpis.k6 { grid-template-columns: 1fr 1fr; }
   .kpi .val { font-size: 18px; }
   .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) 92px; }
   .cc-table .n:nth-of-type(n+3), .cc-table .st { display: none; }
