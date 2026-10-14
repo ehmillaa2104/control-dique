@@ -5427,6 +5427,322 @@ window.DIQUE_MONDAY = {
  ],
  "pos": [],
  "cambios": [],
+ "participacion": {
+  "total": {
+   "puntos": 15,
+   "maximo": 26,
+   "pct": 57.7,
+   "nivel": "Medio"
+  },
+  "semanas": [
+   {
+    "semana": "S1",
+    "conDatos": true
+   },
+   {
+    "semana": "S2",
+    "conDatos": true
+   },
+   {
+    "semana": "S3",
+    "conDatos": true
+   },
+   {
+    "semana": "S4",
+    "conDatos": true
+   },
+   {
+    "semana": "S5",
+    "conDatos": false
+   },
+   {
+    "semana": "S6",
+    "conDatos": false
+   },
+   {
+    "semana": "S7",
+    "conDatos": false
+   },
+   {
+    "semana": "S8",
+    "conDatos": false
+   }
+  ],
+  "equipos": [
+   {
+    "id": "13289219799",
+    "nombre": "Ingeniería",
+    "area": "ingenieria",
+    "puntos": 3,
+    "maximo": 8,
+    "pct": 37.5,
+    "nivel": "Bajo",
+    "semanas": [
+     {
+      "semana": "S1",
+      "reunion": "Asistió",
+      "act": null,
+      "pr": 1,
+      "pa": null
+     },
+     {
+      "semana": "S2",
+      "reunion": "No asistió",
+      "act": "0 - No actualizó",
+      "pr": 0,
+      "pa": 0
+     },
+     {
+      "semana": "S3",
+      "reunion": null,
+      "act": "1 - Actualización indirecta",
+      "pr": null,
+      "pa": 1
+     },
+     {
+      "semana": "S4",
+      "reunion": null,
+      "act": "1 - Actualización indirecta",
+      "pr": null,
+      "pa": 1
+     },
+     {
+      "semana": "S5",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S6",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S7",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S8",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     }
+    ]
+   },
+   {
+    "id": "13289219805",
+    "nombre": "Cubierta",
+    "area": "cubierta",
+    "puntos": 6,
+    "maximo": 6,
+    "pct": 100.0,
+    "nivel": "Alto",
+    "semanas": [
+     {
+      "semana": "S1",
+      "reunion": "Asistió",
+      "act": null,
+      "pr": 1,
+      "pa": null
+     },
+     {
+      "semana": "S2",
+      "reunion": "Asistió",
+      "act": "2 - Actualización directa",
+      "pr": 1,
+      "pa": 2
+     },
+     {
+      "semana": "S3",
+      "reunion": null,
+      "act": "2 - Actualización directa",
+      "pr": null,
+      "pa": 2
+     },
+     {
+      "semana": "S4",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S5",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S6",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S7",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S8",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     }
+    ]
+   },
+   {
+    "id": "13289252803",
+    "nombre": "Técnico",
+    "area": "tecnico",
+    "puntos": 3,
+    "maximo": 6,
+    "pct": 50.0,
+    "nivel": "Medio",
+    "semanas": [
+     {
+      "semana": "S1",
+      "reunion": "Asistió",
+      "act": null,
+      "pr": 1,
+      "pa": null
+     },
+     {
+      "semana": "S2",
+      "reunion": "No asistió",
+      "act": "1 - Actualización indirecta",
+      "pr": 0,
+      "pa": 1
+     },
+     {
+      "semana": "S3",
+      "reunion": null,
+      "act": "1 - Actualización indirecta",
+      "pr": null,
+      "pa": 1
+     },
+     {
+      "semana": "S4",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S5",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S6",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S7",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S8",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     }
+    ]
+   },
+   {
+    "id": "13289252808",
+    "nombre": "Seguridad",
+    "area": null,
+    "puntos": 3,
+    "maximo": 6,
+    "pct": 50.0,
+    "nivel": "Medio",
+    "semanas": [
+     {
+      "semana": "S1",
+      "reunion": "Asistió",
+      "act": null,
+      "pr": 1,
+      "pa": null
+     },
+     {
+      "semana": "S2",
+      "reunion": "No asistió",
+      "act": "1 - Actualización indirecta",
+      "pr": 0,
+      "pa": 1
+     },
+     {
+      "semana": "S3",
+      "reunion": null,
+      "act": "1 - Actualización indirecta",
+      "pr": null,
+      "pa": 1
+     },
+     {
+      "semana": "S4",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S5",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S6",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S7",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     },
+     {
+      "semana": "S8",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null
+     }
+    ]
+   }
+  ],
+  "umbrales": {
+   "alto": 75,
+   "medio": 50
+  }
+ },
  "avance": {
   "ingenieria": {
    "lineas": 167,
@@ -5453,23 +5769,8 @@ window.DIQUE_MONDAY = {
    "avanceDias": 12.0
   }
  },
- "_huella": "6746af067d97",
- "cambiosLectura": [
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Gasto de Clase",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "35"
-  }
- ],
+ "_huella": "fdf5b30df0e4",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "aviso",
@@ -5530,6 +5831,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Cambios/Imprevistos Kelly trader: sin cambios ni imprevistos registrados."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del equipo: 57.7% (15 de 26 puntos) · semanas con datos: S1, S2, S3, S4."
   }
  ]
 };

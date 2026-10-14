@@ -40,6 +40,7 @@
     coin: '<circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2s1.2 1.7 2.8 2 2.8.9 2.8 2.1-1.2 2-2.8 2c-1.3 0-2.4-.6-2.9-1.5M12 6v1.8M12 16.2V18"/>',
     trend: '<path d="M4 17l5-5 4 3 7-8"/><path d="M15 7h5v5"/>', doc: '<path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10.5a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/><path d="M14 3.5V8h4M9 12.5h6M9 16h6"/>',
     wallet: '<path d="M4 7.5h14.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18V6.5A1.5 1.5 0 0 1 5.5 5H16"/><path d="M15.5 13.5h2"/>',
+    users: '<circle cx="9" cy="8.5" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.2a4.6 4.6 0 0 1 5 4.8"/>',
     clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>', gauge: '<path d="M4.5 16a7.5 7.5 0 1 1 15 0"/><path d="M12 16l3.5-4.5"/><circle cx="12" cy="16" r="1.2"/>',
     grid: '<rect x="4" y="4" width="7" height="7" rx="1.2"/><rect x="13" y="4" width="7" height="7" rx="1.2"/><rect x="4" y="13" width="7" height="7" rx="1.2"/><rect x="13" y="13" width="7" height="7" rx="1.2"/>',
     ruler: '<path d="M4 17.5L17.5 4 20 6.5 6.5 20z"/><path d="M8 13.5l1.5 1.5M10.5 11l1.5 1.5M13 8.5l1.5 1.5"/>',
@@ -78,7 +79,8 @@
     // Atraso del proyecto = Diferencia del último hito (fin del proyecto, p. ej. On Hire)
     const finHito = hitos[hitos.length - 1] || null;
     const abiertos = crono.filter((r) => !r.done && r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia);
-    return { D, areas, byId, centros, crono, hitos, fases, actividades, cur, lastHito, nextHito, finHito, peorAtraso: abiertos[0] || null };
+    const part = D.participacion || null;
+    return { D, part, areas, byId, centros, crono, hitos, fases, actividades, cur, lastHito, nextHito, finHito, peorAtraso: abiertos[0] || null };
   }
 
   const costos = (arr) => ({
@@ -340,6 +342,50 @@
       </div>`, { cls: "wide", right: "clic en un grupo o centro para desplegar" });
   }
 
+  // =========================================================
+  // Participación del equipo (tablero "Participación del Equipo" de Monday)
+  //   % cumplimiento = puntos / máximo de las semanas cargadas · reunión 1 pt · actualización 2 pts (directa 2, indirecta 1)
+  //   Semáforo: Alto ≥ 75 % (verde) · Medio ≥ 50 % (amarillo) · Bajo < 50 % (rojo), igual que la fórmula de Monday
+  // =========================================================
+  const semCls = (n) => (n === "Alto" ? "sem-alto" : n === "Medio" ? "sem-medio" : n === "Bajo" ? "sem-bajo" : "");
+  const partDe = (M, areaId) => (M.part ? M.part.equipos.find((e) => e.area === areaId) || null : null);
+  const reunAct = (e) => {
+    const r = e.semanas.filter((s) => s.pr != null), a = e.semanas.filter((s) => s.pa != null);
+    return { asis: r.filter((s) => s.pr === 1).length, reun: r.length, pa: sum(a, (s) => s.pa), pam: a.length * 2 };
+  };
+  function partKpi(M, e, titulo) {
+    const P = M.part;
+    if (!P) return "";
+    const x = e || P.total;
+    if (x.pct == null) return kpi("users", titulo, "—", "sin semanas cargadas");
+    const u = P.umbrales || { alto: 75, medio: 50 };
+    const det = e ? (() => { const k = reunAct(e); return `${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts`; })() : `${x.puntos} de ${x.maximo} puntos · ${P.equipos.length} equipos`;
+    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b><div class="tnote">% de cumplimiento = puntos / máximo posible de las semanas cargadas. Reunión: asistió = 1 punto. Actualización: directa = 2, indirecta = 1, no actualizó = 0.</div>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}${rowT("Alto (verde)", `≥ ${u.alto} %`)}${rowT("Medio (amarillo)", `≥ ${u.medio} %`)}${rowT("Bajo (rojo)", `< ${u.medio} %`)}`)}>
+      ${icon("users")}<div style="min-width:0"><div class="lbl">${esc(titulo)}</div><div class="val">${pct(x.pct, 0)} <span class="sem-chip">${esc(x.nivel)}</span></div><div class="sub">${det}</div></div></div>`;
+  }
+  function partCard(M) {
+    const P = M.part;
+    if (!P) return "";
+    const semanas = P.semanas.filter((s) => s.conDatos);
+    const fila = (e) => {
+      const k = reunAct(e);
+      const celdas = semanas.map((s) => {
+        const d = e.semanas.find((x) => x.semana === s.semana) || {};
+        const r = d.pr == null ? '<i class="pc-na">·</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
+        const a = d.pa == null ? '<i class="pc-na">·</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
+        return `<span class="pc-cell" ${tipAttr(`<b>${esc(e.nombre)} · ${esc(s.semana === "S1" ? "Kick Off" : s.semana)}</b>${rowT("Reunión", esc(d.reunion || "—"))}${rowT("Actualización", esc(d.act || "—"))}`)}>${r}${a}</span>`;
+      }).join("");
+      return `<div class="pc-row ${semCls(e.nivel)}">
+        <div class="pc-nm"><b>${esc(e.nombre)}</b><small>${k.asis}/${k.reun} reuniones · ${k.pa}/${k.pam} pts de actualización</small></div>
+        <div class="pc-bar"><span class="sbar"><i style="width:${e.pct || 0}%"></i></span><b>${e.pct == null ? "—" : pct(e.pct, 0)}</b><span class="sem-chip">${esc(e.nivel || "—")}</span></div>
+        <details class="pc-det"><summary>Ver por semana</summary><div class="pc-weeks"><span class="pc-head">${semanas.map((s) => `<i>${s.semana === "S1" ? "KO" : s.semana}</i>`).join("")}</span><span class="pc-vals">${celdas}</span></div>
+          <div class="pc-ley">✓ asistió · ✗ no asistió · 2 actualización directa · 1 indirecta · 0 no actualizó</div></details>
+      </div>`;
+    };
+    return card("Participación del equipo", `<div class="pc-list">${P.equipos.map(fila).join("")}</div>`,
+      { right: `${pct(P.total.pct, 0)} del equipo · ${semanas.length} semana(s) con datos` });
+  }
+
   function cambiosCard(M) {
     const C = M.D.cambios.slice(0, 6);
     const chip = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
@@ -356,7 +402,7 @@
       const est = {};
       a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
       return `<a class="card area" href="#${a.id}">
-        <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
+        <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b>${(() => { const e = partDe(M, a.id); return e && e.pct != null ? `<span class="sem-pill ${semCls(e.nivel)}" title="Participación del equipo">${icon("users", "ic sm")}${pct(e.pct, 0)} · ${esc(e.nivel)}</span>` : ""; })()}<small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
         <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
@@ -374,8 +420,8 @@
     const pend = sum(all.filter((t) => !t.cancelado && !t.aprobado), (t) => t.solicitado);
     const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
-    return `<div class="kpis k7">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}</div>
-      <div class="row-b">${centrosCard(M)}${cambiosCard(M)}</div>
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+      <div class="row-b">${centrosCard(M)}<div class="stack">${partCard(M)}${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
 
@@ -404,7 +450,8 @@
     const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado);
     const est = {};
     a.act.forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
-    return `<div class="kpis k6">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}</div>
+    const pa = partDe(M, a.id);
+    return `<div class="kpis ${pa ? "k7" : "k6"}">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(a.trabajos.length, "trabajo", "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }

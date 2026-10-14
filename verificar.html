@@ -163,6 +163,37 @@
     }).join("");
     const dashTot = ["revisado", "aprobado", "proyectado", "po", "incurrido"].map((f) => MD.centros.reduce((a, c) => a + (c[f] || 0), 0));
 
+    // Participación del equipo: puntos / máximo de las semanas cargadas, recalculado desde el crudo
+    const PB = board("18435454602");
+    let partRows = '<tr><td colspan="6" class="muted">No está el tablero Participación del Equipo.</td></tr>';
+    if (PB) {
+      const sem = [];
+      (PB.columns || []).forEach((c) => {
+        const t = c.title.trim(); let m;
+        if (/^kick\s*off/i.test(t)) (sem[1] = sem[1] || {}).r = c.id;
+        else if ((m = t.match(/^reuni[oó]n\s+s(\d+)/i))) (sem[+m[1]] = sem[+m[1]] || {}).r = c.id;
+        else if ((m = t.match(/^act\.?\s+s(\d+)/i))) (sem[+m[1]] = sem[+m[1]] || {}).a = c.id;
+      });
+      partRows = PB.items_page.items.map((it) => {
+        let pts = 0, mx = 0;
+        sem.forEach((s) => {
+          if (!s) return;
+          const r = s.r && val(it, s.r), a = s.a && val(it, s.a);
+          if (r === "Asistió" || r === "No asistió") { mx += 1; pts += r === "Asistió" ? 1 : 0; }
+          if (a && /^[012]/.test(a)) { mx += 2; pts += +a[0]; }
+        });
+        const pc = mx ? Math.round((pts / mx) * 1000) / 10 : null;
+        const mon = num(String(val(it, "formula_mm84c488") || "").replace("%", ""));
+        const d = (MD.participacion && MD.participacion.equipos.find((e) => e.id === it.id)) || {};
+        const ck = [
+          pc != null && mon != null && Math.abs(pc - mon) < 0.15 ? mark("ok", "% igual a Monday") : mark("err", `% Monday ${mon}, recalculado ${pc}`),
+          d.pct != null && Math.abs(d.pct - pc) < 0.15 ? mark("ok", "% igual en el dashboard") : mark("err", `dashboard ${d.pct}`),
+          (val(it, "formula_mm84jbkq") || "") === (d.nivel || "") ? mark("ok", "nivel igual") : mark("err", `nivel Monday ${val(it, "formula_mm84jbkq")}, dashboard ${d.nivel}`)
+        ];
+        return `<tr><td><b>${esc(it.name)}</b></td><td class="n">${pts} / ${mx}</td><td class="n"><b>${pc == null ? "—" : pc + "%"}</b></td><td class="n">${mon == null ? "—" : mon + "%"}</td><td>${esc(d.nivel || "—")}</td><td>${resumen(ck)}</td></tr>`;
+      }).join("");
+    }
+
     // 5. Lo que no tiene datos en Monday (no son errores de lectura)
     const sinCC = MD.areas.flatMap((a) => a.trabajos.filter((t) => !t.cancelado && !t.cc.length).map((t) => `${esc(t.nombre)} <span class="muted">(${esc(a.nombre)})</span>`));
     const pend = MD.areas.flatMap((a) => a.trabajos).filter((t) => !t.cancelado && t.solicitado && !t.aprobado);
@@ -197,6 +228,9 @@
       <section><h2>4 · Centros de costo</h2>
         <div class="note">Los totales del resumen gerencial salen de este tablero. Cada centro debe sumar sus líneas conectadas de P1, P2 y P3. Total en Monday: preliminar ${m$(ccTot.rev)} · aprobado ${m$(ccTot.apr)} · proyectado ${m$(ccTot.pro)} · PO ${m$(ccTot.po)} · incurrido ${m$(ccTot.inc)}. En el dashboard: ${dashTot.map(m$).join(" · ")} ${totOk}</div>
         <div class="scroll"><table><thead><tr><th>Centro de costo</th><th>Preliminar</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${ccRows}</tbody></table></div></section>
+      <section><h2>4b · Participación del equipo</h2>
+        <div class="note">% de cumplimiento = puntos / máximo posible de las semanas cargadas (reunión: asistió = 1; actualización: directa = 2, indirecta = 1, no actualizó = 0). Se recalcula desde el crudo y se compara con la fórmula "% Cumplimiento" de Monday y con el dashboard. Semáforo: Alto ≥ 75 %, Medio ≥ 50 %, Bajo < 50 %.</div>
+        <div class="scroll"><table><thead><tr><th>Equipo</th><th>Puntos</th><th>Recalculado</th><th>Monday</th><th>Nivel</th><th>Revisión</th></tr></thead><tbody>${partRows}</tbody></table></div></section>
       <section><h2>5 · Datos que faltan en Monday</h2>
         <ul>${falta.map((x) => `<li>${x}</li>`).join("")}</ul></section>
       <section><h2>6 · Cambios desde la lectura anterior</h2>

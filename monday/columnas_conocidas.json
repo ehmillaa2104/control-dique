@@ -572,5 +572,91 @@
    "title": "Última actualización",
    "type": "last_updated"
   }
+ },
+ "18435454602": {
+  "name": {
+   "title": "Name",
+   "type": "name"
+  },
+  "color_mm84znsc": {
+   "title": "Kick Off (23 Sep)",
+   "type": "status"
+  },
+  "color_mm8453y": {
+   "title": "Act. S2",
+   "type": "status"
+  },
+  "color_mm84nsqk": {
+   "title": "Reunión S2",
+   "type": "status"
+  },
+  "color_mm84ew0p": {
+   "title": "Act. S3",
+   "type": "status"
+  },
+  "color_mm84nny7": {
+   "title": "Reunión S3",
+   "type": "status"
+  },
+  "color_mm84p83r": {
+   "title": "Act. S4",
+   "type": "status"
+  },
+  "color_mm843kqp": {
+   "title": "Reunión S4",
+   "type": "status"
+  },
+  "color_mm8477zb": {
+   "title": "Act. S5",
+   "type": "status"
+  },
+  "color_mm84283c": {
+   "title": "Reunión S5",
+   "type": "status"
+  },
+  "color_mm8484yw": {
+   "title": "Act. S6",
+   "type": "status"
+  },
+  "color_mm84kjd3": {
+   "title": "Reunión S6",
+   "type": "status"
+  },
+  "color_mm84pstd": {
+   "title": "Act. S7",
+   "type": "status"
+  },
+  "color_mm84fk4y": {
+   "title": "Reunión S7",
+   "type": "status"
+  },
+  "color_mm84sz49": {
+   "title": "Act. S8",
+   "type": "status"
+  },
+  "color_mm84fex0": {
+   "title": "Reunión S8",
+   "type": "status"
+  },
+  "formula_mm8451wj": {
+   "title": "Pts. Actualización",
+   "type": "formula"
+  },
+  "formula_mm84gw6m": {
+   "title": "Pts. Reunión",
+   "type": "formula"
+  },
+  "formula_mm84qsjp": {
+   "title": "Puntaje Total",
+   "type": "formula"
+  },
+  "formula_mm84c488": {
+   "title": "% Cumplimiento",
+   "type": "formula"
+  },
+  "formula_mm84jbkq": {
+   "title": "Nivel de Participación",
+   "type": "formula"
+  }
  }
 }

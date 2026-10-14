@@ -21,7 +21,7 @@ Dashboard de control del dique seco del **M/V Kelly Trader**. Los datos salen de
 
 ## Datos de Monday (lo más importante)
 
-Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 7 tableros:
+Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 8 tableros:
 
 - Cronograma
 - P1. Ingeniería
@@ -30,6 +30,7 @@ Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 7 tableros:
 - CC. Centros de Costo
 - POs Kelly Trader
 - Cambios/Imprevistos
+- Participación del Equipo
 
 IDs y columnas en `MAPEO-MONDAY.md`.
 
@@ -37,11 +38,11 @@ IDs y columnas en `MAPEO-MONDAY.md`.
 
 **Para actualizar los datos:**
 
-1. Leer los 7 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
+1. Leer los 8 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
    ```graphql
    query ($ids: [ID!]) { boards(ids: $ids) { id name columns { id title type } items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } } }
    ```
-   con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804"]}`.
+   con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804","18435454602"]}`.
 2. La respuesta es grande y se guarda en un archivo. Copiarla tal cual a `monday/crudo/kelly.json` y agregarle `"extraido": "AAAA-MM-DD"` al inicio.
 3. Correr `python monday/generar.py --recortar`. Este paso:
    - deja en el crudo solo las columnas usadas, sin nombres de personas, descripciones ni enlaces a archivos (el repositorio es público);
@@ -63,13 +64,14 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3, igual que la columna "Avance" de Monday. Se pondera por duración porque no todos los trabajos tienen costo. **Un trabajo con Duración es un trabajo planificado para ejecutarse.** No se muestra como falta de datos: se informa cuántos de los planificados están en ejecución (25–75 %) y cuántos finalizaron (100 %).
 - **Presupuesto preliminar**: columna **"$ Preliminar"** del tablero CC (`formula_mm7d91f2`, en el código `revisado`). Es la suma de "$ Revisado Gerencia" de los trabajos. Se muestra en **amarillo** mientras no esté aprobado.
 - **Estado ante Dirección**: si un centro de costo tiene Estado Aprobación = "Revisar", se muestra "Dirección solicitó cambios". Si Monday no lo tiene, sale la nota de **`notas.js`**, que se edita a mano y se borra cuando el dato ya esté en Monday.
+- **Participación del equipo** (tablero "Participación del Equipo"): un elemento por equipo (Ingeniería, Cubierta, Técnico, Seguridad). % de cumplimiento = puntos / máximo de las semanas cargadas (reunión: asistió = 1 punto; actualización: directa = 2, indirecta = 1, no actualizó = 0), igual que la fórmula "% Cumplimiento" de Monday. **Semáforo**: Alto ≥ 75 % verde, Medio ≥ 50 % amarillo, Bajo < 50 % rojo. El total del equipo es la suma de puntos sobre la suma de máximos. Las semanas se leen por el título de la columna (Kick Off, Reunión Sn, Act. Sn), así que una semana nueva entra sola.
 - **Costos** (aprobado, proyectado, PO, incurrido): salen del tablero **CC. Centros de Costo**. Cada centro debe sumar sus líneas de P1, P2 y P3. Los **gastos generales** son los centros de costo, con sus mismos nombres.
 - **Cronograma:** las barras usan la **Fecha Real** y la **Línea Base** se muestra como referencia. El atraso es la columna **Diferencia**. Los hitos son los elementos con duración 0.
 - **Tiempo y avance se muestran separados**, porque el tiempo puede pasar sin que suba el avance. El buque de la cabecera marca hoy en el cronograma; el avance va aparte.
 
 ## Diseño
 
-- Paleta corporativa blanco y negro. El rojo solo para alertas (atrasos, vencidos, datos faltantes) y el ámbar para lo pendiente de aprobar. Las fases del cronograma son el único lugar con color.
+- Paleta corporativa blanco y negro. El rojo solo para alertas (atrasos, vencidos, datos faltantes) y el ámbar para lo pendiente de aprobar. Las fases del cronograma y el semáforo de participación son los únicos lugares con color propio.
 - Poca información a la vista. El detalle va en desplegables y tooltips. No mostrar "última actividad en Monday": el usuario pidió quitarla.
 - Debe verse bien en celular.
 

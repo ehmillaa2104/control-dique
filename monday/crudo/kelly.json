@@ -3,6 +3,542 @@
  "consulta": "boards(ids) columns{id title type} items_page(limit:500) column_values{id type text display_value linked_item_ids}",
  "boards": [
   {
+   "id": "18435454602",
+   "name": "Participación del Equipo",
+   "columns": [
+    {
+     "id": "name",
+     "title": "Name",
+     "type": "name"
+    },
+    {
+     "id": "color_mm84znsc",
+     "title": "Kick Off (23 Sep)",
+     "type": "status"
+    },
+    {
+     "id": "color_mm8453y",
+     "title": "Act. S2",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84nsqk",
+     "title": "Reunión S2",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84ew0p",
+     "title": "Act. S3",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84nny7",
+     "title": "Reunión S3",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84p83r",
+     "title": "Act. S4",
+     "type": "status"
+    },
+    {
+     "id": "color_mm843kqp",
+     "title": "Reunión S4",
+     "type": "status"
+    },
+    {
+     "id": "color_mm8477zb",
+     "title": "Act. S5",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84283c",
+     "title": "Reunión S5",
+     "type": "status"
+    },
+    {
+     "id": "color_mm8484yw",
+     "title": "Act. S6",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84kjd3",
+     "title": "Reunión S6",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84pstd",
+     "title": "Act. S7",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84fk4y",
+     "title": "Reunión S7",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84sz49",
+     "title": "Act. S8",
+     "type": "status"
+    },
+    {
+     "id": "color_mm84fex0",
+     "title": "Reunión S8",
+     "type": "status"
+    },
+    {
+     "id": "formula_mm8451wj",
+     "title": "Pts. Actualización",
+     "type": "formula"
+    },
+    {
+     "id": "formula_mm84gw6m",
+     "title": "Pts. Reunión",
+     "type": "formula"
+    },
+    {
+     "id": "formula_mm84qsjp",
+     "title": "Puntaje Total",
+     "type": "formula"
+    },
+    {
+     "id": "formula_mm84c488",
+     "title": "% Cumplimiento",
+     "type": "formula"
+    },
+    {
+     "id": "formula_mm84jbkq",
+     "title": "Nivel de Participación",
+     "type": "formula"
+    }
+   ],
+   "items_page": {
+    "cursor": null,
+    "items": [
+     {
+      "id": "13289219799",
+      "name": "Ingeniería",
+      "created_at": "2026-10-14T14:49:07Z",
+      "updated_at": "2026-10-14T19:07:39Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": "0 - No actualizó"
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": "No asistió"
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "3"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "37.5%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Bajo"
+       }
+      ]
+     },
+     {
+      "id": "13289219805",
+      "name": "Cubierta",
+      "created_at": "2026-10-14T14:49:08Z",
+      "updated_at": "2026-10-14T18:55:01Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": "2 - Actualización directa"
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "2 - Actualización directa"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "8"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "100%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Alto"
+       }
+      ]
+     },
+     {
+      "id": "13289252803",
+      "name": "Técnico",
+      "created_at": "2026-10-14T14:49:08Z",
+      "updated_at": "2026-10-14T19:01:03Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": "No asistió"
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "4"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "50%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Medio"
+       }
+      ]
+     },
+     {
+      "id": "13289252808",
+      "name": "Seguridad",
+      "created_at": "2026-10-14T14:49:08Z",
+      "updated_at": "2026-10-14T19:00:43Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": "No asistió"
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": "1 - Actualización indirecta"
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "4"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "50%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Medio"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
    "id": "18432105438",
    "name": "P3. Técnico",
    "columns": [

@@ -59,7 +59,30 @@ TABLEROS = {
         "creado": "pulse_log_mm2ebjby", "actividades": "board_relation_mm2ebzc8", "tipo": "dropdown_mkzbgqr7",
         "costo": "numeric_mm268zat", "dias": "numeric_mm2epnk4", "estado": "color_mm2e3n8w", "aprobado": "date_mkzbjkxq",
         "cc": "dropdown_mm2ns80c"}},
+    # Participación del Equipo: un elemento por equipo. Las columnas de cada semana (Kick Off, Reunión Sn, Act. Sn)
+    # se toman por su título, así que una semana nueva entra sola. Aquí van solo las columnas fijas.
+    "participacion": {"id": "18435454602", "col": {
+        "puntos": "formula_mm84qsjp", "cumplimiento": "formula_mm84c488", "nivel": "formula_mm84jbkq"}},
 }
+EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubierta": "cubierta", "técnico": "tecnico", "tecnico": "tecnico"}
+PTS_ACT = {"2": 2, "1": 1, "0": 0}  # "2 - Actualización directa", "1 - Actualización indirecta", "0 - No actualizó"
+
+
+def columnas_semana(board):
+    """Columnas de reunión y de actualización por semana, según su título en Monday."""
+    sem = {}
+    for c in board.get("columns", []):
+        t = c["title"].strip()
+        m = re.match(r"(?i)kick\s*off", t)
+        r = re.match(r"(?i)reuni[oó]n\s+(S\d+)", t)
+        a = re.match(r"(?i)act\.?\s+(S\d+)", t)
+        if m:
+            sem.setdefault("S1", {"semana": "S1", "titulo": t})["reunion"] = c["id"]
+        elif r:
+            sem.setdefault(r.group(1).upper(), {"semana": r.group(1).upper()})["reunion"] = c["id"]
+        elif a:
+            sem.setdefault(a.group(1).upper(), {"semana": a.group(1).upper()})["act"] = c["id"]
+    return [sem[k] for k in sorted(sem, key=lambda x: int(x[1:]))]
 AREAS = ("ingenieria", "cubierta", "tecnico")
 PCT = {"0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100}
 obs = []  # (nivel, texto): error | aviso | info
@@ -329,9 +352,61 @@ def comparar_con_anterior(datos):
     return cambios
 
 
+def participacion(raw):
+    """% de cumplimiento por equipo = puntos / máximo posible de las semanas ya cargadas (reunión 1 pt, actualización 2 pts).
+    Es la misma regla de la fórmula "% Cumplimiento" de Monday; aquí se recalcula y se compara."""
+    b = next((x for x in raw["boards"] if x["id"] == TABLEROS["participacion"]["id"]), None)
+    if not b:
+        obs.append(("aviso", "No está el tablero Participación del Equipo en la lectura."))
+        return None
+    semanas = columnas_semana(b)
+    if not semanas:
+        obs.append(("error", "Participación del Equipo: no se encontraron columnas de reunión ni de actualización."))
+    col = TABLEROS["participacion"]["col"]
+    equipos = []
+    for it in b["items_page"]["items"]:
+        cv = {c["id"]: c for c in it["column_values"]}
+        det, pts, mx = [], 0, 0
+        for s_ in semanas:
+            r = cv.get(s_.get("reunion"), {}).get("text") if s_.get("reunion") else None
+            a = cv.get(s_.get("act"), {}).get("text") if s_.get("act") else None
+            pr = (1 if r == "Asistió" else 0) if r in ("Asistió", "No asistió") else None
+            pa = PTS_ACT.get((a or "").strip()[:1]) if a else None
+            if r and pr is None:
+                obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: reunión "{r}" no se reconoce.'))
+            if a and pa is None:
+                obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: actualización "{a}" no se reconoce.'))
+            if pr is not None:
+                pts += pr; mx += 1
+            if pa is not None:
+                pts += pa; mx += 2
+            det.append({"semana": s_["semana"], "reunion": r, "act": a, "pr": pr, "pa": pa})
+        pct = round(pts / mx * 100, 1) if mx else None
+        nivel = None if pct is None else "Alto" if pct >= 75 else "Medio" if pct >= 50 else "Bajo"
+        mon_pct = num(str(valor(cv.get(col["cumplimiento"])) or "").replace("%", ""))
+        mon_niv = valor(cv.get(col["nivel"]))
+        nombre = texto(it["name"])
+        if pct is not None and (mon_pct is None or abs(mon_pct - pct) > 0.15):
+            obs.append(("error", f'Participación · {nombre}: % Cumplimiento en Monday = {mon_pct}, recalculado = {pct}.'))
+        if nivel and mon_niv and mon_niv != nivel:
+            obs.append(("error", f'Participación · {nombre}: nivel en Monday = {mon_niv}, recalculado = {nivel}.'))
+        equipos.append({"id": it["id"], "nombre": nombre, "area": EQUIPO_AREA.get(nombre.lower()), "puntos": pts, "maximo": mx,
+                        "pct": pct, "nivel": nivel, "semanas": det})
+    con = [s_["semana"] for i, s_ in enumerate(semanas) if any(e["semanas"][i]["pr"] is not None or e["semanas"][i]["pa"] is not None for e in equipos)]
+    tp, tm = sum(e["puntos"] for e in equipos), sum(e["maximo"] for e in equipos)
+    tot = round(tp / tm * 100, 1) if tm else None
+    obs.append(("info", f'Participación del equipo: {tot}% ({tp} de {tm} puntos) · semanas con datos: {", ".join(con) or "ninguna"}.'))
+    return {"total": {"puntos": tp, "maximo": tm, "pct": tot, "nivel": None if tot is None else "Alto" if tot >= 75 else "Medio" if tot >= 50 else "Bajo"},
+            "semanas": [{"semana": s_["semana"], "conDatos": s_["semana"] in con} for s_ in semanas], "equipos": equipos,
+            "umbrales": {"alto": 75, "medio": 50}}
+
+
 def recortar(raw):
     """Deja en el crudo solo las columnas que usa el dashboard (sin personas, descripciones ni archivos)."""
     usadas = {t["id"]: set(t["col"].values()) for t in TABLEROS.values()}
+    for b in raw["boards"]:
+        if b["id"] == TABLEROS["participacion"]["id"]:
+            usadas[b["id"]] |= {x for s_ in columnas_semana(b) for x in (s_.get("reunion"), s_.get("act")) if x}
     for b in raw["boards"]:
         keep = usadas.get(b["id"], set())
         for it in b["items_page"]["items"]:
@@ -351,7 +426,7 @@ def main():
         "proyecto": "Kelly Trader", "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
         "extraido": raw.get("extraido") or date.today().isoformat(),
         "cronograma": crono, "areas": areas, "centros": centros(tab["centros"], areas),
-        "pos": pos(tab["pos"]), "cambios": cambios(tab["cambios"]),
+        "pos": pos(tab["pos"]), "cambios": cambios(tab["cambios"]), "participacion": participacion(raw),
     }
     # Resumen de avance por área (lo usa también la Rev. 2)
     av = {}

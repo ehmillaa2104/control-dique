@@ -128,6 +128,20 @@ Monday API ──una consulta──▶ monday/crudo/kelly.json ──python mond
 
 Para actualizar, se repite la consulta a Monday, se guarda en `monday/crudo/kelly.json` y se corre `python monday/generar.py --recortar`.
 
+## Participación del Equipo (18435454602)
+
+Un elemento por equipo: Ingeniería, Cubierta, Técnico y Seguridad.
+
+| Columnas | Qué es | Puntos |
+|---|---|---|
+| Kick Off (23 Sep), Reunión S2 … S8 | Asistencia a la reunión de la semana | Asistió = 1, No asistió = 0 |
+| Act. S2 … S8 | Actualización de la plataforma esa semana | 2 directa, 1 indirecta, 0 no actualizó |
+| Pts. Actualización, Pts. Reunión, Puntaje Total | Sumas | — |
+| % Cumplimiento (`formula_mm84c488`) | Puntaje / máximo de las semanas cargadas | — |
+| Nivel de Participación (`formula_mm84jbkq`) | Alto ≥ 75 %, Medio ≥ 50 %, Bajo | — |
+
+El dashboard lee las semanas por el título de la columna. Recalcula el % y lo compara con Monday.
+
 ## Cambios de columnas detectados
 
 - **14 oct 2026:** en P1, P2 y P3 se agregó una columna nueva, "link to POs Kelly Trader" (`board_relation_mm8418w8`, `board_relation_mm8458dc` y `board_relation_mm845vmr`). Es aparte de la conexión a POs que ya existía y que alimenta `$PO Total` e `$Incurrido`. Por ahora está vacía: falta definir cuál de las dos se va a usar.
