@@ -2221,7 +2221,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-14T20:31:17Z",
+      "updated_at": "2026-10-14T21:15:41Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2273,7 +2273,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 20:31:17 UTC"
+        "text": "2026-10-14 21:15:41 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2293,7 +2293,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -20662,7 +20662,7 @@
       "id": "13095528116",
       "name": "PLANIFICACIÓN",
       "created_at": "2026-09-21T16:11:06Z",
-      "updated_at": "2026-10-12T20:18:11Z",
+      "updated_at": "2026-10-14T21:25:15Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -20676,12 +20676,12 @@
        {
         "id": "numeric_mm6zgcqw",
         "type": "numbers",
-        "text": "24"
+        "text": "25"
        },
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-09-22 - 2026-10-15"
+        "text": "2026-09-22 - 2026-10-16"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -20692,12 +20692,55 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "13"
+        "display_value": "14"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-12 20:18:11 UTC"
+        "text": "2026-10-14 21:25:15 UTC"
+       }
+      ]
+     },
+     {
+      "id": "13109464924",
+      "name": "Aprobación de presupuesto",
+      "created_at": "2026-09-22T21:01:07Z",
+      "updated_at": "2026-10-14T20:42:48Z",
+      "group": {
+       "id": "group_mm7d87j5",
+       "title": "Plan"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6v6vf2",
+        "type": "status",
+        "text": "En curso"
+       },
+       {
+        "id": "numeric_mm6zgcqw",
+        "type": "numbers",
+        "text": "0"
+       },
+       {
+        "id": "timerange_mm78kjs",
+        "type": "timeline",
+        "text": "2026-10-16 - 2026-10-16"
+       },
+       {
+        "id": "timerange_mm7yfj5p",
+        "type": "timeline",
+        "text": "2026-09-29 - 2026-09-29"
+       },
+       {
+        "id": "formula_mm7ygv4s",
+        "type": "formula",
+        "text": "",
+        "display_value": "17"
+       },
+       {
+        "id": "pulse_updated_mm7gn7r8",
+        "type": "last_updated",
+        "text": "2026-10-14 20:42:48 UTC"
        }
       ]
      },
@@ -20784,49 +20827,6 @@
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
         "text": "2026-10-08 14:11:19 UTC"
-       }
-      ]
-     },
-     {
-      "id": "13109464924",
-      "name": "Aprobación de presupuesto",
-      "created_at": "2026-09-22T21:01:07Z",
-      "updated_at": "2026-10-14T20:42:48Z",
-      "group": {
-       "id": "group_mm7d87j5",
-       "title": "Plan"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6v6vf2",
-        "type": "status",
-        "text": "En curso"
-       },
-       {
-        "id": "numeric_mm6zgcqw",
-        "type": "numbers",
-        "text": "0"
-       },
-       {
-        "id": "timerange_mm78kjs",
-        "type": "timeline",
-        "text": "2026-10-16 - 2026-10-16"
-       },
-       {
-        "id": "timerange_mm7yfj5p",
-        "type": "timeline",
-        "text": "2026-09-29 - 2026-09-29"
-       },
-       {
-        "id": "formula_mm7ygv4s",
-        "type": "formula",
-        "text": "",
-        "display_value": "17"
-       },
-       {
-        "id": "pulse_updated_mm7gn7r8",
-        "type": "last_updated",
-        "text": "2026-10-14 20:42:48 UTC"
        }
       ]
      },

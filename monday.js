@@ -12,17 +12,34 @@ window.DIQUE_MONDAY = {
    "grupo": "Plan",
    "nombre": "PLANIFICACIÓN",
    "estado": "En curso",
-   "duracion": 24,
+   "duracion": 25,
    "base": [
     "2026-09-22",
     "2026-10-02"
    ],
    "real": [
     "2026-09-22",
-    "2026-10-15"
+    "2026-10-16"
    ],
-   "diferencia": 13,
-   "actualizado": "2026-10-12"
+   "diferencia": 14,
+   "actualizado": "2026-10-14"
+  },
+  {
+   "id": "13109464924",
+   "grupo": "Plan",
+   "nombre": "Aprobación de presupuesto",
+   "estado": "En curso",
+   "duracion": 0,
+   "base": [
+    "2026-09-29",
+    "2026-09-29"
+   ],
+   "real": [
+    "2026-10-16",
+    "2026-10-16"
+   ],
+   "diferencia": 17,
+   "actualizado": "2026-10-14"
   },
   {
    "id": "13095528118",
@@ -57,23 +74,6 @@ window.DIQUE_MONDAY = {
    ],
    "diferencia": -4,
    "actualizado": "2026-10-08"
-  },
-  {
-   "id": "13109464924",
-   "grupo": "Plan",
-   "nombre": "Aprobación de presupuesto",
-   "estado": "En curso",
-   "duracion": 0,
-   "base": [
-    "2026-09-29",
-    "2026-09-29"
-   ],
-   "real": [
-    "2026-10-16",
-    "2026-10-16"
-   ],
-   "diferencia": 17,
-   "actualizado": "2026-10-14"
   },
   {
    "id": "13095528121",
@@ -4424,7 +4424,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "",
      "aprobacion": "Revisado Gerencia",
      "proveedor": "",
@@ -5780,8 +5780,8 @@ window.DIQUE_MONDAY = {
   },
   "cubierta": {
    "lineas": 19,
-   "conDuracion": 14,
-   "duracion": 60,
+   "conDuracion": 15,
+   "duracion": 61,
    "avanceDias": 12.0
   },
   "tecnico": {
@@ -5792,19 +5792,40 @@ window.DIQUE_MONDAY = {
   },
   "total": {
    "lineas": 195,
-   "conDuracion": 53,
-   "duracion": 167,
+   "conDuracion": 54,
+   "duracion": 168,
    "avanceDias": 13.25
   }
  },
- "_huella": "09a8f30ca384",
+ "_huella": "3fe3bf9eb02b",
  "cambiosLectura": [
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Ingeniería",
-   "campo": "Actualización S3",
-   "antes": "0 - No actualizó",
-   "ahora": "1 - Actualización indirecta"
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Fecha Real",
+   "antes": "2026-09-22 a 2026-10-15",
+   "ahora": "2026-09-22 a 2026-10-16"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Diferencia",
+   "antes": "13",
+   "ahora": "14"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Duración",
+   "antes": "24",
+   "ahora": "25"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
   }
  ],
  "observaciones": [
@@ -5838,11 +5859,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 14 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 11 por iniciar."
+   "texto": "P2. Cubierta: 15 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 12 por iniciar."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta: 2 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Caja menuda para capitán, Materiales seguridad."
+   "texto": "P2. Cubierta: 1 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Materiales seguridad."
   },
   {
    "nivel": "info",
