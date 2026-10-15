@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-14",
+ "extraido": "2026-10-15",
  "consulta": "boards(ids) columns{id title type} items_page(limit:500) column_values{id type text display_value linked_item_ids}",
  "boards": [
   {
@@ -619,7 +619,7 @@
     },
     {
      "id": "numeric_mm78kpas",
-     "title": "$ Revisado Gerencia",
+     "title": "$ Revisado",
      "type": "numbers"
     },
     {
@@ -719,7 +719,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -811,7 +811,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -874,7 +874,7 @@
       "id": "13098326970",
       "name": "Compra de pintura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T14:20:29Z",
+      "updated_at": "2026-10-15T19:03:32Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -898,12 +898,12 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "42481.50"
+        "text": "42481"
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -926,7 +926,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:20:29 UTC"
+        "text": "2026-10-15 19:03:32 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1087,7 +1087,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1179,7 +1179,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1271,7 +1271,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1363,7 +1363,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1455,7 +1455,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1563,7 +1563,7 @@
     },
     {
      "id": "numeric_mm78kpas",
-     "title": "$ Revisado Gerencia",
+     "title": "$ Revisado",
      "type": "numbers"
     },
     {
@@ -1703,7 +1703,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1795,7 +1795,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1839,7 +1839,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "9325"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -1887,7 +1887,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2163,7 +2163,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2207,7 +2207,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "1110, 1990"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -2255,7 +2255,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2347,7 +2347,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2439,7 +2439,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2531,7 +2531,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2715,7 +2715,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2899,7 +2899,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2991,7 +2991,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3083,7 +3083,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3175,7 +3175,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3267,7 +3267,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3359,7 +3359,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3467,7 +3467,7 @@
     },
     {
      "id": "lookup_mm7azrff",
-     "title": "Σ Revisado Gerencia",
+     "title": "Σ Revisado",
      "type": "mirror"
     },
     {
@@ -3503,7 +3503,7 @@
       "id": "13081201302",
       "name": "1.1 · Limpieza de tanques",
       "created_at": "2026-09-18T16:38:44Z",
-      "updated_at": "2026-09-22T16:45:49Z",
+      "updated_at": "2026-10-14T21:47:45Z",
       "group": {
        "id": "topics",
        "title": "1"
@@ -3782,7 +3782,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "9325"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -3802,7 +3802,9 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13302182661"
+        ]
        }
       ]
      },
@@ -3906,7 +3908,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "3100"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -3926,7 +3928,10 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13302151223",
+         "13302151031"
+        ]
        }
       ]
      },
@@ -4397,7 +4402,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "55.88"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -4583,7 +4588,9 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13302150991"
+        ]
        }
       ]
      },
@@ -4982,7 +4989,1197 @@
    ],
    "items_page": {
     "cursor": null,
-    "items": []
+    "items": [
+     {
+      "id": "13302150803",
+      "name": "57636 · Agencias Domingo — Empaque Garlock verde",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1912"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-12"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302183351",
+      "name": "3062 · Narciso Sánchez — Anticipo de caja menuda",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Narciso Sánchez"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "5000"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302229682",
+      "name": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "427.5"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302137014",
+      "name": "3066 · Rafael Ríos — Anticipo de caja menuda",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Rafael Ríos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "5500"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302137015",
+      "name": "57926 · Ferretería Industrial — Bridas de 2″",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "42.8"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302212705",
+      "name": "57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2986.57"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302150984",
+      "name": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "238.24"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302150520",
+      "name": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2491.29"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302150224",
+      "name": "57492 · Agencias Domingo — Rollos de neopreno",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "395.25"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-08"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302180056",
+      "name": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "4216.39"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302150986",
+      "name": "1148 · MSB Group Corp — Calibración / aforo de tanques de carga",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-15T16:57:03Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "MSB GROUP CORP"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "11663"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-01-20"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302211939",
+      "name": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-15T16:57:04Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "215"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:04 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302212275",
+      "name": "2044 · Vicencio Solís — Trapos",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-15T16:57:04Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Vicencio Solís"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "300"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-12"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:04 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13302182661",
+      "name": "16379 · SUBWORKS — Recolección de 85 m³ de slop",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-15T16:57:04Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "SUBWORKS, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "9325"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:04 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081208222"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13098295887"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302150991",
+      "name": "57927 · Ferretería Industrial — Reducción concéntrica de 5″ a 3″",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-15T16:57:04Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "55.88"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:04 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13256760158"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302151031",
+      "name": "02596 · Terminal Marítima — Entrada a muelle logístico 7-oct",
+      "created_at": "2026-10-15T16:57:05Z",
+      "updated_at": "2026-10-15T16:57:05Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Terminal Marítima de Servicios"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1110"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:05 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201194"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13127948545"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302151223",
+      "name": "INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-15T16:57:04Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Terminal Marítima de Servicios"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1990"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-15 16:57:04 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201194"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13127948545"
+        ]
+       }
+      ]
+     }
+    ]
    }
   },
   {
@@ -5131,7 +6328,7 @@
     },
     {
      "id": "numeric_mm78kpas",
-     "title": "$ Revisado Gerencia",
+     "title": "$ Revisado",
      "type": "numbers"
     },
     {
@@ -7019,7 +8216,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -7111,7 +8308,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -7155,7 +8352,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "55.88"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -8491,7 +9688,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -11711,7 +12908,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -11803,7 +13000,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -11895,7 +13092,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -11987,7 +13184,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -12079,7 +13276,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -12171,7 +13368,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -12447,7 +13644,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -13275,7 +14472,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15207,7 +16404,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15299,7 +16496,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15391,7 +16588,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15483,7 +16680,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15575,7 +16772,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15667,7 +16864,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -15943,7 +17140,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -16771,7 +17968,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -17507,7 +18704,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -17691,7 +18888,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -17783,7 +18980,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19071,7 +20268,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19347,7 +20544,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19439,7 +20636,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19531,7 +20728,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19623,7 +20820,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19899,7 +21096,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19991,7 +21188,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -20083,7 +21280,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -20543,7 +21740,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado Gerencia"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",

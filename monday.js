@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-14",
+ "extraido": "2026-10-15",
  "cronograma": [
   {
    "id": "13095528116",
@@ -723,7 +723,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -747,14 +747,14 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 55.88,
      "fin": null,
      "cc": [
       "13081201432"
@@ -1107,7 +1107,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Preventivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 4200,
      "revisado": 4200,
@@ -1947,7 +1947,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -1971,7 +1971,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -1995,7 +1995,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 4600,
      "revisado": 4600,
@@ -2019,7 +2019,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -2043,7 +2043,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 2500,
      "revisado": 2500,
@@ -2067,7 +2067,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3200,
      "revisado": 3200,
@@ -2139,7 +2139,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3400,
      "revisado": 3400,
@@ -2355,7 +2355,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3500,
      "revisado": 3500,
@@ -2859,7 +2859,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -2883,7 +2883,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -2907,7 +2907,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -2931,7 +2931,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -2955,7 +2955,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -2979,7 +2979,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3600,
      "revisado": 3600,
@@ -3051,7 +3051,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 5100,
      "revisado": 5100,
@@ -3267,7 +3267,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 6250,
      "revisado": 6250,
@@ -3459,7 +3459,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 5000,
      "revisado": 5000,
@@ -3507,7 +3507,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10000,
      "revisado": 10000,
@@ -3531,7 +3531,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 2600,
      "revisado": 2600,
@@ -3867,7 +3867,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -3939,7 +3939,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -3963,7 +3963,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -3987,7 +3987,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -4011,7 +4011,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -4083,7 +4083,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -4107,7 +4107,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 0.01,
      "revisado": 0.01,
@@ -4131,7 +4131,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 1500,
      "revisado": 1500,
@@ -4251,7 +4251,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10000,
      "revisado": 10000,
@@ -4282,7 +4282,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 7,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "Green Harbour",
      "solicitado": 28573.13,
      "revisado": 28573.13,
@@ -4306,14 +4306,14 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10000,
      "revisado": 10000,
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 9325,
      "fin": null,
      "cc": [
       "13081208222"
@@ -4330,7 +4330,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 7,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "Green Harbour",
      "solicitado": 14682.1,
      "revisado": 14682.1,
@@ -4402,7 +4402,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10500,
      "revisado": 10500,
@@ -4426,7 +4426,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 9000,
      "revisado": 9000,
@@ -4450,7 +4450,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3500,
      "revisado": 3500,
@@ -4474,7 +4474,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 3500,
      "revisado": 3500,
@@ -4498,7 +4498,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 30,
      "tipo": "Mejora",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 15000,
      "revisado": 15000,
@@ -4546,7 +4546,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 6,
      "tipo": "Mejora",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10165,
      "revisado": 10165,
@@ -4594,7 +4594,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 11000,
      "revisado": 11000,
@@ -4618,7 +4618,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 2500,
      "revisado": 2500,
@@ -4642,7 +4642,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 5000,
      "revisado": 5000,
@@ -4666,7 +4666,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 2500,
      "revisado": 2500,
@@ -4690,7 +4690,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 6000,
      "revisado": 6000,
@@ -4714,7 +4714,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 4000,
      "revisado": 4000,
@@ -4745,7 +4745,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 6000,
      "revisado": 6000,
@@ -4769,7 +4769,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 35,
      "tipo": "",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 0,
      "revisado": 0,
@@ -4793,9 +4793,9 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": 42481.5,
+     "solicitado": 42481,
      "revisado": 42481.5,
      "aprobado": null,
      "proyectado": null,
@@ -4805,7 +4805,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098333423",
@@ -4841,7 +4841,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10000,
      "revisado": 10000,
@@ -4865,7 +4865,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 10850,
      "revisado": 10850,
@@ -4889,7 +4889,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 14875,
      "revisado": 14875,
@@ -4913,7 +4913,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 766482,
      "revisado": 766482,
@@ -4937,7 +4937,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
-     "aprobacion": "Revisado Gerencia",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "solicitado": 16732.76,
      "revisado": 16732.76,
@@ -5025,12 +5025,14 @@ window.DIQUE_MONDAY = {
    "revisado": 10000,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 9325,
    "proyectado": 0,
    "lineas": [
     "13098295887"
    ],
-   "pos": []
+   "pos": [
+    "13302182661"
+   ]
   },
   {
    "id": "13081177301",
@@ -5057,12 +5059,15 @@ window.DIQUE_MONDAY = {
    "revisado": 10500,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 3100,
    "proyectado": 0,
    "lineas": [
     "13127948545"
    ],
-   "pos": []
+   "pos": [
+    "13302151223",
+    "13302151031"
+   ]
   },
   {
    "id": "13081208091",
@@ -5180,7 +5185,7 @@ window.DIQUE_MONDAY = {
    "revisado": 99950.01,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 55.88,
    "proyectado": 0,
    "lineas": [
     "13043950431",
@@ -5351,7 +5356,9 @@ window.DIQUE_MONDAY = {
     "13277104868",
     "13277169481"
    ],
-   "pos": []
+   "pos": [
+    "13302150991"
+   ]
   },
   {
    "id": "13081200176",
@@ -5429,7 +5436,279 @@ window.DIQUE_MONDAY = {
    "pos": []
   }
  ],
- "pos": [],
+ "pos": [
+  {
+   "id": "13302150803",
+   "nombre": "57636 · Agencias Domingo — Empaque Garlock verde",
+   "area": "",
+   "proveedor": "Agencias Domingo, S.A.",
+   "po": 0,
+   "incurrido": 1912,
+   "saldo": null,
+   "fecha": "2026-10-12",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302183351",
+   "nombre": "3062 · Narciso Sánchez — Anticipo de caja menuda",
+   "area": "",
+   "proveedor": "Narciso Sánchez",
+   "po": 0,
+   "incurrido": 5000,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302229682",
+   "nombre": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 427.5,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302137014",
+   "nombre": "3066 · Rafael Ríos — Anticipo de caja menuda",
+   "area": "",
+   "proveedor": "Rafael Ríos",
+   "po": 0,
+   "incurrido": 5500,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302137015",
+   "nombre": "57926 · Ferretería Industrial — Bridas de 2″",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 42.8,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302212705",
+   "nombre": "57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 2986.57,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302150984",
+   "nombre": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 238.24,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302150520",
+   "nombre": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
+   "area": "",
+   "proveedor": "Tornillos y Herramientas Barrientos",
+   "po": 0,
+   "incurrido": 2491.29,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302150224",
+   "nombre": "57492 · Agencias Domingo — Rollos de neopreno",
+   "area": "",
+   "proveedor": "Agencias Domingo, S.A.",
+   "po": 0,
+   "incurrido": 395.25,
+   "saldo": null,
+   "fecha": "2026-10-08",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302180056",
+   "nombre": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 4216.39,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302150986",
+   "nombre": "1148 · MSB Group Corp — Calibración / aforo de tanques de carga",
+   "area": "",
+   "proveedor": "MSB GROUP CORP",
+   "po": 0,
+   "incurrido": 11663,
+   "saldo": null,
+   "fecha": "2026-01-20",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302211939",
+   "nombre": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
+   "area": "",
+   "proveedor": "Tornillos y Herramientas Barrientos",
+   "po": 0,
+   "incurrido": 215,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302212275",
+   "nombre": "2044 · Vicencio Solís — Trapos",
+   "area": "",
+   "proveedor": "Vicencio Solís",
+   "po": 0,
+   "incurrido": 300,
+   "saldo": null,
+   "fecha": "2026-10-12",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302182661",
+   "nombre": "16379 · SUBWORKS — Recolección de 85 m³ de slop",
+   "area": "",
+   "proveedor": "SUBWORKS, S.A.",
+   "po": 0,
+   "incurrido": 9325,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302150991",
+   "nombre": "57927 · Ferretería Industrial — Reducción concéntrica de 5″ a 3″",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 55.88,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13256760158"
+   ],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302151031",
+   "nombre": "02596 · Terminal Marítima — Entrada a muelle logístico 7-oct",
+   "area": "",
+   "proveedor": "Terminal Marítima de Servicios",
+   "po": 0,
+   "incurrido": 1110,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201194"
+   ],
+   "trabajos": [
+    "13127948545"
+   ],
+   "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13302151223",
+   "nombre": "INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct",
+   "area": "",
+   "proveedor": "Terminal Marítima de Servicios",
+   "po": 0,
+   "incurrido": 1990,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201194"
+   ],
+   "trabajos": [
+    "13127948545"
+   ],
+   "actualizado": "2026-10-15"
+  }
+ ],
  "cambios": [],
  "participacion": {
   "total": {
@@ -5797,16 +6076,432 @@ window.DIQUE_MONDAY = {
    "avanceDias": 13.25
   }
  },
- "_huella": "e53a4d4e18e4",
- "cambiosLectura": [],
+ "_huella": "6099d3799006",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "55.88"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Mantenimiento preventivo del generador de emergencia",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de succión de bomba de lastre de babor",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de carga #5 de babor — fuga interna",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de succión de bomba de servicios generales",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel de sistema de alarma 95-98%",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Control local de propulsión + Cargador de batería #2",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Auto pilot + Sewage (motor y compresor)",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel contra incendio",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Eje de cola — sellos e inspección",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Sello interno del acople del eje de paso variable",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvulas de tomas de mar y línea madre de enfriamiento",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de descarga de agua salada de máquina principal",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de descarga de agua salada de los generadores",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de succión de agua salada de los generadores",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de overflow hacia el sludge tank",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación de fuga en el tanque de sewage",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Imprevisto",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "9325"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de Tanques de Lastre",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales cubierta",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Pintura de la cubierta",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Mantenimiento a acomodaciones",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Foam – Agente Espumógeno",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote de Rescate – Casco",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Compás Magnético – Esfera Kelvin",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Speed Log – Doppler",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Casco",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Gasto de Clase",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de pintura",
+   "campo": "$ Solicitado",
+   "antes": "42481.5",
+   "ahora": "42481"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de pintura",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Pendiente"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Bono dique",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de ánodos",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Agenciamiento",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado Gerencia",
+   "ahora": "Revisado"
+  }
+ ],
  "observaciones": [
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico: la columna \"$ Revisado Gerencia\" ahora se llama \"$ Revisado\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
+  },
   {
    "nivel": "aviso",
    "texto": "P3. Técnico: columna nueva \"link to POs Kelly Trader\" (board_relation_mm845vmr, board_relation); revisar si el dashboard debe usarla."
   },
   {
    "nivel": "aviso",
+   "texto": "P2. Cubierta: la columna \"$ Revisado Gerencia\" ahora se llama \"$ Revisado\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
+  },
+  {
+   "nivel": "aviso",
    "texto": "P2. Cubierta: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8458dc, board_relation); revisar si el dashboard debe usarla."
+  },
+  {
+   "nivel": "info",
+   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"Σ Revisado Gerencia\" ahora se llama \"Σ Revisado\" (lookup_mm7azrff)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería: la columna \"$ Revisado Gerencia\" ahora se llama \"$ Revisado\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
   },
   {
    "nivel": "aviso",
@@ -5850,7 +6545,71 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader: sin órdenes de compra; PO e Incurrido quedan en 0."
+   "texto": "POs Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"16379 · SUBWORKS — Recolección de 85 m³ de slop\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"57927 · Ferretería Industrial — Reducción concéntrica de 5″ a 3″\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"02596 · Terminal Marítima — Entrada a muelle logístico 7-oct\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "POs Kelly Trader · \"INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
