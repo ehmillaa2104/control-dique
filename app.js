@@ -298,7 +298,8 @@
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
       kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
-      kpi("wallet", "Incurrido", moneyK(C.incurrido), C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido"),
+      kpi("wallet", "Incurrido", moneyK(C.incurrido), extra.incurrido ? extra.incurrido.sub : C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido",
+        extra.incurrido ? { tip: extra.incurrido.tip } : {}),
       ...(extra.extraKpis || []),
       kpi("gauge", "Avance físico", pct(av.pct), planTxt(av),
         { tip: `<b>Avance físico</b><div class="tnote">Σ (Estado % × Duración) / Σ Duración de los trabajos planificados (los que tienen Duración), como la columna "Avance" de Monday.</div>${rowT("Planificados", av.conDur)}${rowT("Por iniciar (0 %)", av.conDur - av.ejec - av.fin)}${rowT("En ejecución (25–75 %)", av.ejec)}${rowT("Finalizados (100 %)", av.fin)}${rowT("Sin planificar (sin duración)", av.n - av.conDur)}${rowT("Días planificados", av.dur)}` })
@@ -429,8 +430,18 @@
     const C = Object.assign(costos(M.centros), { solicitado: sum(all.filter((t) => !t.cancelado), (t) => t.solicitado) });
     const pend = sum(all.filter((t) => !t.cancelado && !t.aprobado), (t) => t.solicitado);
     const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
+    // Incurrido = total de "$ Incurrido" del tablero Contabilidad Kelly Trader (todos los documentos contables,
+    // estén o no enlazados a un trabajo o centro de costo). Lo enlazado es lo que llega al tablero CC y a las áreas.
+    const enl = P.filter((p) => p.cc.length || p.trabajos.length), sinEnl = P.filter((p) => !p.cc.length && !p.trabajos.length);
+    const incSin = sum(sinEnl, (p) => p.incurrido);
+    C.incurrido = sum(P, (p) => p.incurrido);
+    const incurrido = {
+      sub: C.incurrido ? [C.aprobado ? `${((C.incurrido / C.aprobado) * 100).toFixed(0)}% del aprobado` : "", incSin ? `<span class="t-warn">${moneyK(incSin)} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") || "registrado en contabilidad" : "sin costo incurrido",
+      tip: `<b>Incurrido</b><div class="tnote">Total de "$ Incurrido" del tablero Contabilidad Kelly Trader: gastos ya registrados con factura.</div>${rowT(`Enlazado a trabajo o centro de costo (${enl.length})`, money(sum(enl, (p) => p.incurrido)))}${rowT(`Sin centro de costo ni trabajo (${sinEnl.length})`, money(incSin))}${rowT("Total", money(C.incurrido))}` +
+        (sinEnl.length ? `<div class="tnote warn" style="margin-top:6px">Sin enlazar: no se reparte por área ni por centro de costo.</div>` + sinEnl.slice().sort((a, b) => b.incurrido - a.incurrido).slice(0, 6).map((p) => rowT(esc(p.nombre), moneyK(p.incurrido))).join("") + (sinEnl.length > 6 ? `<div class="tnote">y ${sinEnl.length - 6} más</div>` : "") : "")
+    };
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
-    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
   }
