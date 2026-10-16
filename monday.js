@@ -6708,66 +6708,6 @@ window.DIQUE_MONDAY = {
  ],
  "observaciones": [
   {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: la columna \"$ Solicitado (Equipo)\" ahora se llama \"$ Preliminar\" (numeric_mm6vjdrd); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: la columna \"$ Aprobado Dirección\" ahora se llama \"$ Aprobado\" (numeric_mm78s0hd); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: la columna \"$ Revisado Gerencia\" ahora se llama \"$ Revisión\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: columna nueva \"link to POs Kelly Trader\" (board_relation_mm845vmr, board_relation); revisar si el dashboard debe usarla."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: la columna \"$ Solicitado (Equipo)\" ahora se llama \"$ Preliminar\" (numeric_mm6vjdrd); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: la columna \"$ Revisado Gerencia\" ahora se llama \"$En Revisión\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "CC. Centros de Costo - Kelly Trader: columna nueva \"$ Preliminar\" (formula_mm867352, formula); revisar si el dashboard debe usarla."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"$ Preliminar\" ahora se llama \"$ En Revisión\" (formula_mm7d91f2); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "CC. Centros de Costo - Kelly Trader: columna nueva \"Σ Preliminar\" (lookup_mm86c6e2, mirror); revisar si el dashboard debe usarla."
-  },
-  {
-   "nivel": "info",
-   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"Σ Revisado Gerencia\" ahora se llama \"Σ En Revisado\" (lookup_mm7azrff)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "CC. Centros de Costo - Kelly Trader: se borró la columna \"Comentarios\" (coment_dir)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader: se borró la columna \"Description Det\" (long_text_mm33ryq6)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: la columna \"$ Solicitado (Equipo)\" ahora se llama \"$ Preliminar\" (numeric_mm6vjdrd); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: la columna \"$ Revisado Gerencia\" ahora se llama \"$ En Revisión\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8418w8, board_relation); revisar si el dashboard debe usarla."
-  },
-  {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
   },
@@ -6906,10 +6846,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "PROGRAMA DE DIQUES: 11 diques · estimado total US$ 6,450,000."
-  },
-  {
-   "nivel": "info",
-   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };

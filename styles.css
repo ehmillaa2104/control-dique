@@ -539,3 +539,28 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .cc-head .n { white-space: normal; font-size: 9px; letter-spacing: .02em; line-height: 1.2; }
   .cc-table .n { font-size: 11px; }
 }
+
+/* Indicadores: el monto se ajusta al ancho de la tarjeta para que no se salga */
+.kpi { container-type: inline-size; }
+.kpi .val { font-size: clamp(14px, calc((100cqi - 56px) / 6.2), 21px); }
+@container (max-width: 200px) { .kpi > .ic { width: 20px; height: 20px; } }
+@container (max-width: 172px) { .kpi > .ic { display: none; } .kpi .val { font-size: clamp(14px, calc((100cqi - 26px) / 6.2), 20px); } }
+/* 8 indicadores: siempre en 2 filas de 4 (en 8 columnas los montos no entran) */
+.kpis.k8 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 860px) { .kpis.k8, .kpis.k7 { grid-template-columns: 1fr 1fr; } .kpis.k7 > :last-child { grid-column: span 2; } }
+@media (max-width: 340px) { .kpis.k8, .kpis.k7, .kpis.k6 { grid-template-columns: 1fr; } .kpis.k7 > :last-child { grid-column: auto; } }
+.nota-rev { display: block; margin-top: 3px; font-size: 11px; line-height: 1.35; color: var(--c-rev); font-style: italic; }
+.kpi .sub .nota-rev { margin-top: 4px; }
+
+/* Indicadores en dos filas y algo más grandes (pedido del usuario, 16 oct) */
+.kpis.k8, .kpis.k7 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kpis.k7 > :last-child { grid-column: span 2; } /* 7 indicadores: 4 + 3, el último ocupa el hueco */
+.kpis.k6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.kpi { padding: 14px 16px; gap: 12px; }
+.kpi .lbl { font-size: 11px; }
+.kpi .val { font-size: clamp(15px, calc((100cqi - 64px) / 5.8), 26px); margin: 2px 0 3px; }
+.kpi .sub { font-size: 12px; }
+.kpi .sub > span { display: block; }
+@container (max-width: 172px) { .kpi .val { font-size: clamp(14px, calc((100cqi - 32px) / 6), 22px); } }
+@media (max-width: 860px) { .kpis.k8, .kpis.k7, .kpis.k6 { grid-template-columns: 1fr 1fr; } .kpis.k7 > :last-child { grid-column: span 2; } }
+@media (max-width: 340px) { .kpis.k8, .kpis.k7, .kpis.k6 { grid-template-columns: 1fr; } .kpis.k7 > :last-child { grid-column: auto; } }
