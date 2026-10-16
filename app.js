@@ -432,18 +432,36 @@
   // Avance y montos por fase (Pre-dique, Dique, Post-dique) con las fechas de la fase en el Cronograma
   function fasesCard(M, grande) {
     const all = M.areas.flatMap((a) => a.trabajos);
-    const fila = (nombre, ts, o = {}) => {
-      const av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
-      const tip = `<b>${nombre}</b>${rowT("Planificados", av.conDur)}${rowT("En ejecución", av.ejec)}${rowT("Finalizados", av.fin)}${rowT("Preliminar", moneyK(C.revisado))}`;
-      return `<tr class="${o.id ? "fs k-" + o.id : ""} ${o.actual ? "cur" : ""}" ${tipAttr(tip)}><td><b>${o.id ? `<i class="dot k-${o.id}"></i>` : ""}${nombre}</b>${o.fechas ? `<small>${o.fechas}</small>` : ""}</td>
-        <td><div class="mini-av"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, av.pct))}%"></i></span><b>${pct(av.pct, 0)}</b></div></td></tr>`;
-    };
-    const filas = FASES.map((f) => {
-      const cr = M.fases.find((o) => o.kind === f.id);
-      const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
-      return fila(f.nombre, all.filter(enFase(f.id)), { id: f.id, fechas, actual: M.cur && cr && M.cur.kind === f.id });
+    const barra = (v, cls = "") => `<div class="mini-av ${cls}"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, v))}%"></i></span><b>${pct(v, 0)}</b></div>`;
+    const datos = (av) => `${plural(av.conDur, "planificado", "planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}${av.sinDur ? ` · <span class="t-warn">${av.sinDur} sin duración</span>` : ""}`;
+    // Trabajos de la fase por área: primero los que están en ejecución, luego los finalizados y al final los por iniciar
+    const orden = (t) => (t.pct > 0 && t.pct < 100 ? 0 : t.pct >= 100 ? 1 : 2);
+    const lista = (ts) => M.areas.map((a) => {
+      const xs = ts.filter((t) => t.area === a.id).sort((x, y) => orden(x) - orden(y) || (y.duracion || 0) - (x.duracion || 0));
+      if (!xs.length) return "";
+      const av = avance(xs);
+      return `<div class="fs-area"><div class="fs-ah">${icon(AREA_ICON[a.id] || "grid", "ic sm")}<b>${esc(a.nombre)}</b><small>${datos(av)}</small>${barra(av.pct, "sm")}</div>
+        <div class="scroll"><table class="tbl fs-tbl"><thead><tr><th>Trabajo</th><th>Estado</th><th class="n">Duración</th><th class="n">Preliminar</th><th>Fin</th></tr></thead><tbody>${xs.map((t) =>
+          `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${esc(t.grupo)}</small></td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td>
+            <td class="n">${t.duracion > 0 ? t.duracion + " d" : '<span class="t-warn">sin duración</span>'}</td><td class="n">${mcell(t.revisado)}</td><td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div></div>`;
     }).join("");
-    return card("Avance por fase", `<table class="tbl mini ${grande ? "grande" : ""}"><tbody>${filas}</tbody><tfoot>${fila("Total", all.filter(conFase))}</tfoot></table>`, grande ? { cls: "wide" } : {});
+    const conArea = all.map((t) => Object.assign({ area: (M.areas.find((a) => a.trabajos.includes(t)) || {}).id }, t));
+    const fila = (f) => {
+      const ts = conArea.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
+      const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
+      const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
+      return `<details class="fs k-${f.id} ${actual ? "cur" : ""}"><summary class="fs-row">
+          <span class="fs-nm"><b><i class="dot k-${f.id}"></i>${f.nombre}${actual ? '<em class="chip">etapa actual</em>' : ""}</b><small>${fechas}</small></span>
+          <span class="fs-dt">${datos(av)}</span>
+          <span class="fs-pr"><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></span>
+          ${barra(av.pct)}</summary>
+        <div class="fs-body">${lista(ts) || empty("Sin trabajos en esta fase.")}</div></details>`;
+    };
+    const tav = avance(all.filter(conFase)), TC = costos(all.filter((t) => !t.cancelado && conFase(t)));
+    const total = `<div class="fs-row fs-tot"><span class="fs-nm"><b>Total</b></span><span class="fs-dt">${datos(tav)}</span>
+      <span class="fs-pr"><small>Preliminar</small><b class="${TC.revisado > TC.aprobado ? "t-warn" : ""}">${moneyK(TC.revisado)}</b></span>${barra(tav.pct)}</div>`;
+    return card("Avance por fase", `<div class="fs-list ${grande ? "grande" : ""}">${FASES.map(fila).join("")}${total}</div>`,
+      Object.assign({ right: "clic en una fase para ver sus trabajos" }, grande ? { cls: "wide" } : {}));
   }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();

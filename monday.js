@@ -735,7 +735,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256760158",
@@ -759,7 +759,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043922221",
@@ -1119,7 +1119,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043945522",
@@ -1959,7 +1959,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755192",
@@ -1983,7 +1983,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755203",
@@ -2007,7 +2007,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256744926",
@@ -2031,7 +2031,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256760609",
@@ -2055,7 +2055,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256744868",
@@ -2079,7 +2079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043941391",
@@ -2151,7 +2151,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043924545",
@@ -2367,7 +2367,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13095604536",
@@ -2871,7 +2871,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277158049",
@@ -2895,7 +2895,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277104868",
@@ -2919,7 +2919,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277169481",
@@ -2943,7 +2943,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277138491",
@@ -2967,7 +2967,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277157364",
@@ -2991,7 +2991,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13095637379",
@@ -3063,7 +3063,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043924495",
@@ -3279,7 +3279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043921183",
@@ -3471,7 +3471,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13095637314",
@@ -3519,7 +3519,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755102",
@@ -3543,7 +3543,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043936421",
@@ -3634,7 +3634,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 4216.39,
      "fin": null,
      "cc": [
       "13081201432"
@@ -3879,7 +3879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13095614176",
@@ -3951,7 +3951,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755233",
@@ -3975,7 +3975,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755205",
@@ -3999,7 +3999,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755234",
@@ -4023,7 +4023,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043932350",
@@ -4095,7 +4095,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755204",
@@ -4119,7 +4119,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13256755193",
@@ -4143,7 +4143,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13043921754",
@@ -4239,7 +4239,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13277158044",
@@ -4263,7 +4263,31 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
+    },
+    {
+     "id": "13311556199",
+     "nombre": "Miscelaneos",
+     "grupo": "Generales (fuera de jerarquía Máquina)",
+     "fase": "No Aplica",
+     "estado": "0%",
+     "pct": 0,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "solicitado": null,
+     "revisado": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": null,
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-16"
     }
    ]
   },
@@ -4385,7 +4409,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 11663,
      "fin": null,
      "cc": [
       "13081218069"
@@ -4438,7 +4462,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177348"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098338467",
@@ -4788,8 +4812,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de pintura",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4805,7 +4829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-15"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098333423",
@@ -4860,8 +4884,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de ánodos",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4877,15 +4901,15 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-15"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098334682",
      "nombre": "Medición de espesores y cadenas",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4897,11 +4921,11 @@ window.DIQUE_MONDAY = {
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-16",
      "cc": [
       "13081195990"
      ],
-     "actualizado": "2026-10-15"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098338054",
@@ -5142,12 +5166,15 @@ window.DIQUE_MONDAY = {
    "revisado": 9000,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 10500,
    "proyectado": 0,
    "lineas": [
     "13238699549"
    ],
-   "pos": []
+   "pos": [
+    "13302137014",
+    "13302183351"
+   ]
   },
   {
    "id": "13081195879",
@@ -5185,7 +5212,7 @@ window.DIQUE_MONDAY = {
    "revisado": 99950.01,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 55.88,
+   "incurrido": 13280.92,
    "proyectado": 0,
    "lineas": [
     "13043950431",
@@ -5354,10 +5381,21 @@ window.DIQUE_MONDAY = {
     "13277158049",
     "13277138491",
     "13277104868",
-    "13277169481"
+    "13277169481",
+    "13311556199"
    ],
    "pos": [
-    "13302150991"
+    "13302150991",
+    "13302137015",
+    "13302211939",
+    "13302150520",
+    "13302150984",
+    "13302180056",
+    "13302212705",
+    "13302229682",
+    "13302150803",
+    "13302150224",
+    "13302212275"
    ]
   },
   {
@@ -5398,12 +5436,14 @@ window.DIQUE_MONDAY = {
    "revisado": 0,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 11663,
    "proyectado": 0,
    "lineas": [
     "13098327364"
    ],
-   "pos": []
+   "pos": [
+    "13302150986"
+   ]
   },
   {
    "id": "13081177133",
@@ -5448,9 +5488,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-12",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302183351",
@@ -5463,9 +5507,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-07",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13238699549"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302229682",
@@ -5478,9 +5526,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-15"
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302137014",
@@ -5493,9 +5543,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-07",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13238699549"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302137015",
@@ -5508,9 +5562,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302212705",
@@ -5523,9 +5581,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-07",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-15"
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302150984",
@@ -5538,9 +5598,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-15"
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302150520",
@@ -5553,9 +5615,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302150224",
@@ -5568,9 +5634,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-08",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302180056",
@@ -5583,9 +5653,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-07",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043941389"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302150986",
@@ -5598,9 +5672,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-01-20",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081218069"
+   ],
+   "trabajos": [
+    "13098327364"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302211939",
@@ -5613,9 +5691,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-07",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302212275",
@@ -5628,9 +5710,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-12",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-15"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13311556199"
+   ],
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13302182661",
@@ -5712,10 +5798,10 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 18,
+   "puntos": 23,
    "maximo": 30,
-   "pct": 60.0,
-   "nivel": "Medio"
+   "pct": 76.7,
+   "nivel": "Alto"
   },
   "semanas": [
    {
@@ -6116,11 +6202,11 @@ window.DIQUE_MONDAY = {
     "id": "13305134222",
     "nombre": "Contabilidad",
     "area": null,
-    "puntos": 1,
+    "puntos": 6,
     "maximo": 6,
-    "pct": 16.7,
-    "nivel": "Bajo",
-    "sinCargar": 3,
+    "pct": 100.0,
+    "nivel": "Alto",
+    "sinCargar": 0,
     "semanas": [
      {
       "semana": "S1",
@@ -6142,21 +6228,21 @@ window.DIQUE_MONDAY = {
      },
      {
       "semana": "S3",
-      "reunion": null,
-      "act": null,
-      "pr": null,
-      "pa": null,
-      "faltaR": true,
-      "faltaA": true
+      "reunion": "Asistió",
+      "act": "2 - Actualización directa",
+      "pr": 1,
+      "pa": 2,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
-      "act": null,
+      "act": "2 - Actualización directa",
       "pr": null,
-      "pa": null,
+      "pa": 2,
       "faltaR": false,
-      "faltaA": true
+      "faltaA": false
      },
      {
       "semana": "S5",
@@ -6204,7 +6290,7 @@ window.DIQUE_MONDAY = {
  },
  "avance": {
   "ingenieria": {
-   "lineas": 167,
+   "lineas": 168,
    "conDuracion": 31,
    "duracion": 31,
    "avanceDias": 1.25
@@ -6219,17 +6305,88 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 8,
    "duracion": 76,
-   "avanceDias": 0.0
+   "avanceDias": 1.5
   },
   "total": {
-   "lineas": 195,
+   "lineas": 196,
    "conDuracion": 54,
    "duracion": 168,
-   "avanceDias": 13.25
+   "avanceDias": 14.75
   }
  },
- "_huella": "002c06fdaa4b",
- "cambiosLectura": [],
+ "_huella": "b38ba539b35d",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Fabricación de tubería de agua de mar enfriador LT",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "4216.39"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Miscelaneos",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Calibración de tanques de carga",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "11663"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de pintura",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de ánodos",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-16"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Contabilidad",
+   "campo": "Reunión S3",
+   "antes": "—",
+   "ahora": "Asistió"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Contabilidad",
+   "campo": "Actualización S3",
+   "antes": "—",
+   "ahora": "2 - Actualización directa"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Contabilidad",
+   "campo": "Actualización S4",
+   "antes": "—",
+   "ahora": "2 - Actualización directa"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "aviso",
@@ -6244,12 +6401,12 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: la columna \"$ Revisado Gerencia\" ahora se llama \"$ Revisado\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
   },
   {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: columna nueva \"link to POs Kelly Trader\" (board_relation_mm8458dc, board_relation); revisar si el dashboard debe usarla."
-  },
-  {
    "nivel": "info",
    "texto": "CC. Centros de Costo - Kelly Trader: la columna \"Σ Revisado Gerencia\" ahora se llama \"Σ Revisado\" (lookup_mm7azrff)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader: se borró la columna \"Description Det\" (long_text_mm33ryq6)."
   },
   {
    "nivel": "aviso",
@@ -6289,7 +6446,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 0 en ejecución · 0 finalizado(s) · 8 por iniciar."
+   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 2 en ejecución · 1 finalizado(s) · 5 por iniciar."
   },
   {
    "nivel": "info",
@@ -6297,55 +6454,55 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -6368,24 +6525,8 @@ window.DIQUE_MONDAY = {
    "texto": "Cambios/Imprevistos Kelly trader: sin cambios ni imprevistos registrados."
   },
   {
-   "nivel": "aviso",
-   "texto": "Participación · S3 · reunión: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Participación · S3 · actualización: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Participación · S4 · actualización: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Participación · Contabilidad: % en Monday = 100, en el dashboard = 16.7 (Monday no cuenta las 3 casilla(s) sin cargar; el dashboard las cuenta como 0)."
-  },
-  {
    "nivel": "info",
-   "texto": "Participación del equipo: 60.0% (18 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+   "texto": "Participación del equipo: 76.7% (23 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
   }
  ]
 };
