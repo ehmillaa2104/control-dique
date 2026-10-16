@@ -39,6 +39,7 @@
     check: '<path d="M5 12.5l4.2 4L19 7"/>',
     coin: '<circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2s1.2 1.7 2.8 2 2.8.9 2.8 2.1-1.2 2-2.8 2c-1.3 0-2.4-.6-2.9-1.5M12 6v1.8M12 16.2V18"/>',
     trend: '<path d="M4 17l5-5 4 3 7-8"/><path d="M15 7h5v5"/>', doc: '<path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10.5a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/><path d="M14 3.5V8h4M9 12.5h6M9 16h6"/>',
+    cash: '<rect x="3" y="6.5" width="18" height="11" rx="1.5"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5v5M17.5 9.5v5"/>',
     wallet: '<path d="M4 7.5h14.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 18V6.5A1.5 1.5 0 0 1 5.5 5H16"/><path d="M15.5 13.5h2"/>',
     users: '<circle cx="9" cy="8.5" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.2a4.6 4.6 0 0 1 5 4.8"/>',
     clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>', gauge: '<path d="M4.5 16a7.5 7.5 0 1 1 15 0"/><path d="M12 16l3.5-4.5"/><circle cx="12" cy="16" r="1.2"/>',
@@ -301,23 +302,21 @@
 
 
   function costKpis(C, av, extra = {}) {
-    const vsAprob = (v) => (C.aprobado ? `${((v / C.aprobado) * 100).toFixed(0)}% del aprobado` : "sin monto aprobado");
     const ts = (extra.trabajos || []).filter((t) => !t.cancelado);
     const n = (e) => ts.filter((t) => etapaDe(t) === e).length;
-    const pctDe = (v) => (C.preliminar ? ` · ${((v / C.preliminar) * 100).toFixed(0)} %` : "");
     const E = C.enRevision ? extra.direccion : null;
     return [
       kpi("coin", "Presupuesto preliminar", moneyK(C.preliminar), `${etapasBar(C)}<span>Solicitado por el equipo</span>`,
         { cls: "c-pre", tip: `${rowT("Aprobado", moneyK(C.aprobado))}${rowT("En revisión", moneyK(C.enRevision))}${sinEnviar(C) ? rowT("Sin enviar", moneyK(sinEnviar(C))) : ""}` }),
-      kpi("hourglass", "En revisión", moneyK(C.enRevision), `<span>Dir. de Operaciones${C.enRevision ? pctDe(C.enRevision) : ""}</span>${notasRevision(ts)}${E ? `<span class="chip warn">${esc(E.txt)}</span>` : ""}`,
+      kpi("hourglass", "En revisión", moneyK(C.enRevision), `<span>Dir. de Operaciones</span>${notasRevision(ts)}${E ? `<span class="chip warn">${esc(E.txt)}</span>` : ""}`,
         { cls: "c-rev", tip: C.enRevision ? rowT("Trabajos en revisión", n("revision")) : "" }),
-      kpi("check", "Aprobado", moneyK(C.aprobado), `<span>Dir. de Operaciones${C.aprobado ? pctDe(C.aprobado) : ""}</span>`,
+      kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)} % vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra", extra.posTip ? { tip: extra.posTip } : {}),
-      kpi("wallet", "Incurrido", moneyK(C.incurrido), extra.incurrido ? extra.incurrido.sub : C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido",
-        extra.incurrido ? { tip: extra.incurrido.tip } : {}),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Sin información aún"),
+      kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
+      kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
       ...(extra.extraKpis || []),
       kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>${av.sinDur ? `<span class="t-warn">${av.sinDur} sin duración</span>` : ""}` : '<span class="t-warn">sin trabajos planificados</span>',
         { tip: `${rowT("Por iniciar", av.conDur - av.ejec - av.fin)}<div class="tnote">Ponderado por duración</div>` })
@@ -426,19 +425,16 @@
     const all = M.areas.flatMap((a) => a.trabajos);
     // Montos de los centros de costo (preliminar, en revisión, aprobado, proyectado y PO)
     const C = costos(M.centros);
-    const P = M.D.pos, sinMonto = P.filter((p) => !p.po).length, sinCC = P.filter((p) => !p.cc.length && !p.trabajos.length).length;
+    const P = M.D.pos;
     // Incurrido = total de "$ Incurrido" del tablero Contabilidad Kelly Trader (todos los documentos contables,
     // estén o no enlazados a un trabajo o centro de costo). Lo enlazado es lo que llega al tablero CC y a las áreas.
     const enl = P.filter((p) => p.cc.length || p.trabajos.length), sinEnl = P.filter((p) => !p.cc.length && !p.trabajos.length);
     const incSin = sum(sinEnl, (p) => p.incurrido);
     C.incurrido = sum(P, (p) => p.incurrido);
     const incurrido = {
-      sub: C.incurrido ? (C.aprobado ? `<span>${((C.incurrido / C.aprobado) * 100).toFixed(0)} % del aprobado</span>` : "") + (incSin ? `<span class="t-warn">${moneyK(incSin)} sin enlazar</span>` : "") || "registrado en contabilidad" : "sin costo incurrido",
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
-    const posTip = P.length ? `${rowT("Registradas", P.length)}${sinCC ? rowT("Sin enlazar", sinCC) : ""}` : "";
-    const posTxt = P.length ? (sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : plural(P.length, "orden de compra", "órdenes de compra")) : "";
-    return `<div class="kpis ${M.part ? "k9" : "k8"}">${costKpis(C, avance(all), { pos: posTxt, posTip, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k10" : "k9"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, true)}`;
@@ -520,7 +516,7 @@
     const pa = partDe(M, a.id);
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
     return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
-      <div class="kpis ${pa ? "k8" : "k7"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
+      <div class="kpis ${pa ? "k9" : "k8"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${card(`Trabajos · ${esc(a.tablero)}${FASE !== "todas" ? ` · ${(FASES.find((f) => f.id === FASE) || {}).nombre}` : ""}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
