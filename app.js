@@ -363,7 +363,7 @@
       return `<tr class="${semCls(e.nivel)}"><td><b>${area ? `<a href="#${area.id}">${esc(e.nombre)}</a>` : esc(e.nombre)}</b></td>${cum(e)}</tr>`;
     };
     const T = P.total;
-    return card("Participación del equipo", `<table class="tbl part"><tbody>${P.equipos.map(fila).join("")}</tbody>
+    return card("Participación del equipo", `<table class="tbl mini part"><tbody>${P.equipos.map(fila).join("")}</tbody>
       <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}</tr></tfoot></table>`);
   }
 
@@ -411,9 +411,8 @@
     const posTxt = P.length ? (sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : plural(P.length, "orden de compra", "órdenes de compra")) : "";
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, posTip, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
-      ${fasesCard(M)}
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
-      ${partTabla(M)}`;
+      <div class="row-2">${fasesCard(M)}${partTabla(M)}</div>`;
   }
 
   // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
@@ -431,22 +430,18 @@
   // Avance y montos por fase (Pre-dique, Dique, Post-dique) con las fechas de la fase en el Cronograma
   function fasesCard(M) {
     const all = M.areas.flatMap((a) => a.trabajos);
-    const fila = (f) => {
-      const ts = all.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
-      const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
-      const porArea = M.areas.map((a) => { const x = avance(a.trabajos.filter(enFase(f.id))); return rowT(esc(a.nombre), x.conDur ? pct(x.pct, 0) : "—"); }).join("");
-      return `<tr class="${actual ? "cur" : ""}"><td><b><i class="dot k-${f.id}"></i>${f.nombre}</b>${actual ? "<small>etapa actual</small>" : ""}</td>
-        <td class="nw">${cr ? dateRange(cr.real) : "—"}${cr && cr.diferencia > 0 ? `<small class="t-alert">+${cr.diferencia} d vs base</small>` : ""}</td>
-        <td class="n">${av.conDur}${av.sinDur ? `<small class="t-warn">+${av.sinDur} sin duración</small>` : ""}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td>
-        <td class="nw" ${tipAttr(`<b>Avance · ${f.nombre}</b>${porArea}`)}>${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td>
-        <td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td>${conAprob ? `<td class="n">${mcell(C.aprobado)}</td>` : ""}</tr>`;
+    const fila = (nombre, ts, o = {}) => {
+      const av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
+      const tip = `<b>${nombre}</b>${rowT("Planificados", av.conDur)}${rowT("En ejecución", av.ejec)}${rowT("Finalizados", av.fin)}${rowT("Preliminar", moneyK(C.revisado))}`;
+      return `<tr class="${o.id ? "fs k-" + o.id : ""} ${o.actual ? "cur" : ""}" ${tipAttr(tip)}><td><b>${o.id ? `<i class="dot k-${o.id}"></i>` : ""}${nombre}</b>${o.fechas ? `<small>${o.fechas}</small>` : ""}</td>
+        <td><div class="mini-av"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, av.pct))}%"></i></span><b>${pct(av.pct, 0)}</b></div></td></tr>`;
     };
-    const av = avance(all.filter(conFase)), C = costos(all.filter((t) => !t.cancelado && conFase(t)));
-    const conAprob = C.aprobado > 0; // la columna Aprobado aparece cuando Dirección apruebe algo
-    return card("Avance por fase", `<div class="scroll"><table class="tbl fases"><thead><tr><th>Fase</th><th>Fechas (real)</th><th class="n">Planificados</th><th class="n">En ejecución</th><th class="n">Finalizados</th><th>Avance</th><th class="n">Preliminar</th>${conAprob ? '<th class="n">Aprobado</th>' : ""}</tr></thead>
-      <tbody>${FASES.map(fila).join("")}</tbody>
-      <tfoot><tr><td><b>Total con fase</b></td><td></td><td class="n">${av.conDur}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td><td class="nw">${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td><td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td>${conAprob ? `<td class="n">${mcell(C.aprobado)}</td>` : ""}</tr></tfoot></table></div>`,
-      { cls: "wide", right: "trabajos de P1, P2 y P3 según su columna Fase" });
+    const filas = FASES.map((f) => {
+      const cr = M.fases.find((o) => o.kind === f.id);
+      const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
+      return fila(f.nombre, all.filter(enFase(f.id)), { id: f.id, fechas, actual: M.cur && cr && M.cur.kind === f.id });
+    }).join("");
+    return card("Avance por fase", `<table class="tbl mini"><tbody>${filas}</tbody><tfoot>${fila("Total", all.filter(conFase))}</tfoot></table>`);
   }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();

@@ -384,16 +384,24 @@ footer a { text-underline-offset: 2px; }
 
 /* Tablas de fases y de participación */
 .tbl tfoot td { border-top: 2px solid var(--border); border-bottom: 0; font-weight: 700; }
-.tbl.fases td { vertical-align: middle; }
-.tbl.fases tr.cur td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
-.tbl.fases .pbar { width: 90px; }
 .tbl.part td { vertical-align: middle; }
 .tbl.part tbody tr td:first-child, .tbl.part tfoot tr td:first-child { box-shadow: inset 4px 0 0 var(--sem, transparent); }
-.pc-cum { display: grid; grid-template-columns: minmax(70px, 1fr) 44px 64px; align-items: center; gap: 8px; }
+.pc-cum { display: grid; grid-template-columns: minmax(40px, 1fr) 42px auto; align-items: center; gap: 8px; }
 .pc-cum b { font-size: 14px; font-weight: 800; color: var(--sem); text-align: right; }
-.tbl.fases td:first-child b, .tbl.part td:first-child b { white-space: nowrap; }
+.tbl.mini td:first-child b { white-space: nowrap; }
 .fase-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .fase-bar > small { font-size: 12px; color: var(--ink-3); }
-.tbl.part td:first-child { width: 34%; }
 .tbl.part a { color: inherit; text-decoration: none; }
 .tbl.part a:hover { text-decoration: underline; }
+
+/* Avance por fase y participación: dos cuadros chicos, uno al lado del otro */
+.row-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.tbl.mini td { vertical-align: middle; padding: 8px 14px; }
+.tbl.mini td:first-child { width: 42%; }
+.tbl.mini tr.cur td:first-child { box-shadow: inset 3px 0 0 var(--ink); }
+.mini-av { display: grid; grid-template-columns: minmax(60px, 1fr) 44px; align-items: center; gap: 8px; }
+.mini-av .pbar { width: 100%; height: 8px; border-radius: 4px; }
+.mini-av b { text-align: right; font-weight: 800; }
+@media (max-width: 760px) { .row-2 { grid-template-columns: 1fr; } }
+.tbl.mini tr.fs .pbar i { background: var(--c); }
+@media (max-width: 760px) { .tbl.mini td { padding: 8px 10px; } .tbl.mini td:first-child { width: 38%; } }
