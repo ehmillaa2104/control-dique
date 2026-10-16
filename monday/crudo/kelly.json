@@ -2321,7 +2321,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-16T22:20:45Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2330,7 +2330,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Pre-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -2373,7 +2373,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-16 22:20:45 UTC"
        },
        {
         "id": "date_mm7ya280",

@@ -4618,7 +4618,7 @@ window.DIQUE_MONDAY = {
      "id": "13238699549",
      "nombre": "Caja menuda para capitán",
      "grupo": "Operaciones",
-     "fase": "Dique",
+     "fase": "Pre-dique",
      "estado": "100%",
      "pct": 100,
      "cancelado": false,
@@ -6675,25 +6675,11 @@ window.DIQUE_MONDAY = {
    "avanceDias": 19.0
   }
  },
- "_huella": "5f3ab30cae3d",
+ "_huella": "9c74b13aafa6",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Fecha Real",
-   "antes": "2026-10-16 a 2026-10-16",
-   "ahora": "2026-10-19 a 2026-10-19"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Diferencia",
-   "antes": "17",
-   "ahora": "20"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
    "campo": "Fase",
    "antes": "Dique",
    "ahora": "Pre-dique"
@@ -6763,10 +6749,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P3. Técnico: preliminar US$ 867,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 0."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Caja menuda para capitán\": tiene avance (100%) en Dique, que según el Cronograma empieza el 2026-10-19; revisar la fase."
   },
   {
    "nivel": "aviso",
