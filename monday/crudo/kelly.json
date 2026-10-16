@@ -1861,7 +1861,7 @@
       "id": "13098295887",
       "name": "Bajada de slop y basura",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-16T16:48:00Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1913,17 +1913,17 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-16 16:48:00 UTC"
        },
        {
         "id": "date_mm7ya280",
         "type": "date",
-        "text": ""
+        "text": "2026-10-16"
        },
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2229,7 +2229,7 @@
       "id": "13127948545",
       "name": "Entrada y Salida de muelle/Carga de Materiales",
       "created_at": "2026-09-24T17:01:58Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-16T16:48:30Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2281,7 +2281,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-16 16:48:30 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2291,7 +2291,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "50%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2321,7 +2321,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-16T15:14:16Z",
+      "updated_at": "2026-10-16T16:48:39Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2373,17 +2373,17 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 15:14:16 UTC"
+        "text": "2026-10-16 16:48:39 UTC"
        },
        {
         "id": "date_mm7ya280",
         "type": "date",
-        "text": ""
+        "text": "2026-10-16"
        },
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2413,7 +2413,7 @@
       "id": "13098338467",
       "name": "Materiales cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T19:20:44Z",
+      "updated_at": "2026-10-16T16:50:56Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2465,7 +2465,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:44 UTC"
+        "text": "2026-10-16 16:50:56 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2475,7 +2475,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2505,7 +2505,7 @@
       "id": "13098367009",
       "name": "Reparaciones en cubierta (aceros y soldadura)",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T19:20:46Z",
+      "updated_at": "2026-10-16T16:51:42Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2557,7 +2557,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:46 UTC"
+        "text": "2026-10-16 16:51:42 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2567,7 +2567,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "numeric_mm7yw4b3",

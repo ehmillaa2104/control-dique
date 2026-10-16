@@ -4325,8 +4325,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bajada de slop y basura",
      "grupo": "Operaciones",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4338,11 +4338,11 @@ window.DIQUE_MONDAY = {
      "proyectado": null,
      "po": null,
      "incurrido": 9325,
-     "fin": null,
+     "fin": "2026-10-16",
      "cc": [
       "13081208222"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13127441793",
@@ -4421,8 +4421,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Entrada y Salida de muelle/Carga de Materiales",
      "grupo": "Operaciones",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4438,15 +4438,15 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201194"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13238699549",
      "nombre": "Caja menuda para capitán",
      "grupo": "Operaciones",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
@@ -4458,7 +4458,7 @@ window.DIQUE_MONDAY = {
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-16",
      "cc": [
       "13081177348"
      ],
@@ -4469,8 +4469,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Materiales cubierta",
      "grupo": "Cubierta",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -4486,15 +4486,15 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098367009",
      "nombre": "Reparaciones en cubierta (aceros y soldadura)",
      "grupo": "Cubierta",
      "fase": "Pre-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -4510,7 +4510,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-16"
     },
     {
      "id": "13098306630",
@@ -6299,7 +6299,7 @@ window.DIQUE_MONDAY = {
    "lineas": 19,
    "conDuracion": 15,
    "duracion": 61,
-   "avanceDias": 12.0
+   "avanceDias": 15.0
   },
   "tecnico": {
    "lineas": 9,
@@ -6311,80 +6311,59 @@ window.DIQUE_MONDAY = {
    "lineas": 196,
    "conDuracion": 54,
    "duracion": 168,
-   "avanceDias": 14.75
+   "avanceDias": 17.75
   }
  },
- "_huella": "b38ba539b35d",
+ "_huella": "b21e7a3320dd",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Fabricación de tubería de agua de mar enfriador LT",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "4216.39"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Miscelaneos",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
    "tablero": "P2. Cubierta",
-   "trabajo": "Calibración de tanques de carga",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "11663"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de ánodos",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
+   "trabajo": "Bajada de slop y basura",
    "campo": "Estado",
    "antes": "0%",
    "ahora": "100%"
   },
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
    "campo": "Fecha Fin",
    "antes": "—",
    "ahora": "2026-10-16"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Contabilidad",
-   "campo": "Reunión S3",
-   "antes": "—",
-   "ahora": "Asistió"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "50%"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Contabilidad",
-   "campo": "Actualización S3",
-   "antes": "—",
-   "ahora": "2 - Actualización directa"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Contabilidad",
-   "campo": "Actualización S4",
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "Fecha Fin",
    "antes": "—",
-   "ahora": "2 - Actualización directa"
+   "ahora": "2026-10-16"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales cubierta",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
   }
  ],
  "observaciones": [
@@ -6434,7 +6413,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 15 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 12 por iniciar."
+   "texto": "P2. Cubierta: 15 trabajo(s) planificado(s) · 6 en ejecución · 2 finalizado(s) · 7 por iniciar."
   },
   {
    "nivel": "aviso",
