@@ -1439,7 +1439,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T21:15:57Z",
+      "updated_at": "2026-10-16T22:27:58Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1468,7 +1468,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Pendiente"
+        "text": "Revisado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1491,7 +1491,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 21:15:57 UTC"
+        "text": "2026-10-16 22:27:58 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -2873,7 +2873,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-16T22:27:56Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2907,7 +2907,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2925,7 +2925,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-16 22:27:56 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2965,7 +2965,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-16T22:27:57Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2999,7 +2999,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3017,7 +3017,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-16 22:27:57 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3057,7 +3057,7 @@
       "id": "13212064416",
       "name": "Speed Log – Doppler",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-16T22:27:57Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3091,7 +3091,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3109,7 +3109,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-16 22:27:57 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -19688,7 +19688,7 @@
       "id": "13095628540",
       "name": "Eje de cola — sellos e inspección",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-16T22:00:14Z",
+      "updated_at": "2026-10-16T22:27:56Z",
       "group": {
        "id": "group_mm7d5br9",
        "title": "1.17 Sistema de Propulsión"
@@ -19722,7 +19722,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Aprobado Dirección"
+        "text": "Descartado"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19740,7 +19740,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:14 UTC"
+        "text": "2026-10-16 22:27:56 UTC"
        },
        {
         "id": "color_mm7yb2cs",

@@ -3617,7 +3617,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Aprobado Dirección",
+     "aprobacion": "Descartado",
      "proveedor": "",
      "preliminar": 10000,
      "enRevision": null,
@@ -3630,7 +3630,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-16",
-     "costo": "preliminar"
+     "costo": "descartado"
     },
     {
      "id": "13256755102",
@@ -4774,7 +4774,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 11000,
      "enRevision": null,
@@ -4799,7 +4799,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 5500,
      "enRevision": null,
@@ -4824,7 +4824,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 6000,
      "enRevision": null,
@@ -5131,7 +5131,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
-     "aprobacion": "Pendiente",
+     "aprobacion": "Revisado",
      "proveedor": "",
      "preliminar": 766482,
      "enRevision": 766482,
@@ -6675,14 +6675,42 @@ window.DIQUE_MONDAY = {
    "avanceDias": 19.0
   }
  },
- "_huella": "9c74b13aafa6",
+ "_huella": "8f84bef40998",
  "cambiosLectura": [
   {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Eje de cola — sellos e inspección",
+   "campo": "Estado Aprobación",
+   "antes": "Aprobado Dirección",
+   "ahora": "Descartado"
+  },
+  {
    "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Pre-dique"
+   "trabajo": "Foam – Agente Espumógeno",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado",
+   "ahora": "Aprobado Dirección"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote de Rescate – Casco",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado",
+   "ahora": "Aprobado Dirección"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Speed Log – Doppler",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado",
+   "ahora": "Aprobado Dirección"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "Revisado"
   }
  ],
  "observaciones": [
@@ -6696,7 +6724,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Eje de cola — sellos e inspección\": Estado Aprobación = \"Aprobado Dirección\" pero no tiene $ Aprobado."
+   "texto": "P1. Ingeniería: 1 trabajo(s) descartado(s) con $ Preliminar (US$ 10,000), que sigue sumando en el preliminar del tablero CC: Eje de cola — sellos e inspección."
   },
   {
    "nivel": "info",
@@ -6708,23 +6736,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 7,500 (5) · aprobado US$ 80,450 (25) · sin enviar a revisión 1."
+   "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 7,500 (5) · aprobado US$ 80,450 (25) · sin enviar a revisión 0."
   },
   {
    "nivel": "aviso",
    "texto": "P2. Cubierta: 3 trabajo(s) descartado(s) con $ Preliminar (US$ 11,500), que sigue sumando en el preliminar del tablero CC: Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Foam – Agente Espumógeno\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Bote de Rescate – Casco\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Speed Log – Doppler\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
   },
   {
    "nivel": "info",
@@ -6737,10 +6753,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P2. Cubierta: preliminar US$ 138,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\": tiene $ En Revisión pero Estado Aprobación = \"Pendiente\"."
   },
   {
    "nivel": "info",
