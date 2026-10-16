@@ -414,7 +414,7 @@
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, posTip, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
-      <div class="row-2">${fasesCard(M)}${partTabla(M)}</div>`;
+      ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, true)}`;
   }
 
   // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
@@ -430,7 +430,7 @@
     `<button type="button" data-fase="${f.id}" aria-pressed="${FASE === f.id}">${f.id !== "todas" ? `<i class="dot k-${f.id}"></i>` : ""}${f.nombre}<small>${trabajos.filter(enFase(f.id)).length}</small></button>`).join("")}</div>`;
 
   // Avance y montos por fase (Pre-dique, Dique, Post-dique) con las fechas de la fase en el Cronograma
-  function fasesCard(M) {
+  function fasesCard(M, grande) {
     const all = M.areas.flatMap((a) => a.trabajos);
     const fila = (nombre, ts, o = {}) => {
       const av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
@@ -443,7 +443,7 @@
       const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
       return fila(f.nombre, all.filter(enFase(f.id)), { id: f.id, fechas, actual: M.cur && cr && M.cur.kind === f.id });
     }).join("");
-    return card("Avance por fase", `<table class="tbl mini"><tbody>${filas}</tbody><tfoot>${fila("Total", all.filter(conFase))}</tfoot></table>`);
+    return card("Avance por fase", `<table class="tbl mini ${grande ? "grande" : ""}"><tbody>${filas}</tbody><tfoot>${fila("Total", all.filter(conFase))}</tfoot></table>`, grande ? { cls: "wide" } : {});
   }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();

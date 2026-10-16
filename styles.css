@@ -405,3 +405,14 @@ footer a { text-underline-offset: 2px; }
 @media (max-width: 760px) { .row-2 { grid-template-columns: 1fr; } }
 .tbl.mini tr.fs .pbar i { background: var(--c); }
 @media (max-width: 760px) { .tbl.mini td { padding: 8px 10px; } .tbl.mini td:first-child { width: 38%; } }
+/* Avance por fase a todo el ancho (cuando no va al lado de la participación) */
+.tbl.mini.grande td { padding: 14px 18px; }
+.tbl.mini.grande td:first-child { width: 30%; }
+.tbl.mini.grande td:first-child b { font-size: 16px; }
+.tbl.mini.grande td small { font-size: 12.5px; margin-top: 2px; }
+.tbl.mini.grande .dot { width: 11px; height: 11px; }
+.tbl.mini.grande .mini-av { grid-template-columns: minmax(80px, 1fr) 64px; gap: 14px; }
+.tbl.mini.grande .mini-av .pbar { height: 14px; border-radius: 7px; }
+.tbl.mini.grande .mini-av .pbar i { border-radius: 7px; }
+.tbl.mini.grande .mini-av b { font-size: 22px; }
+@media (max-width: 760px) { .tbl.mini.grande td { padding: 12px 12px; } .tbl.mini.grande td:first-child { width: 40%; } .tbl.mini.grande .mini-av b { font-size: 18px; } .tbl.mini.grande .mini-av { grid-template-columns: minmax(50px, 1fr) 48px; gap: 10px; } }
