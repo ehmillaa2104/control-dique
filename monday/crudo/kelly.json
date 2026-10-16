@@ -795,7 +795,7 @@
       "id": "13098327907",
       "name": "Gasto de Clase",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-15T20:49:58Z",
+      "updated_at": "2026-10-16T20:48:06Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -824,12 +824,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "6000"
        },
        {
         "id": "numeric_mm78kpas",
@@ -847,7 +847,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 20:49:58 UTC"
+        "text": "2026-10-16 20:48:06 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -887,7 +887,7 @@
       "id": "13098328158",
       "name": "Aceros y soldadura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-15T20:49:58Z",
+      "updated_at": "2026-10-16T20:48:08Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -916,12 +916,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "0"
        },
        {
         "id": "numeric_mm78kpas",
@@ -939,7 +939,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 20:49:58 UTC"
+        "text": "2026-10-16 20:48:08 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -979,7 +979,7 @@
       "id": "13098326970",
       "name": "Compra de pintura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T16:27:09Z",
+      "updated_at": "2026-10-16T20:48:07Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1008,17 +1008,17 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Pendiente"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "42481"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "42481.5"
+        "text": "42481"
        },
        {
         "id": "board_relation_mm7am925",
@@ -1031,7 +1031,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 16:27:09 UTC"
+        "text": "2026-10-16 20:48:07 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1163,7 +1163,7 @@
       "id": "13098338352",
       "name": "Bono dique",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-15T20:49:57Z",
+      "updated_at": "2026-10-16T20:48:08Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1192,12 +1192,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "10000"
        },
        {
         "id": "numeric_mm78kpas",
@@ -1215,7 +1215,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 20:49:57 UTC"
+        "text": "2026-10-16 20:48:08 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1255,7 +1255,7 @@
       "id": "13098337112",
       "name": "Compra de ánodos",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T16:27:13Z",
+      "updated_at": "2026-10-16T20:48:08Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1284,12 +1284,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "10850"
        },
        {
         "id": "numeric_mm78kpas",
@@ -1307,7 +1307,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 16:27:13 UTC"
+        "text": "2026-10-16 20:48:08 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1347,7 +1347,7 @@
       "id": "13098334682",
       "name": "Medición de espesores y cadenas",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T16:27:49Z",
+      "updated_at": "2026-10-16T20:48:09Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1376,12 +1376,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "14875"
        },
        {
         "id": "numeric_mm78kpas",
@@ -1399,7 +1399,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 16:27:49 UTC"
+        "text": "2026-10-16 20:48:09 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1439,7 +1439,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-15T20:49:57Z",
+      "updated_at": "2026-10-16T19:49:04Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1468,7 +1468,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -1478,7 +1478,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "766482"
+        "text": ""
        },
        {
         "id": "board_relation_mm7am925",
@@ -1491,7 +1491,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 20:49:57 UTC"
+        "text": "2026-10-16 19:49:04 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1531,7 +1531,7 @@
       "id": "13278839703",
       "name": "Agenciamiento",
       "created_at": "2026-10-13T16:49:09Z",
-      "updated_at": "2026-10-15T20:49:58Z",
+      "updated_at": "2026-10-16T20:48:08Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1560,12 +1560,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "16732.76"
        },
        {
         "id": "numeric_mm78kpas",
@@ -1583,7 +1583,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 20:49:58 UTC"
+        "text": "2026-10-16 20:48:08 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1769,7 +1769,7 @@
       "id": "13098327837",
       "name": "Limpieza de tanques de carga",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-15T20:36:09Z",
+      "updated_at": "2026-10-16T20:36:49Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1803,12 +1803,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "28573.13"
        },
        {
         "id": "board_relation_mm7am925",
@@ -1821,7 +1821,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-15 20:36:09 UTC"
+        "text": "2026-10-16 20:36:49 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -1861,7 +1861,7 @@
       "id": "13098295887",
       "name": "Bajada de slop y basura",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-16T16:48:00Z",
+      "updated_at": "2026-10-16T20:36:49Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1895,12 +1895,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "10000"
        },
        {
         "id": "board_relation_mm7am925",
@@ -1913,7 +1913,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 16:48:00 UTC"
+        "text": "2026-10-16 20:36:49 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -1953,7 +1953,7 @@
       "id": "13127441793",
       "name": "Limpieza de Tanques de Lastre",
       "created_at": "2026-09-24T16:20:09Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-16T20:36:50Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1987,12 +1987,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "14682.1"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2005,7 +2005,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-16 20:36:50 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2229,7 +2229,7 @@
       "id": "13127948545",
       "name": "Entrada y Salida de muelle/Carga de Materiales",
       "created_at": "2026-09-24T17:01:58Z",
-      "updated_at": "2026-10-16T16:48:30Z",
+      "updated_at": "2026-10-16T20:36:49Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2263,12 +2263,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "10500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2281,7 +2281,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 16:48:30 UTC"
+        "text": "2026-10-16 20:36:49 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2321,7 +2321,7 @@
       "id": "13238699549",
       "name": "Caja menuda para capitán",
       "created_at": "2026-10-08T14:46:04Z",
-      "updated_at": "2026-10-16T16:48:39Z",
+      "updated_at": "2026-10-16T20:36:49Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2355,12 +2355,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "9000"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2373,7 +2373,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 16:48:39 UTC"
+        "text": "2026-10-16 20:36:49 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2413,7 +2413,7 @@
       "id": "13098338467",
       "name": "Materiales cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-16T16:50:56Z",
+      "updated_at": "2026-10-16T20:37:31Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2447,12 +2447,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "3500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2465,7 +2465,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 16:50:56 UTC"
+        "text": "2026-10-16 20:37:31 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2505,7 +2505,7 @@
       "id": "13098367009",
       "name": "Reparaciones en cubierta (aceros y soldadura)",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-16T16:51:42Z",
+      "updated_at": "2026-10-16T20:37:32Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2539,12 +2539,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "3500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2557,7 +2557,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 16:51:42 UTC"
+        "text": "2026-10-16 20:37:32 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2597,7 +2597,7 @@
       "id": "13098306630",
       "name": "Pintura de la cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T14:11:45Z",
+      "updated_at": "2026-10-16T20:37:31Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2631,12 +2631,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "15000"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2649,7 +2649,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:45 UTC"
+        "text": "2026-10-16 20:37:31 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2781,7 +2781,7 @@
       "id": "13098327946",
       "name": "Mantenimiento a acomodaciones",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-14T14:11:45Z",
+      "updated_at": "2026-10-16T20:39:42Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2815,12 +2815,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "10165"
        },
        {
         "id": "board_relation_mm7am925",
@@ -2833,7 +2833,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:45 UTC"
+        "text": "2026-10-16 20:39:42 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2873,7 +2873,7 @@
       "id": "13098334516",
       "name": "Materiales seguridad",
       "created_at": "2026-09-21T19:58:42Z",
-      "updated_at": "2026-10-14T19:39:56Z",
+      "updated_at": "2026-10-16T20:00:00Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2907,7 +2907,7 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": null
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -2925,7 +2925,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:39:56 UTC"
+        "text": "2026-10-16 20:00:00 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2945,7 +2945,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -2965,7 +2965,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:50Z",
+      "updated_at": "2026-10-16T20:41:39Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3004,7 +3004,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "11000"
        },
        {
         "id": "board_relation_mm7am925",
@@ -3017,7 +3017,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:50 UTC"
+        "text": "2026-10-16 20:41:39 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3057,7 +3057,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:51Z",
+      "updated_at": "2026-10-16T20:41:38Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3096,7 +3096,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "2500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -3109,7 +3109,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:51 UTC"
+        "text": "2026-10-16 20:41:38 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3149,7 +3149,7 @@
       "id": "13212044850",
       "name": "Bote Salvavidas – Sistema Davit y Hook",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:53Z",
+      "updated_at": "2026-10-16T20:40:24Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3173,17 +3173,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "5000"
+        "text": ""
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "5000"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3201,7 +3201,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:53 UTC"
+        "text": "2026-10-16 20:40:24 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3241,7 +3241,7 @@
       "id": "13212040785",
       "name": "Compás Magnético – Esfera Kelvin",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:55Z",
+      "updated_at": "2026-10-16T20:40:47Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3265,17 +3265,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "2500"
+        "text": ""
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "2500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3293,7 +3293,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:55 UTC"
+        "text": "2026-10-16 20:40:47 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3333,7 +3333,7 @@
       "id": "13212064416",
       "name": "Speed Log – Doppler",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:56Z",
+      "updated_at": "2026-10-16T20:41:38Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3372,7 +3372,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "6000"
        },
        {
         "id": "board_relation_mm7am925",
@@ -3385,7 +3385,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:56 UTC"
+        "text": "2026-10-16 20:41:38 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3425,7 +3425,7 @@
       "id": "13212053198",
       "name": "Bote Salvavidas – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-14T19:20:57Z",
+      "updated_at": "2026-10-16T20:40:37Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3449,17 +3449,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "4000"
+        "text": ""
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "4000"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -3477,7 +3477,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 19:20:57 UTC"
+        "text": "2026-10-16 20:40:37 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3624,7 +3624,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "43255.23"
        },
        {
         "id": "formula_mm7yshcc",
@@ -3686,7 +3686,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "14875"
        },
        {
         "id": "formula_mm7yshcc",
@@ -3802,13 +3802,13 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "53331.5"
+        "display_value": "53331"
        },
        {
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "53331"
        },
        {
         "id": "formula_mm7yshcc",
@@ -3870,7 +3870,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "10000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -3933,7 +3933,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "3500"
        },
        {
         "id": "formula_mm7yshcc",
@@ -3996,7 +3996,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "10500"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4054,13 +4054,13 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "34500"
+        "display_value": "23000"
        },
        {
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "23000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4128,7 +4128,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "16732.76"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4309,7 +4309,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "9000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4426,7 +4426,7 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "766482"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7dehmt",
@@ -4487,13 +4487,13 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "99950.01"
+        "display_value": "80450.01"
        },
        {
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "74200.01"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4733,7 +4733,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "10165"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4794,7 +4794,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "6000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4918,7 +4918,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "15000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4979,7 +4979,7 @@
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "10000"
        },
        {
         "id": "formula_mm7yshcc",
@@ -6587,6 +6587,190 @@
    "items_page": {
     "cursor": null,
     "items": [
+     {
+      "id": "13256760608",
+      "name": "Codo de entrada al cooler de aceite de máquina principal",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:24:10Z",
+      "group": {
+       "id": "group_mm7dtwce",
+       "title": "1.1 Motores Principales"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:24:10 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256760158",
+      "name": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:24:10Z",
+      "group": {
+       "id": "group_mm7dtwce",
+       "title": "1.1 Motores Principales"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:24:10 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": "55.88"
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
      {
       "id": "13043921163",
       "name": "Motor bomba de aceite máquina principal",
@@ -8336,19 +8520,19 @@
       ]
      },
      {
-      "id": "13256760608",
-      "name": "Codo de entrada al cooler de aceite de máquina principal",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:08Z",
+      "id": "13043922222",
+      "name": "Mantenimiento preventivo del generador de emergencia",
+      "created_at": "2026-09-14T19:46:30Z",
+      "updated_at": "2026-10-16T20:24:10Z",
       "group": {
-       "id": "group_mm7dtwce",
-       "title": "1.1 Motores Principales"
+       "id": "group_mm7d5fgv",
+       "title": "1.2 Generadores"
       },
       "column_values": [
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Pre-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -8358,27 +8542,27 @@
        {
         "id": "color_mm781mjk",
         "type": "status",
-        "text": "Correctivo"
+        "text": "Preventivo"
        },
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "1500"
+        "text": "4200"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": "4200"
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "4200"
        },
        {
         "id": "board_relation_mm7am925",
@@ -8391,17 +8575,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
+        "text": "2026-10-16 20:24:10 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-10-14"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -8418,98 +8602,6 @@
         "type": "mirror",
         "text": null,
         "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256760158",
-      "name": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:11Z",
-      "group": {
-       "id": "group_mm7dtwce",
-       "title": "1.1 Motores Principales"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:11 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": "55.88"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -9808,98 +9900,6 @@
       ]
      },
      {
-      "id": "13043922222",
-      "name": "Mantenimiento preventivo del generador de emergencia",
-      "created_at": "2026-09-14T19:46:30Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7d5fgv",
-       "title": "1.2 Generadores"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Pre-dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Preventivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "4200"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "4200"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "100%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": "2026-10-14"
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
       "id": "13043945522",
       "name": "Overhaul moto-generador #2",
       "created_at": "2026-09-14T19:46:27Z",
@@ -10431,6 +10431,558 @@
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
         "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256760157",
+      "name": "Línea de descarga de bomba de lastre de estribor",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755192",
+      "name": "Válvula de succión de bomba de lastre de babor",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755203",
+      "name": "Bomba de carga #5 de babor — fuga interna",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "4600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "4600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "4600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256744926",
+      "name": "Línea de succión de bomba de servicios generales",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256760609",
+      "name": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "2500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "2500"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "2500"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256744868",
+      "name": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+      "created_at": "2026-10-10T20:08:13Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7d4ygd",
+       "title": "1.3 Bombas"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3200"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3200"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3200"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -13028,13 +13580,13 @@
       ]
      },
      {
-      "id": "13256760157",
-      "name": "Línea de descarga de bomba de lastre de estribor",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:11Z",
+      "id": "13095569998",
+      "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
+      "created_at": "2026-09-21T16:18:54Z",
+      "updated_at": "2026-10-16T20:26:07Z",
       "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
+       "id": "group_mm7dbaz2",
+       "title": "1.4 Bow Thruster"
       },
       "column_values": [
        {
@@ -13055,22 +13607,22 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "1500"
+        "text": "3400"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": "3400"
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "3400"
        },
        {
         "id": "board_relation_mm7am925",
@@ -13083,467 +13635,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:11 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256755192",
-      "name": "Válvula de succión de bomba de lastre de babor",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:10Z",
-      "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256755203",
-      "name": "Bomba de carga #5 de babor — fuga interna",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:10Z",
-      "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "4600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "4600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256744926",
-      "name": "Línea de succión de bomba de servicios generales",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256760609",
-      "name": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "2500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "2500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256744868",
-      "name": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-      "created_at": "2026-10-10T20:08:13Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7d4ygd",
-       "title": "1.3 Bombas"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3200"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3200"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
+        "text": "2026-10-16 20:26:07 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -13743,98 +13835,6 @@
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
         "text": ""
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13095569998",
-      "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-      "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7dbaz2",
-       "title": "1.4 Bow Thruster"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3400"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3400"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -14595,7 +14595,7 @@
       "id": "13095643937",
       "name": "Bombas hidráulicas de timón — sellos, filtros y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-10-16T16:30:09Z",
+      "updated_at": "2026-10-16T20:26:07Z",
       "group": {
        "id": "group_mm7ddzqq",
        "title": "1.10 Sistema Hidráulico General"
@@ -14629,12 +14629,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "3500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -14647,7 +14647,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
+        "text": "2026-10-16 20:26:07 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -14847,6 +14847,558 @@
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
         "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277138828",
+      "name": "Panel de sistema de alarma 95-98%",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:26:08Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277158049",
+      "name": "Control local de propulsión + Cargador de batería #2",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:26:08Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277104868",
+      "name": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:26:07Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:07 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277169481",
+      "name": "Auto pilot + Sewage (motor y compresor)",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:26:08Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277138491",
+      "name": "Panel contra incendio",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:26:08Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277157364",
+      "name": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+      "created_at": "2026-10-13T14:45:35Z",
+      "updated_at": "2026-10-16T20:26:08Z",
+      "group": {
+       "id": "group_mm7dkn1n",
+       "title": "1.12 Sistema Eléctrico General"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "3600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:26:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -16524,13 +17076,13 @@
       ]
      },
      {
-      "id": "13277138828",
-      "name": "Panel de sistema de alarma 95-98%",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:09Z",
+      "id": "13256760245",
+      "name": "Grúa de medianía — limit switch, controles y mangueras",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:26:11Z",
       "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
+       "id": "group_mm7d4a01",
+       "title": "1.13 Grúas"
       },
       "column_values": [
        {
@@ -16551,12 +17103,12 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "3600"
+        "text": "5100"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "3600"
+        "text": "5100"
        },
        {
         "id": "color_mm6v621m",
@@ -16566,7 +17118,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "5100"
        },
        {
         "id": "board_relation_mm7am925",
@@ -16579,467 +17131,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277158049",
-      "name": "Control local de propulsión + Cargador de batería #2",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277104868",
-      "name": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277169481",
-      "name": "Auto pilot + Sewage (motor y compresor)",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:10Z",
-      "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277138491",
-      "name": "Panel contra incendio",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277157364",
-      "name": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
-      "created_at": "2026-10-13T14:45:35Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7dkn1n",
-       "title": "1.12 Sistema Eléctrico General"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "3600"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
+        "text": "2026-10-16 20:26:11 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -17260,13 +17352,13 @@
       ]
      },
      {
-      "id": "13256760245",
-      "name": "Grúa de medianía — limit switch, controles y mangueras",
+      "id": "13256760246",
+      "name": "Winche de proa estribor — motor hidráulico sin fuerza",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:11Z",
+      "updated_at": "2026-10-16T20:26:27Z",
       "group": {
-       "id": "group_mm7d4a01",
-       "title": "1.13 Grúas"
+       "id": "group_mm7dc52c",
+       "title": "1.14 Winches"
       },
       "column_values": [
        {
@@ -17287,12 +17379,12 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "5100"
+        "text": "6250"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "5100"
+        "text": "6250"
        },
        {
         "id": "color_mm6v621m",
@@ -17302,7 +17394,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "0"
        },
        {
         "id": "board_relation_mm7am925",
@@ -17315,7 +17407,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:11 UTC"
+        "text": "2026-10-16 20:26:27 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -18088,98 +18180,6 @@
       ]
      },
      {
-      "id": "13256760246",
-      "name": "Winche de proa estribor — motor hidráulico sin fuerza",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7dc52c",
-       "title": "1.14 Winches"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "6250"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "6250"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
       "id": "13043921183",
       "name": "Motor bomba de aceite reductora",
       "created_at": "2026-09-14T19:46:27Z",
@@ -18548,6 +18548,98 @@
       ]
      },
      {
+      "id": "13095603720",
+      "name": "Pala y mecha del timón — inspección, sellos y rodamientos",
+      "created_at": "2026-09-21T16:19:01Z",
+      "updated_at": "2026-10-16T20:27:08Z",
+      "group": {
+       "id": "group_mm7df5ez",
+       "title": "1.16 Sistema de Timón"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "5000"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "5000"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "5000"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:27:08 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
       "id": "13043932296",
       "name": "Motor bomba timones #1",
       "created_at": "2026-09-14T19:46:28Z",
@@ -18824,13 +18916,13 @@
       ]
      },
      {
-      "id": "13095603720",
-      "name": "Pala y mecha del timón — inspección, sellos y rodamientos",
-      "created_at": "2026-09-21T16:19:01Z",
-      "updated_at": "2026-10-16T16:30:08Z",
+      "id": "13095628540",
+      "name": "Eje de cola — sellos e inspección",
+      "created_at": "2026-09-21T16:19:02Z",
+      "updated_at": "2026-10-16T20:21:52Z",
       "group": {
-       "id": "group_mm7df5ez",
-       "title": "1.16 Sistema de Timón"
+       "id": "group_mm7d5br9",
+       "title": "1.17 Sistema de Propulsión"
       },
       "column_values": [
        {
@@ -18851,17 +18943,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "5000"
+        "text": "10000"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "5000"
+        "text": "0"
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -18879,7 +18971,99 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
+        "text": "2026-10-16 20:21:52 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755102",
+      "name": "Sello interno del acople del eje de paso variable",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T20:27:18Z",
+      "group": {
+       "id": "group_mm7d5br9",
+       "title": "1.17 Sistema de Propulsión"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "2600"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "2600"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "2600"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:27:18 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19008,13 +19192,13 @@
       ]
      },
      {
-      "id": "13095628540",
-      "name": "Eje de cola — sellos e inspección",
+      "id": "13095603679",
+      "name": "Válvulas de tomas de mar y línea madre de enfriamiento",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-16T16:30:08Z",
+      "updated_at": "2026-10-16T19:54:56Z",
       "group": {
-       "id": "group_mm7d5br9",
-       "title": "1.17 Sistema de Propulsión"
+       "id": "group_mm7dhnbe",
+       "title": "1.18 Sistema de Refrigeración"
       },
       "column_values": [
        {
@@ -19035,17 +19219,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "10000"
+        "text": "1500"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "10000"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19063,7 +19247,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
+        "text": "2026-10-16 19:54:56 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -19100,13 +19284,13 @@
       ]
      },
      {
-      "id": "13256755102",
-      "name": "Sello interno del acople del eje de paso variable",
+      "id": "13256760623",
+      "name": "Válvula de descarga de agua salada de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:09Z",
+      "updated_at": "2026-10-16T19:54:56Z",
       "group": {
-       "id": "group_mm7d5br9",
-       "title": "1.17 Sistema de Propulsión"
+       "id": "group_mm7dhnbe",
+       "title": "1.18 Sistema de Refrigeración"
       },
       "column_values": [
        {
@@ -19127,17 +19311,17 @@
        {
         "id": "numeric_mm6vjdrd",
         "type": "numbers",
-        "text": "2600"
+        "text": "1500"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "2600"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Pendiente"
        },
        {
         "id": "numeric_mm78s0hd",
@@ -19155,7 +19339,283 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
+        "text": "2026-10-16 19:54:56 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755233",
+      "name": "Válvula de descarga de agua salada de los generadores",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T19:54:58Z",
+      "group": {
+       "id": "group_mm7dhnbe",
+       "title": "1.18 Sistema de Refrigeración"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 19:54:58 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755205",
+      "name": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T19:54:57Z",
+      "group": {
+       "id": "group_mm7dhnbe",
+       "title": "1.18 Sistema de Refrigeración"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 19:54:57 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13256755234",
+      "name": "Línea de succión de agua salada de los generadores",
+      "created_at": "2026-10-10T20:08:12Z",
+      "updated_at": "2026-10-16T19:54:58Z",
+      "group": {
+       "id": "group_mm7dhnbe",
+       "title": "1.18 Sistema de Refrigeración"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": "Correctivo"
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "1500"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 19:54:58 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20388,98 +20848,6 @@
       ]
      },
      {
-      "id": "13095603679",
-      "name": "Válvulas de tomas de mar y línea madre de enfriamiento",
-      "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7dhnbe",
-       "title": "1.18 Sistema de Refrigeración"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
       "id": "13095614176",
       "name": "Sistema de agua salada de enfriamiento — tuberías",
       "created_at": "2026-09-21T16:19:02Z",
@@ -20643,374 +21011,6 @@
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
         "text": ""
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256760623",
-      "name": "Válvula de descarga de agua salada de máquina principal",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:08Z",
-      "group": {
-       "id": "group_mm7dhnbe",
-       "title": "1.18 Sistema de Refrigeración"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:08 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256755233",
-      "name": "Válvula de descarga de agua salada de los generadores",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:11Z",
-      "group": {
-       "id": "group_mm7dhnbe",
-       "title": "1.18 Sistema de Refrigeración"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:11 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256755205",
-      "name": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:10Z",
-      "group": {
-       "id": "group_mm7dhnbe",
-       "title": "1.18 Sistema de Refrigeración"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13256755234",
-      "name": "Línea de succión de agua salada de los generadores",
-      "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:11Z",
-      "group": {
-       "id": "group_mm7dhnbe",
-       "title": "1.18 Sistema de Refrigeración"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": "Correctivo"
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "1500"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:11 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -21219,7 +21219,7 @@
       "id": "13256755103",
       "name": "Línea de overflow hacia el sludge tank",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:09Z",
+      "updated_at": "2026-10-16T20:27:53Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -21253,12 +21253,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -21271,7 +21271,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
+        "text": "2026-10-16 20:27:53 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -21311,7 +21311,7 @@
       "id": "13256755204",
       "name": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:10Z",
+      "updated_at": "2026-10-16T20:27:54Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -21345,12 +21345,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "0.01"
        },
        {
         "id": "board_relation_mm7am925",
@@ -21363,7 +21363,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
+        "text": "2026-10-16 20:27:54 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -21403,7 +21403,7 @@
       "id": "13256755193",
       "name": "Reparación de fuga en el tanque de sewage",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T16:30:10Z",
+      "updated_at": "2026-10-16T20:27:53Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -21437,12 +21437,12 @@
        {
         "id": "color_mm6v621m",
         "type": "status",
-        "text": "Revisado"
+        "text": "Aprobado Dirección"
        },
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -21455,12 +21455,104 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 16:30:10 UTC"
+        "text": "2026-10-16 20:27:53 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
         "text": "25%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13277158044",
+      "name": "Imprevisto",
+      "created_at": "2026-10-13T14:45:34Z",
+      "updated_at": "2026-10-16T20:28:03Z",
+      "group": {
+       "id": "group_mm7dh63q",
+       "title": "Generales (fuera de jerarquía Máquina)"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Post-dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "10000"
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": "8000"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Aprobado Dirección"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": "8000"
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-16 20:28:03 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
        },
        {
         "id": "date_mm7yv15j",
@@ -21839,98 +21931,6 @@
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
         "text": ""
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13277158044",
-      "name": "Imprevisto",
-      "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-16T16:30:09Z",
-      "group": {
-       "id": "group_mm7dh63q",
-       "title": "Generales (fuera de jerarquía Máquina)"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "Post-dique"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": "10000"
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": "10000"
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Revisado"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-16 16:30:09 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
