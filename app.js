@@ -287,11 +287,11 @@
     return [
       kpi("coin", "Presupuesto preliminar", moneyK(C.revisado), porAprobar ? chipPrel : C.revisado ? "revisado por Gerencia y aprobado" : "revisado por Gerencia",
         { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b>${rowT("Solicitado", moneyK(C.solicitado))}${rowT("Revisado", moneyK(C.revisado))}${dif.length ? rowT(`Diferencia (${dif.length})`, moneyK(sum(dif, (t) => (t.revisado || 0) - (t.solicitado || 0)))) : ""}${eTip}` }),
-      kpi("check", "Presupuesto aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${E ? esc(E.txt) + " · " : ""}${moneyK(porAprobar)} del preliminar sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
+      kpi("check", "Presupuesto aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${moneyK(porAprobar)} sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
         { tip: `<b>Presupuesto aprobado</b>${rowT("Aprobado", moneyK(C.aprobado))}${rowT("Sin aprobar", moneyK(porAprobar))}${eTip}` }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra"),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), extra.pos ? extra.pos : C.po ? vsAprob(C.po) : "sin órdenes de compra", extra.posTip ? { tip: extra.posTip } : {}),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), extra.incurrido ? extra.incurrido.sub : C.po ? `${((C.incurrido / C.po) * 100).toFixed(0)}% de las PO` : C.incurrido ? vsAprob(C.incurrido) : "sin costo incurrido",
         extra.incurrido ? { tip: extra.incurrido.tip } : {}),
       ...(extra.extraKpis || []),
@@ -374,17 +374,17 @@
     };
     const cum = (x) => `<td><div class="pc-cum"><span class="sbar"><i style="width:${x.pct || 0}%"></i></span><b>${x.pct == null ? "—" : pct(x.pct, 0)}</b><span class="sem-chip">${esc(x.nivel || "—")}</span></div></td>`;
     const fila = (e) => {
-      const k = reunAct(e, P), area = M.areas.find((a) => a.id === e.area);
+      const area = M.areas.find((a) => a.id === e.area);
       return `<tr class="${semCls(e.nivel)}"><td class="pc-eq"><b>${area ? `<a href="#${area.id}">${esc(e.nombre)}</a>` : esc(e.nombre)}</b>${e.sinCargar ? `<small class="t-alert">${plural(e.sinCargar, "casilla sin cargar", "casillas sin cargar")}</small>` : ""}</td>
-        ${cum(e)}<td class="n">${k.asis} de ${k.reun}</td><td class="n">${k.pa} de ${k.pam}</td><td class="n">${e.puntos} / ${e.maximo}</td>${semanas.map((s) => celda(e, s)).join("")}</tr>`;
+        ${cum(e)}<td class="n">${e.puntos} / ${e.maximo}</td>${semanas.map((s) => celda(e, s)).join("")}</tr>`;
     };
     const T = P.total, u = P.umbrales || { alto: 75, medio: 50 };
     return card("Participación del equipo", `<div class="scroll"><table class="tbl part">
-      <thead><tr><th>Equipo</th><th>Cumplimiento</th><th class="n">Reuniones</th><th class="n">Actualización</th><th class="n">Puntos</th>${semanas.map((s) => `<th class="pc-th">${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</th>`).join("")}</tr></thead>
+      <thead><tr><th>Equipo</th><th>Cumplimiento</th><th class="n">Puntos</th>${semanas.map((s) => `<th class="pc-th">${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</th>`).join("")}</tr></thead>
       <tbody>${P.equipos.map(fila).join("")}</tbody>
-      <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}<td></td><td></td><td class="n"><b>${T.puntos} / ${T.maximo}</b></td>${semanas.map(() => "<td></td>").join("")}</tr></tfoot>
+      <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}<td class="n"><b>${T.puntos} / ${T.maximo}</b></td>${semanas.map(() => "<td></td>").join("")}</tr></tfoot>
     </table></div>
-    <div class="pc-ley">Por semana: <b class="pc-ok">✓</b> asistió · <b class="pc-no">✗</b> no asistió · actualización <b class="pc-a2">2</b> directa · <b class="pc-a1">1</b> indirecta · <b class="pc-a0">0</b> no actualizó · <b class="pc-sc">s/c</b> sin cargar, cuenta 0. Una semana cuenta para todos en cuanto algún equipo la tiene cargada: el máximo es igual para todos.</div>`,
+    <div class="pc-ley">Reunión <b class="pc-ok">✓</b> <b class="pc-no">✗</b> · actualización <b class="pc-a2">2</b> directa, <b class="pc-a1">1</b> indirecta, <b class="pc-a0">0</b> no · <b class="pc-sc">s/c</b> sin cargar (cuenta 0)</div>`,
       { cls: "wide", right: `${P.equipos.length} equipos · alto ≥ ${u.alto} % · medio ≥ ${u.medio} % · bajo < ${u.medio} %` });
   }
 
@@ -400,14 +400,12 @@
   function areaCards(M) {
     return `<div class="areas">${M.areas.map((a) => {
       const C = costos(a.act), av = avance(a.trabajos);
-      const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado), sinCC = a.act.filter((t) => !t.cc.length).length;
-      const est = {}; // estados de los trabajos planificados (con fase)
-      a.act.filter(conFase).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
+      const sinCC = a.act.filter((t) => !t.cc.length).length;
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
         <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
-        <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
+        ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;
   }
@@ -430,8 +428,9 @@
       sub: C.incurrido ? [C.aprobado ? `${((C.incurrido / C.aprobado) * 100).toFixed(0)}% del aprobado` : "", incSin ? `<span class="t-warn">${moneyK(incSin)} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") || "registrado en contabilidad" : "sin costo incurrido",
       tip: `<b>Incurrido</b>${rowT("Enlazado", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", `<span class="t-warn">${moneyK(incSin)}</span>`) : ""}`
     };
-    const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
-    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+    const posTip = P.length ? `<b>Órdenes de compra</b>${rowT("Registradas", P.length)}${sinMonto ? rowT("Sin monto", sinMonto) : ""}${sinCC ? rowT("Sin centro de costo ni trabajo", sinCC) : ""}` : "";
+    const posTxt = P.length ? (sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : plural(P.length, "orden de compra", "órdenes de compra")) : "";
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, posTip, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       ${fasesCard(M)}
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
@@ -458,15 +457,16 @@
       const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
       const porArea = M.areas.map((a) => { const x = avance(a.trabajos.filter(enFase(f.id))); return rowT(esc(a.nombre), x.conDur ? pct(x.pct, 0) : "—"); }).join("");
       return `<tr class="${actual ? "cur" : ""}"><td><b><i class="dot k-${f.id}"></i>${f.nombre}</b>${actual ? "<small>etapa actual</small>" : ""}</td>
-        <td class="nw">${cr ? dateRange(cr.real) : "—"}${cr ? (cr.diferencia ? `<small class="${cr.diferencia > 0 ? "t-alert" : ""}">${cr.diferencia > 0 ? "+" : ""}${cr.diferencia} d vs base</small>` : "<small>en plazo</small>") : ""}</td>
+        <td class="nw">${cr ? dateRange(cr.real) : "—"}${cr && cr.diferencia > 0 ? `<small class="t-alert">+${cr.diferencia} d vs base</small>` : ""}</td>
         <td class="n">${av.conDur}${av.sinDur ? `<small class="t-warn">+${av.sinDur} sin duración</small>` : ""}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td>
         <td class="nw" ${tipAttr(`<b>Avance · ${f.nombre}</b>${porArea}`)}>${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td>
-        <td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td><td class="n">${mcell(C.aprobado)}</td></tr>`;
+        <td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td>${conAprob ? `<td class="n">${mcell(C.aprobado)}</td>` : ""}</tr>`;
     };
     const av = avance(all.filter(conFase)), C = costos(all.filter((t) => !t.cancelado && conFase(t)));
-    return card("Avance por fase", `<div class="scroll"><table class="tbl fases"><thead><tr><th>Fase</th><th>Fechas (real)</th><th class="n">Planificados</th><th class="n">En ejecución</th><th class="n">Finalizados</th><th>Avance</th><th class="n">Preliminar</th><th class="n">Aprobado</th></tr></thead>
+    const conAprob = C.aprobado > 0; // la columna Aprobado aparece cuando Dirección apruebe algo
+    return card("Avance por fase", `<div class="scroll"><table class="tbl fases"><thead><tr><th>Fase</th><th>Fechas (real)</th><th class="n">Planificados</th><th class="n">En ejecución</th><th class="n">Finalizados</th><th>Avance</th><th class="n">Preliminar</th>${conAprob ? '<th class="n">Aprobado</th>' : ""}</tr></thead>
       <tbody>${FASES.map(fila).join("")}</tbody>
-      <tfoot><tr><td><b>Total con fase</b></td><td></td><td class="n">${av.conDur}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td><td class="nw">${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td><td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td><td class="n">${mcell(C.aprobado)}</td></tr></tfoot></table></div>`,
+      <tfoot><tr><td><b>Total con fase</b></td><td></td><td class="n">${av.conDur}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td><td class="nw">${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td><td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td>${conAprob ? `<td class="n">${mcell(C.aprobado)}</td>` : ""}</tr></tfoot></table></div>`,
       { cls: "wide", right: "trabajos de P1, P2 y P3 según su columna Fase" });
   }
   function gruposHTML(M, a, q) {
