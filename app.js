@@ -81,7 +81,10 @@
     const inn = fases.filter((o) => o.real[0] <= TODAY && TODAY <= o.real[1]).sort((a, b) => (a.real[0] < b.real[0] ? 1 : -1));
     const cur = inn[0] || fases.filter((o) => o.real[0] > TODAY).sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1))[0] || fases[fases.length - 1] || null;
     const lastHito = hitos.filter((h) => h.done).pop() || null;
-    const nextHito = hitos.find((h) => !h.done) || null;
+    // Próximo hito: el primero pendiente de la operación del buque (Pre-dique, Dique, Post-dique), p. ej. la entrada al muelle.
+    // Los hitos de Planificación (como la aprobación del presupuesto) no se muestran como próximo: su atraso se ve en el cronograma.
+    const operativo = (h) => !/^plan/i.test(h.grupo || "");
+    const nextHito = hitos.find((h) => !h.done && operativo(h)) || hitos.find((h) => !h.done) || null;
     // Atraso del proyecto = Diferencia del último hito (fin del proyecto, p. ej. On Hire)
     const finHito = hitos[hitos.length - 1] || null;
     const abiertos = crono.filter((r) => !r.done && r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia);
