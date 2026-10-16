@@ -573,3 +573,4 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 860px) { .kpis.k9, .kpis.k10 { grid-template-columns: 1fr 1fr; } .kpis.k9 > :last-child { grid-column: span 2; } }
 @media (max-width: 340px) { .kpis.k9, .kpis.k10 { grid-template-columns: 1fr; } .kpis.k9 > :last-child { grid-column: auto; } }
 .chip.et-descartado { background: var(--surface-2); color: var(--ink-3); text-decoration: line-through; }
+.cc-line.otros .nm { color: var(--ink-3); font-style: italic; }

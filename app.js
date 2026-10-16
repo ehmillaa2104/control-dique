@@ -353,8 +353,12 @@
       const G = costos(g.items);
       const rows = g.items.map((c) => {
         const nota = c.items.filter((t) => t.enRevision && notaDe(t)).map((t) => notaDe(t))[0];
-        return `<details class="cc"><summary><span class="nm">${esc(c.nombre)}<small>${plural(c.items.length, "trabajo", "trabajos")}</small>${nota ? `<small class="nota-rev">${esc(nota)}</small>` : ""}${etapasBar(c, "sm")}</span>${cols(c)}<span class="st">${estadoCC(c)}</span></summary>
-          <div class="cc-lines">${c.items.length ? c.items.map(linea).join("") : '<div class="empty sm">Sin trabajos conectados en P1, P2 ni P3.</div>'}</div></details>`;
+        // Solo los trabajos planificados (con fase); los "No Aplica" se resumen en una línea si tienen montos
+        const plan = c.items.filter(conFase), otros = c.items.filter((t) => !conFase(t)), O = costos(otros);
+        const conMonto = O.preliminar || O.enRevision || O.aprobado || O.proyectado || O.po || O.incurrido;
+        const resto = otros.length && conMonto ? `<div class="cc-line otros"><span class="nm">${plural(otros.length, "trabajo sin fase", "trabajos sin fase")} (No Aplica)</span>${cols(O)}<span class="st"></span></div>` : "";
+        return `<details class="cc"><summary><span class="nm">${esc(c.nombre)}<small>${plural(plan.length, "trabajo planificado", "trabajos planificados")}</small>${nota ? `<small class="nota-rev">${esc(nota)}</small>` : ""}${etapasBar(c, "sm")}</span>${cols(c)}<span class="st">${estadoCC(c)}</span></summary>
+          <div class="cc-lines">${plan.length || resto ? plan.map(linea).join("") + resto : '<div class="empty sm">Sin trabajos planificados en P1, P2 ni P3.</div>'}</div></details>`;
       }).join("");
       return `<details class="cc-g"><summary><span class="nm">Grupo ${esc(g.nombre)}<small>${plural(g.items.length, "centro", "centros")} de costo</small></span>${cols(G, "b")}<span class="st"></span></summary>${rows}</details>`;
     }).join("");
