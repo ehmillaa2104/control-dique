@@ -574,3 +574,19 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 340px) { .kpis.k9, .kpis.k10 { grid-template-columns: 1fr; } .kpis.k9 > :last-child { grid-column: auto; } }
 .chip.et-descartado { background: var(--surface-2); color: var(--ink-3); text-decoration: line-through; }
 .cc-line.otros .nm { color: var(--ink-3); font-style: italic; }
+
+/* Avance por fase: fila de montos (preliminar, en revisión, aprobado, proyectado, PO, incurrido) */
+.fs-row { grid-template-columns: minmax(170px, 1.1fr) minmax(0, 1.5fr) minmax(150px, 1fr); row-gap: 8px; }
+.fs-m { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; padding-top: 8px; border-top: 1px dashed var(--border); }
+.fs-m small { display: block; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.fs-m b { display: block; font-size: 14px; white-space: nowrap; }
+.fs-m .stk.sm { max-width: 120px; }
+.fs-tbl th:nth-child(4), .fs-tbl th:nth-child(5), .fs-tbl th:nth-child(6) { width: 96px; }
+.fs-tbl th:nth-child(7) { width: 100px; }
+.fs-tbl { min-width: 760px; }
+@media (max-width: 900px) {
+  .fs-row { grid-template-columns: minmax(0, 1fr) minmax(110px, 160px); }
+  .fs-m { grid-template-columns: repeat(3, minmax(0, 1fr)); order: 4; }
+}
+@media (max-width: 760px) { .fs-tbl { min-width: 0; } }
+@media (max-width: 760px) { .fs-nm b .chip { display: none; } }
