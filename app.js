@@ -324,7 +324,7 @@
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
       kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
       ...(extra.extraKpis || []),
-      kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>${av.sinDur ? `<span class="t-warn">${av.sinDur} sin duración</span>` : ""}` : '<span class="t-warn">sin trabajos planificados</span>',
+      kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>` : '<span class="t-warn">sin trabajos planificados</span>',
         { tip: `${rowT("Por iniciar", av.conDur - av.ejec - av.fin)}<div class="tnote">Ponderado por duración</div>` })
     ].join("");
   }
