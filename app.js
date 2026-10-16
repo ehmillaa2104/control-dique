@@ -56,6 +56,16 @@
   // Modelo: todo sale de monday.js
   // =========================================================
   function build(D) {
+    // 16 oct: en Monday la columna de la línea "$ Solicitado (Equipo)" pasó a llamarse "$ Preliminar" y "$ Revisado"
+    // se vacía cuando Dirección aprueba (solo queda en lo que está en revisión). La fórmula "$ Preliminar" del
+    // tablero CC suma "$ Revisado", así que ya no es el total. Preliminar = "$ Preliminar" de cada línea;
+    // lo que sigue en revisión queda en enRevision.
+    D.areas.forEach((a) => a.trabajos.forEach((t) => {
+      if (!("enRevision" in t)) { t.enRevision = t.revisado; t.revisado = t.solicitado; }
+    }));
+    const prelimLinea = new Map();
+    D.areas.forEach((a) => a.trabajos.forEach((t) => prelimLinea.set(t.id, t.cancelado ? 0 : t.solicitado || 0)));
+    D.centros.forEach((c) => { if (!("enRevision" in c)) { c.enRevision = c.revisado; c.revisado = sum(c.lineas, (id) => prelimLinea.get(id) || 0); } });
     const areas = D.areas.map((a) => Object.assign({}, a, { act: a.trabajos.filter((t) => !t.cancelado) }));
     const byId = new Map();
     areas.forEach((a) => a.trabajos.forEach((t) => byId.set(t.id, Object.assign({ area: a.id, areaNombre: a.nombre }, t))));
@@ -285,10 +295,10 @@
     const E = porAprobar ? extra.direccion : null;
     const eTip = E ? `<div class="tnote warn">${esc(E.txt)}</div>` : "";
     const dif = (extra.trabajos || []).filter((t) => !t.cancelado && Math.abs((t.solicitado || 0) - (t.revisado || 0)) > 0.5);
-    const chipPrel = E ? `<span class="chip warn">${esc(E.txt)}</span>${E.sub ? ` ${esc(E.sub)}` : ""}` : '<span class="chip warn">Pendiente de aprobación</span> revisado por Gerencia';
+    const chipPrel = E ? `<span class="chip warn">${esc(E.txt)}</span>${E.sub ? ` ${esc(E.sub)}` : ""}` : `<span class="chip warn">${moneyK(porAprobar)} sin aprobar</span>`;
     return [
-      kpi("coin", "Presupuesto preliminar", moneyK(C.revisado), porAprobar ? chipPrel : C.revisado ? "revisado por Gerencia y aprobado" : "revisado por Gerencia",
-        { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b>${rowT("Solicitado", moneyK(C.solicitado))}${rowT("Revisado", moneyK(C.revisado))}${dif.length ? rowT(`Diferencia (${dif.length})`, moneyK(sum(dif, (t) => (t.revisado || 0) - (t.solicitado || 0)))) : ""}${eTip}` }),
+      kpi("coin", "Presupuesto preliminar", moneyK(C.revisado), porAprobar ? chipPrel : C.revisado ? "aprobado por Dirección" : "sin monto preliminar",
+        { warn: porAprobar > 0, tip: `<b>Presupuesto preliminar</b><div class="tnote">Suma de la columna "$ Preliminar" de los trabajos de P1, P2 y P3.</div>${rowT("Preliminar", moneyK(C.revisado))}${rowT("Aprobado Dirección", moneyK(C.aprobado))}${rowT("En revisión ($ Revisado)", moneyK(sum((extra.trabajos || []).filter((t) => !t.cancelado), (t) => t.enRevision)))}${rowT("Sin aprobar", moneyK(Math.max(0, C.revisado - C.aprobado)))}${eTip}` }),
       kpi("check", "Presupuesto aprobado", moneyK(C.aprobado), porAprobar ? `<span class="t-warn">${moneyK(porAprobar)} sin aprobar</span>` : pend ? `<span class="t-warn">${moneyK(pend)} solicitado sin aprobar</span>` : "aprobado por Dirección",
         { tip: `<b>Presupuesto aprobado</b>${rowT("Aprobado", moneyK(C.aprobado))}${rowT("Sin aprobar", moneyK(porAprobar))}${eTip}` }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)}% vs aprobado` : "costo final esperado",
@@ -472,13 +482,13 @@
     const ccName = (ids) => ids.map((id) => (M.centros.find((c) => c.id === id) || {}).nombre || "?").join(", ");
     const row = (t) => `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${t.cc.length ? esc(ccName(t.cc)) : '<span class="t-alert">sin centro de costo</span>'}</small></td>
       <td>${esc(t.fase || "—")}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td><td class="n">${t.duracion || '<span class="muted">—</span>'}</td>
-      <td>${chipAprob(t.aprobacion)}</td><td class="n">${mcell(t.solicitado)}</td><td class="n ${t.revisado > (t.aprobado || 0) ? "t-warn" : ""}">${mcell(t.revisado)}</td><td class="n">${mcell(t.aprobado)}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
+      <td>${chipAprob(t.aprobacion)}</td><td class="n ${t.revisado > (t.aprobado || 0) ? "t-warn" : ""}">${mcell(t.revisado)}</td><td class="n">${mcell(t.enRevision)}</td><td class="n">${mcell(t.aprobado)}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
       <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`;
     if (!grupos.length) return empty(ql ? "Ningún trabajo coincide con la búsqueda." : "No hay trabajos planificados en esta fase.");
     return grupos.map((g) => {
       const G = costos(g.items.filter((t) => !t.cancelado)), gav = avance(g.items);
       return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · preliminar ${moneyK(G.revisado)} · aprobado ${moneyK(G.aprobado)}</span></summary>
-        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Aprobación</th><th class="n">Solicitado</th><th class="n">Preliminar</th><th class="n">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
+        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Aprobación</th><th class="n">Preliminar</th><th class="n">En revisión</th><th class="n">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
         <tbody>${g.items.map(row).join("")}</tbody></table></div></details>`;
     }).join("");
   }
