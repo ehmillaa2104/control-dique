@@ -11,6 +11,6 @@ window.DIQUE_NOTAS = {
   // Notas sobre trabajos en revisión, por nombre del trabajo en Monday. Se muestran en "En revisión",
   // en el centro de costo y junto al trabajo. Se borran cuando el monto deja de estar en revisión.
   "revision": {
-    "Astillero": "en análisis de trabajos"
+    "Astillero": "en revisión de propuesta"
   }
 };
