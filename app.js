@@ -344,48 +344,27 @@
   // =========================================================
   const semCls = (n) => (n === "Alto" ? "sem-alto" : n === "Medio" ? "sem-medio" : n === "Bajo" ? "sem-bajo" : "");
   const partDe = (M, areaId) => (M.part ? M.part.equipos.find((e) => e.area === areaId) || null : null);
-  // Cuentan las columnas que algún equipo tiene cargadas; al que le falta se le cuenta 0 (máximo igual para todos)
-  const reunAct = (e, P) => {
-    const c = (s) => P.semanas.find((x) => x.semana === s.semana) || {};
-    const r = e.semanas.filter((s) => c(s).reunion), a = e.semanas.filter((s) => c(s).act);
-    return { asis: r.filter((s) => s.pr === 1).length, reun: r.length, pa: sum(a, (s) => s.pa), pam: a.length * 2 };
-  };
   function partKpi(M, e, titulo) {
     const P = M.part;
     if (!P) return "";
     const x = e || P.total;
     if (x.pct == null) return kpi("users", titulo, "—", "sin semanas cargadas");
-    const det = e ? (() => { const k = reunAct(e, P); return `${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts`; })() : `${x.puntos} de ${x.maximo} puntos · ${P.equipos.length} equipos`;
-    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}<div class="tnote">Reunión 1 pt · actualización hasta 2 pts</div>`)}>
+    const det = e ? "" : plural(P.equipos.length, "equipo", "equipos");
+    return `<div class="card kpi sem ${semCls(x.nivel)}">
       ${icon("users")}<div style="min-width:0"><div class="lbl">${esc(titulo)}</div><div class="val">${pct(x.pct, 0)} <span class="sem-chip">${esc(x.nivel)}</span></div><div class="sub">${det}</div></div></div>`;
   }
   // Tabla de participación: todos los equipos del tablero (también Seguridad y Contabilidad, que no tienen tablero de área)
   function partTabla(M) {
     const P = M.part;
     if (!P) return "";
-    const semanas = P.semanas.filter((s) => s.conDatos);
-    const sNom = (s) => (s.semana === "S1" ? "Kick Off" : s.semana);
-    const sinCargar = '<span class="t-alert">sin cargar (cuenta 0)</span>';
-    const celda = (e, s) => {
-      const d = e.semanas.find((x) => x.semana === s.semana) || {};
-      const r = !s.reunion ? "" : d.faltaR ? '<i class="pc-sc">s/c</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
-      const a = !s.act ? "" : d.faltaA ? '<i class="pc-sc">s/c</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
-      return `<td class="pc-td"><span class="pc-cell" ${tipAttr(`<b>${esc(e.nombre)} · ${esc(sNom(s))}${s.fecha ? " (" + esc(s.fecha) + ")" : ""}</b>${s.reunion ? rowT("Reunión", d.faltaR ? sinCargar : esc(d.reunion)) : ""}${s.act ? rowT("Actualización", d.faltaA ? sinCargar : esc(d.act)) : ""}`)}>${r}${a}</span></td>`;
-    };
     const cum = (x) => `<td><div class="pc-cum"><span class="sbar"><i style="width:${x.pct || 0}%"></i></span><b>${x.pct == null ? "—" : pct(x.pct, 0)}</b><span class="sem-chip">${esc(x.nivel || "—")}</span></div></td>`;
     const fila = (e) => {
       const area = M.areas.find((a) => a.id === e.area);
-      return `<tr class="${semCls(e.nivel)}"><td class="pc-eq"><b>${area ? `<a href="#${area.id}">${esc(e.nombre)}</a>` : esc(e.nombre)}</b>${e.sinCargar ? `<small class="t-alert">${plural(e.sinCargar, "casilla sin cargar", "casillas sin cargar")}</small>` : ""}</td>
-        ${cum(e)}<td class="n">${e.puntos} / ${e.maximo}</td>${semanas.map((s) => celda(e, s)).join("")}</tr>`;
+      return `<tr class="${semCls(e.nivel)}"><td><b>${area ? `<a href="#${area.id}">${esc(e.nombre)}</a>` : esc(e.nombre)}</b></td>${cum(e)}</tr>`;
     };
-    const T = P.total, u = P.umbrales || { alto: 75, medio: 50 };
-    return card("Participación del equipo", `<div class="scroll"><table class="tbl part">
-      <thead><tr><th>Equipo</th><th>Cumplimiento</th><th class="n">Puntos</th>${semanas.map((s) => `<th class="pc-th">${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</th>`).join("")}</tr></thead>
-      <tbody>${P.equipos.map(fila).join("")}</tbody>
-      <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}<td class="n"><b>${T.puntos} / ${T.maximo}</b></td>${semanas.map(() => "<td></td>").join("")}</tr></tfoot>
-    </table></div>
-    <div class="pc-ley">Reunión <b class="pc-ok">✓</b> <b class="pc-no">✗</b> · actualización <b class="pc-a2">2</b> directa, <b class="pc-a1">1</b> indirecta, <b class="pc-a0">0</b> no · <b class="pc-sc">s/c</b> sin cargar (cuenta 0)</div>`,
-      { cls: "wide", right: `${P.equipos.length} equipos · alto ≥ ${u.alto} % · medio ≥ ${u.medio} % · bajo < ${u.medio} %` });
+    const T = P.total;
+    return card("Participación del equipo", `<table class="tbl part"><tbody>${P.equipos.map(fila).join("")}</tbody>
+      <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}</tr></tfoot></table>`);
   }
 
   function cambiosCard(M) {
