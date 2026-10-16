@@ -21,7 +21,7 @@ Dashboard de control del dique seco del **M/V Kelly Trader**. Los datos salen de
 
 ## Datos de Monday (lo más importante)
 
-Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 8 tableros:
+Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Se leen 9 tableros: los 8 de la carpeta y **PROGRAMA DE DIQUES** de la flota (fuera de la carpeta), que se muestra en la pestaña Cronograma:
 
 - Cronograma
 - P1. Ingeniería
@@ -31,6 +31,7 @@ Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Hay 8 tableros:
 - POs Kelly Trader
 - Cambios/Imprevistos
 - Participación del Equipo
+- PROGRAMA DE DIQUES (18431022776: próximos diques de la flota 2026–2029; las Observaciones no se leen)
 
 IDs y columnas en `MAPEO-MONDAY.md`.
 
@@ -38,11 +39,11 @@ IDs y columnas en `MAPEO-MONDAY.md`.
 
 **Para actualizar los datos:**
 
-1. Leer los 8 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
+1. Leer los 9 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
    ```graphql
    query ($ids: [ID!]) { boards(ids: $ids) { id name columns { id title type } items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } } }
    ```
-   con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804","18435454602"]}`.
+   con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804","18435454602","18431022776"]}`.
 2. La respuesta es grande y se guarda en un archivo. Copiarla tal cual a `monday/crudo/kelly.json` y agregarle `"extraido": "AAAA-MM-DD"` al inicio.
 3. Correr `python monday/generar.py --recortar`. Este paso:
    - deja en el crudo solo las columnas usadas, sin nombres de personas, descripciones ni enlaces a archivos (el repositorio es público);

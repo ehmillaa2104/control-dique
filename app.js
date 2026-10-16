@@ -47,13 +47,10 @@
     anchor: '<circle cx="12" cy="5" r="2"/><path d="M12 7v13M5 13a7 7 0 0 0 14 0M8 11h8"/>',
     wrench: '<path d="M14.5 5.5a4 4 0 0 0 4.8 4.8l-9 9a2 2 0 0 1-2.8-2.8l9-9a4 4 0 0 1-2-2z"/>',
     calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
-    search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
-    ext: '<path d="M14 4.5h5.5V10M19.5 4.5L11 13"/><path d="M17.5 14v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H10"/>'
+    search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>'
   };
   const icon = (n, cls = "ic") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ""}</svg>`;
   const AREA_ICON = { ingenieria: "ruler", cubierta: "anchor", tecnico: "wrench" };
-  // Tableros de Monday a los que se puede saltar desde el dashboard
-  const LINKS = { programa: "https://ehmillaa.monday.com/boards/18431022776", cronograma: "https://ehmillaa.monday.com/boards/18431008651" };
 
   // =========================================================
   // Modelo: todo sale de monday.js
@@ -512,6 +509,38 @@
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
 
+  // Programa de diques de la flota: una fila por nave y un rombo por dique (relleno = especial, vacío = intermedio)
+  function programaCard(M) {
+    const P = (M.D.programa || []).filter((d) => d.real || d.mandatorio);
+    if (!P.length) return "";
+    const f = (d) => d.real || d.mandatorio;
+    const fechas = P.flatMap((d) => [d.real, d.mandatorio]).filter(Boolean).concat([TODAY]).sort();
+    const a0 = +fechas[0].slice(0, 4), a1 = +fechas[fechas.length - 1].slice(0, 4);
+    const ini = `${a0}-07-01` > fechas[0] ? `${a0}-01-01` : `${a0}-07-01`, fin = `${a1}-07-01` < fechas[fechas.length - 1] ? `${a1 + 1}-01-01` : `${a1}-07-01`;
+    const tot = daysBetween(ini, fin), x = (s) => (daysBetween(ini, s) / tot) * 100;
+    const anios = []; for (let a = a0 + 1; a <= a1 + 1; a++) if (`${a}-01-01` > ini && `${a}-01-01` < fin) anios.push(a);
+    const mes = (s) => parse(s).toLocaleDateString("es-ES", { month: "short", year: "2-digit" });
+    const naves = [];
+    P.forEach((d) => { let n = naves.find((v) => v.nave === d.nave); if (!n) naves.push((n = { nave: d.nave, diques: [] })); n.diques.push(d); });
+    const esEste = (n) => n.nave.toLowerCase() === String(M.D.proyecto).toLowerCase();
+    const rombo = (d) => {
+      const tip = `<b>${esc(d.nave)}</b>${rowT(d.real ? "Fecha real" : "Mandatorio", fmtDate(f(d)))}${d.real && d.mandatorio && d.real !== d.mandatorio ? rowT("Mandatorio", fmtDate(d.mandatorio)) : ""}${rowT(esc(d.tipo || "—"), esc(d.lugar || "—"))}${d.estimado ? rowT("Estimado", moneyK(d.estimado)) : ""}`;
+      const adel = d.real && d.mandatorio && d.real !== d.mandatorio
+        ? `<i class="pd-gap" style="left:${Math.min(x(d.real), x(d.mandatorio))}%;width:${Math.abs(x(d.mandatorio) - x(d.real))}%"></i><i class="pd-man" style="left:${x(d.mandatorio)}%"></i>` : "";
+      return `${adel}<i class="pd-d ${/interm/i.test(d.tipo) ? "int" : ""}" style="left:${x(f(d))}%" ${tipAttr(tip)}></i><span class="pd-lb" style="left:${Math.max(x(f(d)), d.mandatorio ? x(d.mandatorio) : 0)}%">${mes(f(d))} · ${esc(d.lugar)}</span>`;
+    };
+    const filas = naves.map((n) => `<div class="pd-row ${esEste(n) ? "este" : ""}"><span class="pd-nv"><b>${esc(n.nave)}</b>${esEste(n) ? '<em class="chip">en curso</em>' : ""}</span><span class="pd-tr">${n.diques.map(rombo).join("")}</span></div>`).join("");
+    const eje = `<div class="pd-row pd-ax"><span class="pd-nv"></span><span class="pd-tr">${anios.map((a) => `<i class="pd-y" style="left:${x(a + "-01-01")}%"><b>${a}</b></i>`).join("")}<i class="pd-hoy" style="left:${x(TODAY)}%"><b>Hoy</b></i></span></div>`;
+    const lineas = `<span class="pd-tr pd-grid">${anios.map((a) => `<i style="left:${x(a + "-01-01")}%"></i>`).join("")}<i class="hoy" style="left:${x(TODAY)}%"></i></span>`;
+    const est = sum(P, (d) => d.estimado);
+    const tabla = `<details class="pd-det"><summary>Ver tabla</summary><div class="scroll"><table class="tbl"><thead><tr><th>Nave</th><th>Año</th><th>Mandatorio</th><th>Fecha real</th><th>Lugar</th><th>Tipo</th><th class="n">$ dique anterior</th><th class="n">$ estimado</th></tr></thead><tbody>${P.map((d) =>
+      `<tr><td><b>${esc(d.nave)}</b></td><td>${esc(d.anio)}</td><td class="nw">${d.mandatorio ? fmtDate(d.mandatorio) : "—"}</td><td class="nw">${d.real ? fmtDate(d.real) : '<span class="muted">—</span>'}</td><td>${esc(d.lugar || "—")}</td><td>${esc(d.tipo || "—")}</td><td class="n">${mcell(d.anterior)}</td><td class="n">${mcell(d.estimado)}</td></tr>`).join("")}</tbody>
+      <tfoot><tr><td colspan="7"><b>Total estimado</b></td><td class="n"><b>${moneyK(est)}</b></td></tr></tfoot></table></div></details>`;
+    return card("Programa de diques de la flota", `<div class="pd">${eje}<div class="pd-body">${lineas}${filas}</div>
+      <div class="pd-ley"><span><i class="pd-d"></i>Especial</span><span><i class="pd-d int"></i>Intermedio</span><span><i class="pd-man"></i>Fecha mandatoria (si se adelantó)</span></div></div>${tabla}`,
+      { cls: "wide", right: `${plural(P.length, "dique", "diques")} · ${a0}–${a1} · estimado ${moneyK(est)}` });
+  }
+
   function viewCrono(M) {
     const rows = M.D.cronograma.map((r) => {
       const late = r.diferencia > 0;
@@ -520,10 +549,8 @@
         <td class="n ${late ? "t-alert b" : ""}">${r.diferencia == null ? "—" : (r.diferencia > 0 ? "+" : "") + r.diferencia + " d"}</td>
         <td class="n">${r.duracion == null ? "—" : r.duracion}</td></tr>`;
     }).join("");
-    // Enlaces a Monday (espacio GESTIÓN DE DIQUES; hay que tener sesión iniciada en Monday)
-    const enl = (url, txt, cls = "") => `<a class="btn ${cls}" href="${url}" target="_blank" rel="noopener">${icon("ext", "ic sm")}${txt}</a>`;
-    return `<div class="acciones">${enl(LINKS.programa, "Programa de diques")}${enl(LINKS.cronograma, "Cronograma en Monday", "ghost")}</div>
-      ${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
+    return `${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
+      ${programaCard(M)}
       ${card("Elementos del cronograma", `<div class="scroll"><table class="tbl"><thead><tr><th>Elemento</th><th>Estado</th><th>Fecha real</th><th>Línea base</th><th class="n">Diferencia</th><th class="n">Duración</th></tr></thead><tbody>${rows}</tbody></table></div>`, { cls: "wide" })}`;
   }
 
