@@ -64,7 +64,11 @@
     // Centros ordenados por código (1.1, 1.2 … 2.1.1 …), aunque en Monday estén en otro orden
     const code = (n) => (String(n).match(/^[\d.]+/) || ["999"])[0].split(".").filter(Boolean).map(Number);
     const byCode = (a, b) => { const x = code(a.nombre), y = code(b.nombre); for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (x[i] || 0) - (y[i] || 0); if (d) return d; } return 0; };
-    const centros = D.centros.map((c) => Object.assign({}, c, { items: c.lineas.map((id) => byId.get(id)).filter(Boolean) })).sort(byCode);
+    const centros = D.centros.map((c) => {
+      const items = c.lineas.map((id) => byId.get(id)).filter(Boolean);
+      // Descartado: preliminar de los trabajos descartados (se pidieron pero no se aprobaron; siguen en el preliminar)
+      return Object.assign({}, c, { items, descartado: sum(items.filter((t) => !t.cancelado && t.costo === "descartado"), (t) => t.preliminar) });
+    }).sort(byCode);
 
     // Cronograma: elementos con fecha real; hitos = duración 0
     const crono = D.cronograma.filter((r) => Array.isArray(r.real)).map((r) => Object.assign({}, r, {
@@ -91,20 +95,22 @@
   //   Preliminar  = lo que solicita el equipo ("$ Preliminar")
   //   En revisión = lo que está en revisión por la Dirección de Operaciones ("$ En Revisión")
   //   Aprobado    = lo aprobado hasta la fecha ("$ Aprobado")
-  // Lo que queda del preliminar sin estar en revisión ni aprobado es lo "sin enviar" a revisión.
+  // Los descartados se pidieron pero no se aprobaron: siguen en el preliminar y se muestran aparte (gris).
+  // Lo que queda del preliminar sin estar en revisión, aprobado ni descartado es lo "sin enviar" a revisión.
   const costos = (arr) => ({
     preliminar: sum(arr, (x) => x.preliminar), enRevision: sum(arr, (x) => x.enRevision), aprobado: sum(arr, (x) => x.aprobado),
+    descartado: sum(arr, (x) => ("descartado" in x && !("costo" in x) ? x.descartado : x.costo === "descartado" ? x.preliminar : 0)),
     proyectado: sum(arr, (x) => x.proyectado), po: sum(arr, (x) => x.po), incurrido: sum(arr, (x) => x.incurrido)
   });
-  const sinEnviar = (C) => { const v = C.preliminar - C.enRevision - C.aprobado; return v > 0.5 ? v : 0; };
+  const sinEnviar = (C) => { const v = C.preliminar - C.enRevision - C.aprobado - (C.descartado || 0); return v > 0.5 ? v : 0; };
   const ETAPA = { aprobado: "Aprobado", revision: "En revisión", preliminar: "Preliminar", descartado: "Descartado" };
   const etapaDe = (t) => t.costo || (t.aprobado ? "aprobado" : t.enRevision ? "revision" : t.preliminar ? "preliminar" : "");
-  // Barra apilada: aprobado (verde) · en revisión (ámbar) · preliminar sin enviar (azul)
+  // Barra apilada: aprobado (verde) · en revisión (ámbar) · preliminar sin enviar (azul) · descartado (gris)
   const etapasBar = (C, cls = "") => {
     const tot = C.preliminar || C.enRevision + C.aprobado;
     if (!tot) return "";
     const w = (v) => Math.max(0, Math.min(100, (v / tot) * 100)).toFixed(2);
-    return `<span class="stk ${cls}" ${tipAttr(`${rowT('<i class="sw s-apr"></i>Aprobado', moneyK(C.aprobado))}${rowT('<i class="sw s-rev"></i>En revisión', moneyK(C.enRevision))}${rowT('<i class="sw s-pre"></i>Preliminar sin enviar', moneyK(sinEnviar(C)))}`)}"><i class="s-apr" style="width:${w(C.aprobado)}%"></i><i class="s-rev" style="width:${w(C.enRevision)}%"></i><i class="s-pre" style="width:${w(sinEnviar(C))}%"></i></span>`;
+    return `<span class="stk ${cls}" ${tipAttr(`${rowT('<i class="sw s-apr"></i>Aprobado', moneyK(C.aprobado))}${rowT('<i class="sw s-rev"></i>En revisión', moneyK(C.enRevision))}${sinEnviar(C) ? rowT('<i class="sw s-pre"></i>Sin enviar', moneyK(sinEnviar(C))) : ""}${C.descartado ? rowT('<i class="sw s-des"></i>Descartado', moneyK(C.descartado)) : ""}`)}"><i class="s-apr" style="width:${w(C.aprobado)}%"></i><i class="s-rev" style="width:${w(C.enRevision)}%"></i><i class="s-pre" style="width:${w(sinEnviar(C))}%"></i><i class="s-des" style="width:${w(C.descartado || 0)}%"></i></span>`;
   };
   // Monto con el color de su etapa
   const m3 = (v, et) => (v ? `<span class="t-${et}">${moneyK(v)}</span>` : '<span class="muted">—</span>');
@@ -307,7 +313,7 @@
     const E = C.enRevision ? extra.direccion : null;
     return [
       kpi("coin", "Presupuesto preliminar", moneyK(C.preliminar), `${etapasBar(C)}<span>Solicitado por el equipo</span>`,
-        { cls: "c-pre", tip: `${rowT("Aprobado", moneyK(C.aprobado))}${rowT("En revisión", moneyK(C.enRevision))}${sinEnviar(C) ? rowT("Sin enviar", moneyK(sinEnviar(C))) : ""}` }),
+        { cls: "c-pre", tip: `${rowT("Aprobado", moneyK(C.aprobado))}${rowT("En revisión", moneyK(C.enRevision))}${sinEnviar(C) ? rowT("Sin enviar", moneyK(sinEnviar(C))) : ""}${C.descartado ? rowT("Descartado", moneyK(C.descartado)) : ""}` }),
       kpi("hourglass", "En revisión", moneyK(C.enRevision), `<span>Dir. de Operaciones</span>${notasRevision(ts)}${E ? `<span class="chip warn">${esc(E.txt)}</span>` : ""}`,
         { cls: "c-rev", tip: C.enRevision ? rowT("Trabajos en revisión", n("revision")) : "" }),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",

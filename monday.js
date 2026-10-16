@@ -6723,8 +6723,8 @@ window.DIQUE_MONDAY = {
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
   },
   {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: 1 trabajo(s) descartado(s) con $ Preliminar (US$ 10,000), que sigue sumando en el preliminar del tablero CC: Eje de cola — sellos e inspección."
+   "nivel": "info",
+   "texto": "P1. Ingeniería: 1 trabajo(s) descartado(s), en el preliminar por US$ 10,000 (se pidieron, no se aprobaron): Eje de cola — sellos e inspección."
   },
   {
    "nivel": "info",
@@ -6739,8 +6739,8 @@ window.DIQUE_MONDAY = {
    "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 7,500 (5) · aprobado US$ 80,450 (25) · sin enviar a revisión 0."
   },
   {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: 3 trabajo(s) descartado(s) con $ Preliminar (US$ 11,500), que sigue sumando en el preliminar del tablero CC: Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco."
+   "nivel": "info",
+   "texto": "P2. Cubierta: 3 trabajo(s) descartado(s), en el preliminar por US$ 11,500 (se pidieron, no se aprobaron): Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco."
   },
   {
    "nivel": "info",

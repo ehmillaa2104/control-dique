@@ -590,3 +590,4 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 }
 @media (max-width: 760px) { .fs-tbl { min-width: 0; } }
 @media (max-width: 760px) { .fs-nm b .chip { display: none; } }
+.s-des { background: var(--ink-3); opacity: .55; }

@@ -271,7 +271,8 @@ def revisar_costos(tablero, act):
     """Avisa cuando el Estado Aprobación no coincide con los montos o cuando lo aprobado difiere del preliminar."""
     desc = [t for t in act if t["costo"] == "descartado" and t["preliminar"]]
     if desc:
-        obs.append(("aviso", f'{tablero}: {len(desc)} trabajo(s) descartado(s) con $ Preliminar (US$ {sum(t["preliminar"] for t in desc):,.0f}), que sigue sumando en el preliminar del tablero CC: {", ".join(t["nombre"] for t in desc)}.'))
+        # Se pidieron pero no se aprobaron: se quedan en el preliminar (pedido del usuario, 16 oct)
+        obs.append(("info", f'{tablero}: {len(desc)} trabajo(s) descartado(s), en el preliminar por US$ {sum(t["preliminar"] for t in desc):,.0f} (se pidieron, no se aprobaron): {", ".join(t["nombre"] for t in desc)}.'))
     for t in act:
         e, nom = (t["aprobacion"] or "").lower(), t["nombre"]
         if t["costo"] == "aprobado" and "aprob" not in e:
