@@ -79,7 +79,9 @@
     // Atraso del proyecto = Diferencia del último hito (fin del proyecto, p. ej. On Hire)
     const finHito = hitos[hitos.length - 1] || null;
     const abiertos = crono.filter((r) => !r.done && r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia);
-    const part = D.participacion || null;
+    // Participación del equipo: oculta por ahora a pedido del usuario (16 oct); se sigue leyendo de Monday. Para mostrarla, poner true.
+    const MOSTRAR_PARTICIPACION = false;
+    const part = (MOSTRAR_PARTICIPACION && D.participacion) || null;
     return { D, part, areas, byId, centros, crono, hitos, fases, actividades, cur, lastHito, nextHito, finHito, peorAtraso: abiertos[0] || null };
   }
 
