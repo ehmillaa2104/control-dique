@@ -15,7 +15,7 @@ Dashboard de control del dique seco del **M/V Kelly Trader**. Los datos salen de
 - Un cambio grande de diseño o de contenido va como **revisión nueva**. Para eso:
   1. Se copia la actual a `revN/` y se ajustan sus rutas (`../`).
   2. La nueva queda en la raíz.
-  3. Se agrega el enlace en el pie de página.
+  3. **No se ponen enlaces a las revisiones anteriores en el dashboard** (el usuario pidió quitarlos para no confundir); siguen accesibles por su ruta, p. ej. `rev2/`.
 - **Pruebas** (`pruebas/`, p. ej. el cronograma 3D) van aparte: nunca tocan las revisiones.
 - Al cambiar `app.js` o `styles.css`, subir el `?v=` en `index.html`. Si no, el navegador muestra la versión vieja.
 
