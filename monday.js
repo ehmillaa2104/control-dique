@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-15",
+ "extraido": "2026-10-16",
  "cronograma": [
   {
    "id": "13095528116",
@@ -4294,7 +4294,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098295887",
@@ -4757,7 +4757,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200177"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098328158",
@@ -4781,7 +4781,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098326970",
@@ -4829,7 +4829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201166"
      ],
-     "actualizado": "2026-10-08"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098338352",
@@ -4853,7 +4853,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081207823"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098337112",
@@ -4877,7 +4877,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098334682",
@@ -4901,7 +4901,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081195990"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13098338054",
@@ -4925,7 +4925,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201165"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     },
     {
      "id": "13278839703",
@@ -4949,7 +4949,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177347"
      ],
-     "actualizado": "2026-10-14"
+     "actualizado": "2026-10-15"
     }
    ]
   }
@@ -5712,9 +5712,9 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 17,
-   "maximo": 24,
-   "pct": 70.8,
+   "puntos": 18,
+   "maximo": 30,
+   "pct": 60.0,
    "nivel": "Medio"
   },
   "semanas": [
@@ -5784,62 +5784,79 @@ window.DIQUE_MONDAY = {
     "maximo": 6,
     "pct": 50.0,
     "nivel": "Medio",
+    "sinCargar": 0,
     "semanas": [
      {
       "semana": "S1",
       "reunion": "Asistió",
       "act": null,
       "pr": 1,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S2",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S3",
       "reunion": "No asistió",
       "act": "1 - Actualización indirecta",
       "pr": 0,
-      "pa": 1
+      "pa": 1,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
       "act": "1 - Actualización indirecta",
       "pr": null,
-      "pa": 1
+      "pa": 1,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S5",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S6",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S7",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S8",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      }
     ]
    },
@@ -5851,62 +5868,79 @@ window.DIQUE_MONDAY = {
     "maximo": 6,
     "pct": 100.0,
     "nivel": "Alto",
+    "sinCargar": 0,
     "semanas": [
      {
       "semana": "S1",
       "reunion": "Asistió",
       "act": null,
       "pr": 1,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S2",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S3",
       "reunion": "Asistió",
       "act": "2 - Actualización directa",
       "pr": 1,
-      "pa": 2
+      "pa": 2,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
       "act": "2 - Actualización directa",
       "pr": null,
-      "pa": 2
+      "pa": 2,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S5",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S6",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S7",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S8",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      }
     ]
    },
@@ -5918,62 +5952,79 @@ window.DIQUE_MONDAY = {
     "maximo": 6,
     "pct": 83.3,
     "nivel": "Alto",
+    "sinCargar": 0,
     "semanas": [
      {
       "semana": "S1",
       "reunion": "Asistió",
       "act": null,
       "pr": 1,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S2",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S3",
       "reunion": "No asistió",
       "act": "2 - Actualización directa",
       "pr": 0,
-      "pa": 2
+      "pa": 2,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
       "act": "2 - Actualización directa",
       "pr": null,
-      "pa": 2
+      "pa": 2,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S5",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S6",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S7",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S8",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      }
     ]
    },
@@ -5985,62 +6036,163 @@ window.DIQUE_MONDAY = {
     "maximo": 6,
     "pct": 50.0,
     "nivel": "Medio",
+    "sinCargar": 0,
     "semanas": [
      {
       "semana": "S1",
       "reunion": "Asistió",
       "act": null,
       "pr": 1,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S2",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S3",
       "reunion": "No asistió",
       "act": "1 - Actualización indirecta",
       "pr": 0,
-      "pa": 1
+      "pa": 1,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
       "act": "1 - Actualización indirecta",
       "pr": null,
-      "pa": 1
+      "pa": 1,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S5",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S6",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S7",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      },
      {
       "semana": "S8",
       "reunion": null,
       "act": null,
       "pr": null,
-      "pa": null
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     }
+    ]
+   },
+   {
+    "id": "13305134222",
+    "nombre": "Contabilidad",
+    "area": null,
+    "puntos": 1,
+    "maximo": 6,
+    "pct": 16.7,
+    "nivel": "Bajo",
+    "sinCargar": 3,
+    "semanas": [
+     {
+      "semana": "S1",
+      "reunion": "Asistió",
+      "act": null,
+      "pr": 1,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     },
+     {
+      "semana": "S2",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     },
+     {
+      "semana": "S3",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": true,
+      "faltaA": true
+     },
+     {
+      "semana": "S4",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": true
+     },
+     {
+      "semana": "S5",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     },
+     {
+      "semana": "S6",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     },
+     {
+      "semana": "S7",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
+     },
+     {
+      "semana": "S8",
+      "reunion": null,
+      "act": null,
+      "pr": null,
+      "pa": null,
+      "faltaR": false,
+      "faltaA": false
      }
     ]
    }
@@ -6076,408 +6228,8 @@ window.DIQUE_MONDAY = {
    "avanceDias": 13.25
   }
  },
- "_huella": "6099d3799006",
- "cambiosLectura": [
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "55.88"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Control local de propulsión + Cargador de batería #2",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Auto pilot + Sewage (motor y compresor)",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Sello interno del acople del eje de paso variable",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de overflow hacia el sludge tank",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "9325"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de Tanques de Lastre",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales cubierta",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Pintura de la cubierta",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Mantenimiento a acomodaciones",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Gasto de Clase",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "$ Solicitado",
-   "antes": "42481.5",
-   "ahora": "42481"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Pendiente"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Bono dique",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de ánodos",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Agenciamiento",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado Gerencia",
-   "ahora": "Revisado"
-  }
- ],
+ "_huella": "002c06fdaa4b",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "aviso",
@@ -6545,79 +6297,95 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"16379 · SUBWORKS — Recolección de 85 m³ de slop\": sin monto; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"16379 · SUBWORKS — Recolección de 85 m³ de slop\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"57927 · Ferretería Industrial — Reducción concéntrica de 5″ a 3″\": sin monto; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57927 · Ferretería Industrial — Reducción concéntrica de 5″ a 3″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"02596 · Terminal Marítima — Entrada a muelle logístico 7-oct\": sin monto; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"02596 · Terminal Marítima — Entrada a muelle logístico 7-oct\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "POs Kelly Trader · \"INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct\": sin monto; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
    "texto": "Cambios/Imprevistos Kelly trader: sin cambios ni imprevistos registrados."
   },
   {
+   "nivel": "aviso",
+   "texto": "Participación · S3 · reunión: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Participación · S3 · actualización: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Participación · S4 · actualización: falta cargar Contabilidad; cuenta 0 hasta que se cargue."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Participación · Contabilidad: % en Monday = 100, en el dashboard = 16.7 (Monday no cuenta las 3 casilla(s) sin cargar; el dashboard las cuenta como 0)."
+  },
+  {
    "nivel": "info",
-   "texto": "Participación del equipo: 70.8% (17 de 24 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+   "texto": "Participación del equipo: 60.0% (18 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
   }
  ]
 };

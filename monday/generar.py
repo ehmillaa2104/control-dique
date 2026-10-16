@@ -64,7 +64,7 @@ TABLEROS = {
     "participacion": {"id": "18435454602", "col": {
         "puntos": "formula_mm84qsjp", "cumplimiento": "formula_mm84c488", "nivel": "formula_mm84jbkq"}},
 }
-EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubierta": "cubierta", "técnico": "tecnico", "tecnico": "tecnico"}
+EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubierta": "cubierta", "técnico": "tecnico", "tecnico": "tecnico"}  # Seguridad y Contabilidad no tienen tablero de área
 PTS_ACT = {"2": 2, "1": 1, "0": 0}  # "2 - Actualización directa", "1 - Actualización indirecta", "0 - No actualizó"
 
 
@@ -380,8 +380,8 @@ def comparar_con_anterior(datos):
 
 def participacion(raw):
     """% de cumplimiento por equipo = puntos / máximo, con el MISMO máximo para todos los equipos:
-    una columna (reunión 1 pt, actualización 2 pts) cuenta solo cuando TODOS los equipos tienen el dato cargado.
-    Si a algún equipo le falta, esa columna no cuenta para nadie hasta que se complete (y se avisa a quién le falta)."""
+    una columna (reunión 1 pt, actualización 2 pts) cuenta para TODOS en cuanto algún equipo tiene el dato cargado.
+    Al equipo que no lo tiene cargado se le cuenta 0 en esa columna (y se avisa a quién le falta)."""
     b = next((x for x in raw["boards"] if x["id"] == TABLEROS["participacion"]["id"]), None)
     if not b:
         obs.append(("aviso", "No está el tablero Participación del Equipo en la lectura."))
@@ -395,7 +395,7 @@ def participacion(raw):
     txt = lambda cv, cid: (cv.get(cid, {}).get("text") or "").strip() if cid else ""
     ok_r = lambda t: t in ("Asistió", "No asistió")
     ok_a = lambda t: t[:1] in PTS_ACT and bool(t)
-    # Qué columnas cuentan: las que tienen dato válido en todos los equipos
+    # Qué columnas cuentan: las que tienen dato válido en al menos un equipo
     for s_ in semanas:
         for tipo, ok in (("reunion", ok_r), ("act", ok_a)):
             cid = s_.get(tipo)
@@ -403,16 +403,14 @@ def participacion(raw):
                 s_["cuenta_" + tipo] = False
                 continue
             tienen = [ok(txt(cv, cid)) for cv in cvs]
-            s_["cuenta_" + tipo] = all(tienen) and bool(tienen)
+            s_["cuenta_" + tipo] = any(tienen)
             if any(tienen) and not all(tienen):
                 faltan = [texto(it["name"]) for it, t in zip(items, tienen) if not t]
                 nombre = ("Kick Off" if s_["semana"] == "S1" else s_["semana"]) + (" · reunión" if tipo == "reunion" else " · actualización")
-                obs.append(("aviso", f'Participación · {nombre}: falta cargar {", ".join(faltan)}; esa columna no cuenta para nadie hasta que estén todos.'))
-    parcial = any(s_.get("reunion") and not s_["cuenta_reunion"] and any(ok_r(txt(cv, s_["reunion"])) for cv in cvs) or
-                  s_.get("act") and not s_["cuenta_act"] and any(ok_a(txt(cv, s_["act"])) for cv in cvs) for s_ in semanas)
+                obs.append(("aviso", f'Participación · {nombre}: falta cargar {", ".join(faltan)}; cuenta 0 hasta que se cargue.'))
     equipos = []
     for it, cv in zip(items, cvs):
-        det, pts, mx = [], 0, 0
+        det, pts, mx, falta = [], 0, 0, 0
         for s_ in semanas:
             r, a = txt(cv, s_.get("reunion")), txt(cv, s_.get("act"))
             pr = (1 if r == "Asistió" else 0) if ok_r(r) else None
@@ -421,23 +419,25 @@ def participacion(raw):
                 obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: reunión "{r}" no se reconoce.'))
             if a and pa is None:
                 obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: actualización "{a}" no se reconoce.'))
+            fr, fa = s_["cuenta_reunion"] and pr is None, s_["cuenta_act"] and pa is None  # cuenta, pero este equipo no lo tiene cargado
             if s_["cuenta_reunion"]:
-                pts += pr; mx += 1
+                pts += pr or 0; mx += 1
             if s_["cuenta_act"]:
-                pts += pa; mx += 2
-            det.append({"semana": s_["semana"], "reunion": r or None, "act": a or None, "pr": pr, "pa": pa})
+                pts += pa or 0; mx += 2
+            falta += fr + fa
+            det.append({"semana": s_["semana"], "reunion": r or None, "act": a or None, "pr": pr, "pa": pa, "faltaR": fr, "faltaA": fa})
         pct = round(pts / mx * 100, 1) if mx else None
         nivel = None if pct is None else "Alto" if pct >= 75 else "Medio" if pct >= 50 else "Bajo"
         mon_pct = num(str(valor(cv.get(col["cumplimiento"])) or "").replace("%", ""))
         mon_niv = valor(cv.get(col["nivel"]))
         nombre = texto(it["name"])
-        # La fórmula de Monday cuenta las casillas cargadas de cada equipo; coincide cuando no hay columnas a medio cargar
+        # La fórmula de Monday cuenta solo las casillas cargadas de cada equipo; coincide cuando el equipo no tiene casillas sin cargar
         if pct is not None and (mon_pct is None or abs(mon_pct - pct) > 0.15):
-            obs.append(("aviso" if parcial else "error", f'Participación · {nombre}: % en Monday = {mon_pct}, en el dashboard = {pct}' + (" (Monday cuenta también las columnas que a otros equipos les faltan)." if parcial else ".")))
+            obs.append(("aviso" if falta else "error", f'Participación · {nombre}: % en Monday = {mon_pct}, en el dashboard = {pct}' + (f" (Monday no cuenta las {falta} casilla(s) sin cargar; el dashboard las cuenta como 0)." if falta else ".")))
         elif nivel and mon_niv and mon_niv != nivel:
             obs.append(("error", f'Participación · {nombre}: nivel en Monday = {mon_niv}, recalculado = {nivel}.'))
         equipos.append({"id": it["id"], "nombre": nombre, "area": EQUIPO_AREA.get(nombre.lower()), "puntos": pts, "maximo": mx,
-                        "pct": pct, "nivel": nivel, "semanas": det})
+                        "pct": pct, "nivel": nivel, "sinCargar": falta, "semanas": det})
     tp, tm = sum(e["puntos"] for e in equipos), sum(e["maximo"] for e in equipos)
     tot = round(tp / tm * 100, 1) if tm else None
     cuentan = [("KO" if s_["semana"] == "S1" else s_["semana"]) + (" (reunión y actualización)" if s_["cuenta_reunion"] and s_["cuenta_act"] else " (reunión)" if s_["cuenta_reunion"] else " (actualización)" if s_["cuenta_act"] else "")

@@ -21,6 +21,13 @@ if [ -n "$(git status --porcelain)" ]; then
   msg="Versión guardada en GitHub ($n archivo(s))."
 fi
 
+# En una rama de prueba (no main) se guarda solo en local: no se publica hasta pasarla a main
+rama=$(git branch --show-current 2>/dev/null)
+if [ -n "$rama" ] && [ "$rama" != "main" ]; then
+  echo "{\"systemMessage\": \"Prueba en la rama $rama: guardada en local, no se publica.\"}"
+  exit 0
+fi
+
 # Trae lo que haya subido otra persona antes de subir lo propio (evita pisarse)
 if ! GIT_TERMINAL_PROMPT=0 timeout 60 git pull -q --rebase --autostash origin main 2>/dev/null; then
   git rebase --abort 2>/dev/null

@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-15",
+ "extraido": "2026-10-16",
  "consulta": "boards(ids) columns{id title type} items_page(limit:500) column_values{id type text display_value linked_item_ids}",
  "boards": [
   {
@@ -534,6 +534,111 @@
         "display_value": "Medio"
        }
       ]
+     },
+     {
+      "id": "13305134222",
+      "name": "Contabilidad",
+      "created_at": "2026-10-15T20:48:30Z",
+      "updated_at": "2026-10-15T20:48:33Z",
+      "group": {
+       "id": "group_mm849jzc",
+       "title": "Equipos"
+      },
+      "column_values": [
+       {
+        "id": "color_mm84znsc",
+        "type": "status",
+        "text": "Asistió"
+       },
+       {
+        "id": "color_mm8453y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84nsqk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84ew0p",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84nny7",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84p83r",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm843kqp",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8477zb",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84283c",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm8484yw",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84kjd3",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84pstd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fk4y",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84sz49",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "color_mm84fex0",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "formula_mm84qsjp",
+        "type": "formula",
+        "text": "",
+        "display_value": "1"
+       },
+       {
+        "id": "formula_mm84c488",
+        "type": "formula",
+        "text": "",
+        "display_value": "100%"
+       },
+       {
+        "id": "formula_mm84jbkq",
+        "type": "formula",
+        "text": "",
+        "display_value": "Alto"
+       }
+      ]
      }
     ]
    }
@@ -690,7 +795,7 @@
       "id": "13098327907",
       "name": "Gasto de Clase",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T18:44:15Z",
+      "updated_at": "2026-10-15T20:49:58Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -742,7 +847,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 18:44:15 UTC"
+        "text": "2026-10-15 20:49:58 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -782,7 +887,7 @@
       "id": "13098328158",
       "name": "Aceros y soldadura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T18:44:20Z",
+      "updated_at": "2026-10-15T20:49:58Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -834,7 +939,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 18:44:20 UTC"
+        "text": "2026-10-15 20:49:58 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -874,7 +979,7 @@
       "id": "13098326970",
       "name": "Compra de pintura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-15T19:03:32Z",
+      "updated_at": "2026-10-15T20:49:58Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -926,7 +1031,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-15 19:03:32 UTC"
+        "text": "2026-10-15 20:49:58 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -966,7 +1071,7 @@
       "id": "13098333423",
       "name": "Tanque de lastre",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-08T13:55:36Z",
+      "updated_at": "2026-10-15T20:49:57Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1018,7 +1123,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-08 13:55:36 UTC"
+        "text": "2026-10-15 20:49:57 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1058,7 +1163,7 @@
       "id": "13098338352",
       "name": "Bono dique",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T14:21:11Z",
+      "updated_at": "2026-10-15T20:49:57Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1110,7 +1215,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:21:11 UTC"
+        "text": "2026-10-15 20:49:57 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1150,7 +1255,7 @@
       "id": "13098337112",
       "name": "Compra de ánodos",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T14:21:14Z",
+      "updated_at": "2026-10-15T20:49:57Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1202,7 +1307,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:21:14 UTC"
+        "text": "2026-10-15 20:49:57 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1242,7 +1347,7 @@
       "id": "13098334682",
       "name": "Medición de espesores y cadenas",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T14:21:18Z",
+      "updated_at": "2026-10-15T20:49:57Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1294,7 +1399,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:21:18 UTC"
+        "text": "2026-10-15 20:49:57 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1334,7 +1439,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-14T14:22:26Z",
+      "updated_at": "2026-10-15T20:49:57Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1386,7 +1491,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:22:26 UTC"
+        "text": "2026-10-15 20:49:57 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1426,7 +1531,7 @@
       "id": "13278839703",
       "name": "Agenciamiento",
       "created_at": "2026-10-13T16:49:09Z",
-      "updated_at": "2026-10-14T14:22:32Z",
+      "updated_at": "2026-10-15T20:49:58Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1478,7 +1583,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-14 14:22:32 UTC"
+        "text": "2026-10-15 20:49:58 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1669,7 +1774,7 @@
       "id": "13098327837",
       "name": "Limpieza de tanques de carga",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-14T14:11:44Z",
+      "updated_at": "2026-10-15T20:36:09Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1721,7 +1826,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-14 14:11:44 UTC"
+        "text": "2026-10-15 20:36:09 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4904,7 +5009,7 @@
   },
   {
    "id": "18431381932",
-   "name": "POs Kelly Trader",
+   "name": "Contabilidad Kelly Trader",
    "columns": [
     {
      "id": "name",

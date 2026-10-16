@@ -351,7 +351,7 @@
   // =========================================================
   const semCls = (n) => (n === "Alto" ? "sem-alto" : n === "Medio" ? "sem-medio" : n === "Bajo" ? "sem-bajo" : "");
   const partDe = (M, areaId) => (M.part ? M.part.equipos.find((e) => e.area === areaId) || null : null);
-  // Solo cuentan las columnas que tienen dato en todos los equipos (máximo igual para todos)
+  // Cuentan las columnas que algún equipo tiene cargadas; al que le falta se le cuenta 0 (máximo igual para todos)
   const reunAct = (e, P) => {
     const c = (s) => P.semanas.find((x) => x.semana === s.semana) || {};
     const r = e.semanas.filter((s) => c(s).reunion), a = e.semanas.filter((s) => c(s).act);
@@ -364,30 +364,36 @@
     if (x.pct == null) return kpi("users", titulo, "—", "sin semanas cargadas");
     const u = P.umbrales || { alto: 75, medio: 50 };
     const det = e ? (() => { const k = reunAct(e, P); return `${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts`; })() : `${x.puntos} de ${x.maximo} puntos · ${P.equipos.length} equipos`;
-    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b><div class="tnote">% de cumplimiento = puntos / máximo. El máximo es igual para todos los equipos: una reunión o actualización cuenta cuando todos los equipos la tienen cargada. Reunión: asistió = 1 punto. Actualización: directa = 2, indirecta = 1, no actualizó = 0.</div>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}${rowT("Alto (verde)", `≥ ${u.alto} %`)}${rowT("Medio (amarillo)", `≥ ${u.medio} %`)}${rowT("Bajo (rojo)", `< ${u.medio} %`)}`)}>
+    return `<div class="card kpi sem ${semCls(x.nivel)}" ${tipAttr(`<b>${esc(titulo)}</b><div class="tnote">% de cumplimiento = puntos / máximo. El máximo es igual para todos los equipos: una reunión o actualización cuenta para todos en cuanto algún equipo la tiene cargada, y al que no la tiene cargada se le cuenta 0. Reunión: asistió = 1 punto. Actualización: directa = 2, indirecta = 1, no actualizó = 0.</div>${rowT("Puntos", `${x.puntos} de ${x.maximo}`)}${rowT("Alto (verde)", `≥ ${u.alto} %`)}${rowT("Medio (amarillo)", `≥ ${u.medio} %`)}${rowT("Bajo (rojo)", `< ${u.medio} %`)}`)}>
       ${icon("users")}<div style="min-width:0"><div class="lbl">${esc(titulo)}</div><div class="val">${pct(x.pct, 0)} <span class="sem-chip">${esc(x.nivel)}</span></div><div class="sub">${det}</div></div></div>`;
   }
-  function partCard(M) {
+  // Tabla de participación: todos los equipos del tablero (también Seguridad y Contabilidad, que no tienen tablero de área)
+  function partTabla(M) {
     const P = M.part;
     if (!P) return "";
     const semanas = P.semanas.filter((s) => s.conDatos);
-    const fila = (e) => {
-      const k = reunAct(e, P);
-      const celdas = semanas.map((s) => {
-        const d = e.semanas.find((x) => x.semana === s.semana) || {};
-        const r = !s.reunion || d.pr == null ? '<i class="pc-na">·</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
-        const a = !s.act || d.pa == null ? '<i class="pc-na">·</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
-        return `<span class="pc-cell" ${tipAttr(`<b>${esc(e.nombre)} · ${esc(s.semana === "S1" ? "Kick Off" : s.semana)}</b>${rowT("Reunión", esc(d.reunion || "—"))}${rowT("Actualización", esc(d.act || "—"))}`)}>${r}${a}</span>`;
-      }).join("");
-      return `<div class="pc-row ${semCls(e.nivel)}">
-        <div class="pc-nm"><b>${esc(e.nombre)}</b><small>${k.asis}/${k.reun} reuniones · ${k.pa}/${k.pam} pts de actualización</small></div>
-        <div class="pc-bar"><span class="sbar"><i style="width:${e.pct || 0}%"></i></span><b>${e.pct == null ? "—" : pct(e.pct, 0)}</b><span class="sem-chip">${esc(e.nivel || "—")}</span></div>
-        <details class="pc-det"><summary>Ver por semana</summary><div class="pc-weeks"><span class="pc-head">${semanas.map((s) => `<i>${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</i>`).join("")}</span><span class="pc-vals">${celdas}</span></div>
-          <div class="pc-ley">✓ asistió · ✗ no asistió · 2 actualización directa · 1 indirecta · 0 no actualizó</div></details>
-      </div>`;
+    const sNom = (s) => (s.semana === "S1" ? "Kick Off" : s.semana);
+    const sinCargar = '<span class="t-alert">sin cargar (cuenta 0)</span>';
+    const celda = (e, s) => {
+      const d = e.semanas.find((x) => x.semana === s.semana) || {};
+      const r = !s.reunion ? "" : d.faltaR ? '<i class="pc-sc">s/c</i>' : d.pr ? '<i class="pc-ok">✓</i>' : '<i class="pc-no">✗</i>';
+      const a = !s.act ? "" : d.faltaA ? '<i class="pc-sc">s/c</i>' : `<i class="pc-a${d.pa}">${d.pa}</i>`;
+      return `<td class="pc-td"><span class="pc-cell" ${tipAttr(`<b>${esc(e.nombre)} · ${esc(sNom(s))}${s.fecha ? " (" + esc(s.fecha) + ")" : ""}</b>${s.reunion ? rowT("Reunión", d.faltaR ? sinCargar : esc(d.reunion)) : ""}${s.act ? rowT("Actualización", d.faltaA ? sinCargar : esc(d.act)) : ""}`)}>${r}${a}</span></td>`;
     };
-    return card("Participación del equipo", `<div class="pc-list">${P.equipos.map(fila).join("")}</div>`,
-      { right: `${pct(P.total.pct, 0)} del equipo · ${semanas.length} semana(s) con datos` });
+    const cum = (x) => `<td><div class="pc-cum"><span class="sbar"><i style="width:${x.pct || 0}%"></i></span><b>${x.pct == null ? "—" : pct(x.pct, 0)}</b><span class="sem-chip">${esc(x.nivel || "—")}</span></div></td>`;
+    const fila = (e) => {
+      const k = reunAct(e, P), area = M.areas.find((a) => a.id === e.area);
+      return `<tr class="${semCls(e.nivel)}"><td class="pc-eq"><b>${area ? `<a href="#${area.id}">${esc(e.nombre)}</a>` : esc(e.nombre)}</b>${e.sinCargar ? `<small class="t-alert">${plural(e.sinCargar, "casilla sin cargar", "casillas sin cargar")}</small>` : ""}</td>
+        ${cum(e)}<td class="n">${k.asis} de ${k.reun}</td><td class="n">${k.pa} de ${k.pam}</td><td class="n">${e.puntos} / ${e.maximo}</td>${semanas.map((s) => celda(e, s)).join("")}</tr>`;
+    };
+    const T = P.total, u = P.umbrales || { alto: 75, medio: 50 };
+    return card("Participación del equipo", `<div class="scroll"><table class="tbl part">
+      <thead><tr><th>Equipo</th><th>Cumplimiento</th><th class="n">Reuniones</th><th class="n">Actualización</th><th class="n">Puntos</th>${semanas.map((s) => `<th class="pc-th">${s.semana === "S1" ? "KO" : s.semana}${s.fecha ? `<small>${esc(s.fecha)}</small>` : ""}</th>`).join("")}</tr></thead>
+      <tbody>${P.equipos.map(fila).join("")}</tbody>
+      <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}<td></td><td></td><td class="n"><b>${T.puntos} / ${T.maximo}</b></td>${semanas.map(() => "<td></td>").join("")}</tr></tfoot>
+    </table></div>
+    <div class="pc-ley">Por semana: <b class="pc-ok">✓</b> asistió · <b class="pc-no">✗</b> no asistió · actualización <b class="pc-a2">2</b> directa · <b class="pc-a1">1</b> indirecta · <b class="pc-a0">0</b> no actualizó · <b class="pc-sc">s/c</b> sin cargar, cuenta 0. Una semana cuenta para todos en cuanto algún equipo la tiene cargada: el máximo es igual para todos.</div>`,
+      { cls: "wide", right: `${P.equipos.length} equipos · alto ≥ ${u.alto} % · medio ≥ ${u.medio} % · bajo < ${u.medio} %` });
   }
 
   function cambiosCard(M) {
@@ -408,13 +414,6 @@
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
-        ${(() => {
-          const e = partDe(M, a.id);
-          if (!e || e.pct == null) return "";
-          const k = reunAct(e, M.part);
-          return `<div class="area-pt ${semCls(e.nivel)}"><small>${icon("users", "ic sm")}Participación</small><span class="sbar"><i style="width:${e.pct}%"></i></span><b>${pct(e.pct, 0)}</b><span class="sem-chip">${esc(e.nivel)}</span>
-            <small class="det">${k.asis} de ${k.reun} reuniones · actualización ${k.pa} de ${k.pam} pts</small></div>`;
-        })()}
         <div class="area-c"><div><small>Preliminar</small><b class="${C.revisado > C.aprobado ? "t-warn" : ""}">${moneyK(C.revisado)}</b></div><div><small>Aprobado</small><b>${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         <div class="area-f">${Object.entries(est).map(([e, n]) => `<span class="chip">${esc(e)} · ${n}</span>`).join("")}${pend ? `<span class="chip warn">${moneyK(pend)} sin aprobar</span>` : ""}${sinCC ? `<span class="chip alert">${sinCC} sin centro de costo</span>` : ""}</div>
       </a>`;
@@ -443,15 +442,46 @@
     const posTxt = P.length ? [plural(P.length, "orden de compra", "órdenes de compra"), sinMonto ? `<span class="t-warn">${sinMonto} sin monto</span>` : "", sinCC ? `<span class="t-warn">${sinCC} sin centro de costo ni trabajo</span>` : ""].filter(Boolean).join(" · ") : "";
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { pendiente: pend, pos: posTxt, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
-      <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
+      ${fasesCard(M)}
+      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
+      ${partTabla(M)}`;
   }
 
   // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
   const conFase = (t) => !!t.fase && !/no aplica/i.test(t.fase);
+  // Fases de ejecución: la columna "Fase" de P1, P2 y P3; las fechas salen del tablero Cronograma
+  const FASES = [{ id: "pre", nombre: "Pre-dique" }, { id: "dique", nombre: "Dique" }, { id: "post", nombre: "Post-dique" }];
+  const faseId = (t) => (!conFase(t) ? null : /pre/i.test(t.fase) ? "pre" : /pos/i.test(t.fase) ? "post" : /dique/i.test(t.fase) ? "dique" : null);
+  const enFase = (f) => (t) => f === "todas" ? conFase(t) : faseId(t) === f;
+  let FASE = "todas";
+  try { FASE = localStorage.getItem("dique-fase") || "todas"; } catch (e) {}
+  if (FASE !== "todas" && !FASES.some((f) => f.id === FASE)) FASE = "todas";
+  const faseSel = (trabajos) => `<div class="seg" role="group" aria-label="Fase">${[{ id: "todas", nombre: "Todas" }].concat(FASES).map((f) =>
+    `<button type="button" data-fase="${f.id}" aria-pressed="${FASE === f.id}">${f.id !== "todas" ? `<i class="dot k-${f.id}"></i>` : ""}${f.nombre}<small>${trabajos.filter(enFase(f.id)).length}</small></button>`).join("")}</div>`;
+
+  // Avance y montos por fase (Pre-dique, Dique, Post-dique) con las fechas de la fase en el Cronograma
+  function fasesCard(M) {
+    const all = M.areas.flatMap((a) => a.trabajos);
+    const fila = (f) => {
+      const ts = all.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
+      const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
+      const porArea = M.areas.map((a) => { const x = avance(a.trabajos.filter(enFase(f.id))); return rowT(esc(a.nombre), x.conDur ? `${pct(x.pct, 0)} · ${x.conDur} planificados` : "—"); }).join("");
+      return `<tr class="${actual ? "cur" : ""}"><td><b><i class="dot k-${f.id}"></i>${f.nombre}</b>${actual ? "<small>etapa actual</small>" : ""}</td>
+        <td class="nw">${cr ? dateRange(cr.real) : "—"}${cr ? (cr.diferencia ? `<small class="${cr.diferencia > 0 ? "t-alert" : ""}">${cr.diferencia > 0 ? "+" : ""}${cr.diferencia} d vs base</small>` : "<small>en plazo</small>") : ""}</td>
+        <td class="n">${av.conDur}${av.sinDur ? `<small class="t-warn">+${av.sinDur} sin duración</small>` : ""}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td>
+        <td class="nw" ${tipAttr(`<b>Avance · ${f.nombre}</b>${porArea}`)}>${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td>
+        <td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td><td class="n">${mcell(C.aprobado)}</td></tr>`;
+    };
+    const av = avance(all.filter(conFase)), C = costos(all.filter((t) => !t.cancelado && conFase(t)));
+    return card("Avance por fase", `<div class="scroll"><table class="tbl fases"><thead><tr><th>Fase</th><th>Fechas (real)</th><th class="n">Planificados</th><th class="n">En ejecución</th><th class="n">Finalizados</th><th>Avance</th><th class="n">Preliminar</th><th class="n">Aprobado</th></tr></thead>
+      <tbody>${FASES.map(fila).join("")}</tbody>
+      <tfoot><tr><td><b>Total con fase</b></td><td></td><td class="n">${av.conDur}</td><td class="n">${av.ejec}</td><td class="n">${av.fin}</td><td class="nw">${bar(av.pct)} <b>${pct(av.pct, 0)}</b></td><td class="n ${C.revisado > C.aprobado ? "t-warn" : ""}">${mcell(C.revisado)}</td><td class="n">${mcell(C.aprobado)}</td></tr></tfoot></table></div>`,
+      { cls: "wide", right: "trabajos de P1, P2 y P3 según su columna Fase" });
+  }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();
     const grupos = [];
-    a.trabajos.filter(conFase).filter((t) => !ql || (t.nombre + " " + t.grupo + " " + t.fase).toLowerCase().includes(ql)).forEach((t) => {
+    a.trabajos.filter(enFase(FASE)).filter((t) => !ql || (t.nombre + " " + t.grupo + " " + t.fase).toLowerCase().includes(ql)).forEach((t) => {
       let g = grupos.find((x) => x.nombre === t.grupo); if (!g) grupos.push((g = { nombre: t.grupo, items: [] })); g.items.push(t);
     });
     const ccName = (ids) => ids.map((id) => (M.centros.find((c) => c.id === id) || {}).nombre || "?").join(", ");
@@ -459,7 +489,7 @@
       <td>${esc(t.fase || "—")}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td><td class="n">${t.duracion || '<span class="muted">—</span>'}</td>
       <td>${chipAprob(t.aprobacion)}</td><td class="n">${mcell(t.solicitado)}</td><td class="n ${t.revisado > (t.aprobado || 0) ? "t-warn" : ""}">${mcell(t.revisado)}</td><td class="n">${mcell(t.aprobado)}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
       <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`;
-    if (!grupos.length) return empty("Ningún trabajo coincide con la búsqueda.");
+    if (!grupos.length) return empty(ql ? "Ningún trabajo coincide con la búsqueda." : "No hay trabajos planificados en esta fase.");
     return grupos.map((g) => {
       const G = costos(g.items.filter((t) => !t.cancelado)), gav = avance(g.items);
       return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · preliminar ${moneyK(G.revisado)} · aprobado ${moneyK(G.aprobado)}</span></summary>
@@ -469,15 +499,19 @@
   }
 
   function viewArea(M, a, q) {
-    const C = costos(a.act), av = avance(a.trabajos);
-    const pend = sum(a.act.filter((t) => !t.aprobado), (t) => t.solicitado);
-    const est = {}, plan = a.trabajos.filter(conFase), ocultos = a.trabajos.length - plan.length;
+    // Con una fase elegida, los indicadores son solo de esa fase; con "Todas", de todo el tablero
+    const ts = FASE === "todas" ? a.trabajos : a.trabajos.filter(enFase(FASE)), act = ts.filter((t) => !t.cancelado);
+    const C = costos(act), av = avance(ts);
+    const pend = sum(act.filter((t) => !t.aprobado), (t) => t.solicitado);
+    const est = {}, plan = a.trabajos.filter(enFase(FASE)), ocultos = a.trabajos.length - a.trabajos.filter(conFase).length;
     plan.filter((t) => !t.cancelado).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
     const sinDur = plan.filter((t) => !t.cancelado && !(t.duracion > 0)).length;
     const pa = partDe(M, a.id);
-    return `<div class="kpis ${pa ? "k7" : "k6"}">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
-      ${card(`Trabajos · ${esc(a.tablero)}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
-        <span class="muted sm">${plural(plan.length, "trabajo con fase", "trabajos con fase")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
+    const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
+    return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
+      <div class="kpis ${pa ? "k7" : "k6"}">${costKpis(C, av, { pendiente: pend, direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
+      ${card(`Trabajos · ${esc(a.tablero)}${FASE !== "todas" ? ` · ${(FASES.find((f) => f.id === FASE) || {}).nombre}` : ""}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
+        <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
 
   function viewCrono(M) {
@@ -525,6 +559,13 @@
     QUERY[VIEW] = e.target.value;
     const area = MODEL.areas.find((a) => a.id === VIEW);
     if (area) $("grupos").innerHTML = gruposHTML(MODEL, area, QUERY[VIEW]);
+  });
+  app.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-fase]");
+    if (!b) return;
+    FASE = b.dataset.fase;
+    try { localStorage.setItem("dique-fase", FASE); } catch (err) {}
+    const y = scrollY; render(); scrollTo({ top: y });
   });
   addEventListener("hashchange", () => { render(); window.scrollTo({ top: 0 }); });
   let rt, lastW = innerWidth;
