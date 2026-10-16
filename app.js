@@ -47,10 +47,13 @@
     anchor: '<circle cx="12" cy="5" r="2"/><path d="M12 7v13M5 13a7 7 0 0 0 14 0M8 11h8"/>',
     wrench: '<path d="M14.5 5.5a4 4 0 0 0 4.8 4.8l-9 9a2 2 0 0 1-2.8-2.8l9-9a4 4 0 0 1-2-2z"/>',
     calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
-    search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>'
+    search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
+    ext: '<path d="M14 4.5h5.5V10M19.5 4.5L11 13"/><path d="M17.5 14v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H10"/>'
   };
   const icon = (n, cls = "ic") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ""}</svg>`;
   const AREA_ICON = { ingenieria: "ruler", cubierta: "anchor", tecnico: "wrench" };
+  // Tableros de Monday a los que se puede saltar desde el dashboard
+  const LINKS = { programa: "https://ehmillaa.monday.com/boards/18431022776", cronograma: "https://ehmillaa.monday.com/boards/18431008651" };
 
   // =========================================================
   // Modelo: todo sale de monday.js
@@ -517,7 +520,10 @@
         <td class="n ${late ? "t-alert b" : ""}">${r.diferencia == null ? "—" : (r.diferencia > 0 ? "+" : "") + r.diferencia + " d"}</td>
         <td class="n">${r.duracion == null ? "—" : r.duracion}</td></tr>`;
     }).join("");
-    return `${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
+    // Enlaces a Monday (espacio GESTIÓN DE DIQUES; hay que tener sesión iniciada en Monday)
+    const enl = (url, txt, cls = "") => `<a class="btn ${cls}" href="${url}" target="_blank" rel="noopener">${icon("ext", "ic sm")}${txt}</a>`;
+    return `<div class="acciones">${enl(LINKS.programa, "Programa de diques")}${enl(LINKS.cronograma, "Cronograma en Monday", "ghost")}</div>
+      ${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
       ${card("Elementos del cronograma", `<div class="scroll"><table class="tbl"><thead><tr><th>Elemento</th><th>Estado</th><th>Fecha real</th><th>Línea base</th><th class="n">Diferencia</th><th class="n">Duración</th></tr></thead><tbody>${rows}</tbody></table></div>`, { cls: "wide" })}`;
   }
 

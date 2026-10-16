@@ -455,3 +455,12 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .fs-tbl th:nth-child(n+3), .fs-tbl td:nth-child(n+3) { display: none; }
   .fs-tbl th:nth-child(2) { width: 120px; }
 }
+
+/* Botones de enlace (Programa de diques, Cronograma en Monday) */
+.acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: var(--inv); font-size: 13px; font-weight: 700; text-decoration: none; }
+.btn:hover { opacity: .85; }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--border); }
+.btn.ghost:hover { border-color: var(--ink); opacity: 1; }
+.btn .ic.sm { width: 15px; height: 15px; }
