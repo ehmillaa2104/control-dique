@@ -1,4 +1,90 @@
 {
+ "18435454602": {
+  "name": {
+   "title": "Name",
+   "type": "name"
+  },
+  "color_mm84znsc": {
+   "title": "Kick Off (23 Sep)",
+   "type": "status"
+  },
+  "color_mm8453y": {
+   "title": "Act. S2",
+   "type": "status"
+  },
+  "color_mm84nsqk": {
+   "title": "Reunión S2",
+   "type": "status"
+  },
+  "color_mm84ew0p": {
+   "title": "Act. S3 (9 Oct)",
+   "type": "status"
+  },
+  "color_mm84nny7": {
+   "title": "Reunión S3 (9 Oct)",
+   "type": "status"
+  },
+  "color_mm84p83r": {
+   "title": "Act. S4 (16 Oct)",
+   "type": "status"
+  },
+  "color_mm843kqp": {
+   "title": "Reunión S4 (16 Oct)",
+   "type": "status"
+  },
+  "color_mm8477zb": {
+   "title": "Act. S5",
+   "type": "status"
+  },
+  "color_mm84283c": {
+   "title": "Reunión S5",
+   "type": "status"
+  },
+  "color_mm8484yw": {
+   "title": "Act. S6",
+   "type": "status"
+  },
+  "color_mm84kjd3": {
+   "title": "Reunión S6",
+   "type": "status"
+  },
+  "color_mm84pstd": {
+   "title": "Act. S7",
+   "type": "status"
+  },
+  "color_mm84fk4y": {
+   "title": "Reunión S7",
+   "type": "status"
+  },
+  "color_mm84sz49": {
+   "title": "Act. S8",
+   "type": "status"
+  },
+  "color_mm84fex0": {
+   "title": "Reunión S8",
+   "type": "status"
+  },
+  "formula_mm8451wj": {
+   "title": "Pts. Actualización",
+   "type": "formula"
+  },
+  "formula_mm84gw6m": {
+   "title": "Pts. Reunión",
+   "type": "formula"
+  },
+  "formula_mm84qsjp": {
+   "title": "Puntaje Total",
+   "type": "formula"
+  },
+  "formula_mm84c488": {
+   "title": "% Cumplimiento",
+   "type": "formula"
+  },
+  "formula_mm84jbkq": {
+   "title": "Nivel de Participación",
+   "type": "formula"
+  }
+ },
  "18432105438": {
   "name": {
    "title": "Trabajo",
@@ -29,7 +115,7 @@
    "type": "status"
   },
   "numeric_mm6vjdrd": {
-   "title": "$ Solicitado (Equipo)",
+   "title": "$ Preliminar",
    "type": "numbers"
   },
   "color_mm6v621m": {
@@ -37,7 +123,7 @@
    "type": "status"
   },
   "numeric_mm78s0hd": {
-   "title": "$ Aprobado Dirección",
+   "title": "$ Aprobado",
    "type": "numbers"
   },
   "date_mm78wmtn": {
@@ -61,7 +147,7 @@
    "type": "board_relation"
   },
   "numeric_mm78kpas": {
-   "title": "$ Revisado Gerencia",
+   "title": "$ Revisión",
    "type": "numbers"
   },
   "board_relation_mm7am925": {
@@ -107,6 +193,10 @@
   "lookup_mm7ym614": {
    "title": "$Incurrido",
    "type": "mirror"
+  },
+  "board_relation_mm845vmr": {
+   "title": "link to POs Kelly Trader",
+   "type": "board_relation"
   }
  },
  "18432105237": {
@@ -139,11 +229,11 @@
    "type": "status"
   },
   "numeric_mm6vjdrd": {
-   "title": "$ Solicitado (Equipo)",
+   "title": "$ Preliminar",
    "type": "numbers"
   },
   "numeric_mm78kpas": {
-   "title": "$ Revisado Gerencia",
+   "title": "$En Revisión",
    "type": "numbers"
   },
   "color_mm6v621m": {
@@ -228,8 +318,12 @@
    "title": "Estado Aprobación",
    "type": "status"
   },
-  "formula_mm7d91f2": {
+  "formula_mm867352": {
    "title": "$ Preliminar",
+   "type": "formula"
+  },
+  "formula_mm7d91f2": {
+   "title": "$ En Revisión",
    "type": "formula"
   },
   "formula_mm7dehmt": {
@@ -248,16 +342,16 @@
    "title": "$ Proyectado",
    "type": "formula"
   },
-  "coment_dir": {
-   "title": "Comentarios",
-   "type": "long_text"
-  },
   "board_relation_mm7a4ck0": {
    "title": "Líneas de presupuesto",
    "type": "board_relation"
   },
+  "lookup_mm86c6e2": {
+   "title": "Σ Preliminar",
+   "type": "mirror"
+  },
   "lookup_mm7azrff": {
-   "title": "Σ Revisado Gerencia",
+   "title": "Σ En Revisado",
    "type": "mirror"
   },
   "lookup_mm7a63mn": {
@@ -325,10 +419,6 @@
   "color_mm32ajy1": {
    "title": "Estatus de Pago",
    "type": "status"
-  },
-  "long_text_mm33ryq6": {
-   "title": "Description Det",
-   "type": "long_text"
   },
   "pulse_updated_mm3j8vr0": {
    "title": "Última actualización",
@@ -417,6 +507,48 @@
    "type": "board_relation"
   }
  },
+ "18431022776": {
+  "name": {
+   "title": "Nave",
+   "type": "name"
+  },
+  "color_mm7e7wfd": {
+   "title": "Estado",
+   "type": "status"
+  },
+  "date_mm78x2pe": {
+   "title": "Mandatorio",
+   "type": "date"
+  },
+  "date_mm766e7z": {
+   "title": "Fecha Real",
+   "type": "date"
+  },
+  "formula_mm78vqa2": {
+   "title": "Diferencia",
+   "type": "formula"
+  },
+  "color_mm765t5s": {
+   "title": "Lugar",
+   "type": "status"
+  },
+  "color_mm7666ab": {
+   "title": "Tipo de dique",
+   "type": "status"
+  },
+  "numeric_mm766312": {
+   "title": "$ dique anterior",
+   "type": "numbers"
+  },
+  "numeric_mm76thhf": {
+   "title": "$ estimado próximo dique",
+   "type": "numbers"
+  },
+  "long_text_mm769eya": {
+   "title": "Observaciones",
+   "type": "long_text"
+  }
+ },
  "18431019817": {
   "name": {
    "title": "Trabajo",
@@ -451,11 +583,11 @@
    "type": "status"
   },
   "numeric_mm6vjdrd": {
-   "title": "$ Solicitado (Equipo)",
+   "title": "$ Preliminar",
    "type": "numbers"
   },
   "numeric_mm78kpas": {
-   "title": "$ Revisado Gerencia",
+   "title": "$ En Revisión",
    "type": "numbers"
   },
   "color_mm6v621m": {
@@ -529,6 +661,10 @@
   "lookup_mm7yk7y7": {
    "title": "$PO Total",
    "type": "mirror"
+  },
+  "board_relation_mm8418w8": {
+   "title": "link to POs Kelly Trader",
+   "type": "board_relation"
   }
  },
  "18431008651": {
@@ -571,92 +707,6 @@
   "pulse_updated_mm7gn7r8": {
    "title": "Última actualización",
    "type": "last_updated"
-  }
- },
- "18435454602": {
-  "name": {
-   "title": "Name",
-   "type": "name"
-  },
-  "color_mm84znsc": {
-   "title": "Kick Off (23 Sep)",
-   "type": "status"
-  },
-  "color_mm8453y": {
-   "title": "Act. S2",
-   "type": "status"
-  },
-  "color_mm84nsqk": {
-   "title": "Reunión S2",
-   "type": "status"
-  },
-  "color_mm84ew0p": {
-   "title": "Act. S3 (9 Oct)",
-   "type": "status"
-  },
-  "color_mm84nny7": {
-   "title": "Reunión S3 (9 Oct)",
-   "type": "status"
-  },
-  "color_mm84p83r": {
-   "title": "Act. S4 (16 Oct)",
-   "type": "status"
-  },
-  "color_mm843kqp": {
-   "title": "Reunión S4 (16 Oct)",
-   "type": "status"
-  },
-  "color_mm8477zb": {
-   "title": "Act. S5",
-   "type": "status"
-  },
-  "color_mm84283c": {
-   "title": "Reunión S5",
-   "type": "status"
-  },
-  "color_mm8484yw": {
-   "title": "Act. S6",
-   "type": "status"
-  },
-  "color_mm84kjd3": {
-   "title": "Reunión S6",
-   "type": "status"
-  },
-  "color_mm84pstd": {
-   "title": "Act. S7",
-   "type": "status"
-  },
-  "color_mm84fk4y": {
-   "title": "Reunión S7",
-   "type": "status"
-  },
-  "color_mm84sz49": {
-   "title": "Act. S8",
-   "type": "status"
-  },
-  "color_mm84fex0": {
-   "title": "Reunión S8",
-   "type": "status"
-  },
-  "formula_mm8451wj": {
-   "title": "Pts. Actualización",
-   "type": "formula"
-  },
-  "formula_mm84gw6m": {
-   "title": "Pts. Reunión",
-   "type": "formula"
-  },
-  "formula_mm84qsjp": {
-   "title": "Puntaje Total",
-   "type": "formula"
-  },
-  "formula_mm84c488": {
-   "title": "% Cumplimiento",
-   "type": "formula"
-  },
-  "formula_mm84jbkq": {
-   "title": "Nivel de Participación",
-   "type": "formula"
   }
  }
 }

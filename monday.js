@@ -269,8 +269,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -279,7 +279,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256760158",
@@ -293,8 +294,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -303,7 +304,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043921163",
@@ -317,8 +319,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -327,7 +329,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-08"
+     "actualizado": "2026-10-08",
+     "costo": ""
     },
     {
      "id": "13043943307",
@@ -341,8 +344,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -351,7 +354,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643040",
@@ -365,8 +369,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -375,7 +379,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095617046",
@@ -389,8 +394,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -399,7 +404,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599940",
@@ -413,8 +419,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -423,7 +429,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599941",
@@ -437,8 +444,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -447,7 +454,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095594034",
@@ -461,8 +469,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -471,7 +479,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599992",
@@ -485,8 +494,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -495,7 +504,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095616880",
@@ -509,8 +519,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -519,7 +529,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095570221",
@@ -533,8 +544,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -543,7 +554,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095594157",
@@ -557,8 +569,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -567,7 +579,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095604569",
@@ -581,8 +594,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -591,7 +604,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643042",
@@ -605,8 +619,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -615,7 +629,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095593116",
@@ -629,8 +644,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -639,7 +654,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643083",
@@ -653,8 +669,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -663,7 +679,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095604666",
@@ -677,8 +694,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -687,7 +704,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095604667",
@@ -701,8 +719,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -711,7 +729,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095605104",
@@ -725,8 +744,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -735,7 +754,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599993",
@@ -749,8 +769,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -759,7 +779,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922222",
@@ -773,8 +794,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Preventivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 4200,
-     "revisado": null,
+     "preliminar": 4200,
+     "enRevision": null,
      "aprobado": 4200,
      "proyectado": null,
      "po": null,
@@ -783,7 +804,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043922221",
@@ -797,8 +819,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -807,7 +829,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922220",
@@ -821,8 +844,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -831,7 +854,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936425",
@@ -845,8 +869,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -855,7 +879,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922218",
@@ -869,8 +894,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -879,7 +904,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922219",
@@ -893,8 +919,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -903,7 +929,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936426",
@@ -917,8 +944,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -927,7 +954,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924490",
@@ -941,8 +969,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -951,7 +979,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-13"
+     "actualizado": "2026-10-13",
+     "costo": ""
     },
     {
      "id": "13043950469",
@@ -965,8 +994,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -975,7 +1004,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924377",
@@ -989,8 +1019,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -999,7 +1029,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924378",
@@ -1013,8 +1044,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1023,7 +1054,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924379",
@@ -1037,8 +1069,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1047,7 +1079,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924375",
@@ -1061,8 +1094,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1071,7 +1104,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945523",
@@ -1085,8 +1119,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1095,7 +1129,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950430",
@@ -1109,8 +1144,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1119,7 +1154,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945522",
@@ -1133,8 +1169,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1143,7 +1179,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950431",
@@ -1157,8 +1194,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1167,7 +1204,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095604901",
@@ -1181,8 +1219,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1191,7 +1229,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095604668",
@@ -1205,8 +1244,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1215,7 +1254,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095617389",
@@ -1229,8 +1269,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1239,7 +1279,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095570185",
@@ -1253,8 +1294,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1263,7 +1304,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13256760157",
@@ -1277,8 +1319,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -1287,7 +1329,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256755192",
@@ -1301,8 +1344,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -1311,7 +1354,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256755203",
@@ -1325,8 +1369,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 4600,
-     "revisado": null,
+     "preliminar": 4600,
+     "enRevision": null,
      "aprobado": 4600,
      "proyectado": null,
      "po": null,
@@ -1335,7 +1379,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256744926",
@@ -1349,8 +1394,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -1359,7 +1404,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256760609",
@@ -1373,8 +1419,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 2500,
-     "revisado": null,
+     "preliminar": 2500,
+     "enRevision": null,
      "aprobado": 2500,
      "proyectado": null,
      "po": null,
@@ -1383,7 +1429,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256744868",
@@ -1397,8 +1444,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3200,
-     "revisado": null,
+     "preliminar": 3200,
+     "enRevision": null,
      "aprobado": 3200,
      "proyectado": null,
      "po": null,
@@ -1407,7 +1454,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043950472",
@@ -1421,8 +1469,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1431,7 +1479,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945735",
@@ -1445,8 +1494,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1455,7 +1504,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950470",
@@ -1469,8 +1519,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1479,7 +1529,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945736",
@@ -1493,8 +1544,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1503,7 +1554,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932303",
@@ -1517,8 +1569,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1527,7 +1579,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932345",
@@ -1541,8 +1594,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": 0,
+     "preliminar": null,
+     "enRevision": 0,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1551,7 +1604,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924491",
@@ -1565,8 +1619,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1575,7 +1629,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950471",
@@ -1589,8 +1644,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1599,7 +1654,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950468",
@@ -1613,8 +1669,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1623,7 +1679,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924492",
@@ -1637,8 +1694,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1647,7 +1704,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924547",
@@ -1661,8 +1719,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1671,7 +1729,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924548",
@@ -1685,8 +1744,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1695,7 +1754,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932301",
@@ -1709,8 +1769,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1719,7 +1779,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943301",
@@ -1733,8 +1794,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1743,7 +1804,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943303",
@@ -1757,8 +1819,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1767,7 +1829,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943305",
@@ -1781,8 +1844,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1791,7 +1854,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932352",
@@ -1805,8 +1869,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1815,7 +1879,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643646",
@@ -1829,8 +1894,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1839,7 +1904,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095605151",
@@ -1853,8 +1919,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1863,7 +1929,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095616903",
@@ -1877,8 +1944,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1887,7 +1954,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643870",
@@ -1901,8 +1969,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1911,7 +1979,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095616905",
@@ -1925,8 +1994,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1935,7 +2004,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599004",
@@ -1949,8 +2019,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1959,7 +2029,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095600128",
@@ -1973,8 +2044,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -1983,7 +2054,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643647",
@@ -1997,8 +2069,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2007,7 +2079,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095642636",
@@ -2021,8 +2094,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2031,7 +2104,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095599565",
@@ -2045,8 +2119,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2055,7 +2129,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643648",
@@ -2069,8 +2144,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2079,7 +2154,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095569998",
@@ -2093,8 +2169,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3400,
-     "revisado": null,
+     "preliminar": 3400,
+     "enRevision": null,
      "aprobado": 3400,
      "proyectado": null,
      "po": null,
@@ -2103,7 +2179,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043941391",
@@ -2117,8 +2194,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2127,7 +2204,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095616904",
@@ -2141,8 +2219,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2151,7 +2229,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924545",
@@ -2165,8 +2244,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2175,7 +2254,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924546",
@@ -2189,8 +2269,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2199,7 +2279,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643872",
@@ -2213,8 +2294,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2223,7 +2304,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21"
+     "actualizado": "2026-09-21",
+     "costo": ""
     },
     {
      "id": "13095605154",
@@ -2237,8 +2319,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2247,7 +2329,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21"
+     "actualizado": "2026-09-21",
+     "costo": ""
     },
     {
      "id": "13095643873",
@@ -2261,8 +2344,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2271,7 +2354,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21"
+     "actualizado": "2026-09-21",
+     "costo": ""
     },
     {
      "id": "13095570205",
@@ -2285,8 +2369,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2295,7 +2379,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21"
+     "actualizado": "2026-09-21",
+     "costo": ""
     },
     {
      "id": "13043941390",
@@ -2309,8 +2394,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2319,7 +2404,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924488",
@@ -2333,8 +2419,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": 0,
      "proyectado": null,
      "po": null,
@@ -2343,7 +2429,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095643937",
@@ -2357,8 +2444,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3500,
-     "revisado": null,
+     "preliminar": 3500,
+     "enRevision": null,
      "aprobado": 3500,
      "proyectado": null,
      "po": null,
@@ -2367,7 +2454,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13095604536",
@@ -2381,8 +2469,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2391,7 +2479,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21"
+     "actualizado": "2026-09-21",
+     "costo": ""
     },
     {
      "id": "13095613807",
@@ -2405,8 +2494,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2415,7 +2504,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13277138828",
@@ -2429,8 +2519,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2439,7 +2529,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277158049",
@@ -2453,8 +2544,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2463,7 +2554,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277104868",
@@ -2477,8 +2569,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2487,7 +2579,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277169481",
@@ -2501,8 +2594,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2511,7 +2604,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277138491",
@@ -2525,8 +2619,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2535,7 +2629,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277157364",
@@ -2549,8 +2644,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3600,
-     "revisado": null,
+     "preliminar": 3600,
+     "enRevision": null,
      "aprobado": 3600,
      "proyectado": null,
      "po": null,
@@ -2559,7 +2654,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043950429",
@@ -2573,8 +2669,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2583,7 +2679,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932348",
@@ -2597,8 +2694,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2607,7 +2704,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043921752",
@@ -2621,8 +2719,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2631,7 +2729,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936427",
@@ -2645,8 +2744,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2655,7 +2754,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950425",
@@ -2669,8 +2769,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2679,7 +2779,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950426",
@@ -2693,8 +2794,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2703,7 +2804,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043941394",
@@ -2717,8 +2819,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2727,7 +2829,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945527",
@@ -2741,8 +2844,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2751,7 +2854,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950423",
@@ -2765,8 +2869,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2775,7 +2879,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950424",
@@ -2789,8 +2894,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2799,7 +2904,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950428",
@@ -2813,8 +2919,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2823,7 +2929,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043950427",
@@ -2837,8 +2944,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2847,7 +2954,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932349",
@@ -2861,8 +2969,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2871,7 +2979,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922215",
@@ -2885,8 +2994,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2895,7 +3004,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922216",
@@ -2909,8 +3019,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2919,7 +3029,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043922217",
@@ -2933,8 +3044,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2943,7 +3054,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095628677",
@@ -2957,8 +3069,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2967,7 +3079,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603677",
@@ -2981,8 +3094,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -2991,7 +3104,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13256760245",
@@ -3005,8 +3119,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 5100,
-     "revisado": null,
+     "preliminar": 5100,
+     "enRevision": null,
      "aprobado": 5100,
      "proyectado": null,
      "po": null,
@@ -3015,7 +3129,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13095637379",
@@ -3029,8 +3144,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3039,7 +3154,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603385",
@@ -3053,8 +3169,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3063,7 +3179,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13256760246",
@@ -3077,8 +3194,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 6250,
-     "revisado": null,
+     "preliminar": 6250,
+     "enRevision": null,
      "aprobado": 6250,
      "proyectado": null,
      "po": null,
@@ -3087,7 +3204,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043924495",
@@ -3101,8 +3219,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3111,7 +3229,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924496",
@@ -3125,8 +3244,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3135,7 +3254,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932347",
@@ -3149,8 +3269,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3159,7 +3279,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043924493",
@@ -3173,8 +3294,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3183,7 +3304,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945526",
@@ -3197,8 +3319,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3207,7 +3329,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043945524",
@@ -3221,8 +3344,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3231,7 +3354,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095638228",
@@ -3245,8 +3369,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3255,7 +3379,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095637451",
@@ -3269,8 +3394,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3279,7 +3404,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043921183",
@@ -3293,8 +3419,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3303,7 +3429,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095613978",
@@ -3317,8 +3444,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3327,7 +3454,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095637378",
@@ -3341,8 +3469,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3351,7 +3479,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603722",
@@ -3365,8 +3494,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3375,7 +3504,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603720",
@@ -3389,8 +3519,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 5000,
-     "revisado": null,
+     "preliminar": 5000,
+     "enRevision": null,
      "aprobado": 5000,
      "proyectado": null,
      "po": null,
@@ -3399,7 +3529,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043932296",
@@ -3413,8 +3544,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3423,7 +3554,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932299",
@@ -3437,8 +3569,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3447,7 +3579,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095613430",
@@ -3461,8 +3594,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3471,7 +3604,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095628540",
@@ -3485,8 +3619,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10000,
-     "revisado": null,
+     "preliminar": 10000,
+     "enRevision": null,
      "aprobado": 0,
      "proyectado": null,
      "po": null,
@@ -3495,7 +3629,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "preliminar"
     },
     {
      "id": "13256755102",
@@ -3509,8 +3644,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 2600,
-     "revisado": null,
+     "preliminar": 2600,
+     "enRevision": null,
      "aprobado": 2600,
      "proyectado": null,
      "po": null,
@@ -3519,7 +3654,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13095637314",
@@ -3533,8 +3669,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3543,7 +3679,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603679",
@@ -3557,8 +3694,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": 1500,
+     "preliminar": 1500,
+     "enRevision": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3567,7 +3704,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13256760623",
@@ -3581,8 +3719,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": 1500,
+     "preliminar": 1500,
+     "enRevision": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3591,7 +3729,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13256755233",
@@ -3605,8 +3744,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": 1500,
+     "preliminar": 1500,
+     "enRevision": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3615,7 +3754,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13256755205",
@@ -3629,8 +3769,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": 1500,
+     "preliminar": 1500,
+     "enRevision": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3639,7 +3779,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13256755234",
@@ -3653,8 +3794,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": 1500,
+     "preliminar": 1500,
+     "enRevision": 1500,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3663,7 +3804,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13043936421",
@@ -3677,8 +3819,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3687,7 +3829,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936422",
@@ -3701,8 +3844,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3711,7 +3854,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936423",
@@ -3725,8 +3869,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3735,7 +3879,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043941389",
@@ -3749,8 +3894,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3759,7 +3904,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043936424",
@@ -3773,8 +3919,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3783,7 +3929,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943240",
@@ -3797,8 +3944,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3807,7 +3954,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943242",
@@ -3821,8 +3969,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3831,7 +3979,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043943244",
@@ -3845,8 +3994,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3855,7 +4004,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043941395",
@@ -3869,8 +4019,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3879,7 +4029,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043941393",
@@ -3893,8 +4044,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3903,7 +4054,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095614175",
@@ -3917,8 +4069,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3927,7 +4079,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603678",
@@ -3941,8 +4094,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3951,7 +4104,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603531",
@@ -3965,8 +4119,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3975,7 +4129,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095614176",
@@ -3989,8 +4144,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -3999,7 +4154,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095603889",
@@ -4013,8 +4169,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4023,7 +4179,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13043932350",
@@ -4037,8 +4194,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4047,7 +4204,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-13"
+     "actualizado": "2026-10-13",
+     "costo": ""
     },
     {
      "id": "13043936420",
@@ -4061,8 +4219,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4071,7 +4229,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13256755103",
@@ -4085,8 +4244,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -4095,7 +4254,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256755204",
@@ -4109,8 +4269,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 0.01,
-     "revisado": null,
+     "preliminar": 0.01,
+     "enRevision": null,
      "aprobado": 0.01,
      "proyectado": null,
      "po": null,
@@ -4119,7 +4279,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13256755193",
@@ -4133,8 +4294,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 1500,
-     "revisado": null,
+     "preliminar": 1500,
+     "enRevision": null,
      "aprobado": 1500,
      "proyectado": null,
      "po": null,
@@ -4143,7 +4304,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13277158044",
@@ -4157,8 +4319,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10000,
-     "revisado": null,
+     "preliminar": 10000,
+     "enRevision": null,
      "aprobado": 8000,
      "proyectado": null,
      "po": null,
@@ -4167,7 +4329,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13043921754",
@@ -4181,8 +4344,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4191,7 +4354,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095638257",
@@ -4205,8 +4369,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4215,7 +4379,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095602832",
@@ -4229,8 +4394,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4239,7 +4404,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13095613982",
@@ -4253,8 +4419,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4263,7 +4429,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": ""
     },
     {
      "id": "13311556199",
@@ -4277,8 +4444,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4287,7 +4454,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": ""
     }
    ]
   },
@@ -4308,8 +4476,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "Green Harbour",
-     "solicitado": 28573.13,
-     "revisado": null,
+     "preliminar": 28573.13,
+     "enRevision": null,
      "aprobado": 28573.13,
      "proyectado": null,
      "po": null,
@@ -4318,7 +4486,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098295887",
@@ -4332,8 +4501,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10000,
-     "revisado": null,
+     "preliminar": 10000,
+     "enRevision": null,
      "aprobado": 10000,
      "proyectado": null,
      "po": null,
@@ -4342,7 +4511,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208222"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13127441793",
@@ -4356,8 +4526,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "Green Harbour",
-     "solicitado": 14682.1,
-     "revisado": null,
+     "preliminar": 14682.1,
+     "enRevision": null,
      "aprobado": 14682.1,
      "proyectado": null,
      "po": null,
@@ -4366,7 +4536,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098328358",
@@ -4380,8 +4551,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4390,7 +4561,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081195886"
      ],
-     "actualizado": "2026-10-07"
+     "actualizado": "2026-10-07",
+     "costo": ""
     },
     {
      "id": "13098327364",
@@ -4404,8 +4576,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4414,7 +4586,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081218069"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13127948545",
@@ -4428,8 +4601,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10500,
-     "revisado": null,
+     "preliminar": 10500,
+     "enRevision": null,
      "aprobado": 10500,
      "proyectado": null,
      "po": null,
@@ -4438,7 +4611,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201194"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13238699549",
@@ -4452,8 +4626,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 9000,
-     "revisado": null,
+     "preliminar": 9000,
+     "enRevision": null,
      "aprobado": 9000,
      "proyectado": null,
      "po": null,
@@ -4462,7 +4636,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177348"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098338467",
@@ -4476,8 +4651,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3500,
-     "revisado": null,
+     "preliminar": 3500,
+     "enRevision": null,
      "aprobado": 3500,
      "proyectado": null,
      "po": null,
@@ -4486,7 +4661,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098367009",
@@ -4500,8 +4676,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 3500,
-     "revisado": null,
+     "preliminar": 3500,
+     "enRevision": null,
      "aprobado": 3500,
      "proyectado": null,
      "po": null,
@@ -4510,7 +4686,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098306630",
@@ -4524,8 +4701,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mejora",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 15000,
-     "revisado": null,
+     "preliminar": 15000,
+     "enRevision": null,
      "aprobado": 15000,
      "proyectado": null,
      "po": null,
@@ -4534,7 +4711,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177133"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098338326",
@@ -4548,8 +4726,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4558,7 +4736,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-09-22"
+     "actualizado": "2026-09-22",
+     "costo": ""
     },
     {
      "id": "13098327946",
@@ -4572,8 +4751,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mejora",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10165,
-     "revisado": null,
+     "preliminar": 10165,
+     "enRevision": null,
      "aprobado": 10165,
      "proyectado": null,
      "po": null,
@@ -4582,7 +4761,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200176"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13212064635",
@@ -4596,8 +4776,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 11000,
-     "revisado": null,
+     "preliminar": 11000,
+     "enRevision": null,
      "aprobado": 11000,
      "proyectado": null,
      "po": null,
@@ -4606,7 +4786,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13212017532",
@@ -4620,8 +4801,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 5500,
-     "revisado": null,
+     "preliminar": 5500,
+     "enRevision": null,
      "aprobado": 5500,
      "proyectado": null,
      "po": null,
@@ -4630,7 +4811,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13212064416",
@@ -4644,8 +4826,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Revisado",
      "proveedor": "",
-     "solicitado": 6000,
-     "revisado": null,
+     "preliminar": 6000,
+     "enRevision": null,
      "aprobado": 6000,
      "proyectado": null,
      "po": null,
@@ -4654,7 +4836,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13315637430",
@@ -4668,8 +4851,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": 2500,
-     "revisado": null,
+     "preliminar": 2500,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4678,7 +4861,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "preliminar"
     },
     {
      "id": "13315624518",
@@ -4692,8 +4876,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": 5000,
-     "revisado": null,
+     "preliminar": 5000,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4702,7 +4886,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "preliminar"
     },
     {
      "id": "13315624594",
@@ -4716,8 +4901,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": 4000,
-     "revisado": null,
+     "preliminar": 4000,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4726,7 +4911,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "preliminar"
     },
     {
      "id": "13315655864",
@@ -4740,8 +4926,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4750,7 +4936,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": ""
     }
    ]
   },
@@ -4771,8 +4958,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 6000,
-     "revisado": null,
+     "preliminar": 6000,
+     "enRevision": null,
      "aprobado": 6000,
      "proyectado": null,
      "po": null,
@@ -4781,7 +4968,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200177"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098328158",
@@ -4795,8 +4983,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 0,
-     "revisado": null,
+     "preliminar": 0,
+     "enRevision": null,
      "aprobado": 0,
      "proyectado": null,
      "po": null,
@@ -4805,31 +4993,33 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": ""
     },
     {
      "id": "13098326970",
      "nombre": "Compra de pintura",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 42481,
-     "revisado": null,
+     "preliminar": 42481,
+     "enRevision": null,
      "aprobado": 42481,
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-16",
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098333423",
@@ -4843,8 +5033,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "",
      "proveedor": "",
-     "solicitado": null,
-     "revisado": null,
+     "preliminar": null,
+     "enRevision": null,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4853,7 +5043,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201166"
      ],
-     "actualizado": "2026-10-15"
+     "actualizado": "2026-10-15",
+     "costo": ""
     },
     {
      "id": "13098338352",
@@ -4867,8 +5058,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10000,
-     "revisado": null,
+     "preliminar": 10000,
+     "enRevision": null,
      "aprobado": 10000,
      "proyectado": null,
      "po": null,
@@ -4877,31 +5068,33 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081207823"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098337112",
      "nombre": "Compra de ánodos",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 10850,
-     "revisado": null,
+     "preliminar": 10850,
+     "enRevision": null,
      "aprobado": 10850,
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-16",
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098334682",
@@ -4915,8 +5108,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 14875,
-     "revisado": null,
+     "preliminar": 14875,
+     "enRevision": null,
      "aprobado": 14875,
      "proyectado": null,
      "po": null,
@@ -4925,7 +5118,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081195990"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     },
     {
      "id": "13098338054",
@@ -4939,8 +5133,8 @@ window.DIQUE_MONDAY = {
      "tipo": "Mandatorio",
      "aprobacion": "Pendiente",
      "proveedor": "",
-     "solicitado": 766482,
-     "revisado": 766482,
+     "preliminar": 766482,
+     "enRevision": 766482,
      "aprobado": null,
      "proyectado": null,
      "po": null,
@@ -4949,7 +5143,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201165"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "revision"
     },
     {
      "id": "13278839703",
@@ -4963,8 +5158,8 @@ window.DIQUE_MONDAY = {
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
-     "solicitado": 16732.76,
-     "revisado": null,
+     "preliminar": 16732.76,
+     "enRevision": null,
      "aprobado": 16732.76,
      "proyectado": null,
      "po": null,
@@ -4973,7 +5168,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177347"
      ],
-     "actualizado": "2026-10-16"
+     "actualizado": "2026-10-16",
+     "costo": "aprobado"
     }
    ]
   }
@@ -4984,7 +5180,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.1 · Limpieza de tanques",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 43255.23,
+   "enRevision": 0,
    "aprobado": 43255.23,
    "po": 0,
    "incurrido": 0,
@@ -5000,7 +5197,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.2 · Medición espesores",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 14875,
+   "enRevision": 0,
    "aprobado": 14875,
    "po": 0,
    "incurrido": 0,
@@ -5015,7 +5213,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.3 · Mant tanques lastre",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 0,
+   "enRevision": 0,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5030,7 +5229,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.4 · Pintura & Ánodos",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 53331,
+   "enRevision": 0,
    "aprobado": 53331,
    "po": 0,
    "incurrido": 0,
@@ -5046,7 +5246,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.8 · Bajada slops/Basura",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 10000,
+   "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
    "incurrido": 9325,
@@ -5063,7 +5264,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.6 · Reparaciones cubierta",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 3500,
+   "enRevision": 0,
    "aprobado": 3500,
    "po": 0,
    "incurrido": 0,
@@ -5080,7 +5282,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.7 · Carga materiales",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 10500,
+   "enRevision": 0,
    "aprobado": 10500,
    "po": 0,
    "incurrido": 3100,
@@ -5098,7 +5301,8 @@ window.DIQUE_MONDAY = {
    "nombre": "1.5 · Mat Cubierta/Seguridad",
    "grupo": "1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 37500,
+   "enRevision": 0,
    "aprobado": 26000,
    "po": 0,
    "incurrido": 0,
@@ -5120,7 +5324,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.3 · Agenciamiento",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 16732.76,
+   "enRevision": 0,
    "aprobado": 16732.76,
    "po": 0,
    "incurrido": 0,
@@ -5135,7 +5340,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.2 · Combustibles",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 0,
+   "enRevision": 0,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5148,7 +5354,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.1 · Tránsitos",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 0,
+   "enRevision": 0,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5163,7 +5370,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.4 · Estadía/viáticos",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 9000,
+   "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
    "incurrido": 10500,
@@ -5181,7 +5389,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.5 · Alimentación",
    "grupo": "2.1",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 0,
+   "enRevision": 0,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5194,7 +5403,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.2.1 · Cuenta astillero",
    "grupo": "2.2",
    "estado": "",
-   "revisado": 766482,
+   "preliminar": 766482,
+   "enRevision": 766482,
    "aprobado": 0,
    "po": 0,
    "incurrido": 0,
@@ -5209,7 +5419,8 @@ window.DIQUE_MONDAY = {
    "nombre": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
    "grupo": "2.2",
    "estado": "",
-   "revisado": 7500,
+   "preliminar": 99950.01,
+   "enRevision": 7500,
    "aprobado": 80450.01,
    "po": 0,
    "incurrido": 13280.92,
@@ -5403,7 +5614,8 @@ window.DIQUE_MONDAY = {
    "nombre": "3.1 · Mant acomodaciones",
    "grupo": "3",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 10165,
+   "enRevision": 0,
    "aprobado": 10165,
    "po": 0,
    "incurrido": 0,
@@ -5418,7 +5630,8 @@ window.DIQUE_MONDAY = {
    "nombre": "3.2 · Gastos Clase BV",
    "grupo": "3",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 6000,
+   "enRevision": 0,
    "aprobado": 6000,
    "po": 0,
    "incurrido": 0,
@@ -5433,7 +5646,8 @@ window.DIQUE_MONDAY = {
    "nombre": "3.3 · Calibración tanques",
    "grupo": "3",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 0,
+   "enRevision": 0,
    "aprobado": 0,
    "po": 0,
    "incurrido": 11663,
@@ -5450,7 +5664,8 @@ window.DIQUE_MONDAY = {
    "nombre": "3.4 · Pintura cubierta",
    "grupo": "3",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 15000,
+   "enRevision": 0,
    "aprobado": 15000,
    "po": 0,
    "incurrido": 0,
@@ -5465,7 +5680,8 @@ window.DIQUE_MONDAY = {
    "nombre": "3.5 · Bonificación tripulac",
    "grupo": "3",
    "estado": "",
-   "revisado": 0,
+   "preliminar": 10000,
+   "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
    "incurrido": 0,
@@ -6288,6 +6504,151 @@ window.DIQUE_MONDAY = {
    "medio": 50
   }
  },
+ "programa": [
+  {
+   "id": "13044078075",
+   "nave": "Kelly Trader",
+   "anio": "2027",
+   "estado": "En curso",
+   "mandatorio": "2027-03-23",
+   "real": "2026-10-05",
+   "diferencia": -169,
+   "lugar": "Cartagena",
+   "tipo": "Especial",
+   "anterior": 906404,
+   "estimado": 800000
+  },
+  {
+   "id": "13044082478",
+   "nave": "Perlas Trader",
+   "anio": "2027",
+   "estado": "",
+   "mandatorio": "2027-01-10",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": null,
+   "estimado": 550000
+  },
+  {
+   "id": "13044082494",
+   "nave": "Neo Trader",
+   "anio": "2027",
+   "estado": "",
+   "mandatorio": "2027-01-13",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Cartagena",
+   "tipo": "Intermedio",
+   "anterior": 501251,
+   "estimado": 600000
+  },
+  {
+   "id": "13044078081",
+   "nave": "Roxana Trader",
+   "anio": "2027",
+   "estado": "",
+   "mandatorio": "2027-11-27",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": 684663,
+   "estimado": 600000
+  },
+  {
+   "id": "13044078169",
+   "nave": "Isthmus Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-01-19",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Intermedio",
+   "anterior": 528477,
+   "estimado": 475000
+  },
+  {
+   "id": "13044078268",
+   "nave": "Kingston Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-06-15",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": null,
+   "estimado": 700000
+  },
+  {
+   "id": "13044078304",
+   "nave": "Pacific Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-06-18",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": null,
+   "estimado": 600000
+  },
+  {
+   "id": "13044078307",
+   "nave": "Caribbean Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-06-22",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Cartagena",
+   "tipo": "Especial",
+   "anterior": null,
+   "estimado": 475000
+  },
+  {
+   "id": "13044078342",
+   "nave": "Colon Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-06-24",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": null,
+   "estimado": 600000
+  },
+  {
+   "id": "13044078393",
+   "nave": "JC Trader",
+   "anio": "2028",
+   "estado": "",
+   "mandatorio": "2028-10-15",
+   "real": null,
+   "diferencia": null,
+   "lugar": "Cartagena",
+   "tipo": "Intermedio",
+   "anterior": 614292,
+   "estimado": 550000
+  },
+  {
+   "id": "13044082969",
+   "nave": "Neo Trader",
+   "anio": "2029",
+   "estado": "",
+   "mandatorio": "2029-01-13",
+   "real": "2029-01-13",
+   "diferencia": 0,
+   "lugar": "Panamá",
+   "tipo": "Especial",
+   "anterior": 600000,
+   "estimado": 500000
+  }
+ ],
  "avance": {
   "ingenieria": {
    "lineas": 168,
@@ -6305,520 +6666,44 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 8,
    "duracion": 76,
-   "avanceDias": 1.25
+   "avanceDias": 2.75
   },
   "total": {
    "lineas": 196,
    "conDuracion": 51,
    "duracion": 165,
-   "avanceDias": 17.5
+   "avanceDias": 19.0
   }
  },
- "_huella": "d7685337ab61",
+ "_huella": "b1cf76720a73",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "$ Revisado Gerencia",
-   "antes": "4200",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "$ Revisado Gerencia",
-   "antes": "4600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-   "campo": "$ Revisado Gerencia",
-   "antes": "2500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3200",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3400",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Control local de propulsión + Cargador de batería #2",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Auto pilot + Sewage (motor y compresor)",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "$ Revisado Gerencia",
-   "antes": "5100",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "$ Revisado Gerencia",
-   "antes": "6250",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "$ Aprobado",
-   "antes": "0",
-   "ahora": "6250"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
-   "campo": "$ Revisado Gerencia",
-   "antes": "5000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "$ Revisado Gerencia",
-   "antes": "0",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "$ Aprobado",
-   "antes": "—",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Aprobado Dirección"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Sello interno del acople del eje de paso variable",
-   "campo": "$ Revisado Gerencia",
-   "antes": "2600",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de máquina principal",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de los generadores",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de agua salada de los generadores",
-   "campo": "$ Revisado Gerencia",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de overflow hacia el sludge tank",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
-   "campo": "$ Revisado Gerencia",
-   "antes": "0.01",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "$ Revisado Gerencia",
-   "antes": "1500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "$ Revisado Gerencia",
-   "antes": "8000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "$ Revisado Gerencia",
-   "antes": "28573.13",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Revisado Gerencia",
-   "antes": "10000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de Tanques de Lastre",
-   "campo": "$ Revisado Gerencia",
-   "antes": "14682.1",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "$ Revisado Gerencia",
-   "antes": "10500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "$ Revisado Gerencia",
-   "antes": "9000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales cubierta",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
-   "campo": "$ Revisado Gerencia",
-   "antes": "3500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Pintura de la cubierta",
-   "campo": "$ Revisado Gerencia",
-   "antes": "15000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Mantenimiento a acomodaciones",
-   "campo": "$ Revisado Gerencia",
-   "antes": "10165",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "$ Revisado Gerencia",
-   "antes": "11000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "$ Solicitado",
-   "antes": "2500",
-   "ahora": "5500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "$ Revisado Gerencia",
-   "antes": "2500",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "$ Aprobado",
-   "antes": "2500",
-   "ahora": "5500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
-   "campo": "$ Revisado Gerencia",
-   "antes": "6000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "borrado",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
-   "campo": "borrado",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "borrado",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "borrado",
-   "antes": "",
-   "ahora": ""
-  },
-  {
    "tablero": "P3. Técnico",
-   "trabajo": "Gasto de Clase",
-   "campo": "$ Revisado Gerencia",
-   "antes": "6000",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
-   "campo": "$ Revisado Gerencia",
-   "antes": "0",
-   "ahora": "—"
+   "trabajo": "Compra de pintura",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "100%"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Compra de pintura",
-   "campo": "$ Revisado Gerencia",
-   "antes": "42481",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Bono dique",
-   "campo": "$ Revisado Gerencia",
-   "antes": "10000",
-   "ahora": "—"
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-16"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Compra de ánodos",
-   "campo": "$ Revisado Gerencia",
-   "antes": "10850",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
    "campo": "Estado",
-   "antes": "100%",
-   "ahora": "75%"
+   "antes": "25%",
+   "ahora": "100%"
   },
   {
    "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "$ Revisado Gerencia",
-   "antes": "14875",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "$ Revisado Gerencia",
+   "trabajo": "Compra de ánodos",
+   "campo": "Fecha Fin",
    "antes": "—",
-   "ahora": "766482"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Agenciamiento",
-   "campo": "$ Revisado Gerencia",
-   "antes": "16732.76",
-   "ahora": "—"
+   "ahora": "2026-10-16"
   }
  ],
  "observaciones": [
@@ -6847,8 +6732,20 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: la columna \"$ Revisado Gerencia\" ahora se llama \"$En Revisión\" (numeric_mm78kpas); la usa el dashboard: revisar que siga significando lo mismo."
   },
   {
+   "nivel": "aviso",
+   "texto": "CC. Centros de Costo - Kelly Trader: columna nueva \"$ Preliminar\" (formula_mm867352, formula); revisar si el dashboard debe usarla."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"$ Preliminar\" ahora se llama \"$ En Revisión\" (formula_mm7d91f2); la usa el dashboard: revisar que siga significando lo mismo."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "CC. Centros de Costo - Kelly Trader: columna nueva \"Σ Preliminar\" (lookup_mm86c6e2, mirror); revisar si el dashboard debe usarla."
+  },
+  {
    "nivel": "info",
-   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"Σ Revisado Gerencia\" ahora se llama \"Σ Revisado\" (lookup_mm7azrff)."
+   "texto": "CC. Centros de Costo - Kelly Trader: la columna \"Σ Revisado Gerencia\" ahora se llama \"Σ En Revisado\" (lookup_mm7azrff)."
   },
   {
    "nivel": "aviso",
@@ -6879,12 +6776,32 @@ window.DIQUE_MONDAY = {
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
   },
   {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Eje de cola — sellos e inspección\": Estado Aprobación = \"Aprobado Dirección\" pero no tiene $ Aprobado."
+  },
+  {
+   "nivel": "info",
+   "texto": "P1. Ingeniería · \"Imprevisto\": aprobado US$ 8,000 distinto del preliminar US$ 10,000."
+  },
+  {
    "nivel": "info",
    "texto": "P1. Ingeniería: 31 trabajo(s) planificado(s) · 1 en ejecución · 1 finalizado(s) · 29 por iniciar."
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 6 trabajo(s) con monto solicitado aún sin aprobar (US$ 17,500)."
+   "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 7,500 (5) · aprobado US$ 80,450 (25) · sin enviar a revisión 1."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta · \"Foam – Agente Espumógeno\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta · \"Bote de Rescate – Casco\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta · \"Speed Log – Doppler\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
   },
   {
    "nivel": "info",
@@ -6896,15 +6813,19 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 3 trabajo(s) con monto solicitado aún sin aprobar (US$ 11,500)."
+   "texto": "P2. Cubierta: preliminar US$ 138,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 3."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\": tiene $ En Revisión pero Estado Aprobación = \"Pendiente\"."
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 3 en ejecución · 0 finalizado(s) · 5 por iniciar."
+   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 1 en ejecución · 2 finalizado(s) · 5 por iniciar."
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 1 trabajo(s) con monto solicitado aún sin aprobar (US$ 766,482)."
+   "texto": "P3. Técnico: preliminar US$ 867,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 0."
   },
   {
    "nivel": "aviso",
@@ -6981,6 +6902,14 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Participación del equipo: 76.7% (23 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+  },
+  {
+   "nivel": "info",
+   "texto": "PROGRAMA DE DIQUES: 11 diques · estimado total US$ 6,450,000."
+  },
+  {
+   "nivel": "info",
+   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };

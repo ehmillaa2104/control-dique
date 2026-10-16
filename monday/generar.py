@@ -26,30 +26,32 @@ SALIDA = AQUI.parent / "monday.js"
 CONOCIDAS = AQUI / "columnas_conocidas.json"  # estructura de los tableros la última vez que se revisó
 
 # Tableros del Kelly Trader y sus columnas (ID de columna en Monday)
+# Costos de cada trabajo (desde el 16 oct): "$ Preliminar" = lo que solicita el equipo, "$ En Revisión" = lo que está
+# en revisión por la Dirección de Operaciones y "$ Aprobado" = lo aprobado hasta la fecha. El tablero CC suma cada uno.
 TABLEROS = {
     "cronograma": {"id": "18431008651", "col": {
         "estado": "color_mm6v6vf2", "duracion": "numeric_mm6zgcqw", "real": "timerange_mm78kjs",
         "base": "timerange_mm7yfj5p", "diferencia": "formula_mm7ygv4s", "actualizado": "pulse_updated_mm7gn7r8"}},
     "ingenieria": {"id": "18431019817", "nombre": "Ingeniería", "col": {
         "fase": "color_mm6wsp0z", "estado": "color_mm7yb2cs", "duracion": "numeric_mm7yw5hx", "tipo": "color_mm781mjk",
-        "aprobacion": "color_mm6v621m", "solicitado": "numeric_mm6vjdrd", "revisado": "numeric_mm78kpas",
+        "aprobacion": "color_mm6v621m", "preliminar": "numeric_mm6vjdrd", "enRevision": "numeric_mm78kpas",
         "aprobado": "numeric_mm78s0hd", "proyectado": "numeric_mm7y9v4k", "po": "lookup_mm7yk7y7",
         "incurrido": "lookup_mm7yh3hm", "fin": "date_mm7yv15j", "cc": "board_relation_mm7am925",
         "proveedor": "dropdown_mm70s99n", "actualizado": "pulse_updated_mm7g2q1g"}},
     "cubierta": {"id": "18432105237", "nombre": "Cubierta", "col": {
         "fase": "color_mm6wsp0z", "estado": "color_mm7y4j97", "duracion": "numeric_mm7y9sbv", "tipo": "color_mm781mjk",
-        "aprobacion": "color_mm6v621m", "solicitado": "numeric_mm6vjdrd", "revisado": "numeric_mm78kpas",
+        "aprobacion": "color_mm6v621m", "preliminar": "numeric_mm6vjdrd", "enRevision": "numeric_mm78kpas",
         "aprobado": "numeric_mm78s0hd", "proyectado": "numeric_mm7yw4b3", "po": "lookup_mm7y2awx",
         "incurrido": "lookup_mm7ybkjg", "fin": "date_mm7ya280", "cc": "board_relation_mm7am925",
         "proveedor": "dropdown_mm70s99n", "actualizado": "pulse_updated_mm7ga065"}},
     "tecnico": {"id": "18432105438", "nombre": "Técnico", "col": {
         "fase": "color_mm6wsp0z", "estado": "color_mm7vv5nh", "duracion": "numeric_mm7v7xt9", "tipo": "color_mm781mjk",
-        "aprobacion": "color_mm6v621m", "solicitado": "numeric_mm6vjdrd", "revisado": "numeric_mm78kpas",
+        "aprobacion": "color_mm6v621m", "preliminar": "numeric_mm6vjdrd", "enRevision": "numeric_mm78kpas",
         "aprobado": "numeric_mm78s0hd", "proyectado": "numeric_mm7y6h6f", "po": "lookup_mm7ywkfv",
         "incurrido": "lookup_mm7ym614", "fin": "date_mm7yw7ca", "cc": "board_relation_mm7am925",
         "proveedor": "dropdown_mm70s99n", "actualizado": "pulse_updated_mm7ge32a"}},
     "centros": {"id": "18431746322", "col": {
-        "estado": "estado_dir", "revisado": "formula_mm7d91f2", "aprobado": "formula_mm7dehmt", "po": "formula_mm7yshcc",
+        "estado": "estado_dir", "preliminar": "formula_mm867352", "enRevision": "formula_mm7d91f2", "aprobado": "formula_mm7dehmt", "po": "formula_mm7yshcc",
         "incurrido": "formula_mm7yyr9q", "proyectado": "formula_mm7ydqr4", "lineas": "board_relation_mm7a4ck0",
         "pos": "board_relation_mm7yxa9r"}},
     "pos": {"id": "18431381932", "col": {
@@ -204,10 +206,13 @@ def area(key, tab):
             "id": it["id"], "nombre": texto(it["name"]), "grupo": it["group"]["title"], "fase": v["fase"] or "",
             "estado": est, "pct": pct or 0, "cancelado": est == "Cancelado", "duracion": num(v["duracion"]),
             "tipo": v["tipo"] or "", "aprobacion": v["aprobacion"] or "", "proveedor": v["proveedor"] or "",
-            "solicitado": num(v["solicitado"]), "revisado": num(v["revisado"]), "aprobado": num(v["aprobado"]),
+            "preliminar": num(v["preliminar"]), "enRevision": num(v["enRevision"]), "aprobado": num(v["aprobado"]),
             "proyectado": num(v["proyectado"]), "po": num(v["po"]), "incurrido": num(v["incurrido"]),
             "fin": fecha(v["fin"]), "cc": v["cc"], "actualizado": fecha(v["actualizado"])})
+        t = trabajos[-1]
+        t["costo"] = costo_estado(t)
     act = [t for t in trabajos if not t["cancelado"]]
+    revisar_costos(b["name"], act)
     con = [t for t in act if t["duracion"] and t["duracion"] > 0]
     # Un trabajo con Duración es un trabajo planificado para ejecutarse
     if act and not con:
@@ -227,10 +232,36 @@ def area(key, tab):
     sin_cc = [t for t in act if not t["cc"]]
     if sin_cc:
         obs.append(("aviso", f'{b["name"]}: {len(sin_cc)} trabajo(s) sin Centro de Costo: {", ".join(t["nombre"] for t in sin_cc[:4])}{"…" if len(sin_cc) > 4 else ""}.'))
-    pend = [t for t in act if t["solicitado"] and not t["aprobado"]]
-    if pend:
-        obs.append(("info", f'{b["name"]}: {len(pend)} trabajo(s) con monto solicitado aún sin aprobar (US$ {sum(t["solicitado"] for t in pend):,.0f}).'))
+    por = {k: [t for t in act if t["costo"] == k] for k in ("preliminar", "revision", "aprobado")}
+    obs.append(("info", f'{b["name"]}: preliminar US$ {sum(t["preliminar"] or 0 for t in act):,.0f} · en revisión US$ {sum(t["enRevision"] or 0 for t in act):,.0f} ({len(por["revision"])}) · aprobado US$ {sum(t["aprobado"] or 0 for t in act):,.0f} ({len(por["aprobado"])}) · sin enviar a revisión {len(por["preliminar"])}.'))
     return {"id": key, "nombre": TABLEROS[key]["nombre"], "tablero": b["name"], "trabajos": trabajos}
+
+
+def costo_estado(t):
+    """En qué etapa está el costo del trabajo, según sus montos: aprobado, en revisión o solo preliminar."""
+    if t["aprobado"]:
+        return "aprobado"
+    if t["enRevision"]:
+        return "revision"
+    if t["preliminar"]:
+        return "preliminar"
+    return ""
+
+
+def revisar_costos(tablero, act):
+    """Avisa cuando el Estado Aprobación no coincide con los montos o cuando lo aprobado difiere del preliminar."""
+    for t in act:
+        e, nom = (t["aprobacion"] or "").lower(), t["nombre"]
+        if t["costo"] == "aprobado" and "aprob" not in e:
+            obs.append(("aviso", f'{tablero} · "{nom}": tiene $ Aprobado pero Estado Aprobación = "{t["aprobacion"] or "vacío"}".'))
+        elif t["costo"] == "revision" and "revis" not in e:
+            obs.append(("aviso", f'{tablero} · "{nom}": tiene $ En Revisión pero Estado Aprobación = "{t["aprobacion"] or "vacío"}".'))
+        elif "aprob" in e and not t["aprobado"] and t["preliminar"]:
+            obs.append(("aviso", f'{tablero} · "{nom}": Estado Aprobación = "{t["aprobacion"]}" pero no tiene $ Aprobado.'))
+        if t["aprobado"] and t["enRevision"]:
+            obs.append(("aviso", f'{tablero} · "{nom}": tiene $ Aprobado y $ En Revisión a la vez.'))
+        if t["aprobado"] and t["preliminar"] and abs(t["aprobado"] - t["preliminar"]) > 0.5:
+            obs.append(("info", f'{tablero} · "{nom}": aprobado US$ {t["aprobado"]:,.0f} distinto del preliminar US$ {t["preliminar"]:,.0f}.'))
 
 
 def centros(tab, areas):
@@ -239,11 +270,11 @@ def centros(tab, areas):
     out = []
     for it, v in items:
         c = {"id": it["id"], "nombre": texto(it["name"]), "grupo": it["group"]["title"], "estado": v["estado"] or "",
-             "revisado": num(v["revisado"]) or 0, "aprobado": num(v["aprobado"]) or 0, "po": num(v["po"]) or 0,
+             "preliminar": num(v["preliminar"]) or 0, "enRevision": num(v["enRevision"]) or 0, "aprobado": num(v["aprobado"]) or 0, "po": num(v["po"]) or 0,
              "incurrido": num(v["incurrido"]) or 0, "proyectado": num(v["proyectado"]) or 0,
              "lineas": v["lineas"], "pos": v["pos"]}
         # El CC suma sus líneas de P1/P2/P3: se comprueba con las líneas leídas
-        for campo in ("aprobado", "revisado", "proyectado"):
+        for campo in ("preliminar", "enRevision", "aprobado", "proyectado"):
             s = sum((lineas[i][campo] or 0) for i in c["lineas"] if i in lineas)
             if abs(s - c[campo]) > 0.5:
                 obs.append(("error", f'CC "{c["nombre"]}": ${campo} = {c[campo]:,.0f} en Monday, pero sus líneas suman {s:,.0f}.'))
@@ -345,8 +376,8 @@ def revisar_columnas(raw):
 
 
 # Campos que se comparan contra la lectura anterior (lo que más interesa revisar: duración, avance, fechas y montos)
-CAMPOS_TRABAJO = {"duracion": "Duración", "estado": "Estado", "fase": "Fase", "fin": "Fecha Fin", "solicitado": "$ Solicitado",
-                  "revisado": "$ Revisado Gerencia", "aprobado": "$ Aprobado", "proyectado": "$ Proyectado", "po": "$ PO",
+CAMPOS_TRABAJO = {"duracion": "Duración", "estado": "Estado", "fase": "Fase", "fin": "Fecha Fin", "preliminar": "$ Preliminar",
+                  "enRevision": "$ En Revisión", "aprobado": "$ Aprobado", "proyectado": "$ Proyectado", "po": "$ PO",
                   "incurrido": "$ Incurrido", "aprobacion": "Estado Aprobación", "cc": "Centro de Costo"}
 CAMPOS_CRONO = {"estado": "Estado", "real": "Fecha Real", "base": "Línea Base", "diferencia": "Diferencia", "duracion": "Duración"}
 
@@ -374,6 +405,9 @@ def comparar_con_anterior(datos):
             if o.get(k) != r.get(k):
                 cambios.append({"tablero": "Cronograma", "trabajo": r["nombre"], "campo": n, "antes": fmt(o.get(k)), "ahora": fmt(r.get(k))})
     a_trab = {t["id"]: t for a in ant.get("areas", []) for t in a["trabajos"]}
+    for o in a_trab.values():  # lecturas de antes del 16 oct: "$ Solicitado" y "$ Revisado Gerencia"
+        if "preliminar" not in o:
+            o["preliminar"], o["enRevision"] = o.get("solicitado"), o.get("revisado")
     cc_nombre = {c["id"]: c["nombre"] for c in datos.get("centros", [])}
     for a in datos["areas"]:
         ids = set()

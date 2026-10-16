@@ -979,7 +979,7 @@
       "id": "13098326970",
       "name": "Compra de pintura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T21:15:24Z",
+      "updated_at": "2026-10-16T21:33:10Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1031,12 +1031,12 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 21:15:24 UTC"
+        "text": "2026-10-16 21:33:10 UTC"
        },
        {
         "id": "color_mm7vv5nh",
         "type": "status",
-        "text": "25%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7v7xt9",
@@ -1051,7 +1051,7 @@
        {
         "id": "date_mm7yw7ca",
         "type": "date",
-        "text": ""
+        "text": "2026-10-16"
        },
        {
         "id": "lookup_mm7ywkfv",
@@ -1255,7 +1255,7 @@
       "id": "13098337112",
       "name": "Compra de ánodos",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-16T21:15:22Z",
+      "updated_at": "2026-10-16T21:33:12Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1307,12 +1307,12 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-16 21:15:22 UTC"
+        "text": "2026-10-16 21:33:12 UTC"
        },
        {
         "id": "color_mm7vv5nh",
         "type": "status",
-        "text": "25%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7v7xt9",
@@ -1327,7 +1327,7 @@
        {
         "id": "date_mm7yw7ca",
         "type": "date",
-        "text": ""
+        "text": "2026-10-16"
        },
        {
         "id": "lookup_mm7ywkfv",
@@ -3531,8 +3531,13 @@
      "type": "status"
     },
     {
-     "id": "formula_mm7d91f2",
+     "id": "formula_mm867352",
      "title": "$ Preliminar",
+     "type": "formula"
+    },
+    {
+     "id": "formula_mm7d91f2",
+     "title": "$ En Revisión",
      "type": "formula"
     },
     {
@@ -3561,8 +3566,13 @@
      "type": "board_relation"
     },
     {
+     "id": "lookup_mm86c6e2",
+     "title": "Σ Preliminar",
+     "type": "mirror"
+    },
+    {
      "id": "lookup_mm7azrff",
-     "title": "Σ Revisado",
+     "title": "Σ En Revisado",
      "type": "mirror"
     },
     {
@@ -3608,6 +3618,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "43255.23"
        },
        {
         "id": "formula_mm7d91f2",
@@ -3672,6 +3688,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "14875"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -3731,6 +3753,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
        },
        {
         "id": "formula_mm7d91f2",
@@ -3794,6 +3822,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "53331"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -3854,6 +3888,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "10000"
        },
        {
         "id": "formula_mm7d91f2",
@@ -3919,6 +3959,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "3500"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -3980,6 +4026,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "10500"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4044,6 +4096,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "37500"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4114,6 +4172,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "16732.76"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4175,6 +4239,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4232,6 +4302,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4293,6 +4369,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "9000"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4359,6 +4441,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4416,6 +4504,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "766482"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4477,6 +4571,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "99950.01"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4719,6 +4819,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "10165"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4780,6 +4886,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "6000"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4839,6 +4951,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4904,6 +5022,12 @@
         "text": ""
        },
        {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "15000"
+       },
+       {
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
@@ -4963,6 +5087,12 @@
         "id": "estado_dir",
         "type": "status",
         "text": ""
+       },
+       {
+        "id": "formula_mm867352",
+        "type": "formula",
+        "text": "",
+        "display_value": "10000"
        },
        {
         "id": "formula_mm7d91f2",
@@ -6427,6 +6557,650 @@
    "items_page": {
     "cursor": null,
     "items": []
+   }
+  },
+  {
+   "id": "18431022776",
+   "name": "PROGRAMA DE DIQUES",
+   "columns": [
+    {
+     "id": "name",
+     "title": "Nave",
+     "type": "name"
+    },
+    {
+     "id": "color_mm7e7wfd",
+     "title": "Estado",
+     "type": "status"
+    },
+    {
+     "id": "date_mm78x2pe",
+     "title": "Mandatorio",
+     "type": "date"
+    },
+    {
+     "id": "date_mm766e7z",
+     "title": "Fecha Real",
+     "type": "date"
+    },
+    {
+     "id": "formula_mm78vqa2",
+     "title": "Diferencia",
+     "type": "formula"
+    },
+    {
+     "id": "color_mm765t5s",
+     "title": "Lugar",
+     "type": "status"
+    },
+    {
+     "id": "color_mm7666ab",
+     "title": "Tipo de dique",
+     "type": "status"
+    },
+    {
+     "id": "numeric_mm766312",
+     "title": "$ dique anterior",
+     "type": "numbers"
+    },
+    {
+     "id": "numeric_mm76thhf",
+     "title": "$ estimado próximo dique",
+     "type": "numbers"
+    },
+    {
+     "id": "long_text_mm769eya",
+     "title": "Observaciones",
+     "type": "long_text"
+    }
+   ],
+   "items_page": {
+    "cursor": null,
+    "items": [
+     {
+      "id": "13044078075",
+      "name": "Kelly Trader",
+      "created_at": "2026-09-14T20:00:46Z",
+      "updated_at": "2026-10-14T21:04:28Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": "En curso"
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2027-03-23"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": "2026-10-05"
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "-169"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Cartagena"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "906404"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "800000"
+       }
+      ]
+     },
+     {
+      "id": "13044082478",
+      "name": "Perlas Trader",
+      "created_at": "2026-09-14T20:00:44Z",
+      "updated_at": "2026-09-23T20:08:44Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2027-01-10"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "550000"
+       }
+      ]
+     },
+     {
+      "id": "13044082494",
+      "name": "Neo Trader",
+      "created_at": "2026-09-14T20:00:45Z",
+      "updated_at": "2026-09-23T20:08:49Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2027-01-13"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Cartagena"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Intermedio"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "501251"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "600000"
+       }
+      ]
+     },
+     {
+      "id": "13044078081",
+      "name": "Roxana Trader",
+      "created_at": "2026-09-14T20:00:47Z",
+      "updated_at": "2026-09-23T20:08:50Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2027-11-27"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "684663"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "600000"
+       }
+      ]
+     },
+     {
+      "id": "13044078169",
+      "name": "Isthmus Trader",
+      "created_at": "2026-09-14T20:00:48Z",
+      "updated_at": "2026-09-23T20:08:53Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-01-19"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Intermedio"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "528477"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "475000"
+       }
+      ]
+     },
+     {
+      "id": "13044078268",
+      "name": "Kingston Trader",
+      "created_at": "2026-09-14T20:00:49Z",
+      "updated_at": "2026-09-23T20:08:55Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-06-15"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "700000"
+       }
+      ]
+     },
+     {
+      "id": "13044078304",
+      "name": "Pacific Trader",
+      "created_at": "2026-09-14T20:00:51Z",
+      "updated_at": "2026-09-23T20:08:56Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-06-18"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "600000"
+       }
+      ]
+     },
+     {
+      "id": "13044078307",
+      "name": "Caribbean Trader",
+      "created_at": "2026-09-14T20:00:53Z",
+      "updated_at": "2026-09-23T20:08:59Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-06-22"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Cartagena"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "475000"
+       }
+      ]
+     },
+     {
+      "id": "13044078342",
+      "name": "Colon Trader",
+      "created_at": "2026-09-14T20:00:55Z",
+      "updated_at": "2026-09-23T20:09:02Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-06-24"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "600000"
+       }
+      ]
+     },
+     {
+      "id": "13044078393",
+      "name": "JC Trader",
+      "created_at": "2026-09-14T20:00:56Z",
+      "updated_at": "2026-09-23T20:09:03Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2028-10-15"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "null"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Cartagena"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Intermedio"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "614292"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "550000"
+       }
+      ]
+     },
+     {
+      "id": "13044082969",
+      "name": "Neo Trader",
+      "created_at": "2026-09-14T20:00:57Z",
+      "updated_at": "2026-09-23T20:09:05Z",
+      "group": {
+       "id": "group_mm76dyf0",
+       "title": "2029"
+      },
+      "column_values": [
+       {
+        "id": "color_mm7e7wfd",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "date_mm78x2pe",
+        "type": "date",
+        "text": "2029-01-13"
+       },
+       {
+        "id": "date_mm766e7z",
+        "type": "date",
+        "text": "2029-01-13"
+       },
+       {
+        "id": "formula_mm78vqa2",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
+       },
+       {
+        "id": "color_mm765t5s",
+        "type": "status",
+        "text": "Panamá"
+       },
+       {
+        "id": "color_mm7666ab",
+        "type": "status",
+        "text": "Especial"
+       },
+       {
+        "id": "numeric_mm766312",
+        "type": "numbers",
+        "text": "600000"
+       },
+       {
+        "id": "numeric_mm76thhf",
+        "type": "numbers",
+        "text": "500000"
+       }
+      ]
+     }
+    ]
    }
   },
   {

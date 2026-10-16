@@ -76,14 +76,15 @@ Los gastos generales son los **centros de costo** de este tablero, con los mismo
 | Dato del dashboard | Columna Monday | ID columna |
 |---|---|---|
 | Nombre del gasto | Name | `name` |
-| Presupuesto preliminar (revisado por Gerencia) | $ Preliminar (antes "$ Revisado") | `formula_mm7d91f2` |
-| Costo plan aprobado | $ Aprobado | `formula_mm7dehmt` |
+| Preliminar (lo que solicita el equipo) | $ Preliminar (desde el 16 oct) | `formula_mm867352` |
+| En revisión (Dirección de Operaciones) | $ En Revisión (antes "$ Preliminar") | `formula_mm7d91f2` |
+| Aprobado hasta la fecha | $ Aprobado | `formula_mm7dehmt` |
 | Comprometido (PO) | $ PO Total | `formula_mm7yshcc` |
 | Incurrido | $ Incurrido | `formula_mm7yyr9q` |
 | Proyectado | $ Proyectado | `formula_mm7ydqr4` |
 | Estado de aprobación | Estado Aprobación | `estado_dir` |
 
-Cada centro de costo suma las líneas de P1, P2 y P3 conectadas a él y las POs enlazadas. Al 2026-10-08 todos estaban en US$ 0.
+Cada centro de costo suma las líneas de P1, P2 y P3 conectadas a él y las POs enlazadas. En cada trabajo: "$ Preliminar" (`numeric_mm6vjdrd`, antes "$ Solicitado (Equipo)"), "$ En Revisión" (`numeric_mm78kpas`, antes "$ Revisado Gerencia") y "$ Aprobado" (`numeric_mm78s0hd`). Al 2026-10-08 todos estaban en US$ 0.
 
 ### `incurrido` y `desembolsos` ← POs Kelly Trader
 
