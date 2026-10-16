@@ -223,7 +223,7 @@ def area(key, tab):
         obs.append(("info", f'{b["name"]}: {len(con)} trabajo(s) planificado(s) · {ejec} en ejecución · {fin} finalizado(s) · {len(con) - ejec - fin} por iniciar.'))
     # Un trabajo con fase (Pre-dique, Dique, Post-dique…) está planificado: debería tener Duración para contar en el avance
     con_fase = [t for t in act if t["fase"] and not re.search(r"no aplica", t["fase"], re.I)]
-    sin_dur = [t for t in con_fase if not (t["duracion"] and t["duracion"] > 0)]
+    sin_dur = [t for t in con_fase if not (t["duracion"] and t["duracion"] > 0) and t["costo"] != "descartado"]
     if sin_dur:
         obs.append(("aviso", f'{b["name"]}: {len(sin_dur)} trabajo(s) con fase pero sin Duración; no cuentan en el avance: {", ".join(t["nombre"] for t in sin_dur[:5])}{"…" if len(sin_dur) > 5 else ""}.'))
     sin_fase_dur = [t for t in act if t not in con_fase and t["duracion"] and t["duracion"] > 0]
@@ -238,7 +238,9 @@ def area(key, tab):
 
 
 def costo_estado(t):
-    """En qué etapa está el costo del trabajo, según sus montos: aprobado, en revisión o solo preliminar."""
+    """En qué etapa está el costo del trabajo, según sus montos: aprobado, en revisión o solo preliminar (o descartado)."""
+    if re.search(r"descart", t["aprobacion"] or "", re.I):
+        return "descartado"
     if t["aprobado"]:
         return "aprobado"
     if t["enRevision"]:
@@ -250,6 +252,9 @@ def costo_estado(t):
 
 def revisar_costos(tablero, act):
     """Avisa cuando el Estado Aprobación no coincide con los montos o cuando lo aprobado difiere del preliminar."""
+    desc = [t for t in act if t["costo"] == "descartado" and t["preliminar"]]
+    if desc:
+        obs.append(("aviso", f'{tablero}: {len(desc)} trabajo(s) descartado(s) con $ Preliminar (US$ {sum(t["preliminar"] for t in desc):,.0f}), que sigue sumando en el preliminar del tablero CC: {", ".join(t["nombre"] for t in desc)}.'))
     for t in act:
         e, nom = (t["aprobacion"] or "").lower(), t["nombre"]
         if t["costo"] == "aprobado" and "aprob" not in e:

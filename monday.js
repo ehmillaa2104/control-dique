@@ -272,7 +272,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -297,7 +297,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": 55.88,
      "fin": null,
@@ -797,7 +797,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 4200,
      "enRevision": null,
      "aprobado": 4200,
-     "proyectado": null,
+     "proyectado": 4200,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-14",
@@ -1322,7 +1322,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -1347,7 +1347,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -1372,7 +1372,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 4600,
      "enRevision": null,
      "aprobado": 4600,
-     "proyectado": null,
+     "proyectado": 4600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -1397,7 +1397,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -1422,7 +1422,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 2500,
      "enRevision": null,
      "aprobado": 2500,
-     "proyectado": null,
+     "proyectado": 2500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -1447,7 +1447,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3200,
      "enRevision": null,
      "aprobado": 3200,
-     "proyectado": null,
+     "proyectado": 3200,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2172,7 +2172,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3400,
      "enRevision": null,
      "aprobado": 3400,
-     "proyectado": null,
+     "proyectado": 3400,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2422,14 +2422,14 @@ window.DIQUE_MONDAY = {
      "preliminar": null,
      "enRevision": null,
      "aprobado": 0,
-     "proyectado": null,
+     "proyectado": 0,
      "po": null,
      "incurrido": null,
      "fin": null,
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-16",
      "costo": ""
     },
     {
@@ -2447,7 +2447,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3500,
      "enRevision": null,
      "aprobado": 3500,
-     "proyectado": null,
+     "proyectado": 3500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2522,7 +2522,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2547,7 +2547,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2572,7 +2572,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2597,7 +2597,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2622,7 +2622,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -2647,7 +2647,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3600,
      "enRevision": null,
      "aprobado": 3600,
-     "proyectado": null,
+     "proyectado": 3600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3122,7 +3122,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 5100,
      "enRevision": null,
      "aprobado": 5100,
-     "proyectado": null,
+     "proyectado": 5100,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3197,7 +3197,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 6250,
      "enRevision": null,
      "aprobado": 6250,
-     "proyectado": null,
+     "proyectado": 6250,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3522,7 +3522,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 5000,
      "enRevision": null,
      "aprobado": 5000,
-     "proyectado": null,
+     "proyectado": 5000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3622,7 +3622,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10000,
      "enRevision": null,
      "aprobado": 0,
-     "proyectado": null,
+     "proyectado": 0,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3647,7 +3647,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 2600,
      "enRevision": null,
      "aprobado": 2600,
-     "proyectado": null,
+     "proyectado": 2600,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4247,7 +4247,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4272,7 +4272,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 0.01,
      "enRevision": null,
      "aprobado": 0.01,
-     "proyectado": null,
+     "proyectado": 0.01,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4297,7 +4297,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 1500,
      "enRevision": null,
      "aprobado": 1500,
-     "proyectado": null,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4322,7 +4322,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10000,
      "enRevision": null,
      "aprobado": 8000,
-     "proyectado": null,
+     "proyectado": 8000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4479,7 +4479,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 28573.13,
      "enRevision": null,
      "aprobado": 28573.13,
-     "proyectado": null,
+     "proyectado": 28573.13,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4504,7 +4504,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10000,
      "enRevision": null,
      "aprobado": 10000,
-     "proyectado": null,
+     "proyectado": 10000,
      "po": null,
      "incurrido": 9325,
      "fin": "2026-10-16",
@@ -4529,7 +4529,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 14682.1,
      "enRevision": null,
      "aprobado": 14682.1,
-     "proyectado": null,
+     "proyectado": 14682.1,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4604,7 +4604,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10500,
      "enRevision": null,
      "aprobado": 10500,
-     "proyectado": null,
+     "proyectado": 10500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4629,7 +4629,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 9000,
      "enRevision": null,
      "aprobado": 9000,
-     "proyectado": null,
+     "proyectado": 9000,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-16",
@@ -4654,7 +4654,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3500,
      "enRevision": null,
      "aprobado": 3500,
-     "proyectado": null,
+     "proyectado": 3500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4679,7 +4679,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 3500,
      "enRevision": null,
      "aprobado": 3500,
-     "proyectado": null,
+     "proyectado": 3500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4704,7 +4704,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 15000,
      "enRevision": null,
      "aprobado": 15000,
-     "proyectado": null,
+     "proyectado": 15000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4754,7 +4754,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10165,
      "enRevision": null,
      "aprobado": 10165,
-     "proyectado": null,
+     "proyectado": 10165,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4779,7 +4779,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 11000,
      "enRevision": null,
      "aprobado": 11000,
-     "proyectado": null,
+     "proyectado": 11000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4804,7 +4804,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 5500,
      "enRevision": null,
      "aprobado": 5500,
-     "proyectado": null,
+     "proyectado": 5500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4829,7 +4829,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 6000,
      "enRevision": null,
      "aprobado": 6000,
-     "proyectado": null,
+     "proyectado": 6000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4849,7 +4849,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": null,
      "tipo": "Mandatorio",
-     "aprobacion": "Pendiente",
+     "aprobacion": "Descartado",
      "proveedor": "",
      "preliminar": 2500,
      "enRevision": null,
@@ -4862,7 +4862,7 @@ window.DIQUE_MONDAY = {
       "13081208091"
      ],
      "actualizado": "2026-10-16",
-     "costo": "preliminar"
+     "costo": "descartado"
     },
     {
      "id": "13315624518",
@@ -4874,7 +4874,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": null,
      "tipo": "Mandatorio",
-     "aprobacion": "Pendiente",
+     "aprobacion": "Descartado",
      "proveedor": "",
      "preliminar": 5000,
      "enRevision": null,
@@ -4887,7 +4887,7 @@ window.DIQUE_MONDAY = {
       "13081208091"
      ],
      "actualizado": "2026-10-16",
-     "costo": "preliminar"
+     "costo": "descartado"
     },
     {
      "id": "13315624594",
@@ -4899,7 +4899,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": null,
      "tipo": "Mandatorio",
-     "aprobacion": "Pendiente",
+     "aprobacion": "Descartado",
      "proveedor": "",
      "preliminar": 4000,
      "enRevision": null,
@@ -4912,7 +4912,7 @@ window.DIQUE_MONDAY = {
       "13081208091"
      ],
      "actualizado": "2026-10-16",
-     "costo": "preliminar"
+     "costo": "descartado"
     },
     {
      "id": "13315655864",
@@ -4924,7 +4924,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": null,
      "tipo": "",
-     "aprobacion": "Pendiente",
+     "aprobacion": "",
      "proveedor": "",
      "preliminar": null,
      "enRevision": null,
@@ -4961,7 +4961,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 6000,
      "enRevision": null,
      "aprobado": 6000,
-     "proyectado": null,
+     "proyectado": 6000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -4986,7 +4986,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 0,
      "enRevision": null,
      "aprobado": 0,
-     "proyectado": null,
+     "proyectado": 0,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -5011,7 +5011,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 42481,
      "enRevision": null,
      "aprobado": 42481,
-     "proyectado": null,
+     "proyectado": 42481,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-16",
@@ -5061,7 +5061,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10000,
      "enRevision": null,
      "aprobado": 10000,
-     "proyectado": null,
+     "proyectado": 10000,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -5086,7 +5086,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 10850,
      "enRevision": null,
      "aprobado": 10850,
-     "proyectado": null,
+     "proyectado": 10850,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-16",
@@ -5111,7 +5111,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 14875,
      "enRevision": null,
      "aprobado": 14875,
-     "proyectado": null,
+     "proyectado": 14875,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-16",
@@ -5161,7 +5161,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 16732.76,
      "enRevision": null,
      "aprobado": 16732.76,
-     "proyectado": null,
+     "proyectado": 16732.76,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -5185,7 +5185,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 43255.23,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 43255.23,
    "lineas": [
     "13098327837",
     "13127441793"
@@ -5202,7 +5202,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 14875,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 14875,
    "lineas": [
     "13098334682"
    ],
@@ -5234,7 +5234,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 53331,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 53331,
    "lineas": [
     "13098326970",
     "13098337112"
@@ -5251,7 +5251,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 10000,
    "po": 0,
    "incurrido": 9325,
-   "proyectado": 0,
+   "proyectado": 10000,
    "lineas": [
     "13098295887"
    ],
@@ -5269,7 +5269,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 3500,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 3500,
    "lineas": [
     "13098367009",
     "13098338326",
@@ -5287,7 +5287,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 10500,
    "po": 0,
    "incurrido": 3100,
-   "proyectado": 0,
+   "proyectado": 10500,
    "lineas": [
     "13127948545"
    ],
@@ -5306,7 +5306,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 26000,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 26000,
    "lineas": [
     "13098338467",
     "13212064635",
@@ -5329,7 +5329,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 16732.76,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 16732.76,
    "lineas": [
     "13278839703"
    ],
@@ -5375,7 +5375,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 9000,
    "po": 0,
    "incurrido": 10500,
-   "proyectado": 0,
+   "proyectado": 9000,
    "lineas": [
     "13238699549"
    ],
@@ -5424,7 +5424,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 80450.01,
    "po": 0,
    "incurrido": 13280.92,
-   "proyectado": 0,
+   "proyectado": 80450.01,
    "lineas": [
     "13043950431",
     "13043945523",
@@ -5619,7 +5619,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 10165,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 10165,
    "lineas": [
     "13098327946"
    ],
@@ -5635,7 +5635,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 6000,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 6000,
    "lineas": [
     "13098327907"
    ],
@@ -5669,7 +5669,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 15000,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 15000,
    "lineas": [
     "13098306630"
    ],
@@ -5685,7 +5685,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 10000,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 10000,
    "lineas": [
     "13098338352"
    ],
@@ -6675,35 +6675,357 @@ window.DIQUE_MONDAY = {
    "avanceDias": 19.0
   }
  },
- "_huella": "b1cf76720a73",
+ "_huella": "ed369b5c1704",
  "cambiosLectura": [
   {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Mantenimiento preventivo del generador de emergencia",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "4200"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Válvula de succión de bomba de lastre de babor",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de carga #5 de babor — fuga interna",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "4600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de succión de bomba de servicios generales",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "2500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3200"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3400"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Instalación de pantalla en el control room",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "0"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel de sistema de alarma 95-98%",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Control local de propulsión + Cargador de batería #2",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Auto pilot + Sewage (motor y compresor)",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel contra incendio",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "5100"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "6250"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "5000"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Eje de cola — sellos e inspección",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "0"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Sello interno del acople del eje de paso variable",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "2600"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de overflow hacia el sludge tank",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "0.01"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación de fuga en el tanque de sewage",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Imprevisto",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "8000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "28573.13"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "10000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de Tanques de Lastre",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "14682.1"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "10500"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Caja menuda para capitán",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "9000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales cubierta",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3500"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "3500"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Pintura de la cubierta",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "15000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Mantenimiento a acomodaciones",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "10165"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Foam – Agente Espumógeno",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "11000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote de Rescate – Casco",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "5500"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Speed Log – Doppler",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "6000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Compás Magnético – Esfera Kelvin",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "Descartado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "Descartado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Casco",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "Descartado"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales seguridad",
+   "campo": "Estado Aprobación",
+   "antes": "Pendiente",
+   "ahora": "—"
+  },
+  {
    "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "100%"
+   "trabajo": "Gasto de Clase",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "6000"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "0"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Compra de pintura",
-   "campo": "Fecha Fin",
+   "campo": "$ Proyectado",
    "antes": "—",
-   "ahora": "2026-10-16"
+   "ahora": "42481"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Bono dique",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "10000"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Compra de ánodos",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "100%"
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "10850"
   },
   {
    "tablero": "P3. Técnico",
-   "trabajo": "Compra de ánodos",
-   "campo": "Fecha Fin",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "$ Proyectado",
    "antes": "—",
-   "ahora": "2026-10-16"
+   "ahora": "14875"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Agenciamiento",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "16732.76"
   }
  ],
  "observaciones": [
@@ -6733,6 +7055,10 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
+   "texto": "P2. Cubierta: 3 trabajo(s) descartado(s) con $ Preliminar (US$ 11,500), que sigue sumando en el preliminar del tablero CC: Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco."
+  },
+  {
+   "nivel": "aviso",
    "texto": "P2. Cubierta · \"Foam – Agente Espumógeno\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
   },
   {
@@ -6749,11 +7075,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta: 4 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco, Materiales seguridad."
+   "texto": "P2. Cubierta: 1 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Materiales seguridad."
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: preliminar US$ 138,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 3."
+   "texto": "P2. Cubierta: preliminar US$ 138,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
    "nivel": "aviso",

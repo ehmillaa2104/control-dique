@@ -97,7 +97,7 @@
     proyectado: sum(arr, (x) => x.proyectado), po: sum(arr, (x) => x.po), incurrido: sum(arr, (x) => x.incurrido)
   });
   const sinEnviar = (C) => { const v = C.preliminar - C.enRevision - C.aprobado; return v > 0.5 ? v : 0; };
-  const ETAPA = { aprobado: "Aprobado", revision: "En revisión", preliminar: "Preliminar" };
+  const ETAPA = { aprobado: "Aprobado", revision: "En revisión", preliminar: "Preliminar", descartado: "Descartado" };
   const etapaDe = (t) => t.costo || (t.aprobado ? "aprobado" : t.enRevision ? "revision" : t.preliminar ? "preliminar" : "");
   // Barra apilada: aprobado (verde) · en revisión (ámbar) · preliminar sin enviar (azul)
   const etapasBar = (C, cls = "") => {
@@ -122,7 +122,7 @@
     return {
       pct: dur ? sum(con, (t) => t.duracion * t.pct) / dur : 0, n: act.length, conDur: con.length, dur,
       ejec: con.filter((t) => t.pct > 0 && t.pct < 100).length, fin: con.filter((t) => t.pct >= 100).length,
-      sinDur: act.filter((t) => conFase(t) && !(t.duracion > 0)).length // con fase pero sin Duración: no cuentan
+      sinDur: act.filter((t) => conFase(t) && !(t.duracion > 0) && t.costo !== "descartado").length // con fase pero sin Duración: no cuentan
     };
   }
   const planTxt = (av) => (av.conDur ? `${plural(av.conDur, "trabajo planificado", "trabajos planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}${av.sinDur ? ` · <span class="t-warn">${av.sinDur} con fase sin duración</span>` : ""}` : '<span class="t-warn">sin trabajos planificados (ninguno tiene duración)</span>');
@@ -312,7 +312,7 @@
         { cls: "c-rev", tip: C.enRevision ? rowT("Trabajos en revisión", n("revision")) : "" }),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
-      kpi("trend", "Proyectado", moneyK(C.proyectado), C.aprobado && C.proyectado ? `${C.proyectado >= C.aprobado ? "+" : ""}${((C.proyectado / C.aprobado - 1) * 100).toFixed(1)} % vs aprobado` : "costo final esperado",
+      kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
       kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Sin información aún"),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
@@ -512,7 +512,7 @@
     const C = costos(act), av = avance(ts);
     const est = {}, plan = a.trabajos.filter(enFase(FASE)), ocultos = a.trabajos.length - a.trabajos.filter(conFase).length;
     plan.filter((t) => !t.cancelado).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
-    const sinDur = plan.filter((t) => !t.cancelado && !(t.duracion > 0)).length;
+    const sinDur = plan.filter((t) => !t.cancelado && !(t.duracion > 0) && t.costo !== "descartado").length;
     const pa = partDe(M, a.id);
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
     return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
