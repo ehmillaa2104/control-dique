@@ -35,11 +35,11 @@ window.DIQUE_MONDAY = {
     "2026-09-29"
    ],
    "real": [
-    "2026-10-16",
-    "2026-10-16"
+    "2026-10-19",
+    "2026-10-19"
    ],
-   "diferencia": 17,
-   "actualizado": "2026-10-14"
+   "diferencia": 20,
+   "actualizado": "2026-10-16"
   },
   {
    "id": "13095528118",
@@ -4286,7 +4286,7 @@ window.DIQUE_MONDAY = {
      "id": "13256755193",
      "nombre": "Reparación de fuga en el tanque de sewage",
      "grupo": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales",
-     "fase": "Dique",
+     "fase": "Pre-dique",
      "estado": "25%",
      "pct": 25,
      "cancelado": false,
@@ -6675,357 +6675,28 @@ window.DIQUE_MONDAY = {
    "avanceDias": 19.0
   }
  },
- "_huella": "ed369b5c1704",
+ "_huella": "5f3ab30cae3d",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Fecha Real",
+   "antes": "2026-10-16 a 2026-10-16",
+   "ahora": "2026-10-19 a 2026-10-19"
   },
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "4200"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "4600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "2500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3200"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3400"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Instalación de pantalla en el control room",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Control local de propulsión + Cargador de batería #2",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Auto pilot + Sewage (motor y compresor)",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "5100"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "6250"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "5000"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Sello interno del acople del eje de paso variable",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "2600"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de overflow hacia el sludge tank",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "0.01"
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Diferencia",
+   "antes": "17",
+   "ahora": "20"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "1500"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "8000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "28573.13"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "10000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de Tanques de Lastre",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "14682.1"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "10500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "9000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales cubierta",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "3500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Pintura de la cubierta",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "15000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Mantenimiento a acomodaciones",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "10165"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "11000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "5500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "6000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Descartado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Sistema Davit y Hook",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Descartado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Descartado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Gasto de Clase",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "6000"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "42481"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Bono dique",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "10000"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de ánodos",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "10850"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "14875"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Agenciamiento",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "16732.76"
+   "campo": "Fase",
+   "antes": "Dique",
+   "ahora": "Pre-dique"
   }
  ],
  "observaciones": [
@@ -7092,6 +6763,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P3. Técnico: preliminar US$ 867,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 0."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta · \"Caja menuda para capitán\": tiene avance (100%) en Dique, que según el Cronograma empieza el 2026-10-19; revisar la fase."
   },
   {
    "nivel": "aviso",

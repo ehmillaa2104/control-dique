@@ -22172,7 +22172,7 @@
       "id": "13256755193",
       "name": "Reparación de fuga en el tanque de sewage",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-16T22:00:14Z",
+      "updated_at": "2026-10-16T22:15:01Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -22181,7 +22181,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Pre-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -22224,7 +22224,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:14 UTC"
+        "text": "2026-10-16 22:15:01 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -22920,7 +22920,7 @@
       "id": "13109464924",
       "name": "Aprobación de presupuesto",
       "created_at": "2026-09-22T21:01:07Z",
-      "updated_at": "2026-10-14T20:42:48Z",
+      "updated_at": "2026-10-16T22:15:09Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -22939,7 +22939,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-16 - 2026-10-16"
+        "text": "2026-10-19 - 2026-10-19"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -22950,12 +22950,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "17"
+        "display_value": "20"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-14 20:42:48 UTC"
+        "text": "2026-10-16 22:15:09 UTC"
        }
       ]
      },

@@ -237,6 +237,23 @@ def area(key, tab):
     return {"id": key, "nombre": TABLEROS[key]["nombre"], "tablero": b["name"], "trabajos": trabajos}
 
 
+def revisar_fases(crono, areas, hoy):
+    """Avisa si un trabajo tiene avance en una fase que según el Cronograma todavía no empieza (p. ej. Dique antes de entrar al dique)."""
+    inicio = {}
+    for r in crono:
+        n = r["nombre"].lower()
+        if "ejecuci" in n and r["real"]:
+            k = "pre" if "pre" in n else "post" if "post" in n else "dique" if "dique" in n else None
+            if k:
+                inicio[k] = r["real"][0]
+    for a in areas:
+        for t in a["trabajos"]:
+            f = (t["fase"] or "").lower()
+            k = "pre" if "pre" in f else "post" if "pos" in f else "dique" if "dique" in f else None
+            if k in inicio and t["pct"] > 0 and not t["cancelado"] and inicio[k] > hoy:
+                obs.append(("aviso", f'{a["tablero"]} · "{t["nombre"]}": tiene avance ({t["estado"]}) en {t["fase"]}, que según el Cronograma empieza el {inicio[k]}; revisar la fase.'))
+
+
 def costo_estado(t):
     """En qué etapa está el costo del trabajo, según sus montos: aprobado, en revisión o solo preliminar (o descartado)."""
     if re.search(r"descart", t["aprobacion"] or "", re.I):
@@ -536,6 +553,7 @@ def main():
     hoy = raw.get("extraido") or date.today().isoformat()
     crono = cronograma(tab["cronograma"], hoy)
     areas = [area(k, tab[k]) for k in AREAS]
+    revisar_fases(crono, areas, hoy)
     datos = {
         "proyecto": "Kelly Trader", "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
         "extraido": raw.get("extraido") or date.today().isoformat(),
