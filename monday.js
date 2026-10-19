@@ -5,24 +5,24 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-16",
+ "extraido": "2026-10-19",
  "cronograma": [
   {
    "id": "13095528116",
    "grupo": "Plan",
    "nombre": "PLANIFICACIÓN",
    "estado": "En curso",
-   "duracion": 25,
+   "duracion": 28,
    "base": [
     "2026-09-22",
     "2026-10-02"
    ],
    "real": [
     "2026-09-22",
-    "2026-10-16"
+    "2026-10-19"
    ],
-   "diferencia": 14,
-   "actualizado": "2026-10-14"
+   "diferencia": 17,
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13109464924",
@@ -3684,7 +3684,7 @@ window.DIQUE_MONDAY = {
     },
     {
      "id": "13095603679",
-     "nombre": "Válvulas de tomas de mar y línea madre de enfriamiento",
+     "nombre": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
      "estado": "0%",
@@ -3692,7 +3692,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
      "enRevision": 1500,
@@ -3704,12 +3704,12 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": "revision"
     },
     {
      "id": "13256760623",
-     "nombre": "Válvula de descarga de agua salada de máquina principal",
+     "nombre": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
      "estado": "0%",
@@ -3717,7 +3717,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
      "enRevision": 1500,
@@ -3729,12 +3729,12 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": "revision"
     },
     {
      "id": "13256755233",
-     "nombre": "Válvula de descarga de agua salada de los generadores",
+     "nombre": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
      "estado": "0%",
@@ -3742,7 +3742,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
      "enRevision": 1500,
@@ -3754,12 +3754,12 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": "revision"
     },
     {
      "id": "13256755205",
-     "nombre": "Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+     "nombre": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
      "estado": "0%",
@@ -3767,7 +3767,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
      "enRevision": 1500,
@@ -3779,12 +3779,12 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": "revision"
     },
     {
      "id": "13256755234",
-     "nombre": "Línea de succión de agua salada de los generadores",
+     "nombre": "Compra de materiales - Línea de succión de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
      "estado": "0%",
@@ -3792,7 +3792,7 @@ window.DIQUE_MONDAY = {
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
-     "aprobacion": "Revisado",
+     "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
      "enRevision": 1500,
@@ -3804,7 +3804,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": "revision"
     },
     {
@@ -3829,7 +3829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3854,7 +3854,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3879,7 +3879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3904,7 +3904,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3929,7 +3929,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3954,7 +3954,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -3979,7 +3979,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4004,7 +4004,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4029,7 +4029,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4054,7 +4054,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4079,7 +4079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4104,7 +4104,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4129,7 +4129,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4154,7 +4154,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4179,7 +4179,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-19",
      "costo": ""
     },
     {
@@ -4454,7 +4454,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-19",
      "costo": ""
     }
    ]
@@ -5179,7 +5179,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201302",
    "nombre": "1.1 · Limpieza de tanques",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 43255.23,
    "enRevision": 0,
    "aprobado": 43255.23,
@@ -5196,7 +5196,7 @@ window.DIQUE_MONDAY = {
    "id": "13081195990",
    "nombre": "1.2 · Medición espesores",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 14875,
    "enRevision": 0,
    "aprobado": 14875,
@@ -5228,7 +5228,7 @@ window.DIQUE_MONDAY = {
    "id": "13081177349",
    "nombre": "1.4 · Pintura & Ánodos",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 53331,
    "enRevision": 0,
    "aprobado": 53331,
@@ -5245,7 +5245,7 @@ window.DIQUE_MONDAY = {
    "id": "13081208222",
    "nombre": "1.8 · Bajada slops/Basura",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 10000,
    "enRevision": 0,
    "aprobado": 10000,
@@ -5263,7 +5263,7 @@ window.DIQUE_MONDAY = {
    "id": "13081177301",
    "nombre": "1.6 · Reparaciones cubierta",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 3500,
    "enRevision": 0,
    "aprobado": 3500,
@@ -5281,7 +5281,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201194",
    "nombre": "1.7 · Carga materiales",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 10500,
    "enRevision": 0,
    "aprobado": 10500,
@@ -5300,7 +5300,7 @@ window.DIQUE_MONDAY = {
    "id": "13081208091",
    "nombre": "1.5 · Mat Cubierta/Seguridad",
    "grupo": "1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 37500,
    "enRevision": 0,
    "aprobado": 26000,
@@ -5323,7 +5323,7 @@ window.DIQUE_MONDAY = {
    "id": "13081177347",
    "nombre": "2.1.3 · Agenciamiento",
    "grupo": "2.1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 16732.76,
    "enRevision": 0,
    "aprobado": 16732.76,
@@ -5369,7 +5369,7 @@ window.DIQUE_MONDAY = {
    "id": "13081177348",
    "nombre": "2.1.4 · Estadía/viáticos",
    "grupo": "2.1",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 9000,
    "enRevision": 0,
    "aprobado": 9000,
@@ -5402,7 +5402,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201165",
    "nombre": "2.2.1 · Cuenta astillero",
    "grupo": "2.2",
-   "estado": "",
+   "estado": "Revisar",
    "preliminar": 766482,
    "enRevision": 766482,
    "aprobado": 0,
@@ -5418,7 +5418,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201432",
    "nombre": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
    "grupo": "2.2",
-   "estado": "",
+   "estado": "Revisar",
    "preliminar": 99950.01,
    "enRevision": 7500,
    "aprobado": 80450.01,
@@ -5613,7 +5613,7 @@ window.DIQUE_MONDAY = {
    "id": "13081200176",
    "nombre": "3.1 · Mant acomodaciones",
    "grupo": "3",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 10165,
    "enRevision": 0,
    "aprobado": 10165,
@@ -5629,7 +5629,7 @@ window.DIQUE_MONDAY = {
    "id": "13081200177",
    "nombre": "3.2 · Gastos Clase BV",
    "grupo": "3",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 6000,
    "enRevision": 0,
    "aprobado": 6000,
@@ -5663,7 +5663,7 @@ window.DIQUE_MONDAY = {
    "id": "13081177133",
    "nombre": "3.4 · Pintura cubierta",
    "grupo": "3",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 15000,
    "enRevision": 0,
    "aprobado": 15000,
@@ -5679,7 +5679,7 @@ window.DIQUE_MONDAY = {
    "id": "13081207823",
    "nombre": "3.5 · Bonificación tripulac",
    "grupo": "3",
-   "estado": "",
+   "estado": "Aprobado",
    "preliminar": 10000,
    "enRevision": 0,
    "aprobado": 10000,
@@ -5708,9 +5708,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302183351",
@@ -5782,9 +5782,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302212705",
@@ -5835,9 +5835,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302150224",
@@ -5854,9 +5854,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302180056",
@@ -5911,9 +5911,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302212275",
@@ -5930,9 +5930,9 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [
-    "13311556199"
+    "13277158044"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-19"
   },
   {
    "id": "13302182661",
@@ -6014,10 +6014,10 @@ window.DIQUE_MONDAY = {
  "cambios": [],
  "participacion": {
   "total": {
-   "puntos": 23,
+   "puntos": 19,
    "maximo": 30,
-   "pct": 76.7,
-   "nivel": "Alto"
+   "pct": 63.3,
+   "nivel": "Medio"
   },
   "semanas": [
    {
@@ -6250,10 +6250,10 @@ window.DIQUE_MONDAY = {
     "id": "13289252803",
     "nombre": "Técnico",
     "area": "tecnico",
-    "puntos": 5,
+    "puntos": 3,
     "maximo": 6,
-    "pct": 83.3,
-    "nivel": "Alto",
+    "pct": 50.0,
+    "nivel": "Medio",
     "sinCargar": 0,
     "semanas": [
      {
@@ -6277,18 +6277,18 @@ window.DIQUE_MONDAY = {
      {
       "semana": "S3",
       "reunion": "No asistió",
-      "act": "2 - Actualización directa",
+      "act": "1 - Actualización indirecta",
       "pr": 0,
-      "pa": 2,
+      "pa": 1,
       "faltaR": false,
       "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
-      "act": "2 - Actualización directa",
+      "act": "1 - Actualización indirecta",
       "pr": null,
-      "pa": 2,
+      "pa": 1,
       "faltaR": false,
       "faltaA": false
      },
@@ -6418,10 +6418,10 @@ window.DIQUE_MONDAY = {
     "id": "13305134222",
     "nombre": "Contabilidad",
     "area": null,
-    "puntos": 6,
+    "puntos": 4,
     "maximo": 6,
-    "pct": 100.0,
-    "nivel": "Alto",
+    "pct": 66.7,
+    "nivel": "Medio",
     "sinCargar": 0,
     "semanas": [
      {
@@ -6445,18 +6445,18 @@ window.DIQUE_MONDAY = {
      {
       "semana": "S3",
       "reunion": "Asistió",
-      "act": "2 - Actualización directa",
+      "act": "1 - Actualización indirecta",
       "pr": 1,
-      "pa": 2,
+      "pa": 1,
       "faltaR": false,
       "faltaA": false
      },
      {
       "semana": "S4",
       "reunion": null,
-      "act": "2 - Actualización directa",
+      "act": "1 - Actualización indirecta",
       "pr": null,
-      "pa": 2,
+      "pa": 1,
       "faltaR": false,
       "faltaA": false
      },
@@ -6505,6 +6505,19 @@ window.DIQUE_MONDAY = {
   }
  },
  "programa": [
+  {
+   "id": "13327030172",
+   "nave": "Kingston Trader",
+   "anio": "2026",
+   "estado": "Listo",
+   "mandatorio": null,
+   "real": "2026-07-07",
+   "diferencia": null,
+   "lugar": "",
+   "tipo": "",
+   "anterior": null,
+   "estimado": null
+  },
   {
    "id": "13044078075",
    "nave": "Kelly Trader",
@@ -6675,45 +6688,98 @@ window.DIQUE_MONDAY = {
    "avanceDias": 19.0
   }
  },
- "_huella": "8f84bef40998",
+ "_huella": "be84ae47c138",
  "cambiosLectura": [
   {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Fecha Real",
+   "antes": "2026-09-22 a 2026-10-16",
+   "ahora": "2026-09-22 a 2026-10-19"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Diferencia",
+   "antes": "14",
+   "ahora": "17"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Duración",
+   "antes": "25",
+   "ahora": "28"
+  },
+  {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "Estado Aprobación",
-   "antes": "Aprobado Dirección",
-   "ahora": "Descartado"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
+   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
    "campo": "Estado Aprobación",
    "antes": "Revisado",
    "ahora": "Aprobado Dirección"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
    "campo": "Estado Aprobación",
    "antes": "Revisado",
    "ahora": "Aprobado Dirección"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
    "campo": "Estado Aprobación",
    "antes": "Revisado",
    "ahora": "Aprobado Dirección"
   },
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
    "campo": "Estado Aprobación",
-   "antes": "Pendiente",
-   "ahora": "Revisado"
+   "antes": "Revisado",
+   "ahora": "Aprobado Dirección"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
+   "campo": "Estado Aprobación",
+   "antes": "Revisado",
+   "ahora": "Aprobado Dirección"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Técnico",
+   "campo": "Actualización S3",
+   "antes": "2 - Actualización directa",
+   "ahora": "1 - Actualización indirecta"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Técnico",
+   "campo": "Actualización S4",
+   "antes": "2 - Actualización directa",
+   "ahora": "1 - Actualización indirecta"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Contabilidad",
+   "campo": "Actualización S3",
+   "antes": "2 - Actualización directa",
+   "ahora": "1 - Actualización indirecta"
+  },
+  {
+   "tablero": "Participación del Equipo",
+   "trabajo": "Contabilidad",
+   "campo": "Actualización S4",
+   "antes": "2 - Actualización directa",
+   "ahora": "1 - Actualización indirecta"
   }
  ],
  "observaciones": [
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería: se borró la columna \"link to POs Kelly Trader\" (board_relation_mm8418w8)."
+  },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
@@ -6725,6 +6791,26 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P1. Ingeniería: 1 trabajo(s) descartado(s), en el preliminar por US$ 10,000 (se pidieron, no se aprobaron): Eje de cola — sellos e inspección."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de descarga de agua salada de máquina principal\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de descarga de agua salada de los generadores\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería · \"Compra de materiales - Línea de succión de agua salada de los generadores\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
   },
   {
    "nivel": "info",
@@ -6836,11 +6922,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "Participación del equipo: 76.7% (23 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+   "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
   },
   {
    "nivel": "info",
-   "texto": "PROGRAMA DE DIQUES: 11 diques · estimado total US$ 6,450,000."
+   "texto": "PROGRAMA DE DIQUES: 12 diques · estimado total US$ 6,450,000."
   }
  ]
 };
