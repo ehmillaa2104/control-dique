@@ -4582,13 +4582,13 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "7500"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "80450.01"
+        "display_value": "87950.01"
        },
        {
         "id": "formula_mm7yshcc",
@@ -4606,7 +4606,7 @@
         "id": "formula_mm7ydqr4",
         "type": "formula",
         "text": "",
-        "display_value": "80450.01"
+        "display_value": "87950.01"
        },
        {
         "id": "board_relation_mm7a4ck0",
@@ -4779,8 +4779,7 @@
          "13277158049",
          "13277138491",
          "13277104868",
-         "13277169481",
-         "13311556199"
+         "13277169481"
         ]
        },
        {
@@ -20012,7 +20011,7 @@
       "id": "13095603679",
       "name": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-19T16:02:13Z",
+      "updated_at": "2026-10-19T16:30:54Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20041,7 +20040,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
@@ -20051,7 +20050,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -20064,7 +20063,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-19 16:02:13 UTC"
+        "text": "2026-10-19 16:30:54 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20084,7 +20083,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -20104,7 +20103,7 @@
       "id": "13256760623",
       "name": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-19T16:02:15Z",
+      "updated_at": "2026-10-19T16:30:55Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20133,7 +20132,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
@@ -20143,7 +20142,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -20156,7 +20155,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-19 16:02:15 UTC"
+        "text": "2026-10-19 16:30:55 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20176,7 +20175,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -20196,7 +20195,7 @@
       "id": "13256755233",
       "name": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-19T16:02:17Z",
+      "updated_at": "2026-10-19T16:30:55Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20225,7 +20224,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
@@ -20235,7 +20234,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -20248,7 +20247,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-19 16:02:17 UTC"
+        "text": "2026-10-19 16:30:55 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20268,7 +20267,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -20288,7 +20287,7 @@
       "id": "13256755205",
       "name": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-19T16:02:18Z",
+      "updated_at": "2026-10-19T16:30:56Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20317,7 +20316,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
@@ -20327,7 +20326,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -20340,7 +20339,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-19 16:02:18 UTC"
+        "text": "2026-10-19 16:30:56 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20360,7 +20359,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -20380,7 +20379,7 @@
       "id": "13256755234",
       "name": "Compra de materiales - Línea de succión de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-19T16:02:20Z",
+      "updated_at": "2026-10-19T16:30:58Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20409,7 +20408,7 @@
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "1500"
+        "text": ""
        },
        {
         "id": "color_mm6v621m",
@@ -20419,7 +20418,7 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "board_relation_mm7am925",
@@ -20432,7 +20431,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-19 16:02:20 UTC"
+        "text": "2026-10-19 16:30:58 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -20452,7 +20451,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": ""
+        "text": "1500"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -22733,98 +22732,6 @@
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
         "text": "2026-10-16 14:57:51 UTC"
-       },
-       {
-        "id": "color_mm7yb2cs",
-        "type": "status",
-        "text": "0%"
-       },
-       {
-        "id": "date_mm7yv15j",
-        "type": "date",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7yw5hx",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm7y9v4k",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "lookup_mm7yh3hm",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       },
-       {
-        "id": "lookup_mm7yk7y7",
-        "type": "mirror",
-        "text": null,
-        "display_value": ""
-       }
-      ]
-     },
-     {
-      "id": "13311556199",
-      "name": "Miscelaneos",
-      "created_at": "2026-10-16T14:56:44Z",
-      "updated_at": "2026-10-19T15:47:34Z",
-      "group": {
-       "id": "group_mm7dh63q",
-       "title": "Generales (fuera de jerarquía Máquina)"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6wsp0z",
-        "type": "status",
-        "text": "No Aplica"
-       },
-       {
-        "id": "dropdown_mm70s99n",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm781mjk",
-        "type": "status",
-        "text": null
-       },
-       {
-        "id": "numeric_mm6vjdrd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm78kpas",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "color_mm6v621m",
-        "type": "status",
-        "text": "Pendiente"
-       },
-       {
-        "id": "numeric_mm78s0hd",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "board_relation_mm7am925",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "pulse_updated_mm7g2q1g",
-        "type": "last_updated",
-        "text": "2026-10-19 15:47:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",

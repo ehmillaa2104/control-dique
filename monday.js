@@ -3695,9 +3695,9 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
-     "enRevision": 1500,
-     "aprobado": null,
-     "proyectado": null,
+     "enRevision": null,
+     "aprobado": 1500,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3705,7 +3705,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-19",
-     "costo": "revision"
+     "costo": "aprobado"
     },
     {
      "id": "13256760623",
@@ -3720,9 +3720,9 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
-     "enRevision": 1500,
-     "aprobado": null,
-     "proyectado": null,
+     "enRevision": null,
+     "aprobado": 1500,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3730,7 +3730,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-19",
-     "costo": "revision"
+     "costo": "aprobado"
     },
     {
      "id": "13256755233",
@@ -3745,9 +3745,9 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
-     "enRevision": 1500,
-     "aprobado": null,
-     "proyectado": null,
+     "enRevision": null,
+     "aprobado": 1500,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3755,7 +3755,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-19",
-     "costo": "revision"
+     "costo": "aprobado"
     },
     {
      "id": "13256755205",
@@ -3770,9 +3770,9 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
-     "enRevision": 1500,
-     "aprobado": null,
-     "proyectado": null,
+     "enRevision": null,
+     "aprobado": 1500,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3780,7 +3780,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-19",
-     "costo": "revision"
+     "costo": "aprobado"
     },
     {
      "id": "13256755234",
@@ -3795,9 +3795,9 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 1500,
-     "enRevision": 1500,
-     "aprobado": null,
-     "proyectado": null,
+     "enRevision": null,
+     "aprobado": 1500,
+     "proyectado": 1500,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -3805,7 +3805,7 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-19",
-     "costo": "revision"
+     "costo": "aprobado"
     },
     {
      "id": "13043936421",
@@ -4430,31 +4430,6 @@ window.DIQUE_MONDAY = {
       "13081201432"
      ],
      "actualizado": "2026-10-16",
-     "costo": ""
-    },
-    {
-     "id": "13311556199",
-     "nombre": "Miscelaneos",
-     "grupo": "Generales (fuera de jerarquía Máquina)",
-     "fase": "No Aplica",
-     "estado": "0%",
-     "pct": 0,
-     "cancelado": false,
-     "duracion": null,
-     "tipo": "",
-     "aprobacion": "Pendiente",
-     "proveedor": "",
-     "preliminar": null,
-     "enRevision": null,
-     "aprobado": null,
-     "proyectado": null,
-     "po": null,
-     "incurrido": null,
-     "fin": null,
-     "cc": [
-      "13081201432"
-     ],
-     "actualizado": "2026-10-19",
      "costo": ""
     }
    ]
@@ -5420,11 +5395,11 @@ window.DIQUE_MONDAY = {
    "grupo": "2.2",
    "estado": "Revisar",
    "preliminar": 99950.01,
-   "enRevision": 7500,
-   "aprobado": 80450.01,
+   "enRevision": 0,
+   "aprobado": 87950.01,
    "po": 0,
    "incurrido": 13280.92,
-   "proyectado": 80450.01,
+   "proyectado": 87950.01,
    "lineas": [
     "13043950431",
     "13043945523",
@@ -5592,8 +5567,7 @@ window.DIQUE_MONDAY = {
     "13277158049",
     "13277138491",
     "13277104868",
-    "13277169481",
-    "13311556199"
+    "13277169481"
    ],
    "pos": [
     "13302150991",
@@ -6664,7 +6638,7 @@ window.DIQUE_MONDAY = {
  ],
  "avance": {
   "ingenieria": {
-   "lineas": 168,
+   "lineas": 167,
    "conDuracion": 31,
    "duracion": 31,
    "avanceDias": 1.25
@@ -6682,97 +6656,125 @@ window.DIQUE_MONDAY = {
    "avanceDias": 2.75
   },
   "total": {
-   "lineas": 196,
+   "lineas": 195,
    "conDuracion": 51,
    "duracion": 165,
    "avanceDias": 19.0
   }
  },
- "_huella": "be84ae47c138",
+ "_huella": "b8e17bb0c381",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Fecha Real",
-   "antes": "2026-09-22 a 2026-10-16",
-   "ahora": "2026-09-22 a 2026-10-19"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Diferencia",
-   "antes": "14",
-   "ahora": "17"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Duración",
-   "antes": "25",
-   "ahora": "28"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
+   "campo": "$ En Revisión",
+   "antes": "1500",
+   "ahora": "—"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
+   "campo": "$ Aprobado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
+   "campo": "$ En Revisión",
+   "antes": "1500",
+   "ahora": "—"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "$ Aprobado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
+   "campo": "$ En Revisión",
+   "antes": "1500",
+   "ahora": "—"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "$ Aprobado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
+   "campo": "$ En Revisión",
+   "antes": "1500",
+   "ahora": "—"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "$ Aprobado",
+   "antes": "—",
+   "ahora": "1500"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
-   "campo": "Estado Aprobación",
-   "antes": "Revisado",
-   "ahora": "Aprobado Dirección"
+   "campo": "$ En Revisión",
+   "antes": "1500",
+   "ahora": "—"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Técnico",
-   "campo": "Actualización S3",
-   "antes": "2 - Actualización directa",
-   "ahora": "1 - Actualización indirecta"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
+   "campo": "$ Aprobado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Técnico",
-   "campo": "Actualización S4",
-   "antes": "2 - Actualización directa",
-   "ahora": "1 - Actualización indirecta"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "1500"
   },
   {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Contabilidad",
-   "campo": "Actualización S3",
-   "antes": "2 - Actualización directa",
-   "ahora": "1 - Actualización indirecta"
-  },
-  {
-   "tablero": "Participación del Equipo",
-   "trabajo": "Contabilidad",
-   "campo": "Actualización S4",
-   "antes": "2 - Actualización directa",
-   "ahora": "1 - Actualización indirecta"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Miscelaneos",
+   "campo": "borrado",
+   "antes": "",
+   "ahora": ""
   }
  ],
  "observaciones": [
@@ -6793,26 +6795,6 @@ window.DIQUE_MONDAY = {
    "texto": "P1. Ingeniería: 1 trabajo(s) descartado(s), en el preliminar por US$ 10,000 (se pidieron, no se aprobaron): Eje de cola — sellos e inspección."
   },
   {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de descarga de agua salada de máquina principal\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de descarga de agua salada de los generadores\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Compra de materiales - Línea de succión de agua salada de los generadores\": tiene $ En Revisión pero Estado Aprobación = \"Aprobado Dirección\"."
-  },
-  {
    "nivel": "info",
    "texto": "P1. Ingeniería · \"Imprevisto\": aprobado US$ 8,000 distinto del preliminar US$ 10,000."
   },
@@ -6822,7 +6804,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 7,500 (5) · aprobado US$ 80,450 (25) · sin enviar a revisión 0."
+   "texto": "P1. Ingeniería: preliminar US$ 99,950 · en revisión US$ 0 (0) · aprobado US$ 87,950 (30) · sin enviar a revisión 0."
   },
   {
    "nivel": "info",
