@@ -636,3 +636,20 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(5, 96px) 110px; }
 @media (max-width: 1100px) { .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(5, 78px) 100px; } }
 @media (max-width: 760px) { .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(3, 66px); } }
+
+/* Indicadores: 3 + 3 de costos y el avance (reloj) al lado, ocupando las dos filas */
+.kpis.k7 { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(200px, .9fr); }
+.kpis.k7 > :last-child { grid-column: auto; }
+.kpis.k7 > .k-avance { grid-column: 4; grid-row: 1 / span 2; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 10px; }
+.kpis.k7 > .k-avance .reloj-w, .kpis.k7 > .k-avance .reloj { width: 112px; height: 112px; }
+.kpis.k7 > .k-avance .reloj-w b { font-size: 26px; }
+@media (max-width: 860px) {
+  .kpis.k7 { grid-template-columns: 1fr 1fr; }
+  .kpis.k7 > .k-avance { grid-column: 1 / -1; grid-row: auto; flex-direction: row; text-align: left; }
+  .kpis.k7 > .k-avance .reloj-w, .kpis.k7 > .k-avance .reloj { width: 80px; height: 80px; }
+  .kpis.k7 > .k-avance .reloj-w b { font-size: 19px; }
+}
+@media (max-width: 340px) { .kpis.k7 { grid-template-columns: 1fr; } }
+.fs-m { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+@media (max-width: 900px) { .fs-m { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.fs-tbl th:nth-child(4), .fs-tbl th:nth-child(5) { width: 96px; } .fs-tbl th:nth-child(6) { width: 100px; } .fs-tbl th:nth-child(7) { width: 80px; }

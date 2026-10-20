@@ -108,13 +108,7 @@
   const sinEnviar = (C) => { const v = C.preliminar - C.enRevision - C.aprobado - (C.descartado || 0); return v > 0.5 ? v : 0; };
   const ETAPA = { aprobado: "Aprobado", revision: "En revisión", preliminar: "Preliminar", descartado: "Descartado" };
   const etapaDe = (t) => t.costo || (t.aprobado ? "aprobado" : t.enRevision ? "revision" : t.preliminar ? "preliminar" : "");
-  // Barra apilada: aprobado (verde) · en revisión (ámbar) · preliminar sin enviar (azul) · descartado (gris)
-  const etapasBar = (C, cls = "") => {
-    const tot = C.preliminar || C.enRevision + C.aprobado;
-    if (!tot) return "";
-    const w = (v) => Math.max(0, Math.min(100, (v / tot) * 100)).toFixed(2);
-    return `<span class="stk ${cls}" ${tipAttr(`${rowT('<i class="sw s-apr"></i>Aprobado', moneyK(C.aprobado))}${rowT('<i class="sw s-rev"></i>En revisión', moneyK(C.enRevision))}${sinEnviar(C) ? rowT('<i class="sw s-pre"></i>Sin enviar', moneyK(sinEnviar(C))) : ""}${C.descartado ? rowT('<i class="sw s-des"></i>Descartado', moneyK(C.descartado)) : ""}`)}"><i class="s-apr" style="width:${w(C.aprobado)}%"></i><i class="s-rev" style="width:${w(C.enRevision)}%"></i><i class="s-pre" style="width:${w(sinEnviar(C))}%"></i><i class="s-des" style="width:${w(C.descartado || 0)}%"></i></span>`;
-  };
+
   // Monto con el color de su etapa
   const m3 = (v, et) => (v ? `<span class="t-${et}">${moneyK(v)}</span>` : '<span class="muted">—</span>');
   // Notas de gestión sobre trabajos en revisión (notas.js → revision: { "<nombre del trabajo>": "nota" })
@@ -364,7 +358,7 @@
         const plan = c.items.filter(conFase), otros = c.items.filter((t) => !conFase(t)), O = costos(otros);
         const conMonto = O.preliminar || O.enRevision || O.aprobado || O.proyectado || O.po || O.incurrido;
         const resto = otros.length && conMonto ? `<div class="cc-line otros"><span class="nm">${plural(otros.length, "trabajo sin fase", "trabajos sin fase")} (No Aplica)</span>${cols(O)}<span class="st"></span></div>` : "";
-        return `<details class="cc"><summary><span class="nm">${esc(c.nombre)}<small>${plural(plan.length, "trabajo planificado", "trabajos planificados")}</small>${nota ? `<small class="nota-rev">${esc(nota)}</small>` : ""}${etapasBar(c, "sm")}</span>${cols(c)}<span class="st">${estadoCC(c)}</span></summary>
+        return `<details class="cc"><summary><span class="nm">${esc(c.nombre)}<small>${plural(plan.length, "trabajo planificado", "trabajos planificados")}</small>${nota ? `<small class="nota-rev">${esc(nota)}</small>` : ""}</span>${cols(c)}<span class="st">${estadoCC(c)}</span></summary>
           <div class="cc-lines">${plan.length || resto ? plan.map(linea).join("") + resto : '<div class="empty sm">Sin trabajos planificados en P1, P2 ni P3.</div>'}</div></details>`;
       }).join("");
       return `<details class="cc-g"><summary><span class="nm">Grupo ${esc(g.nombre)}<small>${plural(g.items.length, "centro", "centros")} de costo</small></span>${cols(G, "b")}<span class="st"></span></summary>${rows}</details>`;
@@ -464,7 +458,7 @@
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
-        <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div>${etapasBar(C, "area-stk")}<div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
+        <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;
@@ -510,7 +504,7 @@
     const all = M.areas.flatMap((a) => a.trabajos);
     const barra = (v, cls = "") => `<div class="mini-av ${cls}"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, v))}%"></i></span><b>${pct(v, 0)}</b></div>`;
     // Los mismos montos que en el resto del dashboard, para poder comparar las fases
-    const montos = (C) => `<span class="fs-m">${[["Preliminar", m3(C.preliminar, "pre") + etapasBar(C, "sm")], ["En revisión", m3(C.enRevision, "rev")], ["Aprobado", m3(C.aprobado, "apr")],
+    const montos = (C) => `<span class="fs-m">${[["En revisión", m3(C.enRevision, "rev")], ["Aprobado", m3(C.aprobado, "apr")],
       ["Proyectado", mcell(C.proyectado)], ["PO", mcell(C.po)], ["Incurrido", mcell(C.incurrido)]].map(([k, v]) => `<span><small>${k}</small><b>${v}</b></span>`).join("")}</span>`;
     const datos = (av) => `${plural(av.conDur, "planificado", "planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}${av.sinDur ? ` · <span class="t-warn">${av.sinDur} sin duración</span>` : ""}`;
     // Trabajos de la fase por área: primero los que están en ejecución, luego los finalizados y al final los por iniciar
@@ -520,9 +514,9 @@
       if (!xs.length) return "";
       const av = avance(xs);
       return `<div class="fs-area"><div class="fs-ah">${icon(AREA_ICON[a.id] || "grid", "ic sm")}<b>${esc(a.nombre)}</b><small>${datos(av)}</small>${barra(av.pct, "sm")}</div>
-        <div class="scroll"><table class="tbl fs-tbl"><thead><tr><th>Trabajo</th><th>Estado</th><th class="n">Duración</th><th class="n t-pre">Preliminar</th><th class="n t-rev">En revisión</th><th class="n t-apr">Aprobado</th><th>Costo</th><th>Fin</th></tr></thead><tbody>${xs.map((t) =>
+        <div class="scroll"><table class="tbl fs-tbl"><thead><tr><th>Trabajo</th><th>Estado</th><th class="n">Duración</th><th class="n t-rev">En revisión</th><th class="n t-apr">Aprobado</th><th>Costo</th><th>Fin</th></tr></thead><tbody>${xs.map((t) =>
           `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${esc(t.grupo)}</small>${notaTxt(t)}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td>
-            <td class="n">${t.duracion > 0 ? t.duracion + " d" : '<span class="t-warn">sin duración</span>'}</td><td class="n">${m3(t.preliminar, "pre")}</td><td class="n">${m3(t.enRevision, "rev")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td>${chipEtapa(t)}</td><td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div></div>`;
+            <td class="n">${t.duracion > 0 ? t.duracion + " d" : '<span class="t-warn">sin duración</span>'}</td><td class="n">${m3(t.enRevision, "rev")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td>${chipEtapa(t)}</td><td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div></div>`;
     }).join("");
     const conArea = all.map((t) => Object.assign({ area: (M.areas.find((a) => a.trabajos.includes(t)) || {}).id }, t));
     const fila = (f) => {

@@ -64,7 +64,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3, igual que la columna "Avance" de Monday. Se pondera por duración porque no todos los trabajos tienen costo. **Un trabajo planificado es el que tiene una Fase** (Pre-dique, Dique, Post-dique…) y debería tener Duración. En las pestañas de área solo se muestran los trabajos con fase; los "No Aplica" no se ven. **Un trabajo con Duración es un trabajo planificado para ejecutarse.** No se muestra como falta de datos: se informa cuántos de los planificados están en ejecución (25–75 %) y cuántos finalizaron (100 %).
 - **Costos en tres etapas** (desde el 16 oct), columnas de cada trabajo de P1, P2 y P3 y sus sumas en el tablero CC:
-  - **Preliminar** = lo que solicita el equipo: "$ Preliminar" (`numeric_mm6vjdrd`; en CC `formula_mm867352`). Color **azul**.
+  - **Preliminar** = lo que solicita el equipo: "$ Preliminar" (`numeric_mm6vjdrd`; en CC `formula_mm867352`). Color **azul**. **Desde el 20 oct no se muestra en el resumen** (tarjetas, áreas, centros de costo, fases): el usuario dijo que ya no importa. Sigue en las tablas de trabajos de cada área.
   - **En revisión** = lo que está en revisión por la Dirección de Operaciones: "$ En Revisión" (`numeric_mm78kpas`; en CC `formula_mm7d91f2`). Color **ámbar**.
   - **Aprobado** = lo aprobado hasta la fecha: "$ Aprobado" (`numeric_mm78s0hd`; en CC `formula_mm7dehmt`). Color **verde**.
   - **Descartado** (Estado Aprobación = "Descartado"): se pidió pero no se aprobó. **Se queda en el preliminar** (no se borra su monto) y se muestra aparte en gris.
@@ -80,6 +80,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 ## Diseño
 
 - Paleta corporativa blanco y negro. El rojo solo para alertas (atrasos, vencidos, datos faltantes). Tienen color propio: las fases del cronograma, el semáforo de participación y las **etapas del costo** (preliminar azul, en revisión ámbar, aprobado verde, también en la barra apilada de cada monto).
+- **Indicadores del resumen** (20 oct): 3 + 3 de costos (en revisión, aprobado, proyectado / PO, incurrido, pagado) y el **avance físico como reloj** al lado, ocupando las dos filas. El **atraso del cronograma** va en la cabecera, junto a los hitos. Sin barras apiladas de colores.
 - Poca información a la vista. El detalle va en desplegables y tooltips. No mostrar "última actividad en Monday" ni la tarjeta de participación por equipo a la derecha del resumen: el usuario pidió quitarlas (la participación va en el indicador del equipo y en su propia tabla, abajo del resumen por área).
 - **Fases** (Pre-dique, Dique, Post-dique): salen de la columna "Fase" de P1, P2 y P3. El resumen tiene la tabla "Avance por fase" y cada pestaña de área tiene un selector de fase que filtra los indicadores y la lista.
 - **Pruebas antes de publicar:** si el usuario pide probar antes de actualizar, trabajar en una rama (no `main`). En otra rama, el hook guarda solo en local y no publica; para publicar, se pasa la rama a `main`.
