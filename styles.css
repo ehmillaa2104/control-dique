@@ -612,3 +612,12 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .sem { grid-template-columns: 1fr; }
   .sem-col + .sem-col { border-left: 0; border-top: 1px solid var(--border); }
 }
+
+/* Avance por fase sin desplegable (resumen) */
+.fs-list.plano .fs-row { padding-left: 16px; }
+.fs-list.plano .fs.cur .fs-row { box-shadow: inset 3px 0 0 var(--ink); }
+.card-h small a { color: inherit; }
+/* 6 indicadores en el resumen: 2 filas de 3 */
+.kpis.k6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 860px) { .kpis.k6 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 340px) { .kpis.k6 { grid-template-columns: 1fr; } }
