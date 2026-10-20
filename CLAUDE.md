@@ -21,7 +21,7 @@ Dashboard de control del dique seco del **M/V Kelly Trader**. Los datos salen de
 
 ## Datos de Monday (lo más importante)
 
-Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Se leen 9 tableros: los 8 de la carpeta y **PROGRAMA DE DIQUES** de la flota (fuera de la carpeta), que se muestra en la pestaña Cronograma:
+Espacio **GESTIÓN DE DIQUES**, carpeta **KELLY TRADER**. Se leen 9 tableros: los 8 de la carpeta y **PROGRAMA DE DIQUES** de la flota (fuera de la carpeta). Desde el 20 oct el dashboard **no lo muestra** (pedido del usuario); se sigue leyendo por si se vuelve a usar:
 
 - Cronograma
 - P1. Ingeniería

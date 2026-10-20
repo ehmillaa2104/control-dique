@@ -456,45 +456,6 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .fs-tbl th:nth-child(2) { width: 120px; }
 }
 
-/* Programa de diques de la flota */
-.pd { padding: 10px 16px 12px; }
-.pd-row { display: grid; grid-template-columns: 170px minmax(0, 1fr); align-items: center; min-height: 30px; }
-.pd-row + .pd-row { border-top: 1px solid var(--border); }
-.pd-body { position: relative; }
-.pd-nv { display: flex; align-items: center; gap: 6px; font-size: 13px; white-space: nowrap; overflow: hidden; }
-.pd-nv b { font-weight: 600; }
-.pd-row.este .pd-nv b { font-weight: 800; }
-.pd-nv .chip { font-style: normal; font-size: 10px; }
-.pd-tr { position: relative; height: 30px; }
-.pd-grid { position: absolute; left: 170px; right: 0; top: 0; bottom: 0; height: auto; pointer-events: none; }
-.pd-grid i { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--border); }
-.pd-grid i.hoy { background: var(--ink-3); width: 1px; border-left: 1px dashed var(--ink-3); background: none; }
-.pd-ax { min-height: 22px; border: 0 !important; }
-.pd-ax .pd-tr { height: 22px; }
-.pd-y, .pd-hoy { position: absolute; top: 0; font-style: normal; transform: translateX(-50%); }
-.pd-y b { font-size: 11px; font-weight: 800; color: var(--ink-2); }
-.pd-hoy b { font-size: 10px; font-weight: 700; color: var(--ink-3); }
-.pd-d { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; transform: rotate(45deg); background: var(--ink); border: 2px solid var(--ink); border-radius: 2px; cursor: default; z-index: 2; }
-.pd-d.int { background: var(--surface); }
-.pd-row.este .pd-d { width: 15px; height: 15px; margin: -7.5px 0 0 -7.5px; }
-.pd-man { position: absolute; top: 50%; width: 2px; height: 14px; margin: -7px 0 0 -1px; background: var(--ink-3); }
-.pd-gap { position: absolute; top: 50%; height: 2px; margin-top: -1px; background: repeating-linear-gradient(90deg, var(--ink-3) 0 4px, transparent 4px 7px); }
-.pd-lb { position: absolute; top: 50%; transform: translate(12px, -50%); font-size: 11px; color: var(--ink-3); white-space: nowrap; pointer-events: none; }
-.pd-ley { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; font-size: 11.5px; color: var(--ink-3); }
-.pd-ley span { display: inline-flex; align-items: center; gap: 7px; }
-.pd-ley .pd-d, .pd-ley .pd-man { position: static; margin: 0; transform: rotate(45deg); }
-.pd-ley .pd-man { transform: none; }
-.pd-det { border-top: 1px solid var(--border); }
-.pd-det > summary { cursor: pointer; padding: 10px 16px; font-size: 12.5px; font-weight: 700; color: var(--ink-2); }
-@media (max-width: 760px) {
-  .pd { padding: 8px 10px 10px; }
-  .pd-row { grid-template-columns: 104px minmax(0, 1fr); }
-  .pd-grid { left: 104px; }
-  .pd-nv { font-size: 12px; }
-  .pd-nv .chip { display: none; }
-  .pd-lb, .pd-hoy { display: none; }
-}
-
 /* =========================================================
    Etapas del costo: Preliminar (azul) · En revisión (ámbar) · Aprobado (verde)
    ========================================================= */
