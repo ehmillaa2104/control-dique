@@ -409,6 +409,47 @@
       <tfoot><tr class="${semCls(T.nivel)}"><td><b>Equipo completo</b></td>${cum(T)}</tr></tfoot></table>`);
   }
 
+  // Esta semana: lo hecho (avance desde hace 7 días, según monday/historial.json), lo que está en curso y lo próximo (14 días)
+  function semanaCard(M) {
+    const H = M.D.historial || [];
+    const hace7 = iso(addDays(parse(TODAY), -7)), en14 = iso(addDays(parse(TODAY), 14));
+    const ref = H.filter((h) => h.fecha <= hace7).pop() || H[0] || null;
+    const ts = [...M.byId.values()].filter((t) => !t.cancelado && conFase(t) && t.costo !== "descartado");
+    const linea = (t, der, cls = "") => `<li class="${cls}" ${tipAttr(`<b>${esc(t.nombre)}</b>${rowT(esc(t.areaNombre), esc(t.fase))}${t.duracion ? rowT("Duración", t.duracion + " d") : ""}`)}>${icon(AREA_ICON[t.area] || "grid", "ic sm")}<span class="sem-nm">${esc(t.nombre)}</span><b>${der}</b></li>`;
+    const mas = (n) => (n > 0 ? `<li class="sem-mas">y ${n} más</li>` : "");
+    const MAX = 6;
+    // Lo hecho
+    let hecho = "", hechoN = 0, avTxt = "";
+    if (ref) {
+      const antes = (t) => (t.id in ref.pct ? ref.pct[t.id] : 0);
+      const sub = ts.filter((t) => t.pct > antes(t)).sort((a, b) => (b.pct >= 100) - (a.pct >= 100) || (b.duracion || 0) - (a.duracion || 0));
+      hechoN = sub.length;
+      hecho = sub.slice(0, MAX).map((t) => linea(t, t.pct >= 100 ? '<span class="t-apr">✓ 100 %</span>' : `${antes(t)} → ${t.pct} %`, t.pct >= 100 ? "fin" : "")).join("") + mas(sub.length - MAX);
+      const avHoy = avance(M.areas.flatMap((a) => a.trabajos)).pct;
+      if (ref.avance != null) avTxt = `Avance ${pct(ref.avance)} → <b>${pct(avHoy)}</b>${avHoy - ref.avance >= 0.05 ? ` <span class="t-apr">+${(avHoy - ref.avance).toFixed(1)} pts</span>` : ' <span class="muted">sin cambio</span>'}`;
+    }
+    // En curso: los que pesan más en el avance (más días) primero
+    const curso = ts.filter((t) => t.pct > 0 && t.pct < 100).sort((a, b) => (b.duracion || 0) - (a.duracion || 0));
+    // Lo próximo: hitos y fases de los próximos 14 días; los hitos ya vencidos sin marcar van primero, en rojo
+    const prox = M.crono.filter((r) => !r.done && r.real[0] <= en14 && (r.hito || r.real[0] > TODAY))
+      .sort((a, b) => (a.real[0] < b.real[0] ? -1 : 1));
+    // Si en 14 días no viene ningún hito, se muestra igual el siguiente (p. ej. la salida del astillero)
+    if (!prox.some((r) => r.hito && r.real[0] >= TODAY)) { const sig = M.hitos.find((h) => !h.done && h.real[0] > en14); if (sig) prox.push(sig); }
+    const fx = (r) => {
+      const venc = r.hito && r.real[0] < TODAY;
+      return `<li class="${venc ? "venc" : ""}" ${itemTip(r)}>${icon(venc ? "clock" : "calendar", "ic sm")}<span class="sem-nm">${esc(r.nombre.split("*")[0].trim())}</span><b class="${venc ? "t-alert" : ""}">${venc ? "vencido " : ""}${fmtShort(r.real[0])}</b></li>`;
+    };
+    const faseAct = M.cur && FASES.find((f) => f.id === M.cur.kind);
+    const porIniciar = faseAct ? ts.filter((t) => faseId(t) === faseAct.id && t.pct === 0).length : 0;
+    const proximo = prox.map(fx).join("") + (porIniciar ? `<li class="sem-mas">${plural(porIniciar, "trabajo", "trabajos")} de ${faseAct.nombre} por iniciar</li>` : "");
+    const col = (titulo, sub, cuerpo, vacio) => `<div class="sem-col"><div class="sem-h"><b>${titulo}</b><small>${sub}</small></div><ul>${cuerpo || `<li class="sem-vacio">${vacio}</li>`}</ul></div>`;
+    return card("Esta semana", `<div class="sem">
+      ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
+      ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
+      ${col("Lo próximo", "hitos y fases", proximo, "Sin hitos pendientes.")}
+    </div>`, { cls: "wide", right: avTxt });
+  }
+
   function cambiosCard(M) {
     const C = M.D.cambios.slice(0, 6);
     const chip = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
@@ -448,6 +489,7 @@
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
     return `<div class="kpis ${M.part ? "k10" : "k9"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+      ${semanaCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, true)}`;

@@ -74,6 +74,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - **Incurrido del resumen gerencial** = total de "$ Incurrido" del tablero **Contabilidad Kelly Trader** (18431381932, antes "POs Kelly Trader"): todos los documentos contables, estén o no enlazados. Lo que no tiene centro de costo ni trabajo se muestra aparte en el detalle; por área y por centro de costo solo cuenta lo enlazado (pedido del usuario, 15 oct).
 - **Costos** (aprobado, proyectado, PO; incurrido por centro y por área): salen del tablero **CC. Centros de Costo**. Cada centro debe sumar sus líneas de P1, P2 y P3. Los **gastos generales** son los centros de costo, con sus mismos nombres.
 - **Cronograma:** las barras usan la **Fecha Real** y la **Línea Base** se muestra como referencia. El atraso es la columna **Diferencia**. Los hitos son los elementos con duración 0.
+- **Esta semana** (resumen): lo hecho (trabajos que avanzaron contra la lectura de hace 7 días), lo que está en curso (25–75 %) y lo próximo (hitos y fases; los hitos vencidos sin marcar en rojo). El avance de cada lectura se guarda en `monday/historial.json` (una entrada por día, desde el 14 oct); `generar.py` lo actualiza solo.
 - **Tiempo y avance se muestran separados**, porque el tiempo puede pasar sin que suba el avance. El buque de la cabecera marca hoy en el cronograma; el avance va aparte.
 
 ## Diseño

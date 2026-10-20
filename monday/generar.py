@@ -237,6 +237,22 @@ def area(key, tab):
     return {"id": key, "nombre": TABLEROS[key]["nombre"], "tablero": b["name"], "trabajos": trabajos}
 
 
+HISTORIAL = AQUI / "historial.json"  # avance de cada lectura (una por día) para ver qué se hizo en la semana
+
+
+def historial(datos):
+    """Guarda el avance de esta lectura (el % de cada trabajo y el total) y devuelve el historial completo.
+    Una entrada por día: si hay varias lecturas el mismo día, queda la última."""
+    h = json.loads(HISTORIAL.read_text(encoding="utf-8")) if HISTORIAL.exists() else []
+    tot = datos["avance"]["total"]
+    hoy = {"fecha": datos["extraido"], "avance": round(tot["avanceDias"] / tot["duracion"] * 100, 2) if tot["duracion"] else None,
+           "pct": {t["id"]: t["pct"] for a in datos["areas"] for t in a["trabajos"] if not t["cancelado"]}}
+    h = [x for x in h if x["fecha"] != hoy["fecha"]] + [hoy]
+    h.sort(key=lambda x: x["fecha"])
+    HISTORIAL.write_text(json.dumps(h, ensure_ascii=False), encoding="utf-8")
+    return h
+
+
 def revisar_fases(crono, areas, hoy):
     """Avisa si un trabajo tiene avance en una fase que según el Cronograma todavía no empieza (p. ej. Dique antes de entrar al dique)."""
     inicio = {}
@@ -575,6 +591,7 @@ def main():
             tot[k] += r[k]
     av["total"] = tot
     datos["avance"] = av
+    datos["historial"] = historial(datos)
     import hashlib
     datos["_huella"] = hashlib.sha1(CRUDO.read_bytes()).hexdigest()[:12]
     datos["cambiosLectura"] = comparar_con_anterior(datos)
