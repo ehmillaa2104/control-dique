@@ -451,6 +451,22 @@
       { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
   }
 
+  // Entrega de información semanal del equipo de cada área: Completa / Parcial / Pendiente (la última semana con datos)
+  const ENTREGA = { 2: ["Completa", "ok"], 1: ["Parcial", "warn"], 0: ["Pendiente", "alert"] };
+  function entregaHTML(M, areaId) {
+    const P = M.D.participacion;
+    const e = P && P.equipos.find((x) => x.area === areaId);
+    if (!e) return "";
+    const conDatos = P.semanas.filter((s) => s.act);
+    const ult = conDatos[conDatos.length - 1];
+    if (!ult) return "";
+    const est = (s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; return ENTREGA[d.pa == null ? 0 : d.pa]; };
+    const [txt, cls] = est(ult);
+    const nom = (s) => `Semana ${s.semana.slice(1)}${s.fecha ? " · " + esc(s.fecha) : ""}`;
+    const tip = `<b>Entrega de información semanal</b>${conDatos.map((s) => rowT(nom(s), esc(est(s)[0]))).join("")}`;
+    return `<div class="area-ent" ${tipAttr(tip)}><small>Entrega de información semanal</small><span>${nom(ult)}</span><span class="chip ${cls}">${txt}</span></div>`;
+  }
+
   function areaCards(M) {
     return `<div class="areas">${M.areas.map((a) => {
       const C = costos(a.act), av = avance(a.trabajos);
@@ -459,6 +475,7 @@
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
         <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
+        ${entregaHTML(M, a.id)}
         ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;

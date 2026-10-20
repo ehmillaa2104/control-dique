@@ -76,6 +76,16 @@ EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubiert
 PTS_ACT = {"2": 2, "1": 1, "0": 0}  # "2 - Actualización directa", "1 - Actualización indirecta", "0 - No actualizó"
 
 
+def pts_entrega(t):
+    """Entrega de información semanal: Completa = 2, Parcial = 1, Pendiente = 0.
+    También acepta las opciones de antes ("2 - Actualización directa", "1 - … indirecta", "0 - No actualizó")."""
+    t = (t or "").strip()
+    if t[:1] in PTS_ACT:
+        return PTS_ACT[t[:1]]
+    n = t.lower()
+    return 2 if n.startswith("complet") else 1 if n.startswith("parcial") else 0 if n.startswith("pendiente") else None
+
+
 def columnas_semana(board):
     """Columnas de reunión y de actualización por semana, según su título en Monday."""
     sem = {}
@@ -83,7 +93,7 @@ def columnas_semana(board):
         t = c["title"].strip()
         m = re.match(r"(?i)kick\s*off", t)
         r = re.match(r"(?i)reuni[oó]n\s+(S\d+)", t)
-        a = re.match(r"(?i)act\.?\s+(S\d+)", t)
+        a = re.match(r"(?i)(?:act\.?|entrega(?:\s+de\s+informaci[oó]n)?)\s+(S\d+)", t)
         f = re.search(r"\(([^)]+)\)", t)
         if f and (m or r or a):
             sem.setdefault("S1" if m else (r or a).group(1).upper(), {"semana": "S1" if m else (r or a).group(1).upper()})["fecha"] = f.group(1).strip()
@@ -494,7 +504,7 @@ def participacion(raw):
     cvs = [{c["id"]: c for c in it["column_values"]} for it in items]
     txt = lambda cv, cid: (cv.get(cid, {}).get("text") or "").strip() if cid else ""
     ok_r = lambda t: t in ("Asistió", "No asistió")
-    ok_a = lambda t: t[:1] in PTS_ACT and bool(t)
+    ok_a = lambda t: pts_entrega(t) is not None
     # Qué columnas cuentan: las que tienen dato válido en al menos un equipo
     for s_ in semanas:
         for tipo, ok in (("reunion", ok_r), ("act", ok_a)):
@@ -514,7 +524,7 @@ def participacion(raw):
         for s_ in semanas:
             r, a = txt(cv, s_.get("reunion")), txt(cv, s_.get("act"))
             pr = (1 if r == "Asistió" else 0) if ok_r(r) else None
-            pa = PTS_ACT[a[:1]] if ok_a(a) else None
+            pa = pts_entrega(a)
             if r and pr is None:
                 obs.append(("aviso", f'Participación · {it["name"]} · {s_["semana"]}: reunión "{r}" no se reconoce.'))
             if a and pa is None:

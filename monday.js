@@ -7670,12 +7670,16 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "70fa5caba978",
+ "_huella": "c40c8392f958",
  "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "aviso",
    "texto": "P1. Ingeniería: se borró la columna \"link to POs Kelly Trader\" (board_relation_mm8418w8)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Cronograma: se borró la columna \"Avance %\" (numeric_mm6vrh6r)."
   },
   {
    "nivel": "aviso",

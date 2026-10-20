@@ -22810,11 +22810,6 @@
      "type": "dependency"
     },
     {
-     "id": "numeric_mm6vrh6r",
-     "title": "Avance %",
-     "type": "numbers"
-    },
-    {
      "id": "long_text_mm6vtdhs",
      "title": "Notas y evidencia",
      "type": "long_text"
