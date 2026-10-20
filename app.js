@@ -274,6 +274,11 @@
       <div class="vy-info">
         <div class="vi">${icon("check", "ic sm")}<div><small>Último hito</small>${hitoTxt(M.lastHito, false)}</div></div>
         <div class="vi">${icon("calendar", "ic sm")}<div><small>Próximo hito</small>${hitoTxt(M.nextHito, true)}</div></div>
+        ${(() => {
+          const d = fin ? fin.diferencia || 0 : 0, p = M.peorAtraso;
+          const val = Math.abs(d) < 0.5 ? "0 días" : d > 0 ? "+" + days1(d) : "-" + days1(-d);
+          return `<div class="vi ${d >= 2 ? "late" : ""}" ${tipAttr((M.crono.filter((r) => r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia).slice(0, 3).map((r) => rowT(esc(r.nombre.split("*")[0].trim()), "+" + r.diferencia + " d")).join("")) || '<div class="tnote">Sin atrasos</div>')}>${icon("clock", "ic sm")}<div><small>Atraso del cronograma</small><b>${val}${fin ? ` <span>al ${esc(fin.nombre.replace(/\s*\(.*\)\s*$/, ""))}</span>` : ""}</b>${p ? `<span><em class="v-late">${esc(p.nombre)} +${p.diferencia} d</em></span>` : ""}</div></div>`;
+        })()}
       </div>
     </div>`;
   }
@@ -315,8 +320,6 @@
     const n = (e) => ts.filter((t) => etapaDe(t) === e).length;
     const E = C.enRevision ? extra.direccion : null;
     return [
-      kpi("coin", "Presupuesto preliminar", moneyK(C.preliminar), `${etapasBar(C)}<span>Solicitado por el equipo</span>`,
-        { cls: "c-pre", tip: `${rowT("Aprobado", moneyK(C.aprobado))}${rowT("En revisión", moneyK(C.enRevision))}${sinEnviar(C) ? rowT("Sin enviar", moneyK(sinEnviar(C))) : ""}${C.descartado ? rowT("Descartado", moneyK(C.descartado)) : ""}` }),
       kpi("hourglass", "En revisión", moneyK(C.enRevision), `<span>Dir. de Operaciones</span>${notasRevision(ts)}${E ? `<span class="chip warn">${esc(E.txt)}</span>` : ""}`,
         { cls: "c-rev", tip: C.enRevision ? rowT("Trabajos en revisión", n("revision")) : "" }),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
@@ -327,26 +330,21 @@
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
       kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
       ...(extra.extraKpis || []),
-      kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>` : '<span class="t-warn">sin trabajos planificados</span>',
-        { tip: `${rowT("Por iniciar", av.conDur - av.ejec - av.fin)}<div class="tnote">Ponderado por duración</div>` })
+      avanceKpi(av)
     ].join("");
   }
 
-  function atrasoKpi(M) {
-    const f = M.finHito, p = M.peorAtraso;
-    const d = f ? f.diferencia || 0 : 0;
-    const val = Math.abs(d) < 0.5 ? "0 días" : d > 0 ? days1(d) : "-" + days1(-d);
-    const sub = (f ? `<span>${esc(f.nombre.replace(/\s*\(.*\)\s*$/, ""))} ${fmtShort(f.real[0])}${f.base && f.base[0] !== f.real[0] ? ` · plan ${fmtShort(f.base[0])}` : " · en plazo"}</span>` : "<span>sin hito final</span>") +
-      (p ? `<span class="t-alert">${esc(p.nombre)} +${p.diferencia} d</span>` : "");
-    return kpi("clock", "Atraso del cronograma", val, sub, {
-      alert: d >= 2,
-      tip: (M.crono.filter((r) => r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia).slice(0, 3).map((r) => rowT(esc(r.nombre.split("*")[0].trim()), "+" + r.diferencia + " d")).join("") || '<div class="tnote">Sin atrasos</div>')
-    });
+  // Avance físico como un reloj: anillo que se llena con el %
+  function avanceKpi(av) {
+    const p = Math.max(0, Math.min(100, av.pct || 0)), r = 15.9155; // circunferencia = 100
+    const reloj = `<svg class="reloj" viewBox="0 0 36 36" aria-hidden="true"><circle class="r-bg" cx="18" cy="18" r="${r}"/><circle class="r-fg" cx="18" cy="18" r="${r}" stroke-dasharray="${p.toFixed(2)} 100"/></svg>`;
+    return `<div class="card kpi k-avance" ${tipAttr(`${rowT("En ejecución", av.ejec)}${rowT("Finalizados", av.fin)}${rowT("Por iniciar", av.conDur - av.ejec - av.fin)}<div class="tnote">Ponderado por duración</div>`)}>
+      <div class="reloj-w">${reloj}<b>${pct(av.pct, 0)}</b></div><div style="min-width:0"><div class="lbl">Avance físico</div><div class="sub">${av.conDur ? `<span>${av.ejec} en ejecución</span><span>${av.fin} finalizados de ${av.conDur}</span>` : '<span class="t-warn">sin trabajos planificados</span>'}</div></div></div>`;
   }
 
   // Centros de costo, desplegables por grupo y por centro (con sus trabajos de P1, P2 y P3)
   function centrosCard(M) {
-    const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.preliminar, "pre")}</span><span class="n ${cls}">${m3(c.enRevision, "rev")}</span><span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
+    const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.enRevision, "rev")}</span><span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
     const grupos = [];
     M.centros.forEach((c) => { let g = grupos.find((x) => x.nombre === c.grupo); if (!g) grupos.push((g = { nombre: c.grupo, items: [] })); g.items.push(c); });
     // Estado del centro según sus montos; si Dirección pidió cambios en Monday ("Revisar"), eso manda
@@ -373,7 +371,7 @@
     }).join("");
     const T = costos(M.centros);
     return card("Centros de costo", `<div class="cc-table">
-        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n t-pre">Preliminar</span><span class="n t-rev">En revisión</span><span class="n t-apr">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
+        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n t-rev">En revisión</span><span class="n t-apr">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
         ${body}
         <div class="cc-total"><span class="nm">Total</span>${cols(T, "b")}<span class="st"></span></div>
       </div>`, { cls: "wide", right: "clic en un grupo o centro para desplegar" });
@@ -466,7 +464,7 @@
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
-        <div class="area-c"><div><small>Preliminar</small><b class="t-pre">${moneyK(C.preliminar)}</b></div><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div>${etapasBar(C, "area-stk")}<div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
+        <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div>${etapasBar(C, "area-stk")}<div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;
@@ -488,11 +486,11 @@
     const incurrido = {
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
-    return `<div class="kpis ${M.part ? "k10" : "k9"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all })}${partKpi(M, null, "Participación del equipo")}</div>
       ${semanaCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
-      ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, true)}`;
+      ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, false)}`;
   }
 
   // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
@@ -531,14 +529,15 @@
       const ts = conArea.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
       const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
       const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
-      return `<details class="fs k-${f.id} ${actual ? "cur" : ""}"><summary class="fs-row">
+      const tipM = `${rowT("En revisión", moneyK(C.enRevision))}${rowT("Aprobado", moneyK(C.aprobado))}${rowT("Incurrido", moneyK(C.incurrido))}`;
+      return `<details class="fs k-${f.id} ${actual ? "cur" : ""}"><summary class="fs-row" ${tipAttr(tipM)}>
           <span class="fs-nm"><b><i class="dot k-${f.id}"></i>${f.nombre}${actual ? '<em class="chip">etapa actual</em>' : ""}</b><small>${fechas}</small></span>
           <span class="fs-dt">${datos(av)}</span>
-          ${barra(av.pct)}${montos(C)}</summary>
+          ${barra(av.pct)}</summary>
         <div class="fs-body">${lista(ts) || empty("Sin trabajos en esta fase.")}</div></details>`;
     };
     const tav = avance(all.filter(conFase)), TC = costos(all.filter((t) => !t.cancelado && conFase(t)));
-    const total = `<div class="fs-row fs-tot"><span class="fs-nm"><b>Total planificado</b><small>trabajos con fase</small></span><span class="fs-dt">${datos(tav)}</span>${barra(tav.pct)}${montos(TC)}</div>`;
+    const total = `<div class="fs-row fs-tot"><span class="fs-nm"><b>Total planificado</b></span><span class="fs-dt">${datos(tav)}</span>${barra(tav.pct)}</div>`;
     return card("Avance por fase", `<div class="fs-list ${grande ? "grande" : ""}">${FASES.map(fila).join("")}${total}</div>`,
       Object.assign({ right: "clic en una fase para ver sus trabajos" }, grande ? { cls: "wide" } : {}));
   }
@@ -572,7 +571,7 @@
     const pa = partDe(M, a.id);
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
     return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
-      <div class="kpis ${pa ? "k9" : "k8"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
+      <div class="kpis ${pa ? "k8" : "k7"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${card(`Trabajos · ${esc(a.tablero)}${FASE !== "todas" ? ` · ${(FASES.find((f) => f.id === FASE) || {}).nombre}` : ""}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
