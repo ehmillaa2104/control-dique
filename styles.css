@@ -654,7 +654,10 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 900px) { .fs-m { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .fs-tbl th:nth-child(4), .fs-tbl th:nth-child(5) { width: 96px; } .fs-tbl th:nth-child(6) { width: 100px; } .fs-tbl th:nth-child(7) { width: 80px; }
 
-/* Entrega de información semanal (tarjetas de área) */
-.area-ent { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 9px; }
-.area-ent small { font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); flex: 1 1 auto; }
-.area-ent span:not(.chip) { font-size: 12px; color: var(--ink-2); }
+/* Entrega de información semanal (cuadro Esta semana, todos los departamentos) */
+.sem-ent { border-top: 1px solid var(--border); padding: 12px 16px 14px; }
+.ent-l { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 4px; }
+.ent-i { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-2); cursor: default; }
+.ent-i b { font-size: 12.5px; }
+@media (max-width: 1100px) { .ent-l { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .ent-l { grid-template-columns: 1fr 1fr; } }

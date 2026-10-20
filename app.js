@@ -439,7 +439,7 @@
       ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
       ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
       ${col("Lo próximo", "hitos y fases", proximo, "Sin hitos pendientes.")}
-    </div>`, { cls: "wide", right: avTxt });
+    </div>${entregaHTML(M)}`, { cls: "wide", right: avTxt });
   }
 
   function cambiosCard(M) {
@@ -451,20 +451,26 @@
       { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
   }
 
-  // Entrega de información semanal del equipo de cada área: Completa / Parcial / Pendiente (la última semana con datos)
+  // Entrega de información semanal de todos los departamentos (tablero Participación del Equipo, columnas "Act. Sn"):
+  // la última semana cuya fecha ya pasó; si un departamento no la tiene cargada, cuenta como Pendiente (no presentó)
   const ENTREGA = { 2: ["Completa", "ok"], 1: ["Parcial", "warn"], 0: ["Pendiente", "alert"] };
-  function entregaHTML(M, areaId) {
+  const MESES = { jan: 0, ene: 0, feb: 1, mar: 2, apr: 3, abr: 3, may: 4, jun: 5, jul: 6, aug: 7, ago: 7, sep: 8, set: 8, oct: 9, nov: 10, dec: 11, dic: 11 };
+  const fechaSemana = (f) => { const m = String(f || "").match(/(\d{1,2})\s*([a-záé]{3})/i); if (!m || !(m[2].toLowerCase() in MESES)) return null; return iso(new Date(+TODAY.slice(0, 4), MESES[m[2].toLowerCase()], +m[1])); };
+  function entregaHTML(M) {
     const P = M.D.participacion;
-    const e = P && P.equipos.find((x) => x.area === areaId);
-    if (!e) return "";
-    const conDatos = P.semanas.filter((s) => s.act);
-    const ult = conDatos[conDatos.length - 1];
+    if (!P || !P.equipos.length) return "";
+    const conAct = P.semanas.filter((s) => s.act || fechaSemana(s.fecha));
+    const pasadas = conAct.filter((s) => { const f = fechaSemana(s.fecha); return f ? f <= TODAY : s.act; });
+    const ult = pasadas[pasadas.length - 1];
     if (!ult) return "";
-    const est = (s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; return ENTREGA[d.pa == null ? 0 : d.pa]; };
-    const [txt, cls] = est(ult);
+    const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; return ENTREGA[d.pa == null ? 0 : d.pa]; };
     const nom = (s) => `Semana ${s.semana.slice(1)}${s.fecha ? " · " + esc(s.fecha) : ""}`;
-    const tip = `<b>Entrega de información semanal</b>${conDatos.map((s) => rowT(nom(s), esc(est(s)[0]))).join("")}`;
-    return `<div class="area-ent" ${tipAttr(tip)}><small>Entrega de información semanal</small><span>${nom(ult)}</span><span class="chip ${cls}">${txt}</span></div>`;
+    const items = P.equipos.map((e) => {
+      const [txt, cls] = est(e, ult);
+      const tip = `<b>${esc(e.nombre)}</b>${pasadas.map((s) => rowT(nom(s), esc(est(e, s)[0]))).join("")}`;
+      return `<span class="ent-i" ${tipAttr(tip)}><b>${esc(e.nombre)}</b><span class="chip ${cls}">${txt}</span></span>`;
+    }).join("");
+    return `<div class="sem-ent"><div class="sem-h"><b>Entrega de información semanal</b><small>${nom(ult)} · sin cargar = pendiente</small></div><div class="ent-l">${items}</div></div>`;
   }
 
   function areaCards(M) {
@@ -475,7 +481,6 @@
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
         <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
-        ${entregaHTML(M, a.id)}
         ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;
