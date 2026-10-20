@@ -79,7 +79,7 @@ window.DIQUE_MONDAY = {
    "id": "13095528121",
    "grupo": "Pre-Dique",
    "nombre": "PRE-DIQUE (Ejecución)",
-   "estado": "En curso",
+   "estado": "Listo",
    "duracion": 14,
    "base": [
     "2026-10-04",
@@ -90,13 +90,13 @@ window.DIQUE_MONDAY = {
     "2026-10-17"
    ],
    "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "actualizado": "2026-10-20"
   },
   {
    "id": "13095528122",
    "grupo": "Pre-Dique",
    "nombre": "Traslado a Cartagena",
-   "estado": "No Iniciado",
+   "estado": "Listo",
    "duracion": 3,
    "base": [
     "2026-10-17",
@@ -107,7 +107,7 @@ window.DIQUE_MONDAY = {
     "2026-10-19"
    ],
    "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "actualizado": "2026-10-20"
   },
   {
    "id": "13095528123",
@@ -120,11 +120,11 @@ window.DIQUE_MONDAY = {
     "2026-10-19"
    ],
    "real": [
-    "2026-10-19",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-10-20"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "diferencia": 1,
+   "actualizado": "2026-10-20"
   },
   {
    "id": "13095528124",
@@ -7512,24 +7512,41 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "b5152e8d5e78",
- "cambiosLectura": [],
+ "_huella": "31df2b8a7136",
+ "cambiosLectura": [
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PRE-DIQUE (Ejecución)",
+   "campo": "Estado",
+   "antes": "En curso",
+   "ahora": "Listo"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Cartagena",
+   "campo": "Estado",
+   "antes": "No Iniciado",
+   "ahora": "Listo"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
+   "campo": "Fecha Real",
+   "antes": "2026-10-19 a 2026-10-19",
+   "ahora": "2026-10-20 a 2026-10-20"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "aviso",
-   "texto": "P1. Ingeniería: se borró la columna \"link to POs Kelly Trader\" (board_relation_mm8418w8)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma: se borró la columna \"Avance %\" (numeric_mm6vrh6r)."
-  },
-  {
-   "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Entrada al muelle del astillero\": su fecha (2026-10-19) ya pasó y sigue \"No Iniciado\"; actualizar la fecha o marcarlo Listo."
   },
   {
    "nivel": "info",
@@ -7654,10 +7671,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };
