@@ -321,13 +321,13 @@
         { cls: "c-rev", tip: C.enRevision ? rowT("Trabajos en revisión", n("revision")) : "" }),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
-      extra.resumen ? "" : kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
+      kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      extra.resumen ? "" : kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Sin información aún"),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Sin información aún"),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
-      extra.resumen ? "" : kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
+      kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
       ...(extra.extraKpis || []),
-      extra.sinAvance ? "" : kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>` : '<span class="t-warn">sin trabajos planificados</span>',
+      kpi("gauge", "Avance físico", pct(av.pct), av.conDur ? `<span>${av.ejec} en ejecución · ${av.fin} finalizados de ${av.conDur}</span>` : '<span class="t-warn">sin trabajos planificados</span>',
         { tip: `${rowT("Por iniciar", av.conDur - av.ejec - av.fin)}<div class="tnote">Ponderado por duración</div>` })
     ].join("");
   }
@@ -475,7 +475,7 @@
   // =========================================================
   // Vistas
   // =========================================================
-  function totales(M) {
+  function viewResumen(M) {
     const all = M.areas.flatMap((a) => a.trabajos);
     // Montos de los centros de costo (preliminar, en revisión, aprobado, proyectado y PO)
     const C = costos(M.centros);
@@ -488,27 +488,11 @@
     const incurrido = {
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
-    return { C, all, incurrido, incSin, sinEnl };
-  }
-  function viewResumen(M) {
-    const { C, all, incurrido } = totales(M);
-    return `<div class="kpis ${M.part ? "k7" : "k6"}">${costKpis(C, avance(all), { resumen: true, incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k10" : "k9"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, extraKpis: [atrasoKpi(M)] })}${partKpi(M, null, "Participación del equipo")}</div>
       ${semanaCard(M)}
-      ${M.part ? `<div class="row-2">${fasesCard(M, false, false)}${partTabla(M)}</div>` : fasesCard(M, true, false)}
-      <h2 class="sec">Resumen por área</h2>${areaCards(M)}`;
-  }
-
-  // Costos: todos los montos, los centros de costo con sus trabajos, los descartados y los cambios o imprevistos
-  function viewCostos(M) {
-    const { C, all, incurrido, sinEnl } = totales(M);
-    const desc = all.filter((t) => !t.cancelado && t.costo === "descartado" && t.preliminar);
-    const byArea = (t) => (M.areas.find((a) => a.trabajos.includes(t)) || {});
-    const descCard = card("Descartados", desc.length ? `<div class="list">${desc.map((t) => `<div class="li"><div><b>${esc(t.nombre)}</b><small>${esc(byArea(t).nombre || "")} · se pidió, no se aprobó</small></div><b class="t-pre">${moneyK(t.preliminar)}</b></div>`).join("")}</div>`
-      : empty("Sin trabajos descartados."), { right: desc.length ? `${moneyK(sum(desc, (t) => t.preliminar))} en el preliminar` : "" });
-    const docs = sinEnl.length ? card("Contabilidad sin enlazar", `<div class="list">${sinEnl.map((p) => `<div class="li"><div><b>${esc(p.nombre)}</b><small>sin centro de costo ni trabajo</small></div><b>${moneyK(p.incurrido)}</b></div>`).join("")}</div>`) : "";
-    return `<div class="kpis k7">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, sinAvance: true })}</div>
-      ${centrosCard(M)}
-      <div class="row-2">${descCard}<div class="stack">${cambiosCard(M)}${docs}</div></div>`;
+      <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
+      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
+      ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, true)}`;
   }
 
   // Trabajos planificados: los que tienen una fase (Pre-dique, Dique, Post-dique…); "No Aplica" o sin fase no se muestran
@@ -524,7 +508,7 @@
     `<button type="button" data-fase="${f.id}" aria-pressed="${FASE === f.id}">${f.id !== "todas" ? `<i class="dot k-${f.id}"></i>` : ""}${f.nombre}<small>${trabajos.filter(enFase(f.id)).length}</small></button>`).join("")}</div>`;
 
   // Avance y montos por fase (Pre-dique, Dique, Post-dique) con las fechas de la fase en el Cronograma
-  function fasesCard(M, grande, detalle = true) {
+  function fasesCard(M, grande) {
     const all = M.areas.flatMap((a) => a.trabajos);
     const barra = (v, cls = "") => `<div class="mini-av ${cls}"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, v))}%"></i></span><b>${pct(v, 0)}</b></div>`;
     // Los mismos montos que en el resto del dashboard, para poder comparar las fases
@@ -547,10 +531,6 @@
       const ts = conArea.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
       const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
       const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
-      if (!detalle) return `<div class="fs k-${f.id} ${actual ? "cur" : ""}"><div class="fs-row">
-          <span class="fs-nm"><b><i class="dot k-${f.id}"></i>${f.nombre}${actual ? '<em class="chip">etapa actual</em>' : ""}</b><small>${fechas}</small></span>
-          <span class="fs-dt">${datos(av)}</span>
-          ${barra(av.pct)}${montos(C)}</div></div>`;
       return `<details class="fs k-${f.id} ${actual ? "cur" : ""}"><summary class="fs-row">
           <span class="fs-nm"><b><i class="dot k-${f.id}"></i>${f.nombre}${actual ? '<em class="chip">etapa actual</em>' : ""}</b><small>${fechas}</small></span>
           <span class="fs-dt">${datos(av)}</span>
@@ -559,8 +539,8 @@
     };
     const tav = avance(all.filter(conFase)), TC = costos(all.filter((t) => !t.cancelado && conFase(t)));
     const total = `<div class="fs-row fs-tot"><span class="fs-nm"><b>Total planificado</b><small>trabajos con fase</small></span><span class="fs-dt">${datos(tav)}</span>${barra(tav.pct)}${montos(TC)}</div>`;
-    return card("Avance por fase", `<div class="fs-list ${grande ? "grande" : ""} ${detalle ? "" : "plano"}">${FASES.map(fila).join("")}${total}</div>`,
-      Object.assign({ right: detalle ? "clic en una fase para ver sus trabajos" : '<a href="#cronograma">trabajos de cada fase en Cronograma</a>' }, grande ? { cls: "wide" } : {}));
+    return card("Avance por fase", `<div class="fs-list ${grande ? "grande" : ""}">${FASES.map(fila).join("")}${total}</div>`,
+      Object.assign({ right: "clic en una fase para ver sus trabajos" }, grande ? { cls: "wide" } : {}));
   }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();
@@ -638,7 +618,6 @@
         <td class="n">${r.duracion == null ? "—" : r.duracion}</td></tr>`;
     }).join("");
     return `${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
-      ${fasesCard(M, true, true)}
       ${programaCard(M)}
       ${card("Elementos del cronograma", `<div class="scroll"><table class="tbl"><thead><tr><th>Elemento</th><th>Estado</th><th>Fecha real</th><th>Línea base</th><th class="n">Diferencia</th><th class="n">Duración</th></tr></thead><tbody>${rows}</tbody></table></div>`, { cls: "wide" })}`;
   }
@@ -651,22 +630,22 @@
   const QUERY = {};
   const tabs = (M) => [{ id: "resumen", nombre: "Resumen gerencial", icono: "grid" }]
     .concat(M.areas.map((a) => ({ id: a.id, nombre: a.nombre, icono: AREA_ICON[a.id] || "grid", badge: pct(avance(a.trabajos).pct, 0) })))
-    .concat([{ id: "costos", nombre: "Costos", icono: "coin" }, { id: "cronograma", nombre: "Cronograma", icono: "calendar" }]);
+    .concat([{ id: "cronograma", nombre: "Cronograma", icono: "calendar" }]);
 
   function render() {
     if (!MODEL) return;
     const M = MODEL;
     const key = decodeURIComponent(location.hash.slice(1)) || "resumen";
     const area = M.areas.find((a) => a.id === key);
-    VIEW = area ? key : key === "cronograma" || key === "costos" ? key : "resumen";
+    VIEW = area ? key : key === "cronograma" ? "cronograma" : "resumen";
     $("tabs").innerHTML = tabs(M).map((t) => `<a class="tab" href="#${t.id}" ${t.id === VIEW ? 'aria-current="page"' : ""}>${icon(t.icono)}${esc(t.nombre)}${t.badge ? `<span class="badge">${t.badge}</span>` : ""}</a>`).join("");
-    $("hero-title").textContent = area ? "Área de " + area.nombre : VIEW === "cronograma" ? "Cronograma" : VIEW === "costos" ? "Costos" : "Resumen gerencial";
+    $("hero-title").textContent = area ? "Área de " + area.nombre : VIEW === "cronograma" ? "Cronograma" : "Resumen gerencial";
     $("hero-sub").textContent = `M/V ${M.D.proyecto} · datos de Monday leídos el ${fmtDate(M.D.extraido)}`;
     $("upd-date").textContent = fmtDate(TODAY);
-    document.title = (area ? area.nombre : VIEW === "cronograma" ? "Cronograma" : VIEW === "costos" ? "Costos" : "Resumen") + " · Control de Dique · Rev. 3";
+    document.title = (area ? area.nombre : VIEW === "cronograma" ? "Cronograma" : "Resumen") + " · Control de Dique · Rev. 3";
     $("voyage").innerHTML = voyageHTML(M);
     sailShip();
-    app.innerHTML = area ? viewArea(M, area, QUERY[area.id]) : VIEW === "cronograma" ? viewCrono(M) : VIEW === "costos" ? viewCostos(M) : viewResumen(M);
+    app.innerHTML = area ? viewArea(M, area, QUERY[area.id]) : VIEW === "cronograma" ? viewCrono(M) : viewResumen(M);
     app.querySelectorAll(".gantt").forEach(layoutMl);
   }
 
