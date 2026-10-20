@@ -4,8 +4,7 @@ Convierte la lectura de Monday (monday/crudo/kelly.json) en ../monday.js, que es
     python monday/generar.py            # convierte y revisa
     python monday/generar.py --recortar # además deja en crudo/ solo las columnas que se usan
 
-kelly.json es la respuesta de la API de Monday (GraphQL) para los 8 tableros del Kelly Trader
-y el tablero PROGRAMA DE DIQUES de la flota:
+kelly.json es la respuesta de la API de Monday (GraphQL) para los 8 tableros del Kelly Trader:
     boards(ids: [...]) { id name items_page(limit: 500) { cursor items { id name created_at updated_at
       group { id title } column_values { id type text ... on MirrorValue { display_value }
       ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } }
@@ -66,11 +65,6 @@ TABLEROS = {
     # se toman por su título, así que una semana nueva entra sola. Aquí van solo las columnas fijas.
     "participacion": {"id": "18435454602", "col": {
         "puntos": "formula_mm84qsjp", "cumplimiento": "formula_mm84c488", "nivel": "formula_mm84jbkq"}},
-    # PROGRAMA DE DIQUES: próximos diques de la flota (fuera de la carpeta KELLY TRADER). Las Observaciones no se leen:
-    # son texto libre y el repositorio es público.
-    "programa": {"id": "18431022776", "col": {
-        "estado": "color_mm7e7wfd", "mandatorio": "date_mm78x2pe", "real": "date_mm766e7z", "diferencia": "formula_mm78vqa2",
-        "lugar": "color_mm765t5s", "tipo": "color_mm7666ab", "anterior": "numeric_mm766312", "estimado": "numeric_mm76thhf"}},
 }
 EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubierta": "cubierta", "técnico": "tecnico", "tecnico": "tecnico"}  # Seguridad y Contabilidad no tienen tablero de área
 PTS_ACT = {"2": 2, "1": 1, "0": 0}  # "2 - Actualización directa", "1 - Actualización indirecta", "0 - No actualizó"
@@ -373,27 +367,6 @@ def cambios(tab):
     return sorted(out, key=lambda c: c["creado"] or "", reverse=True)
 
 
-def programa(tab):
-    """Programa de diques de la flota: un elemento por dique (nave), agrupado por año."""
-    if not tab:
-        return []
-    b, items = tab
-    out = []
-    for it, v in items:
-        man, real = fecha(v["mandatorio"]), fecha(v["real"])
-        dif = num(v["diferencia"])
-        if man and real and dif is not None and dif != dias(man, real):
-            obs.append(("error", f'{b["name"]} · {texto(it["name"])}: Diferencia en Monday = {dif}, fecha real − mandatorio = {dias(man, real)}.'))
-        if not man and not real:
-            obs.append(("aviso", f'{b["name"]} · {texto(it["name"])}: sin fecha mandatoria ni real.'))
-        out.append({"id": it["id"], "nave": texto(it["name"]), "anio": it["group"]["title"], "estado": v["estado"] or "",
-                    "mandatorio": man, "real": real, "diferencia": dif, "lugar": v["lugar"] or "", "tipo": v["tipo"] or "",
-                    "anterior": num(v["anterior"]), "estimado": num(v["estimado"])})
-    out.sort(key=lambda d: d["real"] or d["mandatorio"] or "9999")
-    obs.append(("info", f'{b["name"]}: {len(out)} diques · estimado total US$ {sum(d["estimado"] or 0 for d in out):,.0f}.'))
-    return out
-
-
 def revisar_columnas(raw):
     """Compara las columnas de cada tablero con las conocidas: nuevas, borradas, renombradas o con otro tipo.
     Si cambia una columna que usa el dashboard, es un aviso fuerte: hay que revisar el mapeo antes de publicar."""
@@ -586,7 +559,6 @@ def main():
         "extraido": raw.get("extraido") or date.today().isoformat(),
         "cronograma": crono, "areas": areas, "centros": centros(tab["centros"], areas),
         "pos": pos(tab["pos"]), "cambios": cambios(tab["cambios"]), "participacion": participacion(raw),
-        "programa": programa(tab["programa"]),
     }
     # Resumen de avance por área (lo usa también la Rev. 2)
     av = {}

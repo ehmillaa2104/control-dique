@@ -6478,164 +6478,6 @@ window.DIQUE_MONDAY = {
    "medio": 50
   }
  },
- "programa": [
-  {
-   "id": "13327030172",
-   "nave": "Kingston Trader",
-   "anio": "2026",
-   "estado": "Listo",
-   "mandatorio": null,
-   "real": "2026-07-07",
-   "diferencia": null,
-   "lugar": "",
-   "tipo": "",
-   "anterior": null,
-   "estimado": null
-  },
-  {
-   "id": "13044078075",
-   "nave": "Kelly Trader",
-   "anio": "2027",
-   "estado": "En curso",
-   "mandatorio": "2027-03-23",
-   "real": "2026-10-05",
-   "diferencia": -169,
-   "lugar": "Cartagena",
-   "tipo": "Especial",
-   "anterior": 906404,
-   "estimado": 800000
-  },
-  {
-   "id": "13044082494",
-   "nave": "Neo Trader",
-   "anio": "2027",
-   "estado": "",
-   "mandatorio": "2027-01-13",
-   "real": "2027-01-15",
-   "diferencia": 2,
-   "lugar": "Cartagena",
-   "tipo": "Intermedio",
-   "anterior": 501251,
-   "estimado": 600000
-  },
-  {
-   "id": "13044082478",
-   "nave": "Perlas Trader",
-   "anio": "2027",
-   "estado": "",
-   "mandatorio": "2027-01-10",
-   "real": "2027-04-15",
-   "diferencia": 95,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": null,
-   "estimado": 550000
-  },
-  {
-   "id": "13044078081",
-   "nave": "Roxana Trader",
-   "anio": "2027",
-   "estado": "",
-   "mandatorio": "2027-11-27",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": 684663,
-   "estimado": 600000
-  },
-  {
-   "id": "13044078169",
-   "nave": "Isthmus Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-01-19",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Panamá",
-   "tipo": "Intermedio",
-   "anterior": 528477,
-   "estimado": 475000
-  },
-  {
-   "id": "13044078268",
-   "nave": "Kingston Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-06-15",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": null,
-   "estimado": 700000
-  },
-  {
-   "id": "13044078304",
-   "nave": "Pacific Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-06-18",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": null,
-   "estimado": 600000
-  },
-  {
-   "id": "13044078307",
-   "nave": "Caribbean Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-06-22",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Cartagena",
-   "tipo": "Especial",
-   "anterior": null,
-   "estimado": 475000
-  },
-  {
-   "id": "13044078342",
-   "nave": "Colon Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-06-24",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": null,
-   "estimado": 600000
-  },
-  {
-   "id": "13044078393",
-   "nave": "JC Trader",
-   "anio": "2028",
-   "estado": "",
-   "mandatorio": "2028-10-15",
-   "real": null,
-   "diferencia": null,
-   "lugar": "Cartagena",
-   "tipo": "Intermedio",
-   "anterior": 614292,
-   "estimado": 550000
-  },
-  {
-   "id": "13044082969",
-   "nave": "Neo Trader",
-   "anio": "2029",
-   "estado": "",
-   "mandatorio": "2029-01-13",
-   "real": "2029-01-13",
-   "diferencia": 0,
-   "lugar": "Panamá",
-   "tipo": "Especial",
-   "anterior": 600000,
-   "estimado": 500000
-  }
- ],
  "avance": {
   "ingenieria": {
    "lineas": 167,
@@ -7670,7 +7512,7 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "c40c8392f958",
+ "_huella": "b5152e8d5e78",
  "cambiosLectura": [],
  "observaciones": [
   {
@@ -7815,7 +7657,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "PROGRAMA DE DIQUES: 12 diques · estimado total US$ 6,450,000."
+   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };

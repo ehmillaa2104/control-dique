@@ -154,55 +154,51 @@
     return { origin, span, t, xs: (s) => X(t(s)), xe: (s) => X(t(s) + 1), xm: (s) => X(t(s) + 0.5) };
   }
 
+  // Cronograma de detalle: una fila por elemento, agrupadas por fase. A la izquierda el nombre y la fecha real;
+  // en la línea de tiempo la barra (fecha real), la línea base debajo y el atraso en rojo. Los hitos son rombos.
   function ganttHTML(M) {
     const items = M.crono;
     if (!items.length) return '<div class="empty">El tablero Cronograma no tiene fechas.</div>';
     const S = timeScale(items);
     const hoyX = S.xm(TODAY);
-    const lanes = [];
-    items.forEach((o) => { let L = lanes.find((l) => l.grupo === o.grupo); if (!L) lanes.push((L = { grupo: o.grupo, items: [], hitos: [] })); (o.hito ? L.hitos : L.items).push(o); });
-    const lane = (L) => {
-      const all = L.items.concat(L.hitos), st = all.map((o) => o.real[0]).sort(), en = all.map((o) => o.real[1]).sort();
-      const drawn = [];
-      const orden = (o) => (/sub/.test(o.kind) ? 1 : 0);
-      const bars = L.items.slice().sort((a, b) => orden(a) - orden(b) || (a.real[0] < b.real[0] ? -1 : a.real[0] > b.real[0] ? 1 : 0)).map((o) => {
-        // Una actividad que se monta más de un día sobre otra de la misma fila va como barra fina
-        const over = drawn.some((d) => Math.min(S.t(d.real[1]), S.t(o.real[1])) + 1 - Math.max(S.t(d.real[0]), S.t(o.real[0])) > 1);
-        drawn.push(o);
-        const thin = over, vencido = !o.done && o.real[1] < TODAY;
-        const l = S.xs(o.real[0]), w = S.xe(o.real[1]) - l;
-        let h = `<i class="bar k-${o.kind.replace("sub ", "")} ${thin ? "thin" : ""} ${vencido ? "over" : ""}" style="left:${l}%;width:${w}%" ${itemTip(o)}>${!thin && w > 8 ? `<b>${esc(itemName(o))}</b>` : ""}</i>`;
-        if (o.base && !thin) h += `<i class="base" style="left:${S.xs(o.base[0])}%;width:${S.xe(o.base[1]) - S.xs(o.base[0])}%"></i>`;
-        if (o.base && o.diferencia > 0 && o.real[1] > o.base[1]) {
-          h += `<i class="atr ${thin ? "thin" : ""}" style="left:${S.xe(o.base[1])}%;width:${S.xe(o.real[1]) - S.xe(o.base[1])}%" ${itemTip(o)}></i><span class="dly" style="left:${S.xe(o.real[1])}%">+${o.diferencia} d</span>`;
-        }
-        return h;
-      }).join("");
-      const hs = L.hitos.map((o) => {
-        const late = !o.done && (o.diferencia > 0 || o.real[0] < TODAY), x = S.xm(o.real[0]);
-        let h = "";
+    const grupos = [];
+    items.forEach((o) => { let g = grupos.find((x) => x.grupo === o.grupo); if (!g) grupos.push((g = { grupo: o.grupo, items: [] })); g.items.push(o); });
+    // Marcas de cada lunes (líneas verticales suaves) y fechas arriba
+    const lunes = [];
+    for (let d = new Date(S.origin); S.t(iso(d)) <= S.span; d = addDays(d, 1)) if (d.getDay() === 1) lunes.push(iso(d));
+    const grid = lunes.map((d) => `<i class="gx-wk" style="left:${S.xs(d)}%"></i>`).join("") + `<i class="gx-now" style="left:${hoyX}%"></i>`;
+    const nombre = (o) => o.nombre.split("*")[0].replace(/\s*\(ejecuci[oó]n\)\s*/i, "").trim();
+    const fila = (o) => {
+      const late = !o.done && o.diferencia > 0, venc = !o.done && o.real[o.hito ? 0 : 1] < TODAY;
+      const kind = o.kind.replace("sub ", "");
+      const dif = o.diferencia ? `<em class="${o.diferencia > 0 ? "late" : "adel"}">${o.diferencia > 0 ? "+" : ""}${o.diferencia} d</em>` : "";
+      const estado = o.done ? '<em class="ok">✓</em>' : venc ? '<em class="late">vencido</em>' : "";
+      let t = "";
+      if (o.hito) {
+        const x = S.xm(o.real[0]);
         if (o.base && o.base[0] !== o.real[0]) {
           const bx = S.xm(o.base[0]);
-          h += `<i class="hc ${o.diferencia > 0 ? "late" : ""}" style="left:${Math.min(x, bx)}%;width:${Math.abs(x - bx)}%"></i><i class="hg" style="left:${bx}%" ${itemTip(o)}></i>`;
+          t += `<i class="gx-hc ${late ? "late" : ""}" style="left:${Math.min(x, bx)}%;width:${Math.abs(x - bx)}%"></i><i class="gx-hb" style="left:${bx}%"></i>`;
         }
-        return h + `<i class="hd ${o.done ? "ok" : late ? "late" : ""}" style="left:${x}%" ${itemTip(o)}></i>`;
-      }).join("");
-      return `<div class="g-lane"><div class="g-ln"><b>${esc(GRUPO_NOMBRE(L.grupo))}</b><small>${dateRange([st[0], en[en.length - 1]])}</small></div>
-        <div class="g-lt">${bars}${hs}<i class="veil" style="left:${hoyX}%"></i><i class="now" style="left:${hoyX}%"></i></div></div>`;
+        t += `<i class="gx-hd ${o.done ? "ok" : late || venc ? "late" : ""}" style="left:${x}%" ${itemTip(o)}></i>`;
+      } else {
+        const l = S.xs(o.real[0]), w = S.xe(o.real[1]) - l;
+        if (o.base) t += `<i class="gx-base" style="left:${S.xs(o.base[0])}%;width:${S.xe(o.base[1]) - S.xs(o.base[0])}%"></i>`;
+        t += `<i class="gx-bar k-${kind} ${o.done ? "done" : ""}" style="left:${l}%;width:${w}%" ${itemTip(o)}></i>`;
+        if (o.base && o.diferencia > 0 && o.real[1] > o.base[1]) t += `<i class="gx-atr" style="left:${S.xe(o.base[1])}%;width:${S.xe(o.real[1]) - S.xe(o.base[1])}%" ${itemTip(o)}></i>`;
+      }
+      return `<div class="gx-row ${o.hito ? "hito" : ""}"><div class="gx-l"><b>${o.hito ? "◆ " : ""}${esc(nombre(o))}</b><small>${dateRange(o.real)} ${dif} ${estado}</small></div><div class="gx-t">${t}</div></div>`;
     };
-    const ticks = [];
-    for (let d = new Date(S.origin); S.t(iso(d)) <= S.span; d = addDays(d, 1)) if (d.getDay() === 1) ticks.push(iso(d));
-    const axis = ticks.map((d, i) => `<i class="tk ${i % 2 ? "odd" : ""}" style="left:${S.xs(d)}%"><span>${fmtShort(d)}</span></i>`).join("");
-    const mls = M.hitos.map((o) => {
-      const late = !o.done && (o.diferencia > 0 || o.real[0] < TODAY), x = S.xm(o.real[0]);
-      return `<span class="ml r0 ${x < 8 ? "l" : x > 92 ? "r" : ""} ${late ? "late" : o.done ? "ok" : ""}" style="left:${x}%" ${itemTip(o)}>${esc(o.nombre)} <em>${fmtShort(o.real[0])}${o.diferencia > 0 ? ` · +${o.diferencia} d` : ""}</em></span>`;
-    }).join("");
-    return `<div class="gantt">
-      <div class="g-lane top"><div class="g-ln"></div><div class="g-lt"><span class="g-today" style="left:${hoyX}%">Hoy ${fmtShort(TODAY)}</span></div></div>
-      ${lanes.map(lane).join("")}
-      <div class="g-lane axis"><div class="g-ln"></div><div class="g-lt">${axis}</div></div>
-      <div class="g-lane mls"><div class="g-ln"></div><div class="g-lt">${mls}</div></div>
-      <div class="g-foot"><span><i class="lg-bar"></i>Fecha real</span><span><i class="lg-base"></i>Línea base</span><span><i class="lg-late"></i>Atraso</span><span><i class="lg-h ok"></i>Hito cumplido</span><span><i class="lg-h late"></i>Hito atrasado</span></div>
+    const cab = (g) => {
+      const st = g.items.map((o) => o.real[0]).sort()[0], en = g.items.map((o) => o.real[1]).sort().pop();
+      const k = (g.items.find((o) => !o.hito && !/sub/.test(o.kind)) || g.items[0]).kind.replace("sub ", "");
+      return `<div class="gx-row gx-g"><div class="gx-l"><b><i class="dot k-${k}"></i>${esc(GRUPO_NOMBRE(g.grupo))}</b><small>${dateRange([st, en])}</small></div><div class="gx-t"></div></div>`;
+    };
+    const ejes = lunes.map((d, i) => `<span class="${i % 2 ? "odd" : ""} ${i % 3 ? "no3" : ""}" style="left:${S.xs(d)}%">${fmtShort(d)}</span>`).join("");
+    return `<div class="gx">
+      <div class="gx-row gx-ax"><div class="gx-l"></div><div class="gx-t">${ejes}<span class="gx-hoy" style="left:${hoyX}%">Hoy ${fmtShort(TODAY)}</span></div></div>
+      <div class="gx-body"><div class="gx-grid">${grid}</div>${grupos.map((g) => cab(g) + g.items.map(fila).join("")).join("")}</div>
+      <div class="gx-foot"><span><i class="lg-bar"></i>Fecha real</span><span><i class="lg-base"></i>Línea base</span><span><i class="lg-late"></i>Atraso</span><span><i class="lg-h ok"></i>Hito cumplido</span><span><i class="lg-h late"></i>Hito atrasado o vencido</span></div>
     </div>`;
   }
   // Reparte las etiquetas de hitos en dos filas midiendo su ancho real; si no caben, se ocultan (queda el rombo)

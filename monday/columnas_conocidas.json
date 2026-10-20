@@ -507,48 +507,6 @@
    "type": "board_relation"
   }
  },
- "18431022776": {
-  "name": {
-   "title": "Nave",
-   "type": "name"
-  },
-  "color_mm7e7wfd": {
-   "title": "Estado",
-   "type": "status"
-  },
-  "date_mm78x2pe": {
-   "title": "Mandatorio",
-   "type": "date"
-  },
-  "date_mm766e7z": {
-   "title": "Fecha Real",
-   "type": "date"
-  },
-  "formula_mm78vqa2": {
-   "title": "Diferencia",
-   "type": "formula"
-  },
-  "color_mm765t5s": {
-   "title": "Lugar",
-   "type": "status"
-  },
-  "color_mm7666ab": {
-   "title": "Tipo de dique",
-   "type": "status"
-  },
-  "numeric_mm766312": {
-   "title": "$ dique anterior",
-   "type": "numbers"
-  },
-  "numeric_mm76thhf": {
-   "title": "$ estimado próximo dique",
-   "type": "numbers"
-  },
-  "long_text_mm769eya": {
-   "title": "Observaciones",
-   "type": "long_text"
-  }
- },
  "18431019817": {
   "name": {
    "title": "Trabajo",
@@ -661,10 +619,6 @@
   "lookup_mm7yk7y7": {
    "title": "$PO Total",
    "type": "mirror"
-  },
-  "board_relation_mm8418w8": {
-   "title": "link to POs Kelly Trader",
-   "type": "board_relation"
   }
  },
  "18431008651": {
@@ -695,10 +649,6 @@
   "dependency_mm6z7ctn": {
    "title": "Dependencia",
    "type": "dependency"
-  },
-  "numeric_mm6vrh6r": {
-   "title": "Avance %",
-   "type": "numbers"
   },
   "long_text_mm6vtdhs": {
    "title": "Notas y evidencia",
