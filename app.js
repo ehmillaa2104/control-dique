@@ -154,8 +154,12 @@
     return { origin, span, t, xs: (s) => X(t(s)), xe: (s) => X(t(s) + 1), xm: (s) => X(t(s) + 0.5) };
   }
 
-  // Cronograma de detalle: una fila por elemento, agrupadas por fase. A la izquierda el nombre y la fecha real;
-  // en la línea de tiempo la barra (fecha real), la línea base debajo y el atraso en rojo. Los hitos son rombos.
+  // Cronograma de detalle: una fila por elemento, agrupadas por fase, con dos vistas:
+  //   · Plan vs real: línea base en gris y fecha real en rojo (atrasado) o verde (en plazo o adelantado)
+  //   · Estado: verde = listo, amarillo = en ejecución, gris = sin hacer
+  let VISTA_CRONO = "plan";
+  try { VISTA_CRONO = localStorage.getItem("dique-vista-crono") || "plan"; } catch (e) {}
+  const estadoDe = (o) => (o.done ? "listo" : /curso|ejecuci/i.test(o.estado || "") ? "curso" : "sin");
   function ganttHTML(M) {
     const items = M.crono;
     if (!items.length) return '<div class="empty">El tablero Cronograma no tiene fechas.</div>';
@@ -169,23 +173,24 @@
     const grid = lunes.map((d) => `<i class="gx-wk" style="left:${S.xs(d)}%"></i>`).join("") + `<i class="gx-now" style="left:${hoyX}%"></i>`;
     const nombre = (o) => o.nombre.split("*")[0].replace(/\s*\(ejecuci[oó]n\)\s*/i, "").trim();
     const fila = (o) => {
-      const late = !o.done && o.diferencia > 0, venc = !o.done && o.real[o.hito ? 0 : 1] < TODAY;
-      const kind = o.kind.replace("sub ", "");
+      const venc = !o.done && o.real[o.hito ? 0 : 1] < TODAY;
       const dif = o.diferencia ? `<em class="${o.diferencia > 0 ? "late" : "adel"}">${o.diferencia > 0 ? "+" : ""}${o.diferencia} d</em>` : "";
       const estado = o.done ? '<em class="ok">✓</em>' : venc ? '<em class="late">vencido</em>' : "";
       let t = "";
-      if (o.hito) {
+      const real = o.diferencia > 0 ? "rojo" : "verde", est = estadoDe(o);
+      if (VISTA_CRONO === "estado") {
+        if (o.hito) t += `<i class="gx-hd st-${est}" style="left:${S.xm(o.real[0])}%" ${itemTip(o)}></i>`;
+        else { const l = S.xs(o.real[0]); t += `<i class="gx-bar st-${est}" style="left:${l}%;width:${S.xe(o.real[1]) - l}%" ${itemTip(o)}></i>`; }
+      } else if (o.hito) {
         const x = S.xm(o.real[0]);
-        if (o.base && o.base[0] !== o.real[0]) {
-          const bx = S.xm(o.base[0]);
-          t += `<i class="gx-hc ${late ? "late" : ""}" style="left:${Math.min(x, bx)}%;width:${Math.abs(x - bx)}%"></i><i class="gx-hb" style="left:${bx}%"></i>`;
-        }
-        t += `<i class="gx-hd ${o.done ? "ok" : late || venc ? "late" : ""}" style="left:${x}%" ${itemTip(o)}></i>`;
+        if (o.base && o.base[0] !== o.real[0]) t += `<i class="gx-hc ${real}" style="left:${Math.min(x, S.xm(o.base[0]))}%;width:${Math.abs(x - S.xm(o.base[0]))}%"></i>`;
+        if (o.base) t += `<i class="gx-hd base" style="left:${S.xm(o.base[0])}%"></i>`;
+        t += `<i class="gx-hd ${real}" style="left:${x}%" ${itemTip(o)}></i>`;
       } else {
-        const l = S.xs(o.real[0]), w = S.xe(o.real[1]) - l;
-        if (o.base) t += `<i class="gx-base" style="left:${S.xs(o.base[0])}%;width:${S.xe(o.base[1]) - S.xs(o.base[0])}%"></i>`;
-        t += `<i class="gx-bar k-${kind} ${o.done ? "done" : ""}" style="left:${l}%;width:${w}%" ${itemTip(o)}></i>`;
-        if (o.base && o.diferencia > 0 && o.real[1] > o.base[1]) t += `<i class="gx-atr" style="left:${S.xe(o.base[1])}%;width:${S.xe(o.real[1]) - S.xe(o.base[1])}%" ${itemTip(o)}></i>`;
+        // Línea base arriba (gris) y fecha real abajo (rojo si va atrasado, verde si va en plazo o adelantado)
+        if (o.base) t += `<i class="gx-pb" style="left:${S.xs(o.base[0])}%;width:${S.xe(o.base[1]) - S.xs(o.base[0])}%" ${itemTip(o)}></i>`;
+        const l = S.xs(o.real[0]);
+        t += `<i class="gx-pr ${real}" style="left:${l}%;width:${S.xe(o.real[1]) - l}%" ${itemTip(o)}></i>`;
       }
       return `<div class="gx-row ${o.hito ? "hito" : ""}"><div class="gx-l"><b>${o.hito ? "◆ " : ""}${esc(nombre(o))}</b><small>${dateRange(o.real)} ${dif} ${estado}</small></div><div class="gx-t">${t}</div></div>`;
     };
@@ -198,7 +203,9 @@
     return `<div class="gx">
       <div class="gx-row gx-ax"><div class="gx-l"></div><div class="gx-t">${ejes}<span class="gx-hoy" style="left:${hoyX}%">Hoy ${fmtShort(TODAY)}</span></div></div>
       <div class="gx-body"><div class="gx-grid">${grid}</div>${grupos.map((g) => cab(g) + g.items.map(fila).join("")).join("")}</div>
-      <div class="gx-foot"><span><i class="lg-bar"></i>Fecha real</span><span><i class="lg-base"></i>Línea base</span><span><i class="lg-late"></i>Atraso</span><span><i class="lg-h ok"></i>Hito cumplido</span><span><i class="lg-h late"></i>Hito atrasado o vencido</span></div>
+      <div class="gx-foot">${VISTA_CRONO === "estado"
+        ? '<span><i class="lg st-listo"></i>Listo</span><span><i class="lg st-curso"></i>En ejecución</span><span><i class="lg st-sin"></i>Sin hacer</span><span>◆ hito</span>'
+        : '<span><i class="lg gris"></i>Línea base</span><span><i class="lg verde"></i>Real en plazo o adelantado</span><span><i class="lg rojo"></i>Real atrasado</span><span>◆ hito (gris = base)</span>'}</div>
     </div>`;
   }
   // Reparte las etiquetas de hitos en dos filas midiendo su ancho real; si no caben, se ocultan (queda el rombo)
@@ -596,7 +603,8 @@
         <td class="n ${late ? "t-alert b" : ""}">${r.diferencia == null ? "—" : (r.diferencia > 0 ? "+" : "") + r.diferencia + " d"}</td>
         <td class="n">${r.duracion == null ? "—" : r.duracion}</td></tr>`;
     }).join("");
-    return `${card("Cronograma · fecha real contra línea base", ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
+    const sel = `<div class="seg dark" role="group" aria-label="Vista">${[["plan", "Plan vs real"], ["estado", "Estado"]].map(([id, n]) => `<button type="button" data-vista="${id}" aria-pressed="${VISTA_CRONO === id}">${n}</button>`).join("")}</div>`;
+    return `${card("Cronograma", `<div class="gx-bar-top">${sel}</div>` + ganttHTML(M), { cls: "wide dark", right: "tablero Cronograma de Monday" })}
       ${card("Elementos del cronograma", `<div class="scroll"><table class="tbl"><thead><tr><th>Elemento</th><th>Estado</th><th>Fecha real</th><th>Línea base</th><th class="n">Diferencia</th><th class="n">Duración</th></tr></thead><tbody>${rows}</tbody></table></div>`, { cls: "wide" })}`;
   }
 
@@ -635,6 +643,8 @@
     if (area) $("grupos").innerHTML = gruposHTML(MODEL, area, QUERY[VIEW]);
   });
   app.addEventListener("click", (e) => {
+    const v = e.target.closest("[data-vista]");
+    if (v) { VISTA_CRONO = v.dataset.vista; try { localStorage.setItem("dique-vista-crono", VISTA_CRONO); } catch (err) {} const y = scrollY; render(); scrollTo({ top: y }); return; }
     const b = e.target.closest("[data-fase]");
     if (!b) return;
     FASE = b.dataset.fase;

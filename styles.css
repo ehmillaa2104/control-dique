@@ -663,3 +663,23 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .gx-ax span.odd:not(.no3) { display: inline; }
   .gx-foot { margin-left: 0; }
 }
+
+/* Cronograma: vistas Plan vs real y Estado */
+:root { --g-verde: #22c55e; --g-rojo: #ef4444; --g-amar: #facc15; --g-gris: #8b8f97; }
+.gx-bar-top { padding: 10px 14px 0; }
+.seg.dark { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.15); }
+.seg.dark button { color: rgba(255,255,255,.75); }
+.seg.dark button[aria-pressed="true"] { background: #fff; color: #0a0a0a; }
+.gx-pb { position: absolute; top: 6px; height: 8px; border-radius: 3px; background: var(--g-gris); opacity: .75; z-index: 2; }
+.gx-pr { position: absolute; top: 16px; height: 8px; border-radius: 3px; z-index: 3; }
+.gx-pr.verde, .gx-hd.verde { background: var(--g-verde); }
+.gx-pr.rojo, .gx-hd.rojo { background: var(--g-rojo); }
+.gx-hd.verde { border-color: #bbf7d0; } .gx-hd.rojo { border-color: #fecaca; }
+.gx-hd.base { background: transparent; border: 1.5px solid var(--g-gris); width: 10px; height: 10px; margin-left: -5px; top: 10px; z-index: 3; }
+.gx-hc.verde { border-top-color: var(--g-verde); } .gx-hc.rojo { border-top-color: var(--g-rojo); }
+.gx-bar.st-listo, .gx-hd.st-listo, .lg.st-listo { background: var(--g-verde); }
+.gx-bar.st-curso, .gx-hd.st-curso, .lg.st-curso { background: var(--g-amar); }
+.gx-bar.st-sin, .gx-hd.st-sin, .lg.st-sin { background: var(--g-gris); }
+.gx-hd.st-listo, .gx-hd.st-curso, .gx-hd.st-sin { border-color: rgba(255,255,255,.8); }
+.gx-foot .lg { width: 16px; height: 9px; border-radius: 2px; }
+.gx-foot .lg.gris { background: var(--g-gris); } .gx-foot .lg.verde { background: var(--g-verde); } .gx-foot .lg.rojo { background: var(--g-rojo); }
