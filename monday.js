@@ -113,7 +113,7 @@ window.DIQUE_MONDAY = {
    "id": "13095528123",
    "grupo": "Pre-Dique",
    "nombre": "Entrada al muelle del astillero",
-   "estado": "No Iniciado",
+   "estado": "Listo",
    "duracion": 0,
    "base": [
     "2026-10-19",
@@ -124,7 +124,7 @@ window.DIQUE_MONDAY = {
     "2026-10-20"
    ],
    "diferencia": 1,
-   "actualizado": "2026-10-20"
+   "actualizado": "2026-10-22"
   },
   {
    "id": "13095528124",
@@ -7870,80 +7870,20 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "dc747ae00d8d",
+ "_huella": "f74ffde5bd3a",
  "cambiosLectura": [
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
    "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-10-21"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de Tanques de Lastre",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de Tanques de Lastre",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-10-21"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Calibración de tanques de carga",
-   "campo": "$ Incurrido",
-   "antes": "11663",
-   "ahora": "—"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-10-21"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "74"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Estadia, Viaje y transporte",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
+   "antes": "No Iniciado",
+   "ahora": "Listo"
   }
  ],
  "observaciones": [
   {
    "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Entrada al muelle del astillero\": su fecha (2026-10-20) ya pasó y sigue \"No Iniciado\"; actualizar la fecha o marcarlo Listo."
   },
   {
    "nivel": "info",
