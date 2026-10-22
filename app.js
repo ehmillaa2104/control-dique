@@ -467,7 +467,9 @@
     const pasadas = conAct.filter((s) => { const f = fechaSemana(s.fecha); return f ? f <= TODAY : s.act; });
     const ult = pasadas[pasadas.length - 1];
     if (!ult) return "";
-    const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; return ENTREGA[d.pa == null ? 0 : d.pa]; };
+    // Solo cuentan las opciones nuevas del tablero (Completa / Parcial); lo demás (incluidas las de antes:
+    // "actualización directa / indirecta") o sin cargar queda como Pendiente (pedido del usuario, 22 oct)
+    const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; const t = (d.act || "").toLowerCase(); return ENTREGA[t.startsWith("complet") ? 2 : t.startsWith("parcial") ? 1 : 0]; };
     const nom = (s) => `Semana ${s.semana.slice(1)}${s.fecha ? " · " + esc(s.fecha) : ""}`;
     const items = P.equipos.map((e) => {
       const [txt, cls] = est(e, ult);
