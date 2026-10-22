@@ -443,7 +443,7 @@
       ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
     </div>`, { right: avTxt });
     const atencion = card("Puntos de atención", `<div class="sem sem-1">${col("", "hitos y fases", proximo, "Sin puntos pendientes.")}</div>`);
-    return `<div class="row-b">${cambios}${atencion}</div>`;
+    return `<div class="row-b row-sem">${cambios}${atencion}</div>`;
   }
 
   function cambiosCard(M) {
