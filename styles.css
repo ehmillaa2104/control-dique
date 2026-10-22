@@ -683,3 +683,10 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 .gx-hd.st-listo, .gx-hd.st-curso, .gx-hd.st-sin { border-color: rgba(255,255,255,.8); }
 .gx-foot .lg { width: 16px; height: 9px; border-radius: 2px; }
 .gx-foot .lg.gris { background: var(--g-gris); } .gx-foot .lg.verde { background: var(--g-verde); } .gx-foot .lg.rojo { background: var(--g-rojo); }
+
+/* Cambios de la semana (2 columnas) y Puntos de atención (1 columna), lado a lado */
+.sem.sem-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sem.sem-1 { grid-template-columns: 1fr; }
+.sem.sem-1 .sem-h b:empty { display: none; }
+.card > .sem-ent { border-top: 0; }
+@media (max-width: 900px) { .sem.sem-2 { grid-template-columns: 1fr; } }

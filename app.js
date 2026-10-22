@@ -438,11 +438,12 @@
     const porIniciar = faseAct ? ts.filter((t) => faseId(t) === faseAct.id && t.pct === 0).length : 0;
     const proximo = prox.map(fx).join("") + (porIniciar ? `<li class="sem-mas">${plural(porIniciar, "trabajo", "trabajos")} de ${faseAct.nombre} por iniciar</li>` : "");
     const col = (titulo, sub, cuerpo, vacio) => `<div class="sem-col"><div class="sem-h"><b>${titulo}</b><small>${sub}</small></div><ul>${cuerpo || `<li class="sem-vacio">${vacio}</li>`}</ul></div>`;
-    return card("Esta semana", `<div class="sem">
+    const cambios = card("Cambios de la semana", `<div class="sem sem-2">
       ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
       ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
-      ${col("Lo próximo", "hitos y fases", proximo, "Sin hitos pendientes.")}
-    </div>${entregaHTML(M)}`, { cls: "wide", right: avTxt });
+    </div>`, { right: avTxt });
+    const atencion = card("Puntos de atención", `<div class="sem sem-1">${col("", "hitos y fases", proximo, "Sin puntos pendientes.")}</div>`);
+    return `<div class="row-b">${cambios}${atencion}</div>`;
   }
 
   function cambiosCard(M) {
@@ -473,7 +474,7 @@
       const tip = `<b>${esc(e.nombre)}</b>${pasadas.map((s) => rowT(nom(s), esc(est(e, s)[0]))).join("")}`;
       return `<span class="ent-i" ${tipAttr(tip)}><b>${esc(e.nombre)}</b><span class="chip ${cls}">${txt}</span></span>`;
     }).join("");
-    return `<div class="sem-ent"><div class="sem-h"><b>Entrega de información semanal</b><small>${nom(ult)} · sin cargar = pendiente</small></div><div class="ent-l">${items}</div></div>`;
+    return card("Cumplimiento · entrega de información semanal", `<div class="sem-ent"><div class="ent-l">${items}</div></div>`, { cls: "wide", right: `${nom(ult)} · sin cargar = pendiente` });
   }
 
   function areaCards(M) {
@@ -506,9 +507,10 @@
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all })}${partKpi(M, null, "Participación del equipo")}</div>
+      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
+      ${entregaHTML(M)}
       ${semanaCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
-      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, false)}`;
   }
 

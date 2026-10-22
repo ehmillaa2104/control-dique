@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-20",
+ "extraido": "2026-10-22",
  "cronograma": [
   {
    "id": "13095528116",
@@ -4444,8 +4444,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Limpieza de tanques de carga",
      "grupo": "Operaciones",
      "fase": "Pre-dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 7,
      "tipo": "Mandatorio",
@@ -4457,11 +4457,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 28573.13,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-21",
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-21",
      "costo": "aprobado"
     },
     {
@@ -4494,8 +4494,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Limpieza de Tanques de Lastre",
      "grupo": "Operaciones",
      "fase": "Pre-dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 7,
      "tipo": "Correctivo",
@@ -4507,11 +4507,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 14682.1,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-21",
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-21",
      "costo": "aprobado"
     },
     {
@@ -4556,7 +4556,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 11663,
+     "incurrido": null,
      "fin": null,
      "cc": [
       "13081218069"
@@ -4569,8 +4569,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Entrada y Salida de muelle/Carga de Materiales",
      "grupo": "Operaciones",
      "fase": "Pre-dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -4582,11 +4582,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 10500,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-10-21",
      "cc": [
       "13081201194"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-21",
      "costo": "aprobado"
     },
     {
@@ -4723,7 +4723,7 @@ window.DIQUE_MONDAY = {
      "pct": 25,
      "cancelado": false,
      "duracion": 6,
-     "tipo": "Mejora",
+     "tipo": "Correctivo",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
      "preliminar": 10165,
@@ -4736,7 +4736,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200176"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-21",
      "costo": "aprobado"
     },
     {
@@ -4906,7 +4906,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 74,
      "fin": null,
      "cc": [
       "13081208091"
@@ -5145,6 +5145,31 @@ window.DIQUE_MONDAY = {
      ],
      "actualizado": "2026-10-16",
      "costo": "aprobado"
+    },
+    {
+     "id": "13346969104",
+     "nombre": "Estadia, Viaje y transporte",
+     "grupo": "Técnico",
+     "fase": "Dique",
+     "estado": "0%",
+     "pct": 0,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "preliminar": 15000,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": null,
+     "cc": [
+      "13081177348"
+     ],
+     "actualizado": "2026-10-21",
+     "costo": "preliminar"
     }
    ]
   }
@@ -5280,7 +5305,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 26000,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 74,
    "proyectado": 26000,
    "lineas": [
     "13098338467",
@@ -5292,7 +5317,9 @@ window.DIQUE_MONDAY = {
     "13315624518",
     "13315637430"
    ],
-   "pos": []
+   "pos": [
+    "13346590358"
+   ]
   },
   {
    "id": "13081177347",
@@ -5345,18 +5372,21 @@ window.DIQUE_MONDAY = {
    "nombre": "2.1.4 · Estadía/viáticos",
    "grupo": "2.1",
    "estado": "Aprobado",
-   "preliminar": 9000,
+   "preliminar": 24000,
    "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
-   "incurrido": 10500,
+   "incurrido": 15000,
    "proyectado": 9000,
    "lineas": [
-    "13238699549"
+    "13238699549",
+    "13346969104"
    ],
    "pos": [
     "13302137014",
-    "13302183351"
+    "13302183351",
+    "13346621488",
+    "13346566759"
    ]
   },
   {
@@ -5624,14 +5654,12 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 0,
    "po": 0,
-   "incurrido": 11663,
+   "incurrido": 0,
    "proyectado": 0,
    "lineas": [
     "13098327364"
    ],
-   "pos": [
-    "13302150986"
-   ]
+   "pos": []
   },
   {
    "id": "13081177133",
@@ -5811,7 +5839,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-10-21"
   },
   {
    "id": "13302150224",
@@ -5852,25 +5880,6 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-10-16"
   },
   {
-   "id": "13302150986",
-   "nombre": "1148 · MSB Group Corp — Calibración / aforo de tanques de carga",
-   "area": "",
-   "proveedor": "MSB GROUP CORP",
-   "po": 0,
-   "incurrido": 11663,
-   "saldo": null,
-   "fecha": "2026-01-20",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081218069"
-   ],
-   "trabajos": [
-    "13098327364"
-   ],
-   "actualizado": "2026-10-16"
-  },
-  {
    "id": "13302211939",
    "nombre": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
    "area": "",
@@ -5907,6 +5916,134 @@ window.DIQUE_MONDAY = {
     "13277158044"
    ],
    "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13346547714",
+   "nombre": "ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital",
+   "area": "",
+   "proveedor": "Jorge Cáceres",
+   "po": 0,
+   "incurrido": 240,
+   "saldo": null,
+   "fecha": "2026-10-12",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346590356",
+   "nombre": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
+   "area": "",
+   "proveedor": "Acero R&R Soluciones, S.A.",
+   "po": 0,
+   "incurrido": 194.74,
+   "saldo": null,
+   "fecha": "2026-10-16",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346657638",
+   "nombre": "498 · Tecno Control — Transformador para aire acondicionado portátil",
+   "area": "",
+   "proveedor": "Tecno Control, S.A.",
+   "po": 0,
+   "incurrido": 590,
+   "saldo": null,
+   "fecha": "2026-10-16",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346547715",
+   "nombre": "57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona",
+   "area": "",
+   "proveedor": "Agencias Domingo, S.A.",
+   "po": 0,
+   "incurrido": 595,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346568036",
+   "nombre": "16391 · SUBWORKS — Barge fees y agua potable",
+   "area": "",
+   "proveedor": "SUBWORKS, S.A.",
+   "po": 0,
+   "incurrido": 2200,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346621488",
+   "nombre": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 2500,
+   "saldo": null,
+   "fecha": "2026-10-15",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346566759",
+   "nombre": "3067 · Raimundo Coote — Transporte dique seco",
+   "area": "",
+   "proveedor": "Raimundo Coote",
+   "po": 0,
+   "incurrido": 2000,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346658601",
+   "nombre": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
+   "area": "",
+   "proveedor": "Acero R&R Soluciones, S.A.",
+   "po": 0,
+   "incurrido": 146.85,
+   "saldo": null,
+   "fecha": "2026-10-16",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-21"
   },
   {
    "id": "13302182661",
@@ -5983,6 +6120,25 @@ window.DIQUE_MONDAY = {
     "13127948545"
    ],
    "actualizado": "2026-10-15"
+  },
+  {
+   "id": "13346590358",
+   "nombre": "59 · Deysi De La Cruz — Guantes de impacto",
+   "area": "",
+   "proveedor": "Deysi De La Cruz",
+   "po": 0,
+   "incurrido": 74,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208091"
+   ],
+   "trabajos": [
+    "13315655864"
+   ],
+   "actualizado": "2026-10-21"
   }
  ],
  "cambios": [],
@@ -6489,19 +6645,19 @@ window.DIQUE_MONDAY = {
    "lineas": 19,
    "conDuracion": 12,
    "duracion": 58,
-   "avanceDias": 15.0
+   "avanceDias": 19.0
   },
   "tecnico": {
-   "lineas": 9,
+   "lineas": 10,
    "conDuracion": 8,
    "duracion": 76,
    "avanceDias": 2.75
   },
   "total": {
-   "lineas": 195,
+   "lineas": 196,
    "conDuracion": 51,
    "duracion": 165,
-   "avanceDias": 19.0
+   "avanceDias": 23.0
   }
  },
  "historial": [
@@ -7510,43 +7666,284 @@ window.DIQUE_MONDAY = {
     "13098338054": 0,
     "13278839703": 0
    }
+  },
+  {
+   "fecha": "2026-10-22",
+   "avance": 13.94,
+   "pct": {
+    "13256760608": 0,
+    "13256760158": 0,
+    "13043921163": 0,
+    "13043943307": 0,
+    "13095643040": 0,
+    "13095617046": 0,
+    "13095599940": 0,
+    "13095599941": 0,
+    "13095594034": 0,
+    "13095599992": 0,
+    "13095616880": 0,
+    "13095570221": 0,
+    "13095594157": 0,
+    "13095604569": 0,
+    "13095643042": 0,
+    "13095593116": 0,
+    "13095643083": 0,
+    "13095604666": 0,
+    "13095604667": 0,
+    "13095605104": 0,
+    "13095599993": 0,
+    "13043922222": 100,
+    "13043922221": 0,
+    "13043922220": 0,
+    "13043936425": 0,
+    "13043922218": 0,
+    "13043922219": 0,
+    "13043936426": 0,
+    "13043924490": 0,
+    "13043950469": 0,
+    "13043924377": 0,
+    "13043924378": 0,
+    "13043924379": 0,
+    "13043924375": 0,
+    "13043945523": 0,
+    "13043950430": 0,
+    "13043945522": 0,
+    "13043950431": 0,
+    "13095604901": 0,
+    "13095604668": 0,
+    "13095617389": 0,
+    "13095570185": 0,
+    "13256760157": 0,
+    "13256755192": 0,
+    "13256755203": 0,
+    "13256744926": 0,
+    "13256760609": 0,
+    "13256744868": 0,
+    "13043950472": 0,
+    "13043945735": 0,
+    "13043950470": 0,
+    "13043945736": 0,
+    "13043932303": 0,
+    "13043932345": 0,
+    "13043924491": 0,
+    "13043950471": 0,
+    "13043950468": 0,
+    "13043924492": 0,
+    "13043924547": 0,
+    "13043924548": 0,
+    "13043932301": 0,
+    "13043943301": 0,
+    "13043943303": 0,
+    "13043943305": 0,
+    "13043932352": 0,
+    "13095643646": 0,
+    "13095605151": 0,
+    "13095616903": 0,
+    "13095643870": 0,
+    "13095616905": 0,
+    "13095599004": 0,
+    "13095600128": 0,
+    "13095643647": 0,
+    "13095642636": 0,
+    "13095599565": 0,
+    "13095643648": 0,
+    "13095569998": 0,
+    "13043941391": 0,
+    "13095616904": 0,
+    "13043924545": 0,
+    "13043924546": 0,
+    "13095643872": 0,
+    "13095605154": 0,
+    "13095643873": 0,
+    "13095570205": 0,
+    "13043941390": 0,
+    "13043924488": 0,
+    "13095643937": 0,
+    "13095604536": 0,
+    "13095613807": 0,
+    "13277138828": 0,
+    "13277158049": 0,
+    "13277104868": 0,
+    "13277169481": 0,
+    "13277138491": 0,
+    "13277157364": 0,
+    "13043950429": 0,
+    "13043932348": 0,
+    "13043921752": 0,
+    "13043936427": 0,
+    "13043950425": 0,
+    "13043950426": 0,
+    "13043941394": 0,
+    "13043945527": 0,
+    "13043950423": 0,
+    "13043950424": 0,
+    "13043950428": 0,
+    "13043950427": 0,
+    "13043932349": 0,
+    "13043922215": 0,
+    "13043922216": 0,
+    "13043922217": 0,
+    "13095628677": 0,
+    "13095603677": 0,
+    "13256760245": 0,
+    "13095637379": 0,
+    "13095603385": 0,
+    "13256760246": 0,
+    "13043924495": 0,
+    "13043924496": 0,
+    "13043932347": 0,
+    "13043924493": 0,
+    "13043945526": 0,
+    "13043945524": 0,
+    "13095638228": 0,
+    "13095637451": 0,
+    "13043921183": 0,
+    "13095613978": 0,
+    "13095637378": 0,
+    "13095603722": 0,
+    "13095603720": 0,
+    "13043932296": 0,
+    "13043932299": 0,
+    "13095613430": 0,
+    "13095628540": 0,
+    "13256755102": 0,
+    "13095637314": 0,
+    "13095603679": 0,
+    "13256760623": 0,
+    "13256755233": 0,
+    "13256755205": 0,
+    "13256755234": 0,
+    "13043936421": 0,
+    "13043936422": 0,
+    "13043936423": 0,
+    "13043941389": 0,
+    "13043936424": 0,
+    "13043943240": 0,
+    "13043943242": 0,
+    "13043943244": 0,
+    "13043941395": 0,
+    "13043941393": 0,
+    "13095614175": 0,
+    "13095603678": 0,
+    "13095603531": 0,
+    "13095614176": 0,
+    "13095603889": 0,
+    "13043932350": 0,
+    "13043936420": 0,
+    "13256755103": 0,
+    "13256755204": 0,
+    "13256755193": 25,
+    "13277158044": 0,
+    "13043921754": 0,
+    "13095638257": 0,
+    "13095602832": 0,
+    "13095613982": 0,
+    "13098327837": 100,
+    "13098295887": 100,
+    "13127441793": 100,
+    "13098328358": 0,
+    "13098327364": 0,
+    "13127948545": 100,
+    "13238699549": 100,
+    "13098338467": 25,
+    "13098367009": 25,
+    "13098306630": 0,
+    "13098338326": 0,
+    "13098327946": 25,
+    "13212064635": 0,
+    "13212017532": 0,
+    "13212064416": 0,
+    "13315637430": 0,
+    "13315624518": 0,
+    "13315624594": 0,
+    "13315655864": 0,
+    "13098327907": 0,
+    "13098328158": 0,
+    "13098326970": 100,
+    "13098333423": 0,
+    "13098338352": 0,
+    "13098337112": 100,
+    "13098334682": 75,
+    "13098338054": 0,
+    "13278839703": 0,
+    "13346969104": 0
+   }
   }
  ],
- "_huella": "31df2b8a7136",
+ "_huella": "dc747ae00d8d",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "PRE-DIQUE (Ejecución)",
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
    "campo": "Estado",
-   "antes": "En curso",
-   "ahora": "Listo"
+   "antes": "75%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Cartagena",
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-21"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de Tanques de Lastre",
    "campo": "Estado",
-   "antes": "No Iniciado",
-   "ahora": "Listo"
+   "antes": "75%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-10-19 a 2026-10-19",
-   "ahora": "2026-10-20 a 2026-10-20"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de Tanques de Lastre",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-21"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Calibración de tanques de carga",
+   "campo": "$ Incurrido",
+   "antes": "11663",
+   "ahora": "—"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-10-21"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales seguridad",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "74"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Estadia, Viaje y transporte",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
   }
  ],
  "observaciones": [
   {
    "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Cronograma · hito \"Entrada al muelle del astillero\": su fecha (2026-10-20) ya pasó y sigue \"No Iniciado\"; actualizar la fecha o marcarlo Listo."
   },
   {
    "nivel": "info",
@@ -7578,7 +7975,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 12 trabajo(s) planificado(s) · 6 en ejecución · 2 finalizado(s) · 4 por iniciar."
+   "texto": "P2. Cubierta: 12 trabajo(s) planificado(s) · 3 en ejecución · 5 finalizado(s) · 4 por iniciar."
   },
   {
    "nivel": "aviso",
@@ -7593,8 +7990,12 @@ window.DIQUE_MONDAY = {
    "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 1 en ejecución · 2 finalizado(s) · 5 por iniciar."
   },
   {
+   "nivel": "aviso",
+   "texto": "P3. Técnico: 1 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Estadia, Viaje y transporte."
+  },
+  {
    "nivel": "info",
-   "texto": "P3. Técnico: preliminar US$ 867,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 0."
+   "texto": "P3. Técnico: preliminar US$ 882,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 1."
   },
   {
    "nivel": "aviso",
@@ -7638,15 +8039,43 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"1148 · MSB Group Corp — Calibración / aforo de tanques de carga\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"498 · Tecno Control — Transformador para aire acondicionado portátil\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"3067 · Raimundo Coote — Transporte dique seco\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -7663,6 +8092,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"INV/2026/00916-2585 · Terminal Marítima — Entrada a muelle logístico 3-oct\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"59 · Deysi De La Cruz — Guantes de impacto\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",

@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-20",
+ "extraido": "2026-10-22",
  "consulta": "boards(ids) columns{id title type} items_page(limit:500) column_values{id type text display_value linked_item_ids}",
  "boards": [
   {
@@ -1618,6 +1618,98 @@
         "display_value": ""
        }
       ]
+     },
+     {
+      "id": "13346969104",
+      "name": "Estadia, Viaje y transporte",
+      "created_at": "2026-10-21T14:44:49Z",
+      "updated_at": "2026-10-21T15:07:57Z",
+      "group": {
+       "id": "group_mm7dsvgg",
+       "title": "Técnico"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": "15000"
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7ge32a",
+        "type": "last_updated",
+        "text": "2026-10-21 15:07:57 UTC"
+       },
+       {
+        "id": "color_mm7vv5nh",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "numeric_mm7v7xt9",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y6h6f",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm7yw7ca",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7ywkfv",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7ym614",
+        "type": "mirror",
+        "text": null,
+        "display_value": "2500, 2000"
+       }
+      ]
      }
     ]
    }
@@ -1769,7 +1861,7 @@
       "id": "13098327837",
       "name": "Limpieza de tanques de carga",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-16T22:00:33Z",
+      "updated_at": "2026-10-21T13:26:49Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -1821,17 +1913,17 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:33 UTC"
+        "text": "2026-10-21 13:26:49 UTC"
        },
        {
         "id": "date_mm7ya280",
         "type": "date",
-        "text": ""
+        "text": "2026-10-21"
        },
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -1953,7 +2045,7 @@
       "id": "13127441793",
       "name": "Limpieza de Tanques de Lastre",
       "created_at": "2026-09-24T16:20:09Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-21T13:26:46Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2005,17 +2097,17 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-21 13:26:46 UTC"
        },
        {
         "id": "date_mm7ya280",
         "type": "date",
-        "text": ""
+        "text": "2026-10-21"
        },
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2215,7 +2307,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": "11663"
+        "display_value": ""
        },
        {
         "id": "lookup_mm7y2awx",
@@ -2229,7 +2321,7 @@
       "id": "13127948545",
       "name": "Entrada y Salida de muelle/Carga de Materiales",
       "created_at": "2026-09-24T17:01:58Z",
-      "updated_at": "2026-10-16T22:00:33Z",
+      "updated_at": "2026-10-21T13:26:47Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2281,17 +2373,17 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:33 UTC"
+        "text": "2026-10-21 13:26:47 UTC"
        },
        {
         "id": "date_mm7ya280",
         "type": "date",
-        "text": ""
+        "text": "2026-10-21"
        },
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "50%"
+        "text": "100%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2781,7 +2873,7 @@
       "id": "13098327946",
       "name": "Mantenimiento a acomodaciones",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-16T22:00:33Z",
+      "updated_at": "2026-10-21T16:45:22Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2800,7 +2892,7 @@
        {
         "id": "color_mm781mjk",
         "type": "status",
-        "text": "Mejora"
+        "text": "Correctivo"
        },
        {
         "id": "numeric_mm6vjdrd",
@@ -2833,7 +2925,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:33 UTC"
+        "text": "2026-10-21 16:45:22 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3503,7 +3595,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "74"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -4125,7 +4217,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "74"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -4152,7 +4244,9 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13346590358"
+        ]
        }
       ]
      },
@@ -4374,7 +4468,7 @@
         "id": "formula_mm867352",
         "type": "formula",
         "text": "",
-        "display_value": "9000"
+        "display_value": "24000"
        },
        {
         "id": "formula_mm7d91f2",
@@ -4398,7 +4492,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "10500"
+        "display_value": "15000"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -4411,7 +4505,8 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": [
-         "13238699549"
+         "13238699549",
+         "13346969104"
         ]
        },
        {
@@ -4420,7 +4515,9 @@
         "text": null,
         "linked_item_ids": [
          "13302137014",
-         "13302183351"
+         "13302183351",
+         "13346621488",
+         "13346566759"
         ]
        }
       ]
@@ -4979,7 +5076,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "11663"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -4999,9 +5096,7 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": [
-         "13302150986"
-        ]
+        "linked_item_ids": []
        }
       ]
      },
@@ -5734,7 +5829,7 @@
       "id": "13302150520",
       "name": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-19T15:47:22Z",
+      "updated_at": "2026-10-21T14:47:03Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -5783,7 +5878,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-19 15:47:22 UTC"
+        "text": "2026-10-21 14:47:03 UTC"
        },
        {
         "id": "board_relation_mm7yq0et",
@@ -5950,79 +6045,6 @@
       ]
      },
      {
-      "id": "13302150986",
-      "name": "1148 · MSB Group Corp — Calibración / aforo de tanques de carga",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:54:08Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "MSB GROUP CORP"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "11663"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-01-20"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-16 15:54:08 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081218069"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13098327364"
-        ]
-       }
-      ]
-     },
-     {
       "id": "13302211939",
       "name": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
       "created_at": "2026-10-15T16:57:04Z",
@@ -6165,6 +6187,566 @@
         "linked_item_ids": [
          "13277158044"
         ]
+       }
+      ]
+     },
+     {
+      "id": "13346547714",
+      "name": "ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Jorge Cáceres"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "240"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-12"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13346590356",
+      "name": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "194.74"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-16"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13346657638",
+      "name": "498 · Tecno Control — Transformador para aire acondicionado portátil",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Tecno Control, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "590"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-16"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13346547715",
+      "name": "57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "595"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13346568036",
+      "name": "16391 · SUBWORKS — Barge fees y agua potable",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "SUBWORKS, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2200"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-19"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       }
+      ]
+     },
+     {
+      "id": "13346621488",
+      "name": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T15:07:56Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Luis Carlos Saavedra"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2500"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-15"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 15:07:56 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13346566759",
+      "name": "3067 · Raimundo Coote — Transporte dique seco",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T15:08:05Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Raimundo Coote"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2000"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-19"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 15:08:05 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13346658601",
+      "name": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T14:22:34Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "146.85"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-16"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:34 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        }
       ]
      },
@@ -6456,6 +7038,79 @@
         "text": null,
         "linked_item_ids": [
          "13127948545"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13346590358",
+      "name": "59 · Deysi De La Cruz — Guantes de impacto",
+      "created_at": "2026-10-21T14:22:35Z",
+      "updated_at": "2026-10-21T14:22:35Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Deysi De La Cruz"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "74"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:22:35 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081208091"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13315655864"
         ]
        }
       ]
