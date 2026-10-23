@@ -325,9 +325,9 @@
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Sin información aún"),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Contabilidad aún no tiene la información"),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
-      kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Sin información aún"),
+      kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Contabilidad aún no tiene la información"),
       ...(extra.extraKpis || []),
       avanceKpi(av)
     ].join("");
@@ -455,9 +455,9 @@
     const depto = (c) => (M.areas.find((a) => a.trabajos.some((t) => (c.actividades || []).includes(t.id))) || {}).nombre || "Sin departamento";
     const impacto = (c) => [c.tipo || "sin tipo", c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : ""].filter(Boolean).join(" · ");
     const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(depto(c))}</span> · Impacto: ${esc(impacto(c))}${c.creado ? " · " + fmtShort(c.creado) : ""}</small></div>${chip(c.estado)}</div>`).join("")
-      : empty("Sin cambios ni imprevistos registrados en Monday.");
-    return card("Cambios recientes", `<div class="list">${cambios}</div>`,
-      { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
+      : empty("Sin imprevistos registrados en Monday.");
+    return card("Imprevistos", `<div class="list">${cambios}</div>`,
+      { right: plural(M.D.cambios.length, "imprevisto", "imprevistos") });
   }
 
   // Entrega de información semanal de todos los departamentos (tablero Participación del Equipo, columnas "Act. Sn"):
