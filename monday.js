@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-22",
+ "extraido": "2026-10-23",
  "cronograma": [
   {
    "id": "13095528116",
@@ -120,10 +120,10 @@ window.DIQUE_MONDAY = {
     "2026-10-19"
    ],
    "real": [
-    "2026-10-20",
-    "2026-10-20"
+    "2026-10-21",
+    "2026-10-21"
    ],
-   "diferencia": 1,
+   "diferencia": 2,
    "actualizado": "2026-10-22"
   },
   {
@@ -4479,14 +4479,14 @@ window.DIQUE_MONDAY = {
      "preliminar": 10000,
      "enRevision": null,
      "aprobado": 10000,
-     "proyectado": 10000,
+     "proyectado": 12000,
      "po": null,
      "incurrido": 9325,
      "fin": "2026-10-16",
      "cc": [
       "13081208222"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
@@ -4618,7 +4618,7 @@ window.DIQUE_MONDAY = {
      "id": "13098338467",
      "nombre": "Materiales cubierta",
      "grupo": "Cubierta",
-     "fase": "Pre-dique",
+     "fase": "Post-dique",
      "estado": "25%",
      "pct": 25,
      "cancelado": false,
@@ -4636,14 +4636,14 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
      "id": "13098367009",
      "nombre": "Reparaciones en cubierta (aceros y soldadura)",
      "grupo": "Cubierta",
-     "fase": "Pre-dique",
+     "fase": "Post-dique",
      "estado": "25%",
      "pct": 25,
      "cancelado": false,
@@ -4661,7 +4661,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
@@ -4719,8 +4719,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Mantenimiento a acomodaciones",
      "grupo": "Cubierta",
      "fase": "Pre-dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 6,
      "tipo": "Correctivo",
@@ -4736,21 +4736,21 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200176"
      ],
-     "actualizado": "2026-10-21",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
      "id": "13212064635",
      "nombre": "Foam – Agente Espumógeno",
      "grupo": "Seguridad",
-     "fase": "Dique",
+     "fase": "Post-dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
-     "proveedor": "",
+     "proveedor": "SEMINSA",
      "preliminar": 11000,
      "enRevision": null,
      "aprobado": 11000,
@@ -4761,21 +4761,21 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
      "id": "13212017532",
      "nombre": "Bote de Rescate – Casco",
      "grupo": "Seguridad",
-     "fase": "Dique",
+     "fase": "Post-dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
-     "proveedor": "",
+     "proveedor": "Talleres Industriales",
      "preliminar": 5500,
      "enRevision": null,
      "aprobado": 5500,
@@ -4786,7 +4786,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "aprobado"
     },
     {
@@ -4869,9 +4869,9 @@ window.DIQUE_MONDAY = {
      "nombre": "Bote Salvavidas – Casco",
      "grupo": "Seguridad",
      "fase": "Dique",
-     "estado": "0%",
+     "estado": "Cancelado",
      "pct": 0,
-     "cancelado": false,
+     "cancelado": true,
      "duracion": null,
      "tipo": "Mandatorio",
      "aprobacion": "Descartado",
@@ -4886,7 +4886,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-22",
      "costo": "descartado"
     },
     {
@@ -5251,7 +5251,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 10000,
    "po": 0,
    "incurrido": 9325,
-   "proyectado": 10000,
+   "proyectado": 12000,
    "lineas": [
     "13098295887"
    ],
@@ -5696,44 +5696,6 @@ window.DIQUE_MONDAY = {
  ],
  "pos": [
   {
-   "id": "13302150803",
-   "nombre": "57636 · Agencias Domingo — Empaque Garlock verde",
-   "area": "",
-   "proveedor": "Agencias Domingo, S.A.",
-   "po": 0,
-   "incurrido": 1912,
-   "saldo": null,
-   "fecha": "2026-10-12",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-19"
-  },
-  {
-   "id": "13302183351",
-   "nombre": "3062 · Narciso Sánchez — Anticipo de caja menuda",
-   "area": "",
-   "proveedor": "Narciso Sánchez",
-   "po": 0,
-   "incurrido": 5000,
-   "saldo": null,
-   "fecha": "2026-10-07",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081177348"
-   ],
-   "trabajos": [
-    "13238699549"
-   ],
-   "actualizado": "2026-10-16"
-  },
-  {
    "id": "13302229682",
    "nombre": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
    "area": "",
@@ -5749,44 +5711,6 @@ window.DIQUE_MONDAY = {
    ],
    "trabajos": [],
    "actualizado": "2026-10-16"
-  },
-  {
-   "id": "13302137014",
-   "nombre": "3066 · Rafael Ríos — Anticipo de caja menuda",
-   "area": "",
-   "proveedor": "Rafael Ríos",
-   "po": 0,
-   "incurrido": 5500,
-   "saldo": null,
-   "fecha": "2026-10-07",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081177348"
-   ],
-   "trabajos": [
-    "13238699549"
-   ],
-   "actualizado": "2026-10-16"
-  },
-  {
-   "id": "13302137015",
-   "nombre": "57926 · Ferretería Industrial — Bridas de 2″",
-   "area": "",
-   "proveedor": "Ferretería Industrial, S.A.",
-   "po": 0,
-   "incurrido": 42.8,
-   "saldo": null,
-   "fecha": "2026-10-14",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-19"
   },
   {
    "id": "13302212705",
@@ -5821,101 +5745,6 @@ window.DIQUE_MONDAY = {
    ],
    "trabajos": [],
    "actualizado": "2026-10-16"
-  },
-  {
-   "id": "13302150520",
-   "nombre": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
-   "area": "",
-   "proveedor": "Tornillos y Herramientas Barrientos",
-   "po": 0,
-   "incurrido": 2491.29,
-   "saldo": null,
-   "fecha": "2026-10-14",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-21"
-  },
-  {
-   "id": "13302150224",
-   "nombre": "57492 · Agencias Domingo — Rollos de neopreno",
-   "area": "",
-   "proveedor": "Agencias Domingo, S.A.",
-   "po": 0,
-   "incurrido": 395.25,
-   "saldo": null,
-   "fecha": "2026-10-08",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-19"
-  },
-  {
-   "id": "13302180056",
-   "nombre": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
-   "area": "",
-   "proveedor": "Ferretería Industrial, S.A.",
-   "po": 0,
-   "incurrido": 4216.39,
-   "saldo": null,
-   "fecha": "2026-10-07",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13043941389"
-   ],
-   "actualizado": "2026-10-16"
-  },
-  {
-   "id": "13302211939",
-   "nombre": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
-   "area": "",
-   "proveedor": "Tornillos y Herramientas Barrientos",
-   "po": 0,
-   "incurrido": 215,
-   "saldo": null,
-   "fecha": "2026-10-07",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-19"
-  },
-  {
-   "id": "13302212275",
-   "nombre": "2044 · Vicencio Solís — Trapos",
-   "area": "",
-   "proveedor": "Vicencio Solís",
-   "po": 0,
-   "incurrido": 300,
-   "saldo": null,
-   "fecha": "2026-10-12",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13277158044"
-   ],
-   "actualizado": "2026-10-19"
   },
   {
    "id": "13346547714",
@@ -5990,44 +5819,6 @@ window.DIQUE_MONDAY = {
    "pago": "",
    "cc": [],
    "trabajos": [],
-   "actualizado": "2026-10-21"
-  },
-  {
-   "id": "13346621488",
-   "nombre": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
-   "area": "",
-   "proveedor": "Luis Carlos Saavedra",
-   "po": 0,
-   "incurrido": 2500,
-   "saldo": null,
-   "fecha": "2026-10-15",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081177348"
-   ],
-   "trabajos": [
-    "13346969104"
-   ],
-   "actualizado": "2026-10-21"
-  },
-  {
-   "id": "13346566759",
-   "nombre": "3067 · Raimundo Coote — Transporte dique seco",
-   "area": "",
-   "proveedor": "Raimundo Coote",
-   "po": 0,
-   "incurrido": 2000,
-   "saldo": null,
-   "fecha": "2026-10-19",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081177348"
-   ],
-   "trabajos": [
-    "13346969104"
-   ],
    "actualizado": "2026-10-21"
   },
   {
@@ -6139,9 +5930,234 @@ window.DIQUE_MONDAY = {
     "13315655864"
    ],
    "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13302150803",
+   "nombre": "57636 · Agencias Domingo — Empaque Garlock verde",
+   "area": "",
+   "proveedor": "Agencias Domingo, S.A.",
+   "po": 0,
+   "incurrido": 1912,
+   "saldo": null,
+   "fecha": "2026-10-12",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13302183351",
+   "nombre": "3062 · Narciso Sánchez — Anticipo de caja menuda",
+   "area": "",
+   "proveedor": "Narciso Sánchez",
+   "po": 0,
+   "incurrido": 5000,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13238699549"
+   ],
+   "actualizado": "2026-10-16"
+  },
+  {
+   "id": "13302137014",
+   "nombre": "3066 · Rafael Ríos — Anticipo de caja menuda",
+   "area": "",
+   "proveedor": "Rafael Ríos",
+   "po": 0,
+   "incurrido": 5500,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13238699549"
+   ],
+   "actualizado": "2026-10-16"
+  },
+  {
+   "id": "13302137015",
+   "nombre": "57926 · Ferretería Industrial — Bridas de 2″",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 42.8,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13302150520",
+   "nombre": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
+   "area": "",
+   "proveedor": "Tornillos y Herramientas Barrientos",
+   "po": 0,
+   "incurrido": 2491.29,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13302150224",
+   "nombre": "57492 · Agencias Domingo — Rollos de neopreno",
+   "area": "",
+   "proveedor": "Agencias Domingo, S.A.",
+   "po": 0,
+   "incurrido": 395.25,
+   "saldo": null,
+   "fecha": "2026-10-08",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13302180056",
+   "nombre": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 4216.39,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043941389"
+   ],
+   "actualizado": "2026-10-16"
+  },
+  {
+   "id": "13302211939",
+   "nombre": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
+   "area": "",
+   "proveedor": "Tornillos y Herramientas Barrientos",
+   "po": 0,
+   "incurrido": 215,
+   "saldo": null,
+   "fecha": "2026-10-07",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13302212275",
+   "nombre": "2044 · Vicencio Solís — Trapos",
+   "area": "",
+   "proveedor": "Vicencio Solís",
+   "po": 0,
+   "incurrido": 300,
+   "saldo": null,
+   "fecha": "2026-10-12",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13277158044"
+   ],
+   "actualizado": "2026-10-19"
+  },
+  {
+   "id": "13346621488",
+   "nombre": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 2500,
+   "saldo": null,
+   "fecha": "2026-10-15",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346566759",
+   "nombre": "3067 · Raimundo Coote — Transporte dique seco",
+   "area": "",
+   "proveedor": "Raimundo Coote",
+   "po": 0,
+   "incurrido": 2000,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-21"
   }
  ],
- "cambios": [],
+ "cambios": [
+  {
+   "id": "13362169864",
+   "nombre": "Segunda Limpieza del tanque de carga 4S",
+   "creado": "2026-10-22",
+   "tipo": "Calidad",
+   "costo": null,
+   "dias": null,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "1.1 Limpieza de tanques",
+   "actividades": [
+    "13098327837"
+   ],
+   "actualizado": "2026-10-22"
+  }
+ ],
  "participacion": {
   "total": {
    "puntos": 19,
@@ -6159,7 +6175,7 @@ window.DIQUE_MONDAY = {
    },
    {
     "semana": "S2",
-    "fecha": null,
+    "fecha": "2 Oct",
     "reunion": false,
     "act": false,
     "conDatos": false
@@ -6180,7 +6196,7 @@ window.DIQUE_MONDAY = {
    },
    {
     "semana": "S5",
-    "fecha": null,
+    "fecha": "23 Oct",
     "reunion": false,
     "act": false,
     "conDatos": false
@@ -6194,14 +6210,14 @@ window.DIQUE_MONDAY = {
    },
    {
     "semana": "S7",
-    "fecha": null,
+    "fecha": "6 Nov",
     "reunion": false,
     "act": false,
     "conDatos": false
    },
    {
     "semana": "S8",
-    "fecha": null,
+    "fecha": "13 Nov",
     "reunion": false,
     "act": false,
     "conDatos": false
@@ -6642,10 +6658,10 @@ window.DIQUE_MONDAY = {
    "avanceDias": 1.25
   },
   "cubierta": {
-   "lineas": 19,
+   "lineas": 18,
    "conDuracion": 12,
    "duracion": 58,
-   "avanceDias": 19.0
+   "avanceDias": 22.0
   },
   "tecnico": {
    "lineas": 10,
@@ -6654,10 +6670,10 @@ window.DIQUE_MONDAY = {
    "avanceDias": 2.75
   },
   "total": {
-   "lineas": 196,
+   "lineas": 195,
    "conDuracion": 51,
    "duracion": 165,
-   "avanceDias": 23.0
+   "avanceDias": 26.0
   }
  },
  "historial": [
@@ -7868,19 +7884,308 @@ window.DIQUE_MONDAY = {
     "13278839703": 0,
     "13346969104": 0
    }
+  },
+  {
+   "fecha": "2026-10-23",
+   "avance": 15.76,
+   "pct": {
+    "13256760608": 0,
+    "13256760158": 0,
+    "13043921163": 0,
+    "13043943307": 0,
+    "13095643040": 0,
+    "13095617046": 0,
+    "13095599940": 0,
+    "13095599941": 0,
+    "13095594034": 0,
+    "13095599992": 0,
+    "13095616880": 0,
+    "13095570221": 0,
+    "13095594157": 0,
+    "13095604569": 0,
+    "13095643042": 0,
+    "13095593116": 0,
+    "13095643083": 0,
+    "13095604666": 0,
+    "13095604667": 0,
+    "13095605104": 0,
+    "13095599993": 0,
+    "13043922222": 100,
+    "13043922221": 0,
+    "13043922220": 0,
+    "13043936425": 0,
+    "13043922218": 0,
+    "13043922219": 0,
+    "13043936426": 0,
+    "13043924490": 0,
+    "13043950469": 0,
+    "13043924377": 0,
+    "13043924378": 0,
+    "13043924379": 0,
+    "13043924375": 0,
+    "13043945523": 0,
+    "13043950430": 0,
+    "13043945522": 0,
+    "13043950431": 0,
+    "13095604901": 0,
+    "13095604668": 0,
+    "13095617389": 0,
+    "13095570185": 0,
+    "13256760157": 0,
+    "13256755192": 0,
+    "13256755203": 0,
+    "13256744926": 0,
+    "13256760609": 0,
+    "13256744868": 0,
+    "13043950472": 0,
+    "13043945735": 0,
+    "13043950470": 0,
+    "13043945736": 0,
+    "13043932303": 0,
+    "13043932345": 0,
+    "13043924491": 0,
+    "13043950471": 0,
+    "13043950468": 0,
+    "13043924492": 0,
+    "13043924547": 0,
+    "13043924548": 0,
+    "13043932301": 0,
+    "13043943301": 0,
+    "13043943303": 0,
+    "13043943305": 0,
+    "13043932352": 0,
+    "13095643646": 0,
+    "13095605151": 0,
+    "13095616903": 0,
+    "13095643870": 0,
+    "13095616905": 0,
+    "13095599004": 0,
+    "13095600128": 0,
+    "13095643647": 0,
+    "13095642636": 0,
+    "13095599565": 0,
+    "13095643648": 0,
+    "13095569998": 0,
+    "13043941391": 0,
+    "13095616904": 0,
+    "13043924545": 0,
+    "13043924546": 0,
+    "13095643872": 0,
+    "13095605154": 0,
+    "13095643873": 0,
+    "13095570205": 0,
+    "13043941390": 0,
+    "13043924488": 0,
+    "13095643937": 0,
+    "13095604536": 0,
+    "13095613807": 0,
+    "13277138828": 0,
+    "13277158049": 0,
+    "13277104868": 0,
+    "13277169481": 0,
+    "13277138491": 0,
+    "13277157364": 0,
+    "13043950429": 0,
+    "13043932348": 0,
+    "13043921752": 0,
+    "13043936427": 0,
+    "13043950425": 0,
+    "13043950426": 0,
+    "13043941394": 0,
+    "13043945527": 0,
+    "13043950423": 0,
+    "13043950424": 0,
+    "13043950428": 0,
+    "13043950427": 0,
+    "13043932349": 0,
+    "13043922215": 0,
+    "13043922216": 0,
+    "13043922217": 0,
+    "13095628677": 0,
+    "13095603677": 0,
+    "13256760245": 0,
+    "13095637379": 0,
+    "13095603385": 0,
+    "13256760246": 0,
+    "13043924495": 0,
+    "13043924496": 0,
+    "13043932347": 0,
+    "13043924493": 0,
+    "13043945526": 0,
+    "13043945524": 0,
+    "13095638228": 0,
+    "13095637451": 0,
+    "13043921183": 0,
+    "13095613978": 0,
+    "13095637378": 0,
+    "13095603722": 0,
+    "13095603720": 0,
+    "13043932296": 0,
+    "13043932299": 0,
+    "13095613430": 0,
+    "13095628540": 0,
+    "13256755102": 0,
+    "13095637314": 0,
+    "13095603679": 0,
+    "13256760623": 0,
+    "13256755233": 0,
+    "13256755205": 0,
+    "13256755234": 0,
+    "13043936421": 0,
+    "13043936422": 0,
+    "13043936423": 0,
+    "13043941389": 0,
+    "13043936424": 0,
+    "13043943240": 0,
+    "13043943242": 0,
+    "13043943244": 0,
+    "13043941395": 0,
+    "13043941393": 0,
+    "13095614175": 0,
+    "13095603678": 0,
+    "13095603531": 0,
+    "13095614176": 0,
+    "13095603889": 0,
+    "13043932350": 0,
+    "13043936420": 0,
+    "13256755103": 0,
+    "13256755204": 0,
+    "13256755193": 25,
+    "13277158044": 0,
+    "13043921754": 0,
+    "13095638257": 0,
+    "13095602832": 0,
+    "13095613982": 0,
+    "13098327837": 100,
+    "13098295887": 100,
+    "13127441793": 100,
+    "13098328358": 0,
+    "13098327364": 0,
+    "13127948545": 100,
+    "13238699549": 100,
+    "13098338467": 25,
+    "13098367009": 25,
+    "13098306630": 0,
+    "13098338326": 0,
+    "13098327946": 75,
+    "13212064635": 0,
+    "13212017532": 0,
+    "13212064416": 0,
+    "13315637430": 0,
+    "13315624518": 0,
+    "13315655864": 0,
+    "13098327907": 0,
+    "13098328158": 0,
+    "13098326970": 100,
+    "13098333423": 0,
+    "13098338352": 0,
+    "13098337112": 100,
+    "13098334682": 75,
+    "13098338054": 0,
+    "13278839703": 0,
+    "13346969104": 0
+   }
   }
  ],
- "_huella": "f74ffde5bd3a",
+ "_huella": "a2b704012be1",
  "cambiosLectura": [
   {
    "tablero": "Cronograma",
    "trabajo": "Entrada al muelle del astillero",
+   "campo": "Fecha Real",
+   "antes": "2026-10-20 a 2026-10-20",
+   "ahora": "2026-10-21 a 2026-10-21"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
+   "campo": "Diferencia",
+   "antes": "1",
+   "ahora": "2"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Proyectado",
+   "antes": "10000",
+   "ahora": "12000"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales cubierta",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Post-dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Post-dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Mantenimiento a acomodaciones",
    "campo": "Estado",
-   "antes": "No Iniciado",
-   "ahora": "Listo"
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Foam – Agente Espumógeno",
+   "campo": "Fase",
+   "antes": "Dique",
+   "ahora": "Post-dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote de Rescate – Casco",
+   "campo": "Fase",
+   "antes": "Dique",
+   "ahora": "Post-dique"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bote Salvavidas – Casco",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "Cancelado"
   }
  ],
  "observaciones": [
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Act. S2\" ahora se llama \"Act. S2 (2 Oct)\" (color_mm8453y)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Reunión S2\" ahora se llama \"Reunión S2 (2 Oct)\" (color_mm84nsqk)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Reunión S5\" ahora se llama \"Reunión S5 (23 Oct)\" (color_mm84283c)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Act. S7\" ahora se llama \"Act. S7 (6 Nov)\" (color_mm84pstd)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Reunión S7\" ahora se llama \"Reunión S7 (6 Nov)\" (color_mm84fk4y)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Act. S8\" ahora se llama \"Act. S8 (13 Nov)\" (color_mm84sz49)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Participación del Equipo: la columna \"Reunión S8\" ahora se llama \"Reunión S8 (13 Nov)\" (color_mm84fex0)."
+  },
+  {
+   "nivel": "info",
+   "texto": "P1. Ingeniería: la columna \"Cotizaciones\" ahora se llama \"Documentos\" (file_mm7d65bv)."
+  },
   {
    "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
@@ -7911,7 +8216,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: 3 trabajo(s) descartado(s), en el preliminar por US$ 11,500 (se pidieron, no se aprobaron): Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook, Bote Salvavidas – Casco."
+   "texto": "P2. Cubierta: 2 trabajo(s) descartado(s), en el preliminar por US$ 7,500 (se pidieron, no se aprobaron): Compás Magnético – Esfera Kelvin, Bote Salvavidas – Sistema Davit y Hook."
   },
   {
    "nivel": "info",
@@ -7923,7 +8228,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P2. Cubierta: preliminar US$ 138,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
+   "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
    "nivel": "info",
@@ -7939,23 +8244,15 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto; no suma en los totales."
+   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-25; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto; no suma en los totales."
+   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-25; revisar la fase."
   },
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"57953 · Ferretería Industrial — Codos escala 80 sin diámetro\": sin monto, trabajo enlazado; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -7964,26 +8261,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, trabajo enlazado; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -8004,14 +8281,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"3067 · Raimundo Coote — Transporte dique seco\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -8038,12 +8307,56 @@ window.DIQUE_MONDAY = {
    "texto": "Contabilidad Kelly Trader · \"59 · Deysi De La Cruz — Guantes de impacto\": sin monto; no suma en los totales."
   },
   {
-   "nivel": "info",
-   "texto": "Cambios/Imprevistos Kelly trader: sin cambios ni imprevistos registrados."
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57636 · Agencias Domingo — Empaque Garlock verde\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"3062 · Narciso Sánchez — Anticipo de caja menuda\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"3066 · Rafael Ríos — Anticipo de caja menuda\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57926 · Ferretería Industrial — Bridas de 2″\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57492 · Agencias Domingo — Rollos de neopreno\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"2044 · Vicencio Solís — Trapos\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"3067 · Raimundo Coote — Transporte dique seco\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
    "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };

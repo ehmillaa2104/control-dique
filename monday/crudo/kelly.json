@@ -1,6 +1,5 @@
 {
- "extraido": "2026-10-22",
- "consulta": "boards(ids) columns{id title type} items_page(limit:500) column_values{id type text display_value linked_item_ids}",
+ "extraido": "2026-10-23",
  "boards": [
   {
    "id": "18435454602",
@@ -18,12 +17,12 @@
     },
     {
      "id": "color_mm8453y",
-     "title": "Act. S2",
+     "title": "Act. S2 (2 Oct)",
      "type": "status"
     },
     {
      "id": "color_mm84nsqk",
-     "title": "Reunión S2",
+     "title": "Reunión S2 (2 Oct)",
      "type": "status"
     },
     {
@@ -53,7 +52,7 @@
     },
     {
      "id": "color_mm84283c",
-     "title": "Reunión S5",
+     "title": "Reunión S5 (23 Oct)",
      "type": "status"
     },
     {
@@ -68,22 +67,22 @@
     },
     {
      "id": "color_mm84pstd",
-     "title": "Act. S7",
+     "title": "Act. S7 (6 Nov)",
      "type": "status"
     },
     {
      "id": "color_mm84fk4y",
-     "title": "Reunión S7",
+     "title": "Reunión S7 (6 Nov)",
      "type": "status"
     },
     {
      "id": "color_mm84sz49",
-     "title": "Act. S8",
+     "title": "Act. S8 (13 Nov)",
      "type": "status"
     },
     {
      "id": "color_mm84fex0",
-     "title": "Reunión S8",
+     "title": "Reunión S8 (13 Nov)",
      "type": "status"
     },
     {
@@ -1953,7 +1952,7 @@
       "id": "13098295887",
       "name": "Bajada de slop y basura",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-22T19:25:52Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2005,7 +2004,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-22 19:25:52 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2020,7 +2019,7 @@
        {
         "id": "numeric_mm7yw4b3",
         "type": "numbers",
-        "text": "10000"
+        "text": "12000"
        },
        {
         "id": "numeric_mm7y9sbv",
@@ -2505,7 +2504,7 @@
       "id": "13098338467",
       "name": "Materiales cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-22T18:45:30Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2514,7 +2513,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -2557,7 +2556,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-22 18:45:30 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2597,7 +2596,7 @@
       "id": "13098367009",
       "name": "Reparaciones en cubierta (aceros y soldadura)",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-16T22:00:32Z",
+      "updated_at": "2026-10-22T18:45:27Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2606,7 +2605,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -2649,7 +2648,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:00:32 UTC"
+        "text": "2026-10-22 18:45:27 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2873,7 +2872,7 @@
       "id": "13098327946",
       "name": "Mantenimiento a acomodaciones",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-21T16:45:22Z",
+      "updated_at": "2026-10-22T19:21:31Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -2925,7 +2924,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-21 16:45:22 UTC"
+        "text": "2026-10-22 19:21:31 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2935,7 +2934,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "25%"
+        "text": "75%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -2965,7 +2964,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-16T22:27:56Z",
+      "updated_at": "2026-10-22T19:24:13Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -2974,12 +2973,12 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
         "type": "dropdown",
-        "text": null
+        "text": "SEMINSA"
        },
        {
         "id": "color_mm781mjk",
@@ -3017,7 +3016,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:27:56 UTC"
+        "text": "2026-10-22 19:24:13 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3057,7 +3056,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-16T22:27:57Z",
+      "updated_at": "2026-10-22T19:24:16Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3066,12 +3065,12 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
         "type": "dropdown",
-        "text": null
+        "text": "Talleres Industriales"
        },
        {
         "id": "color_mm781mjk",
@@ -3109,7 +3108,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 22:27:57 UTC"
+        "text": "2026-10-22 19:24:16 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3425,7 +3424,7 @@
       "id": "13315624594",
       "name": "Bote Salvavidas – Casco",
       "created_at": "2026-10-16T21:23:14Z",
-      "updated_at": "2026-10-16T21:58:31Z",
+      "updated_at": "2026-10-22T19:33:58Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3477,7 +3476,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-16 21:58:31 UTC"
+        "text": "2026-10-22 19:33:58 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3487,7 +3486,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "Cancelado"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -4015,7 +4014,7 @@
         "id": "formula_mm7ydqr4",
         "type": "formula",
         "text": "",
-        "display_value": "10000"
+        "display_value": "12000"
        },
        {
         "id": "board_relation_mm7a4ck0",
@@ -5321,152 +5320,6 @@
     "cursor": null,
     "items": [
      {
-      "id": "13302150803",
-      "name": "57636 · Agencias Domingo — Empaque Garlock verde",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-19T15:46:01Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Agencias Domingo, S.A."
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "1912"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-12"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-19 15:46:01 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302183351",
-      "name": "3062 · Narciso Sánchez — Anticipo de caja menuda",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:15:10Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Narciso Sánchez"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "5000"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-07"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-16 15:15:10 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13238699549"
-        ]
-       }
-      ]
-     },
-     {
       "id": "13302229682",
       "name": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
       "created_at": "2026-10-15T16:57:03Z",
@@ -5534,152 +5387,6 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": []
-       }
-      ]
-     },
-     {
-      "id": "13302137014",
-      "name": "3066 · Rafael Ríos — Anticipo de caja menuda",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:15:10Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Rafael Ríos"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "5500"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-07"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-16 15:15:10 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13238699549"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302137015",
-      "name": "57926 · Ferretería Industrial — Bridas de 2″",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-19T15:47:41Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Ferretería Industrial, S.A."
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "42.8"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-14"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-19 15:47:41 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -5822,371 +5529,6 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": []
-       }
-      ]
-     },
-     {
-      "id": "13302150520",
-      "name": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-21T14:47:03Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Tornillos y Herramientas Barrientos"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "2491.29"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-14"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-21 14:47:03 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302150224",
-      "name": "57492 · Agencias Domingo — Rollos de neopreno",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-19T15:47:15Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Agencias Domingo, S.A."
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "395.25"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-08"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-19 15:47:15 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302180056",
-      "name": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:04:14Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Ferretería Industrial, S.A."
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "4216.39"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-07"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-16 15:04:14 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043941389"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302211939",
-      "name": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
-      "created_at": "2026-10-15T16:57:04Z",
-      "updated_at": "2026-10-19T15:47:03Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Tornillos y Herramientas Barrientos"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "215"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-07"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-19 15:47:03 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13302212275",
-      "name": "2044 · Vicencio Solís — Trapos",
-      "created_at": "2026-10-15T16:57:04Z",
-      "updated_at": "2026-10-19T15:46:46Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Vicencio Solís"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "300"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-12"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-19 15:46:46 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6532,152 +5874,6 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": []
-       }
-      ]
-     },
-     {
-      "id": "13346621488",
-      "name": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
-      "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-21T15:07:56Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Luis Carlos Saavedra"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "2500"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-15"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-21 15:07:56 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13346969104"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "13346566759",
-      "name": "3067 · Raimundo Coote — Transporte dique seco",
-      "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-21T15:08:05Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Raimundo Coote"
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "2000"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-19"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-21 15:08:05 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13346969104"
-        ]
        }
       ]
      },
@@ -7114,6 +6310,809 @@
         ]
        }
       ]
+     },
+     {
+      "id": "13302150803",
+      "name": "57636 · Agencias Domingo — Empaque Garlock verde",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-19T15:46:01Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1912"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-12"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-19 15:46:01 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302183351",
+      "name": "3062 · Narciso Sánchez — Anticipo de caja menuda",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-16T15:15:10Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Narciso Sánchez"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "5000"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-16 15:15:10 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13238699549"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302137014",
+      "name": "3066 · Rafael Ríos — Anticipo de caja menuda",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-16T15:15:10Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Rafael Ríos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "5500"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-16 15:15:10 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13238699549"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302137015",
+      "name": "57926 · Ferretería Industrial — Bridas de 2″",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-19T15:47:41Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "42.8"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-19 15:47:41 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302150520",
+      "name": "53009 · Tornillos y Herramientas Barrientos — Consumibles y herramientas (25 ítems)",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-21T14:47:03Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2491.29"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 14:47:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302150224",
+      "name": "57492 · Agencias Domingo — Rollos de neopreno",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-19T15:47:15Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "395.25"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-08"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-19 15:47:15 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302180056",
+      "name": "57742 · Ferretería Industrial — Válvulas, bridas y codos (16 ítems)",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-16T15:04:14Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "4216.39"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-16 15:04:14 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043941389"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302211939",
+      "name": "52706 · Tornillos y Herramientas Barrientos — Tornillos para bridas",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-19T15:47:03Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "215"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-07"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-19 15:47:03 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13302212275",
+      "name": "2044 · Vicencio Solís — Trapos",
+      "created_at": "2026-10-15T16:57:04Z",
+      "updated_at": "2026-10-19T15:46:46Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Vicencio Solís"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "300"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-12"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-19 15:46:46 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13346621488",
+      "name": "ACH26/10107 · Luis Carlos Saavedra — Transporte de César Blanco",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T15:07:56Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Luis Carlos Saavedra"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2500"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-15"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 15:07:56 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "13346566759",
+      "name": "3067 · Raimundo Coote — Transporte dique seco",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-21T15:08:05Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Raimundo Coote"
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "2000"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-19"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-21 15:08:05 UTC"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
+       }
+      ]
      }
     ]
    }
@@ -7210,7 +7209,63 @@
    ],
    "items_page": {
     "cursor": null,
-    "items": []
+    "items": [
+     {
+      "id": "13362169864",
+      "name": "Segunda Limpieza del tanque de carga 4S",
+      "created_at": "2026-10-22T19:37:03Z",
+      "updated_at": "2026-10-22T19:39:00Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-10-22 19:37:03 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13098327837"
+        ]
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Calidad"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "1.1 Limpieza de tanques"
+       }
+      ]
+     }
+    ]
    }
   },
   {
@@ -7304,7 +7359,7 @@
     },
     {
      "id": "file_mm7d65bv",
-     "title": "Cotizaciones",
+     "title": "Documentos",
      "type": "file"
     },
     {
@@ -23043,7 +23098,7 @@
       "id": "13095528123",
       "name": "Entrada al muelle del astillero",
       "created_at": "2026-09-21T16:11:09Z",
-      "updated_at": "2026-10-22T18:11:40Z",
+      "updated_at": "2026-10-22T19:55:23Z",
       "group": {
        "id": "group_mm7dwdg5",
        "title": "Pre-Dique"
@@ -23062,7 +23117,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-20 - 2026-10-20"
+        "text": "2026-10-21 - 2026-10-21"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -23073,12 +23128,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "1"
+        "display_value": "2"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-22 18:11:40 UTC"
+        "text": "2026-10-22 19:55:23 UTC"
        }
       ]
      },
