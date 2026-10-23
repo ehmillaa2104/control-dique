@@ -891,7 +891,7 @@
       "id": "13098328158",
       "name": "Aceros y soldadura",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-23T21:02:46Z",
+      "updated_at": "2026-10-23T21:49:47Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -900,7 +900,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Pre-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -943,7 +943,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:46 UTC"
+        "text": "2026-10-23 21:49:47 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -953,7 +953,7 @@
        {
         "id": "numeric_mm7v7xt9",
         "type": "numbers",
-        "text": "35"
+        "text": "1"
        },
        {
         "id": "numeric_mm7y6h6f",
@@ -4018,7 +4018,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "9325"
+        "display_value": "11525"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -4039,7 +4039,8 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": [
-         "13302182661"
+         "13302182661",
+         "13346568036"
         ]
        }
       ]
@@ -4667,7 +4668,7 @@
       "id": "13081201432",
       "name": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
       "created_at": "2026-09-18T16:38:44Z",
-      "updated_at": "2026-10-19T13:59:29Z",
+      "updated_at": "2026-10-23T21:39:51Z",
       "group": {
        "id": "group_mm7a5qg9",
        "title": "2.2"
@@ -4712,7 +4713,7 @@
         "id": "formula_mm7ydqr4",
         "type": "formula",
         "text": "",
-        "display_value": "87950.01"
+        "display_value": "88488.48"
        },
        {
         "id": "board_relation_mm7a4ck0",
@@ -4809,7 +4810,6 @@
          "13095603677",
          "13095637451",
          "13095643937",
-         "13095569998",
          "13043932349",
          "13043932347",
          "13043936421",
@@ -4885,7 +4885,10 @@
          "13277158049",
          "13277138491",
          "13277104868",
-         "13277169481"
+         "13277169481",
+         "13095569998",
+         "13373451881",
+         "13373417444"
         ]
        },
        {
@@ -5276,6 +5279,16 @@
      "type": "text"
     },
     {
+     "id": "board_relation_mm7yq0et",
+     "title": "link to CC. Centros de Costo - Kelly Trader",
+     "type": "board_relation"
+    },
+    {
+     "id": "board_relation_mm7y2fcq",
+     "title": "Actividad relacionada",
+     "type": "board_relation"
+    },
+    {
      "id": "numeric_mm2pfpzs",
      "title": "$ PO Total",
      "type": "numbers"
@@ -5314,16 +5327,6 @@
      "id": "color_mm4s40ra",
      "title": "Casilla de verificación",
      "type": "status"
-    },
-    {
-     "id": "board_relation_mm7yq0et",
-     "title": "link to CC. Centros de Costo - Kelly Trader",
-     "type": "board_relation"
-    },
-    {
-     "id": "board_relation_mm7y2fcq",
-     "title": "Actividad relacionada",
-     "type": "board_relation"
     }
    ],
    "items_page": {
@@ -5348,6 +5351,20 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5383,20 +5400,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:12:25 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5419,6 +5422,20 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5454,20 +5471,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:09:04 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5490,6 +5493,20 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5525,20 +5542,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:04:38 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5561,6 +5564,18 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Jorge Cáceres"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5596,18 +5611,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5630,6 +5633,18 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5665,18 +5680,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5699,6 +5702,18 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Tecno Control, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5734,18 +5749,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5768,6 +5771,18 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5803,18 +5818,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5822,7 +5825,7 @@
       "id": "13346568036",
       "name": "16391 · SUBWORKS — Barge fees y agua potable",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-23T21:41:15Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -5837,6 +5840,20 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "SUBWORKS, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081208222"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5871,19 +5888,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
+        "text": "2026-10-23 21:41:15 UTC"
        }
       ]
      },
@@ -5906,6 +5911,18 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5941,18 +5958,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": []
        }
       ]
      },
@@ -5975,6 +5980,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "SUBWORKS, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081208222"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13098295887"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6010,22 +6031,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-15 16:57:04 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081208222"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13098295887"
-        ]
        }
       ]
      },
@@ -6048,6 +6053,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13256760158"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6083,22 +6104,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-15 16:57:04 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13256760158"
-        ]
        }
       ]
      },
@@ -6121,6 +6126,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Terminal Marítima de Servicios"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201194"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13127948545"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6156,22 +6177,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-15 16:57:05 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201194"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13127948545"
-        ]
        }
       ]
      },
@@ -6194,6 +6199,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Terminal Marítima de Servicios"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201194"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13127948545"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6229,22 +6250,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-15 16:57:04 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201194"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13127948545"
-        ]
        }
       ]
      },
@@ -6267,6 +6272,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Deysi De La Cruz"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081208091"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13315655864"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6302,22 +6323,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:35 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081208091"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13315655864"
-        ]
        }
       ]
      },
@@ -6340,6 +6345,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6375,22 +6396,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-19 15:46:01 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6413,6 +6418,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Narciso Sánchez"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13238699549"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6448,22 +6469,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:15:10 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13238699549"
-        ]
        }
       ]
      },
@@ -6486,6 +6491,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Rafael Ríos"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13238699549"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6521,22 +6542,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:15:10 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13238699549"
-        ]
        }
       ]
      },
@@ -6559,6 +6564,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6594,22 +6615,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-19 15:47:41 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6632,6 +6637,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6667,22 +6688,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:47:03 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6705,6 +6710,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Agencias Domingo, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6740,22 +6761,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-19 15:47:15 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6778,6 +6783,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043941389"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6813,22 +6834,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-16 15:04:14 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043941389"
-        ]
        }
       ]
      },
@@ -6851,6 +6856,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Tornillos y Herramientas Barrientos"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6886,22 +6907,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-19 15:47:03 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6924,6 +6929,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Vicencio Solís"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13277158044"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6959,22 +6980,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-19 15:46:46 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13277158044"
-        ]
        }
       ]
      },
@@ -6997,6 +7002,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Luis Carlos Saavedra"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7032,22 +7053,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 15:07:56 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13346969104"
-        ]
        }
       ]
      },
@@ -7070,6 +7075,22 @@
         "id": "text_mm2p9mx7",
         "type": "text",
         "text": "Raimundo Coote"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081177348"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13346969104"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7105,22 +7126,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 15:08:05 UTC"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081177348"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13346969104"
-        ]
        }
       ]
      }
@@ -7274,6 +7279,199 @@
         "text": "1.1 Limpieza de tanques"
        }
       ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "18431022776",
+   "name": "PROGRAMA DE DIQUES",
+   "columns": [
+    {
+     "id": "name",
+     "title": "Nave",
+     "type": "name"
+    },
+    {
+     "id": "color_mm7e7wfd",
+     "title": "Estado",
+     "type": "status"
+    },
+    {
+     "id": "date_mm78x2pe",
+     "title": "Mandatorio",
+     "type": "date"
+    },
+    {
+     "id": "date_mm766e7z",
+     "title": "Fecha Real",
+     "type": "date"
+    },
+    {
+     "id": "formula_mm78vqa2",
+     "title": "Diferencia",
+     "type": "formula"
+    },
+    {
+     "id": "color_mm7666ab",
+     "title": "Tipo de dique",
+     "type": "status"
+    },
+    {
+     "id": "numeric_mm766312",
+     "title": "$ dique anterior",
+     "type": "numbers"
+    },
+    {
+     "id": "color_mm765t5s",
+     "title": "Lugar",
+     "type": "status"
+    },
+    {
+     "id": "numeric_mm76thhf",
+     "title": "$ estimado próximo dique",
+     "type": "numbers"
+    },
+    {
+     "id": "long_text_mm769eya",
+     "title": "Observaciones",
+     "type": "long_text"
+    }
+   ],
+   "items_page": {
+    "cursor": null,
+    "items": [
+     {
+      "id": "13327030172",
+      "name": "Kingston Trader",
+      "created_at": "2026-10-19T15:41:29Z",
+      "updated_at": "2026-10-19T15:43:45Z",
+      "group": {
+       "id": "group_mm8988sa",
+       "title": "2026"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078075",
+      "name": "Kelly Trader",
+      "created_at": "2026-09-14T20:00:46Z",
+      "updated_at": "2026-10-14T21:04:28Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044082494",
+      "name": "Neo Trader",
+      "created_at": "2026-09-14T20:00:45Z",
+      "updated_at": "2026-10-20T14:39:32Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044082478",
+      "name": "Perlas Trader",
+      "created_at": "2026-09-14T20:00:44Z",
+      "updated_at": "2026-10-20T14:39:13Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078081",
+      "name": "Roxana Trader",
+      "created_at": "2026-09-14T20:00:47Z",
+      "updated_at": "2026-09-23T20:08:50Z",
+      "group": {
+       "id": "topics",
+       "title": "2027"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078169",
+      "name": "Isthmus Trader",
+      "created_at": "2026-09-14T20:00:48Z",
+      "updated_at": "2026-09-23T20:08:53Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078268",
+      "name": "Kingston Trader",
+      "created_at": "2026-09-14T20:00:49Z",
+      "updated_at": "2026-09-23T20:08:55Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078304",
+      "name": "Pacific Trader",
+      "created_at": "2026-09-14T20:00:51Z",
+      "updated_at": "2026-09-23T20:08:56Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078307",
+      "name": "Caribbean Trader",
+      "created_at": "2026-09-14T20:00:53Z",
+      "updated_at": "2026-09-23T20:08:59Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078342",
+      "name": "Colon Trader",
+      "created_at": "2026-09-14T20:00:55Z",
+      "updated_at": "2026-09-23T20:09:02Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044078393",
+      "name": "JC Trader",
+      "created_at": "2026-09-14T20:00:56Z",
+      "updated_at": "2026-09-23T20:09:03Z",
+      "group": {
+       "id": "group_mm766jdp",
+       "title": "2028"
+      },
+      "column_values": []
+     },
+     {
+      "id": "13044082969",
+      "name": "Neo Trader",
+      "created_at": "2026-09-14T20:00:57Z",
+      "updated_at": "2026-09-23T20:09:05Z",
+      "group": {
+       "id": "group_mm76dyf0",
+       "title": "2029"
+      },
+      "column_values": []
      }
     ]
    }
@@ -9367,7 +9565,7 @@
       "id": "13043922222",
       "name": "Mantenimiento preventivo del generador de emergencia",
       "created_at": "2026-09-14T19:46:30Z",
-      "updated_at": "2026-10-23T21:03:43Z",
+      "updated_at": "2026-10-23T21:33:00Z",
       "group": {
        "id": "group_mm7d5fgv",
        "title": "1.2 Generadores"
@@ -9419,7 +9617,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:03:43 UTC"
+        "text": "2026-10-23 21:33:00 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -9439,7 +9637,7 @@
        {
         "id": "numeric_mm7y9v4k",
         "type": "numbers",
-        "text": "4200"
+        "text": "4738.47"
        },
        {
         "id": "lookup_mm7yh3hm",
@@ -11299,7 +11497,7 @@
       "id": "13256760157",
       "name": "Línea de descarga de bomba de lastre de estribor",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:03:49Z",
+      "updated_at": "2026-10-23T21:13:25Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -11351,7 +11549,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:03:49 UTC"
+        "text": "2026-10-23 21:13:25 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -14427,7 +14625,7 @@
       "id": "13095569998",
       "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-10-23T21:04:00Z",
+      "updated_at": "2026-10-23T21:15:10Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -14479,7 +14677,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:00 UTC"
+        "text": "2026-10-23 21:15:10 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -14664,6 +14862,190 @@
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
         "text": "2026-10-23 21:04:01 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13373451881",
+      "name": "Motor electrico de Bow Thruster",
+      "created_at": "2026-10-23T21:38:18Z",
+      "updated_at": "2026-10-23T21:38:22Z",
+      "group": {
+       "id": "group_mm7dbaz2",
+       "title": "1.4 Bow Thruster"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "No Aplica"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-23 21:38:22 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "0%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ]
+     },
+     {
+      "id": "13373417444",
+      "name": "Motor eléctrico para reemplazar la araña de acople",
+      "created_at": "2026-10-23T21:39:46Z",
+      "updated_at": "2026-10-23T21:39:49Z",
+      "group": {
+       "id": "group_mm7dbaz2",
+       "title": "1.4 Bow Thruster"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "No Aplica"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-23 21:39:49 UTC"
        },
        {
         "id": "color_mm7yb2cs",

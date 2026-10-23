@@ -797,7 +797,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 4200,
      "enRevision": null,
      "aprobado": 4200,
-     "proyectado": 4200,
+     "proyectado": 4738.47,
      "po": null,
      "incurrido": null,
      "fin": "2026-10-14",
@@ -2218,6 +2218,56 @@ window.DIQUE_MONDAY = {
      "duracion": null,
      "tipo": "",
      "aprobacion": "",
+     "proveedor": "",
+     "preliminar": null,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": null,
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-23",
+     "costo": ""
+    },
+    {
+     "id": "13373451881",
+     "nombre": "Motor electrico de Bow Thruster",
+     "grupo": "1.4 Bow Thruster",
+     "fase": "No Aplica",
+     "estado": "0%",
+     "pct": 0,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "preliminar": null,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": null,
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-23",
+     "costo": ""
+    },
+    {
+     "id": "13373417444",
+     "nombre": "Motor eléctrico para reemplazar la araña de acople",
+     "grupo": "1.4 Bow Thruster",
+     "fase": "No Aplica",
+     "estado": "0%",
+     "pct": 0,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
      "proveedor": "",
      "preliminar": null,
      "enRevision": null,
@@ -4950,11 +5000,11 @@ window.DIQUE_MONDAY = {
      "id": "13098328158",
      "nombre": "Aceros y soldadura",
      "grupo": "Técnico",
-     "fase": "Pre-dique",
+     "fase": "Dique",
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": 35,
+     "duracion": 1,
      "tipo": "",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
@@ -5250,13 +5300,14 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
-   "incurrido": 9325,
+   "incurrido": 11525,
    "proyectado": 12000,
    "lineas": [
     "13098295887"
    ],
    "pos": [
-    "13302182661"
+    "13302182661",
+    "13346568036"
    ]
   },
   {
@@ -5429,7 +5480,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 87950.01,
    "po": 0,
    "incurrido": 13280.92,
-   "proyectado": 87950.01,
+   "proyectado": 88488.48,
    "lineas": [
     "13043950431",
     "13043945523",
@@ -5521,7 +5572,6 @@ window.DIQUE_MONDAY = {
     "13095603677",
     "13095637451",
     "13095643937",
-    "13095569998",
     "13043932349",
     "13043932347",
     "13043936421",
@@ -5597,7 +5647,10 @@ window.DIQUE_MONDAY = {
     "13277158049",
     "13277138491",
     "13277104868",
-    "13277169481"
+    "13277169481",
+    "13095569998",
+    "13373451881",
+    "13373417444"
    ],
    "pos": [
     "13302150991",
@@ -5817,9 +5870,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-19",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081208222"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-10-23"
   },
   {
    "id": "13346658601",
@@ -6652,7 +6707,7 @@ window.DIQUE_MONDAY = {
  },
  "avance": {
   "ingenieria": {
-   "lineas": 167,
+   "lineas": 169,
    "conDuracion": 31,
    "duracion": 31,
    "avanceDias": 1.25
@@ -6666,13 +6721,13 @@ window.DIQUE_MONDAY = {
   "tecnico": {
    "lineas": 10,
    "conDuracion": 8,
-   "duracion": 76,
+   "duracion": 42,
    "avanceDias": 2.75
   },
   "total": {
-   "lineas": 195,
+   "lineas": 197,
    "conDuracion": 51,
-   "duracion": 165,
+   "duracion": 131,
    "avanceDias": 26.0
   }
  },
@@ -7887,7 +7942,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-10-23",
-   "avance": 15.76,
+   "avance": 19.85,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -7968,6 +8023,8 @@ window.DIQUE_MONDAY = {
     "13095569998": 0,
     "13043941391": 0,
     "13095616904": 0,
+    "13373451881": 0,
+    "13373417444": 0,
     "13043924545": 0,
     "13043924546": 0,
     "13095643872": 0,
@@ -8087,25 +8144,45 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "eedfcb42a34b",
- "cambiosLectura": [],
+ "_huella": "394958f48e97",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Mantenimiento preventivo del generador de emergencia",
+   "campo": "$ Proyectado",
+   "antes": "4200",
+   "ahora": "4738.47"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor electrico de Bow Thruster",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "Duración",
+   "antes": "35",
+   "ahora": "1"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "Fase",
+   "antes": "Pre-dique",
+   "ahora": "Dique"
+  }
+ ],
  "observaciones": [
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico: columna nueva \"Copia de Fase\" (color_mm8d4d28, status); revisar si el dashboard debe usarla."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: columna nueva \"Copia de Fase\" (color_mm8dbbdq, status); revisar si el dashboard debe usarla."
-  },
-  {
-   "nivel": "info",
-   "texto": "P2. Cubierta: la columna \"Cotizaciones\" ahora se llama \"Documentos\" (file_mm7d65bv)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P1. Ingeniería: columna nueva \"Copia de Fase\" (color_mm8deyq4, status); revisar si el dashboard debe usarla."
-  },
   {
    "nivel": "aviso",
    "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
@@ -8200,7 +8277,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -8273,10 +8350,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };

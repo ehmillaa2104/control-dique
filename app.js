@@ -49,6 +49,8 @@
     wrench: '<path d="M14.5 5.5a4 4 0 0 0 4.8 4.8l-9 9a2 2 0 0 1-2.8-2.8l9-9a4 4 0 0 1-2-2z"/>',
     calendar: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
     search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/>',
+    camera: '<path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2.2l1.4-2h5.8l1.4 2h2.2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/><circle cx="12" cy="12.8" r="3.4"/>',
+    play: '<path d="M8 5.5v13l10.5-6.5z"/>',
     hourglass: '<path d="M7 3.5h10M7 20.5h10M8 3.5v3a4 4 0 0 0 1.6 3.2L12 11.5l2.4-1.8A4 4 0 0 0 16 6.5v-3M8 20.5v-3a4 4 0 0 1 1.6-3.2L12 12.5l2.4 1.8a4 4 0 0 1 1.6 3.2v3"/>'
   };
   const icon = (n, cls = "ic") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n] || ""}</svg>`;
@@ -472,7 +474,11 @@
     if (!ult) return "";
     // Solo cuentan las opciones nuevas del tablero (Completa / Parcial); lo demás (incluidas las de antes:
     // "actualización directa / indirecta") o sin cargar queda como Pendiente (pedido del usuario, 22 oct)
-    const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; const t = (d.act || "").toLowerCase(); return ENTREGA[t.startsWith("complet") ? 2 : t.startsWith("parcial") ? 1 : 0]; };
+    // Si Monday no tiene la semana cargada con las opciones nuevas, vale la nota de notas.js (entrega["S5"])
+    const notaEnt = ((window.DIQUE_NOTAS || {}).entrega) || {};
+    const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; let t = (d.act || "").toLowerCase();
+      if (!/^(complet|parcial)/.test(t) && notaEnt[s.semana]) t = String(notaEnt[s.semana]).toLowerCase();
+      return ENTREGA[t.startsWith("complet") ? 2 : t.startsWith("parcial") ? 1 : 0]; };
     const nom = (s) => `Semana ${s.semana.slice(1)}${s.fecha ? " · " + esc(s.fecha) : ""}`;
     const items = P.equipos.map((e) => {
       const [txt, cls] = est(e, ult);
@@ -515,6 +521,7 @@
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${entregaHTML(M)}
       ${semanaCard(M)}
+      ${registroCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, false)}`;
   }
@@ -602,6 +609,80 @@
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
 
+
+  // =========================================================
+  // Registro semanal: fotos, videos y avance en sitio (registro.js, se edita a mano)
+  // =========================================================
+  const REG = () => window.DIQUE_REGISTRO || { semanas: [] };
+  const FASE_NOMBRE = { plan: "Planificación", pre: "Pre-dique", dique: "En dique", post: "Post-dique", tras: "Traslado" };
+  function etapaEn(M, fecha) {
+    const o = M.fases.filter((f) => f.real[0] <= fecha && fecha <= f.real[1]).sort((a, b) => (a.real[0] < b.real[0] ? 1 : -1))[0];
+    if (!o) return "";
+    const dia = Math.round((parse(fecha) - parse(o.real[0])) / DAY) + 1, tot = Math.round((parse(o.real[1]) - parse(o.real[0])) / DAY) + 1;
+    return `${FASE_NOMBRE[o.kind] || esc(o.nombre)} · día ${dia} de ${tot}`;
+  }
+  const minDe = (m) => (m.tipo === "foto" ? m.archivo.replace(/\.jpg$/i, "-min.jpg") : m.archivo);
+  let MEDIOS = []; // lista que recorre el visor
+  function medioHTML(m, i) {
+    const inner = m.tipo === "video"
+      ? `<video src="${esc(m.archivo)}#t=1" preload="metadata" muted playsinline></video><span class="reg-play">${icon("play")}</span>`
+      : `<img src="${esc(minDe(m))}" alt="${esc(m.texto)}" loading="lazy">`;
+    return `<button type="button" class="reg-m" data-medio="${i}" aria-label="${esc(m.texto)}">${inner}<span class="reg-cap">${esc(m.texto)}</span></button>`;
+  }
+  const semTitulo = (w) => `Semana · ${fmtShort(w.desde)} – ${fmtShort(w.hasta)}`;
+  function avanceHTML(w) {
+    return (w.avance || []).map((g) => `<div class="reg-zona"><b>${esc(g.zona)}</b><ul>${g.items.map((it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`).join("")}</ul></div>`).join("");
+  }
+  function viewRegistro(M) {
+    const R = REG();
+    MEDIOS = [];
+    if (!R.semanas.length) return card("Registro semanal", empty("Todavía no hay semanas registradas."), { cls: "wide" });
+    const semanas = R.semanas.map((w) => {
+      const base = MEDIOS.length;
+      MEDIOS.push(...(w.medios || []));
+      return `<section class="card wide reg-sem"><div class="card-h"><span>${semTitulo(w)}</span><small>${etapaEn(M, w.hasta)}</small></div>
+        <div class="reg-body">${w.avance && w.avance.length ? `<div class="reg-av">${avanceHTML(w)}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div>` : ""}
+        <div class="reg-grid">${(w.medios || []).map((m, i) => medioHTML(m, base + i)).join("")}</div></div></section>`;
+    }).join("");
+    return semanas;
+  }
+  // Recuadro del resumen gerencial: la última semana
+  function registroCard(M) {
+    const R = REG(), w = R.semanas[0];
+    if (!w) return "";
+    MEDIOS = (w.medios || []).slice();
+    const fotos = (w.medios || []).map((m, i) => [m, i]).filter(([m]) => m.tipo === "foto").slice(0, 3);
+    const nVid = (w.medios || []).filter((m) => m.tipo === "video").length, nFot = (w.medios || []).length - nVid;
+    return `<section class="card wide reg-res"><div class="card-h"><span>Esta semana en el dique</span><small>${semTitulo(w)} · ${etapaEn(M, w.hasta)}</small></div>
+      <div class="reg-res-b"><div class="reg-av">${avanceHTML(w)}</div>
+      <div><div class="reg-grid g3">${fotos.map(([m, i]) => medioHTML(m, i)).join("")}</div>
+      <a class="reg-link" href="#registro">${icon("camera", "ic sm")}Ver registro semanal · ${plural(nFot, "foto", "fotos")}${nVid ? " y " + plural(nVid, "video", "videos") : ""} →</a></div></div></section>`;
+  }
+  // Visor de fotos y videos
+  const lb = document.createElement("div");
+  lb.className = "lb"; lb.hidden = true;
+  lb.innerHTML = '<button type="button" class="lb-x" aria-label="Cerrar">×</button><button type="button" class="lb-p" aria-label="Anterior">‹</button><figure class="lb-f"></figure><button type="button" class="lb-n" aria-label="Siguiente">›</button>';
+  document.body.appendChild(lb);
+  let LBI = 0;
+  function lbShow(i) {
+    if (!MEDIOS.length) return;
+    LBI = (i + MEDIOS.length) % MEDIOS.length;
+    const m = MEDIOS[LBI];
+    lb.querySelector(".lb-f").innerHTML = (m.tipo === "video" ? `<video src="${esc(m.archivo)}" controls autoplay playsinline></video>` : `<img src="${esc(m.archivo)}" alt="${esc(m.texto)}">`) +
+      `<figcaption>${esc(m.texto)}<small>${LBI + 1} de ${MEDIOS.length}</small></figcaption>`;
+    lb.hidden = false; document.body.style.overflow = "hidden";
+  }
+  function lbClose() { lb.hidden = true; lb.querySelector(".lb-f").innerHTML = ""; document.body.style.overflow = ""; }
+  lb.addEventListener("click", (e) => {
+    if (e.target.closest(".lb-p")) return lbShow(LBI - 1);
+    if (e.target.closest(".lb-n")) return lbShow(LBI + 1);
+    if (e.target.closest(".lb-x") || e.target === lb) lbClose();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (lb.hidden) return;
+    if (e.key === "Escape") lbClose(); else if (e.key === "ArrowLeft") lbShow(LBI - 1); else if (e.key === "ArrowRight") lbShow(LBI + 1);
+  });
+
   function viewCrono(M) {
     const rows = M.D.cronograma.map((r) => {
       const late = r.diferencia > 0;
@@ -621,7 +702,7 @@
   const app = $("app");
   let MODEL = null, VIEW = "resumen";
   const QUERY = {};
-  const tabs = (M) => [{ id: "resumen", nombre: "Resumen gerencial", icono: "grid" }]
+  const tabs = (M) => [{ id: "resumen", nombre: "Resumen gerencial", icono: "grid" }, { id: "registro", nombre: "Registro semanal", icono: "camera" }]
     .concat(M.areas.map((a) => ({ id: a.id, nombre: a.nombre, icono: AREA_ICON[a.id] || "grid", badge: pct(avance(a.trabajos).pct, 0) })))
     .concat([{ id: "cronograma", nombre: "Cronograma", icono: "calendar" }]);
 
@@ -630,15 +711,15 @@
     const M = MODEL;
     const key = decodeURIComponent(location.hash.slice(1)) || "resumen";
     const area = M.areas.find((a) => a.id === key);
-    VIEW = area ? key : key === "cronograma" ? "cronograma" : "resumen";
+    VIEW = area ? key : key === "cronograma" || key === "registro" ? key : "resumen";
     $("tabs").innerHTML = tabs(M).map((t) => `<a class="tab" href="#${t.id}" ${t.id === VIEW ? 'aria-current="page"' : ""}>${icon(t.icono)}${esc(t.nombre)}${t.badge ? `<span class="badge">${t.badge}</span>` : ""}</a>`).join("");
-    $("hero-title").textContent = area ? "Área de " + area.nombre : VIEW === "cronograma" ? "Cronograma" : "Resumen gerencial";
+    $("hero-title").textContent = area ? "Área de " + area.nombre : VIEW === "cronograma" ? "Cronograma" : VIEW === "registro" ? "Registro semanal" : "Resumen gerencial";
     $("hero-sub").textContent = `M/V ${M.D.proyecto} · datos de Monday leídos el ${fmtDate(M.D.extraido)}`;
     $("upd-date").textContent = fmtDate(TODAY);
-    document.title = (area ? area.nombre : VIEW === "cronograma" ? "Cronograma" : "Resumen") + " · Control de Dique · Rev. 3";
+    document.title = (area ? area.nombre : VIEW === "cronograma" ? "Cronograma" : VIEW === "registro" ? "Registro semanal" : "Resumen") + " · Control de Dique · Rev. 3";
     $("voyage").innerHTML = voyageHTML(M);
     sailShip();
-    app.innerHTML = area ? viewArea(M, area, QUERY[area.id]) : VIEW === "cronograma" ? viewCrono(M) : viewResumen(M);
+    app.innerHTML = area ? viewArea(M, area, QUERY[area.id]) : VIEW === "cronograma" ? viewCrono(M) : VIEW === "registro" ? viewRegistro(M) : viewResumen(M);
     app.querySelectorAll(".gantt").forEach(layoutMl);
   }
 
@@ -650,6 +731,8 @@
     if (area) $("grupos").innerHTML = gruposHTML(MODEL, area, QUERY[VIEW]);
   });
   app.addEventListener("click", (e) => {
+    const md = e.target.closest("[data-medio]");
+    if (md) { lbShow(+md.dataset.medio); return; }
     const v = e.target.closest("[data-vista]");
     if (v) { VISTA_CRONO = v.dataset.vista; try { localStorage.setItem("dique-vista-crono", VISTA_CRONO); } catch (err) {} const y = scrollY; render(); scrollTo({ top: y }); return; }
     const b = e.target.closest("[data-fase]");

@@ -87,6 +87,12 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - **Pruebas antes de publicar:** si el usuario pide probar antes de actualizar, trabajar en una rama (no `main`). En otra rama, el hook guarda solo en local y no publica; para publicar, se pasa la rama a `main`.
 - Debe verse bien en celular.
 
+## Registro semanal (fotos, videos y avance en sitio)
+
+- Pestaña **"Registro semanal"** (al lado del Resumen gerencial) y recuadro **"Esta semana en el dique"** en el resumen. Datos en `registro.js`, se edita a mano; archivos en `registro/sN/`.
+- Cada semana: el usuario manda fotos, videos y el reporte del superintendente. Las fotos se reducen a 1600 px sin metadatos (más una miniatura `-min.jpg` de 480 px); los videos van tal cual.
+- En pantalla la semana se muestra solo con fechas ("Semana · 17 oct – 23 oct"), sin número. No mostrar "Renovación de acero" (pedido del usuario, 23 oct). No poner nombres de personas (el repositorio es público).
+
 ## Publicación
 
 - GitHub: `github.com/ehmillaa2104/control-dique`, rama `main`.
