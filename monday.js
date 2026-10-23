@@ -2236,11 +2236,11 @@ window.DIQUE_MONDAY = {
      "id": "13373451881",
      "nombre": "Motor electrico de Bow Thruster",
      "grupo": "1.4 Bow Thruster",
-     "fase": "No Aplica",
-     "estado": "0%",
-     "pct": 0,
+     "fase": "Dique",
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "",
      "aprobacion": "Pendiente",
      "proveedor": "",
@@ -2261,11 +2261,11 @@ window.DIQUE_MONDAY = {
      "id": "13373417444",
      "nombre": "Motor eléctrico para reemplazar la araña de acople",
      "grupo": "1.4 Bow Thruster",
-     "fase": "No Aplica",
-     "estado": "0%",
-     "pct": 0,
+     "fase": "Dique",
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
-     "duracion": null,
+     "duracion": 1,
      "tipo": "",
      "aprobacion": "Pendiente",
      "proveedor": "",
@@ -2562,8 +2562,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Panel de sistema de alarma 95-98%",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2662,8 +2662,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Panel contra incendio",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2687,8 +2687,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3737,8 +3737,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3762,8 +3762,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3787,8 +3787,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3812,8 +3812,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3837,8 +3837,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Línea de succión de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -5129,7 +5129,7 @@ window.DIQUE_MONDAY = {
      "estado": "75%",
      "pct": 75,
      "cancelado": false,
-     "duracion": 1,
+     "duracion": 3,
      "tipo": "Mandatorio",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
@@ -6708,9 +6708,9 @@ window.DIQUE_MONDAY = {
  "avance": {
   "ingenieria": {
    "lineas": 169,
-   "conDuracion": 31,
-   "duracion": 31,
-   "avanceDias": 1.25
+   "conDuracion": 33,
+   "duracion": 33,
+   "avanceDias": 4.0
   },
   "cubierta": {
    "lineas": 18,
@@ -6721,14 +6721,14 @@ window.DIQUE_MONDAY = {
   "tecnico": {
    "lineas": 10,
    "conDuracion": 8,
-   "duracion": 42,
-   "avanceDias": 2.75
+   "duracion": 44,
+   "avanceDias": 4.25
   },
   "total": {
    "lineas": 197,
-   "conDuracion": 51,
-   "duracion": 131,
-   "avanceDias": 26.0
+   "conDuracion": 53,
+   "duracion": 135,
+   "avanceDias": 30.25
   }
  },
  "historial": [
@@ -7942,7 +7942,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-10-23",
-   "avance": 19.85,
+   "avance": 22.41,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -8023,8 +8023,8 @@ window.DIQUE_MONDAY = {
     "13095569998": 0,
     "13043941391": 0,
     "13095616904": 0,
-    "13373451881": 0,
-    "13373417444": 0,
+    "13373451881": 25,
+    "13373417444": 25,
     "13043924545": 0,
     "13043924546": 0,
     "13095643872": 0,
@@ -8036,12 +8036,12 @@ window.DIQUE_MONDAY = {
     "13095643937": 0,
     "13095604536": 0,
     "13095613807": 0,
-    "13277138828": 0,
+    "13277138828": 25,
     "13277158049": 0,
     "13277104868": 0,
     "13277169481": 0,
-    "13277138491": 0,
-    "13277157364": 0,
+    "13277138491": 25,
+    "13277157364": 50,
     "13043950429": 0,
     "13043932348": 0,
     "13043921752": 0,
@@ -8083,11 +8083,11 @@ window.DIQUE_MONDAY = {
     "13095628540": 0,
     "13256755102": 0,
     "13095637314": 0,
-    "13095603679": 0,
-    "13256760623": 0,
-    "13256755233": 0,
-    "13256755205": 0,
-    "13256755234": 0,
+    "13095603679": 25,
+    "13256760623": 25,
+    "13256755233": 25,
+    "13256755205": 25,
+    "13256755234": 25,
     "13043936421": 0,
     "13043936422": 0,
     "13043936423": 0,
@@ -8144,42 +8144,112 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "394958f48e97",
+ "_huella": "dbf458a907f4",
  "cambiosLectura": [
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "$ Proyectado",
-   "antes": "4200",
-   "ahora": "4738.47"
+   "trabajo": "Motor electrico de Bow Thruster",
+   "campo": "Duración",
+   "antes": "—",
+   "ahora": "1"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor electrico de Bow Thruster",
+   "campo": "Fase",
+   "antes": "No Aplica",
+   "ahora": "Dique"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
    "campo": "Duración",
-   "antes": "35",
+   "antes": "—",
    "ahora": "1"
   },
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
    "campo": "Fase",
-   "antes": "Pre-dique",
+   "antes": "No Aplica",
    "ahora": "Dique"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel de sistema de alarma 95-98%",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel contra incendio",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "50%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "Duración",
+   "antes": "1",
+   "ahora": "3"
   }
  ],
  "observaciones": [
@@ -8205,7 +8275,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 31 trabajo(s) planificado(s) · 1 en ejecución · 1 finalizado(s) · 29 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 11 en ejecución · 1 finalizado(s) · 21 por iniciar."
   },
   {
    "nivel": "info",

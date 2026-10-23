@@ -1351,7 +1351,7 @@
       "id": "13098334682",
       "name": "Medición de espesores y cadenas",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-23T21:02:48Z",
+      "updated_at": "2026-10-23T22:27:59Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1403,7 +1403,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:48 UTC"
+        "text": "2026-10-23 22:27:59 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1413,7 +1413,7 @@
        {
         "id": "numeric_mm7v7xt9",
         "type": "numbers",
-        "text": "1"
+        "text": "3"
        },
        {
         "id": "numeric_mm7y6h6f",
@@ -7279,199 +7279,6 @@
         "text": "1.1 Limpieza de tanques"
        }
       ]
-     }
-    ]
-   }
-  },
-  {
-   "id": "18431022776",
-   "name": "PROGRAMA DE DIQUES",
-   "columns": [
-    {
-     "id": "name",
-     "title": "Nave",
-     "type": "name"
-    },
-    {
-     "id": "color_mm7e7wfd",
-     "title": "Estado",
-     "type": "status"
-    },
-    {
-     "id": "date_mm78x2pe",
-     "title": "Mandatorio",
-     "type": "date"
-    },
-    {
-     "id": "date_mm766e7z",
-     "title": "Fecha Real",
-     "type": "date"
-    },
-    {
-     "id": "formula_mm78vqa2",
-     "title": "Diferencia",
-     "type": "formula"
-    },
-    {
-     "id": "color_mm7666ab",
-     "title": "Tipo de dique",
-     "type": "status"
-    },
-    {
-     "id": "numeric_mm766312",
-     "title": "$ dique anterior",
-     "type": "numbers"
-    },
-    {
-     "id": "color_mm765t5s",
-     "title": "Lugar",
-     "type": "status"
-    },
-    {
-     "id": "numeric_mm76thhf",
-     "title": "$ estimado próximo dique",
-     "type": "numbers"
-    },
-    {
-     "id": "long_text_mm769eya",
-     "title": "Observaciones",
-     "type": "long_text"
-    }
-   ],
-   "items_page": {
-    "cursor": null,
-    "items": [
-     {
-      "id": "13327030172",
-      "name": "Kingston Trader",
-      "created_at": "2026-10-19T15:41:29Z",
-      "updated_at": "2026-10-19T15:43:45Z",
-      "group": {
-       "id": "group_mm8988sa",
-       "title": "2026"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078075",
-      "name": "Kelly Trader",
-      "created_at": "2026-09-14T20:00:46Z",
-      "updated_at": "2026-10-14T21:04:28Z",
-      "group": {
-       "id": "topics",
-       "title": "2027"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044082494",
-      "name": "Neo Trader",
-      "created_at": "2026-09-14T20:00:45Z",
-      "updated_at": "2026-10-20T14:39:32Z",
-      "group": {
-       "id": "topics",
-       "title": "2027"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044082478",
-      "name": "Perlas Trader",
-      "created_at": "2026-09-14T20:00:44Z",
-      "updated_at": "2026-10-20T14:39:13Z",
-      "group": {
-       "id": "topics",
-       "title": "2027"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078081",
-      "name": "Roxana Trader",
-      "created_at": "2026-09-14T20:00:47Z",
-      "updated_at": "2026-09-23T20:08:50Z",
-      "group": {
-       "id": "topics",
-       "title": "2027"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078169",
-      "name": "Isthmus Trader",
-      "created_at": "2026-09-14T20:00:48Z",
-      "updated_at": "2026-09-23T20:08:53Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078268",
-      "name": "Kingston Trader",
-      "created_at": "2026-09-14T20:00:49Z",
-      "updated_at": "2026-09-23T20:08:55Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078304",
-      "name": "Pacific Trader",
-      "created_at": "2026-09-14T20:00:51Z",
-      "updated_at": "2026-09-23T20:08:56Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078307",
-      "name": "Caribbean Trader",
-      "created_at": "2026-09-14T20:00:53Z",
-      "updated_at": "2026-09-23T20:08:59Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078342",
-      "name": "Colon Trader",
-      "created_at": "2026-09-14T20:00:55Z",
-      "updated_at": "2026-09-23T20:09:02Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044078393",
-      "name": "JC Trader",
-      "created_at": "2026-09-14T20:00:56Z",
-      "updated_at": "2026-09-23T20:09:03Z",
-      "group": {
-       "id": "group_mm766jdp",
-       "title": "2028"
-      },
-      "column_values": []
-     },
-     {
-      "id": "13044082969",
-      "name": "Neo Trader",
-      "created_at": "2026-09-14T20:00:57Z",
-      "updated_at": "2026-09-23T20:09:05Z",
-      "group": {
-       "id": "group_mm76dyf0",
-       "title": "2029"
-      },
-      "column_values": []
      }
     ]
    }
@@ -14901,7 +14708,7 @@
       "id": "13373451881",
       "name": "Motor electrico de Bow Thruster",
       "created_at": "2026-10-23T21:38:18Z",
-      "updated_at": "2026-10-23T21:38:22Z",
+      "updated_at": "2026-10-23T22:47:33Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -14910,7 +14717,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "No Aplica"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -14953,12 +14760,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:38:22 UTC"
+        "text": "2026-10-23 22:47:33 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -14968,7 +14775,7 @@
        {
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -14993,7 +14800,7 @@
       "id": "13373417444",
       "name": "Motor eléctrico para reemplazar la araña de acople",
       "created_at": "2026-10-23T21:39:46Z",
-      "updated_at": "2026-10-23T21:39:49Z",
+      "updated_at": "2026-10-23T22:47:38Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -15002,7 +14809,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "No Aplica"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -15045,12 +14852,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:39:49 UTC"
+        "text": "2026-10-23 22:47:38 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -15060,7 +14867,7 @@
        {
         "id": "numeric_mm7yw5hx",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "numeric_mm7y9v4k",
@@ -16097,7 +15904,7 @@
       "id": "13277138828",
       "name": "Panel de sistema de alarma 95-98%",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-23T21:04:05Z",
+      "updated_at": "2026-10-23T22:48:20Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -16149,12 +15956,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:05 UTC"
+        "text": "2026-10-23 22:48:20 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -16465,7 +16272,7 @@
       "id": "13277138491",
       "name": "Panel contra incendio",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-23T21:04:38Z",
+      "updated_at": "2026-10-23T22:48:31Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -16517,12 +16324,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:38 UTC"
+        "text": "2026-10-23 22:48:31 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -16557,7 +16364,7 @@
       "id": "13277157364",
       "name": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
       "created_at": "2026-10-13T14:45:35Z",
-      "updated_at": "2026-10-23T21:04:39Z",
+      "updated_at": "2026-10-23T22:48:35Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -16609,12 +16416,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:39 UTC"
+        "text": "2026-10-23 22:48:35 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20421,7 +20228,7 @@
       "id": "13095603679",
       "name": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-23T21:04:53Z",
+      "updated_at": "2026-10-23T22:47:53Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20473,12 +20280,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:53 UTC"
+        "text": "2026-10-23 22:47:53 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20513,7 +20320,7 @@
       "id": "13256760623",
       "name": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:04:53Z",
+      "updated_at": "2026-10-23T22:47:55Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20565,12 +20372,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:53 UTC"
+        "text": "2026-10-23 22:47:55 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20605,7 +20412,7 @@
       "id": "13256755233",
       "name": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:04:54Z",
+      "updated_at": "2026-10-23T22:47:57Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20657,12 +20464,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:54 UTC"
+        "text": "2026-10-23 22:47:57 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20697,7 +20504,7 @@
       "id": "13256755205",
       "name": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:04:54Z",
+      "updated_at": "2026-10-23T22:47:59Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20749,12 +20556,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:54 UTC"
+        "text": "2026-10-23 22:47:59 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20789,7 +20596,7 @@
       "id": "13256755234",
       "name": "Compra de materiales - Línea de succión de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:04:54Z",
+      "updated_at": "2026-10-23T22:48:01Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -20841,12 +20648,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:54 UTC"
+        "text": "2026-10-23 22:48:01 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
