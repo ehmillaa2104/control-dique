@@ -22,10 +22,10 @@ window.DIQUE_REGISTRO = {
           { "txt": "Andamios en armado en todos los tanques de carga" }
         ] },
         { "zona": "Sala de máquinas", "items": [
-          { "txt": "Válvulas de agua salada: identificadas y marcadas para mantenimiento, con las 2 de proa (cuarto del Bow Thruster)", "extra": "10 %" },
-          { "txt": "Bomba auxiliar de agua fresca de la máquina principal: desmontada para reparar el alojamiento del sello mecánico", "extra": "20 %" },
-          { "txt": "Bomba #1 de alimentación de diésel de la máquina principal: desmontada para revisar una leve fuga por el sello", "extra": "20 %" },
-          { "txt": "Motor eléctrico del Bow Thruster: desmontado para reemplazar la araña de acople", "extra": "50 %" }
+          { "txt": "Válvulas de agua salada marcadas" },
+          { "txt": "Bomba de agua fresca desmontada" },
+          { "txt": "Bomba #1 de diésel desmontada" },
+          { "txt": "Motor del Bow Thruster desmontado" }
         ] }
       ],
       "medios": [
@@ -39,11 +39,11 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s5/06-inspeccion-aberturas.jpg", "texto": "Inspección de las aberturas del costado" },
         { "tipo": "foto", "archivo": "registro/s5/07-corte-desde-andamio.jpg", "texto": "Corte y reemplazo de planchas desde el andamio" },
         { "tipo": "foto", "archivo": "registro/s5/08-refuerzos-internos.jpg", "texto": "Refuerzos internos a la vista durante el reemplazo" },
-        { "tipo": "foto", "archivo": "registro/s5/09-valvulas-agua-salada.jpg", "texto": "Sala de máquinas: válvulas de agua salada marcadas para mantenimiento" },
-        { "tipo": "foto", "archivo": "registro/s5/10-bomba-agua-fresca.jpg", "texto": "Bomba auxiliar de agua fresca desmontada (sello mecánico)" },
-        { "tipo": "foto", "archivo": "registro/s5/11-bomba-diesel.jpg", "texto": "Bomba #1 de alimentación de diésel desmontada (fuga por el sello)" },
-        { "tipo": "foto", "archivo": "registro/s5/12-motor-bow-thruster.jpg", "texto": "Motor eléctrico del Bow Thruster en desmontaje" },
-        { "tipo": "foto", "archivo": "registro/s5/13-arana-de-acople.jpg", "texto": "Araña de acople del motor del Bow Thruster, a reemplazar" }
+        { "tipo": "foto", "archivo": "registro/s5/09-valvulas-agua-salada.jpg", "texto": "Válvulas de agua salada" },
+        { "tipo": "foto", "archivo": "registro/s5/10-bomba-agua-fresca.jpg", "texto": "Bomba de agua fresca" },
+        { "tipo": "foto", "archivo": "registro/s5/11-bomba-diesel.jpg", "texto": "Bomba #1 de diésel" },
+        { "tipo": "foto", "archivo": "registro/s5/12-motor-bow-thruster.jpg", "texto": "Motor del Bow Thruster" },
+        { "tipo": "foto", "archivo": "registro/s5/13-arana-de-acople.jpg", "texto": "Araña de acople" }
       ]
     }
   ]
