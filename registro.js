@@ -10,7 +10,7 @@ window.DIQUE_REGISTRO = {
       "semana": 5,
       "desde": "2026-10-17",
       "hasta": "2026-10-23",
-      "fuente": "Reporte del superintendente, 23 oct",
+      "fuente": "Reporte del superintendente e informe diario de máquinas, 23 oct",
       "avance": [
         { "zona": "Casco", "items": [
           { "txt": "Estribor: aceros marcados", "extra": "se empezó a cortar" },
@@ -20,6 +20,12 @@ window.DIQUE_REGISTRO = {
           { "txt": "1P, 1S, 5P y 5S: aceros marcados", "extra": "corte iniciado en 5P" },
           { "txt": "2P, 2S, 3P, 3S y Deep Tank: acero en definición" },
           { "txt": "Andamios en armado en todos los tanques de carga" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Válvulas de agua salada: identificadas y marcadas para mantenimiento, con las 2 de proa (cuarto del Bow Thruster)", "extra": "10 %" },
+          { "txt": "Bomba auxiliar de agua fresca de la máquina principal: desmontada para reparar el alojamiento del sello mecánico", "extra": "20 %" },
+          { "txt": "Bomba #1 de alimentación de diésel de la máquina principal: desmontada para revisar una leve fuga por el sello", "extra": "20 %" },
+          { "txt": "Motor eléctrico del Bow Thruster: desmontado para reemplazar la araña de acople", "extra": "50 %" }
         ] }
       ],
       "medios": [
@@ -32,7 +38,12 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s5/05-plancha-cortada.jpg", "texto": "Plancha cortada: estructura interna expuesta" },
         { "tipo": "foto", "archivo": "registro/s5/06-inspeccion-aberturas.jpg", "texto": "Inspección de las aberturas del costado" },
         { "tipo": "foto", "archivo": "registro/s5/07-corte-desde-andamio.jpg", "texto": "Corte y reemplazo de planchas desde el andamio" },
-        { "tipo": "foto", "archivo": "registro/s5/08-refuerzos-internos.jpg", "texto": "Refuerzos internos a la vista durante el reemplazo" }
+        { "tipo": "foto", "archivo": "registro/s5/08-refuerzos-internos.jpg", "texto": "Refuerzos internos a la vista durante el reemplazo" },
+        { "tipo": "foto", "archivo": "registro/s5/09-valvulas-agua-salada.jpg", "texto": "Sala de máquinas: válvulas de agua salada marcadas para mantenimiento" },
+        { "tipo": "foto", "archivo": "registro/s5/10-bomba-agua-fresca.jpg", "texto": "Bomba auxiliar de agua fresca desmontada (sello mecánico)" },
+        { "tipo": "foto", "archivo": "registro/s5/11-bomba-diesel.jpg", "texto": "Bomba #1 de alimentación de diésel desmontada (fuga por el sello)" },
+        { "tipo": "foto", "archivo": "registro/s5/12-motor-bow-thruster.jpg", "texto": "Motor eléctrico del Bow Thruster en desmontaje" },
+        { "tipo": "foto", "archivo": "registro/s5/13-arana-de-acople.jpg", "texto": "Araña de acople del motor del Bow Thruster, a reemplazar" }
       ]
     }
   ]
