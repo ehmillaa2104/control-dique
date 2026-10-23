@@ -12,17 +12,17 @@ window.DIQUE_MONDAY = {
    "grupo": "Plan",
    "nombre": "PLANIFICACIÓN",
    "estado": "En curso",
-   "duracion": 28,
+   "duracion": 35,
    "base": [
     "2026-09-22",
     "2026-10-02"
    ],
    "real": [
     "2026-09-22",
-    "2026-10-19"
+    "2026-10-26"
    ],
-   "diferencia": 17,
-   "actualizado": "2026-10-19"
+   "diferencia": 24,
+   "actualizado": "2026-10-23"
   },
   {
    "id": "13109464924",
@@ -35,11 +35,11 @@ window.DIQUE_MONDAY = {
     "2026-09-29"
    ],
    "real": [
-    "2026-10-19",
-    "2026-10-19"
+    "2026-10-26",
+    "2026-10-26"
    ],
-   "diferencia": 20,
-   "actualizado": "2026-10-16"
+   "diferencia": 27,
+   "actualizado": "2026-10-23"
   },
   {
    "id": "13095528118",
@@ -8144,119 +8144,45 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "dbf458a907f4",
+ "_huella": "4149de9935e2",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Fecha Real",
+   "antes": "2026-09-22 a 2026-10-19",
+   "ahora": "2026-09-22 a 2026-10-26"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Diferencia",
+   "antes": "17",
+   "ahora": "24"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
    "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
+   "antes": "28",
+   "ahora": "35"
   },
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Fecha Real",
+   "antes": "2026-10-19 a 2026-10-19",
+   "ahora": "2026-10-26 a 2026-10-26"
   },
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Fase",
-   "antes": "No Aplica",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Fase",
-   "antes": "No Aplica",
-   "ahora": "Dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "Duración",
-   "antes": "1",
-   "ahora": "3"
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Diferencia",
+   "antes": "20",
+   "ahora": "27"
   }
  ],
  "observaciones": [
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-19) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
-  },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
