@@ -307,7 +307,7 @@
   // si Monday no lo tiene, la nota de gestión de notas.js.
   function estadoDireccion(M) {
     const rev = M.centros.filter((c) => /revis/i.test(c.estado || ""));
-    if (rev.length) return { txt: "Dirección solicitó cambios", sub: `${plural(rev.length, "centro de costo", "centros de costo")} en "Revisar"`, fuente: "Monday · tablero CC (Estado Aprobación = Revisar)", centros: rev.map((c) => c.nombre) };
+    if (rev.length) return { txt: "En espera de revisión para el presupuesto final", sub: `${plural(rev.length, "centro de costo", "centros de costo")} en "Revisar"`, fuente: "Monday · tablero CC (Estado Aprobación = Revisar)", centros: rev.map((c) => c.nombre) };
     const n = (window.DIQUE_NOTAS || {}).presupuesto;
     if (n && n.estado) return { txt: n.estado, sub: n.fecha ? fmtShort(n.fecha) : "", detalle: n.detalle || "", fuente: "Nota de gestión (notas.js); aún no está en Monday" };
     return null;
@@ -346,9 +346,9 @@
     const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.enRevision, "rev")}</span><span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
     const grupos = [];
     M.centros.forEach((c) => { let g = grupos.find((x) => x.nombre === c.grupo); if (!g) grupos.push((g = { nombre: c.grupo, items: [] })); g.items.push(c); });
-    // Estado del centro según sus montos; si Dirección pidió cambios en Monday ("Revisar"), eso manda
+    // Estado del centro según sus montos; si en Monday está en "Revisar", queda en espera de revisión (eso manda)
     const estadoCC = (c) => {
-      if (/revisar/i.test(c.estado)) return '<span class="chip alert">Cambios solicitados</span>';
+      if (/revisar/i.test(c.estado)) return '<span class="chip warn">En espera de revisión</span>';
       if (!c.preliminar && !c.enRevision && !c.aprobado) return '<span class="muted">—</span>';
       if (c.enRevision) return `<span class="chip et-revision">En revisión</span>`;
       if (c.aprobado && !sinEnviar(c)) return `<span class="chip et-aprobado">Aprobado</span>`;
@@ -440,7 +440,7 @@
     const porIniciar = faseAct ? ts.filter((t) => faseId(t) === faseAct.id && t.pct === 0).length : 0;
     const proximo = prox.map(fx).join("") + (porIniciar ? `<li class="sem-mas">${plural(porIniciar, "trabajo", "trabajos")} de ${faseAct.nombre} por iniciar</li>` : "");
     const col = (titulo, sub, cuerpo, vacio) => `<div class="sem-col"><div class="sem-h"><b>${titulo}</b><small>${sub}</small></div><ul>${cuerpo || `<li class="sem-vacio">${vacio}</li>`}</ul></div>`;
-    const cambios = card("Cambios de la semana", `<div class="sem sem-2">
+    const cambios = card("Avance de la semana", `<div class="sem sem-2">
       ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
       ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
     </div>`, { right: avTxt });
