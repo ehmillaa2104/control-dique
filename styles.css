@@ -692,3 +692,6 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 900px) { .sem.sem-2 { grid-template-columns: 1fr; } }
 .row-b.row-sem { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: stretch; }
 @media (max-width: 900px) { .row-b.row-sem { grid-template-columns: 1fr; } }
+
+/* Cambios recientes: departamento del cambio */
+.cmb-dep { font-weight: 700; color: var(--ink-2); }

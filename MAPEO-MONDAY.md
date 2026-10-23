@@ -50,6 +50,7 @@ Las tres tablas usan las mismas columnas. Algunas cambian de ID según el tabler
 | `nombre` | Trabajo | `name` | `name` | `name` |
 | `area` | Tablero (P1/P2/P3) | — | — | — |
 | `fase` | Fase | `color_mm6wsp0z` | `color_mm6wsp0z` | `color_mm6wsp0z` |
+| (no se usa) | **Copia de Fase**: respaldo de la Fase antes del 22 oct, oculta en las vistas (creada el 23 oct) | `color_mm8deyq4` | `color_mm8dbbdq` | `color_mm8d4d28` |
 | `ejecuta` | Proveedor | `dropdown_mm70s99n` | `dropdown_mm70s99n` | `dropdown_mm70s99n` |
 | Responsable (equipo) | Responsable | `multiple_person_mm781bx8` | `multiple_person_mm781bx8` | `multiple_person_mm781bx8` |
 | `bac` (costo plan, opcional) | **$ Aprobado Dirección** (si está vacío: $ Revisado Gerencia y después $ Solicitado; si no hay ninguno, 0) | `numeric_mm78s0hd` | `numeric_mm78s0hd` | `numeric_mm78s0hd` |

@@ -131,17 +131,17 @@ window.DIQUE_MONDAY = {
    "grupo": "Dique",
    "nombre": "DIQUE (Ejecución)",
    "estado": "No Iniciado",
-   "duracion": 29,
+   "duracion": 27,
    "base": [
     "2026-10-19",
     "2026-11-16"
    ],
    "real": [
-    "2026-10-19",
+    "2026-10-21",
     "2026-11-16"
    ],
    "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "actualizado": "2026-10-23"
   },
   {
    "id": "13233513509",
@@ -279,7 +279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -304,7 +304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -329,7 +329,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-08",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -354,7 +354,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -379,7 +379,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -404,7 +404,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -429,7 +429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -454,7 +454,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -479,7 +479,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -504,7 +504,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -529,7 +529,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -554,7 +554,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -579,7 +579,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -604,7 +604,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -629,7 +629,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -654,7 +654,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -679,7 +679,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -704,7 +704,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -729,7 +729,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -754,7 +754,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -779,7 +779,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -804,7 +804,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -829,7 +829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -854,7 +854,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -879,7 +879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -904,7 +904,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -929,7 +929,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -954,7 +954,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -979,7 +979,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-13",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1004,7 +1004,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1029,7 +1029,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1054,7 +1054,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1079,7 +1079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1104,7 +1104,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1129,7 +1129,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1154,7 +1154,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1179,7 +1179,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1204,7 +1204,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1229,7 +1229,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1254,7 +1254,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1279,7 +1279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1304,7 +1304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1329,7 +1329,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1354,7 +1354,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1379,7 +1379,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1404,7 +1404,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1429,7 +1429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1454,7 +1454,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -1479,7 +1479,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1504,7 +1504,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1529,7 +1529,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1554,7 +1554,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1579,7 +1579,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1604,7 +1604,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1629,7 +1629,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1654,7 +1654,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1679,7 +1679,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1704,7 +1704,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1729,7 +1729,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1754,7 +1754,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1779,7 +1779,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1804,7 +1804,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1829,7 +1829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1854,7 +1854,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1879,7 +1879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1904,7 +1904,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1929,7 +1929,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1954,7 +1954,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -1979,7 +1979,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2004,7 +2004,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2029,7 +2029,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2054,7 +2054,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2079,7 +2079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2104,7 +2104,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2129,7 +2129,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2154,7 +2154,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2179,7 +2179,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2204,7 +2204,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2229,7 +2229,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2254,7 +2254,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2279,7 +2279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2304,7 +2304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2329,7 +2329,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2354,7 +2354,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2379,7 +2379,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2404,7 +2404,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2429,7 +2429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2454,7 +2454,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2479,7 +2479,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-21",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2504,7 +2504,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2529,7 +2529,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2554,7 +2554,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2579,7 +2579,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2604,7 +2604,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2629,7 +2629,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2654,7 +2654,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -2679,7 +2679,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2704,7 +2704,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2729,7 +2729,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2754,7 +2754,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2779,7 +2779,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2804,7 +2804,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2829,7 +2829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2854,7 +2854,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2879,7 +2879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2904,7 +2904,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2929,7 +2929,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2954,7 +2954,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -2979,7 +2979,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3004,7 +3004,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3029,7 +3029,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3054,7 +3054,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3079,7 +3079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3104,7 +3104,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3129,7 +3129,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3154,7 +3154,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3179,7 +3179,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3204,7 +3204,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3229,7 +3229,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3254,7 +3254,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3279,7 +3279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3304,7 +3304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3329,7 +3329,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3354,7 +3354,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3379,7 +3379,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3404,7 +3404,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3429,7 +3429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3454,7 +3454,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3479,7 +3479,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3504,7 +3504,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3529,7 +3529,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3554,7 +3554,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3579,7 +3579,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3604,7 +3604,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3629,7 +3629,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "descartado"
     },
     {
@@ -3654,7 +3654,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3679,7 +3679,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3704,7 +3704,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3729,7 +3729,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3754,7 +3754,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3779,7 +3779,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3804,7 +3804,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -3829,7 +3829,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3854,7 +3854,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3879,7 +3879,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3904,7 +3904,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3929,7 +3929,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3954,7 +3954,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -3979,7 +3979,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4004,7 +4004,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4029,7 +4029,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4054,7 +4054,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4079,7 +4079,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4104,7 +4104,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4129,7 +4129,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4154,7 +4154,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4179,7 +4179,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-19",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4204,7 +4204,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-13",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4229,7 +4229,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4254,7 +4254,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4279,7 +4279,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4304,7 +4304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4329,7 +4329,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4354,7 +4354,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4379,7 +4379,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4404,7 +4404,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4429,7 +4429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": ""
     }
    ]
@@ -4461,7 +4461,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-21",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4486,7 +4486,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208222"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4511,7 +4511,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-21",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4536,7 +4536,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081195886"
      ],
-     "actualizado": "2026-10-07",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4561,7 +4561,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081218069"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4586,7 +4586,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201194"
      ],
-     "actualizado": "2026-10-21",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4611,7 +4611,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177348"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4636,7 +4636,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4661,7 +4661,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4686,7 +4686,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177133"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4711,7 +4711,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-09-22",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4736,7 +4736,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200176"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4761,7 +4761,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4786,7 +4786,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4811,7 +4811,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4836,7 +4836,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "descartado"
     },
     {
@@ -4861,7 +4861,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "descartado"
     },
     {
@@ -4886,7 +4886,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-22",
+     "actualizado": "2026-10-23",
      "costo": "descartado"
     },
     {
@@ -4911,7 +4911,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081208091"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": ""
     }
    ]
@@ -4943,7 +4943,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200177"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -4968,7 +4968,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177301"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -4993,7 +4993,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -5018,7 +5018,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201166"
      ],
-     "actualizado": "2026-10-15",
+     "actualizado": "2026-10-23",
      "costo": ""
     },
     {
@@ -5043,7 +5043,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081207823"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -5068,7 +5068,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177349"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -5093,7 +5093,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081195990"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -5118,7 +5118,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201165"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "revision"
     },
     {
@@ -5143,7 +5143,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177347"
      ],
-     "actualizado": "2026-10-16",
+     "actualizado": "2026-10-23",
      "costo": "aprobado"
     },
     {
@@ -5168,7 +5168,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177348"
      ],
-     "actualizado": "2026-10-21",
+     "actualizado": "2026-10-23",
      "costo": "preliminar"
     }
    ]
@@ -8087,104 +8087,24 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "a2b704012be1",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-10-20 a 2026-10-20",
-   "ahora": "2026-10-21 a 2026-10-21"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Diferencia",
-   "antes": "1",
-   "ahora": "2"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Proyectado",
-   "antes": "10000",
-   "ahora": "12000"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales cubierta",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Reparaciones en cubierta (aceros y soldadura)",
-   "campo": "Fase",
-   "antes": "Pre-dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Mantenimiento a acomodaciones",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Casco",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "Cancelado"
-  }
- ],
+ "_huella": "eedfcb42a34b",
+ "cambiosLectura": [],
  "observaciones": [
   {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Act. S2\" ahora se llama \"Act. S2 (2 Oct)\" (color_mm8453y)."
+   "nivel": "aviso",
+   "texto": "P3. Técnico: columna nueva \"Copia de Fase\" (color_mm8d4d28, status); revisar si el dashboard debe usarla."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P2. Cubierta: columna nueva \"Copia de Fase\" (color_mm8dbbdq, status); revisar si el dashboard debe usarla."
   },
   {
    "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Reunión S2\" ahora se llama \"Reunión S2 (2 Oct)\" (color_mm84nsqk)."
+   "texto": "P2. Cubierta: la columna \"Cotizaciones\" ahora se llama \"Documentos\" (file_mm7d65bv)."
   },
   {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Reunión S5\" ahora se llama \"Reunión S5 (23 Oct)\" (color_mm84283c)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Act. S7\" ahora se llama \"Act. S7 (6 Nov)\" (color_mm84pstd)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Reunión S7\" ahora se llama \"Reunión S7 (6 Nov)\" (color_mm84fk4y)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Act. S8\" ahora se llama \"Act. S8 (13 Nov)\" (color_mm84sz49)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Participación del Equipo: la columna \"Reunión S8\" ahora se llama \"Reunión S8 (13 Nov)\" (color_mm84fex0)."
-  },
-  {
-   "nivel": "info",
-   "texto": "P1. Ingeniería: la columna \"Cotizaciones\" ahora se llama \"Documentos\" (file_mm7d65bv)."
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería: columna nueva \"Copia de Fase\" (color_mm8deyq4, status); revisar si el dashboard debe usarla."
   },
   {
    "nivel": "aviso",

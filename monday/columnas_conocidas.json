@@ -102,6 +102,10 @@
    "title": "Fase",
    "type": "status"
   },
+  "color_mm8d4d28": {
+   "title": "Copia de Fase",
+   "type": "status"
+  },
   "long_text_mm6vvcjh": {
    "title": "Descripción",
    "type": "long_text"
@@ -216,6 +220,10 @@
    "title": "Fase",
    "type": "status"
   },
+  "color_mm8dbbdq": {
+   "title": "Copia de Fase",
+   "type": "status"
+  },
   "long_text_mm6vvcjh": {
    "title": "Descripción",
    "type": "long_text"
@@ -269,7 +277,7 @@
    "type": "board_relation"
   },
   "file_mm7d65bv": {
-   "title": "Cotizaciones",
+   "title": "Documentos",
    "type": "file"
   },
   "pulse_updated_mm7ga065": {
@@ -526,6 +534,10 @@
   },
   "color_mm6wsp0z": {
    "title": "Fase",
+   "type": "status"
+  },
+  "color_mm8deyq4": {
+   "title": "Copia de Fase",
    "type": "status"
   },
   "long_text_mm6vvcjh": {

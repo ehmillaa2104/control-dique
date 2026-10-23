@@ -449,7 +449,10 @@
   function cambiosCard(M) {
     const C = M.D.cambios.slice(0, 6);
     const chip = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
-    const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small>${[c.tipo, c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : "", c.creado ? fmtShort(c.creado) : ""].filter(Boolean).map(esc).join(" · ")}</small></div>${chip(c.estado)}</div>`).join("")
+    // Departamento = área del trabajo enlazado ("Actividad Relacionada"); impacto = "Tipo de Impacto" con su costo y días
+    const depto = (c) => (M.areas.find((a) => a.trabajos.some((t) => (c.actividades || []).includes(t.id))) || {}).nombre || "Sin departamento";
+    const impacto = (c) => [c.tipo || "sin tipo", c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : ""].filter(Boolean).join(" · ");
+    const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(depto(c))}</span> · Impacto: ${esc(impacto(c))}${c.creado ? " · " + fmtShort(c.creado) : ""}</small></div>${chip(c.estado)}</div>`).join("")
       : empty("Sin cambios ni imprevistos registrados en Monday.");
     return card("Cambios recientes", `<div class="list">${cambios}</div>`,
       { right: plural(M.D.cambios.length, "cambio o imprevisto", "cambios o imprevistos") });
