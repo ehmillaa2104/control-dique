@@ -332,12 +332,14 @@
     ].join("");
   }
 
+  // Fecha en que ocurrió un imprevisto: la de notas.js (fechaImprevisto) si se registró otro día en Monday; si no, la de registro
+  const fechaImp = (c) => (((window.DIQUE_NOTAS || {}).fechaImprevisto || {})[c.id] || c.creado);
   // Días perdidos por lluvias: tablero Cambios/Imprevistos, registros con Tipo de Impacto "Mal Tiempo" (columna Días)
   function climaKpi(M) {
     const cs = ((M && M.D.cambios) || []).filter((c) => /mal tiempo|clima|lluvia/i.test(c.tipo || ""));
     const dias = sum(cs, (c) => c.dias);
     if (!cs.length) return kpi("cloud", "Días perdidos por lluvias", "0 días", "Sin registros en Cambios/Imprevistos");
-    const det = cs.map((c) => rowT(`${fmtShort(c.creado)} · ${esc(c.nombre)}`, `${c.dias || 0} d`)).join("");
+    const det = cs.map((c) => rowT(`${fmtShort(fechaImp(c))} · ${esc(c.nombre)}`, `${c.dias || 0} d`)).join("");
     return kpi("cloud", "Días perdidos por lluvias", `${dias} ${dias === 1 ? "día" : "días"}`,
       `${plural(cs.length, "registro", "registros")} en Cambios/Imprevistos`,
       { alert: dias > 0, tip: `<b>Días perdidos por lluvias</b>${det}<div class="tnote">Fuente: tablero Cambios/Imprevistos, Tipo de Impacto "Mal Tiempo"</div>` });
@@ -464,7 +466,7 @@
     // Departamento = área del trabajo enlazado ("Actividad Relacionada"); impacto = "Tipo de Impacto" con su costo y días
     const depto = (c) => (M.areas.find((a) => a.trabajos.some((t) => (c.actividades || []).includes(t.id))) || {}).nombre || "Sin departamento";
     const impacto = (c) => [c.tipo || "sin tipo", c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : ""].filter(Boolean).join(" · ");
-    const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(depto(c))}</span> · Impacto: ${esc(impacto(c))}${c.creado ? " · " + fmtShort(c.creado) : ""}</small></div>${chip(c.estado)}</div>`).join("")
+    const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(depto(c))}</span> · Impacto: ${esc(impacto(c))}${fechaImp(c) ? " · " + fmtShort(fechaImp(c)) : ""}</small></div>${chip(c.estado)}</div>`).join("")
       : empty("Sin imprevistos registrados en Monday.");
     return card("Imprevistos", `<div class="list">${cambios}</div>`,
       { right: plural(M.D.cambios.length, "imprevisto", "imprevistos") });

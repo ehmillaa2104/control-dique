@@ -92,7 +92,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 ## Indicador de días perdidos por lluvias
 
-- Reemplaza al indicador "En revisión" (pedido del usuario, 27 oct). Suma la columna **Días** del tablero **Cambios/Imprevistos** en los registros con Tipo de Impacto "Mal Tiempo"; el detalle lista cada registro con su fecha y estado.
+- Reemplaza al indicador "En revisión" (pedido del usuario, 27 oct). Suma la columna **Días** del tablero **Cambios/Imprevistos** en los registros con Tipo de Impacto "Mal Tiempo"; el detalle lista cada registro con su fecha y estado. La fecha es la del registro en Monday, salvo que `notas.js` → `fechaImprevisto` diga cuándo ocurrió (la lluvia fue el 24 oct aunque se registró el 27; 27 oct).
 
 ## Registro semanal (fotos, videos y avance en sitio)
 

@@ -24,6 +24,9 @@ window.DIQUE_REGISTRO = {
           { "txt": "Lecturas mínimas: 4.6 mm en 1S, 4.7 mm en 2S y 4.9 mm en 1P y 5S" },
           { "txt": "Espesor original de las planchas por confirmar con el inspector de BV" }
         ] },
+        { "zona": "Clima", "items": [
+          { "txt": "24 oct: se perdió 1 día de trabajo por lluvia", "extra": "registrado el 27 oct" }
+        ] },
         { "zona": "Seguridad", "items": [
           { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
           { "txt": "Speed Log: en cotización, faltan proveedores con repuestos" }

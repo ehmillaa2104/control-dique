@@ -15,6 +15,11 @@ window.DIQUE_NOTAS = {
   "revision": {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
+  // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
+  // Borrar cuando Monday tenga una columna con la fecha del evento.
+  "fechaImprevisto": {
+    "13398896309": "2026-10-24"  // Pérdida de día por lluvia: ocurrió el 24 oct, se registró el 27 oct
+  },
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
   "entrega": {
