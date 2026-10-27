@@ -7,7 +7,9 @@ Convierte la lectura de Monday (monday/crudo/kelly.json) en ../monday.js, que es
 kelly.json es la respuesta de la API de Monday (GraphQL) para los 8 tableros del Kelly Trader:
     boards(ids: [...]) { id name items_page(limit: 500) { cursor items { id name created_at updated_at
       group { id title } column_values { id type text ... on MirrorValue { display_value }
-      ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } }
+      ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } }
+      subitems { id name created_at updated_at column_values { id type text ... on FormulaValue { display_value } }
+      updates(limit: 1) { created_at text_body } } } } }
 
 Pasos: lee el crudo, interpreta cada columna según TABLEROS (si en Monday cambia una columna, se cambia aquí),
 revisa que sea coherente y escribe ../monday.js. No se conecta a Monday y siempre da el mismo resultado
@@ -66,6 +68,12 @@ TABLEROS = {
     "participacion": {"id": "18435454602", "col": {
         "puntos": "formula_mm84qsjp", "cumplimiento": "formula_mm84c488", "nivel": "formula_mm84jbkq"}},
 }
+# Subelementos con avance propio (desde el 27 oct, el "Astillero" de P3 desglosa la cotización por partida).
+# Si un trabajo los tiene, su avance = Σ Avance ponderado / Σ Peso de los subelementos no cancelados, en vez de su Estado.
+SUBELEMENTOS = {"18432105448": {  # Subelementos de P3. Técnico
+    "peso": "numeric_mm8hc0s8", "avance": "color_mm8h3zc7", "medicion": "date_mm8hj8rm",
+    "monto": "text_mm8hf5gw", "ponderado": "formula_mm8hh39t"}}
+SUB_COLS = next(iter(SUBELEMENTOS.values()))
 EQUIPO_AREA = {"ingeniería": "ingenieria", "ingenieria": "ingenieria", "cubierta": "cubierta", "técnico": "tecnico", "tecnico": "tecnico"}  # Seguridad y Contabilidad no tienen tablero de área
 PTS_ACT = {"2": 2, "1": 1, "0": 0}  # "2 - Actualización directa", "1 - Actualización indirecta", "0 - No actualizó"
 
@@ -219,6 +227,16 @@ def area(key, tab):
             "fin": fecha(v["fin"]), "cc": v["cc"], "actualizado": fecha(v["actualizado"])})
         t = trabajos[-1]
         t["costo"] = costo_estado(t)
+        subs = subelementos(b["name"], t["nombre"], it.get("subitems") or [])
+        if subs:
+            vivos = [s for s in subs if not s["cancelado"] and (s["peso"] or 0) > 0]
+            peso = sum(s["peso"] for s in vivos)
+            if peso:
+                t["pctEstado"], t["avanceDe"], t["pct"] = t["pct"], "subelementos", round(sum(s["ponderado"] or 0 for s in vivos) / peso * 100, 1)
+                obs.append(("info", f'{b["name"]} · "{t["nombre"]}": avance {t["pct"]} % calculado de {len(vivos)} subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice {est or "vacío"}.'))
+                if abs(peso - 100) > 0.5:
+                    obs.append(("aviso", f'{b["name"]} · "{t["nombre"]}": los pesos de los subelementos suman {peso:.2f} %, no 100 %.'))
+            t["subelementos"] = subs
     act = [t for t in trabajos if not t["cancelado"]]
     revisar_costos(b["name"], act)
     con = [t for t in act if t["duracion"] and t["duracion"] > 0]
@@ -243,6 +261,44 @@ def area(key, tab):
     por = {k: [t for t in act if t["costo"] == k] for k in ("preliminar", "revision", "aprobado")}
     obs.append(("info", f'{b["name"]}: preliminar US$ {sum(t["preliminar"] or 0 for t in act):,.0f} · en revisión US$ {sum(t["enRevision"] or 0 for t in act):,.0f} ({len(por["revision"])}) · aprobado US$ {sum(t["aprobado"] or 0 for t in act):,.0f} ({len(por["aprobado"])}) · sin enviar a revisión {len(por["preliminar"])}.'))
     return {"id": key, "nombre": TABLEROS[key]["nombre"], "tablero": b["name"], "trabajos": trabajos}
+
+
+def nota_update(u):
+    """Lo principal del último mensaje de un subelemento: su fecha (la del encabezado, p. ej. "27-oct-2026 — Avance 25%")
+    y la primera línea de texto, que resume el estado del trabajo."""
+    if not u:
+        return None
+    lin = [x.strip() for x in (u.get("text_body") or "").splitlines() if x.strip()]
+    if lin and re.fullmatch(r"\d{4}-\d{2}-\d{2}", lin[0]):  # ya recortado: "AAAA-MM-DD\ntexto"
+        return {"fecha": lin[0], "texto": lin[1][:200]} if len(lin) > 1 else None
+    m = re.match(r"(\d{1,2})-([a-z]{3})-(\d{4})", lin[0], re.I) if lin else None
+    meses = {"ene": 1, "jan": 1, "feb": 2, "mar": 3, "abr": 4, "apr": 4, "may": 5, "jun": 6, "jul": 7, "ago": 8, "aug": 8, "sep": 9, "set": 9, "oct": 10, "nov": 11, "dic": 12, "dec": 12}
+    f = date(int(m.group(3)), meses[m.group(2).lower()], int(m.group(1))).isoformat() if m and m.group(2).lower() in meses else fecha(u.get("created_at"))
+    txt = lin[1] if m and len(lin) > 1 else (lin[0] if lin else "")
+    return {"fecha": f, "texto": txt[:200]} if txt else None
+
+
+def subelementos(tablero, nombre, items):
+    """Subelementos con Peso y Avance (p. ej. las partidas de la cotización del astillero)."""
+    out = []
+    for s in items:
+        v = {c["id"]: c for c in s.get("column_values", [])}
+        if SUB_COLS["peso"] not in v:
+            continue
+        av = (v.get(SUB_COLS["avance"], {}).get("text") or "").strip()
+        pct, peso = PCT.get(av), num(v.get(SUB_COLS["peso"], {}).get("text"))
+        pond = num(v.get(SUB_COLS["ponderado"], {}).get("display_value"))
+        monto = v.get(SUB_COLS["monto"], {}).get("text") or ""
+        sub = {"id": s["id"], "nombre": texto(s["name"]), "peso": peso, "avance": av, "pct": pct or 0, "cancelado": av == "Cancelado",
+               "ponderado": pond, "medicion": fecha(v.get(SUB_COLS["medicion"], {}).get("text")),
+               "monto": num(re.sub(r"[^\d.]", "", monto.split("—")[0])) if re.search(r"\d", monto) else None,
+               "nota": nota_update((s.get("updates") or [None])[0])}
+        if pct is None and not sub["cancelado"]:
+            obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: Avance "{av}" no es un porcentaje; cuenta como 0 %.'))
+        if not sub["cancelado"] and peso and pond is not None and abs(pond - peso * (pct or 0) / 100) > 0.01:
+            obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: Avance ponderado {pond} no es Peso × Avance ({peso * (pct or 0) / 100:.2f}).'))
+        out.append(sub)
+    return out
 
 
 HISTORIAL = AQUI / "historial.json"  # avance de cada lectura (una por día) para ver qué se hizo en la semana
@@ -447,6 +503,8 @@ def comparar_con_anterior(datos):
                 if o.get(k) != t.get(k):
                     f2 = (lambda v: ", ".join(cc_nombre.get(i, i) for i in v) or "—") if k == "cc" else fmt
                     cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": n, "antes": f2(o.get(k)), "ahora": f2(t.get(k))})
+            if t.get("avanceDe") == "subelementos" and o.get("pct") != t["pct"]:
+                cambios.append({"tablero": a["tablero"], "trabajo": t["nombre"], "campo": "Avance (subelementos)", "antes": f'{o.get("pct", 0)} %', "ahora": f'{t["pct"]} %'})
         for o in [x for x in next((y["trabajos"] for y in ant.get("areas", []) if y["id"] == a["id"]), []) if x["id"] not in ids]:
             cambios.append({"tablero": a["tablero"], "trabajo": o["nombre"], "campo": "borrado", "antes": "", "ahora": ""})
     # Participación: cada reunión y actualización por equipo y semana
@@ -546,6 +604,13 @@ def recortar(raw):
         keep = usadas.get(b["id"], set())
         for it in b["items_page"]["items"]:
             it["column_values"] = [c for c in it["column_values"] if c["id"] in keep]
+            # Subelementos: solo los que tienen Peso, con sus columnas y lo principal de su último mensaje (sin autor)
+            subs = [s for s in it.get("subitems") or [] if any(c["id"] == SUB_COLS["peso"] for c in s.get("column_values", []))]
+            for s in subs:
+                s["column_values"] = [c for c in s["column_values"] if c["id"] in SUB_COLS.values()]
+                n = nota_update((s.get("updates") or [None])[0])
+                s["updates"] = [{"created_at": s["updates"][0]["created_at"], "text_body": (n["fecha"] + "\n" + n["texto"]) if n else ""}] if s.get("updates") else []
+            it["subitems"] = subs
     return raw
 
 

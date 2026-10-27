@@ -5152,7 +5152,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 0,
+     "pct": 6.9,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5169,7 +5169,362 @@ window.DIQUE_MONDAY = {
       "13081201165"
      ],
      "actualizado": "2026-10-27",
-     "costo": "revision"
+     "costo": "revision",
+     "pctEstado": 0,
+     "avanceDe": "subelementos",
+     "subelementos": [
+      {
+       "id": "13396487485",
+       "nombre": "§01 · Varadero",
+       "peso": 4.61,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 36039,
+       "nota": null
+      },
+      {
+       "id": "13396487487",
+       "nombre": "§02 · Servicios",
+       "peso": 10.71,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 83872,
+       "nota": null
+      },
+      {
+       "id": "13396487489",
+       "nombre": "§03 · HSE / gas free",
+       "peso": 0.84,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 6558,
+       "nota": null
+      },
+      {
+       "id": "13396487490",
+       "nombre": "§04 · Pintura obra viva",
+       "peso": 12.97,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 101450,
+       "nota": null
+      },
+      {
+       "id": "13396532855",
+       "nombre": "§05 · Pintura obra muerta",
+       "peso": 5.44,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 42518,
+       "nota": null
+      },
+      {
+       "id": "13396516943",
+       "nombre": "§06 · Otras pinturas y marcas",
+       "peso": 0.57,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 4426,
+       "nota": null
+      },
+      {
+       "id": "13396516945",
+       "nombre": "§07 · Rejillas y cajas de mar",
+       "peso": 0.49,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 3854,
+       "nota": null
+      },
+      {
+       "id": "13396516947",
+       "nombre": "§08 · Thruster",
+       "peso": 0.21,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 1626,
+       "nota": null
+      },
+      {
+       "id": "13396516949",
+       "nombre": "§09 · Protección catódica (ánodos)",
+       "peso": 0.83,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 6468,
+       "nota": null
+      },
+      {
+       "id": "13396533609",
+       "nombre": "§10 · Anclas y cadenas",
+       "peso": 0.52,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 4092,
+       "nota": null
+      },
+      {
+       "id": "13396533610",
+       "nombre": "§11 · Limpieza de tanques y residuos",
+       "peso": 0.76,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 5939,
+       "nota": null
+      },
+      {
+       "id": "13396533611",
+       "nombre": "§13 · Acero — Tanque 1 Babor (IFO 1P)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-23",
+        "texto": "Acero a cambiar definido. Inicia el corte de acero a renovar."
+       }
+      },
+      {
+       "id": "13396533612",
+       "nombre": "§13 · Acero — Tanque 1 Estribor (IFO 1S)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Acero a cortar definido · andamios terminados · inicia el corte de acero a renovar."
+       }
+      },
+      {
+       "id": "13396533613",
+       "nombre": "§13 · Acero — Tanque 2 Babor (MGO 2P)",
+       "peso": 4.6,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Acero a renovar definido. Se inicia armado de andamios. El corte empieza mañana 28-oct."
+       }
+      },
+      {
+       "id": "13396533614",
+       "nombre": "§13 · Acero — Estructura interna y sobre cubierta",
+       "peso": 11.02,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 86203,
+       "nota": null
+      },
+      {
+       "id": "13396533616",
+       "nombre": "§14 · Toma de luces",
+       "peso": 0.28,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 2168,
+       "nota": null
+      },
+      {
+       "id": "13396519501",
+       "nombre": "§15 · Sistema de propulsión",
+       "peso": 5.29,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 41364,
+       "nota": null
+      },
+      {
+       "id": "13396519502",
+       "nombre": "§16 · Sistema de gobierno",
+       "peso": 1.07,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 8357,
+       "nota": null
+      },
+      {
+       "id": "13396519503",
+       "nombre": "§17 · Mantenimiento de válvulas y filtros",
+       "peso": 1.64,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 12844,
+       "nota": null
+      },
+      {
+       "id": "13396519505",
+       "nombre": "§18 · Trabajos varios",
+       "peso": 2.68,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 20999,
+       "nota": null
+      },
+      {
+       "id": "13397339895",
+       "nombre": "§13 · Acero — Tanque 2 Estribor (MGO 2S)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Acero marcado · andamios armados · corte inicia después del mediodía."
+       }
+      },
+      {
+       "id": "13397352965",
+       "nombre": "§13 · Acero — Tanque 3 Babor (IFO 3P)",
+       "peso": 4.6,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Inicia armado de andamios hoy. Acero aún no marcado al momento del reporte."
+       }
+      },
+      {
+       "id": "13397347399",
+       "nombre": "§13 · Acero — Tanque 3 Estribor (IFO 3S)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Acero definido · andamios armados · cortando acero ya."
+       }
+      },
+      {
+       "id": "13397343531",
+       "nombre": "§13 · Acero — Tanque 4 Babor y Estribor (SIN ACERO)",
+       "peso": 0,
+       "avance": "Cancelado",
+       "pct": 0,
+       "cancelado": true,
+       "ponderado": 0,
+       "medicion": "2026-10-27",
+       "monto": 0,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Los tanques de carga 4 Babor y 4 Estribor NO llevan acero. Confirmado en campo."
+       }
+      },
+      {
+       "id": "13397344105",
+       "nombre": "§13 · Acero — Tanque 5 Babor (IFO 5P)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Acero definido · andamios armados · cortando acero para renovar."
+       }
+      },
+      {
+       "id": "13397353759",
+       "nombre": "§13 · Acero — Tanque 5 Estribor (IFO 5S)",
+       "peso": 4.6,
+       "avance": "25%",
+       "pct": 25,
+       "cancelado": false,
+       "ponderado": 1.15,
+       "medicion": "2026-10-27",
+       "monto": 35958,
+       "nota": {
+        "fecha": "2026-10-27",
+        "texto": "Andamios armados · acero definido · corte inicia después del mediodía."
+       }
+      },
+      {
+       "id": "13397353760",
+       "nombre": "§13 · Acero — Sandblasting plancha nueva y andamios de acero",
+       "peso": 3.27,
+       "avance": "0%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 0,
+       "medicion": null,
+       "monto": 25688,
+       "nota": null
+      }
+     ]
     },
     {
      "id": "13278839703",
@@ -5479,7 +5834,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 13280.92,
+   "incurrido": 14022.77,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -5663,7 +6018,9 @@ window.DIQUE_MONDAY = {
     "13302229682",
     "13302150803",
     "13302150224",
-    "13302212275"
+    "13302212275",
+    "13346658601",
+    "13346547715"
    ]
   },
   {
@@ -5855,27 +6212,10 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-21"
-  },
-  {
-   "id": "13346568036",
-   "nombre": "16391 · SUBWORKS — Barge fees y agua potable",
-   "area": "",
-   "proveedor": "SUBWORKS, S.A.",
-   "po": 0,
-   "incurrido": 2200,
-   "saldo": null,
-   "fecha": "2026-10-19",
-   "estatus": "",
-   "pago": "",
    "cc": [
-    "13081208222"
+    "13081201432"
    ],
-   "trabajos": [
-    "13098295887"
-   ],
+   "trabajos": [],
    "actualizado": "2026-10-27"
   },
   {
@@ -5889,9 +6229,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-16",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13302182661",
@@ -6196,6 +6538,25 @@ window.DIQUE_MONDAY = {
     "13346969104"
    ],
    "actualizado": "2026-10-21"
+  },
+  {
+   "id": "13346568036",
+   "nombre": "16391 · SUBWORKS — Barge fees y agua potable",
+   "area": "",
+   "proveedor": "SUBWORKS, S.A.",
+   "po": 0,
+   "incurrido": 2200,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-10-27"
   }
  ],
  "cambios": [
@@ -6212,7 +6573,7 @@ window.DIQUE_MONDAY = {
    "actividades": [
     "13098327837"
    ],
-   "actualizado": "2026-10-22"
+   "actualizado": "2026-10-27"
   }
  ],
  "participacion": {
@@ -6724,13 +7085,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 4.75
+   "avanceDias": 7.165
   },
   "total": {
    "lineas": 197,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 30.75
+   "avanceDias": 33.165
   }
  },
  "historial": [
@@ -8147,7 +8508,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-10-27",
-   "avance": 21.96,
+   "avance": 23.69,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -8343,13 +8704,13 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 0,
+    "13098338054": 6.9,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "19104f9a3720",
+ "_huella": "1a67479e4ae9",
  "cambiosLectura": [
   {
    "tablero": "P1. Ingeniería",
@@ -8406,6 +8767,13 @@ window.DIQUE_MONDAY = {
    "campo": "Duración",
    "antes": "—",
    "ahora": "1"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Avance (subelementos)",
+   "antes": "0 %",
+   "ahora": "6.9 %"
   },
   {
    "tablero": "P3. Técnico",
@@ -8476,7 +8844,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 2 en ejecución · 2 finalizado(s) · 4 por iniciar."
+   "texto": "P3. Técnico · \"Astillero\": avance 6.9 % calculado de 26 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+  },
+  {
+   "nivel": "info",
+   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 3 en ejecución · 2 finalizado(s) · 3 por iniciar."
   },
   {
    "nivel": "aviso",
@@ -8520,15 +8892,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -8593,6 +8961,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"3067 · Raimundo Coote — Transporte dique seco\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",

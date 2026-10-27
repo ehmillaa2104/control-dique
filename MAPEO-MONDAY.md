@@ -65,6 +65,17 @@ Las tres tablas usan las mismas columnas. Algunas cambian de ID según el tabler
 
 El avance se calcula igual que la fórmula **Avance** de Monday: Σ (Estado % × Duración) / Σ Duración, sumando P1, P2 y P3. Se pondera por duración porque no todos los trabajos tienen costo. La Rev. 2 ya lo calcula así.
 
+**Subelementos con avance propio** (desde el 27 oct): el trabajo **Astillero** de P3 tiene una partida por sección de la cotización. Si un trabajo tiene subelementos con Peso, su `pct` = Σ Avance ponderado / Σ Peso de las partidas no canceladas (su Estado queda como referencia en `pctEstado`).
+
+| Dato | Columna en "Subelementos de P3. Técnico" (18432105448) | ID |
+|---|---|---|
+| Peso de la partida (%) | Peso (%) | `numeric_mm8hc0s8` |
+| Avance (0 · 25 · 50 · 75 · 100 % · Cancelado) | Avance | `color_mm8h3zc7` |
+| Fecha de la medición | Última medición | `date_mm8hj8rm` |
+| Monto de la cotización (texto, p. ej. "$36,039") | Monto ref. cotización | `text_mm8hf5gw` |
+| Peso × Avance | Avance ponderado (fórmula) | `formula_mm8hh39t` |
+| Nota de la partida | Último mensaje (update): fecha del encabezado y su primera línea | — |
+
 ### Gastos generales ← CC. Centros de Costo
 
 Los gastos generales son los **centros de costo** de este tablero, con los mismos nombres:

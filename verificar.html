@@ -119,7 +119,8 @@
     const PCT = { "0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100 };
     const lineas = new Map(); // id -> costos leídos del crudo (para comprobar los centros de costo)
     const tot = { n: 0, conD: 0, dur: 0, avd: 0, sol: 0, rev: 0, apr: 0, pro: 0, po: 0, inc: 0 };
-    const avRows = [], costRows = [];
+    const avRows = [], costRows = [], subRows = [];
+    const SUB = { peso: "numeric_mm8hc0s8", avance: "color_mm8h3zc7", pond: "formula_mm8hh39t" }; // Subelementos de P3. Técnico
     Object.entries(P).forEach(([k, c]) => {
       const b = board(c.id), a = MD.areas.find((x) => x.id === k) || { trabajos: [] };
       const r = { n: 0, conD: 0, dur: 0, avd: 0, sol: 0, rev: 0, apr: 0, pro: 0, po: 0, inc: 0 }, est = {};
@@ -131,7 +132,13 @@
         if (e === "Cancelado") return;
         r.n++;
         const d = num(val(it, c.d));
-        if (d > 0) { r.conD++; r.dur += d; r.avd += (d * (PCT[e] || 0)) / 100; }
+        // Con subelementos que tienen Peso (partidas del Astillero), el avance es Σ Avance ponderado / Σ Peso de los no cancelados
+        const subs = (it.subitems || []).filter((s) => s.column_values.some((x) => x.id === SUB.peso) && val(s, SUB.avance) !== "Cancelado" && num(val(s, SUB.peso)) > 0);
+        const sp = subs.reduce((x, s) => x + num(val(s, SUB.peso)), 0);
+        const p = sp ? (subs.reduce((x, s) => x + (num(val(s, SUB.pond)) || 0), 0) / sp) * 100 : PCT[e] || 0;
+        if (sp) subRows.push(`<tr><td><b>${esc(it.name)}</b><div class="muted">${esc(b.name)} · Estado en Monday: ${esc(e || "vacío")}</div></td><td class="n">${subs.length}</td><td class="n">${sp.toFixed(2)}%</td><td class="n"><b>${p.toFixed(1)}%</b></td>
+          <td>${resumen([Math.abs(sp - 100) < 0.5 ? mark("ok", "pesos suman 100 %") : mark("warn", `pesos suman ${sp.toFixed(2)} %`), Math.abs(((a.trabajos.find((t) => t.id === it.id) || {}).pct || 0) - Math.round(p * 10) / 10) < 0.05 ? mark("ok", "avance igual en el dashboard") : mark("err", "avance distinto en el dashboard")])}</td></tr>`);
+        if (d > 0) { r.conD++; r.dur += d; r.avd += (d * p) / 100; }
         r.sol += L.sol; r.rev += L.rev; r.apr += L.apr; r.pro += L.pro; r.po += L.po; r.inc += L.inc;
       });
       Object.keys(tot).forEach((x) => (tot[x] += r[x]));
@@ -180,7 +187,8 @@
         else if ((m = t.match(/^act\.?\s+s(\d+)/i))) (sem[+m[1]] = sem[+m[1]] || {}).a = c.id;
       });
       // Una columna cuenta para todos en cuanto algún equipo tiene el dato; al que no lo tiene cargado se le cuenta 0 (máximo igual para todos)
-      const okR = (t) => t === "Asistió" || t === "No asistió", okA = (t) => !!t && /^[012]/.test(t);
+      const okR = (t) => t === "Asistió" || t === "No asistió", okA = (t) => !!t && /^([012]|complet|parcial|pendiente)/i.test(t);
+      const ptsA = (t) => (/^complet/i.test(t) ? 2 : /^parcial/i.test(t) ? 1 : /^pendiente/i.test(t) ? 0 : +t[0]); // Completa 2 · Parcial 1 · Pendiente 0, como en generar.py
       const alguno = (cid, ok) => !!cid && PB.items_page.items.some((it) => ok(val(it, cid)));
       sem.forEach((s) => { if (s) { s.cr = alguno(s.r, okR); s.ca = alguno(s.a, okA); } });
       partRows = PB.items_page.items.map((it) => {
@@ -188,7 +196,7 @@
         sem.forEach((s) => {
           if (!s) return;
           if (s.cr) { mx += 1; pts += val(it, s.r) === "Asistió" ? 1 : 0; if (!okR(val(it, s.r))) falta++; }
-          if (s.ca) { mx += 2; if (okA(val(it, s.a))) pts += +val(it, s.a)[0]; else falta++; }
+          if (s.ca) { mx += 2; if (okA(val(it, s.a))) pts += ptsA(val(it, s.a)); else falta++; }
         });
         const pc = mx ? Math.round((pts / mx) * 1000) / 10 : null;
         const mon = num(String(val(it, "formula_mm84c488") || "").replace("%", ""));
@@ -229,7 +237,9 @@
         <div class="scroll"><table><thead><tr><th>Elemento</th><th>Fecha Real</th><th>Línea Base</th><th>Diferencia</th><th>Revisión</th></tr></thead><tbody>${cronoRows}</tbody></table></div></section>
       <section><h2>2 · Avance físico (P1, P2 y P3)</h2>
         <div class="note">Avance = Σ (Estado % × Duración) / Σ Duración, igual que la columna "Avance" de Monday. Total recalculado: <b>${(tot.dur ? (tot.avd / tot.dur) * 100 : 0).toFixed(1)}%</b> con ${tot.conD} trabajos planificados (con duración) de ${tot.n}.</div>
-        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Planificados (con duración)</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows.join("")}</tbody></table></div></section>
+        <div class="scroll"><table><thead><tr><th>Tablero</th><th>Trabajos</th><th>Planificados (con duración)</th><th>Σ duración</th><th>Avance recalculado</th><th>En el dashboard</th><th>Revisión</th></tr></thead><tbody>${avRows.join("")}</tbody></table></div>
+        ${subRows.length ? `<div class="note">Trabajos con subelementos (partidas): su avance es Σ Avance ponderado / Σ Peso de las partidas no canceladas, no su Estado.</div>
+        <div class="scroll"><table><thead><tr><th>Trabajo</th><th>Partidas</th><th>Σ peso</th><th>Avance recalculado</th><th>Revisión</th></tr></thead><tbody>${subRows.join("")}</tbody></table></div>` : ""}</section>
       <section><h2>3 · Costos por área</h2>
         <div class="note">Suma de las columnas de cada trabajo: $ Preliminar (lo que solicita el equipo), $ En Revisión (en revisión por la Dirección de Operaciones), $ Aprobado, $ Proyectado, $PO Total e $Incurrido (las dos últimas vienen de las POs enlazadas).</div>
         <div class="scroll"><table><thead><tr><th>Tablero</th><th>Preliminar</th><th>En revisión</th><th>Aprobado</th><th>Proyectado</th><th>PO</th><th>Incurrido</th><th>Revisión</th></tr></thead><tbody>${costRows.join("")}</tbody></table></div></section>

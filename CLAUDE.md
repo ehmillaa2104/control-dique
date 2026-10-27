@@ -40,7 +40,7 @@ IDs y columnas en `MAPEO-MONDAY.md`.
 
 1. Leer los 8 tableros en **una sola consulta** con la herramienta de API de Monday (`all_monday_api`). Esta consulta trae también las columnas:
    ```graphql
-   query ($ids: [ID!]) { boards(ids: $ids) { id name columns { id title type } items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } } } } }
+   query ($ids: [ID!]) { boards(ids: $ids) { id name columns { id title type } items_page(limit: 500) { cursor items { id name created_at updated_at group { id title } column_values { id type text ... on MirrorValue { display_value } ... on FormulaValue { display_value } ... on BoardRelationValue { linked_item_ids } } subitems { id name created_at updated_at column_values { id type text ... on FormulaValue { display_value } } updates(limit: 1) { created_at text_body } } } } } }
    ```
    con `{"ids": ["18431008651","18431019817","18432105237","18432105438","18431746322","18431381932","18431380804","18435454602"]}`.
 2. La respuesta es grande y se guarda en un archivo. Copiarla tal cual a `monday/crudo/kelly.json` y agregarle `"extraido": "AAAA-MM-DD"` al inicio.
@@ -59,9 +59,12 @@ IDs y columnas en `MAPEO-MONDAY.md`.
 
 Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/generar.py` y en `verificar.html`.
 
+**Revisar qué actualizaron los equipos** (27 oct): leer **todo**, columnas y también los mensajes (updates, "globitos") de **todos los tableros**, de los trabajos y de sus subelementos (el tablero "Subelementos de P3. Técnico", 18432105448, tiene sus propios mensajes). Ahí dejan la información más importante. Contar solo lo de **esta semana** (o entre ayer y hoy, si así lo pide): un mensaje escrito hoy que relata fechas pasadas (p. ej. la bitácora de limpieza de tanques del 3–8 oct cargada el 26 oct) se deja de lado.
+
 ## Reglas de cálculo acordadas
 
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3, igual que la columna "Avance" de Monday. Se pondera por duración porque no todos los trabajos tienen costo. **Un trabajo planificado es el que tiene una Fase** (Pre-dique, Dique, Post-dique…) y debería tener Duración. En las pestañas de área solo se muestran los trabajos con fase; los "No Aplica" no se ven. **Un trabajo con Duración es un trabajo planificado para ejecutarse.** No se muestra como falta de datos: se informa cuántos de los planificados están en ejecución (25–75 %) y cuántos finalizaron (100 %).
+- **Trabajos con subelementos** (desde el 27 oct, el **Astillero** de P3 desglosa la cotización en partidas con Peso (%), Avance, Última medición, Monto ref. y Avance ponderado): su avance = **Σ Avance ponderado / Σ Peso** de las partidas no canceladas, en vez de su Estado (que en Monday sigue en 0 %). En la pestaña Técnico las partidas van en un desplegable debajo del trabajo, con la primera línea de su último mensaje. Columnas en `SUBELEMENTOS` de `generar.py`.
 - **Costos en tres etapas** (desde el 16 oct), columnas de cada trabajo de P1, P2 y P3 y sus sumas en el tablero CC:
   - **Preliminar** = lo que solicita el equipo: "$ Preliminar" (`numeric_mm6vjdrd`; en CC `formula_mm867352`). Color **azul**. **Desde el 20 oct no se muestra en el resumen** (tarjetas, áreas, centros de costo, fases): el usuario dijo que ya no importa. Sigue en las tablas de trabajos de cada área.
   - **En revisión** = lo que está en revisión por la Dirección de Operaciones: "$ En Revisión" (`numeric_mm78kpas`; en CC `formula_mm7d91f2`). Color **ámbar**.

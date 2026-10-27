@@ -574,6 +574,16 @@
     return card("Avance por fase", `<div class="fs-list ${grande ? "grande" : ""}">${FASES.map(fila).join("")}${total}</div>`,
       Object.assign({ right: "clic en una fase para ver sus trabajos" }, grande ? { cls: "wide" } : {}));
   }
+  // Subelementos con avance propio (p. ej. las partidas de la cotización del Astillero): el avance del trabajo
+  // sale de ellos (Σ Avance ponderado / Σ Peso). Desplegable debajo de su fila, con la última nota de cada partida.
+  function subsRow(t) {
+    const S = t.subelementos, med = S.map((s) => s.medicion).filter(Boolean).sort().pop();
+    const fila = (s) => `<tr class="${s.cancelado ? "cancel" : ""}"><td><b>${esc(s.nombre)}</b>${s.nota ? `<small>${fmtShort(s.nota.fecha)} · ${esc(s.nota.texto)}</small>` : ""}</td>
+      <td class="n">${s.peso != null ? pct(s.peso, 2) : "—"}</td><td class="nw">${s.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(s.pct)} ${s.pct}%`}</td>
+      <td class="n">${s.monto != null ? moneyK(s.monto) : '<span class="muted">—</span>'}</td><td class="nw">${s.medicion ? fmtShort(s.medicion) : '<span class="muted">—</span>'}</td></tr>`;
+    return `<tr class="sub-row"><td colspan="12"><details class="subs"><summary>${plural(S.length, "partida", "partidas")} · avance ${pct(t.pct, 1)} ponderado por peso${med ? ` · última medición ${fmtShort(med)}` : ""}<small>en Monday el Estado dice ${esc(t.pctEstado + "%")}</small></summary>
+      <table class="tbl mini"><thead><tr><th>Partida</th><th class="n">Peso</th><th>Avance</th><th class="n">Monto ref.</th><th>Medición</th></tr></thead><tbody>${S.map(fila).join("")}</tbody></table></details></td></tr>`;
+  }
   function gruposHTML(M, a, q) {
     const ql = (q || "").trim().toLowerCase();
     const grupos = [];
@@ -584,7 +594,7 @@
     const row = (t) => `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${t.cc.length ? esc(ccName(t.cc)) : '<span class="t-alert">sin centro de costo</span>'}</small>${notaTxt(t)}</td>
       <td>${esc(t.fase || "—")}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td><td class="n">${t.duracion || '<span class="muted">—</span>'}</td>
       <td>${chipEtapa(t)}</td><td class="n">${m3(t.preliminar, "pre")}</td><td class="n">${m3(t.enRevision, "rev")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
-      <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`;
+      <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>${t.subelementos ? subsRow(t) : ""}`;
     if (!grupos.length) return empty(ql ? "Ningún trabajo coincide con la búsqueda." : "No hay trabajos planificados en esta fase.");
     return grupos.map((g) => {
       const G = costos(g.items.filter((t) => !t.cancelado)), gav = avance(g.items);
@@ -599,7 +609,8 @@
     const ts = FASE === "todas" ? a.trabajos : a.trabajos.filter(enFase(FASE)), act = ts.filter((t) => !t.cancelado);
     const C = costos(act), av = avance(ts);
     const est = {}, plan = a.trabajos.filter(enFase(FASE)), ocultos = a.trabajos.length - a.trabajos.filter(conFase).length;
-    plan.filter((t) => !t.cancelado).forEach((t) => (est[t.estado || "—"] = (est[t.estado || "—"] || 0) + 1));
+    const estDe = (t) => (t.avanceDe ? t.pct + "%" : t.estado || "—"); // el avance por subelementos manda sobre el Estado
+    plan.filter((t) => !t.cancelado).forEach((t) => (est[estDe(t)] = (est[estDe(t)] || 0) + 1));
     const sinDur = plan.filter((t) => !t.cancelado && !(t.duracion > 0) && t.costo !== "descartado").length;
     const pa = partDe(M, a.id);
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
