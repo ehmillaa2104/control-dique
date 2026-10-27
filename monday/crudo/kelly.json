@@ -2870,7 +2870,7 @@
     },
     {
      "id": "file_mm8heke3",
-     "title": "Archivo",
+     "title": "Documentos",
      "type": "file"
     }
    ],
@@ -5751,7 +5751,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "14022.77"
+        "display_value": "14217.51"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5952,7 +5952,8 @@
          "13302150224",
          "13302212275",
          "13346658601",
-         "13346547715"
+         "13346547715",
+         "13346590356"
         ]
        }
       ],
@@ -6674,7 +6675,7 @@
       "id": "13346590356",
       "name": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-27T19:51:53Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6694,7 +6695,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -6735,7 +6738,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-21 14:22:34 UTC"
+        "text": "2026-10-27 19:51:53 UTC"
        }
       ],
       "subitems": []
@@ -16857,7 +16860,7 @@
       "id": "13095643937",
       "name": "Bombas hidráulicas de timón — sellos, filtros y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-10-23T21:04:04Z",
+      "updated_at": "2026-10-27T21:49:56Z",
       "group": {
        "id": "group_mm7ddzqq",
        "title": "1.10 Sistema Hidráulico General"
@@ -16909,12 +16912,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:04 UTC"
+        "text": "2026-10-27 21:49:56 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -17599,9 +17602,9 @@
      },
      {
       "id": "13277157364",
-      "name": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+      "name": "Indicador De Angulo de Timón",
       "created_at": "2026-10-13T14:45:35Z",
-      "updated_at": "2026-10-23T22:48:35Z",
+      "updated_at": "2026-10-27T22:05:31Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -17653,12 +17656,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 22:48:35 UTC"
+        "text": "2026-10-27 22:05:31 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "50%"
+        "text": "75%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20856,7 +20859,7 @@
       "id": "13095603720",
       "name": "Pala y mecha del timón — inspección, sellos y rodamientos",
       "created_at": "2026-09-21T16:19:01Z",
-      "updated_at": "2026-10-23T21:04:51Z",
+      "updated_at": "2026-10-27T21:41:08Z",
       "group": {
        "id": "group_mm7df5ez",
        "title": "1.16 Sistema de Timón"
@@ -20908,12 +20911,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:51 UTC"
+        "text": "2026-10-27 21:41:08 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",

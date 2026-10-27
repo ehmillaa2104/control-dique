@@ -11,7 +11,7 @@ window.DIQUE_REGISTRO = {
       "semana": 6,
       "desde": "2026-10-24",
       "hasta": "2026-10-30",
-      "fuente": "Reporte del superintendente (27 oct) y mensajes del equipo en Monday (26 y 27 oct)",
+      "fuente": "Reporte del superintendente (27 oct), informe diario de Ingeniería (27 oct) y mensajes del equipo en Monday (26 y 27 oct)",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" },
@@ -26,6 +26,14 @@ window.DIQUE_REGISTRO = {
         ] },
         { "zona": "Medición de espesores", "items": [
           { "txt": "Lecturas mínimas: 4.6 mm en 1S, 4.7 mm en 2S y 4.9 mm en 1P y 5S" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Eje de cola: inician los trabajos", "extra": "26 oct" },
+          { "txt": "Bomba hidráulica del timón de babor desmontada para cambiar retenedoras" },
+          { "txt": "Repetidores del ángulo de timón: instalación en ambas bandas" },
+          { "txt": "Botella de aire #1: válvula de seguridad desmontada para pruebas y certificación" },
+          { "txt": "Acople Vulkan de la máquina principal inspeccionado: en buen estado" },
+          { "txt": "Auxiliar #1: fugas de aceite y combustible corregidas" }
         ] },
         { "zona": "Seguridad", "items": [
           { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
@@ -53,7 +61,17 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s6/t5s_01_manhole-ifo-5s-permiso.jpg", "texto": "Manhole IFO 5S con permiso de espacio confinado", "grupo": "Tanque 5 estribor · IFO 5S · corte desde la tarde del 27 oct" },
         { "tipo": "foto", "archivo": "registro/s6/t5s_02_andamio-lecturas.jpg", "texto": "Andamio en tres niveles; lecturas de 5.4 a 8.7 mm en la zona alta", "grupo": "Tanque 5 estribor · IFO 5S · corte desde la tarde del 27 oct" },
         { "tipo": "foto", "archivo": "registro/s6/t5s_03_recuadros-marcados-tiza.jpg", "texto": "Recuadros marcados con tiza para renovación; lecturas de 5.0 a 6.9 mm", "grupo": "Tanque 5 estribor · IFO 5S · corte desde la tarde del 27 oct" },
-        { "tipo": "foto", "archivo": "registro/s6/t5s_04_area-triangular-minimos.jpg", "texto": "Área triangular marcada con los mínimos del tanque: 4.9–5.3 mm", "grupo": "Tanque 5 estribor · IFO 5S · corte desde la tarde del 27 oct" }
+        { "tipo": "foto", "archivo": "registro/s6/t5s_04_area-triangular-minimos.jpg", "texto": "Área triangular marcada con los mínimos del tanque: 4.9–5.3 mm", "grupo": "Tanque 5 estribor · IFO 5S · corte desde la tarde del 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_01_eje-de-cola.jpg", "texto": "Eje de cola: inicio de los trabajos", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_02_eje-de-cola-acople.jpg", "texto": "Acople del eje de cola", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_03_motor-bomba-timon-babor.jpg", "texto": "Motor de la bomba hidráulica del timón de babor, desmontado", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_04_bomba-timon-babor.jpg", "texto": "Bomba hidráulica del timón de babor, sin retenedoras", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_05_repetidor-angulo-timon.jpg", "texto": "Repetidor del ángulo de timón", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "video", "archivo": "registro/s6/maq_video-repetidor-angulo-timon.mp4", "texto": "Repetidor del ángulo de timón funcionando", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_06_botella-de-aire-1.jpg", "texto": "Botella de aire #1", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_07_valvula-seguridad-botella.jpg", "texto": "Válvula de seguridad de la botella de aire", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_08_acople-vulkan.jpg", "texto": "Acople Vulkan de la máquina principal", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_09_auxiliar-1.jpg", "texto": "Auxiliar #1: fugas corregidas", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" }
       ]
     },
     {

@@ -2487,8 +2487,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bombas hidráulicas de timón — sellos, filtros y aceite",
      "grupo": "1.10 Sistema Hidráulico General",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2504,7 +2504,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-10-27",
      "costo": "aprobado"
     },
     {
@@ -2684,11 +2684,11 @@ window.DIQUE_MONDAY = {
     },
     {
      "id": "13277157364",
-     "nombre": "Repetidor ángulo pitch propeller + Motor auxiliar #2",
+     "nombre": "Indicador De Angulo de Timón",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2704,7 +2704,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-10-27",
      "costo": "aprobado"
     },
     {
@@ -3562,8 +3562,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Pala y mecha del timón — inspección, sellos y rodamientos",
      "grupo": "1.16 Sistema de Timón",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3579,7 +3579,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-10-27",
      "costo": "aprobado"
     },
     {
@@ -5834,7 +5834,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 14022.77,
+   "incurrido": 14217.51,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6020,7 +6020,8 @@ window.DIQUE_MONDAY = {
     "13302150224",
     "13302212275",
     "13346658601",
-    "13346547715"
+    "13346547715",
+    "13346590356"
    ]
   },
   {
@@ -6182,9 +6183,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-16",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13346657638",
@@ -7088,7 +7091,7 @@ window.DIQUE_MONDAY = {
    "lineas": 169,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 4.0
+   "avanceDias": 4.75
   },
   "cubierta": {
    "lineas": 18,
@@ -7106,7 +7109,7 @@ window.DIQUE_MONDAY = {
    "lineas": 197,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 33.165
+   "avanceDias": 33.915
   }
  },
  "historial": [
@@ -8523,7 +8526,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-10-27",
-   "avance": 23.69,
+   "avance": 24.22,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -8614,7 +8617,7 @@ window.DIQUE_MONDAY = {
     "13095570205": 0,
     "13043941390": 0,
     "13043924488": 0,
-    "13095643937": 0,
+    "13095643937": 25,
     "13095604536": 0,
     "13095613807": 0,
     "13277138828": 25,
@@ -8622,7 +8625,7 @@ window.DIQUE_MONDAY = {
     "13277104868": 0,
     "13277169481": 0,
     "13277138491": 25,
-    "13277157364": 50,
+    "13277157364": 75,
     "13043950429": 0,
     "13043932348": 0,
     "13043921752": 0,
@@ -8657,7 +8660,7 @@ window.DIQUE_MONDAY = {
     "13095613978": 0,
     "13095637378": 0,
     "13095603722": 0,
-    "13095603720": 0,
+    "13095603720": 25,
     "13043932296": 0,
     "13043932299": 0,
     "13095613430": 0,
@@ -8725,9 +8728,35 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "750e96cfa9a9",
- "cambiosLectura": [],
+ "_huella": "8eaeb0d1a391",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Indicador De Angulo de Timón",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "25%"
+  }
+ ],
  "observaciones": [
+  {
+   "nivel": "info",
+   "texto": "P2. Cubierta: la columna \"Archivo\" ahora se llama \"Documentos\" (file_mm8heke3)."
+  },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
@@ -8746,7 +8775,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 11 en ejecución · 1 finalizado(s) · 21 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 13 en ejecución · 1 finalizado(s) · 19 por iniciar."
   },
   {
    "nivel": "info",
@@ -8814,7 +8843,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -8899,6 +8928,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
+  },
+  {
+   "nivel": "info",
+   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };
