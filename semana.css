@@ -21,3 +21,27 @@ body.light footer { max-width: 1100px; margin: 0 auto; }
   .lt-tit h1 { font-size: 19px; }
   #lt-app { padding: 12px 16px 6px; }
 }
+
+/* Botón Descargar PDF */
+.lt-pdf { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; background: #fff; color: #0a0a0a; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; flex: none; }
+.lt-pdf:hover { background: #e8e8e8; }
+.lt-pdf .ic { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) { .lt-pdf { margin-left: 0; } }
+
+/* Impresión / PDF: fondo blanco, sin botones ni semanas cerradas, fotos en 4 columnas sin cortarse entre páginas */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  :root, body { --bg: #fff; --surface: #fff; --surface-2: #f4f4f4; --border: #d6d6d6; --ink: #000; --ink-2: #333; --ink-3: #555; background: #fff !important; color: #000 !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .lt-pdf, .lb, footer { display: none !important; }
+  .lt-hero { background: #000 !important; color: #fff; padding: 10px 14px; border-radius: 8px; }
+  #lt-app { padding: 10px 0 0; max-width: none; gap: 10px; }
+  details.lt-sem:not([open]) { display: none; }
+  details.lt-sem > summary > span::before { display: none; }
+  .card { box-shadow: none !important; border: 1px solid #d6d6d6; background: #fff; }
+  .reg-zona, .lt-imp { break-inside: avoid; }
+  .reg-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 6px; }
+  .reg-m { break-inside: avoid; border-color: #ccc; }
+  .reg-gh { break-after: avoid; color: #333; }
+  .reg-play { display: none; }
+}

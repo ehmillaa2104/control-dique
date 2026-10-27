@@ -51,6 +51,15 @@
   const orden = [w, ...R.semanas.filter((x) => x !== w)];
   app.innerHTML = orden.map((x, k) => `<details class="card lt-sem" ${k === 0 ? "open" : ""}><summary class="card-h"><span>Semana · ${fmtShort(x.desde)} – ${fmtShort(x.hasta)}${x === w && w.desde <= TODAY && TODAY <= w.hasta ? ' <em class="reg-hoy">esta semana</em>' : ""}</span><small>${cuenta(x)}</small></summary>${semana(x)}</details>`).join("");
 
+  // Descargar en PDF: se usa la impresión del navegador ("Guardar como PDF"). Sale lo que está abierto:
+  // la semana actual y las anteriores que se hayan desplegado. Las fotos van en miniatura.
+  document.getElementById("lt-pdf").addEventListener("click", () => {
+    const t = document.title;
+    document.title = `Registro semanal Kelly Trader ${fmtShort(w.desde)} - ${fmtShort(w.hasta)}`;
+    app.querySelectorAll("img[loading=lazy]").forEach((i) => (i.loading = "eager"));
+    setTimeout(() => { window.print(); document.title = t; }, 300);
+  });
+
   // Visor de fotos y videos
   const lb = document.createElement("div");
   lb.className = "lb"; lb.hidden = true;
