@@ -361,6 +361,7 @@
     // Estado del centro según sus montos; si en Monday está en "Revisar", queda en espera de revisión (eso manda)
     const estadoCC = (c) => {
       if (/revisar/i.test(c.estado)) return '<span class="chip warn">En espera de revisión</span>';
+      if (/aprob/i.test(c.estado || "") && c.aprobado) return `<span class="chip et-aprobado">Aprobado</span>`; // Monday manda
       if (!c.preliminar && !c.enRevision && !c.aprobado) return '<span class="muted">—</span>';
       if (c.enRevision) return `<span class="chip et-revision">En revisión</span>`;
       if (c.aprobado && !sinEnviar(c)) return `<span class="chip et-aprobado">Aprobado</span>`;

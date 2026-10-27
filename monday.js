@@ -5813,7 +5813,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201165",
    "nombre": "2.2.1 · Cuenta astillero",
    "grupo": "2.2",
-   "estado": "Revisar",
+   "estado": "Aprobado",
    "preliminar": 766482,
    "enRevision": 0,
    "aprobado": 766482,
@@ -5829,7 +5829,7 @@ window.DIQUE_MONDAY = {
    "id": "13081201432",
    "nombre": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
    "grupo": "2.2",
-   "estado": "Revisar",
+   "estado": "Aprobado",
    "preliminar": 99950.01,
    "enRevision": 0,
    "aprobado": 87950.01,
@@ -8725,16 +8725,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "efdfb7a4573b",
- "cambiosLectura": [
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "766482"
-  }
- ],
+ "_huella": "750e96cfa9a9",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
