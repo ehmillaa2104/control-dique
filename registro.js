@@ -14,7 +14,7 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reporte del superintendente (27 oct) y mensajes del equipo en Monday (26 y 27 oct)",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "Presupuesto aprobado", "extra": "27 oct" },
+          { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" },
           { "txt": "1 día perdido por lluvia", "extra": "24 oct" }
         ] },
         { "zona": "Tanques de carga", "items": [
