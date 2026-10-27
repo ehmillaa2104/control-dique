@@ -13,6 +13,10 @@ window.DIQUE_REGISTRO = {
       "hasta": "2026-10-30",
       "fuente": "Reporte del superintendente (27 oct) y mensajes del equipo en Monday (26 y 27 oct)",
       "avance": [
+        { "zona": "Temas importantes", "items": [
+          { "txt": "Presupuesto aprobado", "extra": "27 oct" },
+          { "txt": "1 día perdido por lluvia", "extra": "24 oct" }
+        ] },
         { "zona": "Tanques de carga", "items": [
           { "txt": "Alcance de acero cerrado: 8 tanques llevan acero", "extra": "4P y 4S no llevan" },
           { "txt": "1P, 1S, 3S y 5P: corte de acero en ejecución", "extra": "en 1S ya hay una plancha nueva soldada" },
@@ -23,9 +27,6 @@ window.DIQUE_REGISTRO = {
         { "zona": "Medición de espesores", "items": [
           { "txt": "Lecturas mínimas: 4.6 mm en 1S, 4.7 mm en 2S y 4.9 mm en 1P y 5S" },
           { "txt": "Espesor original de las planchas por confirmar con el inspector de BV" }
-        ] },
-        { "zona": "Clima", "items": [
-          { "txt": "24 oct: se perdió 1 día de trabajo por lluvia", "extra": "registrado el 27 oct" }
         ] },
         { "zona": "Seguridad", "items": [
           { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
@@ -62,6 +63,9 @@ window.DIQUE_REGISTRO = {
       "hasta": "2026-10-23",
       "fuente": "Reporte del superintendente e informe diario de máquinas, 23 oct",
       "avance": [
+        { "zona": "Temas importantes", "items": [
+          { "txt": "Entrada al muelle del astillero", "extra": "20 oct" }
+        ] },
         { "zona": "Casco", "items": [
           { "txt": "Estribor: aceros marcados", "extra": "se empezó a cortar" },
           { "txt": "Babor: acero marcado" }
