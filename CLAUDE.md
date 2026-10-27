@@ -90,6 +90,10 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - **Pruebas antes de publicar:** si el usuario pide probar antes de actualizar, trabajar en una rama (no `main`). En otra rama, el hook guarda solo en local y no publica; para publicar, se pasa la rama a `main`.
 - Debe verse bien en celular.
 
+## Indicador de días perdidos por lluvias
+
+- Reemplaza al indicador "En revisión" (pedido del usuario, 27 oct). Suma la columna **Días** del tablero **Cambios/Imprevistos** en los registros con Tipo de Impacto "Mal Tiempo"; el detalle lista cada registro con su fecha y estado.
+
 ## Registro semanal (fotos, videos y avance en sitio)
 
 - Pestaña **"Registro semanal"** (al lado del Resumen gerencial) y recuadro **"Esta semana en el dique"** en el resumen. Datos en `registro.js`, se edita a mano; archivos en `registro/sN/`.
