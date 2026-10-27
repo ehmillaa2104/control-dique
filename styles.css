@@ -761,3 +761,13 @@ details.reg-sem + details.reg-sem { margin-top: 14px; }
 
 .reg-gh { grid-column: 1 / -1; margin-top: 6px; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
 .reg-grid > .reg-gh:first-child { margin-top: 0; }
+
+/* Centros de costo sin la columna "En revisión" (27 oct): Aprobado, Proyectado, PO e Incurrido */
+.cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(4, 96px) 110px; }
+@media (max-width: 1100px) { .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(4, 78px) 100px; } }
+@media (max-width: 760px) {
+  .cc-head, .cc-g > summary, .cc > summary, .cc-line, .cc-total { grid-template-columns: minmax(0, 1fr) repeat(3, 66px); }
+  .cc-table .n:nth-of-type(4) { display: none; }                         /* PO */
+  .cc-table .n:nth-of-type(5) { display: block; }                        /* Incurrido */
+  .cc-table .n:nth-of-type(n+6), .cc-table .st { display: none; }
+}

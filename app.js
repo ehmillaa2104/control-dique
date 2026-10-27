@@ -355,7 +355,7 @@
 
   // Centros de costo, desplegables por grupo y por centro (con sus trabajos de P1, P2 y P3)
   function centrosCard(M) {
-    const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.enRevision, "rev")}</span><span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
+    const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
     const grupos = [];
     M.centros.forEach((c) => { let g = grupos.find((x) => x.nombre === c.grupo); if (!g) grupos.push((g = { nombre: c.grupo, items: [] })); g.items.push(c); });
     // Estado del centro según sus montos; si en Monday está en "Revisar", queda en espera de revisión (eso manda)
@@ -382,7 +382,7 @@
     }).join("");
     const T = costos(M.centros);
     return card("Centros de costo", `<div class="cc-table">
-        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n t-rev">En revisión</span><span class="n t-apr">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
+        <div class="cc-head"><span class="nm">Centro de costo</span><span class="n t-apr">Aprobado</span><span class="n">Proyectado</span><span class="n">PO</span><span class="n">Incurrido</span><span class="st">Estado</span></div>
         ${body}
         <div class="cc-total"><span class="nm">Total</span>${cols(T, "b")}<span class="st"></span></div>
       </div>`, { cls: "wide", right: "clic en un grupo o centro para desplegar" });
