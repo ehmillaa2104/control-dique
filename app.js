@@ -665,7 +665,7 @@
       const base = MEDIOS.length;
       MEDIOS.push(...(w.medios || []));
       const av = w.avance && w.avance.length ? `<div class="reg-av">${avanceHTML(w)}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div>` : `<div class="reg-av"><p class="muted">Todavía no hay registro de esta semana.</p></div>`;
-      const med = (w.medios || []).length ? `<div class="reg-grid">${w.medios.map((m, i) => medioHTML(m, base + i)).join("")}</div>` : '<p class="muted reg-sinf">Sin fotos ni videos todavía.</p>';
+      const med = (w.medios || []).length ? `<div class="reg-grid">${w.medios.map((m, i) => (m.grupo && (i === 0 || w.medios[i - 1].grupo !== m.grupo) ? `<b class="reg-gh">${esc(m.grupo)}</b>` : "") + medioHTML(m, base + i)).join("")}</div>` : '<p class="muted reg-sinf">Sin fotos ni videos todavía.</p>';
       return `<details class="card wide reg-sem" ${k === 0 ? "open" : ""}><summary class="card-h"><span>${semTitulo(w)}${w === act ? ' <em class="reg-hoy">esta semana</em>' : ""}</span><small>${contarMedios(w)} · ${etapaEn(M, w.hasta < TODAY ? w.hasta : TODAY)}</small></summary>
         <div class="reg-body">${av}${med}</div></details>`;
     }).join("");
