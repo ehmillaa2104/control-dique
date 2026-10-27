@@ -539,8 +539,8 @@
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, modelo: M })}${partKpi(M, null, "Participación del equipo")}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${entregaHTML(M)}
-      ${semanaCard(M)}
       ${registroCard(M)}
+      ${semanaCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
       ${M.part ? `<div class="row-2">${fasesCard(M)}${partTabla(M)}</div>` : fasesCard(M, false)}`;
   }
