@@ -749,3 +749,12 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
   .lb { padding: 56px 8px 16px; }
   .lb-p, .lb-n { top: auto; bottom: 12px; transform: none; }
 }
+
+/* Registro semanal: una semana por desplegable */
+details.reg-sem > summary { cursor: pointer; list-style: none; }
+details.reg-sem > summary::-webkit-details-marker { display: none; }
+details.reg-sem > summary > span::before { content: "▸"; display: inline-block; width: 16px; transition: transform .15s; }
+details.reg-sem[open] > summary > span::before { transform: rotate(90deg); }
+details.reg-sem + details.reg-sem { margin-top: 14px; }
+.reg-hoy { font-style: normal; font-size: 10px; font-weight: 800; letter-spacing: .05em; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--ink); color: var(--surface); vertical-align: middle; }
+.reg-sinf { margin: 4px 0 0; }

@@ -7,6 +7,25 @@
 window.DIQUE_REGISTRO = {
   "semanas": [
     {
+      "semana": 6,
+      "desde": "2026-10-24",
+      "hasta": "2026-10-30",
+      "fuente": "Mensajes del equipo en Monday, 26 y 27 oct",
+      "avance": [
+        { "zona": "Tanques de carga", "items": [
+          { "txt": "1P, 1S, 2S, 3S, 5P y 5S: andamios armados", "extra": "corte de acero en curso" },
+          { "txt": "2P: andamios en armado", "extra": "corte desde el 28 oct" },
+          { "txt": "3P: inicia el armado de andamios" },
+          { "txt": "4P y 4S: no llevan acero (confirmado en campo)" }
+        ] },
+        { "zona": "Seguridad", "items": [
+          { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
+          { "txt": "Speed Log: en cotización, faltan proveedores con repuestos" }
+        ] }
+      ],
+      "medios": []
+    },
+    {
       "semana": 5,
       "desde": "2026-10-17",
       "hasta": "2026-10-23",
