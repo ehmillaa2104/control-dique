@@ -108,6 +108,13 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - La pestaña Registro muestra **una sección desplegable por semana**: abierta la actual, cerradas las anteriores (27 oct).
 - En pantalla la semana se muestra solo con fechas ("Semana · 17 oct – 23 oct"), sin número. No mostrar "Renovación de acero" (pedido del usuario, 23 oct). No poner nombres de personas (el repositorio es público).
 
+## Versión liviana del registro (semana.html)
+
+- `semana.html` (+ `semana.js`, `semana.css`): solo el registro semanal, para enviar a media semana. Lee `registro.js` y `monday.js` (solo para el día de dique); no toca el dashboard.
+- Arriba la semana actual abierta; las anteriores cerradas debajo. `semana.html?s=N` abre la semana N.
+- Botón **"Descargar PDF"**: usa la impresión del navegador ("Guardar como PDF") con diseño A4 (fondo blanco, fotos en 4 columnas, sin semanas cerradas).
+- Sin enlace al dashboard (pedido del usuario, 27 oct). Enlace para enviar: `https://ehmillaa2104.github.io/control-dique/semana.html`.
+
 ## Publicación
 
 - GitHub: `github.com/ehmillaa2104/control-dique`, rama `main`.
