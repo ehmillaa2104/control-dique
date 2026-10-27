@@ -104,6 +104,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 - Pestaña **"Registro semanal"** (al lado del Resumen gerencial) y recuadro **"Esta semana en el dique"** en el resumen. Datos en `registro.js`, se edita a mano; archivos en `registro/sN/`.
 - Cada semana: el usuario manda fotos, videos y el reporte del superintendente. Las fotos se reducen a 1600 px sin metadatos (más una miniatura `-min.jpg` de 480 px); los videos van tal cual.
 - Semanas de **sábado a viernes**. "Esta semana en el dique" (resumen) muestra siempre la **semana actual** (la que contiene hoy) con lo que haya: si aún no hay fotos dice "Sin fotos de esta semana todavía"; si la semana no está cargada en `registro.js`, sale vacía con sus fechas. El avance de la semana se arma con los mensajes del equipo en Monday de esa semana (27 oct).
+- Cada semana empieza con la zona **"Temas importantes"**: una o dos líneas cortas escritas a mano (p. ej. "Presupuesto aprobado: US$ 1.08 M · 27 oct", "1 día perdido por lluvia · 24 oct"). Sin recuadros automáticos ni repetir lo que ya está en otra zona (pedido del usuario, 27 oct: "no redundes, hay mucho ruido"). El usuario puede pedir "pon esto como tema importante".
 - La pestaña Registro muestra **una sección desplegable por semana**: abierta la actual, cerradas las anteriores (27 oct).
 - En pantalla la semana se muestra solo con fechas ("Semana · 17 oct – 23 oct"), sin número. No mostrar "Renovación de acero" (pedido del usuario, 23 oct). No poner nombres de personas (el repositorio es público).
 
