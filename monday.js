@@ -5159,8 +5159,8 @@ window.DIQUE_MONDAY = {
      "aprobacion": "Revisado",
      "proveedor": "",
      "preliminar": 766482,
-     "enRevision": 766482,
-     "aprobado": null,
+     "enRevision": null,
+     "aprobado": 766482,
      "proyectado": null,
      "po": null,
      "incurrido": null,
@@ -5169,7 +5169,7 @@ window.DIQUE_MONDAY = {
       "13081201165"
      ],
      "actualizado": "2026-10-27",
-     "costo": "revision",
+     "costo": "aprobado",
      "pctEstado": 0,
      "avanceDe": "subelementos",
      "subelementos": [
@@ -5815,8 +5815,8 @@ window.DIQUE_MONDAY = {
    "grupo": "2.2",
    "estado": "Revisar",
    "preliminar": 766482,
-   "enRevision": 766482,
-   "aprobado": 0,
+   "enRevision": 0,
+   "aprobado": 766482,
    "po": 0,
    "incurrido": 0,
    "proyectado": 0,
@@ -8710,91 +8710,21 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "1a67479e4ae9",
+ "_huella": "43d7984c53c2",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "5356.34"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Incurrido",
-   "antes": "9325",
-   "ahora": "11525"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "3100"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Caja menuda para capitán",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "10500"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "Duración",
-   "antes": "1",
-   "ahora": "2"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "Duración",
-   "antes": "1",
-   "ahora": "2"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "2"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Reforzar el Sistema Davit mantenga seguro el Bote de caida.",
-   "campo": "Duración",
-   "antes": "—",
-   "ahora": "1"
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "$ En Revisión",
+   "antes": "766482",
+   "ahora": "—"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "0 %",
-   "ahora": "6.9 %"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Agenciamiento",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Estadia, Viaje y transporte",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Estadia, Viaje y transporte",
-   "campo": "$ Incurrido",
+   "campo": "$ Aprobado",
    "antes": "—",
-   "ahora": "4500"
+   "ahora": "766482"
   }
  ],
  "observaciones": [
@@ -8847,6 +8777,10 @@ window.DIQUE_MONDAY = {
    "texto": "P3. Técnico · \"Astillero\": avance 6.9 % calculado de 26 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\": tiene $ Aprobado pero Estado Aprobación = \"Revisado\"."
+  },
+  {
    "nivel": "info",
    "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 3 en ejecución · 2 finalizado(s) · 3 por iniciar."
   },
@@ -8856,7 +8790,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: preliminar US$ 882,421 · en revisión US$ 766,482 (1) · aprobado US$ 100,939 (6) · sin enviar a revisión 1."
+   "texto": "P3. Técnico: preliminar US$ 882,421 · en revisión US$ 0 (0) · aprobado US$ 867,421 (7) · sin enviar a revisión 1."
   },
   {
    "nivel": "aviso",

@@ -1455,7 +1455,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-27T16:27:43Z",
+      "updated_at": "2026-10-27T18:09:49Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1489,12 +1489,12 @@
        {
         "id": "numeric_mm78s0hd",
         "type": "numbers",
-        "text": ""
+        "text": "766482"
        },
        {
         "id": "numeric_mm78kpas",
         "type": "numbers",
-        "text": "766482"
+        "text": ""
        },
        {
         "id": "board_relation_mm7am925",
@@ -1507,7 +1507,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-27 16:27:43 UTC"
+        "text": "2026-10-27 18:09:49 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -5665,13 +5665,13 @@
         "id": "formula_mm7d91f2",
         "type": "formula",
         "text": "",
-        "display_value": "766482"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7dehmt",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "766482"
        },
        {
         "id": "formula_mm7yshcc",

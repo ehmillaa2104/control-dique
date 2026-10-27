@@ -13,7 +13,7 @@ window.DIQUE_NOTAS = {
   // Notas sobre trabajos en revisión, por nombre del trabajo en Monday. Se muestran en "En revisión",
   // en el centro de costo y junto al trabajo. Se borran cuando el monto deja de estar en revisión.
   "revision": {
-    "Astillero": "se siguen realizando las actividades del alcance"
+    // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
