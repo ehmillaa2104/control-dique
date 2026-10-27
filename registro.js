@@ -25,8 +25,7 @@ window.DIQUE_REGISTRO = {
           { "txt": "3P: inicia el armado de andamios; acero por marcar" }
         ] },
         { "zona": "Medición de espesores", "items": [
-          { "txt": "Lecturas mínimas: 4.6 mm en 1S, 4.7 mm en 2S y 4.9 mm en 1P y 5S" },
-          { "txt": "Espesor original de las planchas por confirmar con el inspector de BV" }
+          { "txt": "Lecturas mínimas: 4.6 mm en 1S, 4.7 mm en 2S y 4.9 mm en 1P y 5S" }
         ] },
         { "zona": "Seguridad", "items": [
           { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
