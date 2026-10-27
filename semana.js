@@ -1,7 +1,7 @@
 /*
- * Versión liviana para enviar a media semana: solo el registro semanal (registro.js) de una semana.
- *   semana.html          → la semana actual (o la más reciente cargada)
- *   semana.html?s=5      → la semana 5 (número de "semana" en registro.js)
+ * Versión liviana para enviar a media semana: solo el registro semanal (registro.js).
+ *   semana.html          → la semana actual abierta (o la más reciente cargada); las anteriores, cerradas debajo
+ *   semana.html?s=5      → abre la semana 5 (número de "semana" en registro.js)
  * Usa los datos de Monday solo para el día de dique en la cabecera.
  */
 (function () {
@@ -33,16 +33,23 @@
   document.getElementById("lt-sub").textContent = ["M/V Kelly Trader", etapa, `al ${fmtDate(corte)}`].filter(Boolean).join(" · ");
   document.title = `Registro semanal · ${fmtShort(w.desde)} – ${fmtShort(w.hasta)} · Kelly Trader`;
 
-  const MEDIOS = w.medios || [];
   const minDe = (m) => (m.tipo === "foto" ? m.archivo.replace(/\.jpg$/i, "-min.jpg") : m.archivo);
   const play = '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>';
-  const medio = (m, i) => `<button type="button" class="reg-m" data-medio="${i}" aria-label="${esc(m.texto)}">${m.tipo === "video"
+  const MEDIOS = []; // todas las fotos y videos, en el orden de la página (las recorre el visor)
+  const medio = (m) => { const i = MEDIOS.push(m) - 1; return `<button type="button" class="reg-m" data-medio="${i}" aria-label="${esc(m.texto)}">${m.tipo === "video"
     ? `<video src="${esc(m.archivo)}#t=1" preload="metadata" muted playsinline></video><span class="reg-play">${play}</span>`
-    : `<img src="${esc(minDe(m))}" alt="${esc(m.texto)}" loading="lazy">`}<span class="reg-cap">${esc(m.texto)}</span></button>`;
-  const zonas = (w.avance || []).map((g) => `<div class="reg-zona${/importante/i.test(g.zona) ? " lt-imp" : ""}"><b>${esc(g.zona)}</b><ul>${g.items.map((it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`).join("")}</ul></div>`).join("");
-  const fotos = MEDIOS.map((m, i) => (m.grupo && (i === 0 || MEDIOS[i - 1].grupo !== m.grupo) ? `<b class="reg-gh">${esc(m.grupo)}</b>` : "") + medio(m, i)).join("");
-  app.innerHTML = `<section class="card lt-card"><div class="reg-av">${zonas || '<p class="muted">Todavía no hay registro de esta semana.</p>'}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div></section>
-    ${MEDIOS.length ? `<section class="card lt-card"><div class="card-h"><span>Fotos y videos</span></div><div class="reg-grid">${fotos}</div></section>` : ""}`;
+    : `<img src="${esc(minDe(m))}" alt="${esc(m.texto)}" loading="lazy">`}<span class="reg-cap">${esc(m.texto)}</span></button>`; };
+  const cuenta = (x) => { const v = (x.medios || []).filter((m) => m.tipo === "video").length, n = (x.medios || []).length - v; return n || v ? `${n} ${n === 1 ? "foto" : "fotos"}${v ? ` y ${v} ${v === 1 ? "video" : "videos"}` : ""}` : "sin fotos"; };
+  const semana = (x) => {
+    const ms = x.medios || [];
+    const zonas = (x.avance || []).map((g) => `<div class="reg-zona${/importante/i.test(g.zona) ? " lt-imp" : ""}"><b>${esc(g.zona)}</b><ul>${g.items.map((it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`).join("")}</ul></div>`).join("");
+    const fotos = ms.map((m, i) => (m.grupo && (i === 0 || ms[i - 1].grupo !== m.grupo) ? `<b class="reg-gh">${esc(m.grupo)}</b>` : "") + medio(m)).join("");
+    return `<div class="reg-av lt-av">${zonas || '<p class="muted">Todavía no hay registro de esta semana.</p>'}${x.fuente ? `<p class="muted sm">Fuente: ${esc(x.fuente)}</p>` : ""}</div>
+      ${ms.length ? `<div class="lt-fh">Fotos y videos</div><div class="reg-grid">${fotos}</div>` : ""}`;
+  };
+  // La semana elegida arriba y abierta; las demás (más recientes primero) cerradas
+  const orden = [w, ...R.semanas.filter((x) => x !== w)];
+  app.innerHTML = orden.map((x, k) => `<details class="card lt-sem" ${k === 0 ? "open" : ""}><summary class="card-h"><span>Semana · ${fmtShort(x.desde)} – ${fmtShort(x.hasta)}${x === w && w.desde <= TODAY && TODAY <= w.hasta ? ' <em class="reg-hoy">esta semana</em>' : ""}</span><small>${cuenta(x)}</small></summary>${semana(x)}</details>`).join("");
 
   // Visor de fotos y videos
   const lb = document.createElement("div");
