@@ -11,35 +11,35 @@ window.DIQUE_MONDAY = {
    "id": "13095528116",
    "grupo": "Plan",
    "nombre": "PLANIFICACIÓN",
-   "estado": "En curso",
-   "duracion": 35,
+   "estado": "Listo",
+   "duracion": 36,
    "base": [
     "2026-09-22",
     "2026-10-02"
    ],
    "real": [
     "2026-09-22",
-    "2026-10-26"
+    "2026-10-27"
    ],
-   "diferencia": 24,
-   "actualizado": "2026-10-23"
+   "diferencia": 25,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13109464924",
    "grupo": "Plan",
    "nombre": "Aprobación de presupuesto",
-   "estado": "En curso",
+   "estado": "Listo",
    "duracion": 0,
    "base": [
     "2026-09-29",
     "2026-09-29"
    ],
    "real": [
-    "2026-10-26",
-    "2026-10-26"
+    "2026-10-27",
+    "2026-10-27"
    ],
-   "diferencia": 27,
-   "actualizado": "2026-10-23"
+   "diferencia": 28,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528118",
@@ -69,11 +69,11 @@ window.DIQUE_MONDAY = {
     "2026-10-07"
    ],
    "real": [
-    "2026-09-30",
-    "2026-10-03"
+    "2026-10-01",
+    "2026-10-04"
    ],
-   "diferencia": -4,
-   "actualizado": "2026-10-08"
+   "diferencia": -3,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528121",
@@ -86,11 +86,11 @@ window.DIQUE_MONDAY = {
     "2026-10-17"
    ],
    "real": [
-    "2026-10-04",
-    "2026-10-17"
+    "2026-10-05",
+    "2026-10-18"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-20"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528122",
@@ -103,11 +103,11 @@ window.DIQUE_MONDAY = {
     "2026-10-19"
    ],
    "real": [
-    "2026-10-17",
-    "2026-10-19"
+    "2026-10-18",
+    "2026-10-20"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-20"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528123",
@@ -120,28 +120,28 @@ window.DIQUE_MONDAY = {
     "2026-10-19"
    ],
    "real": [
-    "2026-10-21",
-    "2026-10-21"
+    "2026-10-20",
+    "2026-10-20"
    ],
-   "diferencia": 2,
-   "actualizado": "2026-10-22"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528124",
    "grupo": "Dique",
    "nombre": "DIQUE (Ejecución)",
-   "estado": "No Iniciado",
-   "duracion": 27,
+   "estado": "En curso",
+   "duracion": 28,
    "base": [
     "2026-10-19",
     "2026-11-16"
    ],
    "real": [
     "2026-10-21",
-    "2026-11-16"
+    "2026-11-17"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-23"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13233513509",
@@ -154,11 +154,11 @@ window.DIQUE_MONDAY = {
     "2026-11-22"
    ],
    "real": [
-    "2026-11-16",
-    "2026-11-22"
+    "2026-11-17",
+    "2026-11-23"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-14"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528125",
@@ -171,11 +171,11 @@ window.DIQUE_MONDAY = {
     "2026-11-23"
    ],
    "real": [
-    "2026-11-23",
-    "2026-11-23"
+    "2026-11-24",
+    "2026-11-24"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13233510296",
@@ -188,11 +188,11 @@ window.DIQUE_MONDAY = {
     "2026-11-25"
    ],
    "real": [
-    "2026-11-23",
-    "2026-11-25"
+    "2026-11-24",
+    "2026-11-26"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528126",
@@ -205,11 +205,11 @@ window.DIQUE_MONDAY = {
     "2026-11-30"
    ],
    "real": [
-    "2026-11-25",
-    "2026-11-30"
+    "2026-11-26",
+    "2026-12-01"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-08"
+   "diferencia": 1,
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528127",
@@ -226,7 +226,7 @@ window.DIQUE_MONDAY = {
     "2026-12-01"
    ],
    "diferencia": 0,
-   "actualizado": "2026-10-14"
+   "actualizado": "2026-10-27"
   },
   {
    "id": "13095528128",
@@ -6561,6 +6561,21 @@ window.DIQUE_MONDAY = {
  ],
  "cambios": [
   {
+   "id": "13398896309",
+   "nombre": "Perdida de día por lluvia",
+   "creado": "2026-10-27",
+   "tipo": "Tiempo, Mal Tiempo",
+   "costo": null,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-10-27"
+  },
+  {
    "id": "13362169864",
    "nombre": "Segunda Limpieza del tanque de carga 4S",
    "creado": "2026-10-22",
@@ -8710,28 +8725,199 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "43d7984c53c2",
+ "_huella": "ca72fc2ef613",
  "cambiosLectura": [
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "$ En Revisión",
-   "antes": "766482",
-   "ahora": "—"
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Estado",
+   "antes": "En curso",
+   "ahora": "Listo"
   },
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "$ Aprobado",
-   "antes": "—",
-   "ahora": "766482"
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Fecha Real",
+   "antes": "2026-09-22 a 2026-10-26",
+   "ahora": "2026-09-22 a 2026-10-27"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Diferencia",
+   "antes": "24",
+   "ahora": "25"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PLANIFICACIÓN",
+   "campo": "Duración",
+   "antes": "35",
+   "ahora": "36"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Estado",
+   "antes": "En curso",
+   "ahora": "Listo"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Fecha Real",
+   "antes": "2026-10-26 a 2026-10-26",
+   "ahora": "2026-10-27 a 2026-10-27"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Aprobación de presupuesto",
+   "campo": "Diferencia",
+   "antes": "27",
+   "ahora": "28"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Panamá",
+   "campo": "Fecha Real",
+   "antes": "2026-09-30 a 2026-10-03",
+   "ahora": "2026-10-01 a 2026-10-04"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Panamá",
+   "campo": "Diferencia",
+   "antes": "-4",
+   "ahora": "-3"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PRE-DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-10-04 a 2026-10-17",
+   "ahora": "2026-10-05 a 2026-10-18"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "PRE-DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Cartagena",
+   "campo": "Fecha Real",
+   "antes": "2026-10-17 a 2026-10-19",
+   "ahora": "2026-10-18 a 2026-10-20"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Cartagena",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
+   "campo": "Fecha Real",
+   "antes": "2026-10-21 a 2026-10-21",
+   "ahora": "2026-10-20 a 2026-10-20"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Entrada al muelle del astillero",
+   "campo": "Diferencia",
+   "antes": "2",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Estado",
+   "antes": "No Iniciado",
+   "ahora": "En curso"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-10-21 a 2026-11-16",
+   "ahora": "2026-10-21 a 2026-11-17"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Duración",
+   "antes": "27",
+   "ahora": "28"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
+   "campo": "Fecha Real",
+   "antes": "2026-11-16 a 2026-11-22",
+   "ahora": "2026-11-17 a 2026-11-23"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Salida del astillero",
+   "campo": "Fecha Real",
+   "antes": "2026-11-23 a 2026-11-23",
+   "ahora": "2026-11-24 a 2026-11-24"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Salida del astillero",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Panama",
+   "campo": "Fecha Real",
+   "antes": "2026-11-23 a 2026-11-25",
+   "ahora": "2026-11-24 a 2026-11-26"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Panama",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-11-25 a 2026-11-30",
+   "ahora": "2026-11-26 a 2026-12-01"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "1"
   }
  ],
  "observaciones": [
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Aprobación de presupuesto\": su fecha (2026-10-26) ya pasó y sigue \"En curso\"; actualizar la fecha o marcarlo Listo."
-  },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
@@ -8794,11 +8980,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-25; revisar la fase."
+   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-26; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-25; revisar la fase."
+   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-26; revisar la fase."
   },
   {
    "nivel": "aviso",

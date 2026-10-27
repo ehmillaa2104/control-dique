@@ -1455,7 +1455,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-27T18:09:49Z",
+      "updated_at": "2026-10-27T18:31:33Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1507,7 +1507,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-27 18:09:49 UTC"
+        "text": "2026-10-27 18:31:33 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -8360,6 +8360,62 @@
         "id": "dropdown_mm2ns80c",
         "type": "dropdown",
         "text": "1.1 Limpieza de tanques"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13398896309",
+      "name": "Perdida de día por lluvia",
+      "created_at": "2026-10-27T18:31:32Z",
+      "updated_at": "2026-10-27T18:32:19Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-10-27 18:31:32 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13098338054"
+        ]
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Tiempo, Mal Tiempo"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "2.2.1 Cuenta de Astillero"
        }
       ],
       "subitems": []
@@ -24297,7 +24353,7 @@
       "id": "13095528116",
       "name": "PLANIFICACIÓN",
       "created_at": "2026-09-21T16:11:06Z",
-      "updated_at": "2026-10-23T23:37:13Z",
+      "updated_at": "2026-10-27T18:33:25Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -24306,17 +24362,17 @@
        {
         "id": "color_mm6v6vf2",
         "type": "status",
-        "text": "En curso"
+        "text": "Listo"
        },
        {
         "id": "numeric_mm6zgcqw",
         "type": "numbers",
-        "text": "35"
+        "text": "36"
        },
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-09-22 - 2026-10-26"
+        "text": "2026-09-22 - 2026-10-27"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24327,12 +24383,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "24"
+        "display_value": "25"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-23 23:37:13 UTC"
+        "text": "2026-10-27 18:33:25 UTC"
        }
       ],
       "subitems": []
@@ -24341,7 +24397,7 @@
       "id": "13109464924",
       "name": "Aprobación de presupuesto",
       "created_at": "2026-09-22T21:01:07Z",
-      "updated_at": "2026-10-23T23:37:08Z",
+      "updated_at": "2026-10-27T18:33:19Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -24350,7 +24406,7 @@
        {
         "id": "color_mm6v6vf2",
         "type": "status",
-        "text": "En curso"
+        "text": "Listo"
        },
        {
         "id": "numeric_mm6zgcqw",
@@ -24360,7 +24416,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-26 - 2026-10-26"
+        "text": "2026-10-27 - 2026-10-27"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24371,12 +24427,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "27"
+        "display_value": "28"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-23 23:37:08 UTC"
+        "text": "2026-10-27 18:33:19 UTC"
        }
       ],
       "subitems": []
@@ -24429,7 +24485,7 @@
       "id": "13095528120",
       "name": "Traslado a Panamá",
       "created_at": "2026-09-21T16:11:07Z",
-      "updated_at": "2026-10-08T14:11:19Z",
+      "updated_at": "2026-10-27T18:39:14Z",
       "group": {
        "id": "group_mm7d87j5",
        "title": "Plan"
@@ -24448,7 +24504,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-09-30 - 2026-10-03"
+        "text": "2026-10-01 - 2026-10-04"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24459,12 +24515,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "-4"
+        "display_value": "-3"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:11:19 UTC"
+        "text": "2026-10-27 18:39:14 UTC"
        }
       ],
       "subitems": []
@@ -24473,7 +24529,7 @@
       "id": "13095528121",
       "name": "PRE-DIQUE (Ejecución)",
       "created_at": "2026-09-21T16:11:08Z",
-      "updated_at": "2026-10-20T20:17:46Z",
+      "updated_at": "2026-10-27T18:39:16Z",
       "group": {
        "id": "group_mm7dwdg5",
        "title": "Pre-Dique"
@@ -24492,7 +24548,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-04 - 2026-10-17"
+        "text": "2026-10-05 - 2026-10-18"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24503,12 +24559,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-20 20:17:46 UTC"
+        "text": "2026-10-27 18:39:16 UTC"
        }
       ],
       "subitems": []
@@ -24517,7 +24573,7 @@
       "id": "13095528122",
       "name": "Traslado a Cartagena",
       "created_at": "2026-09-21T16:11:09Z",
-      "updated_at": "2026-10-20T20:17:42Z",
+      "updated_at": "2026-10-27T18:39:16Z",
       "group": {
        "id": "group_mm7dwdg5",
        "title": "Pre-Dique"
@@ -24536,7 +24592,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-17 - 2026-10-19"
+        "text": "2026-10-18 - 2026-10-20"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24547,12 +24603,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-20 20:17:42 UTC"
+        "text": "2026-10-27 18:39:16 UTC"
        }
       ],
       "subitems": []
@@ -24561,7 +24617,7 @@
       "id": "13095528123",
       "name": "Entrada al muelle del astillero",
       "created_at": "2026-09-21T16:11:09Z",
-      "updated_at": "2026-10-22T19:55:23Z",
+      "updated_at": "2026-10-27T18:39:17Z",
       "group": {
        "id": "group_mm7dwdg5",
        "title": "Pre-Dique"
@@ -24580,7 +24636,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-21 - 2026-10-21"
+        "text": "2026-10-20 - 2026-10-20"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24591,12 +24647,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "2"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-22 19:55:23 UTC"
+        "text": "2026-10-27 18:39:17 UTC"
        }
       ],
       "subitems": []
@@ -24605,7 +24661,7 @@
       "id": "13095528124",
       "name": "DIQUE  (Ejecución)",
       "created_at": "2026-09-21T16:11:10Z",
-      "updated_at": "2026-10-23T18:55:06Z",
+      "updated_at": "2026-10-27T18:44:21Z",
       "group": {
        "id": "group_mm7dgarz",
        "title": "Dique"
@@ -24614,17 +24670,17 @@
        {
         "id": "color_mm6v6vf2",
         "type": "status",
-        "text": "No Iniciado"
+        "text": "En curso"
        },
        {
         "id": "numeric_mm6zgcqw",
         "type": "numbers",
-        "text": "27"
+        "text": "28"
        },
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-21 - 2026-11-16"
+        "text": "2026-10-21 - 2026-11-17"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24635,12 +24691,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-23 18:55:06 UTC"
+        "text": "2026-10-27 18:44:21 UTC"
        }
       ],
       "subitems": []
@@ -24649,7 +24705,7 @@
       "id": "13233513509",
       "name": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
       "created_at": "2026-10-07T21:26:16Z",
-      "updated_at": "2026-10-14T18:39:51Z",
+      "updated_at": "2026-10-27T18:44:42Z",
       "group": {
        "id": "group_mm7dgarz",
        "title": "Dique"
@@ -24668,7 +24724,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-11-16 - 2026-11-22"
+        "text": "2026-11-17 - 2026-11-23"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24679,12 +24735,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-14 18:39:51 UTC"
+        "text": "2026-10-27 18:44:42 UTC"
        }
       ],
       "subitems": []
@@ -24693,7 +24749,7 @@
       "id": "13095528125",
       "name": "Salida del astillero",
       "created_at": "2026-09-21T16:11:12Z",
-      "updated_at": "2026-10-08T14:07:53Z",
+      "updated_at": "2026-10-27T18:39:45Z",
       "group": {
        "id": "group_mm7dgarz",
        "title": "Dique"
@@ -24712,7 +24768,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-11-23 - 2026-11-23"
+        "text": "2026-11-24 - 2026-11-24"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24723,12 +24779,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:07:53 UTC"
+        "text": "2026-10-27 18:39:45 UTC"
        }
       ],
       "subitems": []
@@ -24737,7 +24793,7 @@
       "id": "13233510296",
       "name": "Traslado a Panama",
       "created_at": "2026-10-07T21:27:00Z",
-      "updated_at": "2026-10-08T14:07:54Z",
+      "updated_at": "2026-10-27T18:45:31Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -24756,7 +24812,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-11-23 - 2026-11-25"
+        "text": "2026-11-24 - 2026-11-26"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24767,12 +24823,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:07:54 UTC"
+        "text": "2026-10-27 18:45:31 UTC"
        }
       ],
       "subitems": []
@@ -24781,7 +24837,7 @@
       "id": "13095528126",
       "name": "POST-DIQUE  (Ejecución)",
       "created_at": "2026-09-21T16:11:12Z",
-      "updated_at": "2026-10-08T14:07:53Z",
+      "updated_at": "2026-10-27T18:46:00Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -24800,7 +24856,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-11-25 - 2026-11-30"
+        "text": "2026-11-26 - 2026-12-01"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -24811,12 +24867,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "1"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-08 14:07:53 UTC"
+        "text": "2026-10-27 18:46:00 UTC"
        }
       ],
       "subitems": []
@@ -24825,7 +24881,7 @@
       "id": "13095528127",
       "name": "On Hire (Estimado)",
       "created_at": "2026-09-21T16:11:13Z",
-      "updated_at": "2026-10-14T21:36:12Z",
+      "updated_at": "2026-10-27T18:46:25Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -24860,7 +24916,7 @@
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-14 21:36:12 UTC"
+        "text": "2026-10-27 18:46:25 UTC"
        }
       ],
       "subitems": []
