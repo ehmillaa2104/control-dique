@@ -117,6 +117,10 @@ def valor(c):
 def num(v):
     if v in (None, "", "null"):
         return None
+    # Columna espejo con varios documentos enlazados ("9325, 2200"): se suman
+    if ", " in str(v):
+        partes = [num(p) for p in str(v).split(", ") if p.strip()]
+        return None if any(p is None for p in partes) else num(sum(partes))
     try:
         x = float(str(v).replace(",", ""))
         return int(x) if x.is_integer() else round(x, 2)

@@ -59,7 +59,11 @@
     const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     const DAY = 864e5, days = (a, b) => Math.round((new Date(b + "T00:00:00") - new Date(a + "T00:00:00")) / DAY);
     const rango = (t) => { const m = t && String(t).match(/^\s*(\d{4}-\d{2}-\d{2})\s*-\s*(\d{4}-\d{2}-\d{2})\s*$/); return m ? [m[1], m[2]] : null; };
-    const num = (t) => (t == null || t === "" || t === "null" || isNaN(Number(String(t).replace(/,/g, ""))) ? null : Number(String(t).replace(/,/g, "")));
+    // Columna espejo con varios documentos enlazados ("9325, 2200"): se suman, igual que en generar.py
+    const num = (t) => {
+      if (t != null && String(t).includes(", ")) { const p = String(t).split(", ").filter((x) => x.trim()).map(num); return p.some((x) => x == null) ? null : p.reduce((a, b) => a + b, 0); }
+      return t == null || t === "" || t === "null" || isNaN(Number(String(t).replace(/,/g, ""))) ? null : Number(String(t).replace(/,/g, ""));
+    };
     const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
     const fr = (r) => (r ? (r[0] === r[1] ? r[0] : r[0] + " → " + r[1]) : "—");
     const m$ = (v) => "US$ " + Math.round(v || 0).toLocaleString("en-US");

@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-23",
+ "extraido": "2026-10-27",
  "boards": [
   {
    "id": "18435454602",
@@ -1443,7 +1443,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-10-23T21:02:49Z",
+      "updated_at": "2026-10-27T16:27:43Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1495,7 +1495,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:49 UTC"
+        "text": "2026-10-27 16:27:43 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1535,7 +1535,7 @@
       "id": "13278839703",
       "name": "Agenciamiento",
       "created_at": "2026-10-13T16:49:09Z",
-      "updated_at": "2026-10-23T21:02:49Z",
+      "updated_at": "2026-10-27T15:22:48Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1587,12 +1587,12 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:49 UTC"
+        "text": "2026-10-27 15:22:48 UTC"
        },
        {
         "id": "color_mm7vv5nh",
         "type": "status",
-        "text": "0%"
+        "text": "50%"
        },
        {
         "id": "numeric_mm7v7xt9",
@@ -1627,7 +1627,7 @@
       "id": "13346969104",
       "name": "Estadia, Viaje y transporte",
       "created_at": "2026-10-21T14:44:49Z",
-      "updated_at": "2026-10-23T21:02:49Z",
+      "updated_at": "2026-10-27T15:23:11Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1679,12 +1679,12 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:49 UTC"
+        "text": "2026-10-27 15:23:11 UTC"
        },
        {
         "id": "color_mm7vv5nh",
         "type": "status",
-        "text": "0%"
+        "text": "50%"
        },
        {
         "id": "numeric_mm7v7xt9",
@@ -1861,6 +1861,11 @@
      "id": "lookup_mm7y2awx",
      "title": "$PO Total",
      "type": "mirror"
+    },
+    {
+     "id": "file_mm8heke3",
+     "title": "Archivo",
+     "type": "file"
     }
    ],
    "items_page": {
@@ -2040,7 +2045,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": "9325"
+        "display_value": "9325, 2200"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -2330,7 +2335,7 @@
       "id": "13127948545",
       "name": "Entrada y Salida de muelle/Carga de Materiales",
       "created_at": "2026-09-24T17:01:58Z",
-      "updated_at": "2026-10-23T21:02:53Z",
+      "updated_at": "2026-10-27T01:45:37Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -2382,7 +2387,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:53 UTC"
+        "text": "2026-10-27 01:45:37 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -2974,7 +2979,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-23T21:02:55Z",
+      "updated_at": "2026-10-26T23:09:50Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3026,7 +3031,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:55 UTC"
+        "text": "2026-10-26 23:09:50 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3046,7 +3051,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": "1"
+        "text": "2"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3066,7 +3071,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-23T21:02:56Z",
+      "updated_at": "2026-10-26T23:09:57Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3118,7 +3123,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:56 UTC"
+        "text": "2026-10-26 23:09:57 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3138,7 +3143,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": "1"
+        "text": "2"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3250,7 +3255,7 @@
       "id": "13315637430",
       "name": "Compás Magnético – Esfera Kelvin",
       "created_at": "2026-10-16T21:23:14Z",
-      "updated_at": "2026-10-23T21:02:56Z",
+      "updated_at": "2026-10-26T23:09:41Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3302,7 +3307,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:56 UTC"
+        "text": "2026-10-26 23:09:41 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3322,7 +3327,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "2"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -3340,9 +3345,9 @@
      },
      {
       "id": "13315624518",
-      "name": "Bote Salvavidas – Sistema Davit y Hook",
+      "name": "Bote Salvavidas – Reforzar el Sistema Davit mantenga seguro el Bote de caida.",
       "created_at": "2026-10-16T21:23:14Z",
-      "updated_at": "2026-10-23T21:02:57Z",
+      "updated_at": "2026-10-26T23:10:16Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -3394,7 +3399,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:57 UTC"
+        "text": "2026-10-26 23:10:16 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3414,7 +3419,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": ""
+        "text": "1"
        },
        {
         "id": "lookup_mm7ybkjg",
@@ -4668,7 +4673,7 @@
       "id": "13081201432",
       "name": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
       "created_at": "2026-09-18T16:38:44Z",
-      "updated_at": "2026-10-23T21:39:51Z",
+      "updated_at": "2026-10-26T15:59:26Z",
       "group": {
        "id": "group_mm7a5qg9",
        "title": "2.2"
@@ -5825,7 +5830,7 @@
       "id": "13346568036",
       "name": "16391 · SUBWORKS — Barge fees y agua potable",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-23T21:41:15Z",
+      "updated_at": "2026-10-27T01:56:02Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -5853,7 +5858,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13098295887"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -5888,7 +5895,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-23 21:41:15 UTC"
+        "text": "2026-10-27 01:56:02 UTC"
        }
       ]
      },
@@ -14800,7 +14807,7 @@
       "id": "13373417444",
       "name": "Motor eléctrico para reemplazar la araña de acople",
       "created_at": "2026-10-23T21:39:46Z",
-      "updated_at": "2026-10-23T22:47:38Z",
+      "updated_at": "2026-10-26T15:59:24Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -14852,7 +14859,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 22:47:38 UTC"
+        "text": "2026-10-26 15:59:24 UTC"
        },
        {
         "id": "color_mm7yb2cs",

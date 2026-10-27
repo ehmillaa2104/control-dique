@@ -315,6 +315,10 @@
   "lookup_mm7y2awx": {
    "title": "$PO Total",
    "type": "mirror"
+  },
+  "file_mm8heke3": {
+   "title": "Archivo",
+   "type": "file"
   }
  },
  "18431746322": {
@@ -404,6 +408,14 @@
    "title": "Proveedor",
    "type": "text"
   },
+  "board_relation_mm7yq0et": {
+   "title": "link to CC. Centros de Costo - Kelly Trader",
+   "type": "board_relation"
+  },
+  "board_relation_mm7y2fcq": {
+   "title": "Actividad relacionada",
+   "type": "board_relation"
+  },
   "numeric_mm2pfpzs": {
    "title": "$ PO Total",
    "type": "numbers"
@@ -435,14 +447,6 @@
   "color_mm4s40ra": {
    "title": "Casilla de verificación",
    "type": "status"
-  },
-  "board_relation_mm7yq0et": {
-   "title": "link to CC. Centros de Costo - Kelly Trader",
-   "type": "board_relation"
-  },
-  "board_relation_mm7y2fcq": {
-   "title": "Actividad relacionada",
-   "type": "board_relation"
   }
  },
  "18431380804": {
