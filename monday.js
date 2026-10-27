@@ -5161,7 +5161,7 @@ window.DIQUE_MONDAY = {
      "preliminar": 766482,
      "enRevision": null,
      "aprobado": 766482,
-     "proyectado": null,
+     "proyectado": 766482,
      "po": null,
      "incurrido": null,
      "fin": null,
@@ -5819,7 +5819,7 @@ window.DIQUE_MONDAY = {
    "aprobado": 766482,
    "po": 0,
    "incurrido": 0,
-   "proyectado": 0,
+   "proyectado": 766482,
    "lineas": [
     "13098338054"
    ],
@@ -8725,196 +8725,14 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "ca72fc2ef613",
+ "_huella": "efdfb7a4573b",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Estado",
-   "antes": "En curso",
-   "ahora": "Listo"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Fecha Real",
-   "antes": "2026-09-22 a 2026-10-26",
-   "ahora": "2026-09-22 a 2026-10-27"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Diferencia",
-   "antes": "24",
-   "ahora": "25"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PLANIFICACIÓN",
-   "campo": "Duración",
-   "antes": "35",
-   "ahora": "36"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Estado",
-   "antes": "En curso",
-   "ahora": "Listo"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Fecha Real",
-   "antes": "2026-10-26 a 2026-10-26",
-   "ahora": "2026-10-27 a 2026-10-27"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Aprobación de presupuesto",
-   "campo": "Diferencia",
-   "antes": "27",
-   "ahora": "28"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panamá",
-   "campo": "Fecha Real",
-   "antes": "2026-09-30 a 2026-10-03",
-   "ahora": "2026-10-01 a 2026-10-04"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panamá",
-   "campo": "Diferencia",
-   "antes": "-4",
-   "ahora": "-3"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PRE-DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-10-04 a 2026-10-17",
-   "ahora": "2026-10-05 a 2026-10-18"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "PRE-DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Cartagena",
-   "campo": "Fecha Real",
-   "antes": "2026-10-17 a 2026-10-19",
-   "ahora": "2026-10-18 a 2026-10-20"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Cartagena",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-10-21 a 2026-10-21",
-   "ahora": "2026-10-20 a 2026-10-20"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Entrada al muelle del astillero",
-   "campo": "Diferencia",
-   "antes": "2",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Estado",
-   "antes": "No Iniciado",
-   "ahora": "En curso"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-10-21 a 2026-11-16",
-   "ahora": "2026-10-21 a 2026-11-17"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "27",
-   "ahora": "28"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
-   "campo": "Fecha Real",
-   "antes": "2026-11-16 a 2026-11-22",
-   "ahora": "2026-11-17 a 2026-11-23"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-11-23 a 2026-11-23",
-   "ahora": "2026-11-24 a 2026-11-24"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Fecha Real",
-   "antes": "2026-11-23 a 2026-11-25",
-   "ahora": "2026-11-24 a 2026-11-26"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-11-25 a 2026-11-30",
-   "ahora": "2026-11-26 a 2026-12-01"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "1"
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "$ Proyectado",
+   "antes": "—",
+   "ahora": "766482"
   }
  ],
  "observaciones": [
