@@ -460,13 +460,19 @@
     return `<div class="row-b row-sem">${cambios}${atencion}</div>`;
   }
 
+  // Imprevistos (tablero Cambios/Imprevistos). Departamento = área del trabajo enlazado ("Actividad Relacionada");
+  // impacto = "Tipo de Impacto" con su costo y días
+  const chipImp = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
+  const areaImp = (M, c) => M.areas.find((a) => a.trabajos.some((t) => (c.actividades || []).includes(t.id)));
+  const impacto = (c) => [c.tipo || "sin tipo", c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : ""].filter(Boolean).join(" · ");
   function cambiosCard(M) {
     const C = M.D.cambios.slice(0, 6);
-    const chip = (e) => `<span class="chip ${/aprob/i.test(e) ? "ok" : /rechaz/i.test(e) ? "alert" : /solic/i.test(e) ? "warn" : ""}">${esc(e || "Sin estado")}</span>`;
-    // Departamento = área del trabajo enlazado ("Actividad Relacionada"); impacto = "Tipo de Impacto" con su costo y días
-    const depto = (c) => (M.areas.find((a) => a.trabajos.some((t) => (c.actividades || []).includes(t.id))) || {}).nombre || "Sin departamento";
-    const impacto = (c) => [c.tipo || "sin tipo", c.costo ? moneyK(c.costo) : "", c.dias ? "+" + days1(c.dias) : ""].filter(Boolean).join(" · ");
-    const cambios = C.length ? C.map((c) => `<div class="li"><div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(depto(c))}</span> · Impacto: ${esc(impacto(c))}${fechaImp(c) ? " · " + fmtShort(fechaImp(c)) : ""}</small></div>${chip(c.estado)}</div>`).join("")
+    // Cada imprevisto lleva a su área, donde está el desglose con el detalle
+    const cambios = C.length ? C.map((c) => {
+      const a = areaImp(M, c);
+      const cont = `<div><b>${esc(c.nombre)}</b><small><span class="cmb-dep">${esc(a ? a.nombre : "Sin departamento")}</span> · Impacto: ${esc(impacto(c))}${fechaImp(c) ? " · " + fmtShort(fechaImp(c)) : ""}</small></div><span class="li-r">${chipImp(c.estado)}${a ? '<span class="li-go">›</span>' : ""}</span>`;
+      return a ? `<a class="li li-link" href="#${a.id}/imp-${c.id}" title="Ver el detalle en ${esc(a.nombre)}">${cont}</a>` : `<div class="li">${cont}</div>`;
+    }).join("")
       : empty("Sin imprevistos registrados en Monday.");
     return card("Imprevistos", `<div class="list">${cambios}</div>`,
       { right: plural(M.D.cambios.length, "imprevisto", "imprevistos") });
@@ -616,6 +622,29 @@
     }).join("");
   }
 
+  // Desglose de los imprevistos de un área: uno por fila, desplegable con su detalle
+  function impAreaCard(M, a) {
+    const C = M.D.cambios.filter((c) => areaImp(M, c) === a);
+    if (!C.length) return "";
+    const todos = M.areas.flatMap((x) => x.trabajos);
+    const fila = (c) => {
+      const f = fechaImp(c), trab = todos.filter((t) => (c.actividades || []).includes(t.id));
+      const det = [
+        ["Ocurrió", f ? fmtDate(f) : "—"],
+        ...(f && c.creado && f !== c.creado ? [["Registrado en Monday", fmtDate(c.creado)]] : []),
+        ["Tipo de impacto", esc(c.tipo || "—")],
+        ["Costo", c.costo ? moneyK(c.costo) : "—"],
+        ["Días de impacto", c.dias ? days1(c.dias) : "—"],
+        ["Estado", chipImp(c.estado)],
+        ["Fecha de aprobación", c.aprobado ? fmtDate(c.aprobado) : "—"],
+        ["Centro de costo", esc(c.cc || "—")],
+        ["Trabajo relacionado", trab.length ? trab.map((t) => `${esc(t.nombre)}<small>${esc(t.fase || "sin fase")} · ${t.pct || 0} %</small>`).join("") : "—"],
+      ].map(([k, v]) => `<div class="imp-k">${k}</div><div class="imp-v">${v}</div>`).join("");
+      return `<details class="imp" id="imp-${c.id}"><summary><span class="imp-n"><b>${esc(c.nombre)}</b><small>Impacto: ${esc(impacto(c))}${f ? " · " + fmtShort(f) : ""}</small></span>${chipImp(c.estado)}</summary><div class="imp-d">${det}</div></details>`;
+    };
+    return card(`Imprevistos · ${esc(a.nombre)}`, `<div class="imp-l">${C.map(fila).join("")}</div>`, { cls: "wide", right: `${plural(C.length, "imprevisto", "imprevistos")} · tablero Cambios/Imprevistos` });
+  }
+
   function viewArea(M, a, q) {
     // Con una fase elegida, los indicadores son solo de esa fase; con "Todas", de todo el tablero
     const ts = FASE === "todas" ? a.trabajos : a.trabajos.filter(enFase(FASE)), act = ts.filter((t) => !t.cancelado);
@@ -628,6 +657,7 @@
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
     return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
       <div class="kpis ${pa ? "k8" : "k7"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos, modelo: M })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
+      ${impAreaCard(M, a)}
       ${card(`Trabajos · ${esc(a.tablero)}${FASE !== "todas" ? ` · ${(FASES.find((f) => f.id === FASE) || {}).nombre}` : ""}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
   }
@@ -745,7 +775,7 @@
   function render() {
     if (!MODEL) return;
     const M = MODEL;
-    const key = decodeURIComponent(location.hash.slice(1)) || "resumen";
+    const key = decodeURIComponent(location.hash.slice(1)).split("/")[0] || "resumen";
     const area = M.areas.find((a) => a.id === key);
     VIEW = area ? key : key === "cronograma" || key === "registro" ? key : "resumen";
     $("tabs").innerHTML = tabs(M).map((t) => `<a class="tab" href="#${t.id}" ${t.id === VIEW ? 'aria-current="page"' : ""}>${icon(t.icono)}${esc(t.nombre)}${t.badge ? `<span class="badge">${t.badge}</span>` : ""}</a>`).join("");
@@ -757,6 +787,8 @@
     sailShip();
     app.innerHTML = area ? viewArea(M, area, QUERY[area.id]) : VIEW === "cronograma" ? viewCrono(M) : VIEW === "registro" ? viewRegistro(M) : viewResumen(M);
     app.querySelectorAll(".gantt").forEach(layoutMl);
+    const imp = impDelHash();
+    if (imp) { imp.open = true; imp.classList.add("imp-sel"); }
   }
 
   // Búsqueda dentro de un área sin perder el foco del campo
@@ -777,7 +809,18 @@
     try { localStorage.setItem("dique-fase", FASE); } catch (err) {}
     const y = scrollY; render(); scrollTo({ top: y });
   });
-  addEventListener("hashchange", () => { render(); window.scrollTo({ top: 0 }); });
+  // "#area/imp-<id>": abre el área, despliega ese imprevisto y lo deja a la vista
+  function impDelHash() {
+    const id = decodeURIComponent(location.hash.slice(1)).split("/")[1];
+    return (id && /^imp-/.test(id) && document.getElementById(id)) || null;
+  }
+  function irAImprevisto() {
+    const el = impDelHash();
+    if (!el) return false;
+    el.scrollIntoView({ block: "center" });
+    return true;
+  }
+  addEventListener("hashchange", () => { render(); if (!irAImprevisto()) window.scrollTo({ top: 0 }); });
   let rt, lastW = innerWidth;
   addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (innerWidth !== lastW) { lastW = innerWidth; render(); } }, 150); });
 
@@ -804,6 +847,7 @@
     const errs = (window.DIQUE_MONDAY.observaciones || []).filter((o) => o.nivel === "error");
     if (errs.length) app.insertAdjacentHTML("beforebegin", `<div class="notice">Los datos de Monday tienen ${errs.length} error(es). <a href="verificar.html">Ver la verificación</a></div>`);
     render();
+    irAImprevisto();
   } catch (err) {
     app.innerHTML = `<div class="notice">No se pudo cargar el dashboard: ${esc(err.message)}</div>`;
     console.error(err);

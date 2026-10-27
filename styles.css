@@ -771,3 +771,24 @@ details.reg-sem + details.reg-sem { margin-top: 14px; }
   .cc-table .n:nth-of-type(5) { display: block; }                        /* Incurrido */
   .cc-table .n:nth-of-type(n+6), .cc-table .st { display: none; }
 }
+
+/* Imprevistos: enlace al área y desglose desplegable en la pestaña del área */
+.list a.li-link { color: inherit; text-decoration: none; cursor: pointer; }
+.list a.li-link:hover { background: var(--surface-2); }
+.li-r { display: inline-flex; align-items: center; gap: 8px; flex: none; }
+.li-go { font-size: 18px; line-height: 1; color: var(--ink-3); }
+.imp-l { padding: 4px 0; }
+.imp { border-bottom: 1px solid var(--border); }
+.imp:last-child { border-bottom: 0; }
+.imp > summary { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 14px; cursor: pointer; list-style: none; }
+.imp > summary::-webkit-details-marker { display: none; }
+.imp-n { min-width: 0; }
+.imp-n b { display: block; font-size: 13px; }
+.imp-n b::before { content: "▸"; display: inline-block; width: 14px; color: var(--ink-3); transition: transform .15s; }
+.imp[open] .imp-n b::before { transform: rotate(90deg); }
+.imp-n small { display: block; font-size: 11.5px; color: var(--ink-3); padding-left: 14px; }
+.imp-d { display: grid; grid-template-columns: minmax(130px, 180px) minmax(0, 1fr); gap: 6px 14px; padding: 4px 14px 14px 28px; font-size: 12.5px; }
+.imp-k { color: var(--ink-3); }
+.imp-v small { display: block; font-size: 11px; color: var(--ink-3); }
+.imp-sel > summary { background: var(--surface-2); }
+@media (max-width: 600px) { .imp-d { grid-template-columns: 1fr; gap: 2px; padding-left: 14px; } .imp-k { margin-top: 6px; } }

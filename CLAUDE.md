@@ -94,6 +94,11 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 - Reemplaza al indicador "En revisión" (pedido del usuario, 27 oct). Suma la columna **Días** del tablero **Cambios/Imprevistos** en los registros con Tipo de Impacto "Mal Tiempo"; el detalle lista cada registro con su fecha y estado. La fecha es la del registro en Monday, salvo que `notas.js` → `fechaImprevisto` diga cuándo ocurrió (la lluvia fue el 24 oct aunque se registró el 27; 27 oct).
 
+## Imprevistos (tablero Cambios/Imprevistos)
+
+- En el resumen, cada imprevisto es un enlace a su área (la del trabajo enlazado en "Actividad Relacionada"): `#<area>/imp-<id>` abre la pestaña del área, despliega ese imprevisto y lo deja a la vista (27 oct).
+- Cada pestaña de área tiene el cuadro "Imprevistos · <área>" (debajo de los indicadores), un desplegable por imprevisto con: fecha en que ocurrió y de registro, tipo de impacto, costo, días, estado, fecha de aprobación, centro de costo y trabajo relacionado (fase y avance). La descripción no se muestra (el repositorio es público).
+
 ## Registro semanal (fotos, videos y avance en sitio)
 
 - Pestaña **"Registro semanal"** (al lado del Resumen gerencial) y recuadro **"Esta semana en el dique"** en el resumen. Datos en `registro.js`, se edita a mano; archivos en `registro/sN/`.
