@@ -1539,7 +1539,7 @@
         "id": "lookup_mm7ym614",
         "type": "mirror",
         "text": null,
-        "display_value": "0"
+        "display_value": "120000"
        }
       ],
       "subitems": [
@@ -5700,7 +5700,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "120000"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -8804,9 +8804,9 @@
      },
      {
       "id": "13408538282",
-      "name": "KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (débito y crédito por USD 120.000)",
+      "name": "KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (anticipo USD 120.000)",
       "created_at": "2026-10-28T16:53:51Z",
-      "updated_at": "2026-10-28T16:53:51Z",
+      "updated_at": "2026-10-28T21:29:05Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -8846,7 +8846,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "0"
+        "text": "120000"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -8871,7 +8871,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:53:51 UTC"
+        "text": "2026-10-28 21:29:05 UTC"
        }
       ],
       "subitems": []

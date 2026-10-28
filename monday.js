@@ -5163,7 +5163,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 766482,
      "proyectado": 766482,
      "po": null,
-     "incurrido": 0,
+     "incurrido": 120000,
      "fin": null,
      "cc": [
       "13081201165"
@@ -5830,7 +5830,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 766482,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 120000,
    "proyectado": 766482,
    "lineas": [
     "13098338054"
@@ -6705,11 +6705,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "id": "13408538282",
-   "nombre": "KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (débito y crédito por USD 120.000)",
+   "nombre": "KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (anticipo USD 120.000)",
    "area": "",
    "proveedor": "Seaforth Maritime",
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 120000,
    "saldo": null,
    "fecha": "2026-10-27",
    "estatus": "",
@@ -9263,49 +9263,14 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "226153619bb6",
+ "_huella": "caa6faa0e442",
  "cambiosLectura": [
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Incurrido",
-   "antes": "11525",
-   "ahora": "24089"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
-   "campo": "$ Incurrido",
-   "antes": "3100",
-   "ahora": "13777.56"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de pintura",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "42481.5"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Compra de ánodos",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "10850"
-  },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Estadia, Viaje y transporte",
-   "campo": "$ Incurrido",
-   "antes": "4500",
-   "ahora": "6960"
+   "antes": "0",
+   "ahora": "120000"
   }
  ],
  "observaciones": [
@@ -9515,7 +9480,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (débito y crédito por USD 120.000)\": sin monto; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (anticipo USD 120.000)\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
