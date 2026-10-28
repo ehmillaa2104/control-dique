@@ -5,9 +5,9 @@ name: Actualizar datos de Monday
 
 on:
   schedule:
-    # Hora UTC. Colombia es UTC-5: 07:00, 12:00 y 17:00 en Cartagena.
+    # Hora UTC. Colombia es UTC-5: 07:00, 12:00 y 16:00 en Cartagena.
     # GitHub puede demorar unos minutos en arrancar cada corrida.
-    - cron: "0 12,17,22 * * *"
+    - cron: "0 12,17,21 * * *"
   workflow_dispatch:
 
 permissions:

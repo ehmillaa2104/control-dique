@@ -63,7 +63,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 ## Actualización automática (GitHub Actions)
 
-- `.github/workflows/actualizar-monday.yml` corre 3 veces al día (07:00, 12:00 y 17:00 de Colombia) en los servidores de GitHub: `monday/leer_monday.py` lee Monday con el secreto `MONDAY_TOKEN`, corre `generar.py --recortar` y, si no hay errores y `monday.js` cambió, sube `?v=` y publica. Si hay errores, la corrida falla y no publica (GitHub avisa por correo).
+- `.github/workflows/actualizar-monday.yml` corre 3 veces al día (07:00, 12:00 y 16:00 de Colombia) en los servidores de GitHub: `monday/leer_monday.py` lee Monday con el secreto `MONDAY_TOKEN`, corre `generar.py --recortar` y, si no hay errores y `monday.js` cambió, sube `?v=` y publica. Si hay errores, la corrida falla y no publica (GitHub avisa por correo).
 - **La consulta y la lista de tableros están en dos lugares: arriba en este archivo y en `monday/leer_monday.py`.** Si se cambia una, se cambia la otra en el mismo commit; si no, la automática sigue leyendo la consulta vieja.
 - Los cambios de diseño (`app.js`, `styles.css`, `registro.js`, `notas.js`) no la afectan: solo toca `monday.js`, `monday/historial.json`, `monday/crudo/kelly.json` y el `?v=` de `index.html` y `semana.html`.
 
