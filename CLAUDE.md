@@ -61,6 +61,12 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 **Revisar qué actualizaron los equipos** (27 oct): leer **todo**, columnas y también los mensajes (updates, "globitos") de **todos los tableros**, de los trabajos y de sus subelementos (el tablero "Subelementos de P3. Técnico", 18432105448, tiene sus propios mensajes). Ahí dejan la información más importante. Contar solo lo de **esta semana** (o entre ayer y hoy, si así lo pide): un mensaje escrito hoy que relata fechas pasadas (p. ej. la bitácora de limpieza de tanques del 3–8 oct cargada el 26 oct) se deja de lado.
 
+## Actualización automática (GitHub Actions)
+
+- `.github/workflows/actualizar-monday.yml` corre 3 veces al día (07:00, 12:00 y 17:00 de Colombia) en los servidores de GitHub: `monday/leer_monday.py` lee Monday con el secreto `MONDAY_TOKEN`, corre `generar.py --recortar` y, si no hay errores y `monday.js` cambió, sube `?v=` y publica. Si hay errores, la corrida falla y no publica (GitHub avisa por correo).
+- **La consulta y la lista de tableros están en dos lugares: arriba en este archivo y en `monday/leer_monday.py`.** Si se cambia una, se cambia la otra en el mismo commit; si no, la automática sigue leyendo la consulta vieja.
+- Los cambios de diseño (`app.js`, `styles.css`, `registro.js`, `notas.js`) no la afectan: solo toca `monday.js`, `monday/historial.json`, `monday/crudo/kelly.json` y el `?v=` de `index.html` y `semana.html`.
+
 ## Reglas de cálculo acordadas
 
 - **Avance físico** = Σ (Estado % × Duración) / Σ Duración de P1, P2 y P3, igual que la columna "Avance" de Monday. Se pondera por duración porque no todos los trabajos tienen costo. **Un trabajo planificado es el que tiene una Fase** (Pre-dique, Dique, Post-dique…) y debería tener Duración. En las pestañas de área solo se muestran los trabajos con fase; los "No Aplica" no se ven. **Un trabajo con Duración es un trabajo planificado para ejecutarse.** No se muestra como falta de datos: se informa cuántos de los planificados están en ejecución (25–75 %) y cuántos finalizaron (100 %).

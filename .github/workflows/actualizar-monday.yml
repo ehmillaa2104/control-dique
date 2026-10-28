@@ -1,0 +1,64 @@
+# Actualiza el control de dique con los datos de Monday, 3 veces al día, en los servidores de GitHub
+# (no depende de ningún computador). Lee Monday, corre generar.py y publica solo si no hay errores
+# y algo cambió. También se puede correr a mano: pestaña Actions → "Actualizar datos de Monday" → Run workflow.
+name: Actualizar datos de Monday
+
+on:
+  schedule:
+    # Hora UTC. Colombia es UTC-5: 07:00, 12:00 y 17:00 en Cartagena.
+    # GitHub puede demorar unos minutos en arrancar cada corrida.
+    - cron: "0 12,17,22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-monday
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: America/Bogota
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Leer Monday
+        env:
+          MONDAY_TOKEN: ${{ secrets.MONDAY_TOKEN }}
+        run: python monday/leer_monday.py
+
+      - name: Generar monday.js (si hay errores, no se publica)
+        run: |
+          set -o pipefail
+          python monday/generar.py --recortar | tee salida.txt
+
+      - name: Publicar si hubo cambios
+        run: |
+          if git diff --quiet -- monday.js; then
+            echo "Sin cambios en los datos: no se publica."
+            exit 0
+          fi
+          # Sube la versión (?v=) para que los navegadores no usen el monday.js viejo
+          v=$(grep -oP 'monday\.js\?v=\K[0-9]+\.[0-9]+' index.html | head -1)
+          nv="${v%.*}.$(( ${v#*.} + 1 ))"
+          sed -i "s/?v=${v//./\.}/?v=$nv/g" index.html semana.html
+          cambios=$(grep -m1 -oP 'Cambios desde la lectura anterior: \K[0-9]+' salida.txt || echo "?")
+          git config user.name "Actualización automática"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monday.js monday/historial.json monday/crudo/kelly.json index.html semana.html
+          git commit -q -m "Datos de Monday al $(date '+%d-%m-%Y %H:%M') (automático): $cambios cambio(s) desde la lectura anterior"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            sleep 15
+          done
+          echo "No se pudo subir (conflicto con otro cambio)." >&2
+          exit 1
