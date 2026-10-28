@@ -4531,7 +4531,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10000,
      "proyectado": 12000,
      "po": null,
-     "incurrido": 11525,
+     "incurrido": 24089,
      "fin": "2026-10-16",
      "cc": [
       "13081208222"
@@ -4631,7 +4631,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10500,
      "proyectado": 10500,
      "po": null,
-     "incurrido": 3100,
+     "incurrido": 13777.56,
      "fin": "2026-10-21",
      "cc": [
       "13081201194"
@@ -5038,7 +5038,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 42481,
      "proyectado": 42481,
      "po": null,
-     "incurrido": null,
+     "incurrido": 42481.5,
      "fin": "2026-10-16",
      "cc": [
       "13081177349"
@@ -5113,7 +5113,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10850,
      "proyectado": 10850,
      "po": null,
-     "incurrido": null,
+     "incurrido": 10850,
      "fin": "2026-10-16",
      "cc": [
       "13081177349"
@@ -5163,7 +5163,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 766482,
      "proyectado": 766482,
      "po": null,
-     "incurrido": null,
+     "incurrido": 0,
      "fin": null,
      "cc": [
       "13081201165"
@@ -5568,7 +5568,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 4500,
+     "incurrido": 6960,
      "fin": null,
      "cc": [
       "13081177348"
@@ -5638,13 +5638,16 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 53331,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 53331.5,
    "proyectado": 53331,
    "lineas": [
     "13098326970",
     "13098337112"
    ],
-   "pos": []
+   "pos": [
+    "13408514333",
+    "13408514205"
+   ]
   },
   {
    "id": "13081208222",
@@ -5655,14 +5658,17 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
-   "incurrido": 11525,
+   "incurrido": 24089,
    "proyectado": 12000,
    "lineas": [
     "13098295887"
    ],
    "pos": [
     "13302182661",
-    "13346568036"
+    "13346568036",
+    "13408531328",
+    "13408531809",
+    "13408530896"
    ]
   },
   {
@@ -5692,14 +5698,17 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10500,
    "po": 0,
-   "incurrido": 3100,
+   "incurrido": 13777.56,
    "proyectado": 10500,
    "lineas": [
     "13127948545"
    ],
    "pos": [
     "13302151223",
-    "13302151031"
+    "13302151031",
+    "13408531652",
+    "13408531653",
+    "13408515319"
    ]
   },
   {
@@ -5782,7 +5791,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
-   "incurrido": 15000,
+   "incurrido": 17460,
    "proyectado": 9000,
    "lineas": [
     "13238699549",
@@ -5792,7 +5801,10 @@ window.DIQUE_MONDAY = {
     "13302137014",
     "13302183351",
     "13346621488",
-    "13346566759"
+    "13346566759",
+    "13408514151",
+    "13408536607",
+    "13408515314"
    ]
   },
   {
@@ -5823,7 +5835,9 @@ window.DIQUE_MONDAY = {
    "lineas": [
     "13098338054"
    ],
-   "pos": []
+   "pos": [
+    "13408538282"
+   ]
   },
   {
    "id": "13081201432",
@@ -6239,6 +6253,96 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-10-27"
   },
   {
+   "id": "13408556100",
+   "nombre": "29005 · Grupo Gasol — Lanza de corte y cortadora",
+   "area": "",
+   "proveedor": "Grupo Gasol, S.A.",
+   "po": 0,
+   "incurrido": 645,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408567192",
+   "nombre": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
+   "area": "",
+   "proveedor": "El Suplidor",
+   "po": 0,
+   "incurrido": 198.9,
+   "saldo": null,
+   "fecha": "2026-10-26",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408567193",
+   "nombre": "11530 · Altamar Panamá — Sellado de pasaportes",
+   "area": "",
+   "proveedor": "Altamar Panamá, S.A.",
+   "po": 0,
+   "incurrido": 327.5,
+   "saldo": null,
+   "fecha": "2026-10-27",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408538335",
+   "nombre": "DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
+   "area": "",
+   "proveedor": "Oceanco Safety & Supply",
+   "po": 0,
+   "incurrido": 655,
+   "saldo": null,
+   "fecha": "2026-10-26",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408537271",
+   "nombre": "53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011",
+   "area": "",
+   "proveedor": "Tornillos y Herramientas Barrientos",
+   "po": 0,
+   "incurrido": 303.29,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408556069",
+   "nombre": "58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 683.5,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-10-28"
+  },
+  {
    "id": "13302182661",
    "nombre": "16379 · SUBWORKS — Recolección de 85 m³ de slop",
    "area": "",
@@ -6560,6 +6664,234 @@ window.DIQUE_MONDAY = {
     "13098295887"
    ],
    "actualizado": "2026-10-27"
+  },
+  {
+   "id": "13408514205",
+   "nombre": "DN-10311 · Oceanco Safety & Supply — Ánodos de zinc + custom fees",
+   "area": "",
+   "proveedor": "Oceanco Safety & Supply",
+   "po": 0,
+   "incurrido": 10850,
+   "saldo": null,
+   "fecha": "2026-10-13",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177349"
+   ],
+   "trabajos": [
+    "13098337112"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408514333",
+   "nombre": "DN-10314 · Oceanco Safety & Supply — Pintura de dique",
+   "area": "",
+   "proveedor": "Oceanco Safety & Supply",
+   "po": 0,
+   "incurrido": 42481.5,
+   "saldo": null,
+   "fecha": "2026-10-26",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177349"
+   ],
+   "trabajos": [
+    "13098326970"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408538282",
+   "nombre": "KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (débito y crédito por USD 120.000)",
+   "area": "",
+   "proveedor": "Seaforth Maritime",
+   "po": 0,
+   "incurrido": 0,
+   "saldo": null,
+   "fecha": "2026-10-27",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201165"
+   ],
+   "trabajos": [
+    "13098338054"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408531809",
+   "nombre": "98919 · Servicios Tecnológicos de Incineración — Recolección e incineración de basura",
+   "area": "",
+   "proveedor": "Servicios Tecnológicos de Incineración",
+   "po": 0,
+   "incurrido": 2689,
+   "saldo": null,
+   "fecha": "2026-10-23",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408530896",
+   "nombre": "98920 · Servicios Tecnológicos de Incineración — Recolección de 30 tanques de oily solid waste",
+   "area": "",
+   "proveedor": "Servicios Tecnológicos de Incineración",
+   "po": 0,
+   "incurrido": 4300,
+   "saldo": null,
+   "fecha": "2026-10-23",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408531328",
+   "nombre": "4539 · Subworks — Recolección y disposición final de 30 m³ de slop",
+   "area": "",
+   "proveedor": "Subworks, S.A.",
+   "po": 0,
+   "incurrido": 5575,
+   "saldo": null,
+   "fecha": "2026-10-23",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408531652",
+   "nombre": "INV/2026/00946-2615 · Terminal Marítima — Servicio logístico (camiones, grúa, montacarga, seguridad, amarre)",
+   "area": "",
+   "proveedor": "Terminal Marítima de Servicios",
+   "po": 0,
+   "incurrido": 9602.56,
+   "saldo": null,
+   "fecha": "2026-10-27",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201194"
+   ],
+   "trabajos": [
+    "13127948545"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408531653",
+   "nombre": "INV/2026/00950-2619 · Terminal Marítima — Ingreso a muelle de camión, grúa y montacarga",
+   "area": "",
+   "proveedor": "Terminal Marítima de Servicios",
+   "po": 0,
+   "incurrido": 650,
+   "saldo": null,
+   "fecha": "2026-10-27",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201194"
+   ],
+   "trabajos": [
+    "13127948545"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408515319",
+   "nombre": "INV/2026/00949-2618 · Terminal Marítima — Ingreso a muelle de camión y uso de lancha",
+   "area": "",
+   "proveedor": "Terminal Marítima de Servicios",
+   "po": 0,
+   "incurrido": 425,
+   "saldo": null,
+   "fecha": "2026-10-27",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201194"
+   ],
+   "trabajos": [
+    "13127948545"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408536607",
+   "nombre": "ACH26/10145 · Luis Carlos Saavedra — Viáticos del 13 al 16 de octubre",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 250,
+   "saldo": null,
+   "fecha": "2026-10-20",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408514151",
+   "nombre": "ACH26/10153 · Sergio Allard — Viáticos de alimentación del 19 al 31 de octubre",
+   "area": "",
+   "proveedor": "Sergio Allard",
+   "po": 0,
+   "incurrido": 1105,
+   "saldo": null,
+   "fecha": "2026-10-22",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13408515314",
+   "nombre": "ACH26/10154 · Luis Carlos Saavedra — Viáticos de alimentación del 19 al 31 de octubre",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 1105,
+   "saldo": null,
+   "fecha": "2026-10-22",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-10-28"
   }
  ],
  "cambios": [
@@ -8931,8 +9263,51 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "e70da6e76fc8",
- "cambiosLectura": [],
+ "_huella": "226153619bb6",
+ "cambiosLectura": [
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Incurrido",
+   "antes": "11525",
+   "ahora": "24089"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Entrada y Salida de muelle/Carga de Materiales",
+   "campo": "$ Incurrido",
+   "antes": "3100",
+   "ahora": "13777.56"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de pintura",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "42481.5"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Compra de ánodos",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "10850"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "0"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Estadia, Viaje y transporte",
+   "campo": "$ Incurrido",
+   "antes": "4500",
+   "ahora": "6960"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "aviso",
@@ -9040,6 +9415,30 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"29005 · Grupo Gasol — Lanza de corte y cortadora\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"11530 · Altamar Panamá — Sellado de pasaportes\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"16379 · SUBWORKS — Recolección de 85 m³ de slop\": sin monto; no suma en los totales."
   },
   {
@@ -9105,6 +9504,54 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"16391 · SUBWORKS — Barge fees y agua potable\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"DN-10311 · Oceanco Safety & Supply — Ánodos de zinc + custom fees\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"DN-10314 · Oceanco Safety & Supply — Pintura de dique\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"KELLY DIQUE · Seaforth Maritime — Primer pago dique seco (débito y crédito por USD 120.000)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"98919 · Servicios Tecnológicos de Incineración — Recolección e incineración de basura\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"98920 · Servicios Tecnológicos de Incineración — Recolección de 30 tanques de oily solid waste\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"4539 · Subworks — Recolección y disposición final de 30 m³ de slop\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"INV/2026/00946-2615 · Terminal Marítima — Servicio logístico (camiones, grúa, montacarga, seguridad, amarre)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"INV/2026/00950-2619 · Terminal Marítima — Ingreso a muelle de camión, grúa y montacarga\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"INV/2026/00949-2618 · Terminal Marítima — Ingreso a muelle de camión y uso de lancha\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10145 · Luis Carlos Saavedra — Viáticos del 13 al 16 de octubre\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10153 · Sergio Allard — Viáticos de alimentación del 19 al 31 de octubre\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10154 · Luis Carlos Saavedra — Viáticos de alimentación del 19 al 31 de octubre\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
