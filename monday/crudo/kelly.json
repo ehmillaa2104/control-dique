@@ -9698,7 +9698,7 @@
       "id": "13398896309",
       "name": "Perdida de día por lluvia",
       "created_at": "2026-10-27T18:31:32Z",
-      "updated_at": "2026-10-27T18:32:19Z",
+      "updated_at": "2026-10-29T15:42:32Z",
       "group": {
        "id": "topics",
        "title": "DIQUE KELLY"
@@ -9720,7 +9720,7 @@
        {
         "id": "dropdown_mkzbgqr7",
         "type": "dropdown",
-        "text": "Tiempo, Mal Tiempo"
+        "text": "Tiempo"
        },
        {
         "id": "numeric_mm268zat",

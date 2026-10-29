@@ -6899,7 +6899,7 @@ window.DIQUE_MONDAY = {
    "id": "13398896309",
    "nombre": "Perdida de día por lluvia",
    "creado": "2026-10-27",
-   "tipo": "Tiempo, Mal Tiempo",
+   "tipo": "Tiempo",
    "costo": null,
    "dias": 1,
    "estado": "Solicitado",
@@ -6908,7 +6908,7 @@ window.DIQUE_MONDAY = {
    "actividades": [
     "13098338054"
    ],
-   "actualizado": "2026-10-27"
+   "actualizado": "2026-10-29"
   },
   {
    "id": "13362169864",
@@ -9466,13 +9466,9 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "f213f5e93afd",
+ "_huella": "c3274fd5ac7d",
  "cambiosLectura": [],
  "observaciones": [
-  {
-   "nivel": "aviso",
-   "texto": "P2. Cubierta: columna nueva \"Archivo\" (file_mm8j9p2t, file); revisar si el dashboard debe usarla."
-  },
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
@@ -9716,10 +9712,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Participación del equipo: 63.3% (19 de 30 puntos) · máximo igual para todos: 6 pts · cuentan: KO (reunión), S3 (reunión y actualización), S4 (actualización)."
-  },
-  {
-   "nivel": "info",
-   "texto": "Estructura de columnas guardada como conocida (monday/columnas_conocidas.json)."
   }
  ]
 };
