@@ -18,6 +18,9 @@ window.DIQUE_REGISTRO = {
           { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" },
           { "txt": "1 día perdido por lluvia", "extra": "24 oct" }
         ] },
+        { "zona": "Casco", "items": [
+          { "txt": "Caracoleo y lavado 1 a presión", "extra": "30 oct" }
+        ] },
         { "zona": "Tanques de carga", "items": [
           { "txt": "Corte de acero reportado: 5S 60 %, 1P y 5P 40 %, 2S 35 %, 1S 25 %, 3S 20 %", "extra": "30 oct" },
           { "txt": "5S: ya se colocan láminas nuevas", "extra": "primer tanque que repone acero" },
@@ -48,6 +51,11 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s6/a30_casco_01_lavado-proa.jpg", "texto": "Lavado a presión del casco hacia la proa", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/a30_casco_02_lavado-costado.jpg", "texto": "Lavado a presión del costado desde el piso, con andamio móvil", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/a30_casco_03_lavado-detalle.jpg", "texto": "Detalle del lavado en la parte baja del costado", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/a30_casco_04_manometro-1.jpg", "texto": "Manómetro de una bomba de lavado: cerca de 5000 psi (unos 340 bar)", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/a30_casco_05_manometro-2.jpg", "texto": "Manómetro de otra bomba de lavado: cerca de 5000 psi (unos 340 bar)", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_t1p_01_manhole-ifo-1p.jpg", "texto": "Manhole IFO 1P abierto", "grupo": "Tanque 1 babor · IFO 1P · 40 % de corte · 30 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_t1p_02_corte-abierto-lecturas.jpg", "texto": "Corte abierto en el forro, con luz del día al fondo; lecturas de 6.3 a 9.9 mm", "grupo": "Tanque 1 babor · IFO 1P · 40 % de corte · 30 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_t1p_03_secciones-retiradas.jpg", "texto": "Secciones de forro ya retiradas entre refuerzos, con ventilación forzada", "grupo": "Tanque 1 babor · IFO 1P · 40 % de corte · 30 oct" },
