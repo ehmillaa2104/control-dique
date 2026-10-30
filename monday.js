@@ -131,17 +131,17 @@ window.DIQUE_MONDAY = {
    "grupo": "Dique",
    "nombre": "DIQUE (Ejecución)",
    "estado": "En curso",
-   "duracion": 28,
+   "duracion": 30,
    "base": [
     "2026-10-19",
     "2026-11-16"
    ],
    "real": [
     "2026-10-21",
-    "2026-11-17"
+    "2026-11-19"
    ],
-   "diferencia": 1,
-   "actualizado": "2026-10-27"
+   "diferencia": 3,
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13233513509",
@@ -176,6 +176,23 @@ window.DIQUE_MONDAY = {
    ],
    "diferencia": 1,
    "actualizado": "2026-10-27"
+  },
+  {
+   "id": "13430387154",
+   "grupo": "Dique",
+   "nombre": "Varada",
+   "estado": "No Iniciado",
+   "duracion": 0,
+   "base": [
+    "2026-11-06",
+    "2026-11-06"
+   ],
+   "real": [
+    "2026-11-06",
+    "2026-11-06"
+   ],
+   "diferencia": 0,
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13233510296",
@@ -279,7 +296,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-10-30",
      "costo": "aprobado"
     },
     {
@@ -1499,7 +1516,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 3200,
      "proyectado": 3200,
      "po": null,
-     "incurrido": null,
+     "incurrido": 146.85,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4449,7 +4466,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 1276.88,
      "fin": null,
      "cc": [
       "13081201432"
@@ -5923,7 +5940,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 14217.51,
+   "incurrido": 16019.7,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6113,7 +6130,11 @@ window.DIQUE_MONDAY = {
     "13302212275",
     "13346658601",
     "13346547715",
-    "13346590356"
+    "13346590356",
+    "13408538335",
+    "13408537271",
+    "13408556100",
+    "13408567192"
    ]
   },
   {
@@ -6201,7 +6222,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13302229682",
    "nombre": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
    "incurrido": 427.5,
@@ -6213,12 +6234,12 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13302212705",
    "nombre": "57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
    "incurrido": 2986.57,
@@ -6230,12 +6251,12 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13302150984",
    "nombre": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
    "incurrido": 238.24,
@@ -6246,8 +6267,10 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081201432"
    ],
-   "trabajos": [],
-   "actualizado": "2026-10-16"
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13346547714",
@@ -6267,7 +6290,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13346590356",
    "nombre": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Acero R&R Soluciones, S.A.",
    "po": 0,
    "incurrido": 194.74,
@@ -6278,8 +6301,10 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081201432"
    ],
-   "trabajos": [],
-   "actualizado": "2026-10-27"
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13346657638",
@@ -6299,7 +6324,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13346547715",
    "nombre": "57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona",
-   "area": "",
+   "area": "Maquina",
    "proveedor": "Agencias Domingo, S.A.",
    "po": 0,
    "incurrido": 595,
@@ -6311,12 +6336,12 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-27"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13346658601",
    "nombre": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Acero R&R Soluciones, S.A.",
    "po": 0,
    "incurrido": 146.85,
@@ -6327,13 +6352,15 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081201432"
    ],
-   "trabajos": [],
-   "actualizado": "2026-10-27"
+   "trabajos": [
+    "13256744868"
+   ],
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13408556100",
    "nombre": "29005 · Grupo Gasol — Lanza de corte y cortadora",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Grupo Gasol, S.A.",
    "po": 0,
    "incurrido": 645,
@@ -6341,9 +6368,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-19",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-28"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13408567192",
@@ -6356,9 +6387,13 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-26",
    "estatus": "",
    "pago": "",
-   "cc": [],
-   "trabajos": [],
-   "actualizado": "2026-10-28"
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13408567193",
@@ -6378,7 +6413,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13408538335",
    "nombre": "DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Oceanco Safety & Supply",
    "po": 0,
    "incurrido": 655,
@@ -6386,14 +6421,16 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-26",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13408537271",
    "nombre": "53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011",
-   "area": "",
+   "area": "Soldadura",
    "proveedor": "Tornillos y Herramientas Barrientos",
    "po": 0,
    "incurrido": 303.29,
@@ -6401,14 +6438,16 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-19",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13408556069",
    "nombre": "58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
    "incurrido": 683.5,
@@ -6418,7 +6457,7 @@ window.DIQUE_MONDAY = {
    "pago": "",
    "cc": [],
    "trabajos": [],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13302182661",
@@ -6980,8 +7019,8 @@ window.DIQUE_MONDAY = {
    "tipo": "Costo, Tiempo",
    "costo": 421.7,
    "dias": 1,
-   "estado": "Solicitado",
-   "aprobado": null,
+   "estado": "Aprobado",
+   "aprobado": "2026-10-30",
    "cc": "2.2.2 Repuestos Máquinas y Soldadura",
    "actividades": [
     "13095604901"
@@ -9765,28 +9804,49 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "2fdac0cfc247",
+ "_huella": "76f2135a7855",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor de emergencia: se eliminan fuga de aceite de la tapa frontal",
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-10-21 a 2026-11-17",
+   "ahora": "2026-10-21 a 2026-11-19"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "1",
+   "ahora": "3"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Duración",
+   "antes": "28",
+   "ahora": "30"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
    "campo": "nuevo",
    "antes": "",
    "ahora": ""
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Auxiliar #2 - Cambio de Tramo de Tuberia de agua de Enfriamiento",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
+   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "146.85"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Botella de Aire #1 Válvula de Seguridad",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
+   "trabajo": "Adquisición de materiales de soldadura",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "1276.88"
   }
  ],
  "observaciones": [
@@ -9872,7 +9932,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -9880,7 +9940,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -9892,15 +9952,15 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"29005 · Grupo Gasol — Lanza de corte y cortadora\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"29005 · Grupo Gasol — Lanza de corte y cortadora\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -9908,11 +9968,11 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",

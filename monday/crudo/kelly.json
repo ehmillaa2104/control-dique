@@ -5770,7 +5770,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "14217.51"
+        "display_value": "16019.7"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5975,7 +5975,11 @@
          "13302212275",
          "13346658601",
          "13346547715",
-         "13346590356"
+         "13346590356",
+         "13408538335",
+         "13408537271",
+         "13408556100",
+         "13408567192"
         ]
        }
       ],
@@ -6411,7 +6415,7 @@
       "id": "13302229682",
       "name": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:12:25Z",
+      "updated_at": "2026-10-30T20:01:33Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6420,7 +6424,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6474,7 +6478,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-16 15:12:25 UTC"
+        "text": "2026-10-30 20:01:33 UTC"
        }
       ],
       "subitems": []
@@ -6483,7 +6487,7 @@
       "id": "13302212705",
       "name": "57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:09:04Z",
+      "updated_at": "2026-10-30T20:01:27Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6492,7 +6496,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6546,7 +6550,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-16 15:09:04 UTC"
+        "text": "2026-10-30 20:01:27 UTC"
        }
       ],
       "subitems": []
@@ -6555,7 +6559,7 @@
       "id": "13302150984",
       "name": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-16T15:04:38Z",
+      "updated_at": "2026-10-30T20:25:17Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6564,7 +6568,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6583,7 +6587,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043921754"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6618,7 +6624,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-16 15:04:38 UTC"
+        "text": "2026-10-30 20:25:17 UTC"
        }
       ],
       "subitems": []
@@ -6697,7 +6703,7 @@
       "id": "13346590356",
       "name": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-27T19:51:53Z",
+      "updated_at": "2026-10-30T20:24:52Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6706,7 +6712,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6725,7 +6731,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043921754"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6760,7 +6768,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-27 19:51:53 UTC"
+        "text": "2026-10-30 20:24:52 UTC"
        }
       ],
       "subitems": []
@@ -6839,7 +6847,7 @@
       "id": "13346547715",
       "name": "57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-27T17:36:16Z",
+      "updated_at": "2026-10-30T19:56:43Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6848,7 +6856,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6902,7 +6910,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-27 17:36:16 UTC"
+        "text": "2026-10-30 19:56:43 UTC"
        }
       ],
       "subitems": []
@@ -6911,7 +6919,7 @@
       "id": "13346658601",
       "name": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-27T17:20:31Z",
+      "updated_at": "2026-10-30T20:26:58Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6920,7 +6928,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -6939,7 +6947,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13256744868"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6974,7 +6984,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-27 17:20:31 UTC"
+        "text": "2026-10-30 20:26:58 UTC"
        }
       ],
       "subitems": []
@@ -6983,7 +6993,7 @@
       "id": "13408556100",
       "name": "29005 · Grupo Gasol — Lanza de corte y cortadora",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:19:58Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6992,7 +7002,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7003,13 +7013,17 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043921754"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7044,7 +7058,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:55:00 UTC"
+        "text": "2026-10-30 20:19:58 UTC"
        }
       ],
       "subitems": []
@@ -7053,7 +7067,7 @@
       "id": "13408567192",
       "name": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:19:16Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7073,13 +7087,17 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043921754"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7114,7 +7132,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:55:00 UTC"
+        "text": "2026-10-30 20:19:16 UTC"
        }
       ],
       "subitems": []
@@ -7193,7 +7211,7 @@
       "id": "13408538335",
       "name": "DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:05:29Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7202,7 +7220,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7213,7 +7231,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -7254,7 +7274,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:55:00 UTC"
+        "text": "2026-10-30 20:05:29 UTC"
        }
       ],
       "subitems": []
@@ -7263,7 +7283,7 @@
       "id": "13408537271",
       "name": "53162 · Tornillos y Herramientas Barrientos — Discos de desbaste y corte, soldadura 6011",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:05:20Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7272,7 +7292,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Soldadura"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7283,7 +7303,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -7324,7 +7346,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:55:00 UTC"
+        "text": "2026-10-30 20:05:20 UTC"
        }
       ],
       "subitems": []
@@ -7333,7 +7355,7 @@
       "id": "13408556069",
       "name": "58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:17:13Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7342,7 +7364,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7394,7 +7416,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-28 16:55:00 UTC"
+        "text": "2026-10-30 20:17:13 UTC"
        }
       ],
       "subitems": []
@@ -9757,7 +9779,7 @@
       "id": "13427708100",
       "name": "Reemplazo de base, polea y balance de ventilador Emergenciaotor de",
       "created_at": "2026-10-30T15:26:29Z",
-      "updated_at": "2026-10-30T16:27:28Z",
+      "updated_at": "2026-10-30T19:52:42Z",
       "group": {
        "id": "topics",
        "title": "DIQUE KELLY"
@@ -9794,12 +9816,12 @@
        {
         "id": "color_mm2e3n8w",
         "type": "status",
-        "text": "Solicitado"
+        "text": "Aprobado"
        },
        {
         "id": "date_mkzbjkxq",
         "type": "date",
-        "text": ""
+        "text": "2026-10-30"
        },
        {
         "id": "dropdown_mm2ns80c",
@@ -9969,7 +9991,7 @@
       "id": "13256760608",
       "name": "Codo de entrada al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-10-23T21:02:58Z",
+      "updated_at": "2026-10-30T20:22:38Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -10021,7 +10043,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:58 UTC"
+        "text": "2026-10-30 20:22:38 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -14604,7 +14626,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "146.85"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -25578,7 +25600,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "238.24, 194.74, 645, 198.9"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -26329,7 +26351,7 @@
       "id": "13095528124",
       "name": "DIQUE  (Ejecución)",
       "created_at": "2026-09-21T16:11:10Z",
-      "updated_at": "2026-10-27T18:44:21Z",
+      "updated_at": "2026-10-30T19:42:56Z",
       "group": {
        "id": "group_mm7dgarz",
        "title": "Dique"
@@ -26343,12 +26365,12 @@
        {
         "id": "numeric_mm6zgcqw",
         "type": "numbers",
-        "text": "28"
+        "text": "30"
        },
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-10-21 - 2026-11-17"
+        "text": "2026-10-21 - 2026-11-19"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -26359,12 +26381,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "1"
+        "display_value": "3"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-10-27 18:44:21 UTC"
+        "text": "2026-10-30 19:42:56 UTC"
        }
       ],
       "subitems": []
@@ -26453,6 +26475,50 @@
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
         "text": "2026-10-27 18:39:45 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13430387154",
+      "name": "Varada",
+      "created_at": "2026-10-30T19:34:26Z",
+      "updated_at": "2026-10-30T19:42:17Z",
+      "group": {
+       "id": "group_mm7dgarz",
+       "title": "Dique"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6v6vf2",
+        "type": "status",
+        "text": "No Iniciado"
+       },
+       {
+        "id": "numeric_mm6zgcqw",
+        "type": "numbers",
+        "text": "0"
+       },
+       {
+        "id": "timerange_mm78kjs",
+        "type": "timeline",
+        "text": "2026-11-06 - 2026-11-06"
+       },
+       {
+        "id": "timerange_mm7yfj5p",
+        "type": "timeline",
+        "text": "2026-11-06 - 2026-11-06"
+       },
+       {
+        "id": "formula_mm7ygv4s",
+        "type": "formula",
+        "text": "",
+        "display_value": "0"
+       },
+       {
+        "id": "pulse_updated_mm7gn7r8",
+        "type": "last_updated",
+        "text": "2026-10-30 19:42:17 UTC"
        }
       ],
       "subitems": []
