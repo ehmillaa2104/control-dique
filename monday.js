@@ -5940,7 +5940,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 16019.7,
+   "incurrido": 16609.7,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6134,7 +6134,8 @@ window.DIQUE_MONDAY = {
     "13408538335",
     "13408537271",
     "13408556100",
-    "13408567192"
+    "13408567192",
+    "13346657638"
    ]
   },
   {
@@ -6317,9 +6318,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-16",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-10-30"
   },
   {
    "id": "13346547715",
@@ -9804,51 +9807,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "76f2135a7855",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-10-21 a 2026-11-17",
-   "ahora": "2026-10-21 a 2026-11-19"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "1",
-   "ahora": "3"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "28",
-   "ahora": "30"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "nuevo",
-   "antes": "",
-   "ahora": ""
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "146.85"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Adquisición de materiales de soldadura",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "1276.88"
-  }
- ],
+ "_huella": "cd8d00fd1ee2",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
@@ -9944,7 +9904,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"498 · Tecno Control — Transformador para aire acondicionado portátil\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"498 · Tecno Control — Transformador para aire acondicionado portátil\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
