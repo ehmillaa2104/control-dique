@@ -109,14 +109,14 @@
     proyectado: sum(arr, (x) => x.proyectado), po: sum(arr, (x) => x.po), incurrido: sum(arr, (x) => x.incurrido)
   });
   const sinEnviar = (C) => { const v = C.preliminar - C.enRevision - C.aprobado - (C.descartado || 0); return v > 0.5 ? v : 0; };
-  const ETAPA = { aprobado: "Aprobado", revision: "En revisión", preliminar: "Preliminar", descartado: "Descartado" };
-  const etapaDe = (t) => t.costo || (t.aprobado ? "aprobado" : t.enRevision ? "revision" : t.preliminar ? "preliminar" : "");
+  // "En revisión" ya no se muestra en el dashboard (pedido del usuario, 30 oct): lo que esté en revisión cuenta como preliminar
+  const ETAPA = { aprobado: "Aprobado", preliminar: "Preliminar", descartado: "Descartado" };
+  const etapaDe = (t) => { const e = t.costo === "revision" ? "preliminar" : t.costo; return e || (t.aprobado ? "aprobado" : t.preliminar || t.enRevision ? "preliminar" : ""); };
 
   // Monto con el color de su etapa
   const m3 = (v, et) => (v ? `<span class="t-${et}">${moneyK(v)}</span>` : '<span class="muted">—</span>');
   // Notas de gestión sobre trabajos en revisión (notas.js → revision: { "<nombre del trabajo>": "nota" })
   const notaDe = (t) => (((window.DIQUE_NOTAS || {}).revision || {})[t.nombre] || "");
-  const notasRevision = (ts) => ts.filter((t) => t.enRevision && notaDe(t)).map((t) => `<span class="nota-rev">${esc(t.nombre)}: ${esc(notaDe(t))}</span>`).join("");
   const notaTxt = (t) => (notaDe(t) ? `<small class="nota-rev">${esc(notaDe(t))}</small>` : "");
   const chipEtapa = (t) => { const e = etapaDe(t); return e ? `<span class="chip et-${e}">${ETAPA[e]}</span>` : '<span class="muted">—</span>'; };
   // Avance físico = Σ (Estado % × Duración) / Σ Duración (como la columna "Avance" de Monday)
@@ -304,17 +304,6 @@
   const bar = (p) => `<span class="pbar"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></span>`;
   const mcell = (v) => (v ? moneyK(v) : '<span class="muted">—</span>');
 
-  // Estado del presupuesto ante Dirección. Primero lo que dice Monday (CC con Estado Aprobación "Revisar");
-  // si Monday no lo tiene, la nota de gestión de notas.js.
-  function estadoDireccion(M) {
-    const rev = M.centros.filter((c) => /revis/i.test(c.estado || ""));
-    if (rev.length) return { txt: "En espera de revisión para el presupuesto final", sub: `${plural(rev.length, "centro de costo", "centros de costo")} en "Revisar"`, fuente: "Monday · tablero CC (Estado Aprobación = Revisar)", centros: rev.map((c) => c.nombre) };
-    const n = (window.DIQUE_NOTAS || {}).presupuesto;
-    if (n && n.estado) return { txt: n.estado, sub: n.fecha ? fmtShort(n.fecha) : "", detalle: n.detalle || "", fuente: "Nota de gestión (notas.js); aún no está en Monday" };
-    return null;
-  }
-
-
   function costKpis(C, av, extra = {}) {
     const ts = (extra.trabajos || []).filter((t) => !t.cancelado);
     const n = (e) => ts.filter((t) => etapaDe(t) === e).length;
@@ -362,12 +351,10 @@
     const cols = (c, cls = "") => `<span class="n ${cls}">${m3(c.aprobado, "apr")}</span><span class="n ${cls}">${mcell(c.proyectado)}</span><span class="n ${cls}">${mcell(c.po)}</span><span class="n ${cls}">${mcell(c.incurrido)}</span>`;
     const grupos = [];
     M.centros.forEach((c) => { let g = grupos.find((x) => x.nombre === c.grupo); if (!g) grupos.push((g = { nombre: c.grupo, items: [] })); g.items.push(c); });
-    // Estado del centro según sus montos; si en Monday está en "Revisar", queda en espera de revisión (eso manda)
+    // Estado del centro según sus montos ("En revisión" no se muestra desde el 30 oct)
     const estadoCC = (c) => {
-      if (/revisar/i.test(c.estado)) return '<span class="chip warn">En espera de revisión</span>';
       if (/aprob/i.test(c.estado || "") && c.aprobado) return `<span class="chip et-aprobado">Aprobado</span>`; // Monday manda
       if (!c.preliminar && !c.enRevision && !c.aprobado) return '<span class="muted">—</span>';
-      if (c.enRevision) return `<span class="chip et-revision">En revisión</span>`;
       if (c.aprobado && !sinEnviar(c)) return `<span class="chip et-aprobado">Aprobado</span>`;
       return c.aprobado ? `<span class="chip et-aprobado">Aprobado parcial</span>` : `<span class="chip et-preliminar">Preliminar</span>`;
     };
@@ -520,7 +507,7 @@
       return `<a class="card area" href="#${a.id}">
         <div class="area-h">${icon(AREA_ICON[a.id] || "grid")}<b>${esc(a.nombre)}</b><small>${esc(a.tablero)}</small></div>
         <div class="area-av"><span class="big">${pct(av.pct, 0)}</span>${bar(av.pct)}<small>avance · ${planTxt(av)}</small></div>
-        <div class="area-c"><div><small>En revisión</small><b class="t-rev">${moneyK(C.enRevision)}</b></div><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
+        <div class="area-c"><div><small>Aprobado</small><b class="t-apr">${moneyK(C.aprobado)}</b></div><div><small>Proyectado</small><b>${moneyK(C.proyectado)}</b></div><div><small>PO</small><b>${moneyK(C.po)}</b></div><div><small>Incurrido</small><b>${moneyK(C.incurrido)}</b></div></div>
         ${sinCC ? `<div class="area-f"><span class="chip alert">${sinCC} sin centro de costo</span></div>` : ""}
       </a>`;
     }).join("")}</div>`;
@@ -531,7 +518,7 @@
   // =========================================================
   function viewResumen(M) {
     const all = M.areas.flatMap((a) => a.trabajos);
-    // Montos de los centros de costo (preliminar, en revisión, aprobado, proyectado y PO)
+    // Montos de los centros de costo (aprobado, proyectado y PO)
     const C = costos(M.centros);
     const P = M.D.pos;
     // Incurrido = total de "$ Incurrido" del tablero Contabilidad Kelly Trader (todos los documentos contables,
@@ -542,7 +529,7 @@
     const incurrido = {
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
-    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, modelo: M, montosGlobales: true })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, trabajos: all, modelo: M, montosGlobales: true })}${partKpi(M, null, "Participación del equipo")}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${entregaHTML(M)}
       ${registroCard(M)}
@@ -567,9 +554,6 @@
   function fasesCard(M, grande) {
     const all = M.areas.flatMap((a) => a.trabajos);
     const barra = (v, cls = "") => `<div class="mini-av ${cls}"><span class="pbar"><i style="width:${Math.max(0, Math.min(100, v))}%"></i></span><b>${pct(v, 0)}</b></div>`;
-    // Los mismos montos que en el resto del dashboard, para poder comparar las fases
-    const montos = (C) => `<span class="fs-m">${[["En revisión", m3(C.enRevision, "rev")], ["Aprobado", m3(C.aprobado, "apr")],
-      ["Proyectado", mcell(C.proyectado)], ["PO", mcell(C.po)], ["Incurrido", mcell(C.incurrido)]].map(([k, v]) => `<span><small>${k}</small><b>${v}</b></span>`).join("")}</span>`;
     const datos = (av) => `${plural(av.conDur, "planificado", "planificados")} · ${av.ejec} en ejecución · ${plural(av.fin, "finalizado", "finalizados")}${av.sinDur ? ` · <span class="t-warn">${av.sinDur} sin duración</span>` : ""}`;
     // Trabajos de la fase por área: primero los que están en ejecución, luego los finalizados y al final los por iniciar
     const orden = (t) => (t.pct > 0 && t.pct < 100 ? 0 : t.pct >= 100 ? 1 : 2);
@@ -578,16 +562,16 @@
       if (!xs.length) return "";
       const av = avance(xs);
       return `<div class="fs-area"><div class="fs-ah">${icon(AREA_ICON[a.id] || "grid", "ic sm")}<b>${esc(a.nombre)}</b><small>${datos(av)}</small>${barra(av.pct, "sm")}</div>
-        <div class="scroll"><table class="tbl fs-tbl"><thead><tr><th>Trabajo</th><th>Estado</th><th class="n">Duración</th><th class="n t-rev">En revisión</th><th class="n t-apr">Aprobado</th><th>Costo</th><th>Fin</th></tr></thead><tbody>${xs.map((t) =>
+        <div class="scroll"><table class="tbl fs-tbl"><thead><tr><th>Trabajo</th><th>Estado</th><th class="n">Duración</th><th class="n t-apr">Aprobado</th><th>Costo</th><th>Fin</th></tr></thead><tbody>${xs.map((t) =>
           `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${esc(t.grupo)}</small>${notaTxt(t)}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td>
-            <td class="n">${t.duracion > 0 ? t.duracion + " d" : '<span class="t-warn">sin duración</span>'}</td><td class="n">${m3(t.enRevision, "rev")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td>${chipEtapa(t)}</td><td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div></div>`;
+            <td class="n">${t.duracion > 0 ? t.duracion + " d" : '<span class="t-warn">sin duración</span>'}</td><td class="n">${m3(t.aprobado, "apr")}</td><td>${chipEtapa(t)}</td><td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>`).join("")}</tbody></table></div></div>`;
     }).join("");
     const conArea = all.map((t) => Object.assign({ area: (M.areas.find((a) => a.trabajos.includes(t)) || {}).id }, t));
     const fila = (f) => {
       const ts = conArea.filter(enFase(f.id)), av = avance(ts), C = costos(ts.filter((t) => !t.cancelado));
       const cr = M.fases.find((o) => o.kind === f.id), actual = M.cur && cr && M.cur.kind === f.id;
       const fechas = cr ? dateRange(cr.real) + (cr.diferencia > 0 ? ` · <span class="t-alert">+${cr.diferencia} d</span>` : "") : "";
-      const tipM = `${rowT("En revisión", moneyK(C.enRevision))}${rowT("Aprobado", moneyK(C.aprobado))}${rowT("Incurrido", moneyK(C.incurrido))}`;
+      const tipM = `${rowT("Aprobado", moneyK(C.aprobado))}${rowT("Incurrido", moneyK(C.incurrido))}`;
       return `<details class="fs k-${f.id} ${actual ? "cur" : ""}"><summary class="fs-row" ${tipAttr(tipM)}>
           <span class="fs-nm"><b><i class="dot k-${f.id}"></i>${f.nombre}${actual ? '<em class="chip">etapa actual</em>' : ""}</b><small>${fechas}</small></span>
           <span class="fs-dt">${datos(av)}</span>
@@ -606,7 +590,7 @@
     const fila = (s) => `<tr class="${s.cancelado ? "cancel" : ""}"><td><b>${esc(s.nombre)}</b>${s.nota ? `<small>${fmtShort(s.nota.fecha)} · ${esc(s.nota.texto)}</small>` : ""}</td>
       <td class="n">${s.peso != null ? pct(s.peso, 2) : "—"}</td><td class="nw">${s.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(s.pct)} ${s.pct}%`}</td>
       <td class="n">${s.monto != null ? moneyK(s.monto) : '<span class="muted">—</span>'}</td><td class="nw">${s.medicion ? fmtShort(s.medicion) : '<span class="muted">—</span>'}</td></tr>`;
-    return `<tr class="sub-row"><td colspan="12"><details class="subs"><summary>${plural(S.length, "partida", "partidas")} · avance ${pct(t.pct, 1)} ponderado por peso${med ? ` · última medición ${fmtShort(med)}` : ""}<small>en Monday el Estado dice ${esc(t.pctEstado + "%")}</small></summary>
+    return `<tr class="sub-row"><td colspan="11"><details class="subs"><summary>${plural(S.length, "partida", "partidas")} · avance ${pct(t.pct, 1)} ponderado por peso${med ? ` · última medición ${fmtShort(med)}` : ""}<small>en Monday el Estado dice ${esc(t.pctEstado + "%")}</small></summary>
       <table class="tbl mini"><thead><tr><th>Partida</th><th class="n">Peso</th><th>Avance</th><th class="n">Monto ref.</th><th>Medición</th></tr></thead><tbody>${S.map(fila).join("")}</tbody></table></details></td></tr>`;
   }
   function gruposHTML(M, a, q) {
@@ -618,13 +602,13 @@
     const ccName = (ids) => ids.map((id) => (M.centros.find((c) => c.id === id) || {}).nombre || "?").join(", ");
     const row = (t) => `<tr class="${t.cancelado ? "cancel" : ""}"><td><b>${esc(t.nombre)}</b><small>${t.cc.length ? esc(ccName(t.cc)) : '<span class="t-alert">sin centro de costo</span>'}</small>${notaTxt(t)}</td>
       <td>${esc(t.fase || "—")}</td><td class="nw">${t.cancelado ? '<span class="chip">Cancelado</span>' : `${bar(t.pct)} ${t.pct}%`}</td><td class="n">${t.duracion || '<span class="muted">—</span>'}</td>
-      <td>${chipEtapa(t)}</td><td class="n">${m3(t.preliminar, "pre")}</td><td class="n">${m3(t.enRevision, "rev")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
+      <td>${chipEtapa(t)}</td><td class="n">${m3(t.preliminar, "pre")}</td><td class="n">${m3(t.aprobado, "apr")}</td><td class="n">${mcell(t.proyectado)}</td><td class="n">${mcell(t.po)}</td><td class="n">${mcell(t.incurrido)}</td>
       <td class="nw">${t.fin ? fmtShort(t.fin) : '<span class="muted">—</span>'}</td></tr>${t.subelementos ? subsRow(t) : ""}`;
     if (!grupos.length) return empty(ql ? "Ningún trabajo coincide con la búsqueda." : "No hay trabajos planificados en esta fase.");
     return grupos.map((g) => {
       const G = costos(g.items.filter((t) => !t.cancelado)), gav = avance(g.items);
-      return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · <span class="t-pre">preliminar ${moneyK(G.preliminar)}</span>${G.enRevision ? ` · <span class="t-rev">en revisión ${moneyK(G.enRevision)}</span>` : ""} · <span class="t-apr">aprobado ${moneyK(G.aprobado)}</span></span></summary>
-        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Costo</th><th class="n t-pre">Preliminar</th><th class="n t-rev">En revisión</th><th class="n t-apr">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
+      return `<details class="grp" ${grupos.length <= 4 || ql ? "open" : ""}><summary><b>${esc(g.nombre)}</b><span>${plural(g.items.length, "trabajo", "trabajos")} · avance ${pct(gav.pct, 0)} · <span class="t-pre">preliminar ${moneyK(G.preliminar)}</span> · <span class="t-apr">aprobado ${moneyK(G.aprobado)}</span></span></summary>
+        <div class="scroll"><table class="tbl"><thead><tr><th>Trabajo</th><th>Fase</th><th>Estado</th><th class="n">Duración</th><th>Costo</th><th class="n t-pre">Preliminar</th><th class="n t-apr">Aprobado</th><th class="n">Proyectado</th><th class="n">PO</th><th class="n">Incurrido</th><th>Fin</th></tr></thead>
         <tbody>${g.items.map(row).join("")}</tbody></table></div></details>`;
     }).join("");
   }
@@ -663,7 +647,7 @@
     const pa = partDe(M, a.id);
     const fNom = (FASES.find((f) => f.id === FASE) || {}).nombre;
     return `<div class="fase-bar">${faseSel(a.trabajos)}<small>${FASE === "todas" ? "Indicadores de todo el tablero · lista de trabajos con fase" : `Indicadores y lista solo de <b>${fNom}</b>`}</small></div>
-      <div class="kpis ${pa ? "k8" : "k7"}">${costKpis(C, av, { direccion: estadoDireccion(M), trabajos: a.trabajos, modelo: M })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
+      <div class="kpis ${pa ? "k8" : "k7"}">${costKpis(C, av, { trabajos: a.trabajos, modelo: M })}${pa ? partKpi(M, pa, "Participación · " + a.nombre) : ""}</div>
       ${impAreaCard(M, a)}
       ${card(`Trabajos · ${esc(a.tablero)}${FASE !== "todas" ? ` · ${(FASES.find((f) => f.id === FASE) || {}).nombre}` : ""}`, `<div class="toolbar"><label class="search">${icon("search")}<input id="q" type="search" placeholder="Buscar trabajo…" value="${esc(q || "")}" aria-label="Buscar trabajo"></label>
         <span class="muted sm">${plural(plan.length, FASE === "todas" ? "trabajo con fase" : "trabajo", FASE === "todas" ? "trabajos con fase" : "trabajos")} · ${Object.entries(est).map(([e, n]) => `${esc(e)}: ${n}`).join(" · ")}${ocultos && FASE === "todas" ? ` · ${ocultos === 1 ? "no se muestra 1 trabajo" : `no se muestran ${ocultos} trabajos`} sin fase (No Aplica)` : ""}${sinDur ? ` · <span class="t-warn">${sinDur} sin duración: no cuentan en el avance</span>` : ""}</span></div><div id="grupos">${gruposHTML(M, a, q)}</div>`, { cls: "wide", right: "agrupados como en Monday" })}`;
