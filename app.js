@@ -336,7 +336,7 @@
   const fechaImp = (c) => (((window.DIQUE_NOTAS || {}).fechaImprevisto || {})[c.id] || c.creado);
   // Días perdidos por lluvias: tablero Cambios/Imprevistos, registros con Tipo de Impacto "Mal Tiempo" (columna Días)
   function climaKpi(M) {
-    const cs = ((M && M.D.cambios) || []).filter((c) => /mal tiempo|clima|lluvia/i.test(c.tipo || ""));
+    const cs = ((M && M.D.cambios) || []).filter((c) => /mal tiempo|clima|lluvia/i.test(`${c.tipo || ""} ${c.nombre || ""}`));
     const dias = sum(cs, (c) => c.dias);
     if (!cs.length) return kpi("cloud", "Días perdidos por lluvias", "0 días", "Sin registros en Cambios/Imprevistos");
     const det = cs.map((c) => rowT(`${fmtShort(fechaImp(c))} · ${esc(c.nombre)}`, `${c.dias || 0} d`)).join("");
