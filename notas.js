@@ -15,6 +15,11 @@ window.DIQUE_NOTAS = {
   "revision": {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
+  // Totales del resumen que Monday todavía no trae (indicación del usuario, 30 oct). Borrar cuando estén en Monday.
+  "montos": {
+    "po": 96899,
+    "pagado": 153963.22
+  },
   // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
   // Borrar cuando Monday tenga una columna con la fecha del evento.
   "fechaImprevisto": {

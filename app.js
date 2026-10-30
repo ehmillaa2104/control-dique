@@ -318,15 +318,19 @@
   function costKpis(C, av, extra = {}) {
     const ts = (extra.trabajos || []).filter((t) => !t.cancelado);
     const n = (e) => ts.filter((t) => etapaDe(t) === e).length;
+    // Solo el resumen: si Monday aún no trae PO o Pagado, vale el total de notas.js (montos). Monday manda en cuanto lo tenga.
+    const man = extra.montosGlobales ? ((window.DIQUE_NOTAS || {}).montos || {}) : {};
+    const po = C.po || man.po || 0, pagado = C.pagado || man.pagado || 0;
+    const tipMan = (dato, v) => (!dato && v ? { tip: `<b>${money(v)}</b><div class="tnote">Fuente: cargado a mano; pendiente de subir a Monday</div>` } : {});
     return [
       climaKpi(extra.modelo),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
         { alert: C.aprobado > 0 && C.proyectado > C.aprobado * 1.05 }),
-      kpi("doc", "Órdenes de compra (PO)", moneyK(C.po), C.po ? "Comprometido" : "Contabilidad aún no tiene la información"),
+      kpi("doc", "Órdenes de compra (PO)", moneyK(po), po ? "Comprometido" : "Contabilidad aún no tiene la información", tipMan(C.po, po)),
       kpi("wallet", "Incurrido", moneyK(C.incurrido), "Facturado", extra.incurrido ? { tip: extra.incurrido.tip } : {}),
-      kpi("cash", "Pagado", moneyK(C.pagado || 0), C.pagado ? "Pagado a proveedores" : "Contabilidad aún no tiene la información"),
+      kpi("cash", "Pagado", moneyK(pagado), pagado ? "Pagado a proveedores" : "Contabilidad aún no tiene la información", tipMan(C.pagado, pagado)),
       ...(extra.extraKpis || []),
       avanceKpi(av)
     ].join("");
@@ -536,7 +540,7 @@
     const incurrido = {
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
-    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, modelo: M })}${partKpi(M, null, "Participación del equipo")}</div>
+    return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, direccion: estadoDireccion(M), trabajos: all, modelo: M, montosGlobales: true })}${partKpi(M, null, "Participación del equipo")}</div>
       <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${entregaHTML(M)}
       ${registroCard(M)}
