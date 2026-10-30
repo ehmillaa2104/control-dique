@@ -430,15 +430,17 @@
     const ref = H.filter((h) => h.fecha <= hace7).pop() || H[0] || null;
     const ts = [...M.byId.values()].filter((t) => !t.cancelado && conFase(t) && t.costo !== "descartado");
     const linea = (t, der, cls = "") => `<li class="${cls}" ${tipAttr(`<b>${esc(t.nombre)}</b>${rowT(esc(t.areaNombre), esc(t.fase))}${t.duracion ? rowT("Duración", t.duracion + " d") : ""}`)}>${icon(AREA_ICON[t.area] || "grid", "ic sm")}<span class="sem-nm">${esc(t.nombre)}</span><b>${der}</b></li>`;
-    const mas = (n) => (n > 0 ? `<li class="sem-mas">y ${n} más</li>` : "");
     const MAX = 6;
+    // Los primeros MAX a la vista; el resto, en un desplegable "y N más"
+    const lista = (items) => items.slice(0, MAX).join("") + (items.length > MAX
+      ? `<li class="sem-mas"><details><summary><span class="sem-abrir">y ${items.length - MAX} más</span><span class="sem-cerrar">ver menos</span></summary><ul>${items.slice(MAX).join("")}</ul></details></li>` : "");
     // Lo hecho
     let hecho = "", hechoN = 0, avTxt = "";
     if (ref) {
       const antes = (t) => (t.id in ref.pct ? ref.pct[t.id] : 0);
       const sub = ts.filter((t) => t.pct > antes(t)).sort((a, b) => (b.pct >= 100) - (a.pct >= 100) || (b.duracion || 0) - (a.duracion || 0));
       hechoN = sub.length;
-      hecho = sub.slice(0, MAX).map((t) => linea(t, t.pct >= 100 ? '<span class="t-apr">✓ 100 %</span>' : `${antes(t)} → ${t.pct} %`, t.pct >= 100 ? "fin" : "")).join("") + mas(sub.length - MAX);
+      hecho = lista(sub.map((t) => linea(t, t.pct >= 100 ? '<span class="t-apr">✓ 100 %</span>' : `${antes(t)} → ${t.pct} %`, t.pct >= 100 ? "fin" : "")));
       const avHoy = avance(M.areas.flatMap((a) => a.trabajos)).pct;
       if (ref.avance != null) avTxt = `Avance ${pct(ref.avance)} → <b>${pct(avHoy)}</b>${avHoy - ref.avance >= 0.05 ? ` <span class="t-apr">+${(avHoy - ref.avance).toFixed(1)} pts</span>` : ' <span class="muted">sin cambio</span>'}`;
     }
@@ -459,7 +461,7 @@
     const col = (titulo, sub, cuerpo, vacio) => `<div class="sem-col"><div class="sem-h"><b>${titulo}</b><small>${sub}</small></div><ul>${cuerpo || `<li class="sem-vacio">${vacio}</li>`}</ul></div>`;
     const cambios = card("Avance de la semana", `<div class="sem sem-2">
       ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
-      ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", curso.slice(0, MAX).map((t) => linea(t, `${t.pct} %`)).join("") + mas(curso.length - MAX), "Nada en ejecución.")}
+      ${col("En curso", plural(curso.length, "trabajo", "trabajos") + " entre 25 y 75 %", lista(curso.map((t) => linea(t, `${t.pct} %`))), "Nada en ejecución.")}
     </div>`, { right: avTxt });
     const atencion = card("Puntos de atención", `<div class="sem sem-1">${col("", "hitos y fases", proximo, "Sin puntos pendientes.")}</div>`);
     return `<div class="row-b row-sem">${cambios}${atencion}</div>`;

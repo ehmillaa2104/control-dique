@@ -578,6 +578,11 @@ details.fs.cur > summary { box-shadow: inset 3px 0 0 var(--ink); }
 .sem li.fin .ic.sm { color: var(--c-apr); }
 .sem li.venc .ic.sm { color: var(--alert-t); }
 .sem li.sem-mas, .sem li.sem-vacio { display: block; color: var(--ink-3); font-size: 12px; border-bottom: 0; }
+.sem-mas summary { cursor: pointer; font-weight: 600; color: var(--c-pre); }
+.sem-mas summary:hover { text-decoration: underline; }
+.sem-mas .sem-cerrar, .sem-mas details[open] .sem-abrir { display: none; }
+.sem-mas details[open] .sem-cerrar { display: inline; }
+.sem-mas details ul { margin-top: 4px; color: var(--ink); }
 @media (max-width: 900px) {
   .sem { grid-template-columns: 1fr; }
   .sem-col + .sem-col { border-left: 0; border-top: 1px solid var(--border); }
