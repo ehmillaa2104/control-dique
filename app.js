@@ -334,7 +334,7 @@
 
   // Fecha en que ocurrió un imprevisto: la de notas.js (fechaImprevisto) si se registró otro día en Monday; si no, la de registro
   const fechaImp = (c) => (((window.DIQUE_NOTAS || {}).fechaImprevisto || {})[c.id] || c.creado);
-  // Días perdidos por lluvias: tablero Cambios/Imprevistos, registros con Tipo de Impacto "Mal Tiempo" (columna Días)
+  // Días perdidos por lluvias: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo, por Tipo de Impacto o nombre (columna Días)
   function climaKpi(M) {
     const cs = ((M && M.D.cambios) || []).filter((c) => /mal tiempo|clima|lluvia/i.test(`${c.tipo || ""} ${c.nombre || ""}`));
     const dias = sum(cs, (c) => c.dias);
@@ -342,7 +342,7 @@
     const det = cs.map((c) => rowT(`${fmtShort(fechaImp(c))} · ${esc(c.nombre)}`, `${c.dias || 0} d`)).join("");
     return kpi("cloud", "Días perdidos por lluvias", `${dias} ${dias === 1 ? "día" : "días"}`,
       `${plural(cs.length, "registro", "registros")} en Cambios/Imprevistos`,
-      { alert: dias > 0, tip: `<b>Días perdidos por lluvias</b>${det}<div class="tnote">Fuente: tablero Cambios/Imprevistos, Tipo de Impacto "Mal Tiempo"</div>` });
+      { alert: dias > 0, tip: `<b>Días perdidos por lluvias</b>${det}<div class="tnote">Fuente: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo</div>` });
   }
 
   // Avance físico como un reloj: anillo que se llena con el %
