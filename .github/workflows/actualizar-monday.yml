@@ -5,9 +5,12 @@ name: Actualizar datos de Monday
 
 on:
   schedule:
-    # Hora UTC. Colombia es UTC-5: 07:00, 12:00 y 16:00 en Cartagena.
-    # GitHub puede demorar unos minutos en arrancar cada corrida.
-    - cron: "0 12,17,21 * * *"
+    # Hora UTC. Colombia es UTC-5. GitHub atrasa o se salta corridas, sobre todo en punto,
+    # así que cada hora objetivo (07:00, 12:00 y 16:00 en Cartagena) tiene 3 intentos:
+    # 23 min antes, 7 min después y 37 min después. Si los datos no cambiaron, no publica nada.
+    - cron: "37 11,16,20 * * *"
+    - cron: "7 12,17,21 * * *"
+    - cron: "37 12,17,21 * * *"
   workflow_dispatch:
 
 permissions:
