@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-29",
+ "extraido": "2026-10-30",
  "boards": [
   {
    "id": "18435454602",
@@ -9749,6 +9749,62 @@
        }
       ],
       "subitems": []
+     },
+     {
+      "id": "13427708100",
+      "name": "Impacto economico no mayor por reemplazo de base, polea y balance de ventilador Motor de Emergencia",
+      "created_at": "2026-10-30T15:26:29Z",
+      "updated_at": "2026-10-30T15:27:58Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-10-30 15:26:29 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13095604901"
+        ]
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Costo, Tiempo"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": "421.70"
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "2.2.2 Repuestos Máquinas y Soldadura"
+       }
+      ],
+      "subitems": []
      }
     ]
    }
@@ -14281,7 +14337,7 @@
       "id": "13256744868",
       "name": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
       "created_at": "2026-10-10T20:08:13Z",
-      "updated_at": "2026-10-23T21:03:51Z",
+      "updated_at": "2026-10-30T15:04:26Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -14333,12 +14389,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:03:51 UTC"
+        "text": "2026-10-30 15:04:26 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
@@ -18187,7 +18243,7 @@
       "id": "13095643937",
       "name": "Bombas hidráulicas de timón — sellos, filtros y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-10-27T21:49:56Z",
+      "updated_at": "2026-10-30T15:00:24Z",
       "group": {
        "id": "group_mm7ddzqq",
        "title": "1.10 Sistema Hidráulico General"
@@ -18239,12 +18295,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-27 21:49:56 UTC"
+        "text": "2026-10-30 15:00:24 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "75%"
        },
        {
         "id": "date_mm7yv15j",
@@ -22558,7 +22614,7 @@
       "id": "13095628540",
       "name": "Eje de cola — sellos e inspección",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-23T21:04:52Z",
+      "updated_at": "2026-10-30T15:07:41Z",
       "group": {
        "id": "group_mm7d5br9",
        "title": "1.17 Sistema de Propulsión"
@@ -22610,12 +22666,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 21:04:52 UTC"
+        "text": "2026-10-30 15:07:41 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "date_mm7yv15j",
