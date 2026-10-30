@@ -1308,6 +1308,56 @@ window.DIQUE_MONDAY = {
      "costo": ""
     },
     {
+     "id": "13428126280",
+     "nombre": "Motor de emergencia: se eliminan fuga de aceite de la tapa frontal",
+     "grupo": "1.2 Generadores",
+     "fase": "Dique",
+     "estado": "100%",
+     "pct": 100,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "preliminar": null,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": "2026-10-30",
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-30",
+     "costo": ""
+    },
+    {
+     "id": "13428159726",
+     "nombre": "Auxiliar #2 - Cambio de Tramo de Tuberia de agua de Enfriamiento",
+     "grupo": "1.2 Generadores",
+     "fase": "Dique",
+     "estado": "100%",
+     "pct": 100,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "preliminar": null,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": "2026-10-30",
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-30",
+     "costo": ""
+    },
+    {
      "id": "13256760157",
      "nombre": "Línea de descarga de bomba de lastre de estribor",
      "grupo": "1.3 Bombas",
@@ -4481,6 +4531,31 @@ window.DIQUE_MONDAY = {
      ],
      "actualizado": "2026-10-23",
      "costo": ""
+    },
+    {
+     "id": "13428203940",
+     "nombre": "Botella de Aire #1 Válvula de Seguridad",
+     "grupo": "Sistema Neumatico",
+     "fase": "Dique",
+     "estado": "100%",
+     "pct": 100,
+     "cancelado": false,
+     "duracion": null,
+     "tipo": "",
+     "aprobacion": "Pendiente",
+     "proveedor": "",
+     "preliminar": null,
+     "enRevision": null,
+     "aprobado": null,
+     "proyectado": null,
+     "po": null,
+     "incurrido": null,
+     "fin": "2026-10-30",
+     "cc": [
+      "13081201432"
+     ],
+     "actualizado": "2026-10-30",
+     "costo": ""
     }
    ]
   },
@@ -6019,7 +6094,10 @@ window.DIQUE_MONDAY = {
     "13277169481",
     "13095569998",
     "13373451881",
-    "13373417444"
+    "13373417444",
+    "13428159726",
+    "13428126280",
+    "13428203940"
    ],
    "pos": [
     "13302150991",
@@ -6897,7 +6975,7 @@ window.DIQUE_MONDAY = {
  "cambios": [
   {
    "id": "13427708100",
-   "nombre": "Impacto economico no mayor por reemplazo de base, polea y balance de ventilador Motor de Emergencia",
+   "nombre": "Reemplazo de base, polea y balance de ventilador Emergenciaotor de",
    "creado": "2026-10-30",
    "tipo": "Costo, Tiempo",
    "costo": 421.7,
@@ -7435,7 +7513,7 @@ window.DIQUE_MONDAY = {
  },
  "avance": {
   "ingenieria": {
-   "lineas": 169,
+   "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
    "avanceDias": 5.75
@@ -7453,7 +7531,7 @@ window.DIQUE_MONDAY = {
    "avanceDias": 7.165
   },
   "total": {
-   "lineas": 197,
+   "lineas": 200,
    "conDuracion": 55,
    "duracion": 140,
    "avanceDias": 34.915
@@ -9526,6 +9604,8 @@ window.DIQUE_MONDAY = {
     "13095604668": 0,
     "13095617389": 0,
     "13095570185": 0,
+    "13428126280": 100,
+    "13428159726": 100,
     "13256760157": 0,
     "13256755192": 0,
     "13256755203": 0,
@@ -9653,6 +9733,7 @@ window.DIQUE_MONDAY = {
     "13095638257": 0,
     "13095602832": 0,
     "13095613982": 0,
+    "13428203940": 100,
     "13098327837": 100,
     "13098295887": 100,
     "13127441793": 100,
@@ -9684,28 +9765,28 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "ff5fbef2dad4",
+ "_huella": "2fdac0cfc247",
  "cambiosLectura": [
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "trabajo": "Motor de emergencia: se eliminan fuga de aceite de la tapa frontal",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
+   "trabajo": "Auxiliar #2 - Cambio de Tramo de Tuberia de agua de Enfriamiento",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "trabajo": "Botella de Aire #1 Válvula de Seguridad",
+   "campo": "nuevo",
+   "antes": "",
+   "ahora": ""
   }
  ],
  "observaciones": [
@@ -9728,6 +9809,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 15 en ejecución · 1 finalizado(s) · 17 por iniciar."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P1. Ingeniería: 3 trabajo(s) con fase pero sin Duración; no cuentan en el avance: Motor de emergencia: se eliminan fuga de aceite de la tapa frontal, Auxiliar #2 - Cambio de Tramo de Tuberia de agua de Enfriamiento, Botella de Aire #1 Válvula de Seguridad."
   },
   {
    "nivel": "info",

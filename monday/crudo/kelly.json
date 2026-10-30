@@ -5731,7 +5731,7 @@
       "id": "13081201432",
       "name": "2.2.2 · Repuestos de Máquinas y trabajos de soldadura",
       "created_at": "2026-09-18T16:38:44Z",
-      "updated_at": "2026-10-27T19:28:27Z",
+      "updated_at": "2026-10-30T16:12:45Z",
       "group": {
        "id": "group_mm7a5qg9",
        "title": "2.2"
@@ -5951,7 +5951,10 @@
          "13277169481",
          "13095569998",
          "13373451881",
-         "13373417444"
+         "13373417444",
+         "13428159726",
+         "13428126280",
+         "13428203940"
         ]
        },
        {
@@ -9752,9 +9755,9 @@
      },
      {
       "id": "13427708100",
-      "name": "Impacto economico no mayor por reemplazo de base, polea y balance de ventilador Motor de Emergencia",
+      "name": "Reemplazo de base, polea y balance de ventilador Emergenciaotor de",
       "created_at": "2026-10-30T15:26:29Z",
-      "updated_at": "2026-10-30T15:27:58Z",
+      "updated_at": "2026-10-30T16:27:28Z",
       "group": {
        "id": "topics",
        "title": "DIQUE KELLY"
@@ -13842,6 +13845,192 @@
         "id": "date_mm7yv15j",
         "type": "date",
         "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13428126280",
+      "name": "Motor de emergencia: se eliminan fuga de aceite de la tapa frontal",
+      "created_at": "2026-10-30T16:05:03Z",
+      "updated_at": "2026-10-30T16:08:52Z",
+      "group": {
+       "id": "group_mm7d5fgv",
+       "title": "1.2 Generadores"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-30 16:08:52 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "100%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": "2026-10-30"
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13428159726",
+      "name": "Auxiliar #2 - Cambio de Tramo de Tuberia de agua de Enfriamiento",
+      "created_at": "2026-10-30T16:07:42Z",
+      "updated_at": "2026-10-30T16:08:49Z",
+      "group": {
+       "id": "group_mm7d5fgv",
+       "title": "1.2 Generadores"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-30 16:08:49 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "100%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": "2026-10-30"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -25653,6 +25842,99 @@
         "id": "date_mm7yv15j",
         "type": "date",
         "text": ""
+       },
+       {
+        "id": "numeric_mm7yw5hx",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm7y9v4k",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "lookup_mm7yh3hm",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       },
+       {
+        "id": "lookup_mm7yk7y7",
+        "type": "mirror",
+        "text": null,
+        "display_value": ""
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13428203940",
+      "name": "Botella de Aire #1 Válvula de Seguridad",
+      "created_at": "2026-10-30T16:12:40Z",
+      "updated_at": "2026-10-30T16:12:55Z",
+      "group": {
+       "id": "group_mm8mz6bc",
+       "title": "Sistema Neumatico"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6wsp0z",
+        "type": "status",
+        "text": "Dique"
+       },
+       {
+        "id": "dropdown_mm70s99n",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm781mjk",
+        "type": "status",
+        "text": null
+       },
+       {
+        "id": "numeric_mm6vjdrd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm78kpas",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "color_mm6v621m",
+        "type": "status",
+        "text": "Pendiente"
+       },
+       {
+        "id": "numeric_mm78s0hd",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "board_relation_mm7am925",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "pulse_updated_mm7g2q1g",
+        "type": "last_updated",
+        "text": "2026-10-30 16:12:55 UTC"
+       },
+       {
+        "id": "color_mm7yb2cs",
+        "type": "status",
+        "text": "100%"
+       },
+       {
+        "id": "date_mm7yv15j",
+        "type": "date",
+        "text": "2026-10-30"
        },
        {
         "id": "numeric_mm7yw5hx",

@@ -11,7 +11,7 @@ window.DIQUE_REGISTRO = {
       "semana": 6,
       "desde": "2026-10-24",
       "hasta": "2026-10-30",
-      "fuente": "Reporte del superintendente (27 oct), informe diario de Ingeniería (27 oct) y mensajes del equipo en Monday (26 y 27 oct)",
+      "fuente": "Reporte del superintendente (27 oct), informes diarios de Ingeniería (27, 28 y 29 oct) y mensajes del equipo en Monday (26 al 30 oct)",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" },
@@ -29,11 +29,17 @@ window.DIQUE_REGISTRO = {
         ] },
         { "zona": "Sala de máquinas", "items": [
           { "txt": "Eje de cola: inician los trabajos", "extra": "26 oct" },
-          { "txt": "Bomba hidráulica del timón de babor desmontada para cambiar retenedoras" },
-          { "txt": "Repetidores del ángulo de timón: instalación en ambas bandas" },
-          { "txt": "Botella de aire #1: válvula de seguridad desmontada para pruebas y certificación" },
-          { "txt": "Acople Vulkan de la máquina principal inspeccionado: en buen estado" },
-          { "txt": "Auxiliar #1: fugas de aceite y combustible corregidas" }
+          { "txt": "Bombas hidráulicas del timón: estribor con retenedoras nuevas, falta la prueba; babor a la espera de retenedoras" },
+          { "txt": "Indicador de ángulo de timón: cableado nuevo del puente al servomotor e indicador local instalado" },
+          { "txt": "Bomba de sentina del cuarto de máquinas: bomba nueva en su base" },
+          { "txt": "Bomba de sewage desmontada para reparación" },
+          { "txt": "Tanque 5 babor: se desarma la succión de la bomba de carga" },
+          { "txt": "Bomba #1 de diésel de la máquina principal: sello mecánico y balinera nuevos", "extra": "terminado" },
+          { "txt": "Botella de aire #1: válvula de seguridad desmontada para pruebas y certificación", "extra": "terminado" },
+          { "txt": "Acoples Vulkan de la máquina principal y del generador de cola inspeccionados: en buen estado" },
+          { "txt": "Auxiliares: fugas corregidas en el #1 y en el de emergencia; tubería del enfriador cambiada en el #2; polea y base del ventilador nuevas en el de emergencia" },
+          { "txt": "Panel de alarma 95-98 %: el contratista cotizó la instalación", "extra": "se espera el costo" },
+          { "txt": "Bow Thruster: fuga externa de aceite en el núcleo", "extra": "26 oct" }
         ] },
         { "zona": "Seguridad", "items": [
           { "txt": "Bote salvavidas: se busca proveedor para asegurarlo al davit y reparar el casco" },
@@ -71,7 +77,21 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s6/maq_06_botella-de-aire-1.jpg", "texto": "Botella de aire #1", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
         { "tipo": "foto", "archivo": "registro/s6/maq_07_valvula-seguridad-botella.jpg", "texto": "Válvula de seguridad de la botella de aire", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
         { "tipo": "foto", "archivo": "registro/s6/maq_08_acople-vulkan.jpg", "texto": "Acople Vulkan de la máquina principal", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
-        { "tipo": "foto", "archivo": "registro/s6/maq_09_auxiliar-1.jpg", "texto": "Auxiliar #1: fugas corregidas", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" }
+        { "tipo": "foto", "archivo": "registro/s6/maq_09_auxiliar-1.jpg", "texto": "Auxiliar #1: fugas corregidas", "grupo": "Sala de máquinas · Ingeniería, 26 y 27 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_10_bomba-timon-estribor.jpg", "texto": "Bomba hidráulica del timón de estribor, con retenedoras nuevas", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_11_bomba-timon-babor-acople.jpg", "texto": "Bomba del timón de babor: acople y retenedora fuera", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_12_indicador-local-servomotor.jpg", "texto": "Indicador local de ángulo de timón en el cuarto de servomotor", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_13_indicador-puente.jpg", "texto": "Indicador de ángulo de timón en el puente", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_14_bomba-sentina-nueva.jpg", "texto": "Bomba de sentina nueva del cuarto de máquinas", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_15_bomba-sewage.jpg", "texto": "Bomba de sewage desmontada", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_16_tk5-babor-succion.jpg", "texto": "Succión de la bomba de carga del tanque 5 babor", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_17_acople-generador-de-cola.jpg", "texto": "Acople flexible del generador de cola", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_18_bomba-diesel-sello.jpg", "texto": "Bomba #1 de diésel: sello mecánico y balinera nuevos", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_19_auxiliar-emergencia.jpg", "texto": "Auxiliar de emergencia: fuga de aceite eliminada", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_20_auxiliar-emergencia-polea.jpg", "texto": "Auxiliar de emergencia: polea y base del ventilador nuevas", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_21_auxiliar-2-tuberia.jpg", "texto": "Auxiliar #2: tramo de tubería del enfriador cambiado", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_22_panel-alarma.jpg", "texto": "Panel de alarma 95-98 %", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_23_bow-thruster-nucleo.jpg", "texto": "Bow Thruster: fuga de aceite en el núcleo", "grupo": "Sala de máquinas · Ingeniería, 28 y 29 oct" }
       ]
     },
     {
