@@ -17,7 +17,7 @@
   const R = window.DIQUE_REGISTRO || { semanas: [] }, D = window.DIQUE_MONDAY || {};
   const app = document.getElementById("lt-app");
 
-  // Semana: la pedida en ?s=N, si no la que contiene hoy, si no la más reciente
+  // Semana (lunes a sábado): la pedida en ?s=N, si no la que contiene hoy, si no la última cargada en registro.js
   const pedida = +new URLSearchParams(location.search).get("s");
   const w = (pedida && R.semanas.find((x) => x.semana === pedida)) || R.semanas.find((x) => x.desde <= TODAY && TODAY <= x.hasta) || R.semanas[0];
   if (!w) { app.innerHTML = '<p class="lt-vacio">Todavía no hay semanas registradas.</p>'; return; }

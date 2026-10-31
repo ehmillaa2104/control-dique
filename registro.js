@@ -1,6 +1,7 @@
 /*
  * REGISTRO SEMANAL DEL DIQUE: fotos, videos y avance reportado en sitio. Se edita a mano (no viene de Monday).
- *   semanas: una por semana, la más reciente primero. En pantalla se muestran solo las fechas; "semana" sigue la numeración de "Participación del equipo" (5 = 23 oct).
+ *   semanas: una por semana, de lunes a sábado (desde el 31 oct), la más reciente primero. Una semana nueva se agrega solo
+ *     cuando el usuario pide actualizarla (con fotos); mientras tanto el dashboard sigue mostrando la última cargada. En pantalla se muestran solo las fechas; "semana" sigue la numeración de "Participación del equipo" (5 = 23 oct).
  *     avance: lo que reporta el superintendente, agrupado por zona. Sin nombres de personas (el sitio es público).
  *     medios: fotos y videos en registro/sN/. Foto: archivo grande (máx. 1600 px, sin metadatos) + "-min.jpg" (480 px).
  *       "grupo" (opcional): agrupa los medios bajo un subtítulo (p. ej. un tanque), en el orden en que aparecen.
@@ -10,13 +11,12 @@ window.DIQUE_REGISTRO = {
   "semanas": [
     {
       "semana": 6,
-      "desde": "2026-10-24",
-      "hasta": "2026-10-30",
+      "desde": "2026-10-26",
+      "hasta": "2026-10-31",
       "fuente": "Reporte del superintendente (27 y 30 oct), informes diarios de Ingeniería (27, 28 y 29 oct) y mensajes del equipo en Monday (26 al 30 oct)",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" },
-          { "txt": "1 día perdido por lluvia", "extra": "24 oct" }
+          { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" }
         ] },
         { "zona": "Casco", "items": [
           { "txt": "Caracoleo y lavado 1 a presión", "extra": "30 oct" }
@@ -136,11 +136,12 @@ window.DIQUE_REGISTRO = {
     },
     {
       "semana": 5,
-      "desde": "2026-10-17",
-      "hasta": "2026-10-23",
+      "desde": "2026-10-19",
+      "hasta": "2026-10-24",
       "fuente": "Reporte del superintendente e informe diario de máquinas, 23 oct",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "1 día perdido por lluvia", "extra": "24 oct" },
           { "txt": "Entrada al muelle del astillero", "extra": "20 oct" }
         ] },
         { "zona": "Casco", "items": [

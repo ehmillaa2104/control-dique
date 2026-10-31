@@ -677,21 +677,18 @@
   function avanceHTML(w) {
     return (w.avance || []).map((g) => `<div class="reg-zona"><b>${esc(g.zona)}</b><ul>${g.items.map((it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`).join("")}</ul></div>`).join("");
   }
-  // Semana del registro (sábado a viernes, como la Semana 5 = 17–23 oct) que contiene una fecha
-  function semanaDe(fecha) {
-    const d = parse(fecha), desde = addDays(d, -((d.getDay() + 1) % 7));
-    return { desde: iso(desde), hasta: iso(addDays(desde, 6)) };
-  }
-  // Semana actual: la del registro que contiene hoy; si todavía no está cargada, una semana vacía con sus fechas
+  // Semanas del registro: de lunes a sábado (desde el 31 oct). Se muestra primero la última semana ya cargada en registro.js:
+  // una semana nueva sin fotos no aparece hasta que el usuario pide actualizarla y se agrega a registro.js.
   function semanaActual() {
     const R = REG();
-    return R.semanas.find((w) => w.desde <= TODAY && TODAY <= w.hasta) || { ...semanaDe(TODAY), vacia: true, avance: [], medios: [] };
+    return R.semanas.find((w) => w.desde <= TODAY) || R.semanas[0] || null;
   }
+  const esHoy = (w) => !!w && w.desde <= TODAY && TODAY <= w.hasta;
   const contarMedios = (w) => { const v = (w.medios || []).filter((m) => m.tipo === "video").length, f = (w.medios || []).length - v; return f || v ? `${plural(f, "foto", "fotos")}${v ? " y " + plural(v, "video", "videos") : ""}` : "sin fotos todavía"; };
   // Pestaña Registro semanal: una sección desplegable por semana; abierta solo la actual (o la más reciente)
   function viewRegistro(M) {
     const R = REG(), act = semanaActual();
-    const lista = act.vacia ? [act, ...R.semanas] : R.semanas;
+    const lista = act ? [act, ...R.semanas.filter((w) => w !== act)] : [];
     MEDIOS = [];
     if (!lista.length) return card("Registro semanal", empty("Todavía no hay semanas registradas."), { cls: "wide" });
     return lista.map((w, k) => {
@@ -699,19 +696,19 @@
       MEDIOS.push(...(w.medios || []));
       const av = w.avance && w.avance.length ? `<div class="reg-av">${avanceHTML(w)}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div>` : `<div class="reg-av"><p class="muted">Todavía no hay registro de esta semana.</p></div>`;
       const med = (w.medios || []).length ? `<div class="reg-grid">${w.medios.map((m, i) => (m.grupo && (i === 0 || w.medios[i - 1].grupo !== m.grupo) ? `<b class="reg-gh">${esc(m.grupo)}</b>` : "") + medioHTML(m, base + i)).join("")}</div>` : '<p class="muted reg-sinf">Sin fotos ni videos todavía.</p>';
-      return `<details class="card wide reg-sem" ${k === 0 ? "open" : ""}><summary class="card-h"><span>${semTitulo(w)}${w === act ? ' <em class="reg-hoy">esta semana</em>' : ""}</span><small>${contarMedios(w)} · ${etapaEn(M, w.hasta < TODAY ? w.hasta : TODAY)}</small></summary>
+      return `<details class="card wide reg-sem" ${k === 0 ? "open" : ""}><summary class="card-h"><span>${semTitulo(w)}${w === act && esHoy(w) ? ' <em class="reg-hoy">esta semana</em>' : ""}</span><small>${contarMedios(w)} · ${etapaEn(M, w.hasta < TODAY ? w.hasta : TODAY)}</small></summary>
         <div class="reg-body">${av}${med}</div></details>`;
     }).join("");
   }
   // Recuadro del resumen gerencial: la semana actual (con lo que haya cargado)
   function registroCard(M) {
     const w = semanaActual(), R = REG();
-    if (w.vacia && !R.semanas.length) return "";
+    if (!w) return "";
     MEDIOS = (w.medios || []).slice();
     const fotos = (w.medios || []).map((m, i) => [m, i]).filter(([m]) => m.tipo === "foto").slice(0, 3);
     const av = w.avance && w.avance.length ? avanceHTML(w) : '<p class="muted">Todavía no hay registro de esta semana.</p>';
     const der = fotos.length ? `<div class="reg-grid g3">${fotos.map(([m, i]) => medioHTML(m, i)).join("")}</div>` : '<p class="muted reg-sinf">Sin fotos de esta semana todavía.</p>';
-    return `<section class="card wide reg-res"><div class="card-h"><span>Esta semana en el dique</span><small>${semTitulo(w)} · ${etapaEn(M, TODAY)}</small></div>
+    return `<section class="card wide reg-res"><div class="card-h"><span>${esHoy(w) ? "Esta semana en el dique" : "Última semana registrada"}</span><small>${semTitulo(w)} · ${etapaEn(M, esHoy(w) ? TODAY : w.hasta)}</small></div>
       <div class="reg-res-b"><div class="reg-av">${av}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div>
       <div>${der}<a class="reg-link" href="#registro">${icon("camera", "ic sm")}Ver registro semanal${(w.medios || []).length ? ` · ${contarMedios(w)}` : " · semanas anteriores"} →</a></div></div></section>`;
   }

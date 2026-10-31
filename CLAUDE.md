@@ -110,7 +110,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 
 - Pestaña **"Registro semanal"** (al lado del Resumen gerencial) y recuadro **"Esta semana en el dique"** en el resumen. Datos en `registro.js`, se edita a mano; archivos en `registro/sN/`.
 - Cada semana: el usuario manda fotos, videos y el reporte del superintendente. Las fotos se reducen a 1600 px sin metadatos (más una miniatura `-min.jpg` de 480 px); los videos van tal cual.
-- Semanas de **sábado a viernes**. "Esta semana en el dique" (resumen) muestra siempre la **semana actual** (la que contiene hoy) con lo que haya: si aún no hay fotos dice "Sin fotos de esta semana todavía"; si la semana no está cargada en `registro.js`, sale vacía con sus fechas. El avance de la semana se arma con los mensajes del equipo en Monday de esa semana (27 oct).
+- Semanas de **lunes a sábado** (desde el 31 oct; antes sábado a viernes). Se muestra primero la **última semana cargada** en `registro.js`: una semana nueva sin fotos **no se muestra** hasta que el usuario diga "actualízala" y se suban las fotos (31 oct). Si la semana mostrada ya no es la actual, el recuadro del resumen se titula "Última semana registrada" en vez de "Esta semana en el dique". El avance de la semana se arma con los mensajes del equipo en Monday de esa semana (27 oct).
 - Cada semana empieza con la zona **"Temas importantes"**: una o dos líneas cortas escritas a mano (p. ej. "Presupuesto aprobado: US$ 1.08 M · 27 oct", "1 día perdido por lluvia · 24 oct"). Sin recuadros automáticos ni repetir lo que ya está en otra zona (pedido del usuario, 27 oct: "no redundes, hay mucho ruido"). El usuario puede pedir "pon esto como tema importante".
 - **Lo más reciente primero** dentro de cada semana (pedido del usuario, 30 oct): las fotos por fecha descendente y, en el avance, zonas y comentarios con lo último arriba ("Temas importantes" sigue de primera). Lo nuevo se agrega arriba en `registro.js`, no al final; el orden en pantalla es el del archivo.
 - La pestaña Registro muestra **una sección desplegable por semana**: abierta la actual, cerradas las anteriores (27 oct).
@@ -119,7 +119,7 @@ Si Monday cambia una columna, se corrige en la tabla `TABLEROS` de `monday/gener
 ## Versión liviana del registro (semana.html)
 
 - `semana.html` (+ `semana.js`, `semana.css`): solo el registro semanal, para enviar a media semana. Lee `registro.js` y `monday.js` (solo para el día de dique); no toca el dashboard.
-- Arriba la semana actual abierta; las anteriores cerradas debajo. `semana.html?s=N` abre la semana N.
+- Arriba la semana actual (o la última cargada) abierta; las anteriores cerradas debajo. `semana.html?s=N` abre la semana N.
 - Botón **"Descargar PDF"**: usa la impresión del navegador ("Guardar como PDF") con diseño A4 (fondo blanco, fotos en 4 columnas, sin semanas cerradas).
 - Sin enlace al dashboard (pedido del usuario, 27 oct). Enlace para enviar: `https://ehmillaa2104.github.io/control-dique/semana.html`.
 
