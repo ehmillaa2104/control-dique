@@ -17,7 +17,7 @@ Dashboard de control del dique seco del **M/V Kelly Trader**. Los datos salen de
   2. La nueva queda en la raíz.
   3. **No se ponen enlaces a las revisiones anteriores en el dashboard** (el usuario pidió quitarlos para no confundir); siguen accesibles por su ruta, p. ej. `rev2/`.
 - **Pruebas** (`pruebas/`, p. ej. el cronograma 3D) van aparte: nunca tocan las revisiones.
-- Al cambiar `app.js` o `styles.css`, subir el `?v=` en `index.html`. Si no, el navegador muestra la versión vieja.
+- Al cambiar `app.js` o `styles.css`, subir el `?v=` en `index.html`. Si no, el navegador muestra la versión vieja. Además, `index.html` y `semana.html` traen un script al final que compara sus `?v=` con los de la página publicada y, si el navegador tiene una copia vieja, se recarga sola con la nueva (31 oct: gerencia abría el enlace y veía la versión anterior; GitHub Pages deja la página en caché 10 min).
 
 ## Datos de Monday (lo más importante)
 

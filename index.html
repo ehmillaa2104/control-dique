@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=13.37">
+  <link rel="stylesheet" href="styles.css?v=13.38">
 </head>
 <body>
   <header class="hero">
@@ -40,9 +40,23 @@
 
   <div id="tip" class="tip" hidden></div>
 
-  <script src="monday.js?v=13.37"></script>
-  <script src="notas.js?v=13.37"></script>
-  <script src="registro.js?v=13.37"></script>
-  <script src="app.js?v=13.37"></script>
+  <script src="monday.js?v=13.38"></script>
+  <script src="notas.js?v=13.38"></script>
+  <script src="registro.js?v=13.38"></script>
+  <script src="app.js?v=13.38"></script>
+  <script>
+    // Si el navegador muestra una copia vieja de esta página, la compara con la publicada y se recarga sola con la versión nueva
+    (function () {
+      var vs = function (txt) { return (txt.match(/[\w-]+\.(?:js|css)\?v=[\d.]+/g) || []).sort().join(" "); };
+      var aqui = vs(Array.prototype.map.call(document.querySelectorAll("script[src],link[href]"), function (e) { return e.getAttribute("src") || e.getAttribute("href"); }).join(" "));
+      fetch(location.pathname + "?nc=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
+        var pub = vs(t);
+        if (!pub || pub === aqui) return;
+        try { if (sessionStorage.getItem("dique-recarga") === pub) return; sessionStorage.setItem("dique-recarga", pub); } catch (e) {}
+        var q = new URLSearchParams(location.search); q.set("v", (pub.match(/\?v=([\d.]+)/) || [])[1] || Date.now());
+        location.replace(location.pathname + "?" + q.toString() + location.hash);
+      }).catch(function () {});
+    })();
+  </script>
 </body>
 </html>
