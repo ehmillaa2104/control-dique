@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-10-30",
+ "extraido": "2026-10-31",
  "cronograma": [
   {
    "id": "13095528116",
@@ -6255,25 +6255,6 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-10-30"
   },
   {
-   "id": "13302150984",
-   "nombre": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
-   "area": "Soldadura",
-   "proveedor": "Ferretería Industrial, S.A.",
-   "po": 0,
-   "incurrido": 238.24,
-   "saldo": null,
-   "fecha": "2026-10-14",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13043921754"
-   ],
-   "actualizado": "2026-10-30"
-  },
-  {
    "id": "13346547714",
    "nombre": "ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital",
    "area": "",
@@ -6287,25 +6268,6 @@ window.DIQUE_MONDAY = {
    "cc": [],
    "trabajos": [],
    "actualizado": "2026-10-21"
-  },
-  {
-   "id": "13346590356",
-   "nombre": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
-   "area": "Soldadura",
-   "proveedor": "Acero R&R Soluciones, S.A.",
-   "po": 0,
-   "incurrido": 194.74,
-   "saldo": null,
-   "fecha": "2026-10-16",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13043921754"
-   ],
-   "actualizado": "2026-10-30"
   },
   {
    "id": "13346657638",
@@ -6339,63 +6301,6 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
-  },
-  {
-   "id": "13346658601",
-   "nombre": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
-   "area": "Soldadura",
-   "proveedor": "Acero R&R Soluciones, S.A.",
-   "po": 0,
-   "incurrido": 146.85,
-   "saldo": null,
-   "fecha": "2026-10-16",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13256744868"
-   ],
-   "actualizado": "2026-10-30"
-  },
-  {
-   "id": "13408556100",
-   "nombre": "29005 · Grupo Gasol — Lanza de corte y cortadora",
-   "area": "Soldadura",
-   "proveedor": "Grupo Gasol, S.A.",
-   "po": 0,
-   "incurrido": 645,
-   "saldo": null,
-   "fecha": "2026-10-19",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13043921754"
-   ],
-   "actualizado": "2026-10-30"
-  },
-  {
-   "id": "13408567192",
-   "nombre": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
-   "area": "",
-   "proveedor": "El Suplidor",
-   "po": 0,
-   "incurrido": 198.9,
-   "saldo": null,
-   "fecha": "2026-10-26",
-   "estatus": "",
-   "pago": "",
-   "cc": [
-    "13081201432"
-   ],
-   "trabajos": [
-    "13043921754"
-   ],
    "actualizado": "2026-10-30"
   },
   {
@@ -7012,6 +6917,101 @@ window.DIQUE_MONDAY = {
     "13346969104"
    ],
    "actualizado": "2026-10-28"
+  },
+  {
+   "id": "13302150984",
+   "nombre": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
+   "area": "Soldadura",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": 238.24,
+   "saldo": null,
+   "fecha": "2026-10-14",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
+  },
+  {
+   "id": "13346590356",
+   "nombre": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
+   "area": "Soldadura",
+   "proveedor": "Acero R&R Soluciones, S.A.",
+   "po": 0,
+   "incurrido": 194.74,
+   "saldo": null,
+   "fecha": "2026-10-16",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
+  },
+  {
+   "id": "13346658601",
+   "nombre": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
+   "area": "Soldadura",
+   "proveedor": "Acero R&R Soluciones, S.A.",
+   "po": 0,
+   "incurrido": 146.85,
+   "saldo": null,
+   "fecha": "2026-10-16",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13256744868"
+   ],
+   "actualizado": "2026-10-30"
+  },
+  {
+   "id": "13408556100",
+   "nombre": "29005 · Grupo Gasol — Lanza de corte y cortadora",
+   "area": "Soldadura",
+   "proveedor": "Grupo Gasol, S.A.",
+   "po": 0,
+   "incurrido": 645,
+   "saldo": null,
+   "fecha": "2026-10-19",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
+  },
+  {
+   "id": "13408567192",
+   "nombre": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
+   "area": "",
+   "proveedor": "El Suplidor",
+   "po": 0,
+   "incurrido": 198.9,
+   "saldo": null,
+   "fecha": "2026-10-26",
+   "estatus": "",
+   "pago": "",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-10-30"
   }
  ],
  "cambios": [
@@ -9805,9 +9805,215 @@ window.DIQUE_MONDAY = {
     "13278839703": 50,
     "13346969104": 50
    }
+  },
+  {
+   "fecha": "2026-10-31",
+   "avance": 24.94,
+   "pct": {
+    "13256760608": 0,
+    "13256760158": 0,
+    "13043921163": 0,
+    "13043943307": 0,
+    "13095643040": 0,
+    "13095617046": 0,
+    "13095599940": 0,
+    "13095599941": 0,
+    "13095594034": 0,
+    "13095599992": 0,
+    "13095616880": 0,
+    "13095570221": 0,
+    "13095594157": 0,
+    "13095604569": 0,
+    "13095643042": 0,
+    "13095593116": 0,
+    "13095643083": 0,
+    "13095604666": 0,
+    "13095604667": 0,
+    "13095605104": 0,
+    "13095599993": 0,
+    "13043922222": 100,
+    "13043922221": 0,
+    "13043922220": 0,
+    "13043936425": 0,
+    "13043922218": 0,
+    "13043922219": 0,
+    "13043936426": 0,
+    "13043924490": 0,
+    "13043950469": 0,
+    "13043924377": 0,
+    "13043924378": 0,
+    "13043924379": 0,
+    "13043924375": 0,
+    "13043945523": 0,
+    "13043950430": 0,
+    "13043945522": 0,
+    "13043950431": 0,
+    "13095604901": 0,
+    "13095604668": 0,
+    "13095617389": 0,
+    "13095570185": 0,
+    "13428126280": 100,
+    "13428159726": 100,
+    "13256760157": 0,
+    "13256755192": 0,
+    "13256755203": 0,
+    "13256744926": 0,
+    "13256760609": 0,
+    "13256744868": 25,
+    "13043950472": 0,
+    "13043945735": 0,
+    "13043950470": 0,
+    "13043945736": 0,
+    "13043932303": 0,
+    "13043932345": 0,
+    "13043924491": 0,
+    "13043950471": 0,
+    "13043950468": 0,
+    "13043924492": 0,
+    "13043924547": 0,
+    "13043924548": 0,
+    "13043932301": 0,
+    "13043943301": 0,
+    "13043943303": 0,
+    "13043943305": 0,
+    "13043932352": 0,
+    "13095643646": 0,
+    "13095605151": 0,
+    "13095616903": 0,
+    "13095643870": 0,
+    "13095616905": 0,
+    "13095599004": 0,
+    "13095600128": 0,
+    "13095643647": 0,
+    "13095642636": 0,
+    "13095599565": 0,
+    "13095643648": 0,
+    "13095569998": 0,
+    "13043941391": 0,
+    "13095616904": 0,
+    "13373451881": 25,
+    "13373417444": 25,
+    "13043924545": 0,
+    "13043924546": 0,
+    "13095643872": 0,
+    "13095605154": 0,
+    "13095643873": 0,
+    "13095570205": 0,
+    "13043941390": 0,
+    "13043924488": 0,
+    "13095643937": 75,
+    "13095604536": 0,
+    "13095613807": 0,
+    "13277138828": 25,
+    "13277158049": 0,
+    "13277104868": 0,
+    "13277169481": 0,
+    "13277138491": 25,
+    "13277157364": 75,
+    "13043950429": 0,
+    "13043932348": 0,
+    "13043921752": 0,
+    "13043936427": 0,
+    "13043950425": 0,
+    "13043950426": 0,
+    "13043941394": 0,
+    "13043945527": 0,
+    "13043950423": 0,
+    "13043950424": 0,
+    "13043950428": 0,
+    "13043950427": 0,
+    "13043932349": 0,
+    "13043922215": 0,
+    "13043922216": 0,
+    "13043922217": 0,
+    "13095628677": 0,
+    "13095603677": 0,
+    "13256760245": 0,
+    "13095637379": 0,
+    "13095603385": 0,
+    "13256760246": 0,
+    "13043924495": 0,
+    "13043924496": 0,
+    "13043932347": 0,
+    "13043924493": 0,
+    "13043945526": 0,
+    "13043945524": 0,
+    "13095638228": 0,
+    "13095637451": 0,
+    "13043921183": 0,
+    "13095613978": 0,
+    "13095637378": 0,
+    "13095603722": 0,
+    "13095603720": 25,
+    "13043932296": 0,
+    "13043932299": 0,
+    "13095613430": 0,
+    "13095628540": 25,
+    "13256755102": 0,
+    "13095637314": 0,
+    "13095603679": 25,
+    "13256760623": 25,
+    "13256755233": 25,
+    "13256755205": 25,
+    "13256755234": 25,
+    "13043936421": 0,
+    "13043936422": 0,
+    "13043936423": 0,
+    "13043941389": 0,
+    "13043936424": 0,
+    "13043943240": 0,
+    "13043943242": 0,
+    "13043943244": 0,
+    "13043941395": 0,
+    "13043941393": 0,
+    "13095614175": 0,
+    "13095603678": 0,
+    "13095603531": 0,
+    "13095614176": 0,
+    "13095603889": 0,
+    "13043932350": 0,
+    "13043936420": 0,
+    "13256755103": 0,
+    "13256755204": 0,
+    "13256755193": 25,
+    "13277158044": 0,
+    "13043921754": 0,
+    "13095638257": 0,
+    "13095602832": 0,
+    "13095613982": 0,
+    "13428203940": 100,
+    "13098327837": 100,
+    "13098295887": 100,
+    "13127441793": 100,
+    "13098328358": 0,
+    "13098327364": 0,
+    "13127948545": 100,
+    "13238699549": 100,
+    "13098338467": 25,
+    "13098367009": 25,
+    "13098306630": 0,
+    "13098338326": 0,
+    "13098327946": 75,
+    "13212064635": 0,
+    "13212017532": 0,
+    "13212064416": 0,
+    "13315637430": 0,
+    "13315624518": 0,
+    "13315655864": 0,
+    "13098327907": 0,
+    "13098328158": 0,
+    "13098326970": 100,
+    "13098333423": 0,
+    "13098338352": 0,
+    "13098337112": 100,
+    "13098334682": 75,
+    "13098338054": 6.9,
+    "13278839703": 50,
+    "13346969104": 50
+   }
   }
  ],
- "_huella": "cd8d00fd1ee2",
+ "_huella": "36f17c25c0d8",
  "cambiosLectura": [],
  "observaciones": [
   {
@@ -9892,15 +10098,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -9909,18 +10107,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"57742 (AD) · Agencias Domingo — Empaque de caucho con alma de lona\": sin monto, trabajo enlazado; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"29005 · Grupo Gasol — Lanza de corte y cortadora\": sin monto; no suma en los totales."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -10053,6 +10239,26 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"ACH26/10154 · Luis Carlos Saavedra — Viáticos de alimentación del 19 al 31 de octubre\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"57925 · Ferretería Industrial — Grapa vitáulica de 8″\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"29005 · Grupo Gasol — Lanza de corte y cortadora\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",

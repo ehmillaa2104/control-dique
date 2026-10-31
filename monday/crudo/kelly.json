@@ -1,5 +1,5 @@
 {
- "extraido": "2026-10-30",
+ "extraido": "2026-10-31",
  "boards": [
   {
    "id": "18435454602",
@@ -6557,80 +6557,6 @@
       "subitems": []
      },
      {
-      "id": "13302150984",
-      "name": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
-      "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-10-30T20:25:17Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": "Soldadura"
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Ferretería Industrial, S.A."
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043921754"
-        ]
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "238.24"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-14"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-30 20:25:17 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
       "id": "13346547714",
       "name": "ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital",
       "created_at": "2026-10-21T14:22:34Z",
@@ -6696,80 +6622,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-21 14:22:34 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
-      "id": "13346590356",
-      "name": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
-      "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-30T20:24:52Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": "Soldadura"
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Acero R&R Soluciones, S.A."
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043921754"
-        ]
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "194.74"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-16"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-30 20:24:52 UTC"
        }
       ],
       "subitems": []
@@ -6914,228 +6766,6 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-30 19:56:43 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
-      "id": "13346658601",
-      "name": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
-      "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-10-30T20:26:58Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": "Soldadura"
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Acero R&R Soluciones, S.A."
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13256744868"
-        ]
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "146.85"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-16"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-30 20:26:58 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
-      "id": "13408556100",
-      "name": "29005 · Grupo Gasol — Lanza de corte y cortadora",
-      "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-30T20:19:58Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": "Soldadura"
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "Grupo Gasol, S.A."
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043921754"
-        ]
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "645"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-19"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-30 20:19:58 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
-      "id": "13408567192",
-      "name": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
-      "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-30T20:19:16Z",
-      "group": {
-       "id": "group_mm32rmd2",
-       "title": "PO por enlazar"
-      },
-      "column_values": [
-       {
-        "id": "dropdown_mm334y96",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "text_mm2p9mx7",
-        "type": "text",
-        "text": "El Suplidor"
-       },
-       {
-        "id": "board_relation_mm7yq0et",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13081201432"
-        ]
-       },
-       {
-        "id": "board_relation_mm7y2fcq",
-        "type": "board_relation",
-        "text": null,
-        "linked_item_ids": [
-         "13043921754"
-        ]
-       },
-       {
-        "id": "numeric_mm2pfpzs",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "numeric_mm322fqy",
-        "type": "numbers",
-        "text": "198.9"
-       },
-       {
-        "id": "numeric_mm39rhnj",
-        "type": "numbers",
-        "text": ""
-       },
-       {
-        "id": "date_mm2ptpmb",
-        "type": "date",
-        "text": "2026-10-26"
-       },
-       {
-        "id": "dropdown_mm328rrg",
-        "type": "dropdown",
-        "text": null
-       },
-       {
-        "id": "color_mm32ajy1",
-        "type": "status",
-        "text": ""
-       },
-       {
-        "id": "pulse_updated_mm3j8vr0",
-        "type": "last_updated",
-        "text": "2026-10-30 20:19:16 UTC"
        }
       ],
       "subitems": []
@@ -9566,6 +9196,376 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-10-28 16:54:27 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13302150984",
+      "name": "57925 · Ferretería Industrial — Grapa vitáulica de 8″",
+      "created_at": "2026-10-15T16:57:03Z",
+      "updated_at": "2026-10-30T20:25:17Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": "Soldadura"
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043921754"
+        ]
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "238.24"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-14"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-30 20:25:17 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13346590356",
+      "name": "9181 · Acero R&R Soluciones — Codo de 2″ y bridas de 1½″",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-30T20:24:52Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": "Soldadura"
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043921754"
+        ]
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "194.74"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-16"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-30 20:24:52 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13346658601",
+      "name": "9180 · Acero R&R Soluciones — Tubería de 1½″ hierro negro",
+      "created_at": "2026-10-21T14:22:34Z",
+      "updated_at": "2026-10-30T20:26:58Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": "Soldadura"
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Acero R&R Soluciones, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13256744868"
+        ]
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "146.85"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-16"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-30 20:26:58 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13408556100",
+      "name": "29005 · Grupo Gasol — Lanza de corte y cortadora",
+      "created_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:19:58Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": "Soldadura"
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Grupo Gasol, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043921754"
+        ]
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "645"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-19"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-30 20:19:58 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13408567192",
+      "name": "4541 · El Suplidor — Alambre dulce y termómetro infrarrojo",
+      "created_at": "2026-10-28T16:55:00Z",
+      "updated_at": "2026-10-30T20:19:16Z",
+      "group": {
+       "id": "group_mm34f03q",
+       "title": "PO Enlazadas"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "El Suplidor"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13081201432"
+        ]
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13043921754"
+        ]
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "198.9"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": "2026-10-26"
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": ""
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-10-30 20:19:16 UTC"
        }
       ],
       "subitems": []
