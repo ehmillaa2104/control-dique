@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 6.9,
+     "pct": 19.5,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5260,7 +5260,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201165"
      ],
-     "actualizado": "2026-10-27",
+     "actualizado": "2026-11-03",
      "costo": "aprobado",
      "pctEstado": 0,
      "avanceDe": "subelementos",
@@ -5400,13 +5400,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13396533611",
        "nombre": "§13 · Acero — Tanque 1 Babor (IFO 1P)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "80%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 3.02,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-23",
         "texto": "Acero a cambiar definido. Inicia el corte de acero a renovar."
@@ -5415,13 +5415,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13396533612",
        "nombre": "§13 · Acero — Tanque 1 Estribor (IFO 1S)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "60%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 2.26,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero a cortar definido · andamios terminados · inicia el corte de acero a renovar."
@@ -5430,13 +5430,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13396533613",
        "nombre": "§13 · Acero — Tanque 2 Babor (MGO 2P)",
-       "peso": 4.6,
+       "peso": 3.77,
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
        "ponderado": 0,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero a renovar definido. Se inicia armado de andamios. El corte empieza mañana 28-oct."
@@ -5517,13 +5517,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13397339895",
        "nombre": "§13 · Acero — Tanque 2 Estribor (MGO 2S)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "70%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 2.64,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero marcado · andamios armados · corte inicia después del mediodía."
@@ -5532,13 +5532,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13397352965",
        "nombre": "§13 · Acero — Tanque 3 Babor (IFO 3P)",
-       "peso": 4.6,
+       "peso": 3.77,
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
        "ponderado": 0,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Inicia armado de andamios hoy. Acero aún no marcado al momento del reporte."
@@ -5547,13 +5547,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13397347399",
        "nombre": "§13 · Acero — Tanque 3 Estribor (IFO 3S)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "60%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 2.26,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero definido · andamios armados · cortando acero ya."
@@ -5577,13 +5577,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13397344105",
        "nombre": "§13 · Acero — Tanque 5 Babor (IFO 5P)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 1.89,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero definido · andamios armados · cortando acero para renovar."
@@ -5592,13 +5592,13 @@ window.DIQUE_MONDAY = {
       {
        "id": "13397353759",
        "nombre": "§13 · Acero — Tanque 5 Estribor (IFO 5S)",
-       "peso": 4.6,
-       "avance": "25%",
-       "pct": 25,
+       "peso": 3.77,
+       "avance": "90%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.15,
-       "medicion": "2026-10-27",
-       "monto": 35958,
+       "ponderado": 3.39,
+       "medicion": "2026-11-03",
+       "monto": 29448,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Andamios armados · acero definido · corte inicia después del mediodía."
@@ -5614,6 +5614,18 @@ window.DIQUE_MONDAY = {
        "ponderado": 0,
        "medicion": null,
        "monto": 25688,
+       "nota": null
+      },
+      {
+       "id": "13457167596",
+       "nombre": "§13 · Acero — Lámina plana cubierta y costado",
+       "peso": 6.66,
+       "avance": "60%",
+       "pct": 0,
+       "cancelado": false,
+       "ponderado": 4.0,
+       "medicion": "2026-11-03",
+       "monto": 52074,
        "nota": null
       }
      ]
@@ -7822,13 +7834,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 7.165
+   "avanceDias": 11.575
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 34.915
+   "avanceDias": 39.325
   }
  },
  "historial": [
@@ -10678,7 +10690,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-03",
-   "avance": 24.94,
+   "avance": 28.09,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -10877,76 +10889,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 6.9,
+    "13098338054": 19.5,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "d003a3e17d11",
+ "_huella": "7c33ea082086",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Generador de emergencia — radiador y bomba de inyección",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "1062"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
-   "campo": "$ Incurrido",
-   "antes": "146.85",
-   "ahora": "157.13"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Fabricación de tubería de agua de mar enfriador LT",
-   "campo": "$ Incurrido",
-   "antes": "4216.39",
-   "ahora": "4511.53"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "$ Incurrido",
-   "antes": "5356.34",
-   "ahora": "5728.29"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Adquisición de materiales de soldadura",
-   "campo": "$ Incurrido",
-   "antes": "1276.88",
-   "ahora": "6552.53"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "17957.09"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bajada de slop y basura",
-   "campo": "$ Incurrido",
-   "antes": "24089",
-   "ahora": "29257"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Materiales seguridad",
-   "campo": "$ Incurrido",
-   "antes": "74",
-   "ahora": "79.18"
-  },
-  {
    "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "7437.5"
+   "trabajo": "Astillero",
+   "campo": "Avance (subelementos)",
+   "antes": "6.9 %",
+   "ahora": "19.5 %"
   }
  ],
  "observaciones": [
@@ -10995,8 +10951,56 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Babor (IFO 1P): Avance \"80%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Babor (IFO 1P): Avance ponderado 3.02 no es Peso × Avance (0.00)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S): Avance \"60%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S): Avance ponderado 2.26 no es Peso × Avance (0.00)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 2 Estribor (MGO 2S): Avance \"70%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 2 Estribor (MGO 2S): Avance ponderado 2.64 no es Peso × Avance (0.00)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 3 Estribor (IFO 3S): Avance \"60%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 3 Estribor (IFO 3S): Avance ponderado 2.26 no es Peso × Avance (0.00)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Estribor (IFO 5S): Avance \"90%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Estribor (IFO 5S): Avance ponderado 3.39 no es Peso × Avance (0.00)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance \"60%\" no es un porcentaje; cuenta como 0 %."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance ponderado 4.0 no es Peso × Avance (0.00)."
+  },
+  {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 6.9 % calculado de 26 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 19.5 % calculado de 27 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
