@@ -333,31 +333,37 @@
     { k: "lluvia", re: /lluvia|mal tiempo|clima/i, uno: "por lluvia", varios: "por lluvia" },
     { k: "festivo", re: /festivo|feriado|d[ií]a c[ií]vico|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" }
   ];
-  function diasPerdidosKpi(M) {
+  // Separa los imprevistos de lluvia o festivo con días: los ya ocurridos cuentan en el indicador,
+  // los de fecha futura son previstos y van a Puntos de atención, no al número de días perdidos.
+  function diasImprevistos(M) {
     const cs = ((M && M.D.cambios) || []).map((c) => {
       const cat = CAT_DIA.find((t) => t.re.test(`${c.tipo || ""} ${c.nombre || ""}`));
       return cat ? Object.assign({}, c, { _cat: cat, _f: fechaImp(c) }) : null;
     }).filter((c) => c && (c.dias || 0) > 0);
-    const ocurridos = cs.filter((c) => c._f && c._f <= TODAY);
-    const previstos = cs.filter((c) => !(c._f && c._f <= TODAY)).sort((a, b) => (a._f < b._f ? -1 : 1));
+    const orden = (a, b) => (a._f < b._f ? -1 : 1);
+    return {
+      todos: cs,
+      ocurridos: cs.filter((c) => c._f && c._f <= TODAY).sort(orden),
+      previstos: cs.filter((c) => !(c._f && c._f <= TODAY)).sort(orden)
+    };
+  }
+  function diasPerdidosKpi(M) {
+    const { todos, ocurridos, previstos } = diasImprevistos(M);
     const dias = sum(ocurridos, (c) => c.dias);
-    if (!cs.length) return kpi("cloud", "Días perdidos", "0 días", "Sin registros en Cambios/Imprevistos");
+    if (!todos.length) return kpi("cloud", "Días perdidos", "0 días", "Sin registros en Cambios/Imprevistos");
 
-    // Subtítulo: el desglose por causa de lo ya ocurrido, y al final lo previsto con su fecha
+    // Subtítulo: solo el desglose por causa de lo ya perdido. Lo previsto va en Puntos de atención.
     const porCat = CAT_DIA.map((t) => {
       const d = sum(ocurridos.filter((c) => c._cat.k === t.k), (c) => c.dias);
       return d ? `${d} ${d === 1 ? t.uno : t.varios}` : null;
     }).filter(Boolean);
-    const dPrev = sum(previstos, (c) => c.dias);
-    if (dPrev) porCat.push(previstos.length === 1
-      ? `${dPrev} previsto el ${fmtShort(previstos[0]._f)}`
-      : `${dPrev} previstos desde el ${fmtShort(previstos[0]._f)}`);
-    const sub = porCat.length ? porCat.join(" · ") : "Sin registros en Cambios/Imprevistos";
+    const sub = porCat.length ? porCat.join(" · ")
+      : (previstos.length ? "ninguno perdido todavía" : "Sin registros en Cambios/Imprevistos");
 
     const fila = (c) => rowT(`${fmtShort(c._f)} · ${esc(c.nombre)}`, `${c.dias || 0} d`);
-    const det = ocurridos.sort((a, b) => (a._f < b._f ? -1 : 1)).map(fila).join("");
+    const det = ocurridos.map(fila).join("");
     const detPrev = previstos.length
-      ? `<div class="tnote">Previstos, todavía no ocurridos</div>${previstos.map(fila).join("")}`
+      ? `<div class="tnote">Previstos, todavía no perdidos. Ver Puntos de atención</div>${previstos.map(fila).join("")}`
       : "";
     return kpi("cloud", "Días perdidos", `${dias} ${dias === 1 ? "día" : "días"}`, sub,
       { alert: dias > 0, tip: `<b>Días perdidos</b>${det}${detPrev}<div class="tnote">Fuente: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo y de festivos</div>` });
@@ -469,7 +475,11 @@
     };
     const faseAct = M.cur && FASES.find((f) => f.id === M.cur.kind);
     const porIniciar = faseAct ? ts.filter((t) => faseId(t) === faseAct.id && t.pct === 0).length : 0;
-    const proximo = prox.map(fx).join("") + (porIniciar ? `<li class="sem-mas">${plural(porIniciar, "trabajo", "trabajos")} de ${faseAct.nombre} por iniciar</li>` : "");
+    // Paros previstos que todavía no ocurrieron (festivos, mal tiempo anunciado): no cuentan como día
+    // perdido hasta que pasen, pero hay que verlos venir. Van primero porque tienen fecha cierta.
+    const paros = diasImprevistos(M).previstos.map((c) =>
+      `<li ${tipAttr(`<b>${esc(c.nombre)}</b>${rowT("Impacto", days1(c.dias))}${rowT("Estado", esc(c.estado || "Sin estado"))}<div class="tnote">Previsto: todavía no cuenta como día perdido</div>`)}>${icon("cloud", "ic sm")}<span class="sem-nm">${esc(c.nombre.split(":").pop().trim())} · ${days1(c.dias)}</span><b>${fmtShort(c._f)}</b></li>`).join("");
+    const proximo = paros + prox.map(fx).join("") + (porIniciar ? `<li class="sem-mas">${plural(porIniciar, "trabajo", "trabajos")} de ${faseAct.nombre} por iniciar</li>` : "");
     const col = (titulo, sub, cuerpo, vacio) => `<div class="sem-col"><div class="sem-h"><b>${titulo}</b><small>${sub}</small></div><ul>${cuerpo || `<li class="sem-vacio">${vacio}</li>`}</ul></div>`;
     const cambios = card("Avance de la semana", `<div class="sem sem-2">
       ${col("Lo hecho", ref ? `desde el ${fmtShort(ref.fecha)} · ${plural(hechoN, "trabajo avanzó", "trabajos avanzaron")}` : "sin lecturas anteriores", hecho, "Ningún trabajo avanzó en estos días.")}
