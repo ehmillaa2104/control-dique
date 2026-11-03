@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 19.5,
+     "pct": 18.2,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5389,13 +5389,16 @@ window.DIQUE_MONDAY = {
        "id": "13396533610",
        "nombre": "§11 · Limpieza de tanques y residuos",
        "peso": 0.76,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0,
-       "medicion": null,
+       "ponderado": 0.76,
+       "medicion": "2026-11-03",
        "monto": 5939,
-       "nota": null
+       "nota": {
+        "fecha": "2026-11-03",
+        "texto": "2026-11-03 | Avance 100 %."
+       }
       },
       {
        "id": "13396533611",
@@ -5620,13 +5623,16 @@ window.DIQUE_MONDAY = {
        "id": "13457167596",
        "nombre": "§13 · Acero — Lámina plana cubierta y costado",
        "peso": 6.66,
-       "avance": "60%",
+       "avance": "30%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 4.0,
+       "ponderado": 2.0,
        "medicion": "2026-11-03",
        "monto": 52074,
-       "nota": null
+       "nota": {
+        "fecha": "2026-11-03",
+        "texto": "2026-11-03 | Avance 30 %."
+       }
       }
      ]
     },
@@ -7834,13 +7840,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 11.575
+   "avanceDias": 11.120000000000001
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 39.325
+   "avanceDias": 38.870000000000005
   }
  },
  "historial": [
@@ -10690,7 +10696,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-03",
-   "avance": 28.09,
+   "avance": 27.76,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -10889,20 +10895,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 19.5,
+    "13098338054": 18.2,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "7c33ea082086",
+ "_huella": "454b5cf0ed77",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "6.9 %",
-   "ahora": "19.5 %"
+   "antes": "19.5 %",
+   "ahora": "18.2 %"
   }
  ],
  "observaciones": [
@@ -10992,15 +10998,15 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance \"60%\" no es un porcentaje; cuenta como 0 %."
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance \"30%\" no es un porcentaje; cuenta como 0 %."
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance ponderado 4.0 no es Peso × Avance (0.00)."
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance ponderado 2.0 no es Peso × Avance (0.00)."
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 19.5 % calculado de 27 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 18.2 % calculado de 27 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
