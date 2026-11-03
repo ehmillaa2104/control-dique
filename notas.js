@@ -16,14 +16,17 @@ window.DIQUE_NOTAS = {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
   // Totales del resumen que Monday todavía no trae (indicación del usuario, 30 oct). Borrar cuando estén en Monday.
+  // 3 nov: "pagado" pasa a 192.352,11, el total "Paid In Full" del reporte contable al 31 oct.
+  // "po" sigue siendo el del archivo del 30 oct: el reporte del 31 oct ya no trae la hoja de órdenes de compra.
   "montos": {
     "po": 96899,
-    "pagado": 153963.22
+    "pagado": 192352.11
   },
   // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
   // Borrar cuando Monday tenga una columna con la fecha del evento.
   "fechaImprevisto": {
-    "13398896309": "2026-10-24"  // Pérdida de día por lluvia: ocurrió el 24 oct, se registró el 27 oct
+    "13398896309": "2026-10-24",  // Pérdida de día por lluvia: ocurrió el 24 oct, se registró el 27 oct
+    "13455614931": "2026-11-02"   // Pérdida de día por festivo (Todos los Santos): ocurrió el 2 nov, se registró el 3 nov
   },
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
