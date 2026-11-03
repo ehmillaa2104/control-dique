@@ -343,13 +343,16 @@
     const dias = sum(ocurridos, (c) => c.dias);
     if (!cs.length) return kpi("cloud", "Días perdidos", "0 días", "Sin registros en Cambios/Imprevistos");
 
-    // Subtítulo: el desglose por causa, solo con las que tienen días
+    // Subtítulo: el desglose por causa de lo ya ocurrido, y al final lo previsto con su fecha
     const porCat = CAT_DIA.map((t) => {
       const d = sum(ocurridos.filter((c) => c._cat.k === t.k), (c) => c.dias);
       return d ? `${d} ${d === 1 ? t.uno : t.varios}` : null;
     }).filter(Boolean);
-    const sub = porCat.length ? porCat.join(" · ")
-      : (previstos.length ? "ninguno ocurrido todavía" : "Sin registros en Cambios/Imprevistos");
+    const dPrev = sum(previstos, (c) => c.dias);
+    if (dPrev) porCat.push(previstos.length === 1
+      ? `${dPrev} previsto el ${fmtShort(previstos[0]._f)}`
+      : `${dPrev} previstos desde el ${fmtShort(previstos[0]._f)}`);
+    const sub = porCat.length ? porCat.join(" · ") : "Sin registros en Cambios/Imprevistos";
 
     const fila = (c) => rowT(`${fmtShort(c._f)} · ${esc(c.nombre)}`, `${c.dias || 0} d`);
     const det = ocurridos.sort((a, b) => (a._f < b._f ? -1 : 1)).map(fila).join("");
