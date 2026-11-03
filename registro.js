@@ -10,6 +10,65 @@
 window.DIQUE_REGISTRO = {
   "semanas": [
     {
+      "semana": 7,
+      "desde": "2026-11-02",
+      "hasta": "2026-11-07",
+      "fuente": "Reporte del superintendente (3 nov)",
+      "avance": [
+        { "zona": "Temas importantes", "items": [
+          { "txt": "Lunes 2 de noviembre: festivo en Colombia por el Día de Todos los Santos", "extra": "un día hábil sin trabajo en el astillero" },
+          { "txt": "Lunes 16 de noviembre: festivo por la Independencia de Cartagena", "extra": "el astillero informó que no habrá trabajo" }
+        ] },
+        { "zona": "Tanques de carga", "items": [
+          { "txt": "Corte de acero: 5S 90 %, 1P 80 %, 2S 70 %, 1S y 3S 60 %, 5P 50 %", "extra": "3 nov" },
+          { "txt": "Ya se reponen láminas en cuatro tanques: 3S y 5S al 50 %, 1S al 20 %, 1P y 5P iniciando", "extra": "3 nov" },
+          { "txt": "2P y 3P entran a trabajar hoy; son los dos que marcan el camino crítico del acero", "extra": "3 nov" },
+          { "txt": "5P: mucha estructura por cambiar, no solo forro", "extra": "pasó de 40 % a 50 % en cuatro días" },
+          { "txt": "Promedio de corte de los ocho tanques: 51 %", "extra": "era 28 % el 30 oct" }
+        ] },
+        { "zona": "Casco", "items": [
+          { "txt": "Casco estribor hacia popa: 70 % en insertos, con dos paños nuevos ya soldados", "extra": "3 nov" },
+          { "txt": "Casco estribor hacia proa: 50 %, insertos cortados y estructura en cambio", "extra": "3 nov" },
+          { "txt": "El casco queda dentro de renovación de acero, no como actividad aparte" }
+        ] }
+      ],
+      "medios": [
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1p_01_manhole-ifo-1p.jpg", "texto": "Manhole IFO 1P abierto", "grupo": "Tanque 1 babor · IFO 1P · 80 % de corte, colocando láminas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1p_02_andamio-iluminado.jpg", "texto": "Andamio en tres niveles con iluminación; el refuerzo de la zona alta ya cortado", "grupo": "Tanque 1 babor · IFO 1P · 80 % de corte, colocando láminas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1p_03_aberturas-entre-refuerzos.jpg", "texto": "Aberturas en el forro entre refuerzos; lecturas de 7.9 a 9.2 mm", "grupo": "Tanque 1 babor · IFO 1P · 80 % de corte, colocando láminas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1p_04_luz-por-aberturas.jpg", "texto": "Desde el andamio entra luz del día por los tramos ya retirados; ventilación forzada al fondo", "grupo": "Tanque 1 babor · IFO 1P · 80 % de corte, colocando láminas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_01_manhole-ifo-1s.jpg", "texto": "Manhole IFO 1S con permiso de espacio confinado", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_02_mamparo-marcado.jpg", "texto": "Mamparo marcado CT 1S BHD 126; serpentines de calefacción en el fondo", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_03_zona-alta-lecturas.jpg", "texto": "Zona alta medida de punta a punta; lecturas de 6.8 a 9.4 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_04_lamina-izada.jpg", "texto": "Lámina nueva izada con cadena, lista para montar; lecturas de 8.2 a 9.0 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_05_ventanas-cortadas.jpg", "texto": "Dos ventanas cortadas en el forro; lecturas de 7.7 a 8.4 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t2s_01_manhole.jpg", "texto": "Manhole del tanque 2 con permiso de espacio confinado", "grupo": "Tanque 2 estribor · 70 % de corte · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t2s_02_refuerzos-cortados.jpg", "texto": "Refuerzos cortados y cuadernas marcadas; lecturas de 6.6 a 7.0 mm", "grupo": "Tanque 2 estribor · 70 % de corte · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t2s_03_corrosion-refuerzos.jpg", "texto": "Refuerzos perforados por corrosión; al fondo entra luz por el forro ya abierto", "grupo": "Tanque 2 estribor · 70 % de corte · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t2s_04_lecturas-bajas.jpg", "texto": "Lecturas de 5.8 a 6.4 mm en los refuerzos, las más bajas del tanque", "grupo": "Tanque 2 estribor · 70 % de corte · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t2p_01_manhole.jpg", "texto": "Manhole del tanque 2 babor, todavía cerrado", "grupo": "Tanque 2 babor · entran a trabajar hoy · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3s_01_manhole-ifo-3s.jpg", "texto": "Manhole IFO 3S con permiso de espacio confinado", "grupo": "Tanque 3 estribor · IFO 3S · 60 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3s_02_refuerzos-nuevos.jpg", "texto": "Refuerzos nuevos instalados con los cordones de soldadura a la vista; lecturas de 8.0 a 8.2 mm", "grupo": "Tanque 3 estribor · IFO 3S · 60 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3s_03_refuerzos-soldados.jpg", "texto": "Tramo de refuerzos ya repuesto y soldado", "grupo": "Tanque 3 estribor · IFO 3S · 60 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3s_04_pano-nuevo-pie.jpg", "texto": "Paño nuevo colocado al pie del tanque, junto a los serpentines; lecturas de 9.7 a 10.0 mm", "grupo": "Tanque 3 estribor · IFO 3S · 60 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3s_05_pano-nuevo-soldado.jpg", "texto": "Paño nuevo soldado en el forro; al lado, las lecturas que justificaron el cambio: 10.0 a 7.2 mm", "grupo": "Tanque 3 estribor · IFO 3S · 60 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t3p_01_manhole-cerrado.jpg", "texto": "Manhole IFO 3P todavía atornillado: el tanque no se ha abierto", "grupo": "Tanque 3 babor · IFO 3P · sin avance · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5s_01_manhole-ifo-5s.jpg", "texto": "Manhole IFO 5S con permiso de espacio confinado", "grupo": "Tanque 5 estribor · IFO 5S · 90 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5s_02_lamina-zona-alta.jpg", "texto": "Lámina nueva en la zona alta; lecturas de 7.7 a 10.0 mm", "grupo": "Tanque 5 estribor · IFO 5S · 90 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5s_03_andamio-aberturas.jpg", "texto": "Andamio en varios niveles; aberturas en la zona alta y lecturas de 7.4 a 10.0 mm", "grupo": "Tanque 5 estribor · IFO 5S · 90 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5s_04_ventana-abierta.jpg", "texto": "Ventana abierta en el forro con luz del día al fondo; lecturas de 8.7 a 8.8 mm", "grupo": "Tanque 5 estribor · IFO 5S · 90 % de corte, 50 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_01_manhole-ifo-5p.jpg", "texto": "Manhole IFO 5P con permiso de espacio confinado", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_02_refuerzos-corroidos.jpg", "texto": "Refuerzos cortados: la corrosión los dejó perforados", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_03_estructura-a-cambiar.jpg", "texto": "Fila de refuerzos con pérdida de espesor en toda su altura", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_04_perforaciones.jpg", "texto": "Perforaciones pasantes en los refuerzos; lecturas de 8.1 a 10.1 mm en el forro", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_05_abertura-refuerzo.jpg", "texto": "Abertura en el forro con el refuerzo corroído a la vista", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t5p_06_vista-general.jpg", "texto": "Vista general del tanque: andamio, ventilación forzada y los primeros paños nuevos a los lados", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_casco_popa_01_insertos-soldados.jpg", "texto": "Dos insertos nuevos ya soldados en el forro, vistos desde el piso del dique", "grupo": "Casco estribor hacia popa · 70 % en insertos · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_casco_proa_01_ventanas-abiertas.jpg", "texto": "Cuatro ventanas abiertas en el forro sobre la línea de flotación, junto a las marcas de francobordo", "grupo": "Casco estribor hacia proa · 50 %, insertos cortados · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_casco_proa_02_estructura-vista.jpg", "texto": "Las mismas aberturas desde abajo: la estructura interna queda a la vista y todavía sin lámina", "grupo": "Casco estribor hacia proa · 50 %, insertos cortados · 3 nov" }
+      ]
+    },
+    {
       "semana": 6,
       "desde": "2026-10-26",
       "hasta": "2026-10-31",
