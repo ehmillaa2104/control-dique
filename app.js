@@ -312,7 +312,7 @@
     const po = C.po || man.po || 0, pagado = C.pagado || man.pagado || 0;
     const tipMan = (dato, v) => (!dato && v ? { tip: `<b>${money(v)}</b><div class="tnote">Fuente: cargado a mano; pendiente de subir a Monday</div>` } : {});
     return [
-      climaKpi(extra.modelo),
+      diasPerdidosKpi(extra.modelo),
       kpi("check", "Aprobado", moneyK(C.aprobado), "<span>Dir. de Operaciones</span>",
         { cls: "c-apr", tip: C.aprobado ? rowT("Trabajos aprobados", n("aprobado")) : "" }),
       kpi("trend", "Proyectado", moneyK(C.proyectado), "Costo final esperado",
@@ -327,15 +327,37 @@
 
   // Fecha en que ocurrió un imprevisto: la de notas.js (fechaImprevisto) si se registró otro día en Monday; si no, la de registro
   const fechaImp = (c) => (((window.DIQUE_NOTAS || {}).fechaImprevisto || {})[c.id] || c.creado);
-  // Días perdidos por lluvias: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo, por Tipo de Impacto o nombre (columna Días)
-  function climaKpi(M) {
-    const cs = ((M && M.D.cambios) || []).filter((c) => /mal tiempo|clima|lluvia/i.test(`${c.tipo || ""} ${c.nombre || ""}`));
-    const dias = sum(cs, (c) => c.dias);
-    if (!cs.length) return kpi("cloud", "Días perdidos por lluvias", "0 días", "Sin registros en Cambios/Imprevistos");
-    const det = cs.map((c) => rowT(`${fmtShort(fechaImp(c))} · ${esc(c.nombre)}`, `${c.dias || 0} d`)).join("");
-    return kpi("cloud", "Días perdidos por lluvias", `${dias} ${dias === 1 ? "día" : "días"}`,
-      `${plural(cs.length, "registro", "registros")} en Cambios/Imprevistos`,
-      { alert: dias > 0, tip: `<b>Días perdidos por lluvias</b>${det}<div class="tnote">Fuente: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo</div>` });
+  // Días perdidos: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo y de festivos, por Tipo de Impacto o nombre
+  // (columna Días). Solo cuentan los ya ocurridos: los de fecha futura se listan aparte como previstos.
+  const CAT_DIA = [
+    { k: "lluvia", re: /lluvia|mal tiempo|clima/i, uno: "por lluvia", varios: "por lluvia" },
+    { k: "festivo", re: /festivo|feriado|d[ií]a c[ií]vico|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" }
+  ];
+  function diasPerdidosKpi(M) {
+    const cs = ((M && M.D.cambios) || []).map((c) => {
+      const cat = CAT_DIA.find((t) => t.re.test(`${c.tipo || ""} ${c.nombre || ""}`));
+      return cat ? Object.assign({}, c, { _cat: cat, _f: fechaImp(c) }) : null;
+    }).filter((c) => c && (c.dias || 0) > 0);
+    const ocurridos = cs.filter((c) => c._f && c._f <= TODAY);
+    const previstos = cs.filter((c) => !(c._f && c._f <= TODAY)).sort((a, b) => (a._f < b._f ? -1 : 1));
+    const dias = sum(ocurridos, (c) => c.dias);
+    if (!cs.length) return kpi("cloud", "Días perdidos", "0 días", "Sin registros en Cambios/Imprevistos");
+
+    // Subtítulo: el desglose por causa, solo con las que tienen días
+    const porCat = CAT_DIA.map((t) => {
+      const d = sum(ocurridos.filter((c) => c._cat.k === t.k), (c) => c.dias);
+      return d ? `${d} ${d === 1 ? t.uno : t.varios}` : null;
+    }).filter(Boolean);
+    const sub = porCat.length ? porCat.join(" · ")
+      : (previstos.length ? "ninguno ocurrido todavía" : "Sin registros en Cambios/Imprevistos");
+
+    const fila = (c) => rowT(`${fmtShort(c._f)} · ${esc(c.nombre)}`, `${c.dias || 0} d`);
+    const det = ocurridos.sort((a, b) => (a._f < b._f ? -1 : 1)).map(fila).join("");
+    const detPrev = previstos.length
+      ? `<div class="tnote">Previstos, todavía no ocurridos</div>${previstos.map(fila).join("")}`
+      : "";
+    return kpi("cloud", "Días perdidos", `${dias} ${dias === 1 ? "día" : "días"}`, sub,
+      { alert: dias > 0, tip: `<b>Días perdidos</b>${det}${detPrev}<div class="tnote">Fuente: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo y de festivos</div>` });
   }
 
   // Avance físico como un reloj: anillo que se llena con el %
