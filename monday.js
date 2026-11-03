@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-11-02",
+ "extraido": "2026-11-03",
  "cronograma": [
   {
    "id": "13095528116",
@@ -1241,7 +1241,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": null,
+     "incurrido": 1062,
      "fin": null,
      "cc": [
       "13081201432"
@@ -1516,7 +1516,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 3200,
      "proyectado": 3200,
      "po": null,
-     "incurrido": 146.85,
+     "incurrido": 157.13,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4016,7 +4016,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 4216.39,
+     "incurrido": 4511.53,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4441,7 +4441,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 8000,
      "proyectado": 8000,
      "po": null,
-     "incurrido": 5356.34,
+     "incurrido": 5728.29,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4466,12 +4466,12 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 1276.88,
+     "incurrido": 6552.53,
      "fin": null,
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-03",
      "costo": ""
     },
     {
@@ -4598,7 +4598,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 28573.13,
      "proyectado": 28573.13,
      "po": null,
-     "incurrido": null,
+     "incurrido": 17957.09,
      "fin": "2026-10-21",
      "cc": [
       "13081201302"
@@ -4623,7 +4623,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10000,
      "proyectado": 12000,
      "po": null,
-     "incurrido": 24089,
+     "incurrido": 29257,
      "fin": "2026-10-16",
      "cc": [
       "13081208222"
@@ -5048,7 +5048,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 74,
+     "incurrido": 79.18,
      "fin": null,
      "cc": [
       "13081208091"
@@ -5230,7 +5230,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 14875,
      "proyectado": 14875,
      "po": null,
-     "incurrido": null,
+     "incurrido": 7437.5,
      "fin": "2026-10-16",
      "cc": [
       "13081195990"
@@ -5681,13 +5681,15 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 43255.23,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 17957.09,
    "proyectado": 43255.23,
    "lineas": [
     "13098327837",
     "13127441793"
    ],
-   "pos": []
+   "pos": [
+    "13456235538"
+   ]
   },
   {
    "id": "13081195990",
@@ -5698,12 +5700,14 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 14875,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 7437.5,
    "proyectado": 14875,
    "lineas": [
     "13098334682"
    ],
-   "pos": []
+   "pos": [
+    "13456235283"
+   ]
   },
   {
    "id": "13081201166",
@@ -5750,7 +5754,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
-   "incurrido": 24089,
+   "incurrido": 29257,
    "proyectado": 12000,
    "lineas": [
     "13098295887"
@@ -5760,7 +5764,8 @@ window.DIQUE_MONDAY = {
     "13346568036",
     "13408531328",
     "13408531809",
-    "13408530896"
+    "13408530896",
+    "13456212474"
    ]
   },
   {
@@ -5772,14 +5777,23 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 3500,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 2300.01,
    "proyectado": 3500,
    "lineas": [
     "13098367009",
     "13098338326",
     "13098328158"
    ],
-   "pos": []
+   "pos": [
+    "13346658601",
+    "13346590356",
+    "13302137015",
+    "13346590358",
+    "13346657638",
+    "13302150984",
+    "13408537271",
+    "13346547715"
+   ]
   },
   {
    "id": "13081201194",
@@ -5796,11 +5810,11 @@ window.DIQUE_MONDAY = {
     "13127948545"
    ],
    "pos": [
-    "13302151223",
-    "13302151031",
-    "13408531652",
     "13408531653",
-    "13408515319"
+    "13408515319",
+    "13408531652",
+    "13302151223",
+    "13302151031"
    ]
   },
   {
@@ -5812,7 +5826,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 26000,
    "po": 0,
-   "incurrido": 74,
+   "incurrido": 683.5,
    "proyectado": 26000,
    "lineas": [
     "13098338467",
@@ -5825,7 +5839,7 @@ window.DIQUE_MONDAY = {
     "13315637430"
    ],
    "pos": [
-    "13346590358"
+    "13408556069"
    ]
   },
   {
@@ -5883,7 +5897,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
-   "incurrido": 17460,
+   "incurrido": 18027.5,
    "proyectado": 9000,
    "lineas": [
     "13238699549",
@@ -5896,7 +5910,9 @@ window.DIQUE_MONDAY = {
     "13346566759",
     "13408514151",
     "13408536607",
-    "13408515314"
+    "13408515314",
+    "13346547714",
+    "13408567193"
    ]
   },
   {
@@ -5940,7 +5956,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 16609.7,
+   "incurrido": 24412.24,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6118,24 +6134,25 @@ window.DIQUE_MONDAY = {
    ],
    "pos": [
     "13302150991",
-    "13302137015",
     "13302211939",
     "13302150520",
-    "13302150984",
     "13302180056",
     "13302212705",
     "13302229682",
     "13302150803",
     "13302150224",
     "13302212275",
-    "13346658601",
-    "13346547715",
-    "13346590356",
     "13408538335",
-    "13408537271",
     "13408556100",
     "13408567192",
-    "13346657638"
+    "13456227858",
+    "13456210964",
+    "13456286490",
+    "13456235282",
+    "13456285390",
+    "13456286345",
+    "13456235539",
+    "13456250941"
    ]
   },
   {
@@ -6226,7 +6243,7 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
-   "incurrido": 427.5,
+   "incurrido": 457.43,
    "saldo": null,
    "fecha": "2026-10-14",
    "estatus": "",
@@ -6235,7 +6252,7 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302212705",
@@ -6243,7 +6260,7 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
-   "incurrido": 2986.57,
+   "incurrido": 3195.61,
    "saldo": null,
    "fecha": "2026-10-07",
    "estatus": "",
@@ -6252,7 +6269,7 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346547714",
@@ -6265,9 +6282,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-12",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081177348"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346657638",
@@ -6275,16 +6294,16 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Tecno Control, S.A.",
    "po": 0,
-   "incurrido": 590,
+   "incurrido": 631.3,
    "saldo": null,
    "fecha": "2026-10-16",
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346547715",
@@ -6292,16 +6311,16 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "Agencias Domingo, S.A.",
    "po": 0,
-   "incurrido": 595,
+   "incurrido": 636.65,
    "saldo": null,
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408567193",
@@ -6314,9 +6333,11 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-27",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081177348"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408538335",
@@ -6347,10 +6368,10 @@ window.DIQUE_MONDAY = {
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408556069",
@@ -6363,9 +6384,96 @@ window.DIQUE_MONDAY = {
    "fecha": "2026-10-19",
    "estatus": "",
    "pago": "",
-   "cc": [],
+   "cc": [
+    "13081208091"
+   ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456250941",
+   "nombre": "ACH26/1039 · WDM Water System — Anticipo bomba centrífuga de 5 HP (PO-KelTra-382-F)",
+   "area": "Maquina",
+   "proveedor": "WDM Water System, S.A.",
+   "po": 0,
+   "incurrido": 1284,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456286490",
+   "nombre": "ACH26/10168 · Lagomar Services — Anticipo gasket oil cooler cover (PO-KelTra-370)",
+   "area": "Maquina",
+   "proveedor": "Lagomar Services",
+   "po": 0,
+   "incurrido": 749.7,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456235282",
+   "nombre": "115451 · Panamá Auto — Tubería, válvula, niple, unión y codo",
+   "area": "Maquina",
+   "proveedor": "Panamá Auto, S.A.",
+   "po": 0,
+   "incurrido": 168.58,
+   "saldo": null,
+   "fecha": "2026-10-28",
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456227858",
+   "nombre": "334704 · Hidroca Panamá — Quick couplings de 1½\" y 2\"",
+   "area": "Maquina",
+   "proveedor": "Hidroca Panamá, S.A.",
+   "po": 0,
+   "incurrido": 200.6,
+   "saldo": null,
+   "fecha": "2026-10-30",
+   "estatus": "",
+   "pago": "Pendiente de Pago",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456285390",
+   "nombre": "ACH26/1045 · Maxindustrias — Anticipo tecle de 2 toneladas (PO-KelTra-388-G)",
+   "area": "Dique",
+   "proveedor": "Maxindustrias, S.A.",
+   "po": 0,
+   "incurrido": 283.55,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [],
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302182661",
@@ -6422,7 +6530,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13127948545"
    ],
-   "actualizado": "2026-10-15"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302151223",
@@ -6441,7 +6549,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13127948545"
    ],
-   "actualizado": "2026-10-15"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346590358",
@@ -6449,18 +6557,18 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Deysi De La Cruz",
    "po": 0,
-   "incurrido": 74,
+   "incurrido": 79.18,
    "saldo": null,
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081208091"
+    "13081177301"
    ],
    "trabajos": [
     "13315655864"
    ],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302150803",
@@ -6468,7 +6576,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Agencias Domingo, S.A.",
    "po": 0,
-   "incurrido": 1912,
+   "incurrido": 2045.84,
    "saldo": null,
    "fecha": "2026-10-12",
    "estatus": "",
@@ -6479,7 +6587,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302183351",
@@ -6531,12 +6639,12 @@ window.DIQUE_MONDAY = {
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302150520",
@@ -6544,7 +6652,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Tornillos y Herramientas Barrientos",
    "po": 0,
-   "incurrido": 2491.29,
+   "incurrido": 2665.68,
    "saldo": null,
    "fecha": "2026-10-14",
    "estatus": "",
@@ -6555,7 +6663,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-21"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302150224",
@@ -6563,7 +6671,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Agencias Domingo, S.A.",
    "po": 0,
-   "incurrido": 395.25,
+   "incurrido": 422.92,
    "saldo": null,
    "fecha": "2026-10-08",
    "estatus": "",
@@ -6574,7 +6682,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302180056",
@@ -6582,7 +6690,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
-   "incurrido": 4216.39,
+   "incurrido": 4511.53,
    "saldo": null,
    "fecha": "2026-10-07",
    "estatus": "",
@@ -6593,7 +6701,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13043941389"
    ],
-   "actualizado": "2026-10-16"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302211939",
@@ -6601,7 +6709,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Tornillos y Herramientas Barrientos",
    "po": 0,
-   "incurrido": 215,
+   "incurrido": 230.05,
    "saldo": null,
    "fecha": "2026-10-07",
    "estatus": "",
@@ -6612,7 +6720,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13302212275",
@@ -6620,7 +6728,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "Vicencio Solís",
    "po": 0,
-   "incurrido": 300,
+   "incurrido": 321,
    "saldo": null,
    "fecha": "2026-10-12",
    "estatus": "",
@@ -6631,7 +6739,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13277158044"
    ],
-   "actualizado": "2026-10-19"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346621488",
@@ -6821,7 +6929,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13127948545"
    ],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408531653",
@@ -6924,18 +7032,18 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Ferretería Industrial, S.A.",
    "po": 0,
-   "incurrido": 238.24,
+   "incurrido": 254.92,
    "saldo": null,
    "fecha": "2026-10-14",
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [
     "13043921754"
    ],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346590356",
@@ -6949,12 +7057,12 @@ window.DIQUE_MONDAY = {
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [
     "13043921754"
    ],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13346658601",
@@ -6962,18 +7070,18 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Acero R&R Soluciones, S.A.",
    "po": 0,
-   "incurrido": 146.85,
+   "incurrido": 157.13,
    "saldo": null,
    "fecha": "2026-10-16",
    "estatus": "",
    "pago": "",
    "cc": [
-    "13081201432"
+    "13081177301"
    ],
    "trabajos": [
     "13256744868"
    ],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408556100",
@@ -6981,7 +7089,7 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Grupo Gasol, S.A.",
    "po": 0,
-   "incurrido": 645,
+   "incurrido": 690.15,
    "saldo": null,
    "fecha": "2026-10-19",
    "estatus": "",
@@ -6992,7 +7100,7 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13043921754"
    ],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
   },
   {
    "id": "13408567192",
@@ -7000,7 +7108,7 @@ window.DIQUE_MONDAY = {
    "area": "",
    "proveedor": "El Suplidor",
    "po": 0,
-   "incurrido": 198.9,
+   "incurrido": 212.82,
    "saldo": null,
    "fecha": "2026-10-26",
    "estatus": "",
@@ -7011,10 +7119,154 @@ window.DIQUE_MONDAY = {
    "trabajos": [
     "13043921754"
    ],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456212474",
+   "nombre": "3457 · Veolia Servicios Industriales — Recolección, tratamiento y disposición final de slop MARPOL I",
+   "area": "Dique Servicios",
+   "proveedor": "Veolia Servicios Industriales",
+   "po": 0,
+   "incurrido": 5168,
+   "saldo": null,
+   "fecha": "2026-10-29",
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456210964",
+   "nombre": "DN-10288 · Oceanco Safety & Supply — Recarga de cilindros de acetileno y oxígeno",
+   "area": "Soldadura",
+   "proveedor": "Oceanco Safety & Supply (Panamax), S.A.",
+   "po": 0,
+   "incurrido": 2450,
+   "saldo": null,
+   "fecha": "2026-10-28",
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456235538",
+   "nombre": "ACH26/1018 · Green Harbor — Anticipo 50 % limpieza de tanques de carga y slop (PO-KelTra-185)",
+   "area": "Dique Servicios",
+   "proveedor": "Green Harbor Company Inc",
+   "po": 0,
+   "incurrido": 17957.09,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201302"
+   ],
+   "trabajos": [
+    "13098327837"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456286345",
+   "nombre": "ACH26/1066 · Radiadores Panamá — Anticipo radiador del motor Cummins 6BT 5.9 (PO-KelTra-9)",
+   "area": "Maquina",
+   "proveedor": "Radiadores Panamá, S.A.",
+   "po": 0,
+   "incurrido": 1062,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13095604901"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456235283",
+   "nombre": "ACH26/1071 · Promise NDT — Anticipo 50 % medición de espesores (PO-KelTra-190)",
+   "area": "Dique Servicios",
+   "proveedor": "Promise NDT, S.A.",
+   "po": 0,
+   "incurrido": 7437.5,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081195990"
+   ],
+   "trabajos": [
+    "13098334682"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13456235539",
+   "nombre": "ACH26/1046 · Inversiones JMCG — Anticipo construcción de niples (PO-KelTra-136-G)",
+   "area": "Soldadura",
+   "proveedor": "Inversiones JMCG, S.A.",
+   "po": 0,
+   "incurrido": 2749.9,
+   "saldo": null,
+   "fecha": "2026-10-31",
+   "estatus": "",
+   "pago": "Anticipo",
+   "cc": [
+    "13081201432"
+   ],
+   "trabajos": [
+    "13043921754"
+   ],
+   "actualizado": "2026-11-03"
   }
  ],
  "cambios": [
+  {
+   "id": "13455614931",
+   "nombre": "Pérdida de día por festivo en Colombia",
+   "creado": "2026-11-03",
+   "tipo": "Tiempo",
+   "costo": null,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-03"
+  },
+  {
+   "id": "13455695886",
+   "nombre": "Punto de atención: paro del lunes 16 de noviembre por Independencia de Cartagena",
+   "creado": "2026-11-03",
+   "tipo": "Tiempo",
+   "costo": 0,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-03"
+  },
   {
    "id": "13427708100",
    "nombre": "Reemplazo de base, polea y balance de ventilador Emergenciaotor de",
@@ -10423,10 +10675,280 @@ window.DIQUE_MONDAY = {
     "13278839703": 50,
     "13346969104": 50
    }
+  },
+  {
+   "fecha": "2026-11-03",
+   "avance": 24.94,
+   "pct": {
+    "13256760608": 0,
+    "13256760158": 0,
+    "13043921163": 0,
+    "13043943307": 0,
+    "13095643040": 0,
+    "13095617046": 0,
+    "13095599940": 0,
+    "13095599941": 0,
+    "13095594034": 0,
+    "13095599992": 0,
+    "13095616880": 0,
+    "13095570221": 0,
+    "13095594157": 0,
+    "13095604569": 0,
+    "13095643042": 0,
+    "13095593116": 0,
+    "13095643083": 0,
+    "13095604666": 0,
+    "13095604667": 0,
+    "13095605104": 0,
+    "13095599993": 0,
+    "13043922222": 100,
+    "13043922221": 0,
+    "13043922220": 0,
+    "13043936425": 0,
+    "13043922218": 0,
+    "13043922219": 0,
+    "13043936426": 0,
+    "13043924490": 0,
+    "13043950469": 0,
+    "13043924377": 0,
+    "13043924378": 0,
+    "13043924379": 0,
+    "13043924375": 0,
+    "13043945523": 0,
+    "13043950430": 0,
+    "13043945522": 0,
+    "13043950431": 0,
+    "13095604901": 0,
+    "13095604668": 0,
+    "13095617389": 0,
+    "13095570185": 0,
+    "13428126280": 100,
+    "13428159726": 100,
+    "13256760157": 0,
+    "13256755192": 0,
+    "13256755203": 0,
+    "13256744926": 0,
+    "13256760609": 0,
+    "13256744868": 25,
+    "13043950472": 0,
+    "13043945735": 0,
+    "13043950470": 0,
+    "13043945736": 0,
+    "13043932303": 0,
+    "13043932345": 0,
+    "13043924491": 0,
+    "13043950471": 0,
+    "13043950468": 0,
+    "13043924492": 0,
+    "13043924547": 0,
+    "13043924548": 0,
+    "13043932301": 0,
+    "13043943301": 0,
+    "13043943303": 0,
+    "13043943305": 0,
+    "13043932352": 0,
+    "13095643646": 0,
+    "13095605151": 0,
+    "13095616903": 0,
+    "13095643870": 0,
+    "13095616905": 0,
+    "13095599004": 0,
+    "13095600128": 0,
+    "13095643647": 0,
+    "13095642636": 0,
+    "13095599565": 0,
+    "13095643648": 0,
+    "13095569998": 0,
+    "13043941391": 0,
+    "13095616904": 0,
+    "13373451881": 25,
+    "13373417444": 25,
+    "13043924545": 0,
+    "13043924546": 0,
+    "13095643872": 0,
+    "13095605154": 0,
+    "13095643873": 0,
+    "13095570205": 0,
+    "13043941390": 0,
+    "13043924488": 0,
+    "13095643937": 75,
+    "13095604536": 0,
+    "13095613807": 0,
+    "13277138828": 25,
+    "13277158049": 0,
+    "13277104868": 0,
+    "13277169481": 0,
+    "13277138491": 25,
+    "13277157364": 75,
+    "13043950429": 0,
+    "13043932348": 0,
+    "13043921752": 0,
+    "13043936427": 0,
+    "13043950425": 0,
+    "13043950426": 0,
+    "13043941394": 0,
+    "13043945527": 0,
+    "13043950423": 0,
+    "13043950424": 0,
+    "13043950428": 0,
+    "13043950427": 0,
+    "13043932349": 0,
+    "13043922215": 0,
+    "13043922216": 0,
+    "13043922217": 0,
+    "13095628677": 0,
+    "13095603677": 0,
+    "13256760245": 0,
+    "13095637379": 0,
+    "13095603385": 0,
+    "13256760246": 0,
+    "13043924495": 0,
+    "13043924496": 0,
+    "13043932347": 0,
+    "13043924493": 0,
+    "13043945526": 0,
+    "13043945524": 0,
+    "13095638228": 0,
+    "13095637451": 0,
+    "13043921183": 0,
+    "13095613978": 0,
+    "13095637378": 0,
+    "13095603722": 0,
+    "13095603720": 25,
+    "13043932296": 0,
+    "13043932299": 0,
+    "13095613430": 0,
+    "13095628540": 25,
+    "13256755102": 0,
+    "13095637314": 0,
+    "13095603679": 25,
+    "13256760623": 25,
+    "13256755233": 25,
+    "13256755205": 25,
+    "13256755234": 25,
+    "13043936421": 0,
+    "13043936422": 0,
+    "13043936423": 0,
+    "13043941389": 0,
+    "13043936424": 0,
+    "13043943240": 0,
+    "13043943242": 0,
+    "13043943244": 0,
+    "13043941395": 0,
+    "13043941393": 0,
+    "13095614175": 0,
+    "13095603678": 0,
+    "13095603531": 0,
+    "13095614176": 0,
+    "13095603889": 0,
+    "13043932350": 0,
+    "13043936420": 0,
+    "13256755103": 0,
+    "13256755204": 0,
+    "13256755193": 25,
+    "13277158044": 0,
+    "13043921754": 0,
+    "13095638257": 0,
+    "13095602832": 0,
+    "13095613982": 0,
+    "13428203940": 100,
+    "13098327837": 100,
+    "13098295887": 100,
+    "13127441793": 100,
+    "13098328358": 0,
+    "13098327364": 0,
+    "13127948545": 100,
+    "13238699549": 100,
+    "13098338467": 25,
+    "13098367009": 25,
+    "13098306630": 0,
+    "13098338326": 0,
+    "13098327946": 75,
+    "13212064635": 0,
+    "13212017532": 0,
+    "13212064416": 0,
+    "13315637430": 0,
+    "13315624518": 0,
+    "13315655864": 0,
+    "13098327907": 0,
+    "13098328158": 0,
+    "13098326970": 100,
+    "13098333423": 0,
+    "13098338352": 0,
+    "13098337112": 100,
+    "13098334682": 75,
+    "13098338054": 6.9,
+    "13278839703": 50,
+    "13346969104": 50
+   }
   }
  ],
- "_huella": "55c7544172c7",
- "cambiosLectura": [],
+ "_huella": "d003a3e17d11",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Generador de emergencia — radiador y bomba de inyección",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "1062"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+   "campo": "$ Incurrido",
+   "antes": "146.85",
+   "ahora": "157.13"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Fabricación de tubería de agua de mar enfriador LT",
+   "campo": "$ Incurrido",
+   "antes": "4216.39",
+   "ahora": "4511.53"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Imprevisto",
+   "campo": "$ Incurrido",
+   "antes": "5356.34",
+   "ahora": "5728.29"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Adquisición de materiales de soldadura",
+   "campo": "$ Incurrido",
+   "antes": "1276.88",
+   "ahora": "6552.53"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "17957.09"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Incurrido",
+   "antes": "24089",
+   "ahora": "29257"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Materiales seguridad",
+   "campo": "$ Incurrido",
+   "antes": "74",
+   "ahora": "79.18"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "7437.5"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",
@@ -10510,7 +11032,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1053 · Jorge Cáceres — Recarga de teléfono satelital\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -10522,7 +11044,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"11530 · Altamar Panamá — Sellado de pasaportes\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"11530 · Altamar Panamá — Sellado de pasaportes\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -10534,7 +11056,27 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"58135 · Ferretería Industrial — Platinas, lámina lisa, ángulo y tubos redondos\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1039 · WDM Water System — Anticipo bomba centrífuga de 5 HP (PO-KelTra-382-F)\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/10168 · Lagomar Services — Anticipo gasket oil cooler cover (PO-KelTra-370)\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"115451 · Panamá Auto — Tubería, válvula, niple, unión y codo\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"334704 · Hidroca Panamá — Quick couplings de 1½\" y 2\"\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1045 · Maxindustrias — Anticipo tecle de 2 toneladas (PO-KelTra-388-G)\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -10671,6 +11213,30 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"4541 · El Suplidor — Alambre dulce y termómetro infrarrojo\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"3457 · Veolia Servicios Industriales — Recolección, tratamiento y disposición final de slop MARPOL I\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"DN-10288 · Oceanco Safety & Supply — Recarga de cilindros de acetileno y oxígeno\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1018 · Green Harbor — Anticipo 50 % limpieza de tanques de carga y slop (PO-KelTra-185)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1066 · Radiadores Panamá — Anticipo radiador del motor Cummins 6BT 5.9 (PO-KelTra-9)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1071 · Promise NDT — Anticipo 50 % medición de espesores (PO-KelTra-190)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1046 · Inversiones JMCG — Anticipo construcción de niples (PO-KelTra-136-G)\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
