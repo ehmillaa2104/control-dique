@@ -516,15 +516,17 @@
     const P = M.D.participacion;
     if (!P || !P.equipos.length) return "";
     const conAct = P.semanas.filter((s) => s.act || fechaSemana(s.fecha));
-    const pasadas = conAct.filter((s) => { const f = fechaSemana(s.fecha); return f ? f <= TODAY : s.act; });
+    // Una semana con nota en notas.js se muestra aunque su fecha todavía no haya pasado
+    const notaEnt = ((window.DIQUE_NOTAS || {}).entrega) || {};
+    const pasadas = conAct.filter((s) => { const f = fechaSemana(s.fecha); return notaEnt[s.semana] || (f ? f <= TODAY : s.act); });
     const ult = pasadas[pasadas.length - 1];
     if (!ult) return "";
     // Solo cuentan las opciones nuevas del tablero (Completa / Parcial); lo demás (incluidas las de antes:
     // "actualización directa / indirecta") o sin cargar queda como Pendiente (pedido del usuario, 22 oct)
-    // Si Monday no tiene la semana cargada con las opciones nuevas, vale la nota de notas.js (entrega["S5"])
-    const notaEnt = ((window.DIQUE_NOTAS || {}).entrega) || {};
+    // Si Monday no tiene la semana cargada con las opciones nuevas, vale la nota de notas.js (entrega["S5"], para todos o por equipo)
     const est = (e, s) => { const d = e.semanas.find((x) => x.semana === s.semana) || {}; let t = (d.act || "").toLowerCase();
-      if (!/^(complet|parcial)/.test(t) && notaEnt[s.semana]) t = String(notaEnt[s.semana]).toLowerCase();
+      const n = notaEnt[s.semana], nota = n && typeof n === "object" ? n[e.nombre] : n;
+      if (!/^(complet|parcial)/.test(t) && nota) t = String(nota).toLowerCase();
       return ENTREGA[t.startsWith("complet") ? 2 : t.startsWith("parcial") ? 1 : 0]; };
     const nom = (s) => `Semana ${s.semana.slice(1)}${s.fecha ? " · " + esc(s.fecha) : ""}`;
     const items = P.equipos.map((e) => {
