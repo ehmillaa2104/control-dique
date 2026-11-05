@@ -23,13 +23,18 @@ window.DIQUE_REGISTRO = {
           { "txt": "Corte de acero: 5S 90 %, 1P 80 %, 2S 70 %, 1S y 3S 60 %, 5P 50 %", "extra": "3 nov" },
           { "txt": "Ya se reponen láminas en cuatro tanques: 3S y 5S al 50 %, 1S al 20 %, 1P y 5P iniciando", "extra": "3 nov" },
           { "txt": "2P y 3P entran a trabajar hoy; son los dos que marcan el camino crítico del acero", "extra": "3 nov" },
+          { "txt": "2P: no hay mucho acero, pero el tanque va retrasado", "extra": "3 nov" },
+          { "txt": "2S: falta el corte de estructura", "extra": "3 nov" },
           { "txt": "5P: mucha estructura por cambiar, no solo forro", "extra": "pasó de 40 % a 50 % en cuatro días" },
           { "txt": "Promedio de corte de los ocho tanques: 51 %", "extra": "era 28 % el 30 oct" }
         ] },
         { "zona": "Casco", "items": [
           { "txt": "Casco estribor hacia popa: 70 % en insertos, con dos paños nuevos ya soldados", "extra": "3 nov" },
-          { "txt": "Casco estribor hacia proa: 50 %, insertos cortados y estructura en cambio", "extra": "3 nov" },
+          { "txt": "Casco estribor hacia proa: 50 %, insertos cortados y estructura en cambio; posiblemente inician a colocar láminas", "extra": "3 nov" },
           { "txt": "El casco queda dentro de renovación de acero, no como actividad aparte" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Sorpresas en máquinas: estructura perforada por corrosión entre las tuberías", "extra": "3 nov" }
         ] }
       ],
       "medios": [
@@ -39,9 +44,9 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s7/n03_t1p_04_luz-por-aberturas.jpg", "texto": "Desde el andamio entra luz del día por los tramos ya retirados; ventilación forzada al fondo", "grupo": "Tanque 1 babor · IFO 1P · 80 % de corte, colocando láminas · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t1s_01_manhole-ifo-1s.jpg", "texto": "Manhole IFO 1S con permiso de espacio confinado", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t1s_02_mamparo-marcado.jpg", "texto": "Mamparo marcado CT 1S BHD 126; serpentines de calefacción en el fondo", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_05_ventanas-cortadas.jpg", "texto": "Dos ventanas cortadas en el forro; lecturas de 7.7 a 8.4 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t1s_03_zona-alta-lecturas.jpg", "texto": "Zona alta medida de punta a punta; lecturas de 6.8 a 9.4 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t1s_04_lamina-izada.jpg", "texto": "Lámina nueva izada con cadena, lista para montar; lecturas de 8.2 a 9.0 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
-        { "tipo": "foto", "archivo": "registro/s7/n03_t1s_05_ventanas-cortadas.jpg", "texto": "Dos ventanas cortadas en el forro; lecturas de 7.7 a 8.4 mm", "grupo": "Tanque 1 estribor · IFO 1S · 60 % de corte, 20 % de láminas nuevas · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t2p_01_manhole.jpg", "texto": "Manhole MGO 2S", "grupo": "Tanque 2 estribor · MGO 2S · 70 % de corte · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t2s_02_refuerzos-cortados.jpg", "texto": "Refuerzos cortados y cuadernas marcadas; lecturas de 6.6 a 7.0 mm", "grupo": "Tanque 2 estribor · MGO 2S · 70 % de corte · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_t2s_03_corrosion-refuerzos.jpg", "texto": "Refuerzos perforados por corrosión; al fondo entra luz por el forro ya abierto", "grupo": "Tanque 2 estribor · MGO 2S · 70 % de corte · 3 nov" },
@@ -65,14 +70,15 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s7/n03_t5p_06_vista-general.jpg", "texto": "Vista general del tanque: andamio, ventilación forzada y los primeros paños nuevos a los lados", "grupo": "Tanque 5 babor · IFO 5P · 50 % de corte, mucha estructura por cambiar · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_casco_popa_01_insertos-soldados.jpg", "texto": "Dos insertos nuevos ya soldados en el forro, vistos desde el piso del dique", "grupo": "Casco estribor hacia popa · 70 % en insertos · 3 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n03_casco_proa_01_ventanas-abiertas.jpg", "texto": "Cuatro ventanas abiertas en el forro sobre la línea de flotación, junto a las marcas de francobordo", "grupo": "Casco estribor hacia proa · 50 %, insertos cortados · 3 nov" },
-        { "tipo": "foto", "archivo": "registro/s7/n03_casco_proa_02_estructura-vista.jpg", "texto": "Las mismas aberturas desde abajo: la estructura interna queda a la vista y todavía sin lámina", "grupo": "Casco estribor hacia proa · 50 %, insertos cortados · 3 nov" }
+        { "tipo": "foto", "archivo": "registro/s7/n03_casco_proa_02_estructura-vista.jpg", "texto": "Las mismas aberturas desde abajo: la estructura interna queda a la vista y todavía sin lámina", "grupo": "Casco estribor hacia proa · 50 %, insertos cortados · 3 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/n03_maq_01_estructura-corroida.jpg", "texto": "Estructura perforada por corrosión, entre las tuberías", "grupo": "Sala de máquinas · sorpresas en máquinas · 3 nov" }
       ]
     },
     {
       "semana": 6,
       "desde": "2026-10-26",
       "hasta": "2026-10-31",
-      "fuente": "Reporte del superintendente (27 y 30 oct), informes diarios de Ingeniería (27, 28 y 29 oct) y mensajes del equipo en Monday (26 al 30 oct)",
+      "fuente": "Reporte del superintendente (27 y 30 oct), informes diarios de Ingeniería (27 al 31 oct) y mensajes del equipo en Monday (26 al 30 oct)",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "Presupuesto aprobado: US$ 1.08 M", "extra": "27 oct" }
@@ -88,9 +94,13 @@ window.DIQUE_REGISTRO = {
           { "txt": "Alcance de acero cerrado: 8 tanques llevan acero", "extra": "4P y 4S no llevan" }
         ] },
         { "zona": "Sala de máquinas", "items": [
-          { "txt": "Bombas hidráulicas del timón: estribor con retenedoras nuevas, falta la prueba; babor a la espera de retenedoras", "extra": "29 oct" },
+          { "txt": "Bomba #2 de diésel de la máquina principal: sello mecánico y balinera nuevos; instalada y probada sin fugas", "extra": "terminado · 31 oct" },
+          { "txt": "Bomba de sentina del cuarto de máquinas: bomba nueva en su base; fabricación y montaje de tuberías", "extra": "31 oct" },
+          { "txt": "Megado de motores eléctricos: medición del aislamiento en curso", "extra": "31 oct" },
+          { "txt": "Enfriadores de agua de los auxiliares #1 y #2: limpieza e inspección", "extra": "terminado · 31 oct" },
+          { "txt": "Cobertores de protección en los acoples del generador de cola y de la máquina principal", "extra": "terminado · 31 oct" },
+          { "txt": "Bombas hidráulicas del timón: estribor con retenedoras nuevas, falta la prueba; babor con retenedoras cambiadas", "extra": "30 oct" },
           { "txt": "Indicador de ángulo de timón: cableado nuevo del puente al servomotor e indicador local instalado", "extra": "29 oct" },
-          { "txt": "Bomba de sentina del cuarto de máquinas: bomba nueva en su base", "extra": "29 oct" },
           { "txt": "Bomba de sewage desmontada para reparación" },
           { "txt": "Tanque 5 babor: se desarma la succión de la bomba de carga" },
           { "txt": "Bomba #1 de diésel de la máquina principal: sello mecánico y balinera nuevos", "extra": "terminado" },
@@ -110,6 +120,24 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s6/maq_24_bomba-2-diesel-banco.jpg", "texto": "Bomba #2 de diésel de la máquina principal, armada en el taller", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_25_bomba-2-diesel-instalada.jpg", "texto": "Bomba #2 de diésel instalada y probada, sin fugas", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_26_tuberia-sentina-fabricacion.jpg", "texto": "Fabricación de tubería para la bomba de sentina", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_27_tuberia-sentina-montaje.jpg", "texto": "Tubería en montaje en la bomba de sentina del cuarto de máquinas", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_28_enfriador-aux1-antes.jpg", "texto": "Enfriador de agua del auxiliar #1 durante la limpieza", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_29_enfriador-aux1-limpio.jpg", "texto": "Enfriador de agua del auxiliar #1 limpio", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_30_megado-bomba-incendio.jpg", "texto": "Megado del motor de la bomba contra incendio", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_31_megado-medicion.jpg", "texto": "Medición de la resistencia de aislamiento", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_32_cobertor-acople-principal.jpg", "texto": "Cobertor de protección en el acople de la máquina principal", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_33_timon-babor-retenedora.jpg", "texto": "Bomba hidráulica del timón de babor: retenedoras cambiadas", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_34_timon-babor-motor.jpg", "texto": "Motor de la bomba hidráulica del timón de babor", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_35_sentina-tuberia-inicio.jpg", "texto": "Inicio de la tubería de la bomba de sentina", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_36_enfriador-aux2.jpg", "texto": "Enfriador de agua del auxiliar #2 inspeccionado", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_37_megado-motor-1.jpg", "texto": "Megado de motor eléctrico", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_38_megado-motor-2.jpg", "texto": "Megado de motor eléctrico", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_39_cobertor-acople-cola.jpg", "texto": "Cobertor de protección en el acople del generador de cola", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_40_bomba-2-diesel-sello.jpg", "texto": "Bomba #2 de diésel: sello mecánico nuevo", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
+        { "tipo": "foto", "archivo": "registro/s6/maq_41_bomba-2-diesel-balinera.jpg", "texto": "Bomba #2 de diésel: balinera nueva", "grupo": "Sala de máquinas · Ingeniería, 30 y 31 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_casco_01_lavado-proa.jpg", "texto": "Lavado a presión del casco hacia la proa", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_casco_02_lavado-costado.jpg", "texto": "Lavado a presión del costado desde el piso, con andamio móvil", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },
         { "tipo": "foto", "archivo": "registro/s6/a30_casco_03_lavado-detalle.jpg", "texto": "Detalle del lavado en la parte baja del costado", "grupo": "Casco · caracoleo y lavado a presión · 30 oct" },

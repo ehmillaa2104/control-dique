@@ -5405,7 +5405,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Tanque 1 Babor (IFO 1P)",
        "peso": 3.77,
        "avance": "80%",
-       "pct": 0,
+       "pct": 80,
        "cancelado": false,
        "ponderado": 3.02,
        "medicion": "2026-11-03",
@@ -5420,7 +5420,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Tanque 1 Estribor (IFO 1S)",
        "peso": 3.77,
        "avance": "60%",
-       "pct": 0,
+       "pct": 60,
        "cancelado": false,
        "ponderado": 2.26,
        "medicion": "2026-11-03",
@@ -5522,7 +5522,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Tanque 2 Estribor (MGO 2S)",
        "peso": 3.77,
        "avance": "70%",
-       "pct": 0,
+       "pct": 70,
        "cancelado": false,
        "ponderado": 2.64,
        "medicion": "2026-11-03",
@@ -5552,7 +5552,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Tanque 3 Estribor (IFO 3S)",
        "peso": 3.77,
        "avance": "60%",
-       "pct": 0,
+       "pct": 60,
        "cancelado": false,
        "ponderado": 2.26,
        "medicion": "2026-11-03",
@@ -5597,7 +5597,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Tanque 5 Estribor (IFO 5S)",
        "peso": 3.77,
        "avance": "90%",
-       "pct": 0,
+       "pct": 90,
        "cancelado": false,
        "ponderado": 3.39,
        "medicion": "2026-11-03",
@@ -5624,7 +5624,7 @@ window.DIQUE_MONDAY = {
        "nombre": "§13 · Acero — Lámina plana cubierta y costado",
        "peso": 6.66,
        "avance": "30%",
-       "pct": 0,
+       "pct": 30,
        "cancelado": false,
        "ponderado": 2.0,
        "medicion": "2026-11-03",
@@ -11107,7 +11107,7 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "5dbdbf31fa07",
+ "_huella": "34a22dff1095",
  "cambiosLectura": [],
  "observaciones": [
   {
@@ -11153,54 +11153,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Babor (IFO 1P): Avance \"80%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Babor (IFO 1P): Avance ponderado 3.02 no es Peso × Avance (0.00)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S): Avance \"60%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S): Avance ponderado 2.26 no es Peso × Avance (0.00)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 2 Estribor (MGO 2S): Avance \"70%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 2 Estribor (MGO 2S): Avance ponderado 2.64 no es Peso × Avance (0.00)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 3 Estribor (IFO 3S): Avance \"60%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 3 Estribor (IFO 3S): Avance ponderado 2.26 no es Peso × Avance (0.00)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Estribor (IFO 5S): Avance \"90%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Estribor (IFO 5S): Avance ponderado 3.39 no es Peso × Avance (0.00)."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance \"30%\" no es un porcentaje; cuenta como 0 %."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: Avance ponderado 2.0 no es Peso × Avance (0.00)."
   },
   {
    "nivel": "info",

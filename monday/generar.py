@@ -286,7 +286,9 @@ def subelementos(tablero, nombre, items):
         if SUB_COLS["peso"] not in v:
             continue
         av = (v.get(SUB_COLS["avance"], {}).get("text") or "").strip()
-        pct, peso = PCT.get(av), num(v.get(SUB_COLS["peso"], {}).get("text"))
+        # Los subelementos usan cualquier porcentaje (80%, 60%…), no solo los 0/25/50/75/100 del Estado de los trabajos
+        m = re.fullmatch(r"(\d{1,3})\s*%", av)
+        pct, peso = (int(m.group(1)) if m else None), num(v.get(SUB_COLS["peso"], {}).get("text"))
         pond = num(v.get(SUB_COLS["ponderado"], {}).get("display_value"))
         monto = v.get(SUB_COLS["monto"], {}).get("text") or ""
         sub = {"id": s["id"], "nombre": texto(s["name"]), "peso": peso, "avance": av, "pct": pct or 0, "cancelado": av == "Cancelado",
