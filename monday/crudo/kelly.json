@@ -1,5 +1,5 @@
 {
- "extraido": "2026-11-05",
+ "extraido": "2026-11-06",
  "boards": [
   {
    "id": "18435454602",
@@ -1455,7 +1455,7 @@
       "id": "13098338054",
       "name": "Astillero",
       "created_at": "2026-09-21T19:58:48Z",
-      "updated_at": "2026-11-03T19:39:43Z",
+      "updated_at": "2026-11-06T13:59:56Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -1507,7 +1507,7 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-11-03 19:39:43 UTC"
+        "text": "2026-11-06 13:59:56 UTC"
        },
        {
         "id": "color_mm7vv5nh",
@@ -1935,35 +1935,35 @@
        },
        {
         "id": "13396533611",
-        "name": "§13 · Acero — Tanque 1 Babor (IFO 1P)",
+        "name": "§13 · Acero — Tanque 1 Babor (IFO 1P) · corte",
         "created_at": "2026-10-27T15:20:24Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "80%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "3.016"
+          "display_value": "1.0179"
          }
         ],
         "updates": [
@@ -1975,35 +1975,35 @@
        },
        {
         "id": "13396533612",
-        "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S)",
+        "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · corte",
         "created_at": "2026-10-27T15:20:25Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.262"
+          "display_value": "0.9048"
          }
         ],
         "updates": [
@@ -2015,35 +2015,35 @@
        },
        {
         "id": "13396533613",
-        "name": "§13 · Acero — Tanque 2 Babor (MGO 2P)",
+        "name": "§13 · Acero — Tanque 2 Babor (MGO 2P) · corte",
         "created_at": "2026-10-27T15:20:26Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "0%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "0.9048"
          }
         ],
         "updates": [
@@ -2265,35 +2265,35 @@
        },
        {
         "id": "13397339895",
-        "name": "§13 · Acero — Tanque 2 Estribor (MGO 2S)",
+        "name": "§13 · Acero — Tanque 2 Estribor (MGO 2S) · corte",
         "created_at": "2026-10-27T16:23:46Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "70%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.639"
+          "display_value": "1.0179"
          }
         ],
         "updates": [
@@ -2305,35 +2305,35 @@
        },
        {
         "id": "13397352965",
-        "name": "§13 · Acero — Tanque 3 Babor (IFO 3P)",
+        "name": "§13 · Acero — Tanque 3 Babor (IFO 3P) · corte",
         "created_at": "2026-10-27T16:24:25Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "0%"
+          "text": "50%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "0.5655"
          }
         ],
         "updates": [
@@ -2345,35 +2345,35 @@
        },
        {
         "id": "13397347399",
-        "name": "§13 · Acero — Tanque 3 Estribor (IFO 3S)",
+        "name": "§13 · Acero — Tanque 3 Estribor (IFO 3S) · corte",
         "created_at": "2026-10-27T16:25:04Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.262"
+          "display_value": "0.9048"
          }
         ],
         "updates": [
@@ -2425,35 +2425,35 @@
        },
        {
         "id": "13397344105",
-        "name": "§13 · Acero — Tanque 5 Babor (IFO 5P)",
+        "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · corte",
         "created_at": "2026-10-27T16:26:47Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.885"
+          "display_value": "1.131"
          }
         ],
         "updates": [
@@ -2465,35 +2465,35 @@
        },
        {
         "id": "13397353759",
-        "name": "§13 · Acero — Tanque 5 Estribor (IFO 5S)",
+        "name": "§13 · Acero — Tanque 5 Estribor (IFO 5S) · corte",
         "created_at": "2026-10-27T16:27:40Z",
-        "updated_at": "2026-11-03T19:40:04Z",
+        "updated_at": "2026-11-06T13:59:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
           "type": "numbers",
-          "text": "3.77"
+          "text": "1.131"
          },
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "90%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-03"
+          "text": "2026-11-06"
          },
          {
           "id": "text_mm8hf5gw",
           "type": "text",
-          "text": "$29,448"
+          "text": "$8,834 (30 % de 29,448)"
          },
          {
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "3.393"
+          "display_value": "1.131"
          }
         ],
         "updates": [
@@ -2577,6 +2577,286 @@
           "text_body": "2026-11-03\n2026-11-03 | Avance 30 %."
          }
         ]
+       },
+       {
+        "id": "13488448933",
+        "name": "§13 · Acero — Tanque 1 Babor (IFO 1P) · instalación",
+        "created_at": "2026-11-06T13:59:51Z",
+        "updated_at": "2026-11-06T13:59:51Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "60%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "1.5834"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488448723",
+        "name": "§13 · Acero — Tanque 3 Babor (IFO 3P) · instalación",
+        "created_at": "2026-11-06T13:59:51Z",
+        "updated_at": "2026-11-06T13:59:51Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "20%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "0.5278"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488466695",
+        "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
+        "created_at": "2026-11-06T13:59:51Z",
+        "updated_at": "2026-11-06T13:59:51Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "40%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "1.0556"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488449266",
+        "name": "§13 · Acero — Tanque 2 Babor (MGO 2P) · instalación",
+        "created_at": "2026-11-06T13:59:51Z",
+        "updated_at": "2026-11-06T13:59:51Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "50%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "1.3195"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488448934",
+        "name": "§13 · Acero — Tanque 2 Estribor (MGO 2S) · instalación",
+        "created_at": "2026-11-06T13:59:52Z",
+        "updated_at": "2026-11-06T13:59:52Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "50%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "1.3195"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488466697",
+        "name": "§13 · Acero — Tanque 3 Estribor (IFO 3S) · instalación",
+        "created_at": "2026-11-06T13:59:53Z",
+        "updated_at": "2026-11-06T13:59:53Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "30%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "0.7917"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488448724",
+        "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
+        "created_at": "2026-11-06T13:59:53Z",
+        "updated_at": "2026-11-06T13:59:53Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "50%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "1.3195"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488437762",
+        "name": "§13 · Acero — Tanque 5 Estribor (IFO 5S) · instalación",
+        "created_at": "2026-11-06T13:59:54Z",
+        "updated_at": "2026-11-06T13:59:54Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "80%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-06"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "2.1112"
+         }
+        ],
+        "updates": []
        }
       ]
      },
@@ -10799,6 +11079,62 @@
         "id": "numeric_mm2epnk4",
         "type": "numbers",
         "text": "1"
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "2.2.1 Cuenta de Astillero"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13488441240",
+      "name": "Tanque 4 babor lleva acero: alcance no contemplado",
+      "created_at": "2026-11-06T13:56:26Z",
+      "updated_at": "2026-11-06T13:56:38Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-11-06 13:56:26 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": [
+         "13098338054"
+        ]
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Alcance"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": "93.53"
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": ""
        },
        {
         "id": "color_mm2e3n8w",
