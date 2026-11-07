@@ -33,8 +33,9 @@ window.DIQUE_NOTAS = {
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
   // 4 nov: Ingeniería, Cubierta y Seguridad en Pendiente (indicación del usuario); Técnico y Contabilidad siguen en Completa.
+  // 6 nov: Ingeniería pasa a Completa, subió su informe del 6 nov a Monday (indicación del usuario).
   "entrega": {
     "S5": "Completa",
-    "S7": { "Ingeniería": "Pendiente", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Completa" }
+    "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Completa" }
   }
 };

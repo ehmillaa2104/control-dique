@@ -13,7 +13,7 @@ window.DIQUE_REGISTRO = {
       "semana": 7,
       "desde": "2026-11-02",
       "hasta": "2026-11-07",
-      "fuente": "Reportes del superintendente (3 y 6 nov)",
+      "fuente": "Reportes del superintendente (3 y 6 nov) e informe diario de Ingeniería (6 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "El tanque 4 babor sí lleva acero: en inspección se encontraron huecos y hoy inicia el corte", "extra": "alcance no contemplado; los 8 tanques pasan a 9" },
@@ -34,16 +34,33 @@ window.DIQUE_REGISTRO = {
           { "txt": "5P: mucha estructura por cambiar, no solo forro", "extra": "pasó de 40 % a 50 % en cuatro días" },
           { "txt": "Promedio de corte de los ocho tanques: 51 %", "extra": "3 nov; era 28 % el 30 oct" }
         ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Panel de alarma 95-98 %: el electricista de a bordo inicia la verificación y la prueba de las alarmas de alto nivel", "extra": "6 nov" },
+          { "txt": "Filtro instalado en la línea de agua de mar del enfriador del auxiliar #2", "extra": "terminado · 6 nov" },
+          { "txt": "Megado del alternador #1: mediciones satisfactorias", "extra": "terminado · 6 nov" },
+          { "txt": "Bow Thruster: la araña de acople del motor eléctrico ya está a bordo", "extra": "6 nov" },
+          { "txt": "Limpieza general de la sala de máquinas: se retiran hierros y tuberías en desuso", "extra": "terminado · 6 nov" },
+          { "txt": "Sorpresas en máquinas: estructura perforada por corrosión entre las tuberías", "extra": "3 nov" }
+        ] },
         { "zona": "Casco", "items": [
           { "txt": "Casco estribor hacia popa: 70 % en insertos, con dos paños nuevos ya soldados", "extra": "3 nov" },
           { "txt": "Casco estribor hacia proa: 50 %, insertos cortados y estructura en cambio; posiblemente inician a colocar láminas", "extra": "3 nov" },
           { "txt": "El casco queda dentro de renovación de acero, no como actividad aparte" }
-        ] },
-        { "zona": "Sala de máquinas", "items": [
-          { "txt": "Sorpresas en máquinas: estructura perforada por corrosión entre las tuberías", "extra": "3 nov" }
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_01_panel-alarma-interior.jpg", "texto": "Panel de alarma 95-98 % abierto para la verificación", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_02_sensor-alto-nivel.jpg", "texto": "Sensor de alto nivel de un tanque de carga, abierto para la prueba", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_03_panel-alarma-exterior.jpg", "texto": "Panel de alarmas de nivel de los tanques de carga", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "video", "archivo": "registro/s7/i06_maq_video-prueba-alarma.mp4", "texto": "Prueba de las alarmas de alto nivel de los tanques de carga", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_04_filtro-aux2-armado.jpg", "texto": "Filtro para la línea de agua de mar del enfriador del auxiliar #2", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_05_filtro-aux2-instalacion.jpg", "texto": "Filtro en instalación en la línea de agua de mar", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_06_filtro-aux2-instalado.jpg", "texto": "Filtro instalado en la línea de agua de mar", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_07_arana-acople-bow-thruster.jpg", "texto": "Araña de acople del motor eléctrico del Bow Thruster, recibida a bordo", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_08_alternador-1-conexiones.jpg", "texto": "Alternador #1: conexiones para la prueba de megado", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_09_alternador-1-megado.jpg", "texto": "Alternador #1: medición de la prueba de megado", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_10_limpieza-sala-1.jpg", "texto": "Retiro de hierros y tuberías en desuso de la sala de máquinas", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i06_maq_11_limpieza-sala-2.jpg", "texto": "Sala de máquinas después de la limpieza", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n06_t5p_01_manhole-ifo-5p.jpg", "texto": "Manhole IFO 5P con permiso de espacio confinado", "grupo": "Tanque 5 babor · IFO 5P · corte 100 %, láminas 50 % · 6 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n06_t5p_02_panos-nuevos-fondo.jpg", "texto": "Andamio interior; al fondo, paños nuevos ya soldados en el forro", "grupo": "Tanque 5 babor · IFO 5P · corte 100 %, láminas 50 % · 6 nov" },
         { "tipo": "foto", "archivo": "registro/s7/n06_t5p_03_pano-zona-alta.jpg", "texto": "Paño nuevo instalado en la zona alta; lecturas de 10.1 a 10.3 mm", "grupo": "Tanque 5 babor · IFO 5P · corte 100 %, láminas 50 % · 6 nov" },
