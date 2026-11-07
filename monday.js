@@ -5397,7 +5397,7 @@ window.DIQUE_MONDAY = {
        "monto": 5939,
        "nota": {
         "fecha": "2026-11-03",
-        "texto": "2026-11-03 | Avance 100 %."
+        "texto": "La limpieza de tanques de carga, tanque 5DB de lastre y slop tank se ejecutó a principios de octubre, antes de entrar a dique: era el habilitante del trabajo en caliente."
        }
       },
       {
@@ -5409,7 +5409,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.02,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-23",
         "texto": "Acero a cambiar definido. Inicia el corte de acero a renovar."
@@ -5424,7 +5424,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.9,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero a cortar definido · andamios terminados · inicia el corte de acero a renovar."
@@ -5439,7 +5439,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.9,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero a renovar definido. Se inicia armado de andamios. El corte empieza mañana 28-oct."
@@ -5526,7 +5526,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.02,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero marcado · andamios armados · corte inicia después del mediodía."
@@ -5541,7 +5541,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.57,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Inicia armado de andamios hoy. Acero aún no marcado al momento del reporte."
@@ -5556,7 +5556,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.9,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero definido · andamios armados · cortando acero ya."
@@ -5586,7 +5586,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.13,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Acero definido · andamios armados · cortando acero para renovar."
@@ -5601,7 +5601,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.13,
        "medicion": "2026-11-06",
-       "monto": 88343029448,
+       "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
         "texto": "Andamios armados · acero definido · corte inicia después del mediodía."
@@ -5631,7 +5631,7 @@ window.DIQUE_MONDAY = {
        "monto": 52074,
        "nota": {
         "fecha": "2026-11-03",
-        "texto": "2026-11-03 | Avance 30 %."
+        "texto": "Base del cálculo: el renglón cubre los 4.000 kg de lámina plana de CUBIERTA y COSTADO (cotización SEA26-050-2, ítems 13.1 a 13.6, USD 52.074)."
        }
       },
       {
@@ -5643,7 +5643,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.58,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5655,7 +5655,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.53,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5667,7 +5667,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.06,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5679,7 +5679,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.32,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5691,7 +5691,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.32,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5703,7 +5703,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 0.79,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5715,7 +5715,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 1.32,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       },
       {
@@ -5727,7 +5727,7 @@ window.DIQUE_MONDAY = {
        "cancelado": false,
        "ponderado": 2.11,
        "medicion": "2026-11-06",
-       "monto": 206147029448,
+       "monto": 20614,
        "nota": null
       }
      ]
@@ -11630,16 +11630,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "316521f756e7",
- "cambiosLectura": [
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "18.2 %",
-   "ahora": "20.4 %"
-  }
- ],
+ "_huella": "25efd263b4f4",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",

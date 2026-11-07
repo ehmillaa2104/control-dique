@@ -269,8 +269,8 @@ def nota_update(u):
     if not u:
         return None
     lin = [x.strip() for x in (u.get("text_body") or "").splitlines() if x.strip()]
-    if lin and re.fullmatch(r"\d{4}-\d{2}-\d{2}", lin[0]):  # ya recortado: "AAAA-MM-DD\ntexto"
-        return {"fecha": lin[0], "texto": lin[1][:200]} if len(lin) > 1 else None
+    if lin and re.match(r"\d{4}-\d{2}-\d{2}\s*(\||$)", lin[0]):  # "AAAA-MM-DD | Avance 30 %." o ya recortado: "AAAA-MM-DD\ntexto"
+        return {"fecha": lin[0][:10], "texto": lin[1][:200]} if len(lin) > 1 else None
     m = re.match(r"(\d{1,2})-([a-z]{3})-(\d{4})", lin[0], re.I) if lin else None
     meses = {"ene": 1, "jan": 1, "feb": 2, "mar": 3, "abr": 4, "apr": 4, "may": 5, "jun": 6, "jul": 7, "ago": 8, "aug": 8, "sep": 9, "set": 9, "oct": 10, "nov": 11, "dic": 12, "dec": 12}
     f = date(int(m.group(3)), meses[m.group(2).lower()], int(m.group(1))).isoformat() if m and m.group(2).lower() in meses else fecha(u.get("created_at"))
@@ -293,7 +293,8 @@ def subelementos(tablero, nombre, items):
         monto = v.get(SUB_COLS["monto"], {}).get("text") or ""
         sub = {"id": s["id"], "nombre": texto(s["name"]), "peso": peso, "avance": av, "pct": pct or 0, "cancelado": av == "Cancelado",
                "ponderado": pond, "medicion": fecha(v.get(SUB_COLS["medicion"], {}).get("text")),
-               "monto": num(re.sub(r"[^\d.]", "", monto.split("—")[0])) if re.search(r"\d", monto) else None,
+               # El primer número del texto: "$36,039", "$0 — fuera de alcance", "$20,614 (70 % de 29,448)"
+               "monto": num(re.search(r"\d[\d,]*(?:\.\d+)?", monto).group()) if re.search(r"\d", monto) else None,
                "nota": nota_update((s.get("updates") or [None])[0])}
         if pct is None and not sub["cancelado"]:
             obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: Avance "{av}" no es un porcentaje; cuenta como 0 %.'))
