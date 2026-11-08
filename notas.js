@@ -34,8 +34,9 @@ window.DIQUE_NOTAS = {
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
   // 4 nov: Ingeniería, Cubierta y Seguridad en Pendiente (indicación del usuario); Técnico y Contabilidad siguen en Completa.
   // 6 nov: Ingeniería pasa a Completa, subió su informe del 6 nov a Monday (indicación del usuario).
+  // 7 nov: Ingeniería sigue en Completa (subió también su informe del 7 nov) y Contabilidad pasa a Pendiente (indicación del usuario).
   "entrega": {
     "S5": "Completa",
-    "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Completa" }
+    "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Pendiente" }
   }
 };

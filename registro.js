@@ -13,12 +13,25 @@ window.DIQUE_REGISTRO = {
       "semana": 7,
       "desde": "2026-11-02",
       "hasta": "2026-11-07",
-      "fuente": "Reportes del superintendente (3 y 6 nov) e informe diario de Ingeniería (6 nov)",
+      "fuente": "Reportes del superintendente (3 y 6 nov) e informes diarios de Ingeniería (6 y 7 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "El tanque 4 babor sí lleva acero: en inspección se encontraron huecos y hoy inicia el corte", "extra": "alcance no contemplado; los 8 tanques pasan a 9" },
           { "txt": "Lunes 2 de noviembre: festivo en Colombia por el Día de Todos los Santos", "extra": "un día hábil sin trabajo en el astillero" },
           { "txt": "Lunes 16 de noviembre: festivo por la Independencia de Cartagena", "extra": "el astillero informó que no habrá trabajo" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Sistema hidráulico: instalados los seis acoples elásticos Flender 95, la bomba y el motor eléctrico, con pruebas de funcionamiento", "extra": "terminado · 7 nov" },
+          { "txt": "Indicador de ángulo de timón instalado; se calibran los repetidores del puente y del cuarto del timón", "extra": "en calibración · 7 nov" },
+          { "txt": "Bomba de lastre de estribor llevada junto a su base; se empieza a fabricar la base", "extra": "7 nov" },
+          { "txt": "Bomba de sentina de la sala de máquinas: sigue la fabricación y el montaje de tuberías", "extra": "7 nov" },
+          { "txt": "Sigue el megado de los motores eléctricos", "extra": "7 nov" },
+          { "txt": "Panel de alarma 95-98 %: el electricista de a bordo inicia la verificación y la prueba de las alarmas de alto nivel", "extra": "6 nov" },
+          { "txt": "Filtro instalado en la línea de agua de mar del enfriador del auxiliar #2", "extra": "terminado · 6 nov" },
+          { "txt": "Megado del alternador #1: mediciones satisfactorias", "extra": "terminado · 6 nov" },
+          { "txt": "Bow Thruster: la araña de acople del motor eléctrico ya está a bordo", "extra": "6 nov" },
+          { "txt": "Limpieza general de la sala de máquinas: se retiran hierros y tuberías en desuso", "extra": "terminado · 6 nov" },
+          { "txt": "Sorpresas en máquinas: estructura perforada por corrosión entre las tuberías", "extra": "3 nov" }
         ] },
         { "zona": "Tanques de carga", "items": [
           { "txt": "Corte de acero: 5P y 5S 100 %, 1P y 2S 90 %, 1S, 2P y 3S 80 %, 3P 50 %", "extra": "6 nov" },
@@ -34,14 +47,6 @@ window.DIQUE_REGISTRO = {
           { "txt": "5P: mucha estructura por cambiar, no solo forro", "extra": "pasó de 40 % a 50 % en cuatro días" },
           { "txt": "Promedio de corte de los ocho tanques: 51 %", "extra": "3 nov; era 28 % el 30 oct" }
         ] },
-        { "zona": "Sala de máquinas", "items": [
-          { "txt": "Panel de alarma 95-98 %: el electricista de a bordo inicia la verificación y la prueba de las alarmas de alto nivel", "extra": "6 nov" },
-          { "txt": "Filtro instalado en la línea de agua de mar del enfriador del auxiliar #2", "extra": "terminado · 6 nov" },
-          { "txt": "Megado del alternador #1: mediciones satisfactorias", "extra": "terminado · 6 nov" },
-          { "txt": "Bow Thruster: la araña de acople del motor eléctrico ya está a bordo", "extra": "6 nov" },
-          { "txt": "Limpieza general de la sala de máquinas: se retiran hierros y tuberías en desuso", "extra": "terminado · 6 nov" },
-          { "txt": "Sorpresas en máquinas: estructura perforada por corrosión entre las tuberías", "extra": "3 nov" }
-        ] },
         { "zona": "Casco", "items": [
           { "txt": "Casco estribor hacia popa: 70 % en insertos, con dos paños nuevos ya soldados", "extra": "3 nov" },
           { "txt": "Casco estribor hacia proa: 50 %, insertos cortados y estructura en cambio; posiblemente inician a colocar láminas", "extra": "3 nov" },
@@ -49,6 +54,15 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_01_hidraulico-acople-flender.jpg", "texto": "Sistema hidráulico: montaje de un acople elástico Flender 95", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_02_hidraulico-bomba-motor.jpg", "texto": "Sistema hidráulico: bomba y motor eléctrico instalados (babor)", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_03_indicador-angulo-timon.jpg", "texto": "Indicador de ángulo de timón instalado en el servomotor", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_04_bomba-lastre-izaje.jpg", "texto": "Bomba de lastre de estribor izada con diferencial para llevarla a su sitio", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_05_bomba-lastre-en-sitio.jpg", "texto": "Bomba de lastre de estribor junto a la base donde se instalará", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_06_tuberia-bomba-sentina.jpg", "texto": "Montaje de tuberías de la bomba de sentina de la sala de máquinas", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_07_megado-motor.jpg", "texto": "Motor eléctrico en megado", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_08_megado-medicion.jpg", "texto": "Medición de la resistencia de aislamiento en la bornera del motor", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
+        { "tipo": "foto", "archivo": "registro/s7/i07_maq_09_soldadura-base-bomba-lastre.jpg", "texto": "Fabricación de la base de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 7 nov" },
         { "tipo": "foto", "archivo": "registro/s7/i06_maq_01_panel-alarma-interior.jpg", "texto": "Panel de alarma 95-98 % abierto para la verificación", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
         { "tipo": "foto", "archivo": "registro/s7/i06_maq_02_sensor-alto-nivel.jpg", "texto": "Sensor de alto nivel de un tanque de carga, abierto para la prueba", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
         { "tipo": "foto", "archivo": "registro/s7/i06_maq_03_panel-alarma-exterior.jpg", "texto": "Panel de alarmas de nivel de los tanques de carga", "grupo": "Sala de máquinas · Ingeniería, 6 nov" },
