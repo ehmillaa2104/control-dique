@@ -12323,16 +12323,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "450065d70493",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Duración",
-   "antes": "1",
-   "ahora": "0"
-  }
- ],
+ "_huella": "d194578edebb",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
