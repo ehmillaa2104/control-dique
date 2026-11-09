@@ -329,13 +329,16 @@
 
   // Fecha en que ocurrió un imprevisto: la de notas.js (fechaImprevisto) si se registró otro día en Monday; si no, la de registro
   const fechaImp = (c) => (((window.DIQUE_NOTAS || {}).fechaImprevisto || {})[c.id] || c.creado);
-  // Días perdidos: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo y de festivos, por Tipo de Impacto o nombre
-  // (columna Días). Solo cuentan los ya ocurridos: los de fecha futura se listan aparte como previstos.
+  // Días perdidos: tablero Cambios/Imprevistos, registros de jornada perdida por lluvia, por festivo o por
+  // cierre del astillero, reconocidos por Tipo de Impacto o nombre (columna Días). Solo cuentan los ya
+  // ocurridos: los de fecha futura se listan aparte como previstos.
+  // Orden importante: gana la primera categoría que haga match.
   const CAT_DIA = [
     { k: "lluvia", re: /lluvia|mal tiempo|clima/i, uno: "por lluvia", varios: "por lluvia" },
-    { k: "festivo", re: /festivo|feriado|d[ií]a c[ií]vico|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" }
+    { k: "festivo", re: /festivo|feriado|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" },
+    { k: "cierre", re: /cierre|jornada corta|paro|d[ií]a c[ií]vico/i, uno: "por cierre del astillero", varios: "por cierre del astillero" }
   ];
-  // Separa los imprevistos de lluvia o festivo con días: los ya ocurridos cuentan en el indicador,
+  // Separa los imprevistos de jornada perdida con días: los ya ocurridos cuentan en el indicador,
   // los de fecha futura son previstos y van a Puntos de atención, no al número de días perdidos.
   function diasImprevistos(M) {
     const cs = ((M && M.D.cambios) || []).map((c) => {
@@ -368,7 +371,7 @@
       ? `<div class="tnote">Previstos, todavía no perdidos. Ver Puntos de atención</div>${previstos.map(fila).join("")}`
       : "";
     return kpi("cloud", "Días perdidos", `${dias} ${dias === 1 ? "día" : "días"}`, sub,
-      { alert: dias > 0, tip: `<b>Días perdidos</b>${det}${detPrev}<div class="tnote">Fuente: tablero Cambios/Imprevistos, registros de lluvia o mal tiempo y de festivos</div>` });
+      { alert: dias > 0, tip: `<b>Días perdidos</b>${det}${detPrev}<div class="tnote">Fuente: tablero Cambios/Imprevistos, jornadas perdidas por lluvia, por festivo o por cierre del astillero</div>` });
   }
 
   // Avance físico como un reloj: anillo que se llena con el %
