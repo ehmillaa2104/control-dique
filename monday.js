@@ -181,18 +181,18 @@ window.DIQUE_MONDAY = {
    "id": "13430387154",
    "grupo": "Dique",
    "nombre": "Varada",
-   "estado": "No Iniciado",
-   "duracion": 0,
+   "estado": "Retrasado",
+   "duracion": 1,
    "base": [
     "2026-11-06",
     "2026-11-06"
    ],
    "real": [
-    "2026-11-06",
-    "2026-11-06"
+    "2026-11-11",
+    "2026-11-11"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-30"
+   "diferencia": 5,
+   "actualizado": "2026-11-09"
   },
   {
    "id": "13233510296",
@@ -7382,6 +7382,21 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-11-09"
   },
   {
+   "id": "13508774758",
+   "nombre": "Varada corrida del 6 al 11 de noviembre: dique ocupado por otro buque",
+   "creado": "2026-11-09",
+   "tipo": "Tiempo",
+   "costo": null,
+   "dias": 5,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-09"
+  },
+  {
    "id": "13488441240",
    "nombre": "Tanque 4 babor lleva acero: alcance no contemplado",
    "creado": "2026-11-06",
@@ -12278,13 +12293,38 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "dda67aaeae33",
- "cambiosLectura": [],
- "observaciones": [
+ "_huella": "133806767ff4",
+ "cambiosLectura": [
   {
-   "nivel": "aviso",
-   "texto": "Cronograma · hito \"Varada\": su fecha (2026-11-06) ya pasó y sigue \"No Iniciado\"; actualizar la fecha o marcarlo Listo."
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
+   "campo": "Estado",
+   "antes": "No Iniciado",
+   "ahora": "Retrasado"
   },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
+   "campo": "Fecha Real",
+   "antes": "2026-11-06 a 2026-11-06",
+   "ahora": "2026-11-11 a 2026-11-11"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "5"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
+   "campo": "Duración",
+   "antes": "0",
+   "ahora": "1"
+  }
+ ],
+ "observaciones": [
   {
    "nivel": "info",
    "texto": "Cronograma · \"Revisión de información\": sin Fecha Real; no se dibuja."
