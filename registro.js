@@ -16,9 +16,12 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reportes del superintendente (3 y 6 nov) e informes diarios de Ingeniería (6 y 7 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "El tanque 4 babor sí lleva acero: en inspección se encontraron huecos y hoy inicia el corte", "extra": "alcance no contemplado; los 8 tanques pasan a 9" },
-          { "txt": "Lunes 2 de noviembre: festivo en Colombia por el Día de Todos los Santos", "extra": "un día hábil sin trabajo en el astillero" },
-          { "txt": "Lunes 16 de noviembre: festivo por la Independencia de Cartagena", "extra": "el astillero informó que no habrá trabajo" }
+          { "txt": "La varada se corre del viernes 6 al miércoles 11 de noviembre: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "5 días de atraso, causa externa · 9 nov" },
+          { "txt": "La varada abre el 31 % de la cuenta del astillero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar están en cero esperándola" },
+          { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
+          { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" },
+          { "txt": "El tanque 4 babor sí lleva acero: en inspección se encontraron huecos y el 6 nov inició el corte", "extra": "alcance no contemplado; los 8 tanques pasan a 9" },
+          { "txt": "Lunes 2 de noviembre: festivo en Colombia por el Día de Todos los Santos", "extra": "un día hábil sin trabajo en el astillero" }
         ] },
         { "zona": "Sala de máquinas", "items": [
           { "txt": "Sistema hidráulico: instalados los seis acoples elásticos Flender 95, la bomba y el motor eléctrico, con pruebas de funcionamiento", "extra": "terminado · 7 nov" },
