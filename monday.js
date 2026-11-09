@@ -7397,6 +7397,36 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-11-09"
   },
   {
+   "id": "13508936157",
+   "nombre": "Pérdida de día por cierre del astillero — viernes 13 de noviembre",
+   "creado": "2026-11-09",
+   "tipo": "Tiempo",
+   "costo": null,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-09"
+  },
+  {
+   "id": "13508891609",
+   "nombre": "Pérdida de medio día por jornada corta — jueves 12 de noviembre",
+   "creado": "2026-11-09",
+   "tipo": "Tiempo",
+   "costo": null,
+   "dias": 0.5,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-09"
+  },
+  {
    "id": "13488441240",
    "nombre": "Tanque 4 babor lleva acero: alcance no contemplado",
    "creado": "2026-11-06",
@@ -7428,7 +7458,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "id": "13455695886",
-   "nombre": "Punto de atención: paro del lunes 16 de noviembre por Independencia de Cartagena",
+   "nombre": "Pérdida de día por festivo — lunes 16 de noviembre (Independencia de Cartagena)",
    "creado": "2026-11-03",
    "tipo": "Tiempo",
    "costo": 0,
@@ -7439,7 +7469,7 @@ window.DIQUE_MONDAY = {
    "actividades": [
     "13098338054"
    ],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-09"
   },
   {
    "id": "13427708100",
@@ -12293,37 +12323,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "133806767ff4",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Estado",
-   "antes": "No Iniciado",
-   "ahora": "Retrasado"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Fecha Real",
-   "antes": "2026-11-06 a 2026-11-06",
-   "ahora": "2026-11-11 a 2026-11-11"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "5"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Duración",
-   "antes": "0",
-   "ahora": "1"
-  }
- ],
+ "_huella": "70b5e113cf53",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
