@@ -572,8 +572,8 @@
       tip: `${rowT("Enlazado a trabajos", moneyK(sum(enl, (p) => p.incurrido)))}${incSin ? rowT("Sin enlazar", moneyK(incSin)) : ""}`
     };
     return `<div class="kpis ${M.part ? "k8" : "k7"}">${costKpis(C, avance(all), { incurrido, trabajos: all, modelo: M, montosGlobales: true })}${partKpi(M, null, "Participación del equipo")}</div>
-      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${entregaHTML(M)}
+      <h2 class="sec">Resumen por área</h2>${areaCards(M)}
       ${registroCard(M)}
       ${semanaCard(M)}
       <div class="row-b">${centrosCard(M)}<div class="stack">${cambiosCard(M)}</div></div>
