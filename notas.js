@@ -28,7 +28,9 @@ window.DIQUE_NOTAS = {
   "fechaImprevisto": {
     "13398896309": "2026-10-24",  // Pérdida de día por lluvia: ocurrió el 24 oct, se registró el 27 oct
     "13455614931": "2026-11-02",  // Pérdida de día por festivo (Todos los Santos): ocurrió el 2 nov, se registró el 3 nov
-    "13455695886": "2026-11-16"   // Paro por Independencia de Cartagena: ocurre el 16 nov, se registró el 3 nov (aún no cuenta)
+    "13455695886": "2026-11-16",  // Paro por Independencia de Cartagena: ocurre el 16 nov, se registró el 3 nov (aún no cuenta)
+    "13508287294": "2026-11-06",  // Medio día perdido por lluvia: ocurrió el viernes 6 nov, se registró el 9 nov
+    "13508325126": "2026-11-07"   // Día perdido por lluvia: ocurrió el sábado 7 nov, se registró el 9 nov
   },
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
