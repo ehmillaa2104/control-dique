@@ -182,7 +182,7 @@ window.DIQUE_MONDAY = {
    "grupo": "Dique",
    "nombre": "Varada",
    "estado": "Retrasado",
-   "duracion": 1,
+   "duracion": 0,
    "base": [
     "2026-11-06",
     "2026-11-06"
@@ -12323,8 +12323,16 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "70b5e113cf53",
- "cambiosLectura": [],
+ "_huella": "450065d70493",
+ "cambiosLectura": [
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Varada",
+   "campo": "Duración",
+   "antes": "1",
+   "ahora": "0"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",

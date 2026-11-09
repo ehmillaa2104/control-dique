@@ -10,16 +10,45 @@
 window.DIQUE_REGISTRO = {
   "semanas": [
     {
+      "semana": 8,
+      "desde": "2026-11-09",
+      "hasta": "2026-11-14",
+      "fuente": "Informe diario de Ingeniería (9 nov) y cronograma de Monday",
+      "avance": [
+        { "zona": "Temas importantes", "items": [
+          { "txt": "La varada se corre del viernes 6 al miércoles 11 de noviembre: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "5 días de atraso, causa externa · 9 nov" },
+          { "txt": "La varada abre el 31 % de la cuenta del astillero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar están en cero esperándola" },
+          { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
+          { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Indicador de ángulo de timón: sigue la calibración de los repetidores del puente y del cuarto del timón", "extra": "en calibración · 9 nov" },
+          { "txt": "Bomba de lastre de estribor posicionada en su base; se arma la tubería de descarga", "extra": "9 nov" },
+          { "txt": "Bomba de sentina de la sala de máquinas: sigue la fabricación y el montaje de tuberías", "extra": "9 nov" },
+          { "txt": "Megado del alternador auxiliar de emergencia: mediciones satisfactorias", "extra": "terminado · 9 nov" },
+          { "txt": "Auxiliar de emergencia: mantenimiento preventivo con cambio de aceite y filtros, y revisión de ventilador, polea y correa", "extra": "terminado · 9 nov" }
+        ] }
+      ],
+      "medios": [
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_01_indicador-angulo-timon.jpg", "texto": "Indicador de ángulo de timón en calibración", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_02_bomba-lastre-montaje.jpg", "texto": "Montaje de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_03_bomba-lastre-posicionada.jpg", "texto": "Bomba de lastre de estribor posicionada; falta la tubería de descarga", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_04_sentina-fabricacion-tuberia.jpg", "texto": "Fabricación de tubería para la bomba de sentina", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_05_sentina-tuberia-montada.jpg", "texto": "Tubería de la bomba de sentina en montaje", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_06_alternador-emergencia-megado.jpg", "texto": "Alternador del auxiliar de emergencia abierto para el megado", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_07_alternador-emergencia-medicion.jpg", "texto": "Medición del megado del alternador de emergencia", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_08_aux-emergencia-carter.jpg", "texto": "Auxiliar de emergencia: cambio de aceite", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_09_aux-emergencia-ventilador.jpg", "texto": "Auxiliar de emergencia: revisión del ventilador y la polea", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i09_maq_10_aux-emergencia-filtros.jpg", "texto": "Auxiliar de emergencia: filtros nuevos de combustible y aceite", "grupo": "Sala de máquinas · Ingeniería, 9 nov" }
+      ]
+    },
+    {
       "semana": 7,
       "desde": "2026-11-02",
       "hasta": "2026-11-07",
       "fuente": "Reportes del superintendente (3 y 6 nov) e informes diarios de Ingeniería (6 y 7 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "La varada se corre del viernes 6 al miércoles 11 de noviembre: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "5 días de atraso, causa externa · 9 nov" },
-          { "txt": "La varada abre el 31 % de la cuenta del astillero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar están en cero esperándola" },
-          { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
-          { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" },
           { "txt": "El tanque 4 babor sí lleva acero: en inspección se encontraron huecos y el 6 nov inició el corte", "extra": "alcance no contemplado; los 8 tanques pasan a 9" },
           { "txt": "Lunes 2 de noviembre: festivo en Colombia por el Día de Todos los Santos", "extra": "un día hábil sin trabajo en el astillero" }
         ] },

@@ -39,8 +39,10 @@ window.DIQUE_NOTAS = {
   // 4 nov: Ingeniería, Cubierta y Seguridad en Pendiente (indicación del usuario); Técnico y Contabilidad siguen en Completa.
   // 6 nov: Ingeniería pasa a Completa, subió su informe del 6 nov a Monday (indicación del usuario).
   // 7 nov: Ingeniería sigue en Completa (subió también su informe del 7 nov) y Contabilidad pasa a Pendiente (indicación del usuario).
+  // 9 nov: Semana 8, Ingeniería en Completa (subió su informe del 9 nov; indicación del usuario). Los demás, sin cargar = Pendiente.
   "entrega": {
     "S5": "Completa",
-    "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Pendiente" }
+    "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Pendiente" },
+    "S8": { "Ingeniería": "Completa" }
   }
 };

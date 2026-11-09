@@ -265,6 +265,8 @@
     };
     const fin = M.finHito;
     const align = hoyX < 12 ? "l" : hoyX > 88 ? "r" : "";
+    // "Atraso del cronograma" en la cabecera: oculto a pedido del usuario (9 nov). Para mostrarlo de nuevo, poner true.
+    const MOSTRAR_ATRASO_CABECERA = false;
     return `<div class="vy">
       <div class="vy-track">
         <div class="vy-ship ${align}" data-x="${hoyX}" style="left:${hoyX}%"><div class="vy-tag">${etapa}</div>${SHIP}</div>
@@ -274,7 +276,7 @@
       <div class="vy-info">
         <div class="vi">${icon("check", "ic sm")}<div><small>Último hito</small>${hitoTxt(M.lastHito, false)}</div></div>
         <div class="vi">${icon("calendar", "ic sm")}<div><small>Próximo hito</small>${hitoTxt(M.nextHito, true)}</div></div>
-        ${(() => {
+        ${!MOSTRAR_ATRASO_CABECERA ? "" : (() => {
           const d = fin ? fin.diferencia || 0 : 0, p = M.peorAtraso;
           const val = Math.abs(d) < 0.5 ? "0 días" : d > 0 ? "+" + days1(d) : "-" + days1(-d);
           return `<div class="vi ${d >= 2 ? "late" : ""}" ${tipAttr((M.crono.filter((r) => r.diferencia > 0).sort((a, b) => b.diferencia - a.diferencia).slice(0, 3).map((r) => rowT(esc(r.nombre.split("*")[0].trim()), "+" + r.diferencia + " d")).join("")) || '<div class="tnote">Sin atrasos</div>')}>${icon("clock", "ic sm")}<div><small>Atraso del cronograma</small><b>${val}${fin ? ` <span>al ${esc(fin.nombre.replace(/\s*\(.*\)\s*$/, ""))}</span>` : ""}</b>${p ? `<span><em class="v-late">${esc(p.nombre)} +${p.diferencia} d</em></span>` : ""}</div></div>`;
