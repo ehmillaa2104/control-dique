@@ -1379,8 +1379,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Línea de descarga de bomba de lastre de estribor",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "68%",
+     "pct": 68,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1396,7 +1396,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-11",
      "costo": "aprobado"
     },
     {
@@ -1504,8 +1504,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "93%",
+     "pct": 93,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1521,7 +1521,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-30",
+     "actualizado": "2026-11-11",
      "costo": "aprobado"
     },
     {
@@ -2554,8 +2554,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bombas hidráulicas de timón — sellos, filtros y aceite",
      "grupo": "1.10 Sistema Hidráulico General",
      "fase": "Dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2567,11 +2567,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 3500,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-11",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-30",
+     "actualizado": "2026-11-11",
      "costo": "aprobado"
     },
     {
@@ -2754,8 +2754,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Indicador De Angulo de Timón",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "96%",
+     "pct": 96,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2771,7 +2771,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-27",
+     "actualizado": "2026-11-11",
      "costo": "aprobado"
     },
     {
@@ -5564,17 +5564,17 @@ window.DIQUE_MONDAY = {
       },
       {
        "id": "13397343531",
-       "nombre": "§13 · Acero — Tanque 4 Babor y Estribor (SIN ACERO)",
+       "nombre": "§13 · Acero — Tanque 4 Babor (IFO 4P) · alcance nuevo, por cuantificar",
        "peso": 0,
-       "avance": "Cancelado",
-       "pct": 0,
-       "cancelado": true,
+       "avance": "10%",
+       "pct": 10,
+       "cancelado": false,
        "ponderado": 0,
-       "medicion": "2026-10-27",
-       "monto": 0,
+       "medicion": "2026-11-06",
+       "monto": 13488441240,
        "nota": {
-        "fecha": "2026-10-27",
-        "texto": "Los tanques de carga 4 Babor y 4 Estribor NO llevan acero. Confirmado en campo."
+        "fecha": "2026-11-11",
+        "texto": "REACTIVADO — 11 nov 2026"
        }
       },
       {
@@ -8014,7 +8014,7 @@ window.DIQUE_MONDAY = {
    "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 5.75
+   "avanceDias": 7.57
   },
   "cubierta": {
    "lineas": 18,
@@ -8032,7 +8032,7 @@ window.DIQUE_MONDAY = {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 41.39
+   "avanceDias": 43.21
   }
  },
  "historial": [
@@ -12530,7 +12530,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-11",
-   "avance": 29.56,
+   "avance": 30.86,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -12576,12 +12576,12 @@ window.DIQUE_MONDAY = {
     "13095570185": 0,
     "13428126280": 100,
     "13428159726": 100,
-    "13256760157": 0,
+    "13256760157": 68,
     "13256755192": 0,
     "13256755203": 0,
     "13256744926": 0,
     "13256760609": 0,
-    "13256744868": 25,
+    "13256744868": 93,
     "13043950472": 0,
     "13043945735": 0,
     "13043950470": 0,
@@ -12623,7 +12623,7 @@ window.DIQUE_MONDAY = {
     "13095570205": 0,
     "13043941390": 0,
     "13043924488": 0,
-    "13095643937": 75,
+    "13095643937": 100,
     "13095604536": 0,
     "13095613807": 0,
     "13277138828": 25,
@@ -12631,7 +12631,7 @@ window.DIQUE_MONDAY = {
     "13277104868": 0,
     "13277169481": 0,
     "13277138491": 25,
-    "13277157364": 75,
+    "13277157364": 96,
     "13043950429": 0,
     "13043932348": 0,
     "13043921752": 0,
@@ -12735,14 +12735,42 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "c681eb876bfa",
+ "_huella": "bc9845c271cf",
  "cambiosLectura": [
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "23.4 %",
-   "ahora": "25.4 %"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
+   "campo": "Estado",
+   "antes": "0%",
+   "ahora": "68%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de sentina de sala de máquinas — reemplazo por mayor caudal",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "93%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "campo": "Estado",
+   "antes": "75%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bombas hidráulicas de timón — sellos, filtros y aceite",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-11"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Indicador De Angulo de Timón",
+   "campo": "Estado",
+   "antes": "75%",
+   "ahora": "96%"
   }
  ],
  "observaciones": [
@@ -12764,7 +12792,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 15 en ejecución · 1 finalizado(s) · 17 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 15 en ejecución · 2 finalizado(s) · 16 por iniciar."
   },
   {
    "nivel": "aviso",
