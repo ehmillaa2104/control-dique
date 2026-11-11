@@ -13,7 +13,7 @@ window.DIQUE_REGISTRO = {
       "semana": 8,
       "desde": "2026-11-09",
       "hasta": "2026-11-14",
-      "fuente": "Reporte del superintendente (10 nov), informe diario de Ingeniería (9 nov) y cronograma de Monday",
+      "fuente": "Reporte del superintendente (10 nov), informes diarios de Ingeniería (9 y 10 nov) y cronograma de Monday",
       "avance": [
         { "zona": "Temas importantes", "items": [
           { "txt": "El acero avanza en los nueve tanques: el corte terminó en 3P, 3S, 5P y 5S, y el tanque 3 estribor ya tiene todo el acero instalado", "extra": "10 nov" },
@@ -37,6 +37,12 @@ window.DIQUE_REGISTRO = {
           { "txt": "El resto de las láminas de proa espera a que termine el acero de la relojera de ventilación", "extra": "10 nov" }
         ] },
         { "zona": "Sala de máquinas", "items": [
+          { "txt": "Indicador de ángulo de timón: 96 %, calibrando los repetidores del puente y del cuarto de timón", "extra": "10 nov" },
+          { "txt": "Bomba de lastre de estribor: 68 %; la tubería de descarga se desmonta y se lleva a la mesa de trabajo para soldarla", "extra": "10 nov" },
+          { "txt": "Megado de motores eléctricos: 90 %, mediciones satisfactorias según la tabla RIE", "extra": "10 nov" },
+          { "txt": "Bomba de IFO del tanque 3 estribor: izaje terminado", "extra": "terminado · 10 nov" },
+          { "txt": "Al izar la bomba de IFO 3S se encontró la tubería de succión con perforaciones", "extra": "hallazgo · 10 nov" },
+          { "txt": "Motor eléctrico de la bomba de lastre de estribor bajado al primer nivel", "extra": "10 nov" },
           { "txt": "Indicador de ángulo de timón: sigue la calibración de los repetidores del puente y del cuarto del timón", "extra": "en calibración · 9 nov" },
           { "txt": "Bomba de lastre de estribor posicionada en su base; se arma la tubería de descarga", "extra": "9 nov" },
           { "txt": "Bomba de sentina de la sala de máquinas: sigue la fabricación y el montaje de tuberías", "extra": "9 nov" },
@@ -99,6 +105,15 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s8/n10_casco_01_inserto-estribor.jpg", "texto": "Costado de estribor: trabajo sobre un inserto desde andamio rodante, con el buque todavía a flote en el muelle", "grupo": "Casco de estribor · insertos finalizados, soldados por dentro y por fuera · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_casco_02_andamio-proa.jpg", "texto": "Andamio armado en el costado de estribor hacia proa, con los paños nuevos ya instalados", "grupo": "Casco de estribor hacia proa · 50 % de láminas instaladas · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_casco_03_aberturas-proa.jpg", "texto": "Dos aberturas en el forro hacia proa, pendientes de lámina hasta que termine el acero de la relojera de ventilación", "grupo": "Casco de estribor hacia proa · 50 % de láminas instaladas · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_01_timon-calibracion.jpg", "texto": "Calibración del indicador de ángulo de timón sobre el servomotor", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "video", "archivo": "registro/s8/i10_maq_video-timon.mp4", "texto": "Prueba del indicador de ángulo de timón", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_02_lastre-soldadura.jpg", "texto": "Soldadura de la tubería de descarga de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_03_lastre-tuberia-desmontada.jpg", "texto": "Tubería de descarga desmontada para llevarla a la mesa de trabajo", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_04_megado-motor.jpg", "texto": "Prueba de megado de un motor eléctrico; mediciones satisfactorias según la tabla RIE", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_05_bomba-ifo-3s-izaje.jpg", "texto": "Izaje de la bomba de IFO del tanque 3 estribor", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_06_tuberia-succion-perforada.jpg", "texto": "Tubería de succión de la bomba con perforaciones, encontrada durante el izaje", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_07_motor-lastre-primer-nivel.jpg", "texto": "Motor eléctrico de la bomba de lastre de estribor, bajado al primer nivel", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i10_maq_08_motor-lastre-izaje.jpg", "texto": "Motor eléctrico de la bomba de lastre en maniobra de izaje", "grupo": "Sala de máquinas · Ingeniería, 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i09_maq_01_indicador-angulo-timon.jpg", "texto": "Indicador de ángulo de timón en calibración", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i09_maq_02_bomba-lastre-montaje.jpg", "texto": "Montaje de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i09_maq_03_bomba-lastre-posicionada.jpg", "texto": "Bomba de lastre de estribor posicionada; falta la tubería de descarga", "grupo": "Sala de máquinas · Ingeniería, 9 nov" },
