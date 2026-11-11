@@ -16,20 +16,20 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reporte del superintendente (10 nov), informe diario de Ingeniería (9 nov) y cronograma de Monday",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "El acero avanza en los nueve tanques: el corte terminó en 3S, 5P y 5S, y el tanque 3 estribor ya tiene todo el acero instalado", "extra": "10 nov" },
-          { "txt": "El reporte del 10 nov no incluye el tanque 3 babor, y el bloque rotulado tanque 4 babor abre con la foto del manhole IFO 3P", "extra": "en verificación con el astillero" },
+          { "txt": "El acero avanza en los nueve tanques: el corte terminó en 3P, 3S, 5P y 5S, y el tanque 3 estribor ya tiene todo el acero instalado", "extra": "10 nov" },
+          { "txt": "El tanque 3 babor, el más atrasado del grupo, cerró el corte y saltó de 20 % a 75 % de láminas instaladas en cuatro días", "extra": "10 nov" },
           { "txt": "La varada se corre del viernes 6 al miércoles 11 de noviembre: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "5 días de atraso, causa externa · 9 nov" },
           { "txt": "La varada abre el 31 % de la cuenta del astillero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar están en cero esperándola" },
           { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
           { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" }
         ] },
         { "zona": "Tanques de carga", "items": [
-          { "txt": "Avance por tanque: 3S y 5P 80 %, 4P 75 %, 1P y 2P 70 %, 2S 65 %, 5S 60 %, 1S 50 %", "extra": "10 nov" },
-          { "txt": "El corte de láminas terminó en 3S, 5P y 5S; en esos tanques la cifra es de instalación de acero", "extra": "10 nov" },
+          { "txt": "Avance por tanque: 3S y 5P 80 %, 3P 75 %, 1P y 2P 70 %, 2S 65 %, 5S 60 %, 1S 50 %", "extra": "10 nov" },
+          { "txt": "El corte de láminas terminó en 3P, 3S, 5P y 5S; en esos tanques la cifra es de instalación de acero", "extra": "10 nov" },
           { "txt": "Tanque 3 estribor: todo el acero está instalado y se trabaja en la soldadura de los paños", "extra": "10 nov" },
-          { "txt": "Tanque 4 babor: el corte terminó y la instalación va en 75 %; es el alcance que apareció el 6 nov", "extra": "10 nov" },
+          { "txt": "Tanque 3 babor: el corte terminó y la instalación va en 75 %; el 6 nov iba en 50 % de corte y 20 % de láminas", "extra": "10 nov" },
           { "txt": "Tanque 1 estribor es el más lento: tiene bastante acero por cambiar y acero contra el deep tank", "extra": "10 nov" },
-          { "txt": "El tanque 3 babor no viene en el reporte del 10 nov; sus cifras siguen siendo las del 6 nov", "extra": "por confirmar" }
+          { "txt": "El tanque 4 babor no viene en el reporte del 10 nov; sigue sin cuantificar desde que apareció el 6 nov", "extra": "por confirmar" }
         ] },
         { "zona": "Casco", "items": [
           { "txt": "Casco de estribor: los insertos están finalizados y soldados por dentro y por fuera", "extra": "10 nov" },
@@ -68,11 +68,11 @@ window.DIQUE_REGISTRO = {
         { "tipo": "foto", "archivo": "registro/s8/n10_t2p_05_forro-picado.jpg", "texto": "Forro picado por la corrosión, medido punto a punto; lecturas de 4.9 a 9.3 mm", "grupo": "Tanque 2 babor · MGO 2P · instalando acero, avance 70 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t2p_06_refuerzo-consumido.jpg", "texto": "Refuerzo consumido en la zona del corte", "grupo": "Tanque 2 babor · MGO 2P · instalando acero, avance 70 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t2p_07_abertura-luz.jpg", "texto": "Abertura en el forro con luz del día al fondo", "grupo": "Tanque 2 babor · MGO 2P · instalando acero, avance 70 % · 10 nov" },
-        { "tipo": "foto", "archivo": "registro/s8/n10_t4p_01_manhole.jpg", "texto": "Manhole de acceso del bloque. El cuello se lee IFO 3P; el reporte rotula este bloque como tanque 4 babor", "grupo": "Tanque 4 babor · corte terminado, instalación 75 % · 10 nov" },
-        { "tipo": "foto", "archivo": "registro/s8/n10_t4p_02_pano-corrido.jpg", "texto": "Paño nuevo corrido a lo largo de la zona alta, ya instalado", "grupo": "Tanque 4 babor · corte terminado, instalación 75 % · 10 nov" },
-        { "tipo": "foto", "archivo": "registro/s8/n10_t4p_03_vista-interior.jpg", "texto": "Vista interior con el andamio armado y las lecturas marcadas sobre el forro", "grupo": "Tanque 4 babor · corte terminado, instalación 75 % · 10 nov" },
-        { "tipo": "foto", "archivo": "registro/s8/n10_t4p_04_pano-forro.jpg", "texto": "Paño nuevo instalado en el forro, visto desde el andamio", "grupo": "Tanque 4 babor · corte terminado, instalación 75 % · 10 nov" },
-        { "tipo": "foto", "archivo": "registro/s8/n10_t4p_05_bordes-cortados.jpg", "texto": "Bordes cortados a la espera del paño siguiente", "grupo": "Tanque 4 babor · corte terminado, instalación 75 % · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n10_t3p_01_manhole.jpg", "texto": "Manhole IFO 3P en cubierta", "grupo": "Tanque 3 babor · IFO 3P · corte terminado, instalación 75 % · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n10_t3p_02_pano-corrido.jpg", "texto": "Paño nuevo corrido a lo largo de la zona alta, ya instalado", "grupo": "Tanque 3 babor · IFO 3P · corte terminado, instalación 75 % · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n10_t3p_03_vista-interior.jpg", "texto": "Vista interior con el andamio armado y las lecturas marcadas sobre el forro", "grupo": "Tanque 3 babor · IFO 3P · corte terminado, instalación 75 % · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n10_t3p_04_pano-forro.jpg", "texto": "Paño nuevo instalado en el forro, visto desde el andamio", "grupo": "Tanque 3 babor · IFO 3P · corte terminado, instalación 75 % · 10 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n10_t3p_05_bordes-cortados.jpg", "texto": "Bordes cortados a la espera del paño siguiente", "grupo": "Tanque 3 babor · IFO 3P · corte terminado, instalación 75 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t3s_01_manhole-ifo-3s.jpg", "texto": "Manhole IFO 3S con permiso de espacio confinado; al lado, electrodos de soldadura", "grupo": "Tanque 3 estribor · IFO 3S · todo el acero instalado, en soldadura, avance 80 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t3s_02_panos-soldados.jpg", "texto": "Paños nuevos instalados y soldados en todo el panel", "grupo": "Tanque 3 estribor · IFO 3S · todo el acero instalado, en soldadura, avance 80 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t3s_03_cordones.jpg", "texto": "Cordones de soldadura en las uniones de los paños nuevos; lecturas de 8.0 a 8.7 mm", "grupo": "Tanque 3 estribor · IFO 3S · todo el acero instalado, en soldadura, avance 80 % · 10 nov" },
