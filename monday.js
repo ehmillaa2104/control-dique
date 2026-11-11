@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 23.4,
+     "pct": 25.4,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5536,11 +5536,11 @@ window.DIQUE_MONDAY = {
        "id": "13397352965",
        "nombre": "§13 · Acero — Tanque 3 Babor (IFO 3P) · corte",
        "peso": 1.13,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.57,
-       "medicion": "2026-11-06",
+       "ponderado": 1.13,
+       "medicion": "2026-11-10",
        "monto": 8834,
        "nota": {
         "fecha": "2026-10-27",
@@ -5650,11 +5650,11 @@ window.DIQUE_MONDAY = {
        "id": "13488448723",
        "nombre": "§13 · Acero — Tanque 3 Babor (IFO 3P) · instalación",
        "peso": 2.64,
-       "avance": "20%",
-       "pct": 20,
+       "avance": "75%",
+       "pct": 75,
        "cancelado": false,
-       "ponderado": 0.53,
-       "medicion": "2026-11-06",
+       "ponderado": 1.98,
+       "medicion": "2026-11-10",
        "monto": 20614,
        "nota": null
       },
@@ -8026,13 +8026,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 12.94
+   "avanceDias": 13.64
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 140,
-   "avanceDias": 40.69
+   "avanceDias": 41.39
   }
  },
  "historial": [
@@ -12530,7 +12530,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-11",
-   "avance": 29.06,
+   "avance": 29.56,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -12729,20 +12729,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 23.4,
+    "13098338054": 25.4,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "4b2107fa5aa6",
+ "_huella": "c681eb876bfa",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "20.4 %",
-   "ahora": "23.4 %"
+   "antes": "23.4 %",
+   "ahora": "25.4 %"
   }
  ],
  "observaciones": [
@@ -12792,7 +12792,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 23.4 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 25.4 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",

@@ -2307,7 +2307,7 @@
         "id": "13397352965",
         "name": "§13 · Acero — Tanque 3 Babor (IFO 3P) · corte",
         "created_at": "2026-10-27T16:24:25Z",
-        "updated_at": "2026-11-06T13:59:29Z",
+        "updated_at": "2026-11-11T14:32:43Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2317,12 +2317,12 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-06"
+          "text": "2026-11-10"
          },
          {
           "id": "text_mm8hf5gw",
@@ -2333,7 +2333,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.5655"
+          "display_value": "1.131"
          }
         ],
         "updates": [
@@ -2617,7 +2617,7 @@
         "id": "13488448723",
         "name": "§13 · Acero — Tanque 3 Babor (IFO 3P) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-06T13:59:51Z",
+        "updated_at": "2026-11-11T14:32:45Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2627,12 +2627,12 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "20%"
+          "text": "75%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-06"
+          "text": "2026-11-10"
          },
          {
           "id": "text_mm8hf5gw",
@@ -2643,7 +2643,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.5278"
+          "display_value": "1.97925"
          }
         ],
         "updates": []
