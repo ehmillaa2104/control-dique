@@ -107,8 +107,19 @@ def columnas_semana(board):
             sem.setdefault(a.group(1).upper(), {"semana": a.group(1).upper()})["act"] = c["id"]
     return [sem[k] for k in sorted(sem, key=lambda x: int(x[1:]))]
 AREAS = ("ingenieria", "cubierta", "tecnico")
-PCT = {"0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100}
 obs = []  # (nivel, texto): error | aviso | info
+
+
+def pct_de(estado):
+    """Lee cualquier etiqueta de porcentaje ("0%", "68%", "95%"…). None si no lo es.
+
+    11 nov 2026: antes era el diccionario PCT, con solo 0/25/50/75/100 — las únicas
+    etiquetas que tenía el Estado de los trabajos. Al ampliar esa escala en P1, una
+    etiqueta nueva habría quedado fuera del diccionario y el trabajo habría contado
+    0 %. Los subelementos ya leían el porcentaje con esta misma expresión.
+    """
+    m = re.fullmatch(r"(\d{1,3})\s*%", (estado or "").strip())
+    return int(m.group(1)) if m else None
 
 
 def valor(c):
@@ -215,7 +226,7 @@ def area(key, tab):
     trabajos = []
     for it, v in items:
         est = v["estado"] or ""
-        pct = PCT.get(est)
+        pct = pct_de(est)
         if pct is None and est != "Cancelado":
             obs.append(("aviso", f'{b["name"]} · "{texto(it["name"])}": Estado "{est}" no es un porcentaje; cuenta como 0 %.'))
         trabajos.append({
