@@ -4048,7 +4048,7 @@
       "id": "13098306630",
       "name": "Pintura de la cubierta",
       "created_at": "2026-09-21T19:58:41Z",
-      "updated_at": "2026-10-23T21:02:54Z",
+      "updated_at": "2026-11-12T15:26:31Z",
       "group": {
        "id": "group_mm7de9k1",
        "title": "Cubierta"
@@ -4100,7 +4100,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:54 UTC"
+        "text": "2026-11-12 15:26:31 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4120,7 +4120,7 @@
        {
         "id": "numeric_mm7y9sbv",
         "type": "numbers",
-        "text": "30"
+        "text": "20"
        },
        {
         "id": "lookup_mm7ybkjg",

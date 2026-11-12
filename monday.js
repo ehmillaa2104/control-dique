@@ -4814,7 +4814,7 @@ window.DIQUE_MONDAY = {
      "estado": "0%",
      "pct": 0,
      "cancelado": false,
-     "duracion": 30,
+     "duracion": 20,
      "tipo": "Mejora",
      "aprobacion": "Aprobado Dirección",
      "proveedor": "",
@@ -4828,7 +4828,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177133"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-12",
      "costo": "aprobado"
     },
     {
@@ -8019,7 +8019,7 @@ window.DIQUE_MONDAY = {
   "cubierta": {
    "lineas": 18,
    "conDuracion": 14,
-   "duracion": 63,
+   "duracion": 53,
    "avanceDias": 22.0
   },
   "tecnico": {
@@ -8031,7 +8031,7 @@ window.DIQUE_MONDAY = {
   "total": {
    "lineas": 200,
    "conDuracion": 55,
-   "duracion": 140,
+   "duracion": 130,
    "avanceDias": 43.21
   }
  },
@@ -12736,7 +12736,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-12",
-   "avance": 30.86,
+   "avance": 33.24,
    "pct": {
     "13256760608": 0,
     "13256760158": 0,
@@ -12941,14 +12941,14 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "366576303bdf",
+ "_huella": "1463278e5b82",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "Varada",
-   "campo": "Estado",
-   "antes": "Retrasado",
-   "ahora": "Listo"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Pintura de la cubierta",
+   "campo": "Duración",
+   "antes": "30",
+   "ahora": "20"
   }
  ],
  "observaciones": [
