@@ -13,9 +13,10 @@ window.DIQUE_REGISTRO = {
       "semana": 8,
       "desde": "2026-11-09",
       "hasta": "2026-11-14",
-      "fuente": "Reporte del superintendente (10 nov), informes diarios de Ingeniería (9, 10 y 11 nov) y cronograma de Monday",
+      "fuente": "Fotos de campo de la varada (12 nov), reporte del superintendente (10 nov), informes diarios de Ingeniería (9, 10 y 11 nov) y cronograma de Monday",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "El jueves 12 arrancó el lavado del casco, por la zona de proa", "extra": "12 nov" },
           { "txt": "El buque varó el miércoles 11 de noviembre y ya está sobre la cama del dique", "extra": "varada cumplida, 5 días después de la línea base · 11 nov" },
           { "txt": "El acero avanza en los nueve tanques: el corte terminó en 3P, 3S, 5P y 5S, y el tanque 3 estribor ya tiene todo el acero instalado", "extra": "10 nov" },
           { "txt": "El tanque 3 babor, el más atrasado del grupo, cerró el corte y saltó de 20 % a 75 % de láminas instaladas en cuatro días", "extra": "10 nov" },
@@ -23,6 +24,11 @@ window.DIQUE_REGISTRO = {
           { "txt": "Con el buque en seco arranca el 31 % de la cuenta del astillero que estaba en cero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar" },
           { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
           { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" }
+        ] },
+        { "zona": "Obra viva", "items": [
+          { "txt": "Lavado del casco en curso, empezando por la zona de proa", "extra": "12 nov" },
+          { "txt": "El fondo y el pantoque llegan con incrustación marina abundante y la pintura anterior muy gastada", "extra": "12 nov" },
+          { "txt": "La salida del astillero del 24 de noviembre sigue sin mover, a la espera de la respuesta del astillero", "extra": "por confirmar" }
         ] },
         { "zona": "Sala de máquinas", "items": [
           { "txt": "Bomba de lastre de estribor: motor eléctrico instalado; el codo de descarga se llevó a la mesa de trabajo para terminar su soldadura", "extra": "83 % · 11 nov" },
@@ -55,6 +61,10 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s8/n12_varada_01_buque-en-dique.jpg", "texto": "El buque ya varado sobre los picaderos; se inicia el lavado del casco por la zona de proa", "grupo": "Varada y lavado de obra viva · 12 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n12_varada_02_fondo-picaderos.jpg", "texto": "Fondo del buque sobre los picaderos, con el lavado en curso bajo el casco", "grupo": "Varada y lavado de obra viva · 12 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n12_varada_03_incrustacion-costado.jpg", "texto": "Incrustación marina en el costado, antes del lavado", "grupo": "Varada y lavado de obra viva · 12 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/n12_varada_04_pantoque-anodo.jpg", "texto": "Pantoque con la incrustación a la vista y un ánodo de sacrificio del casco", "grupo": "Varada y lavado de obra viva · 12 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i11_maq_01_bomba-lastre-izaje-motor.jpg", "texto": "Izaje del motor eléctrico de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i11_maq_02_bomba-lastre-motor-instalado.jpg", "texto": "Motor eléctrico instalado sobre la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
         { "tipo": "foto", "archivo": "registro/s8/i11_maq_03_bomba-lastre-desmontaje-codo.jpg", "texto": "Desmontaje del codo de descarga de la bomba de lastre", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
