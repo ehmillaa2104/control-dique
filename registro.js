@@ -13,15 +13,32 @@ window.DIQUE_REGISTRO = {
       "semana": 8,
       "desde": "2026-11-09",
       "hasta": "2026-11-14",
-      "fuente": "Reporte del superintendente (10 nov), informes diarios de Ingeniería (9 y 10 nov) y cronograma de Monday",
+      "fuente": "Reporte del superintendente (10 nov), informes diarios de Ingeniería (9, 10 y 11 nov) y cronograma de Monday",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "El buque varó el miércoles 11 de noviembre y ya está sobre la cama del dique", "extra": "varada cumplida, 5 días después de la línea base · 11 nov" },
           { "txt": "El acero avanza en los nueve tanques: el corte terminó en 3P, 3S, 5P y 5S, y el tanque 3 estribor ya tiene todo el acero instalado", "extra": "10 nov" },
           { "txt": "El tanque 3 babor, el más atrasado del grupo, cerró el corte y saltó de 20 % a 75 % de láminas instaladas en cuatro días", "extra": "10 nov" },
-          { "txt": "La varada se corre del viernes 6 al miércoles 11 de noviembre: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "5 días de atraso, causa externa · 9 nov" },
-          { "txt": "La varada abre el 31 % de la cuenta del astillero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar están en cero esperándola" },
+          { "txt": "El atraso de la varada fue externo: el dique estaba ocupado por otro buque cuya pintura se atrasó por lluvia", "extra": "sin costo para nosotros · 9 nov" },
+          { "txt": "Con el buque en seco arranca el 31 % de la cuenta del astillero que estaba en cero: pintura de obra viva, propulsión, gobierno, ánodos y cajas de mar" },
           { "txt": "Horario confirmado para la semana de la varada: miércoles 11 completo, jueves 12 hasta las 11:30, viernes 13 sin trabajo, sábado 14 hasta las 11:30, lunes 16 festivo", "extra": "confirmado el 9 nov" },
           { "txt": "Del 11 al 23 de noviembre se trabajan 7,5 jornadas de las 10 de una quincena normal: se pierde el 25 % del tiempo que le queda al buque en dique", "extra": "y justo cuando arranca la obra viva" }
+        ] },
+        { "zona": "Sala de máquinas", "items": [
+          { "txt": "Bomba de lastre de estribor: motor eléctrico instalado; el codo de descarga se llevó a la mesa de trabajo para terminar su soldadura", "extra": "83 % · 11 nov" },
+          { "txt": "Megado de motores eléctricos: mediciones satisfactorias según la tabla RIE", "extra": "93 % · 11 nov" },
+          { "txt": "Parte del trabajo se detuvo por seguridad mientras se posicionaba el buque sobre la cama del dique", "extra": "11 nov" },
+          { "txt": "Indicador de ángulo de timón: 96 %, calibrando los repetidores del puente y del cuarto de timón", "extra": "10 nov" },
+          { "txt": "Bomba de lastre de estribor: 68 %; la tubería de descarga se desmonta y se lleva a la mesa de trabajo para soldarla", "extra": "10 nov" },
+          { "txt": "Megado de motores eléctricos: 90 %, mediciones satisfactorias según la tabla RIE", "extra": "10 nov" },
+          { "txt": "Bomba de IFO del tanque 3 estribor: izaje terminado", "extra": "terminado · 10 nov" },
+          { "txt": "Al izar la bomba de IFO 3S se encontró la tubería de succión con perforaciones", "extra": "hallazgo · 10 nov" },
+          { "txt": "Motor eléctrico de la bomba de lastre de estribor bajado al primer nivel", "extra": "10 nov" },
+          { "txt": "Indicador de ángulo de timón: sigue la calibración de los repetidores del puente y del cuarto del timón", "extra": "en calibración · 9 nov" },
+          { "txt": "Bomba de lastre de estribor posicionada en su base; se arma la tubería de descarga", "extra": "9 nov" },
+          { "txt": "Bomba de sentina de la sala de máquinas: sigue la fabricación y el montaje de tuberías", "extra": "9 nov" },
+          { "txt": "Megado del alternador auxiliar de emergencia: mediciones satisfactorias", "extra": "terminado · 9 nov" },
+          { "txt": "Auxiliar de emergencia: mantenimiento preventivo con cambio de aceite y filtros, y revisión de ventilador, polea y correa", "extra": "terminado · 9 nov" }
         ] },
         { "zona": "Tanques de carga", "items": [
           { "txt": "Avance por tanque: 3S y 5P 80 %, 3P 75 %, 1P y 2P 70 %, 2S 65 %, 5S 60 %, 1S 50 %", "extra": "10 nov" },
@@ -35,22 +52,16 @@ window.DIQUE_REGISTRO = {
           { "txt": "Casco de estribor: los insertos están finalizados y soldados por dentro y por fuera", "extra": "10 nov" },
           { "txt": "Casco de estribor hacia proa: 50 % de láminas instaladas", "extra": "10 nov" },
           { "txt": "El resto de las láminas de proa espera a que termine el acero de la relojera de ventilación", "extra": "10 nov" }
-        ] },
-        { "zona": "Sala de máquinas", "items": [
-          { "txt": "Indicador de ángulo de timón: 96 %, calibrando los repetidores del puente y del cuarto de timón", "extra": "10 nov" },
-          { "txt": "Bomba de lastre de estribor: 68 %; la tubería de descarga se desmonta y se lleva a la mesa de trabajo para soldarla", "extra": "10 nov" },
-          { "txt": "Megado de motores eléctricos: 90 %, mediciones satisfactorias según la tabla RIE", "extra": "10 nov" },
-          { "txt": "Bomba de IFO del tanque 3 estribor: izaje terminado", "extra": "terminado · 10 nov" },
-          { "txt": "Al izar la bomba de IFO 3S se encontró la tubería de succión con perforaciones", "extra": "hallazgo · 10 nov" },
-          { "txt": "Motor eléctrico de la bomba de lastre de estribor bajado al primer nivel", "extra": "10 nov" },
-          { "txt": "Indicador de ángulo de timón: sigue la calibración de los repetidores del puente y del cuarto del timón", "extra": "en calibración · 9 nov" },
-          { "txt": "Bomba de lastre de estribor posicionada en su base; se arma la tubería de descarga", "extra": "9 nov" },
-          { "txt": "Bomba de sentina de la sala de máquinas: sigue la fabricación y el montaje de tuberías", "extra": "9 nov" },
-          { "txt": "Megado del alternador auxiliar de emergencia: mediciones satisfactorias", "extra": "terminado · 9 nov" },
-          { "txt": "Auxiliar de emergencia: mantenimiento preventivo con cambio de aceite y filtros, y revisión de ventilador, polea y correa", "extra": "terminado · 9 nov" }
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_01_bomba-lastre-izaje-motor.jpg", "texto": "Izaje del motor eléctrico de la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_02_bomba-lastre-motor-instalado.jpg", "texto": "Motor eléctrico instalado sobre la bomba de lastre de estribor", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_03_bomba-lastre-desmontaje-codo.jpg", "texto": "Desmontaje del codo de descarga de la bomba de lastre", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_04_codo-descarga-mesa.jpg", "texto": "Codo de descarga en la mesa de trabajo para terminar la soldadura", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_05_megado-motor-cubierta.jpg", "texto": "Motor eléctrico de cubierta en megado", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_06_megado-bornera.jpg", "texto": "Bornera del motor abierta para el megado", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
+        { "tipo": "foto", "archivo": "registro/s8/i11_maq_07_megado-medicion.jpg", "texto": "Medición de la resistencia de aislamiento", "grupo": "Sala de máquinas · Ingeniería, 11 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t1p_01_manhole-ifo-1p.jpg", "texto": "Manhole IFO 1P en cubierta", "grupo": "Tanque 1 babor · IFO 1P · corte y colocación de láminas, avance 70 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t1p_02_pano-zona-alta.jpg", "texto": "Paño nuevo instalado en la zona alta, con el andamio armado; lecturas de 8.9 a 9.0 mm", "grupo": "Tanque 1 babor · IFO 1P · corte y colocación de láminas, avance 70 % · 10 nov" },
         { "tipo": "foto", "archivo": "registro/s8/n10_t1p_03_forro-medido.jpg", "texto": "Forro medido en toda la altura; lecturas de 7.2 a 9.0 mm", "grupo": "Tanque 1 babor · IFO 1P · corte y colocación de láminas, avance 70 % · 10 nov" },

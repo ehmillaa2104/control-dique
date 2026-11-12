@@ -1,5 +1,5 @@
 {
- "extraido": "2026-11-11",
+ "extraido": "2026-11-12",
  "boards": [
   {
    "id": "18435454602",
@@ -27995,6 +27995,50 @@
       "subitems": []
      },
      {
+      "id": "13430387154",
+      "name": "Varada",
+      "created_at": "2026-10-30T19:34:26Z",
+      "updated_at": "2026-11-12T15:20:55Z",
+      "group": {
+       "id": "group_mm7dgarz",
+       "title": "Dique"
+      },
+      "column_values": [
+       {
+        "id": "color_mm6v6vf2",
+        "type": "status",
+        "text": "Listo"
+       },
+       {
+        "id": "numeric_mm6zgcqw",
+        "type": "numbers",
+        "text": "0"
+       },
+       {
+        "id": "timerange_mm78kjs",
+        "type": "timeline",
+        "text": "2026-11-11 - 2026-11-11"
+       },
+       {
+        "id": "timerange_mm7yfj5p",
+        "type": "timeline",
+        "text": "2026-11-06 - 2026-11-06"
+       },
+       {
+        "id": "formula_mm7ygv4s",
+        "type": "formula",
+        "text": "",
+        "display_value": "5"
+       },
+       {
+        "id": "pulse_updated_mm7gn7r8",
+        "type": "last_updated",
+        "text": "2026-11-12 15:20:55 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
       "id": "13233513509",
       "name": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
       "created_at": "2026-10-07T21:26:16Z",
@@ -28078,50 +28122,6 @@
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
         "text": "2026-10-27 18:39:45 UTC"
-       }
-      ],
-      "subitems": []
-     },
-     {
-      "id": "13430387154",
-      "name": "Varada",
-      "created_at": "2026-10-30T19:34:26Z",
-      "updated_at": "2026-11-09T21:54:00Z",
-      "group": {
-       "id": "group_mm7dgarz",
-       "title": "Dique"
-      },
-      "column_values": [
-       {
-        "id": "color_mm6v6vf2",
-        "type": "status",
-        "text": "Retrasado"
-       },
-       {
-        "id": "numeric_mm6zgcqw",
-        "type": "numbers",
-        "text": "0"
-       },
-       {
-        "id": "timerange_mm78kjs",
-        "type": "timeline",
-        "text": "2026-11-11 - 2026-11-11"
-       },
-       {
-        "id": "timerange_mm7yfj5p",
-        "type": "timeline",
-        "text": "2026-11-06 - 2026-11-06"
-       },
-       {
-        "id": "formula_mm7ygv4s",
-        "type": "formula",
-        "text": "",
-        "display_value": "5"
-       },
-       {
-        "id": "pulse_updated_mm7gn7r8",
-        "type": "last_updated",
-        "text": "2026-11-09 21:54:00 UTC"
        }
       ],
       "subitems": []
