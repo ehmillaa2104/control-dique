@@ -336,7 +336,12 @@
   const CAT_DIA = [
     { k: "lluvia", re: /lluvia|mal tiempo|clima/i, uno: "por lluvia", varios: "por lluvia" },
     { k: "festivo", re: /festivo|feriado|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" },
-    { k: "cierre", re: /cierre|jornada corta|paro|d[ií]a c[ií]vico/i, uno: "por cierre del astillero", varios: "por cierre del astillero" }
+    { k: "cierre", re: /cierre|jornada corta|paro|d[ií]a c[ií]vico/i, uno: "por cierre del astillero", varios: "por cierre del astillero" },
+    { k: "varada", re: /varada|subida al dique|entrada a dique/i, uno: "por la varada", varios: "por la varada" },
+    // 13 nov 2026: categoría final que atrapa todo lo demás. Antes, un imprevisto con días cuya causa no
+    // estuviera en la lista se descartaba en silencio y no sumaba: así pasó con el día perdido del 11 nov
+    // por la subida al dique. Un imprevisto con días siempre tiene que contar, aunque su causa sea nueva.
+    { k: "otros", re: /./, uno: "por otras causas", varios: "por otras causas" }
   ];
   // Separa los imprevistos de jornada perdida con días: los ya ocurridos cuentan en el indicador,
   // los de fecha futura son previstos y van a Puntos de atención, no al número de días perdidos.

@@ -37,7 +37,8 @@ window.DIQUE_NOTAS = {
     "13508287294": "2026-11-06",  // Medio día perdido por lluvia: ocurrió el viernes 6 nov, se registró el 9 nov
     "13508325126": "2026-11-07",  // Día perdido por lluvia: ocurrió el sábado 7 nov, se registró el 9 nov
     "13508891609": "2026-11-12",  // Medio día por jornada corta (hasta 11:30): ocurre el jueves 12, se registró el 9 nov
-    "13508936157": "2026-11-13"   // Día por cierre del astillero: ocurre el viernes 13, se registró el 9 nov
+    "13508936157": "2026-11-13",  // Día por cierre del astillero: ocurre el viernes 13, se registró el 9 nov
+    "13546694095": "2026-11-11"   // Día perdido por la subida al dique: ocurrió el miércoles 11, se registró el 13 nov
   },
   // 23 oct: todos los departamentos entregaron la información de la Semana 5 (indicación del usuario).
   // En Monday la columna "Act. S5" aún no tiene la opción "Completa"; borrar esta nota cuando se cargue allí.
