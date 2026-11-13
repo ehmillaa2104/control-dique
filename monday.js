@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 22.7,
+     "pct": 26.4,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5272,7 +5272,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 36039,
        "nota": null
@@ -5284,7 +5284,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 83872,
        "nota": null
@@ -5296,7 +5296,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 6558,
        "nota": null
@@ -5308,7 +5308,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 101450,
        "nota": null
@@ -5320,7 +5320,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 42518,
        "nota": null
@@ -5332,7 +5332,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 4426,
        "nota": null
@@ -5344,7 +5344,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 3854,
        "nota": null
@@ -5356,7 +5356,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 1626,
        "nota": null
@@ -5368,7 +5368,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 6468,
        "nota": null
@@ -5380,7 +5380,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 4092,
        "nota": null
@@ -5407,7 +5407,7 @@ window.DIQUE_MONDAY = {
        "avance": "90%",
        "pct": 90,
        "cancelado": false,
-       "ponderado": 1.02,
+       "ponderado": 1.017,
        "medicion": "2026-11-10",
        "monto": 8834,
        "nota": {
@@ -5422,7 +5422,7 @@ window.DIQUE_MONDAY = {
        "avance": "80%",
        "pct": 80,
        "cancelado": false,
-       "ponderado": 0.9,
+       "ponderado": 0.904,
        "medicion": "2026-11-10",
        "monto": 8834,
        "nota": {
@@ -5437,7 +5437,7 @@ window.DIQUE_MONDAY = {
        "avance": "80%",
        "pct": 80,
        "cancelado": false,
-       "ponderado": 0.9,
+       "ponderado": 0.904,
        "medicion": "2026-11-10",
        "monto": 8834,
        "nota": {
@@ -5452,7 +5452,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 86203,
        "nota": null
@@ -5464,7 +5464,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 2168,
        "nota": null
@@ -5476,7 +5476,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 41364,
        "nota": null
@@ -5488,7 +5488,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 8357,
        "nota": null
@@ -5500,7 +5500,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 12844,
        "nota": null
@@ -5512,7 +5512,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 20999,
        "nota": null
@@ -5524,7 +5524,7 @@ window.DIQUE_MONDAY = {
        "avance": "90%",
        "pct": 90,
        "cancelado": false,
-       "ponderado": 1.02,
+       "ponderado": 1.017,
        "medicion": "2026-11-10",
        "monto": 8834,
        "nota": {
@@ -5569,7 +5569,7 @@ window.DIQUE_MONDAY = {
        "avance": "10%",
        "pct": 10,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": "2026-11-06",
        "monto": 13488441240,
        "nota": {
@@ -5614,7 +5614,7 @@ window.DIQUE_MONDAY = {
        "avance": "0%",
        "pct": 0,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 25688,
        "nota": null
@@ -5626,7 +5626,7 @@ window.DIQUE_MONDAY = {
        "avance": "40%",
        "pct": 40,
        "cancelado": false,
-       "ponderado": 2.66,
+       "ponderado": 2.664,
        "medicion": "2026-11-10",
        "monto": 52074,
        "nota": {
@@ -5665,7 +5665,7 @@ window.DIQUE_MONDAY = {
        "avance": "55%",
        "pct": 55,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 1.452,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5677,7 +5677,7 @@ window.DIQUE_MONDAY = {
        "avance": "60%",
        "pct": 60,
        "cancelado": false,
-       "ponderado": 1.58,
+       "ponderado": 1.584,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5689,7 +5689,7 @@ window.DIQUE_MONDAY = {
        "avance": "60%",
        "pct": 60,
        "cancelado": false,
-       "ponderado": 1.58,
+       "ponderado": 1.584,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5701,7 +5701,7 @@ window.DIQUE_MONDAY = {
        "avance": "90%",
        "pct": 90,
        "cancelado": false,
-       "ponderado": 2.38,
+       "ponderado": 2.376,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5713,7 +5713,7 @@ window.DIQUE_MONDAY = {
        "avance": "85%",
        "pct": 85,
        "cancelado": false,
-       "ponderado": 0,
+       "ponderado": 2.244,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5725,7 +5725,7 @@ window.DIQUE_MONDAY = {
        "avance": "80%",
        "pct": 80,
        "cancelado": false,
-       "ponderado": 2.11,
+       "ponderado": 2.112,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -8232,13 +8232,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 12.695
+   "avanceDias": 13.99
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 130,
-   "avanceDias": 46.665
+   "avanceDias": 47.96
   }
  },
  "historial": [
@@ -13148,7 +13148,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-13",
-   "avance": 35.9,
+   "avance": 36.89,
    "pct": {
     "13256760608": 25,
     "13256760158": 25,
@@ -13347,7 +13347,7 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 22.7,
+    "13098338054": 26.4,
     "13278839703": 50,
     "13346969104": 50
    }
@@ -13445,15 +13445,15 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación: Avance ponderado 0 no es Peso × Avance (1.45)."
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación: la columna Avance ponderado de Monday dice 0 y Peso × Avance da 1.45. El dashboard usa 1.45; en Monday falta la etiqueta \"55%\" en la fórmula."
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Babor (IFO 5P) · instalación: Avance ponderado 0 no es Peso × Avance (2.24)."
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Babor (IFO 5P) · instalación: la columna Avance ponderado de Monday dice 0 y Peso × Avance da 2.24. El dashboard usa 2.24; en Monday falta la etiqueta \"85%\" en la fórmula."
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 22.7 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 26.4 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
