@@ -300,7 +300,13 @@ def subelementos(tablero, nombre, items):
         # Los subelementos usan cualquier porcentaje (80%, 60%…), no solo los 0/25/50/75/100 del Estado de los trabajos
         m = re.fullmatch(r"(\d{1,3})\s*%", av)
         pct, peso = (int(m.group(1)) if m else None), num(v.get(SUB_COLS["peso"], {}).get("text"))
-        pond = num(v.get(SUB_COLS["ponderado"], {}).get("display_value"))
+        # El ponderado se calcula aquí, no se toma de la columna fórmula de Monday.
+        # 13 nov 2026: esa fórmula es un SWITCH con las etiquetas escritas a mano. Al cargar el reporte del
+        # 13-nov hubo que crear las etiquetas 55 % y 85 %, que no estaban en el SWITCH; Monday las evaluó
+        # como 0 y el avance del astillero cayó de 26,4 % a 22,7 % sin que nada hubiera retrocedido en obra.
+        # Peso × Avance no depende de ninguna lista escrita a mano y da lo mismo para las demás etiquetas.
+        pond_monday = num(v.get(SUB_COLS["ponderado"], {}).get("display_value"))
+        pond = None if (peso is None or pct is None) else round(peso * pct / 100.0, 4)
         monto = v.get(SUB_COLS["monto"], {}).get("text") or ""
         sub = {"id": s["id"], "nombre": texto(s["name"]), "peso": peso, "avance": av, "pct": pct or 0, "cancelado": av == "Cancelado",
                "ponderado": pond, "medicion": fecha(v.get(SUB_COLS["medicion"], {}).get("text")),
@@ -309,8 +315,13 @@ def subelementos(tablero, nombre, items):
                "nota": nota_update((s.get("updates") or [None])[0])}
         if pct is None and not sub["cancelado"]:
             obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: Avance "{av}" no es un porcentaje; cuenta como 0 %.'))
-        if not sub["cancelado"] and peso and pond is not None and abs(pond - peso * (pct or 0) / 100) > 0.01:
-            obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: Avance ponderado {pond} no es Peso × Avance ({peso * (pct or 0) / 100:.2f}).'))
+        # El dashboard ya no usa la columna fórmula, pero si discrepa conviene saberlo: significa que la
+        # etiqueta de Avance no está en el SWITCH de Monday y allá ese subelemento se ve como 0.
+        if not sub["cancelado"] and peso and pond is not None and pond_monday is not None \
+                and abs(pond_monday - pond) > 0.01:
+            obs.append(("aviso", f'{tablero} · "{nombre}" · {sub["nombre"]}: la columna Avance ponderado de Monday '
+                                 f'dice {pond_monday} y Peso × Avance da {pond:.2f}. El dashboard usa {pond:.2f}; '
+                                 f'en Monday falta la etiqueta "{av}" en la fórmula.'))
         out.append(sub)
     return out
 
