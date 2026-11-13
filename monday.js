@@ -1241,7 +1241,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 0,
+     "incurrido": 1062,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4466,7 +4466,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 3802.63,
+     "incurrido": 6552.53,
      "fin": null,
      "cc": [
       "13081201432"
@@ -5230,7 +5230,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 14875,
      "proyectado": 14875,
      "po": null,
-     "incurrido": 0,
+     "incurrido": 7437.5,
      "fin": "2026-10-16",
      "cc": [
       "13081195990"
@@ -5814,7 +5814,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 14875,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 7437.5,
    "proyectado": 14875,
    "lineas": [
     "13098334682"
@@ -6070,7 +6070,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 18283.09,
+   "incurrido": 22844.69,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6527,11 +6527,11 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "Lagomar Services",
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 749.7,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Cancelado",
+   "pago": "Pagado",
    "cc": [
     "13081201432"
    ],
@@ -6761,6 +6761,21 @@ window.DIQUE_MONDAY = {
    "proveedor": "Luis Carlos Saavedra",
    "po": 0,
    "incurrido": 1700,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13547895538",
+   "nombre": "NC2373 · Ferretería Industrial — Nota de crédito por devolución",
+   "area": "",
+   "proveedor": "Ferretería Industrial, S.A.",
+   "po": 0,
+   "incurrido": -488.26,
    "saldo": null,
    "fecha": null,
    "estatus": "",
@@ -7478,11 +7493,11 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "Radiadores Panamá, S.A.",
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 1062,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Cancelado",
+   "pago": "Pagado",
    "cc": [
     "13081201432"
    ],
@@ -7497,11 +7512,11 @@ window.DIQUE_MONDAY = {
    "area": "Dique Servicios",
    "proveedor": "Promise NDT, S.A.",
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 7437.5,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Cancelado",
+   "pago": "Pagado",
    "cc": [
     "13081195990"
    ],
@@ -7516,11 +7531,11 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Inversiones JMCG, S.A.",
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 2749.9,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Cancelado",
+   "pago": "Pagado",
    "cc": [
     "13081201432"
    ],
@@ -13353,49 +13368,28 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "c3dc69c72555",
+ "_huella": "8cd1f3468011",
  "cambiosLectura": [
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Generador de emergencia — radiador y bomba de inyección",
    "campo": "$ Incurrido",
-   "antes": "1062",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "Estado",
-   "antes": "68%",
-   "ahora": "83%"
+   "antes": "0",
+   "ahora": "1062"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Adquisición de materiales de soldadura",
    "campo": "$ Incurrido",
-   "antes": "6552.53",
-   "ahora": "3802.63"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Limpieza de tanques de carga",
-   "campo": "$ Incurrido",
-   "antes": "17957.09",
-   "ahora": "0"
+   "antes": "3802.63",
+   "ahora": "6552.53"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Medición de espesores y cadenas",
    "campo": "$ Incurrido",
-   "antes": "7437.5",
-   "ahora": "0"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "25.6 %",
-   "ahora": "22.7 %"
+   "antes": "0",
+   "ahora": "7437.5"
   }
  ],
  "observaciones": [
@@ -13586,6 +13580,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"NC2373 · Ferretería Industrial — Nota de crédito por devolución\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",

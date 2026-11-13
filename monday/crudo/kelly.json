@@ -1446,7 +1446,7 @@
         "id": "lookup_mm7ym614",
         "type": "mirror",
         "text": null,
-        "display_value": "0"
+        "display_value": "7437.50"
        }
       ],
       "subitems": []
@@ -5179,7 +5179,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "7437.5"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -6111,7 +6111,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "18283.09"
+        "display_value": "22844.69"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -7478,7 +7478,7 @@
       "id": "13456286490",
       "name": "ACH26/10168 · Lagomar Services — Anticipo gasket oil cooler cover (PO-KelTra-370)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:33Z",
+      "updated_at": "2026-11-13T20:41:53Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7516,7 +7516,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "0"
+        "text": "749.70"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -7536,12 +7536,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Cancelado"
+        "text": "Pagado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:33 UTC"
+        "text": "2026-11-13 20:41:53 UTC"
        }
       ],
       "subitems": []
@@ -8598,6 +8598,76 @@
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
         "text": "2026-11-13 18:47:10 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13547895538",
+      "name": "NC2373 · Ferretería Industrial — Nota de crédito por devolución",
+      "created_at": "2026-11-13T20:41:55Z",
+      "updated_at": "2026-11-13T20:41:55Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Ferretería Industrial, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "-488.26"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pagado"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 20:41:55 UTC"
        }
       ],
       "subitems": []
@@ -11344,7 +11414,7 @@
       "id": "13456286345",
       "name": "ACH26/1066 · Radiadores Panamá — Anticipo radiador del motor Cummins 6BT 5.9 (PO-KelTra-9)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:33Z",
+      "updated_at": "2026-11-13T20:41:54Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -11384,7 +11454,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "0"
+        "text": "1062.00"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -11404,12 +11474,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Cancelado"
+        "text": "Pagado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:33 UTC"
+        "text": "2026-11-13 20:41:54 UTC"
        }
       ],
       "subitems": []
@@ -11418,7 +11488,7 @@
       "id": "13456235283",
       "name": "ACH26/1071 · Promise NDT — Anticipo 50 % medición de espesores (PO-KelTra-190)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:31Z",
+      "updated_at": "2026-11-13T20:41:52Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -11458,7 +11528,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "0"
+        "text": "7437.50"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -11478,12 +11548,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Cancelado"
+        "text": "Pagado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:31 UTC"
+        "text": "2026-11-13 20:41:52 UTC"
        }
       ],
       "subitems": []
@@ -11492,7 +11562,7 @@
       "id": "13456235539",
       "name": "ACH26/1046 · Inversiones JMCG — Anticipo construcción de niples (PO-KelTra-136-G)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:34Z",
+      "updated_at": "2026-11-13T20:41:54Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -11532,7 +11602,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "0"
+        "text": "2749.90"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -11552,12 +11622,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Cancelado"
+        "text": "Pagado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:34 UTC"
+        "text": "2026-11-13 20:41:54 UTC"
        }
       ],
       "subitems": []
@@ -16154,7 +16224,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "0"
+        "display_value": "1062.00"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -28151,7 +28221,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "254.92, 194.74, 690.15, 212.82, 2450, 0"
+        "display_value": "254.92, 194.74, 690.15, 212.82, 2450, 2749.90"
        },
        {
         "id": "lookup_mm7yk7y7",
