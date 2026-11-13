@@ -48,9 +48,10 @@ window.DIQUE_NOTAS = {
   // 9 nov: Semana 8, Ingeniería en Completa (subió su informe del 9 nov; indicación del usuario). Los demás, sin cargar = Pendiente.
   // 9 nov (después): Semana 8 con todos en Completa menos Cubierta y Contabilidad, en Pendiente (indicación del usuario).
   // 9 nov (más tarde): Cubierta también pasa a Completa en la Semana 8; solo Contabilidad queda en Pendiente (indicación del usuario).
+  // 13 nov: Contabilidad pasa a Completa en la Semana 8; todos los departamentos en Completa (indicación del usuario).
   "entrega": {
     "S5": "Completa",
     "S7": { "Ingeniería": "Completa", "Cubierta": "Pendiente", "Seguridad": "Pendiente", "Técnico": "Completa", "Contabilidad": "Pendiente" },
-    "S8": { "Ingeniería": "Completa", "Cubierta": "Completa", "Seguridad": "Completa", "Técnico": "Completa", "Contabilidad": "Pendiente" }
+    "S8": { "Ingeniería": "Completa", "Cubierta": "Completa", "Seguridad": "Completa", "Técnico": "Completa", "Contabilidad": "Completa" }
   }
 };
