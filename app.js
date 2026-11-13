@@ -338,15 +338,20 @@
     { k: "festivo", re: /festivo|feriado|independencia|todos los santos/i, uno: "por festivo", varios: "por festivos" },
     { k: "cierre", re: /cierre|jornada corta|paro|d[ií]a c[ií]vico/i, uno: "por cierre del astillero", varios: "por cierre del astillero" },
     { k: "varada", re: /varada|subida al dique|entrada a dique/i, uno: "por la varada", varios: "por la varada" },
-    // 13 nov 2026: categoría final que atrapa todo lo demás. Antes, un imprevisto con días cuya causa no
-    // estuviera en la lista se descartaba en silencio y no sumaba: así pasó con el día perdido del 11 nov
-    // por la subida al dique. Un imprevisto con días siempre tiene que contar, aunque su causa sea nueva.
+    // Categoría final: atrapa cualquier jornada perdida cuya causa no esté arriba, para que no se descarte
+    // en silencio como pasaba antes con el día perdido del 11 nov por la subida al dique.
     { k: "otros", re: /./, uno: "por otras causas", varios: "por otras causas" }
   ];
+  // Solo cuentan en el indicador los imprevistos que SON una jornada perdida. Hay otros medidos en días que
+  // no lo son: el corrimiento de la varada son 5 días de atraso de cronograma, no 5 turnos sin trabajar, y
+  // un retrabajo o un cambio de alcance con "1 día" de impacto tampoco es un turno perdido. Esos se ven en
+  // Cambios/Imprevistos, no aquí. La marca es que el imprevisto se declare como pérdida de jornada.
+  const ES_JORNADA = /p[eé]rdida de (?:medio )?d[ií]a|d[ií]a perdido|media jornada perdida|jornada perdida/i;
   // Separa los imprevistos de jornada perdida con días: los ya ocurridos cuentan en el indicador,
   // los de fecha futura son previstos y van a Puntos de atención, no al número de días perdidos.
   function diasImprevistos(M) {
     const cs = ((M && M.D.cambios) || []).map((c) => {
+      if (!ES_JORNADA.test(c.nombre || "")) return null;
       const cat = CAT_DIA.find((t) => t.re.test(`${c.tipo || ""} ${c.nombre || ""}`));
       return cat ? Object.assign({}, c, { _cat: cat, _f: fechaImp(c) }) : null;
     }).filter((c) => c && (c.dias || 0) > 0);
