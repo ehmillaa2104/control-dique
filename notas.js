@@ -17,11 +17,16 @@ window.DIQUE_NOTAS = {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
   // Totales del resumen que Monday todavía no trae (indicación del usuario, 30 oct). Borrar cuando estén en Monday.
-  // 3 nov: "pagado" pasa a 192.352,11, el total "Paid In Full" del reporte contable al 31 oct.
-  // "po" sigue siendo el del archivo del 30 oct: el reporte del 31 oct ya no trae la hoja de órdenes de compra.
+  // 13 nov: "pagado" pasa a 167.980,53, del reporte contable al 13 nov (archivo de Othón del 13-nov 10:16).
+  //   No es el "Paid In Full" de ese archivo, que da 23.128,37: en el reporte nuevo, 144.852,16 en asientos de
+  //   diario perdieron la etiqueta de estado de pago — el primer pago al astillero de 120.000, los viáticos y los
+  //   efectivos solicitados. Ese dinero sí se desembolsó, solo dejó de estar clasificado. 23.128,37 + 144.852,16.
+  //   Criterio elegido por el usuario: todo lo desembolsado, no solo proveedores (eso daría 143.128,37, dejando
+  //   fuera los 24.852,16 de viáticos y efectivos).
+  // "po" sigue siendo el del archivo del 30 oct: los reportes posteriores ya no traen la hoja de órdenes de compra.
   "montos": {
     "po": 96899,
-    "pagado": 192352.11
+    "pagado": 167980.53
   },
   // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
   // Borrar cuando Monday tenga una columna con la fecha del evento.
