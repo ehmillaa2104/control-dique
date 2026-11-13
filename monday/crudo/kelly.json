@@ -5108,7 +5108,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "43255.23"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5130,7 +5130,9 @@
         "type": "board_relation",
         "text": null,
         "linked_item_ids": [
-         "13456235538"
+         "13456235538",
+         "13546729529",
+         "13546729597"
         ]
        }
       ],
@@ -5694,7 +5696,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "528.9"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5714,7 +5716,9 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13546729600"
+        ]
        }
       ],
       "subitems": []
@@ -5896,7 +5900,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "18027.5"
+        "display_value": "25179.66"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5926,7 +5930,10 @@
          "13408536607",
          "13408515314",
          "13346547714",
-         "13408567193"
+         "13408567193",
+         "13546729766",
+         "13546729767",
+         "13546729769"
         ]
        }
       ],
@@ -6111,7 +6118,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "22844.69"
+        "display_value": "27600.45"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -6322,7 +6329,12 @@
          "13456285390",
          "13456286345",
          "13456235539",
-         "13456250941"
+         "13456250941",
+         "13546729604",
+         "13546729764",
+         "13547895538",
+         "13546729601",
+         "13546729602"
         ]
        }
       ],
@@ -6371,7 +6383,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "0"
+        "display_value": "10165"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -6391,7 +6403,10 @@
         "id": "board_relation_mm7yxa9r",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13546729598",
+         "13546729599"
+        ]
        }
       ],
       "subitems": []
@@ -7766,7 +7781,7 @@
       "id": "13546729529",
       "name": "0110 · Green Harbor — Limpieza de tanques de carga y slop",
       "created_at": "2026-11-13T18:47:05Z",
-      "updated_at": "2026-11-13T18:47:05Z",
+      "updated_at": "2026-11-13T21:51:24Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7786,7 +7801,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201302"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -7827,7 +7844,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:05 UTC"
+        "text": "2026-11-13 21:51:24 UTC"
        }
       ],
       "subitems": []
@@ -7836,7 +7853,7 @@
       "id": "13546729597",
       "name": "0111 · Green Harbor — Limpieza de tanques, saldo",
       "created_at": "2026-11-13T18:47:06Z",
-      "updated_at": "2026-11-13T18:47:06Z",
+      "updated_at": "2026-11-13T21:51:26Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7856,7 +7873,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201302"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -7897,7 +7916,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:06 UTC"
+        "text": "2026-11-13 21:51:26 UTC"
        }
       ],
       "subitems": []
@@ -7906,7 +7925,7 @@
       "id": "13546729598",
       "name": "0088 · Green Harbor — Impermeabilización de acomodaciones",
       "created_at": "2026-11-13T18:47:06Z",
-      "updated_at": "2026-11-13T18:47:06Z",
+      "updated_at": "2026-11-13T21:51:28Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7926,7 +7945,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081200176"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -7967,7 +7988,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:06 UTC"
+        "text": "2026-11-13 21:51:28 UTC"
        }
       ],
       "subitems": []
@@ -7976,7 +7997,7 @@
       "id": "13546729599",
       "name": "0089 · Green Harbor — Renovación en acomodaciones",
       "created_at": "2026-11-13T18:47:07Z",
-      "updated_at": "2026-11-13T18:47:07Z",
+      "updated_at": "2026-11-13T21:51:30Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7996,7 +8017,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081200176"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8037,7 +8060,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:07 UTC"
+        "text": "2026-11-13 21:51:30 UTC"
        }
       ],
       "subitems": []
@@ -8046,7 +8069,7 @@
       "id": "13546729600",
       "name": "11546 · Altamar Panamá — Servicios migratorios",
       "created_at": "2026-11-13T18:47:07Z",
-      "updated_at": "2026-11-13T18:47:07Z",
+      "updated_at": "2026-11-13T21:51:31Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8066,7 +8089,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081177347"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8107,7 +8132,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:07 UTC"
+        "text": "2026-11-13 21:51:31 UTC"
        }
       ],
       "subitems": []
@@ -8116,7 +8141,7 @@
       "id": "13546729601",
       "name": "0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)",
       "created_at": "2026-11-13T18:47:08Z",
-      "updated_at": "2026-11-13T18:47:08Z",
+      "updated_at": "2026-11-13T21:51:33Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8136,7 +8161,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8177,7 +8204,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:08 UTC"
+        "text": "2026-11-13 21:51:33 UTC"
        }
       ],
       "subitems": []
@@ -8186,7 +8213,7 @@
       "id": "13546729602",
       "name": "0024 · Remaeparts — Mano de obra por desmontaje",
       "created_at": "2026-11-13T18:47:08Z",
-      "updated_at": "2026-11-13T18:47:08Z",
+      "updated_at": "2026-11-13T21:51:35Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8206,7 +8233,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8247,7 +8276,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:08 UTC"
+        "text": "2026-11-13 21:51:35 UTC"
        }
       ],
       "subitems": []
@@ -8256,7 +8285,7 @@
       "id": "13546729604",
       "name": "1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas",
       "created_at": "2026-11-13T18:47:09Z",
-      "updated_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T21:51:45Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8276,7 +8305,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8317,7 +8348,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:09 UTC"
+        "text": "2026-11-13 21:51:45 UTC"
        }
       ],
       "subitems": []
@@ -8326,7 +8357,7 @@
       "id": "13546729764",
       "name": "9706 · WDM Water System — Bomba centrífuga",
       "created_at": "2026-11-13T18:47:09Z",
-      "updated_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T21:51:48Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8346,7 +8377,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8387,7 +8420,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:09 UTC"
+        "text": "2026-11-13 21:51:48 UTC"
        }
       ],
       "subitems": []
@@ -8396,7 +8429,7 @@
       "id": "13546729766",
       "name": "ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje",
       "created_at": "2026-11-13T18:47:09Z",
-      "updated_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T21:51:50Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8416,7 +8449,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081177348"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8457,7 +8492,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:09 UTC"
+        "text": "2026-11-13 21:51:50 UTC"
        }
       ],
       "subitems": []
@@ -8466,7 +8501,7 @@
       "id": "13546729767",
       "name": "ACH26/1116 · Sergio Allard — Viáticos de alimentación",
       "created_at": "2026-11-13T18:47:10Z",
-      "updated_at": "2026-11-13T18:47:10Z",
+      "updated_at": "2026-11-13T21:51:52Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8486,7 +8521,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081177348"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8527,7 +8564,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:10 UTC"
+        "text": "2026-11-13 21:51:52 UTC"
        }
       ],
       "subitems": []
@@ -8536,7 +8573,7 @@
       "id": "13546729769",
       "name": "ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación",
       "created_at": "2026-11-13T18:47:10Z",
-      "updated_at": "2026-11-13T18:47:10Z",
+      "updated_at": "2026-11-13T21:51:54Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8556,7 +8593,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081177348"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8597,7 +8636,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:47:10 UTC"
+        "text": "2026-11-13 21:51:54 UTC"
        }
       ],
       "subitems": []
@@ -8606,7 +8645,7 @@
       "id": "13547895538",
       "name": "NC2373 · Ferretería Industrial — Nota de crédito por devolución",
       "created_at": "2026-11-13T20:41:55Z",
-      "updated_at": "2026-11-13T20:41:55Z",
+      "updated_at": "2026-11-13T21:51:57Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8626,7 +8665,9 @@
         "id": "board_relation_mm7yq0et",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13081201432"
+        ]
        },
        {
         "id": "board_relation_mm7y2fcq",
@@ -8667,7 +8708,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 20:41:55 UTC"
+        "text": "2026-11-13 21:51:57 UTC"
        }
       ],
       "subitems": []

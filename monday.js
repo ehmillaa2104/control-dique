@@ -5795,14 +5795,16 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 43255.23,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 43255.23,
    "proyectado": 43255.23,
    "lineas": [
     "13098327837",
     "13127441793"
    ],
    "pos": [
-    "13456235538"
+    "13456235538",
+    "13546729529",
+    "13546729597"
    ]
   },
   {
@@ -5965,12 +5967,14 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 16732.76,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 528.9,
    "proyectado": 16732.76,
    "lineas": [
     "13278839703"
    ],
-   "pos": []
+   "pos": [
+    "13546729600"
+   ]
   },
   {
    "id": "13081200175",
@@ -6011,7 +6015,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
-   "incurrido": 18027.5,
+   "incurrido": 25179.66,
    "proyectado": 9000,
    "lineas": [
     "13238699549",
@@ -6026,7 +6030,10 @@ window.DIQUE_MONDAY = {
     "13408536607",
     "13408515314",
     "13346547714",
-    "13408567193"
+    "13408567193",
+    "13546729766",
+    "13546729767",
+    "13546729769"
    ]
   },
   {
@@ -6070,7 +6077,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 22844.69,
+   "incurrido": 27600.45,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6266,7 +6273,12 @@ window.DIQUE_MONDAY = {
     "13456285390",
     "13456286345",
     "13456235539",
-    "13456250941"
+    "13456250941",
+    "13546729604",
+    "13546729764",
+    "13547895538",
+    "13546729601",
+    "13546729602"
    ]
   },
   {
@@ -6278,12 +6290,15 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10165,
    "po": 0,
-   "incurrido": 0,
+   "incurrido": 10165,
    "proyectado": 10165,
    "lineas": [
     "13098327946"
    ],
-   "pos": []
+   "pos": [
+    "13546729598",
+    "13546729599"
+   ]
   },
   {
    "id": "13081200177",
@@ -6600,7 +6615,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081201302"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6615,7 +6632,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081201302"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6630,7 +6649,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081200176"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6645,7 +6666,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081200176"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6660,7 +6683,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081177347"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6675,7 +6700,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pendiente de Pago",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6690,7 +6717,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pendiente de Pago",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6705,7 +6734,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6720,7 +6751,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Past Due",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6735,7 +6768,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pagado",
-   "cc": [],
+   "cc": [
+    "13081177348"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6750,7 +6785,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pagado",
-   "cc": [],
+   "cc": [
+    "13081177348"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6765,7 +6802,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pagado",
-   "cc": [],
+   "cc": [
+    "13081177348"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -6780,7 +6819,9 @@ window.DIQUE_MONDAY = {
    "fecha": null,
    "estatus": "",
    "pago": "Pagado",
-   "cc": [],
+   "cc": [
+    "13081201432"
+   ],
    "trabajos": [],
    "actualizado": "2026-11-13"
   },
@@ -13368,30 +13409,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "8cd1f3468011",
- "cambiosLectura": [
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Generador de emergencia — radiador y bomba de inyección",
-   "campo": "$ Incurrido",
-   "antes": "0",
-   "ahora": "1062"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Adquisición de materiales de soldadura",
-   "campo": "$ Incurrido",
-   "antes": "3802.63",
-   "ahora": "6552.53"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "$ Incurrido",
-   "antes": "0",
-   "ahora": "7437.5"
-  }
- ],
+ "_huella": "85c4576a0f0e",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
@@ -13535,55 +13554,55 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0110 · Green Harbor — Limpieza de tanques de carga y slop\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0110 · Green Harbor — Limpieza de tanques de carga y slop\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0111 · Green Harbor — Limpieza de tanques, saldo\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0111 · Green Harbor — Limpieza de tanques, saldo\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0088 · Green Harbor — Impermeabilización de acomodaciones\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0088 · Green Harbor — Impermeabilización de acomodaciones\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0089 · Green Harbor — Renovación en acomodaciones\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0089 · Green Harbor — Renovación en acomodaciones\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"11546 · Altamar Panamá — Servicios migratorios\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"11546 · Altamar Panamá — Servicios migratorios\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0024 · Remaeparts — Mano de obra por desmontaje\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0024 · Remaeparts — Mano de obra por desmontaje\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"9706 · WDM Water System — Bomba centrífuga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"9706 · WDM Water System — Bomba centrífuga\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"ACH26/1116 · Sergio Allard — Viáticos de alimentación\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1116 · Sergio Allard — Viáticos de alimentación\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"NC2373 · Ferretería Industrial — Nota de crédito por devolución\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"NC2373 · Ferretería Industrial — Nota de crédito por devolución\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
