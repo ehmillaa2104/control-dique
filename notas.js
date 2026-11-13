@@ -17,16 +17,16 @@ window.DIQUE_NOTAS = {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
   // Totales del resumen que Monday todavía no trae (indicación del usuario, 30 oct). Borrar cuando estén en Monday.
-  // 13 nov: "pagado" pasa a 167.980,53, del reporte contable al 13 nov (archivo de Othón del 13-nov 10:16).
-  //   No es el "Paid In Full" de ese archivo, que da 23.128,37: en el reporte nuevo, 144.852,16 en asientos de
-  //   diario perdieron la etiqueta de estado de pago — el primer pago al astillero de 120.000, los viáticos y los
-  //   efectivos solicitados. Ese dinero sí se desembolsó, solo dejó de estar clasificado. 23.128,37 + 144.852,16.
-  //   Criterio elegido por el usuario: todo lo desembolsado, no solo proveedores (eso daría 143.128,37, dejando
-  //   fuera los 24.852,16 de viáticos y efectivos).
+  // 13 nov, 14:02: "pagado" pasa a 197.448,46, el total "Paid In Full" del cuadro corregido que mandó Othón
+  //   (correo "Kelly_Dique_Job Ledger"). Ya no hace falta derivarlo: en ese archivo la columna de estado de
+  //   pago está completa y trae su propio cuadro resumen — Paid In Full 197.448,46, Past Due 127.741,04,
+  //   Unpaid 8.326,81, total 333.516,31. Recalculado desde las 201 líneas de detalle: cuadra.
+  //   Reemplaza los 167.980,53 de la mañana, que eran una derivación nuestra porque en el archivo de las
+  //   10:16 había 144.852,16 en asientos de diario sin etiqueta de estado de pago.
   // "po" sigue siendo el del archivo del 30 oct: los reportes posteriores ya no traen la hoja de órdenes de compra.
   "montos": {
     "po": 96899,
-    "pagado": 167980.53
+    "pagado": 197448.46
   },
   // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
   // Borrar cuando Monday tenga una columna con la fecha del evento.
