@@ -1241,7 +1241,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 1062,
+     "incurrido": 0,
      "fin": null,
      "cc": [
       "13081201432"
@@ -1379,8 +1379,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Línea de descarga de bomba de lastre de estribor",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "68%",
-     "pct": 68,
+     "estado": "83%",
+     "pct": 83,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1396,7 +1396,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-11",
+     "actualizado": "2026-11-13",
      "costo": "aprobado"
     },
     {
@@ -4466,7 +4466,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 6552.53,
+     "incurrido": 3802.63,
      "fin": null,
      "cc": [
       "13081201432"
@@ -4598,7 +4598,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 28573.13,
      "proyectado": 28573.13,
      "po": null,
-     "incurrido": 17957.09,
+     "incurrido": 0,
      "fin": "2026-10-21",
      "cc": [
       "13081201302"
@@ -5230,7 +5230,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 14875,
      "proyectado": 14875,
      "po": null,
-     "incurrido": 7437.5,
+     "incurrido": 0,
      "fin": "2026-10-16",
      "cc": [
       "13081195990"
@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 25.6,
+     "pct": 22.7,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5662,11 +5662,11 @@ window.DIQUE_MONDAY = {
        "id": "13488466695",
        "nombre": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
        "peso": 2.64,
-       "avance": "40%",
-       "pct": 40,
+       "avance": "55%",
+       "pct": 55,
        "cancelado": false,
-       "ponderado": 1.06,
-       "medicion": "2026-11-10",
+       "ponderado": 0,
+       "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
       },
@@ -5698,11 +5698,11 @@ window.DIQUE_MONDAY = {
        "id": "13488466697",
        "nombre": "§13 · Acero — Tanque 3 Estribor (IFO 3S) · instalación",
        "peso": 2.64,
-       "avance": "80%",
-       "pct": 80,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 2.11,
-       "medicion": "2026-11-10",
+       "ponderado": 2.38,
+       "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
       },
@@ -5710,11 +5710,11 @@ window.DIQUE_MONDAY = {
        "id": "13488448724",
        "nombre": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
        "peso": 2.64,
-       "avance": "80%",
-       "pct": 80,
+       "avance": "85%",
+       "pct": 85,
        "cancelado": false,
-       "ponderado": 2.11,
-       "medicion": "2026-11-10",
+       "ponderado": 0,
+       "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
       },
@@ -5795,7 +5795,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 43255.23,
    "po": 0,
-   "incurrido": 17957.09,
+   "incurrido": 0,
    "proyectado": 43255.23,
    "lineas": [
     "13098327837",
@@ -5814,7 +5814,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 14875,
    "po": 0,
-   "incurrido": 7437.5,
+   "incurrido": 0,
    "proyectado": 14875,
    "lineas": [
     "13098334682"
@@ -6070,7 +6070,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 87950.01,
    "po": 0,
-   "incurrido": 24412.24,
+   "incurrido": 18283.09,
    "proyectado": 88488.48,
    "lineas": [
     "13043950431",
@@ -6455,7 +6455,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "id": "13408538335",
-   "nombre": "DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
+   "nombre": "8628 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
    "area": "Soldadura",
    "proveedor": "Oceanco Safety & Supply",
    "po": 0,
@@ -6468,7 +6468,7 @@ window.DIQUE_MONDAY = {
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-10-30"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13408537271",
@@ -6510,16 +6510,16 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "WDM Water System, S.A.",
    "po": 0,
-   "incurrido": 1284,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13456286490",
@@ -6527,16 +6527,16 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "Lagomar Services",
    "po": 0,
-   "incurrido": 749.7,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13456235282",
@@ -6578,16 +6578,196 @@ window.DIQUE_MONDAY = {
    "area": "Dique",
    "proveedor": "Maxindustrias, S.A.",
    "po": 0,
-   "incurrido": 283.55,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201432"
    ],
    "trabajos": [],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729529",
+   "nombre": "0110 · Green Harbor — Limpieza de tanques de carga y slop",
+   "area": "",
+   "proveedor": "Green Harbor Company Inc",
+   "po": 0,
+   "incurrido": 35914.18,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729597",
+   "nombre": "0111 · Green Harbor — Limpieza de tanques, saldo",
+   "area": "",
+   "proveedor": "Green Harbor Company Inc",
+   "po": 0,
+   "incurrido": 7341.05,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729598",
+   "nombre": "0088 · Green Harbor — Impermeabilización de acomodaciones",
+   "area": "",
+   "proveedor": "Green Harbor Company Inc",
+   "po": 0,
+   "incurrido": 3317,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729599",
+   "nombre": "0089 · Green Harbor — Renovación en acomodaciones",
+   "area": "",
+   "proveedor": "Green Harbor Company Inc",
+   "po": 0,
+   "incurrido": 6848,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729600",
+   "nombre": "11546 · Altamar Panamá — Servicios migratorios",
+   "area": "",
+   "proveedor": "Altamar Panamá, S.A.",
+   "po": 0,
+   "incurrido": 528.9,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729601",
+   "nombre": "0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)",
+   "area": "",
+   "proveedor": "Remaeparts",
+   "po": 0,
+   "incurrido": 1750.47,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pendiente de Pago",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729602",
+   "nombre": "0024 · Remaeparts — Mano de obra por desmontaje",
+   "area": "",
+   "proveedor": "Remaeparts",
+   "po": 0,
+   "incurrido": 1926,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pendiente de Pago",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729604",
+   "nombre": "1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas",
+   "area": "",
+   "proveedor": "Maxindustrias, S.A.",
+   "po": 0,
+   "incurrido": 283.55,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729764",
+   "nombre": "9706 · WDM Water System — Bomba centrífuga",
+   "area": "",
+   "proveedor": "WDM Water System, S.A.",
+   "po": 0,
+   "incurrido": 1284,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Past Due",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729766",
+   "nombre": "ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 3752.16,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729767",
+   "nombre": "ACH26/1116 · Sergio Allard — Viáticos de alimentación",
+   "area": "",
+   "proveedor": "Sergio Allard",
+   "po": 0,
+   "incurrido": 1700,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546729769",
+   "nombre": "ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación",
+   "area": "",
+   "proveedor": "Luis Carlos Saavedra",
+   "po": 0,
+   "incurrido": 1700,
+   "saldo": null,
+   "fecha": null,
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [],
+   "trabajos": [],
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13302182661",
@@ -7279,18 +7459,18 @@ window.DIQUE_MONDAY = {
    "area": "Dique Servicios",
    "proveedor": "Green Harbor Company Inc",
    "po": 0,
-   "incurrido": 17957.09,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201302"
    ],
    "trabajos": [
     "13098327837"
    ],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13456286345",
@@ -7298,18 +7478,18 @@ window.DIQUE_MONDAY = {
    "area": "Maquina",
    "proveedor": "Radiadores Panamá, S.A.",
    "po": 0,
-   "incurrido": 1062,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201432"
    ],
    "trabajos": [
     "13095604901"
    ],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13456235283",
@@ -7317,18 +7497,18 @@ window.DIQUE_MONDAY = {
    "area": "Dique Servicios",
    "proveedor": "Promise NDT, S.A.",
    "po": 0,
-   "incurrido": 7437.5,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081195990"
    ],
    "trabajos": [
     "13098334682"
    ],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   },
   {
    "id": "13456235539",
@@ -7336,21 +7516,47 @@ window.DIQUE_MONDAY = {
    "area": "Soldadura",
    "proveedor": "Inversiones JMCG, S.A.",
    "po": 0,
-   "incurrido": 2749.9,
+   "incurrido": 0,
    "saldo": null,
    "fecha": "2026-10-31",
    "estatus": "",
-   "pago": "Anticipo",
+   "pago": "Cancelado",
    "cc": [
     "13081201432"
    ],
    "trabajos": [
     "13043921754"
    ],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-13"
   }
  ],
  "cambios": [
+  {
+   "id": "13546694095",
+   "nombre": "Día perdido el 11 nov: el acero paró por la subida al dique",
+   "creado": "2026-11-13",
+   "tipo": "Tiempo",
+   "costo": 0,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [],
+   "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13546734512",
+   "nombre": "Thruster: presenta juego y el túnel llega con incrustación en toda su superficie",
+   "creado": "2026-11-13",
+   "tipo": "Alcance",
+   "costo": null,
+   "dias": null,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [],
+   "actualizado": "2026-11-13"
+  },
   {
    "id": "13508287294",
    "nombre": "Pérdida de medio día por lluvia — viernes 6 de noviembre",
@@ -8014,7 +8220,7 @@ window.DIQUE_MONDAY = {
    "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 11.57
+   "avanceDias": 11.72
   },
   "cubierta": {
    "lineas": 18,
@@ -8026,13 +8232,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 13.71
+   "avanceDias": 12.695
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 130,
-   "avanceDias": 47.53
+   "avanceDias": 46.665
   }
  },
  "historial": [
@@ -12942,7 +13148,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-13",
-   "avance": 36.56,
+   "avance": 35.9,
    "pct": {
     "13256760608": 25,
     "13256760158": 25,
@@ -12988,7 +13194,7 @@ window.DIQUE_MONDAY = {
     "13095570185": 0,
     "13428126280": 100,
     "13428159726": 100,
-    "13256760157": 68,
+    "13256760157": 83,
     "13256755192": 25,
     "13256755203": 25,
     "13256744926": 25,
@@ -13141,195 +13347,55 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 25.6,
+    "13098338054": 22.7,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "629bd72764d4",
+ "_huella": "c3dc69c72555",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-11-24 a 2026-11-24",
-   "ahora": "2026-11-25 a 2026-11-25"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Diferencia",
-   "antes": "1",
-   "ahora": "2"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Fecha Real",
-   "antes": "2026-11-24 a 2026-11-26",
-   "ahora": "2026-11-25 a 2026-11-28"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Diferencia",
-   "antes": "1",
-   "ahora": "3"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Duración",
-   "antes": "3",
-   "ahora": "4"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-11-26 a 2026-12-01",
-   "ahora": "2026-11-28 a 2026-12-01"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "6",
-   "ahora": "4"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Generador de emergencia — radiador y bomba de inyección",
+   "campo": "$ Incurrido",
+   "antes": "1062",
+   "ahora": "0"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
    "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "antes": "68%",
+   "ahora": "83%"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Control local de propulsión + Cargador de batería #2",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Auto pilot + Sewage (motor y compresor)",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Sello interno del acople del eje de paso variable",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de overflow hacia el sludge tank",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "trabajo": "Adquisición de materiales de soldadura",
+   "campo": "$ Incurrido",
+   "antes": "6552.53",
+   "ahora": "3802.63"
   },
   {
    "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "$ Proyectado",
-   "antes": "11000",
-   "ahora": "14000"
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "$ Incurrido",
+   "antes": "17957.09",
+   "ahora": "0"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Reforzar el Sistema Davit mantenga seguro el Bote de caida.",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "$ Incurrido",
+   "antes": "7437.5",
+   "ahora": "0"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "25.4 %",
-   "ahora": "25.6 %"
+   "antes": "25.6 %",
+   "ahora": "22.7 %"
   }
  ],
  "observaciones": [
@@ -13378,8 +13444,16 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación: Avance ponderado 0 no es Peso × Avance (1.45)."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 5 Babor (IFO 5P) · instalación: Avance ponderado 0 no es Peso × Avance (2.24)."
+  },
+  {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 25.6 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 22.7 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
@@ -13435,7 +13509,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"8628 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno\": sin monto, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",
@@ -13464,6 +13538,54 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"ACH26/1045 · Maxindustrias — Anticipo tecle de 2 toneladas (PO-KelTra-388-G)\": sin monto, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0110 · Green Harbor — Limpieza de tanques de carga y slop\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0111 · Green Harbor — Limpieza de tanques, saldo\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0088 · Green Harbor — Impermeabilización de acomodaciones\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0089 · Green Harbor — Renovación en acomodaciones\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"11546 · Altamar Panamá — Servicios migratorios\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"0024 · Remaeparts — Mano de obra por desmontaje\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"9706 · WDM Water System — Bomba centrífuga\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1116 · Sergio Allard — Viáticos de alimentación\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación\": sin monto, centro de costo, trabajo enlazado; no suma en los totales."
   },
   {
    "nivel": "aviso",

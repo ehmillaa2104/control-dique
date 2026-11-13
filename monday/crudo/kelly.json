@@ -1446,7 +1446,7 @@
         "id": "lookup_mm7ym614",
         "type": "mirror",
         "text": null,
-        "display_value": "7437.50"
+        "display_value": "0"
        }
       ],
       "subitems": []
@@ -2652,7 +2652,7 @@
         "id": "13488466695",
         "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-11T13:49:43Z",
+        "updated_at": "2026-11-13T18:43:56Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2662,12 +2662,12 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "40%"
+          "text": "55%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-10"
+          "text": "2026-11-13"
          },
          {
           "id": "text_mm8hf5gw",
@@ -2678,7 +2678,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.0556"
+          "display_value": "0"
          }
         ],
         "updates": []
@@ -2757,7 +2757,7 @@
         "id": "13488466697",
         "name": "§13 · Acero — Tanque 3 Estribor (IFO 3S) · instalación",
         "created_at": "2026-11-06T13:59:53Z",
-        "updated_at": "2026-11-11T13:49:03Z",
+        "updated_at": "2026-11-13T18:43:57Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2767,12 +2767,12 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "80%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-10"
+          "text": "2026-11-13"
          },
          {
           "id": "text_mm8hf5gw",
@@ -2783,7 +2783,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.1112"
+          "display_value": "2.3751"
          }
         ],
         "updates": []
@@ -2792,7 +2792,7 @@
         "id": "13488448724",
         "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
         "created_at": "2026-11-06T13:59:53Z",
-        "updated_at": "2026-11-11T13:49:03Z",
+        "updated_at": "2026-11-13T18:43:58Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2802,12 +2802,12 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "80%"
+          "text": "85%"
          },
          {
           "id": "date_mm8hj8rm",
           "type": "date",
-          "text": "2026-11-10"
+          "text": "2026-11-13"
          },
          {
           "id": "text_mm8hf5gw",
@@ -2818,7 +2818,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.1112"
+          "display_value": "0"
          }
         ],
         "updates": []
@@ -3289,7 +3289,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": "17957.09"
+        "display_value": "0"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -5108,7 +5108,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "17957.09"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -5179,7 +5179,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "7437.5"
+        "display_value": "0"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -6111,7 +6111,7 @@
         "id": "formula_mm7yyr9q",
         "type": "formula",
         "text": "",
-        "display_value": "24412.24"
+        "display_value": "18283.09"
        },
        {
         "id": "formula_mm7ydqr4",
@@ -7188,9 +7188,9 @@
      },
      {
       "id": "13408538335",
-      "name": "DN-10326 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
+      "name": "8628 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-10-30T20:05:29Z",
+      "updated_at": "2026-11-13T18:46:35Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7253,7 +7253,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-10-30 20:05:29 UTC"
+        "text": "2026-11-13 18:46:35 UTC"
        }
       ],
       "subitems": []
@@ -7406,7 +7406,7 @@
       "id": "13456250941",
       "name": "ACH26/1039 · WDM Water System — Anticipo bomba centrífuga de 5 HP (PO-KelTra-382-F)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:34Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7444,7 +7444,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "1284"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -7464,12 +7464,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:34 UTC"
        }
       ],
       "subitems": []
@@ -7478,7 +7478,7 @@
       "id": "13456286490",
       "name": "ACH26/10168 · Lagomar Services — Anticipo gasket oil cooler cover (PO-KelTra-370)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:33Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7516,7 +7516,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "749.70"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -7536,12 +7536,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:33 UTC"
        }
       ],
       "subitems": []
@@ -7694,7 +7694,7 @@
       "id": "13456285390",
       "name": "ACH26/1045 · Maxindustrias — Anticipo tecle de 2 toneladas (PO-KelTra-388-G)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:32Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7732,7 +7732,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "283.55"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -7752,12 +7752,852 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:32 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729529",
+      "name": "0110 · Green Harbor — Limpieza de tanques de carga y slop",
+      "created_at": "2026-11-13T18:47:05Z",
+      "updated_at": "2026-11-13T18:47:05Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Green Harbor Company Inc"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "35914.18"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:05 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729597",
+      "name": "0111 · Green Harbor — Limpieza de tanques, saldo",
+      "created_at": "2026-11-13T18:47:06Z",
+      "updated_at": "2026-11-13T18:47:06Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Green Harbor Company Inc"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "7341.05"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:06 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729598",
+      "name": "0088 · Green Harbor — Impermeabilización de acomodaciones",
+      "created_at": "2026-11-13T18:47:06Z",
+      "updated_at": "2026-11-13T18:47:06Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Green Harbor Company Inc"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "3317.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:06 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729599",
+      "name": "0089 · Green Harbor — Renovación en acomodaciones",
+      "created_at": "2026-11-13T18:47:07Z",
+      "updated_at": "2026-11-13T18:47:07Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Green Harbor Company Inc"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "6848.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:07 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729600",
+      "name": "11546 · Altamar Panamá — Servicios migratorios",
+      "created_at": "2026-11-13T18:47:07Z",
+      "updated_at": "2026-11-13T18:47:07Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Altamar Panamá, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "528.90"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:07 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729601",
+      "name": "0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)",
+      "created_at": "2026-11-13T18:47:08Z",
+      "updated_at": "2026-11-13T18:47:08Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Remaeparts"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1750.47"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pendiente de Pago"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:08 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729602",
+      "name": "0024 · Remaeparts — Mano de obra por desmontaje",
+      "created_at": "2026-11-13T18:47:08Z",
+      "updated_at": "2026-11-13T18:47:08Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Remaeparts"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1926.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pendiente de Pago"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:08 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729604",
+      "name": "1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas",
+      "created_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T18:47:09Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Maxindustrias, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "283.55"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:09 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729764",
+      "name": "9706 · WDM Water System — Bomba centrífuga",
+      "created_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T18:47:09Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "WDM Water System, S.A."
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1284.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Past Due"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:09 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729766",
+      "name": "ACH26/1114 · Luis Carlos Saavedra — Gastos de hospedaje",
+      "created_at": "2026-11-13T18:47:09Z",
+      "updated_at": "2026-11-13T18:47:09Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Luis Carlos Saavedra"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "3752.16"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pagado"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:09 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729767",
+      "name": "ACH26/1116 · Sergio Allard — Viáticos de alimentación",
+      "created_at": "2026-11-13T18:47:10Z",
+      "updated_at": "2026-11-13T18:47:10Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Sergio Allard"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1700.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pagado"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:10 UTC"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546729769",
+      "name": "ACH26/1117 · Luis Carlos Saavedra — Viáticos de alimentación",
+      "created_at": "2026-11-13T18:47:10Z",
+      "updated_at": "2026-11-13T18:47:10Z",
+      "group": {
+       "id": "group_mm32rmd2",
+       "title": "PO por enlazar"
+      },
+      "column_values": [
+       {
+        "id": "dropdown_mm334y96",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "text_mm2p9mx7",
+        "type": "text",
+        "text": "Luis Carlos Saavedra"
+       },
+       {
+        "id": "board_relation_mm7yq0et",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "board_relation_mm7y2fcq",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "numeric_mm2pfpzs",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm322fqy",
+        "type": "numbers",
+        "text": "1700.00"
+       },
+       {
+        "id": "numeric_mm39rhnj",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "date_mm2ptpmb",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm328rrg",
+        "type": "dropdown",
+        "text": null
+       },
+       {
+        "id": "color_mm32ajy1",
+        "type": "status",
+        "text": "Pagado"
+       },
+       {
+        "id": "pulse_updated_mm3j8vr0",
+        "type": "last_updated",
+        "text": "2026-11-13 18:47:10 UTC"
        }
       ],
       "subitems": []
@@ -10430,7 +11270,7 @@
       "id": "13456235538",
       "name": "ACH26/1018 · Green Harbor — Anticipo 50 % limpieza de tanques de carga y slop (PO-KelTra-185)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:31Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -10470,7 +11310,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "17957.09"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -10490,12 +11330,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:31 UTC"
        }
       ],
       "subitems": []
@@ -10504,7 +11344,7 @@
       "id": "13456286345",
       "name": "ACH26/1066 · Radiadores Panamá — Anticipo radiador del motor Cummins 6BT 5.9 (PO-KelTra-9)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:33Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -10544,7 +11384,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "1062"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -10564,12 +11404,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:33 UTC"
        }
       ],
       "subitems": []
@@ -10578,7 +11418,7 @@
       "id": "13456235283",
       "name": "ACH26/1071 · Promise NDT — Anticipo 50 % medición de espesores (PO-KelTra-190)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:31Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -10618,7 +11458,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "7437.50"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -10638,12 +11478,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:31 UTC"
        }
       ],
       "subitems": []
@@ -10652,7 +11492,7 @@
       "id": "13456235539",
       "name": "ACH26/1046 · Inversiones JMCG — Anticipo construcción de niples (PO-KelTra-136-G)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-13T18:46:34Z",
       "group": {
        "id": "group_mm34f03q",
        "title": "PO Enlazadas"
@@ -10692,7 +11532,7 @@
        {
         "id": "numeric_mm322fqy",
         "type": "numbers",
-        "text": "2749.90"
+        "text": "0"
        },
        {
         "id": "numeric_mm39rhnj",
@@ -10712,12 +11552,12 @@
        {
         "id": "color_mm32ajy1",
         "type": "status",
-        "text": "Anticipo"
+        "text": "Cancelado"
        },
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-13 18:46:34 UTC"
        }
       ],
       "subitems": []
@@ -11415,6 +12255,114 @@
         "id": "numeric_mm2epnk4",
         "type": "numbers",
         "text": "0.5"
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "2.2.1 Cuenta de Astillero"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546694095",
+      "name": "Día perdido el 11 nov: el acero paró por la subida al dique",
+      "created_at": "2026-11-13T18:45:01Z",
+      "updated_at": "2026-11-13T18:45:08Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-11-13 18:45:01 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Tiempo"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": "0"
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": "1"
+       },
+       {
+        "id": "color_mm2e3n8w",
+        "type": "status",
+        "text": "Solicitado"
+       },
+       {
+        "id": "date_mkzbjkxq",
+        "type": "date",
+        "text": ""
+       },
+       {
+        "id": "dropdown_mm2ns80c",
+        "type": "dropdown",
+        "text": "2.2.1 Cuenta de Astillero"
+       }
+      ],
+      "subitems": []
+     },
+     {
+      "id": "13546734512",
+      "name": "Thruster: presenta juego y el túnel llega con incrustación en toda su superficie",
+      "created_at": "2026-11-13T18:45:17Z",
+      "updated_at": "2026-11-13T18:45:20Z",
+      "group": {
+       "id": "topics",
+       "title": "DIQUE KELLY"
+      },
+      "column_values": [
+       {
+        "id": "pulse_log_mm2ebjby",
+        "type": "creation_log",
+        "text": "2026-11-13 18:45:17 UTC"
+       },
+       {
+        "id": "board_relation_mm2ebzc8",
+        "type": "board_relation",
+        "text": null,
+        "linked_item_ids": []
+       },
+       {
+        "id": "dropdown_mkzbgqr7",
+        "type": "dropdown",
+        "text": "Alcance"
+       },
+       {
+        "id": "numeric_mm268zat",
+        "type": "numbers",
+        "text": ""
+       },
+       {
+        "id": "numeric_mm2epnk4",
+        "type": "numbers",
+        "text": ""
        },
        {
         "id": "color_mm2e3n8w",
@@ -15206,7 +16154,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "1062"
+        "display_value": "0"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -15686,7 +16634,7 @@
       "id": "13256760157",
       "name": "Línea de descarga de bomba de lastre de estribor",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-11T15:26:36Z",
+      "updated_at": "2026-11-13T18:44:38Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -15738,12 +16686,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-11 15:26:36 UTC"
+        "text": "2026-11-13 18:44:38 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "68%"
+        "text": "83%"
        },
        {
         "id": "date_mm7yv15j",
@@ -27203,7 +28151,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "254.92, 194.74, 690.15, 212.82, 2450, 2749.90"
+        "display_value": "254.92, 194.74, 690.15, 212.82, 2450, 0"
        },
        {
         "id": "lookup_mm7yk7y7",
