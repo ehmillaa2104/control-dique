@@ -19,7 +19,7 @@ window.DIQUE_REGISTRO = {
           { "txt": "Arrancó la pintura de la obra viva: por la tarde se aplicó el primer sobre la primera zona arenada, después de lavarla", "extra": "17 nov" },
           { "txt": "El primer va por zonas: la proa ya quedó cubierta y el resto del costado sigue con la pintura vieja", "extra": "según las fotos del 17 nov" },
           { "txt": "La pintura de obra viva arranca en 10 % en la cuenta del astillero: es la partida más pesada del contrato después del acero", "extra": "17 nov" },
-          { "txt": "El lunes 16 se perdió completo por el festivo: con él ya son 7 los días perdidos del proyecto", "extra": "16 nov" }
+          { "txt": "Con el festivo del lunes 16 y la lluvia del sábado 14, el proyecto llega a 8 días perdidos", "extra": "16 nov" }
         ] },
         { "zona": "Obra viva", "items": [
           { "txt": "Por la tarde: lavado del área arenada y aplicación del primer", "extra": "17 nov" },
@@ -81,7 +81,7 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reportes del superintendente (10 y 13 nov), fotos de campo de la varada (12 nov), informes diarios de Ingeniería (9 al 14 nov) y cronograma de Monday",
       "avance": [
         { "zona": "Temas importantes", "items": [
-          { "txt": "El sábado 14 se perdió completo por lluvia: la jornada iba hasta las 11:30 y la lluvia se la llevó entera", "extra": "14 nov" },
+          { "txt": "El sábado 14 la lluvia se llevó la jornada del astillero: iba hasta las 11:30 y se perdió entera. En sala de máquinas, bajo techo, sí se trabajó", "extra": "14 nov" },
           { "txt": "Se perdió el miércoles 11 completo en los tanques: el acero paró mientras subían el buque al dique", "extra": "13 nov · no estaba en el horario confirmado" },
           { "txt": "El thruster presenta juego: lo detectó la inspección del dique y se está revisando dónde es", "extra": "hallazgo · 13 nov" },
           { "txt": "En los videos de la inspección se ve el túnel del thruster cubierto de incrustación y óxido en toda su superficie", "extra": "13 nov" },
