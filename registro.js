@@ -10,6 +10,35 @@
 window.DIQUE_REGISTRO = {
   "semanas": [
     {
+      "semana": 9,
+      "desde": "2026-11-16",
+      "hasta": "2026-11-21",
+      "fuente": "Reporte del superintendente (17 nov) con cuatro fotos de campo",
+      "avance": [
+        { "zona": "Temas importantes", "items": [
+          { "txt": "Arrancó la pintura de la obra viva: por la tarde se aplicó el primer sobre la primera zona arenada, después de lavarla", "extra": "17 nov" },
+          { "txt": "El primer va por zonas: la proa ya quedó cubierta y el resto del costado sigue con la pintura vieja", "extra": "según las fotos del 17 nov" },
+          { "txt": "El lunes 16 se perdió completo por el festivo: con él ya son 7 los días perdidos del proyecto", "extra": "16 nov" }
+        ] },
+        { "zona": "Obra viva", "items": [
+          { "txt": "Por la tarde: lavado del área arenada y aplicación del primer", "extra": "17 nov" },
+          { "txt": "Continúa el lavado a presión del casco", "extra": "17 nov" }
+        ] },
+        { "zona": "Propulsión y gobierno", "items": [
+          { "txt": "Continúan descoplando el eje; el timón está colgado de aparejos para bajarlo", "extra": "17 nov" }
+        ] },
+        { "zona": "Tanques de carga", "items": [
+          { "txt": "Siguen los trabajos de acero en los tanques", "extra": "17 nov" }
+        ] }
+      ],
+      "medios": [
+        { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_01_proa-primer.jpg", "texto": "Proa con el primer aplicado; el ancla arriada sobre el piso del dique y la boca del túnel del thruster a la derecha", "grupo": "Obra viva · proa con el primer aplicado · 17 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_02_proa-primer-otro-costado.jpg", "texto": "La proa por el otro costado, también cubierta; la boca del túnel del thruster sigue sin pintar por dentro", "grupo": "Obra viva · proa con el primer aplicado · 17 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_03_proa-arenada.jpg", "texto": "La misma zona de proa antes de pintar: arenada y lavada, con la canastilla elevadora trabajando el costado", "grupo": "Obra viva · proa arenada, antes del primer · 17 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n17_popa_01_timon-helice-eje.jpg", "texto": "Popa: el timón sujeto con aparejos de cadena para bajarlo y la hélice a la vista sobre los andamios, mientras continúa el descople del eje", "grupo": "Propulsión y gobierno · 17 nov" }
+      ]
+    },
+    {
       "semana": 8,
       "desde": "2026-11-09",
       "hasta": "2026-11-14",
