@@ -5244,7 +5244,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 26.4,
+     "pct": 27.7,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5305,10 +5305,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487490",
        "nombre": "§04 · Pintura obra viva",
        "peso": 12.97,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "10%",
+       "pct": 10,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 1.297,
        "medicion": null,
        "monto": 101450,
        "nota": null
@@ -7588,6 +7588,21 @@ window.DIQUE_MONDAY = {
  ],
  "cambios": [
   {
+   "id": "13575529238",
+   "nombre": "Pérdida de día por lluvia — sábado 14 de noviembre",
+   "creado": "2026-11-17",
+   "tipo": "Tiempo",
+   "costo": null,
+   "dias": 1,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-17"
+  },
+  {
    "id": "13546694095",
    "nombre": "Día perdido el 11 nov: el acero paró por la subida al dique",
    "creado": "2026-11-13",
@@ -8288,13 +8303,13 @@ window.DIQUE_MONDAY = {
    "lineas": 10,
    "conDuracion": 8,
    "duracion": 44,
-   "avanceDias": 13.99
+   "avanceDias": 14.445
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 115,
-   "avanceDias": 47.96
+   "avanceDias": 48.415
   }
  },
  "historial": [
@@ -14028,7 +14043,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-17",
-   "avance": 41.7,
+   "avance": 42.1,
    "pct": {
     "13256760608": 25,
     "13256760158": 25,
@@ -14227,14 +14242,22 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 75,
-    "13098338054": 26.4,
+    "13098338054": 27.7,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "d866fb34a04a",
- "cambiosLectura": [],
+ "_huella": "d0289cb7b7f2",
+ "cambiosLectura": [
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Avance (subelementos)",
+   "antes": "26.4 %",
+   "ahora": "27.7 %"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",
@@ -14290,7 +14313,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 26.4 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 27.7 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
