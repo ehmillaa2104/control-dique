@@ -14233,16 +14233,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "9b7c821330f0",
- "cambiosLectura": [
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Pintura de la cubierta",
-   "campo": "Duración",
-   "antes": "20",
-   "ahora": "5"
-  }
- ],
+ "_huella": "d866fb34a04a",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
