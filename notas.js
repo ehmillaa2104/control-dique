@@ -17,7 +17,11 @@ window.DIQUE_NOTAS = {
     // 27 oct: el Astillero pasó a Aprobado en Monday (US$ 766,482); se borra su nota de revisión
   },
   // Totales del resumen que Monday todavía no trae (indicación del usuario, 30 oct). Borrar cuando estén en Monday.
-  // 13 nov, 14:02: "pagado" pasa a 197.448,46, el total "Paid In Full" del cuadro corregido que mandó Othón
+  // 20 nov, 14:3x: "pagado" pasa a 500.450,39, el "Paid In Full" del cuadro resumen del reporte Ptree del 20-nov
+  //   (11.20.2026_Ptree_Real_Budget.xlsx). Ese mismo cuadro da Past Due 34.876,46, Unpaid 3.877,07,
+  //   Applied -488,26 y total 538.715,66; cuadra con las 196 referencias del libro mayor. El salto frente a
+  //   los 197.448,46 anteriores es casi todo el segundo abono al astillero (200.000) ya pagado.
+  // 13 nov, 14:02: "pagado" pasaba a 197.448,46, el total "Paid In Full" del cuadro corregido que mandó Othón
   //   (correo "Kelly_Dique_Job Ledger"). Ya no hace falta derivarlo: en ese archivo la columna de estado de
   //   pago está completa y trae su propio cuadro resumen — Paid In Full 197.448,46, Past Due 127.741,04,
   //   Unpaid 8.326,81, total 333.516,31. Recalculado desde las 201 líneas de detalle: cuadra.
@@ -26,7 +30,7 @@ window.DIQUE_NOTAS = {
   // "po" sigue siendo el del archivo del 30 oct: los reportes posteriores ya no traen la hoja de órdenes de compra.
   "montos": {
     "po": 96899,
-    "pagado": 197448.46
+    "pagado": 500450.39
   },
   // Fecha real de un imprevisto cuando se registró otro día en Monday (id del elemento en Cambios/Imprevistos → AAAA-MM-DD).
   // Borrar cuando Monday tenga una columna con la fecha del evento.
