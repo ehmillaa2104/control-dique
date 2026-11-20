@@ -4623,7 +4623,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10000,
      "proyectado": 12000,
      "po": null,
-     "incurrido": 29257,
+     "incurrido": 33912,
      "fin": "2026-10-16",
      "cc": [
       "13081208222"
@@ -5230,7 +5230,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 766482,
      "proyectado": 766482,
      "po": null,
-     "incurrido": 120000,
+     "incurrido": 320000,
      "fin": null,
      "cc": [
       "13081201165"
@@ -5749,7 +5749,7 @@ window.DIQUE_MONDAY = {
      "aprobado": null,
      "proyectado": null,
      "po": null,
-     "incurrido": 6960,
+     "incurrido": 7454.35,
      "fin": null,
      "cc": [
       "13081177348"
@@ -5845,7 +5845,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 10000,
    "po": 0,
-   "incurrido": 29257,
+   "incurrido": 33912,
    "proyectado": 12000,
    "lineas": [
     "13098295887"
@@ -5856,7 +5856,9 @@ window.DIQUE_MONDAY = {
     "13408531328",
     "13408531809",
     "13408530896",
-    "13456212474"
+    "13456212474",
+    "13605823850",
+    "13605823858"
    ]
   },
   {
@@ -5989,7 +5991,7 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 9000,
    "po": 0,
-   "incurrido": 25179.66,
+   "incurrido": 25674.01,
    "proyectado": 9000,
    "lineas": [
     "13238699549",
@@ -6007,7 +6009,8 @@ window.DIQUE_MONDAY = {
     "13408567193",
     "13546729766",
     "13546729767",
-    "13546729769"
+    "13546729769",
+    "13605811134"
    ]
   },
   {
@@ -6033,13 +6036,14 @@ window.DIQUE_MONDAY = {
    "enRevision": 0,
    "aprobado": 766482,
    "po": 0,
-   "incurrido": 120000,
+   "incurrido": 320000,
    "proyectado": 766482,
    "lineas": [
     "13098338054"
    ],
    "pos": [
-    "13408538282"
+    "13408538282",
+    "13605810849"
    ]
   },
   {
@@ -7584,6 +7588,82 @@ window.DIQUE_MONDAY = {
     "13043921754"
    ],
    "actualizado": "2026-11-13"
+  },
+  {
+   "id": "13605810849",
+   "nombre": "KET - DIQUE · Seaforth Maritime — Segundo abono dique seco (USD 200.000)",
+   "area": "",
+   "proveedor": "Seaforth Maritime",
+   "po": 0,
+   "incurrido": 200000,
+   "saldo": null,
+   "fecha": "2026-11-20",
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [
+    "13081201165"
+   ],
+   "trabajos": [
+    "13098338054"
+   ],
+   "actualizado": "2026-11-20"
+  },
+  {
+   "id": "13605823850",
+   "nombre": "98970 · Servicios Tecnológicos de Incineración — Recolección de residuos oleosos",
+   "area": "",
+   "proveedor": "Servicios Tecnológicos de Incineración",
+   "po": 0,
+   "incurrido": 2930,
+   "saldo": null,
+   "fecha": "2026-11-16",
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-11-20"
+  },
+  {
+   "id": "13605823858",
+   "nombre": "98971 · Servicios Tecnológicos de Incineración — Recolección e incineración de basura",
+   "area": "",
+   "proveedor": "Servicios Tecnológicos de Incineración",
+   "po": 0,
+   "incurrido": 1725,
+   "saldo": null,
+   "fecha": "2026-11-16",
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [
+    "13081208222"
+   ],
+   "trabajos": [
+    "13098295887"
+   ],
+   "actualizado": "2026-11-20"
+  },
+  {
+   "id": "13605811134",
+   "nombre": "BAC T/CR 2026 · BAC International — Boleto aéreo a Cartagena",
+   "area": "",
+   "proveedor": "BAC International T/CR",
+   "po": 0,
+   "incurrido": 494.35,
+   "saldo": null,
+   "fecha": "2026-11-30",
+   "estatus": "",
+   "pago": "Pagado",
+   "cc": [
+    "13081177348"
+   ],
+   "trabajos": [
+    "13346969104"
+   ],
+   "actualizado": "2026-11-20"
   }
  ],
  "cambios": [
@@ -14865,217 +14945,28 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "8eccb4807418",
+ "_huella": "d370b86ab38f",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "Estado",
-   "antes": "83%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de descarga de bomba de lastre de estribor",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-20"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Válvula de succión de bomba de lastre de babor",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Línea de succión de bomba de servicios generales",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "93%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-20"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Control local de propulsión + Cargador de batería #2",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Auto pilot + Sewage (motor y compresor)",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "25%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Eje de cola — sellos e inspección",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Sello interno del acople del eje de paso variable",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Reparación de fuga en el tanque de sewage",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Imprevisto",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Gasto de Clase",
-   "campo": "Estado",
-   "antes": "0%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Medición de espesores y cadenas",
-   "campo": "Fecha Fin",
-   "antes": "2026-10-16",
-   "ahora": "2026-11-20"
+   "tablero": "P2. Cubierta",
+   "trabajo": "Bajada de slop y basura",
+   "campo": "$ Incurrido",
+   "antes": "29257",
+   "ahora": "33912"
   },
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "27.7 %",
-   "ahora": "51.7 %"
+   "campo": "$ Incurrido",
+   "antes": "120000",
+   "ahora": "320000"
   },
   {
    "tablero": "P3. Técnico",
-   "trabajo": "Aceros y soldadura",
-   "campo": "borrado",
-   "antes": "",
-   "ahora": ""
+   "trabajo": "Estadia, Viaje y transporte",
+   "campo": "$ Incurrido",
+   "antes": "6960",
+   "ahora": "7454.35"
   }
  ],
  "observaciones": [
@@ -15434,6 +15325,22 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "Contabilidad Kelly Trader · \"ACH26/1046 · Inversiones JMCG — Anticipo construcción de niples (PO-KelTra-136-G)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"KET - DIQUE · Seaforth Maritime — Segundo abono dique seco (USD 200.000)\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"98970 · Servicios Tecnológicos de Incineración — Recolección de residuos oleosos\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"98971 · Servicios Tecnológicos de Incineración — Recolección e incineración de basura\": sin monto; no suma en los totales."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Contabilidad Kelly Trader · \"BAC T/CR 2026 · BAC International — Boleto aéreo a Cartagena\": sin monto; no suma en los totales."
   },
   {
    "nivel": "info",
