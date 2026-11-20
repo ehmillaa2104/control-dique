@@ -726,6 +726,19 @@
     return `<button type="button" class="reg-m" data-medio="${i}" aria-label="${esc(m.texto)}">${inner}<span class="reg-cap">${esc(m.texto)}</span></button>`;
   }
   const semTitulo = (w) => `Semana · ${fmtShort(w.desde)} – ${fmtShort(w.hasta)}`;
+  // Resumen gerencial: versión corta del avance de la semana (20 nov, pedido del usuario: "se hace muy grande").
+  // Solo "Temas importantes" queda a la vista (hasta 4 líneas); las demás zonas van en desplegables cerrados.
+  function avanceResumenHTML(w) {
+    const li = (it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`;
+    const zs = w.avance || [], temas = zs.find((g) => /^temas/i.test(g.zona)), resto = zs.filter((g) => g !== temas);
+    let h = "";
+    if (temas) {
+      const vis = temas.items.slice(0, 4), mas = temas.items.slice(4);
+      h += `<div class="reg-zona"><b>${esc(temas.zona)}</b><ul>${vis.map(li).join("")}</ul>${mas.length ? `<details class="reg-mini"><summary>ver ${plural(mas.length, "tema más", "temas más")}</summary><ul>${mas.map(li).join("")}</ul></details>` : ""}</div>`;
+    }
+    h += resto.map((g) => `<details class="reg-mini"><summary>${esc(g.zona)} <small>${g.items.length}</small></summary><ul>${g.items.map(li).join("")}</ul></details>`).join("");
+    return h;
+  }
   function avanceHTML(w) {
     return (w.avance || []).map((g) => `<div class="reg-zona"><b>${esc(g.zona)}</b><ul>${g.items.map((it) => `<li>${esc(it.txt)}${it.extra ? ` · <strong>${esc(it.extra)}</strong>` : ""}</li>`).join("")}</ul></div>`).join("");
   }
@@ -758,7 +771,7 @@
     if (!w) return "";
     MEDIOS = (w.medios || []).slice();
     const fotos = (w.medios || []).map((m, i) => [m, i]).filter(([m]) => m.tipo === "foto").slice(0, 3);
-    const av = w.avance && w.avance.length ? avanceHTML(w) : '<p class="muted">Todavía no hay registro de esta semana.</p>';
+    const av = w.avance && w.avance.length ? avanceResumenHTML(w) : '<p class="muted">Todavía no hay registro de esta semana.</p>';
     const der = fotos.length ? `<div class="reg-grid g3">${fotos.map(([m, i]) => medioHTML(m, i)).join("")}</div>` : '<p class="muted reg-sinf">Sin fotos de esta semana todavía.</p>';
     return `<section class="card wide reg-res"><div class="card-h"><span>${esHoy(w) ? "Esta semana en el dique" : "Última semana registrada"}</span><small>${semTitulo(w)} · ${etapaEn(M, esHoy(w) ? TODAY : w.hasta)}</small></div>
       <div class="reg-res-b"><div class="reg-av">${av}${w.fuente ? `<p class="muted sm">Fuente: ${esc(w.fuente)}</p>` : ""}</div>
