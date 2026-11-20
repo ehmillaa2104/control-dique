@@ -13,25 +13,45 @@ window.DIQUE_REGISTRO = {
       "semana": 9,
       "desde": "2026-11-16",
       "hasta": "2026-11-21",
-      "fuente": "Reporte del superintendente (17 nov) e informes diarios de Ingeniería (15 y 16 nov)",
+      "fuente": "Reportes del superintendente (17 y 20 nov) e informes diarios de Ingeniería (15 y 16 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "El acero de los tanques entra en la recta final: los tanques 2 babor, 3 babor, 3 estribor y 5 estribor ya tienen el 100 % de las láminas instaladas y lo que queda ahí es soldadura", "extra": "20 nov" },
+          { "txt": "Los tanques 1 son los que van más atrás: babor al 40 % y estribor al 60 % de instalación", "extra": "20 nov" },
+          { "txt": "La soldadura de los tanques se trabaja también de noche", "extra": "20 nov" },
+          { "txt": "El thruster quedó 100 % desarmado; las piezas, los orings y las retenedoras están en fabricación", "extra": "20 nov" },
           { "txt": "Arrancó la pintura de la obra viva: por la tarde se aplicó el primer sobre la primera zona arenada, después de lavarla", "extra": "17 nov" },
           { "txt": "El primer va por zonas: la proa ya quedó cubierta y el resto del costado sigue con la pintura vieja", "extra": "según las fotos del 17 nov" },
           { "txt": "La pintura de obra viva arranca en 10 % en la cuenta del astillero: es la partida más pesada del contrato después del acero", "extra": "17 nov" },
           { "txt": "Con el festivo del lunes 16 y la lluvia del sábado 14, el proyecto llega a 8 días perdidos", "extra": "16 nov" }
         ] },
         { "zona": "Obra viva", "items": [
+          { "txt": "Primer aplicado en la proa y en el costado, sobre las áreas previamente arenadas", "extra": "20 nov" },
           { "txt": "Por la tarde: lavado del área arenada y aplicación del primer", "extra": "17 nov" },
           { "txt": "Continúa el lavado a presión del casco", "extra": "17 nov" }
         ] },
         { "zona": "Propulsión y gobierno", "items": [
+          { "txt": "Thruster 100 % desarmado; piezas, orings y retenedoras en proceso de confección", "extra": "20 nov" },
+          { "txt": "Desarme de las aspas del eje de cola", "extra": "30 % · 20 nov" },
           { "txt": "Continúan descoplando el eje; el timón está colgado de aparejos para bajarlo", "extra": "17 nov" },
           { "txt": "Pala del timón desmontada para inspección y mantenimiento; falta retirar la mecha", "extra": "50 % · 16 nov" },
           { "txt": "Eje de cola: se separaron los acoples del eje y el de la reductora", "extra": "33 % · 16 nov" }
         ] },
         { "zona": "Tanques de carga", "items": [
+          { "txt": "Tanque 1 babor: instalación de acero", "extra": "40 % · 20 nov" },
+          { "txt": "Tanque 1 estribor: instalación de láminas", "extra": "60 % · 20 nov" },
+          { "txt": "Corte de aceros en los tanques 1 babor y estribor", "extra": "20 nov" },
+          { "txt": "Tanque 2 babor: 100 % de las láminas instaladas; soldadura", "extra": "80 % · 20 nov" },
+          { "txt": "Tanque 2 estribor: instalación de láminas; de noche se suelda lo ya instalado", "extra": "85 % · 20 nov" },
+          { "txt": "Tanque 3 babor: 100 % de las láminas instaladas; soldadura", "extra": "30 % · 20 nov" },
+          { "txt": "Tanque 3 estribor: 100 % de las láminas instaladas; soldadura", "extra": "60 % · 20 nov" },
+          { "txt": "Tanque 5 babor: instalación de láminas", "extra": "90 % · 20 nov" },
+          { "txt": "Tanque 5 estribor: 100 % de las láminas instaladas; soldadura", "extra": "50 % · 20 nov" },
           { "txt": "Siguen los trabajos de acero en los tanques", "extra": "17 nov" }
+        ] },
+        { "zona": "Casco y estructura", "items": [
+          { "txt": "Casco en el área de máquinas: instalación de estructura interna", "extra": "25 % · 20 nov" },
+          { "txt": "Acero en el fore peak", "extra": "30 % · 20 nov" }
         ] },
         { "zona": "Sala de máquinas", "items": [
           { "txt": "Nueva bomba de enfriamiento de agua salada de la máquina principal instalada; falta la conexión eléctrica", "extra": "95 % · 16 nov" },
@@ -42,6 +62,23 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s9/n20_obraviva_01_casco-dique.jpg", "texto": "El buque sobre los picaderos con el andamiaje montado en el costado; la obra viva ya con el primer rojo y la obra muerta todavía en negro", "grupo": "Obra viva · primer en proa y costado · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_obraviva_02_proa-primer.jpg", "texto": "Proa cubierta con el primer, con la cadena del ancla arriada sobre el piso del dique", "grupo": "Obra viva · primer en proa y costado · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_obraviva_03_costado-primer.jpg", "texto": "El costado con el primer aplicado sobre la zona arenada; más atrás todavía se ve la pintura vieja", "grupo": "Obra viva · primer en proa y costado · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_eje_01_desarme-aspas.jpg", "texto": "Desarme de las aspas del eje de cola sobre el andamio de popa, con lavado a presión en el cubo", "grupo": "Eje de cola · desarme de aspas · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_eje_02_aspa-desmontada.jpg", "texto": "Una de las aspas ya desmontada, apoyada en el piso del dique", "grupo": "Eje de cola · desarme de aspas · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_maquinas_01_estructura-interna.jpg", "texto": "Casco en el área de máquinas: medición sobre la estructura interna que se está instalando", "grupo": "Casco y estructura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_forepeak_01_acero.jpg", "texto": "Trabajos de acero en el fore peak", "grupo": "Casco y estructura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_tanque1p_01_soldadura.jpg", "texto": "Tanque 1 babor: soldadura sobre el acero recién instalado, desde el andamio interior", "grupo": "Tanques de carga · acero y soldadura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_tanque2p_01_andamio.jpg", "texto": "Tanque 2 babor con el 100 % de las láminas instaladas y el andamio montado para la soldadura", "grupo": "Tanques de carga · acero y soldadura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_tanque3s_01_andamio.jpg", "texto": "Tanque 3 estribor, ya con todas las láminas puestas y el andamio para soldar", "grupo": "Tanques de carga · acero y soldadura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_tanque5s_01_laminas-nuevas.jpg", "texto": "Tanque 5 estribor: las láminas nuevas se distinguen en claro sobre el acero viejo", "grupo": "Tanques de carga · acero y soldadura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_tanque5s_02_lamina-instalada.jpg", "texto": "Detalle de una lámina nueva ya instalada en el tanque 5 estribor", "grupo": "Tanques de carga · acero y soldadura · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_thruster_01_piezas-taller.jpg", "texto": "Eje del thruster y sus piezas desarmadas en el taller", "grupo": "Thruster · 100 % desarmado · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_thruster_02_cubo-bronce.jpg", "texto": "Cubo de bronce del thruster, desmontado", "grupo": "Thruster · 100 % desarmado · 20 nov" },
+        { "tipo": "foto", "archivo": "registro/s9/n20_thruster_03_eje-engranaje.jpg", "texto": "Eje y engranaje cónico del thruster sobre el banco de trabajo", "grupo": "Thruster · 100 % desarmado · 20 nov" },
+        { "tipo": "video", "archivo": "registro/s9/n20_thruster_04_video-conjunto.mp4", "texto": "Recorrido por el conjunto desarmado: carcasa, cubo de bronce y engranaje", "grupo": "Thruster · 100 % desarmado · 20 nov" },
+        { "tipo": "video", "archivo": "registro/s9/n20_thruster_05_video-eje.mp4", "texto": "El eje del thruster con su brida, ya fuera de la carcasa", "grupo": "Thruster · 100 % desarmado · 20 nov" },
         { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_01_proa-primer.jpg", "texto": "Proa con el primer aplicado; el ancla arriada sobre el piso del dique y la boca del túnel del thruster a la derecha", "grupo": "Obra viva · proa con el primer aplicado · 17 nov" },
         { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_02_proa-primer-otro-costado.jpg", "texto": "La proa por el otro costado, también cubierta; la boca del túnel del thruster sigue sin pintar por dentro", "grupo": "Obra viva · proa con el primer aplicado · 17 nov" },
         { "tipo": "foto", "archivo": "registro/s9/n17_obraviva_03_proa-arenada.jpg", "texto": "La misma zona de proa antes de pintar: arenada y lavada, con la canastilla elevadora trabajando el costado", "grupo": "Obra viva · proa arenada, antes del primer · 17 nov" },
