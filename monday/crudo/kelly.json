@@ -1,5 +1,5 @@
 {
- "extraido": "2026-11-19",
+ "extraido": "2026-11-20",
  "boards": [
   {
    "id": "18435454602",
@@ -4327,7 +4327,7 @@
       "id": "13212064635",
       "name": "Foam – Agente Espumógeno",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-11-13T15:41:21Z",
+      "updated_at": "2026-11-20T15:35:12Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -4336,7 +4336,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Post-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -4379,7 +4379,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-11-13 15:41:21 UTC"
+        "text": "2026-11-20 15:35:12 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4389,7 +4389,7 @@
        {
         "id": "color_mm7y4j97",
         "type": "status",
-        "text": "0%"
+        "text": "25%"
        },
        {
         "id": "numeric_mm7yw4b3",
@@ -4420,7 +4420,7 @@
       "id": "13212017532",
       "name": "Bote de Rescate – Casco",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-26T23:09:57Z",
+      "updated_at": "2026-11-20T16:13:14Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -4429,7 +4429,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Post-dique"
+        "text": "Dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -4472,7 +4472,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-26 23:09:57 UTC"
+        "text": "2026-11-20 16:13:14 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4513,7 +4513,7 @@
       "id": "13212064416",
       "name": "Speed Log – Doppler",
       "created_at": "2026-10-05T20:44:47Z",
-      "updated_at": "2026-10-23T21:02:56Z",
+      "updated_at": "2026-11-20T15:35:28Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -4522,7 +4522,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -4565,7 +4565,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:56 UTC"
+        "text": "2026-11-20 15:35:28 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4606,7 +4606,7 @@
       "id": "13315637430",
       "name": "Compás Magnético – Esfera Kelvin",
       "created_at": "2026-10-16T21:23:14Z",
-      "updated_at": "2026-10-26T23:09:41Z",
+      "updated_at": "2026-11-20T15:35:37Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -4615,7 +4615,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -4658,7 +4658,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-26 23:09:41 UTC"
+        "text": "2026-11-20 15:35:37 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -6773,7 +6773,7 @@
       "id": "13302229682",
       "name": "57953 · Ferretería Industrial — Codos escala 80 sin diámetro",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-11-03T18:19:01Z",
+      "updated_at": "2026-11-20T16:52:02Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6801,7 +6801,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13256760608"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6836,7 +6838,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:19:01 UTC"
+        "text": "2026-11-20 16:52:02 UTC"
        }
       ],
       "subitems": []
@@ -6845,7 +6847,7 @@
       "id": "13302212705",
       "name": "57743 · Ferretería Industrial — Tubería sch 80 y codos (12 ítems)",
       "created_at": "2026-10-15T16:57:03Z",
-      "updated_at": "2026-11-03T18:19:01Z",
+      "updated_at": "2026-11-20T16:52:40Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6873,7 +6875,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043941390"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -6908,7 +6912,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:19:01 UTC"
+        "text": "2026-11-20 16:52:40 UTC"
        }
       ],
       "subitems": []
@@ -6989,7 +6993,7 @@
       "id": "13346657638",
       "name": "498 · Tecno Control — Transformador para aire acondicionado portátil",
       "created_at": "2026-10-21T14:22:34Z",
-      "updated_at": "2026-11-03T18:19:02Z",
+      "updated_at": "2026-11-20T16:58:32Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -6998,7 +7002,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Electrico"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7052,7 +7056,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:19:02 UTC"
+        "text": "2026-11-20 16:58:32 UTC"
        }
       ],
       "subitems": []
@@ -7205,7 +7209,7 @@
       "id": "13408538335",
       "name": "8628 · Oceanco Safety & Supply — Reguladores de acetileno y oxígeno",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-11-13T18:46:35Z",
+      "updated_at": "2026-11-20T16:07:53Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7233,7 +7237,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043921754"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7268,7 +7274,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:35 UTC"
+        "text": "2026-11-20 16:07:53 UTC"
        }
       ],
       "subitems": []
@@ -7421,7 +7427,7 @@
       "id": "13456250941",
       "name": "ACH26/1039 · WDM Water System — Anticipo bomba centrífuga de 5 HP (PO-KelTra-382-F)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:34Z",
+      "updated_at": "2026-11-20T16:25:18Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7449,7 +7455,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13095613982"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7484,7 +7492,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:34 UTC"
+        "text": "2026-11-20 16:25:18 UTC"
        }
       ],
       "subitems": []
@@ -7493,7 +7501,7 @@
       "id": "13456286490",
       "name": "ACH26/10168 · Lagomar Services — Anticipo gasket oil cooler cover (PO-KelTra-370)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T20:41:53Z",
+      "updated_at": "2026-11-20T16:37:29Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7521,7 +7529,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043922218"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7556,7 +7566,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 20:41:53 UTC"
+        "text": "2026-11-20 16:37:29 UTC"
        }
       ],
       "subitems": []
@@ -7565,7 +7575,7 @@
       "id": "13456235282",
       "name": "115451 · Panamá Auto — Tubería, válvula, niple, unión y codo",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-20T16:38:24Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7593,7 +7603,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043924545"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7628,7 +7640,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-20 16:38:24 UTC"
        }
       ],
       "subitems": []
@@ -7637,7 +7649,7 @@
       "id": "13456227858",
       "name": "334704 · Hidroca Panamá — Quick couplings de 1½\" y 2\"",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-03T18:18:30Z",
+      "updated_at": "2026-11-20T16:41:18Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7665,7 +7677,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043924546"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7700,7 +7714,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:18:30 UTC"
+        "text": "2026-11-20 16:41:18 UTC"
        }
       ],
       "subitems": []
@@ -7709,7 +7723,7 @@
       "id": "13456285390",
       "name": "ACH26/1045 · Maxindustrias — Anticipo tecle de 2 toneladas (PO-KelTra-388-G)",
       "created_at": "2026-11-03T18:18:30Z",
-      "updated_at": "2026-11-13T18:46:32Z",
+      "updated_at": "2026-11-20T16:42:10Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7737,7 +7751,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13095613982"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7772,7 +7788,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 18:46:32 UTC"
+        "text": "2026-11-20 16:42:10 UTC"
        }
       ],
       "subitems": []
@@ -8141,7 +8157,7 @@
       "id": "13546729601",
       "name": "0023 · Remaeparts — Correa, tramos, grapas, polea y consumibles (12 ítems)",
       "created_at": "2026-11-13T18:47:08Z",
-      "updated_at": "2026-11-13T21:51:33Z",
+      "updated_at": "2026-11-20T16:01:45Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8150,7 +8166,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina Servicios"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8169,7 +8185,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043922222"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -8204,7 +8222,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:33 UTC"
+        "text": "2026-11-20 16:01:45 UTC"
        }
       ],
       "subitems": []
@@ -8213,7 +8231,7 @@
       "id": "13546729602",
       "name": "0024 · Remaeparts — Mano de obra por desmontaje",
       "created_at": "2026-11-13T18:47:08Z",
-      "updated_at": "2026-11-13T21:51:35Z",
+      "updated_at": "2026-11-20T16:01:54Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8222,7 +8240,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina Servicios"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8241,7 +8259,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13043922222"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -8276,7 +8296,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:35 UTC"
+        "text": "2026-11-20 16:01:54 UTC"
        }
       ],
       "subitems": []
@@ -8285,7 +8305,7 @@
       "id": "13546729604",
       "name": "1000039935 · Maxindustrias — Tecles de 1 y 2 toneladas",
       "created_at": "2026-11-13T18:47:09Z",
-      "updated_at": "2026-11-13T21:51:45Z",
+      "updated_at": "2026-11-20T16:57:39Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8294,7 +8314,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8313,7 +8333,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13095613982"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -8348,7 +8370,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:45 UTC"
+        "text": "2026-11-20 16:57:39 UTC"
        }
       ],
       "subitems": []
@@ -8357,7 +8379,7 @@
       "id": "13546729764",
       "name": "9706 · WDM Water System — Bomba centrífuga",
       "created_at": "2026-11-13T18:47:09Z",
-      "updated_at": "2026-11-13T21:51:48Z",
+      "updated_at": "2026-11-20T16:57:45Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8366,7 +8388,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8385,7 +8407,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13095613982"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -8420,7 +8444,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:48 UTC"
+        "text": "2026-11-20 16:57:45 UTC"
        }
       ],
       "subitems": []
@@ -8645,7 +8669,7 @@
       "id": "13547895538",
       "name": "NC2373 · Ferretería Industrial — Nota de crédito por devolución",
       "created_at": "2026-11-13T20:41:55Z",
-      "updated_at": "2026-11-13T21:51:57Z",
+      "updated_at": "2026-11-20T16:57:54Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8654,7 +8678,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Maquina"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8673,7 +8697,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13256760158"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -8708,7 +8734,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:57 UTC"
+        "text": "2026-11-20 16:57:54 UTC"
        }
       ],
       "subitems": []
@@ -12709,7 +12735,7 @@
       "id": "13256760608",
       "name": "Codo de entrada al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:54:07Z",
+      "updated_at": "2026-11-20T16:54:59Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -12761,12 +12787,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:07 UTC"
+        "text": "2026-11-20 16:54:59 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -12787,7 +12813,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "457.43"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -12802,7 +12828,7 @@
       "id": "13256760158",
       "name": "Codo de entrada de aceite al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:54:05Z",
+      "updated_at": "2026-11-20T16:55:04Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -12854,12 +12880,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:05 UTC"
+        "text": "2026-11-20 16:55:04 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -12880,7 +12906,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "55.88"
+        "display_value": "55.88, -488.26"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -14740,7 +14766,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "1750.47, 1926.00"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -15112,7 +15138,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "749.70"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -16894,7 +16920,7 @@
       "id": "13256755192",
       "name": "Válvula de succión de bomba de lastre de babor",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:53:56Z",
+      "updated_at": "2026-11-20T16:55:11Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -16946,12 +16972,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:53:56 UTC"
+        "text": "2026-11-20 16:55:11 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -16987,7 +17013,7 @@
       "id": "13256755203",
       "name": "Bomba de carga #5 de babor — fuga interna",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:53:58Z",
+      "updated_at": "2026-11-20T16:55:13Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -17039,12 +17065,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:53:58 UTC"
+        "text": "2026-11-20 16:55:13 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -17080,7 +17106,7 @@
       "id": "13256744926",
       "name": "Línea de succión de bomba de servicios generales",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:54:00Z",
+      "updated_at": "2026-11-20T16:55:15Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -17132,12 +17158,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:00 UTC"
+        "text": "2026-11-20 16:55:15 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -17173,7 +17199,7 @@
       "id": "13256760609",
       "name": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T15:54:03Z",
+      "updated_at": "2026-11-20T16:55:17Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -17225,12 +17251,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:03 UTC"
+        "text": "2026-11-20 16:55:17 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -19963,7 +19989,7 @@
       "id": "13095569998",
       "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-11-13T15:54:16Z",
+      "updated_at": "2026-11-20T16:55:20Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20015,12 +20041,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:16 UTC"
+        "text": "2026-11-20 16:55:20 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20242,7 +20268,7 @@
       "id": "13373451881",
       "name": "Motor electrico de Bow Thruster",
       "created_at": "2026-10-23T21:38:18Z",
-      "updated_at": "2026-10-23T22:47:33Z",
+      "updated_at": "2026-11-20T16:55:22Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20294,12 +20320,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 22:47:33 UTC"
+        "text": "2026-11-20 16:55:22 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20335,7 +20361,7 @@
       "id": "13373417444",
       "name": "Motor eléctrico para reemplazar la araña de acople",
       "created_at": "2026-10-23T21:39:46Z",
-      "updated_at": "2026-10-26T15:59:24Z",
+      "updated_at": "2026-11-20T16:55:24Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20387,12 +20413,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-26 15:59:24 UTC"
+        "text": "2026-11-20 16:55:24 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20506,7 +20532,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "168.58"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -20599,7 +20625,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "200.60"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -21064,7 +21090,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "3195.61"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -21451,7 +21477,7 @@
       "id": "13277138828",
       "name": "Panel de sistema de alarma 95-98%",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-23T22:48:20Z",
+      "updated_at": "2026-11-20T16:55:27Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -21503,12 +21529,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 22:48:20 UTC"
+        "text": "2026-11-20 16:55:27 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -21544,7 +21570,7 @@
       "id": "13277158049",
       "name": "Control local de propulsión + Cargador de batería #2",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-11-13T15:54:20Z",
+      "updated_at": "2026-11-20T16:55:30Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -21596,12 +21622,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:20 UTC"
+        "text": "2026-11-20 16:55:30 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -21637,7 +21663,7 @@
       "id": "13277104868",
       "name": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-11-13T15:54:22Z",
+      "updated_at": "2026-11-20T16:55:28Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -21689,12 +21715,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:22 UTC"
+        "text": "2026-11-20 16:55:28 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -21730,7 +21756,7 @@
       "id": "13277169481",
       "name": "Auto pilot + Sewage (motor y compresor)",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-11-13T15:54:28Z",
+      "updated_at": "2026-11-20T16:55:32Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -21782,12 +21808,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:28 UTC"
+        "text": "2026-11-20 16:55:32 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -21823,7 +21849,7 @@
       "id": "13277138491",
       "name": "Panel contra incendio",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-10-23T22:48:31Z",
+      "updated_at": "2026-11-20T16:55:34Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -21875,12 +21901,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-23 22:48:31 UTC"
+        "text": "2026-11-20 16:55:34 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -23683,7 +23709,7 @@
       "id": "13256760245",
       "name": "Grúa de medianía — limit switch, controles y mangueras",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T16:11:41Z",
+      "updated_at": "2026-11-20T16:55:36Z",
       "group": {
        "id": "group_mm7d4a01",
        "title": "1.13 Grúas"
@@ -23735,12 +23761,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 16:11:41 UTC"
+        "text": "2026-11-20 16:55:36 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -25171,7 +25197,7 @@
       "id": "13095603720",
       "name": "Pala y mecha del timón — inspección, sellos y rodamientos",
       "created_at": "2026-09-21T16:19:01Z",
-      "updated_at": "2026-10-27T21:41:08Z",
+      "updated_at": "2026-11-20T16:55:48Z",
       "group": {
        "id": "group_mm7df5ez",
        "title": "1.16 Sistema de Timón"
@@ -25223,12 +25249,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-27 21:41:08 UTC"
+        "text": "2026-11-20 16:55:48 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -25543,7 +25569,7 @@
       "id": "13095628540",
       "name": "Eje de cola — sellos e inspección",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-10-30T15:07:41Z",
+      "updated_at": "2026-11-20T16:55:52Z",
       "group": {
        "id": "group_mm7d5br9",
        "title": "1.17 Sistema de Propulsión"
@@ -25595,12 +25621,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-10-30 15:07:41 UTC"
+        "text": "2026-11-20 16:55:52 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -25636,7 +25662,7 @@
       "id": "13256755102",
       "name": "Sello interno del acople del eje de paso variable",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-13T16:12:00Z",
+      "updated_at": "2026-11-20T16:55:55Z",
       "group": {
        "id": "group_mm7d5br9",
        "title": "1.17 Sistema de Propulsión"
@@ -25688,12 +25714,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 16:12:00 UTC"
+        "text": "2026-11-20 16:55:55 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -28147,7 +28173,7 @@
       "id": "13277158044",
       "name": "Imprevisto",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-11-13T15:54:48Z",
+      "updated_at": "2026-11-20T16:56:17Z",
       "group": {
        "id": "group_mm7dh63q",
        "title": "Generales (fuera de jerarquía Máquina)"
@@ -28199,12 +28225,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-13 15:54:48 UTC"
+        "text": "2026-11-20 16:56:17 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -28318,7 +28344,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": "254.92, 194.74, 690.15, 212.82, 2450, 2749.90"
+        "display_value": "254.92, 194.74, 655, 690.15, 212.82, 2450, 2749.90"
        },
        {
         "id": "lookup_mm7yk7y7",
@@ -28597,7 +28623,7 @@
         "id": "lookup_mm7yh3hm",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "0, 0, 283.55, 1284.00"
        },
        {
         "id": "lookup_mm7yk7y7",
