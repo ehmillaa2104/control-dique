@@ -1379,8 +1379,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Línea de descarga de bomba de lastre de estribor",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "83%",
-     "pct": 83,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1392,11 +1392,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 1500,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-20",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-13",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -1404,8 +1404,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Válvula de succión de bomba de lastre de babor",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1454,8 +1454,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Línea de succión de bomba de servicios generales",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1479,8 +1479,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "93%",
+     "pct": 93,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2229,8 +2229,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
      "grupo": "1.4 Bow Thruster",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2304,8 +2304,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Motor electrico de Bow Thruster",
      "grupo": "1.4 Bow Thruster",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
@@ -2329,8 +2329,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Motor eléctrico para reemplazar la araña de acople",
      "grupo": "1.4 Bow Thruster",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
@@ -2342,7 +2342,7 @@ window.DIQUE_MONDAY = {
      "proyectado": null,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-20",
      "cc": [
       "13081201432"
      ],
@@ -2654,8 +2654,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Control local de propulsión + Cargador de batería #2",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2679,8 +2679,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2704,8 +2704,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Auto pilot + Sewage (motor y compresor)",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2729,8 +2729,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Panel contra incendio",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "25%",
+     "pct": 25,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3304,8 +3304,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Winche de proa estribor — motor hidráulico sin fuerza",
      "grupo": "1.14 Winches",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3321,7 +3321,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-13",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -3629,8 +3629,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Pala y mecha del timón — inspección, sellos y rodamientos",
      "grupo": "1.16 Sistema de Timón",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3729,8 +3729,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Eje de cola — sellos e inspección",
      "grupo": "1.17 Sistema de Propulsión",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3754,8 +3754,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Sello interno del acople del eje de paso variable",
      "grupo": "1.17 Sistema de Propulsión",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3804,8 +3804,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3821,7 +3821,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -3829,8 +3829,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3846,7 +3846,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -3854,8 +3854,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3871,7 +3871,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -3879,8 +3879,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3896,7 +3896,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -3904,8 +3904,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Línea de succión de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3921,7 +3921,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -4371,7 +4371,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-13",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -4379,8 +4379,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
      "grupo": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -4396,7 +4396,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-13",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -4404,8 +4404,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Reparación de fuga en el tanque de sewage",
      "grupo": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales",
      "fase": "Pre-dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -4421,7 +4421,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -4429,8 +4429,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Imprevisto",
      "grupo": "Generales (fuera de jerarquía Máquina)",
      "fase": "Post-dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
@@ -5068,8 +5068,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Gasto de Clase",
      "grupo": "Técnico",
      "fase": "Post-dique",
-     "estado": "0%",
-     "pct": 0,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Mandatorio",
@@ -5085,33 +5085,8 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081200177"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
-    },
-    {
-     "id": "13098328158",
-     "nombre": "Aceros y soldadura",
-     "grupo": "Técnico",
-     "fase": "Dique",
-     "estado": "0%",
-     "pct": 0,
-     "cancelado": false,
-     "duracion": 1,
-     "tipo": "",
-     "aprobacion": "Aprobado Dirección",
-     "proveedor": "",
-     "preliminar": 0,
-     "enRevision": null,
-     "aprobado": 0,
-     "proyectado": 0,
-     "po": null,
-     "incurrido": null,
-     "fin": null,
-     "cc": [
-      "13081177301"
-     ],
-     "actualizado": "2026-10-23",
-     "costo": ""
     },
     {
      "id": "13098326970",
@@ -5218,8 +5193,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Medición de espesores y cadenas",
      "grupo": "Técnico",
      "fase": "Pre-dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 3,
      "tipo": "Mandatorio",
@@ -5231,11 +5206,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 14875,
      "po": null,
      "incurrido": 7437.5,
-     "fin": "2026-10-16",
+     "fin": "2026-11-20",
      "cc": [
       "13081195990"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-20",
      "costo": "aprobado"
     },
     {
@@ -5244,7 +5219,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 27.7,
+     "pct": 51.7,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5269,10 +5244,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487485",
        "nombre": "§01 · Varadero",
        "peso": 4.61,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 4.61,
        "medicion": null,
        "monto": 36039,
        "nota": null
@@ -5281,10 +5256,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487487",
        "nombre": "§02 · Servicios",
        "peso": 10.71,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 5.355,
        "medicion": null,
        "monto": 83872,
        "nota": null
@@ -5293,10 +5268,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487489",
        "nombre": "§03 · HSE / gas free",
        "peso": 0.84,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "60%",
+       "pct": 60,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.504,
        "medicion": null,
        "monto": 6558,
        "nota": null
@@ -5305,10 +5280,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487490",
        "nombre": "§04 · Pintura obra viva",
        "peso": 12.97,
-       "avance": "10%",
-       "pct": 10,
+       "avance": "0%",
+       "pct": 0,
        "cancelado": false,
-       "ponderado": 1.297,
+       "ponderado": 0.0,
        "medicion": null,
        "monto": 101450,
        "nota": null
@@ -5341,10 +5316,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516945",
        "nombre": "§07 · Rejillas y cajas de mar",
        "peso": 0.49,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "60%",
+       "pct": 60,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.294,
        "medicion": null,
        "monto": 3854,
        "nota": null
@@ -5353,10 +5328,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516947",
        "nombre": "§08 · Thruster",
        "peso": 0.21,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.105,
        "medicion": null,
        "monto": 1626,
        "nota": null
@@ -5377,10 +5352,10 @@ window.DIQUE_MONDAY = {
        "id": "13396533609",
        "nombre": "§10 · Anclas y cadenas",
        "peso": 0.52,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.52,
        "medicion": null,
        "monto": 4092,
        "nota": null
@@ -5449,10 +5424,10 @@ window.DIQUE_MONDAY = {
        "id": "13396533614",
        "nombre": "§13 · Acero — Estructura interna y sobre cubierta",
        "peso": 11.02,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 5.51,
        "medicion": null,
        "monto": 86203,
        "nota": null
@@ -5461,10 +5436,10 @@ window.DIQUE_MONDAY = {
        "id": "13396533616",
        "nombre": "§14 · Toma de luces",
        "peso": 0.28,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.28,
        "medicion": null,
        "monto": 2168,
        "nota": null
@@ -5473,10 +5448,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519501",
        "nombre": "§15 · Sistema de propulsión",
        "peso": 5.29,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 2.645,
        "medicion": null,
        "monto": 41364,
        "nota": null
@@ -5485,10 +5460,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519502",
        "nombre": "§16 · Sistema de gobierno",
        "peso": 1.07,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.535,
        "medicion": null,
        "monto": 8357,
        "nota": null
@@ -5497,10 +5472,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519503",
        "nombre": "§17 · Mantenimiento de válvulas y filtros",
        "peso": 1.64,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "50%",
+       "pct": 50,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.82,
        "medicion": null,
        "monto": 12844,
        "nota": null
@@ -5509,10 +5484,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519505",
        "nombre": "§18 · Trabajos varios",
        "peso": 2.68,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "30%",
+       "pct": 30,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.804,
        "medicion": null,
        "monto": 20999,
        "nota": null
@@ -5566,8 +5541,8 @@ window.DIQUE_MONDAY = {
        "id": "13397343531",
        "nombre": "§13 · Acero — Tanque 4 Babor (IFO 4P) · alcance nuevo, por cuantificar",
        "peso": 0,
-       "avance": "10%",
-       "pct": 10,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
        "ponderado": 0.0,
        "medicion": "2026-11-06",
@@ -5611,10 +5586,10 @@ window.DIQUE_MONDAY = {
        "id": "13397353760",
        "nombre": "§13 · Acero — Sandblasting plancha nueva y andamios de acero",
        "peso": 3.27,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 3.27,
        "medicion": null,
        "monto": 25688,
        "nota": null
@@ -5897,8 +5872,7 @@ window.DIQUE_MONDAY = {
    "proyectado": 3500,
    "lineas": [
     "13098367009",
-    "13098338326",
-    "13098328158"
+    "13098338326"
    ],
    "pos": [
     "13346658601",
@@ -8317,7 +8291,7 @@ window.DIQUE_MONDAY = {
    "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 16.47
+   "avanceDias": 21.82
   },
   "cubierta": {
    "lineas": 18,
@@ -8326,16 +8300,16 @@ window.DIQUE_MONDAY = {
    "avanceDias": 22.75
   },
   "tecnico": {
-   "lineas": 10,
-   "conDuracion": 8,
-   "duracion": 44,
-   "avanceDias": 14.445
+   "lineas": 9,
+   "conDuracion": 7,
+   "duracion": 43,
+   "avanceDias": 24.095
   },
   "total": {
-   "lineas": 200,
-   "conDuracion": 55,
-   "duracion": 115,
-   "avanceDias": 53.665
+   "lineas": 199,
+   "conDuracion": 54,
+   "duracion": 114,
+   "avanceDias": 68.66499999999999
   }
  },
  "historial": [
@@ -14687,7 +14661,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-20",
-   "avance": 46.67,
+   "avance": 60.23,
    "pct": {
     "13256760608": 50,
     "13256760158": 50,
@@ -14733,11 +14707,11 @@ window.DIQUE_MONDAY = {
     "13095570185": 0,
     "13428126280": 100,
     "13428159726": 100,
-    "13256760157": 83,
-    "13256755192": 50,
+    "13256760157": 100,
+    "13256755192": 75,
     "13256755203": 50,
-    "13256744926": 50,
-    "13256760609": 50,
+    "13256744926": 75,
+    "13256760609": 93,
     "13256744868": 93,
     "13043950472": 0,
     "13043945735": 0,
@@ -14767,11 +14741,11 @@ window.DIQUE_MONDAY = {
     "13095642636": 0,
     "13095599565": 0,
     "13095643648": 0,
-    "13095569998": 50,
+    "13095569998": 75,
     "13043941391": 0,
     "13095616904": 0,
-    "13373451881": 50,
-    "13373417444": 50,
+    "13373451881": 25,
+    "13373417444": 75,
     "13043924545": 0,
     "13043924546": 0,
     "13095643872": 0,
@@ -14784,10 +14758,10 @@ window.DIQUE_MONDAY = {
     "13095604536": 0,
     "13095613807": 0,
     "13277138828": 50,
-    "13277158049": 50,
-    "13277104868": 50,
-    "13277169481": 50,
-    "13277138491": 50,
+    "13277158049": 25,
+    "13277104868": 25,
+    "13277169481": 75,
+    "13277138491": 25,
     "13277157364": 96,
     "13043950429": 0,
     "13043932348": 0,
@@ -14810,7 +14784,7 @@ window.DIQUE_MONDAY = {
     "13256760245": 50,
     "13095637379": 0,
     "13095603385": 0,
-    "13256760246": 25,
+    "13256760246": 50,
     "13043924495": 0,
     "13043924496": 0,
     "13043932347": 0,
@@ -14823,18 +14797,18 @@ window.DIQUE_MONDAY = {
     "13095613978": 0,
     "13095637378": 0,
     "13095603722": 0,
-    "13095603720": 50,
+    "13095603720": 75,
     "13043932296": 0,
     "13043932299": 0,
     "13095613430": 0,
-    "13095628540": 50,
-    "13256755102": 50,
+    "13095628540": 75,
+    "13256755102": 75,
     "13095637314": 0,
-    "13095603679": 25,
-    "13256760623": 25,
-    "13256755233": 25,
-    "13256755205": 25,
-    "13256755234": 25,
+    "13095603679": 75,
+    "13256760623": 75,
+    "13256755233": 75,
+    "13256755205": 75,
+    "13256755234": 75,
     "13043936421": 0,
     "13043936422": 0,
     "13043936423": 0,
@@ -14853,9 +14827,9 @@ window.DIQUE_MONDAY = {
     "13043932350": 0,
     "13043936420": 0,
     "13256755103": 25,
-    "13256755204": 25,
-    "13256755193": 25,
-    "13277158044": 50,
+    "13256755204": 75,
+    "13256755193": 50,
+    "13277158044": 75,
     "13043921754": 0,
     "13095638257": 0,
     "13095602832": 0,
@@ -14879,171 +14853,114 @@ window.DIQUE_MONDAY = {
     "13315637430": 0,
     "13315624518": 25,
     "13315655864": 0,
-    "13098327907": 0,
-    "13098328158": 0,
+    "13098327907": 50,
     "13098326970": 100,
     "13098333423": 0,
     "13098338352": 0,
     "13098337112": 100,
-    "13098334682": 75,
-    "13098338054": 27.7,
+    "13098334682": 100,
+    "13098338054": 51.7,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "d8b637d7cf96",
+ "_huella": "8eccb4807418",
  "cambiosLectura": [
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "83%",
+   "ahora": "100%"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "$ Incurrido",
+   "trabajo": "Línea de descarga de bomba de lastre de estribor",
+   "campo": "Fecha Fin",
    "antes": "—",
-   "ahora": "457.43"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "$ Incurrido",
-   "antes": "55.88",
-   "ahora": "-432.38"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Mantenimiento preventivo del generador de emergencia",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "3676.47"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Adquisición de cooler de aceite (generadores)",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "749.7"
+   "ahora": "2026-11-20"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Válvula de succión de bomba de lastre de babor",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Línea de succión de bomba de servicios generales",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Bomba de sentina del bow thruster — reemplazo por eléctrica",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "93%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Motor electrico de Bow Thruster",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "25%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Motor eléctrico para reemplazar la araña de acople",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Motor compresor de aire #1",
-   "campo": "$ Incurrido",
+   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
+   "campo": "Fecha Fin",
    "antes": "—",
-   "ahora": "168.58"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor compresor de aire #2",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "200.6"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Fabricación de tubería contraincendio",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "3195.61"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "ahora": "2026-11-20"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Control local de propulsión + Cargador de batería #2",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "25%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Bow thruster (punto neutro) + Panel bombas verticales 350 kW",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "25%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Auto pilot + Sewage (motor y compresor)",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Panel contra incendio",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "25%"
   },
   {
    "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
+   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
    "campo": "Estado",
    "antes": "25%",
    "ahora": "50%"
@@ -15052,19 +14969,68 @@ window.DIQUE_MONDAY = {
    "tablero": "P1. Ingeniería",
    "trabajo": "Pala y mecha del timón — inspección, sellos y rodamientos",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Eje de cola — sellos e inspección",
    "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
+   "antes": "50%",
+   "ahora": "75%"
   },
   {
    "tablero": "P1. Ingeniería",
    "trabajo": "Sello interno del acople del eje de paso variable",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación del fondo de la sentina de máquinas (bajo la reductora)",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Reparación de fuga en el tanque de sewage",
    "campo": "Estado",
    "antes": "25%",
    "ahora": "50%"
@@ -15073,57 +15039,43 @@ window.DIQUE_MONDAY = {
    "tablero": "P1. Ingeniería",
    "trabajo": "Imprevisto",
    "campo": "Estado",
-   "antes": "25%",
+   "antes": "50%",
+   "ahora": "75%"
+  },
+  {
+   "tablero": "P3. Técnico",
+   "trabajo": "Gasto de Clase",
+   "campo": "Estado",
+   "antes": "0%",
    "ahora": "50%"
   },
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Adquisición de materiales de soldadura",
-   "campo": "$ Incurrido",
-   "antes": "6552.53",
-   "ahora": "7207.53"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Material extra",
-   "campo": "$ Incurrido",
-   "antes": "—",
-   "ahora": "1567.55"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
    "campo": "Estado",
-   "antes": "0%",
-   "ahora": "25%"
+   "antes": "75%",
+   "ahora": "100%"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Foam – Agente Espumógeno",
-   "campo": "Fase",
-   "antes": "Post-dique",
-   "ahora": "Dique"
+   "tablero": "P3. Técnico",
+   "trabajo": "Medición de espesores y cadenas",
+   "campo": "Fecha Fin",
+   "antes": "2026-10-16",
+   "ahora": "2026-11-20"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote de Rescate – Casco",
-   "campo": "Fase",
-   "antes": "Post-dique",
-   "ahora": "Dique"
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Avance (subelementos)",
+   "antes": "27.7 %",
+   "ahora": "51.7 %"
   },
   {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Speed Log – Doppler",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Compás Magnético – Esfera Kelvin",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
+   "tablero": "P3. Técnico",
+   "trabajo": "Aceros y soldadura",
+   "campo": "borrado",
+   "antes": "",
+   "ahora": ""
   }
  ],
  "observaciones": [
@@ -15145,7 +15097,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 31 en ejecución · 2 finalizado(s) · 0 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 30 en ejecución · 3 finalizado(s) · 0 por iniciar."
   },
   {
    "nivel": "aviso",
@@ -15181,7 +15133,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 27.7 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 51.7 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
@@ -15189,7 +15141,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico: 8 trabajo(s) planificado(s) · 3 en ejecución · 2 finalizado(s) · 3 por iniciar."
+   "texto": "P3. Técnico: 7 trabajo(s) planificado(s) · 3 en ejecución · 3 finalizado(s) · 1 por iniciar."
   },
   {
    "nivel": "aviso",
@@ -15201,7 +15153,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (75%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
   },
   {
    "nivel": "aviso",
@@ -15210,6 +15162,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "aviso",
    "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Gasto de Clase\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
   },
   {
    "nivel": "aviso",
