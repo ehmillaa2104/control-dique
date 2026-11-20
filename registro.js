@@ -21,28 +21,29 @@ window.DIQUE_REGISTRO = {
           { "txt": "Arrancó la pintura de obra viva: primer aplicado en la proa y el costado", "extra": "17–20 nov" }
         ] },
         { "zona": "Obra viva", "items": [
-          { "txt": "Lavado y primer por zonas sobre lo arenado; ya cubiertas la proa y el costado", "extra": "20 nov" }
+          { "txt": "Lavado a presión del casco y del área arenada; primer en la proa la tarde del 17 nov y luego en el costado (20 nov)", "extra": "20 nov" }
         ] },
         { "zona": "Propulsión y gobierno", "items": [
-          { "txt": "Bow Thruster desarmado al 100 %; piezas, orings y retenedoras en fabricación", "extra": "20 nov" },
-          { "txt": "Eje de cola: acoples separados y desmontaje de las aspas en curso", "extra": "20 nov" },
-          { "txt": "Timón: pala desmontada, falta retirar la mecha", "extra": "50 %" }
+          { "txt": "Bow Thruster: aspas del núcleo desmontadas (17 nov), núcleo fuera (18 nov) y carcasa de rodamientos con deterioro (19 nov); quedó 100 % desarmado y se fabrican piezas, orings y retenedoras", "extra": "20 nov" },
+          { "txt": "Eje de cola: acoples del eje y de la reductora separados (16 nov), acople retirado para extraerlo con seguridad (18 nov) y desmontaje de las aspas desde el 19 nov", "extra": "extracción 60 %, aspas 30 % · 20 nov" },
+          { "txt": "Timón: pala desmontada para inspección (16 nov); falta retirar la mecha", "extra": "50 %" }
         ] },
         { "zona": "Tanques de carga", "items": [
-          { "txt": "En soldadura: 2P 80 %, 3S 60 %, 5S 50 %, 3P 30 %", "extra": "20 nov" },
-          { "txt": "En instalación de láminas: 5P 90 %, 2S 85 %, 1S 60 %, 1P 40 %", "extra": "20 nov" },
-          { "txt": "La soldadura sigue también de noche" }
+          { "txt": "En soldadura: 2P 80 %, 3S 60 %, 5S 50 %, 3P 30 %; se suelda también de noche", "extra": "20 nov" },
+          { "txt": "En instalación de láminas: 5P 90 %, 2S 85 %, 1S 60 %, 1P 40 %; en los tanques 1 todavía se corta acero", "extra": "20 nov" }
         ] },
         { "zona": "Casco y estructura", "items": [
           { "txt": "Estructura interna del casco en la zona de máquinas 25 %; acero del fore peak 30 %", "extra": "20 nov" }
         ] },
         { "zona": "Sala de máquinas", "items": [
-          { "txt": "Nueva bomba de enfriamiento de la máquina principal instalada; su panel eléctrico va en 98 %", "extra": "19 nov" },
-          { "txt": "Válvulas de tomas de mar extraídas al 85 %; nueva válvula de descarga de agua salada instalada", "extra": "19 nov" },
-          { "txt": "Codos de los enfriadores de agua dulce y de aceite en fabricación (70 %); tuberías al 75 %", "extra": "19 nov" },
-          { "txt": "Grúas de medianía y de estribor y winche de proa: componentes hidráulicos desmontados para mantenimiento", "extra": "19 nov" },
+          { "txt": "Nueva bomba de enfriamiento de la máquina principal: base fabricada (15 nov), bomba instalada (16 nov) y panel eléctrico en armado", "extra": "panel 98 % · 19 nov" },
+          { "txt": "Codos de entrada a los enfriadores de agua dulce y de aceite: desmontados (17 nov) y en fabricación", "extra": "70 % · 19 nov" },
+          { "txt": "Tomas de mar: válvulas en extracción; nueva válvula de descarga de agua salada de la máquina principal instalada (18 nov)", "extra": "85 % · 19 nov" },
+          { "txt": "Tuberías de la sala de máquinas: desmontaje, fabricación e instalación", "extra": "75 % · 19 nov" },
+          { "txt": "Grúas de medianía y de estribor y winche de proa: bloque de control y motores hidráulicos desmontados; el del winche, al taller", "extra": "19 nov" },
           { "txt": "Bomba contra incendio de emergencia: fuga en el sello mecánico por desgaste del eje", "extra": "hallazgo · 19 nov" },
-          { "txt": "Terminados: megado de motores, limpieza de sentina y válvula de seguridad de la botella de aire #1 certificada" }
+          { "txt": "Botellas de aire: válvula de seguridad #2 desmontada para prueba (17 nov); la #1 volvió probada y certificada (19 nov)" },
+          { "txt": "Terminados: megado de motores eléctricos (15 nov) y limpieza de la sentina (17 nov)" }
         ] }
       ],
       "medios": [
@@ -195,17 +196,17 @@ window.DIQUE_REGISTRO = {
           { "txt": "Bow Thruster con juego, detectado en la inspección del dique; el túnel está cubierto de incrustación y óxido", "extra": "hallazgo · 13 nov" }
         ] },
         { "zona": "Obra viva", "items": [
-          { "txt": "Caracoles retirados al 100 % y lavado del casco en curso desde el 12 nov; arenado previsto", "extra": "13 nov" },
+          { "txt": "Lavado del casco desde el 12 nov, empezando por la proa; caracoles retirados al 100 % y arenado previsto (13 nov)", "extra": "13 nov" },
           { "txt": "El fondo y el pantoque llegaron con incrustación marina abundante y la pintura vieja muy gastada", "extra": "12 nov" }
         ] },
         { "zona": "Propulsión y gobierno", "items": [
-          { "txt": "Bow Thruster: pruebas operativas hechas, holgura axial de las aspas verificada y aceite del núcleo drenado", "extra": "13 nov" },
-          { "txt": "Eje de cola: guardacabos retirados, caída medida (84,4 mm arriba y 82,5 mm abajo) y eje desacoplado de la reductora", "extra": "30 % · 13 nov" },
-          { "txt": "Timón: preparativos para bajar la pala", "extra": "40 % · 14 nov" }
+          { "txt": "Bow Thruster: pruebas operativas a babor y estribor (12 nov); holgura axial de las aspas verificada y aceite del núcleo drenado (13 nov)", "extra": "13 nov" },
+          { "txt": "Eje de cola: guardacabo retirado y caída medida, 84,4 mm arriba y 82,5 mm abajo (12 nov); aceite drenado, caja de sellos aflojada y eje desacoplado de la reductora (13 nov)", "extra": "30 % · 13 nov" },
+          { "txt": "Timón: se quitan los registros (13 nov) y siguen los preparativos para bajar la pala", "extra": "40 % · 14 nov" }
         ] },
         { "zona": "Tanques de carga", "items": [
           { "txt": "Instalación de láminas: 3S 100 % en el mamparo de carga, 5P 85 %, 5S 80 %, 1P 75 %, 2P y 2S 60 %, 1S 55 %, 3P 50 %", "extra": "13 nov" },
-          { "txt": "Corte terminado en 3P, 3S, 5P y 5S; el 3S arranca la soldadura y la relojera pasa a ser un frente propio en 3S, 5P y 5S", "extra": "13 nov" },
+          { "txt": "Corte terminado en 3P, 3S, 5P y 5S (10 nov); el 3S arranca la soldadura y la relojera pasa a ser un frente propio en 3S, 5P y 5S (13 nov)", "extra": "13 nov" },
           { "txt": "El 1S es el más lento: tiene bastante acero por cambiar, incluido el que da contra el deep tank", "extra": "13 nov" },
           { "txt": "El 3P bajó de 75 % (10 nov) a 50 % (13 nov) en el reporte, y el tanque 4 babor sigue sin cuantificar", "extra": "por confirmar" }
         ] },
@@ -214,13 +215,15 @@ window.DIQUE_REGISTRO = {
           { "txt": "Hacia proa: 50 % de láminas; el resto espera el acero de la relojera de ventilación", "extra": "10 nov" }
         ] },
         { "zona": "Sala de máquinas", "items": [
-          { "txt": "Bomba de lastre de estribor terminada: bomba, motor y tubería de descarga instalados", "extra": "terminado · 14 nov" },
+          { "txt": "Bomba de lastre de estribor: posicionada (9 nov), motor bajado (10 nov) e instalado (11 nov), conexión eléctrica (12 nov) y tubería de descarga instalada (14 nov)", "extra": "terminado · 14 nov" },
           { "txt": "La bomba de servicios generales pasa a enfriar la máquina principal mientras se instala una bomba nueva", "extra": "14 nov" },
-          { "txt": "Bomba de sentina: tuberías montadas y panel eléctrico en armado", "extra": "95 % · 13 nov" },
-          { "txt": "Válvulas de descarga y tomas de mar en extracción (60 %); tuberías de la sala desmontadas para reparar (30 %)", "extra": "14 nov" },
-          { "txt": "Indicador de ángulo de timón en calibración (96 %); megado de motores eléctricos al 93 %", "extra": "11 nov" },
-          { "txt": "Tubería de succión de la bomba de IFO del tanque 3 estribor con perforaciones", "extra": "hallazgo · 10 nov" },
-          { "txt": "Terminados: megado del alternador y mantenimiento del auxiliar de emergencia, e izaje de la bomba de IFO 3S" }
+          { "txt": "Bomba de sentina: montaje de tuberías y panel eléctrico en armado (13 nov)", "extra": "95 % · 13 nov" },
+          { "txt": "Refrigeración: el astillero empezó a desmontar las tuberías de fondo (12 nov); válvulas de descarga y tomas de mar en extracción", "extra": "60 % · 14 nov" },
+          { "txt": "Tuberías de la sala de máquinas: se empiezan a extraer para reparar o reemplazar (12 nov)", "extra": "30 % · 13 nov" },
+          { "txt": "Indicador de ángulo de timón: calibración de los repetidores del puente y del cuarto de timón", "extra": "96 % · 10 nov" },
+          { "txt": "Megado de motores eléctricos con mediciones satisfactorias", "extra": "96 % · 14 nov" },
+          { "txt": "Bomba de IFO del tanque 3 estribor izada (10 nov): su tubería de succión tiene perforaciones", "extra": "hallazgo · 10 nov" },
+          { "txt": "Terminados: megado del alternador y mantenimiento preventivo del auxiliar de emergencia (9 nov)" }
         ] }
       ],
       "medios": [
