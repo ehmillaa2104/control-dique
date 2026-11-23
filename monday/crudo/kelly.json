@@ -1,5 +1,5 @@
 {
- "extraido": "2026-11-22",
+ "extraido": "2026-11-23",
  "boards": [
   {
    "id": "18435454602",
@@ -3118,7 +3118,7 @@
       "id": "13098327837",
       "name": "Limpieza de tanques de carga",
       "created_at": "2026-09-21T19:58:43Z",
-      "updated_at": "2026-10-23T21:02:50Z",
+      "updated_at": "2026-11-23T14:00:47Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -3170,7 +3170,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:50 UTC"
+        "text": "2026-11-23 14:00:47 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3196,7 +3196,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": "0"
+        "display_value": "0, 35914.18, 7341.05"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -3304,7 +3304,7 @@
       "id": "13127441793",
       "name": "Limpieza de Tanques de Lastre",
       "created_at": "2026-09-24T16:20:09Z",
-      "updated_at": "2026-10-23T21:02:51Z",
+      "updated_at": "2026-11-23T14:00:47Z",
       "group": {
        "id": "group_mm7d9efe",
        "title": "Operaciones"
@@ -3356,7 +3356,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-10-23 21:02:51 UTC"
+        "text": "2026-11-23 14:00:47 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -3382,7 +3382,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "35914.18, 7341.05"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -4219,7 +4219,7 @@
         "id": "lookup_mm7ybkjg",
         "type": "mirror",
         "text": null,
-        "display_value": ""
+        "display_value": "3317.00, 6848.00"
        },
        {
         "id": "lookup_mm7y2awx",
@@ -7047,7 +7047,7 @@
       "id": "13408567193",
       "name": "11530 · Altamar Panamá — Sellado de pasaportes",
       "created_at": "2026-10-28T16:55:00Z",
-      "updated_at": "2026-11-03T18:19:03Z",
+      "updated_at": "2026-11-23T13:48:25Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7056,7 +7056,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7110,7 +7110,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-03 18:19:03 UTC"
+        "text": "2026-11-23 13:48:25 UTC"
        }
       ],
       "subitems": []
@@ -7707,7 +7707,7 @@
       "id": "13546729529",
       "name": "0110 · Green Harbor — Limpieza de tanques de carga y slop",
       "created_at": "2026-11-13T18:47:05Z",
-      "updated_at": "2026-11-13T21:51:24Z",
+      "updated_at": "2026-11-23T13:59:45Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7716,7 +7716,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7735,7 +7735,10 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13098327837",
+         "13127441793"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7770,7 +7773,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:24 UTC"
+        "text": "2026-11-23 13:59:45 UTC"
        }
       ],
       "subitems": []
@@ -7779,7 +7782,7 @@
       "id": "13546729597",
       "name": "0111 · Green Harbor — Limpieza de tanques, saldo",
       "created_at": "2026-11-13T18:47:06Z",
-      "updated_at": "2026-11-13T21:51:26Z",
+      "updated_at": "2026-11-23T14:00:52Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7788,7 +7791,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7807,7 +7810,10 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13098327837",
+         "13127441793"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7842,7 +7848,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:26 UTC"
+        "text": "2026-11-23 14:00:52 UTC"
        }
       ],
       "subitems": []
@@ -7851,7 +7857,7 @@
       "id": "13546729598",
       "name": "0088 · Green Harbor — Impermeabilización de acomodaciones",
       "created_at": "2026-11-13T18:47:06Z",
-      "updated_at": "2026-11-13T21:51:28Z",
+      "updated_at": "2026-11-23T13:50:43Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7860,7 +7866,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7879,7 +7885,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13098327946"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7914,7 +7922,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:28 UTC"
+        "text": "2026-11-23 13:50:43 UTC"
        }
       ],
       "subitems": []
@@ -7923,7 +7931,7 @@
       "id": "13546729599",
       "name": "0089 · Green Harbor — Renovación en acomodaciones",
       "created_at": "2026-11-13T18:47:07Z",
-      "updated_at": "2026-11-13T21:51:30Z",
+      "updated_at": "2026-11-23T13:50:52Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -7932,7 +7940,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -7951,7 +7959,9 @@
         "id": "board_relation_mm7y2fcq",
         "type": "board_relation",
         "text": null,
-        "linked_item_ids": []
+        "linked_item_ids": [
+         "13098327946"
+        ]
        },
        {
         "id": "numeric_mm2pfpzs",
@@ -7986,7 +7996,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:30 UTC"
+        "text": "2026-11-23 13:50:52 UTC"
        }
       ],
       "subitems": []
@@ -7995,7 +8005,7 @@
       "id": "13546729600",
       "name": "11546 · Altamar Panamá — Servicios migratorios",
       "created_at": "2026-11-13T18:47:07Z",
-      "updated_at": "2026-11-13T21:51:31Z",
+      "updated_at": "2026-11-23T13:48:49Z",
       "group": {
        "id": "group_mm32rmd2",
        "title": "PO por enlazar"
@@ -8004,7 +8014,7 @@
        {
         "id": "dropdown_mm334y96",
         "type": "dropdown",
-        "text": null
+        "text": "Cubierta"
        },
        {
         "id": "text_mm2p9mx7",
@@ -8058,7 +8068,7 @@
        {
         "id": "pulse_updated_mm3j8vr0",
         "type": "last_updated",
-        "text": "2026-11-13 21:51:31 UTC"
+        "text": "2026-11-23 13:48:49 UTC"
        }
       ],
       "subitems": []
@@ -12003,9 +12013,9 @@
     "items": [
      {
       "id": "13362169864",
-      "name": "Segunda Limpieza del tanque de carga 4S",
+      "name": "Segunda Limpieza del tanque de carga 4S, Tanque de Slop y Alquiler de equipos adicionales.",
       "created_at": "2026-10-22T19:37:03Z",
-      "updated_at": "2026-10-28T03:43:17Z",
+      "updated_at": "2026-11-23T14:04:40Z",
       "group": {
        "id": "topics",
        "title": "DIQUE KELLY"
@@ -12027,12 +12037,12 @@
        {
         "id": "dropdown_mkzbgqr7",
         "type": "dropdown",
-        "text": "Calidad"
+        "text": "Calidad, Tiempo"
        },
        {
         "id": "numeric_mm268zat",
         "type": "numbers",
-        "text": "1385.95"
+        "text": "2280.36"
        },
        {
         "id": "numeric_mm2epnk4",

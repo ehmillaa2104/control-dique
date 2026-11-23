@@ -5,7 +5,7 @@
 window.DIQUE_MONDAY = {
  "proyecto": "Kelly Trader",
  "fuente": "Monday · GESTIÓN DE DIQUES / KELLY TRADER",
- "extraido": "2026-11-22",
+ "extraido": "2026-11-23",
  "cronograma": [
   {
    "id": "13095528116",
@@ -4598,12 +4598,12 @@ window.DIQUE_MONDAY = {
      "aprobado": 28573.13,
      "proyectado": 28573.13,
      "po": null,
-     "incurrido": 0,
+     "incurrido": 43255.23,
      "fin": "2026-10-21",
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-23",
      "costo": "aprobado"
     },
     {
@@ -4648,12 +4648,12 @@ window.DIQUE_MONDAY = {
      "aprobado": 14682.1,
      "proyectado": 14682.1,
      "po": null,
-     "incurrido": null,
+     "incurrido": 43255.23,
      "fin": "2026-10-21",
      "cc": [
       "13081201302"
      ],
-     "actualizado": "2026-10-23",
+     "actualizado": "2026-11-23",
      "costo": "aprobado"
     },
     {
@@ -4873,7 +4873,7 @@ window.DIQUE_MONDAY = {
      "aprobado": 10165,
      "proyectado": 10165,
      "po": null,
-     "incurrido": null,
+     "incurrido": 10165,
      "fin": null,
      "cc": [
       "13081200176"
@@ -6436,7 +6436,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13408567193",
    "nombre": "11530 · Altamar Panamá — Sellado de pasaportes",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Altamar Panamá, S.A.",
    "po": 0,
    "incurrido": 327.5,
@@ -6448,7 +6448,7 @@ window.DIQUE_MONDAY = {
     "13081177348"
    ],
    "trabajos": [],
-   "actualizado": "2026-11-03"
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13408538335",
@@ -6601,7 +6601,7 @@ window.DIQUE_MONDAY = {
   {
    "id": "13546729529",
    "nombre": "0110 · Green Harbor — Limpieza de tanques de carga y slop",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Green Harbor Company Inc",
    "po": 0,
    "incurrido": 35914.18,
@@ -6612,13 +6612,16 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081201302"
    ],
-   "trabajos": [],
-   "actualizado": "2026-11-13"
+   "trabajos": [
+    "13098327837",
+    "13127441793"
+   ],
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13546729597",
    "nombre": "0111 · Green Harbor — Limpieza de tanques, saldo",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Green Harbor Company Inc",
    "po": 0,
    "incurrido": 7341.05,
@@ -6629,13 +6632,16 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081201302"
    ],
-   "trabajos": [],
-   "actualizado": "2026-11-13"
+   "trabajos": [
+    "13098327837",
+    "13127441793"
+   ],
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13546729598",
    "nombre": "0088 · Green Harbor — Impermeabilización de acomodaciones",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Green Harbor Company Inc",
    "po": 0,
    "incurrido": 3317,
@@ -6646,13 +6652,15 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081200176"
    ],
-   "trabajos": [],
-   "actualizado": "2026-11-13"
+   "trabajos": [
+    "13098327946"
+   ],
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13546729599",
    "nombre": "0089 · Green Harbor — Renovación en acomodaciones",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Green Harbor Company Inc",
    "po": 0,
    "incurrido": 6848,
@@ -6663,13 +6671,15 @@ window.DIQUE_MONDAY = {
    "cc": [
     "13081200176"
    ],
-   "trabajos": [],
-   "actualizado": "2026-11-13"
+   "trabajos": [
+    "13098327946"
+   ],
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13546729600",
    "nombre": "11546 · Altamar Panamá — Servicios migratorios",
-   "area": "",
+   "area": "Cubierta",
    "proveedor": "Altamar Panamá, S.A.",
    "po": 0,
    "incurrido": 528.9,
@@ -6681,7 +6691,7 @@ window.DIQUE_MONDAY = {
     "13081177347"
    ],
    "trabajos": [],
-   "actualizado": "2026-11-13"
+   "actualizado": "2026-11-23"
   },
   {
    "id": "13546729601",
@@ -7860,10 +7870,10 @@ window.DIQUE_MONDAY = {
   },
   {
    "id": "13362169864",
-   "nombre": "Segunda Limpieza del tanque de carga 4S",
+   "nombre": "Segunda Limpieza del tanque de carga 4S, Tanque de Slop y Alquiler de equipos adicionales.",
    "creado": "2026-10-22",
-   "tipo": "Calidad",
-   "costo": 1385.95,
+   "tipo": "Calidad, Tiempo",
+   "costo": 2280.36,
    "dias": 1,
    "estado": "Solicitado",
    "aprobado": null,
@@ -7871,7 +7881,7 @@ window.DIQUE_MONDAY = {
    "actividades": [
     "13098327837"
    ],
-   "actualizado": "2026-10-28"
+   "actualizado": "2026-11-23"
   }
  ],
  "participacion": {
@@ -15353,10 +15363,237 @@ window.DIQUE_MONDAY = {
     "13278839703": 50,
     "13346969104": 50
    }
+  },
+  {
+   "fecha": "2026-11-23",
+   "avance": 60.23,
+   "pct": {
+    "13256760608": 50,
+    "13256760158": 50,
+    "13043921163": 0,
+    "13043943307": 0,
+    "13095643040": 0,
+    "13095617046": 0,
+    "13095599940": 0,
+    "13095599941": 0,
+    "13095594034": 0,
+    "13095599992": 0,
+    "13095616880": 0,
+    "13095570221": 0,
+    "13095594157": 0,
+    "13095604569": 0,
+    "13095643042": 0,
+    "13095593116": 0,
+    "13095643083": 0,
+    "13095604666": 0,
+    "13095604667": 0,
+    "13095605104": 0,
+    "13095599993": 0,
+    "13043922222": 100,
+    "13043922221": 0,
+    "13043922220": 0,
+    "13043936425": 0,
+    "13043922218": 0,
+    "13043922219": 0,
+    "13043936426": 0,
+    "13043924490": 0,
+    "13043950469": 0,
+    "13043924377": 0,
+    "13043924378": 0,
+    "13043924379": 0,
+    "13043924375": 0,
+    "13043945523": 0,
+    "13043950430": 0,
+    "13043945522": 0,
+    "13043950431": 0,
+    "13095604901": 0,
+    "13095604668": 0,
+    "13095617389": 0,
+    "13095570185": 0,
+    "13428126280": 100,
+    "13428159726": 100,
+    "13256760157": 100,
+    "13256755192": 75,
+    "13256755203": 50,
+    "13256744926": 75,
+    "13256760609": 93,
+    "13256744868": 93,
+    "13043950472": 0,
+    "13043945735": 0,
+    "13043950470": 0,
+    "13043945736": 0,
+    "13043932303": 0,
+    "13043932345": 0,
+    "13043924491": 0,
+    "13043950471": 0,
+    "13043950468": 0,
+    "13043924492": 0,
+    "13043924547": 0,
+    "13043924548": 0,
+    "13043932301": 0,
+    "13043943301": 0,
+    "13043943303": 0,
+    "13043943305": 0,
+    "13043932352": 0,
+    "13095643646": 0,
+    "13095605151": 0,
+    "13095616903": 0,
+    "13095643870": 0,
+    "13095616905": 0,
+    "13095599004": 0,
+    "13095600128": 0,
+    "13095643647": 0,
+    "13095642636": 0,
+    "13095599565": 0,
+    "13095643648": 0,
+    "13095569998": 75,
+    "13043941391": 0,
+    "13095616904": 0,
+    "13373451881": 25,
+    "13373417444": 75,
+    "13043924545": 0,
+    "13043924546": 0,
+    "13095643872": 0,
+    "13095605154": 0,
+    "13095643873": 0,
+    "13095570205": 0,
+    "13043941390": 0,
+    "13043924488": 0,
+    "13095643937": 100,
+    "13095604536": 0,
+    "13095613807": 0,
+    "13277138828": 50,
+    "13277158049": 25,
+    "13277104868": 25,
+    "13277169481": 75,
+    "13277138491": 25,
+    "13277157364": 96,
+    "13043950429": 0,
+    "13043932348": 0,
+    "13043921752": 0,
+    "13043936427": 0,
+    "13043950425": 0,
+    "13043950426": 0,
+    "13043941394": 0,
+    "13043945527": 0,
+    "13043950423": 0,
+    "13043950424": 0,
+    "13043950428": 0,
+    "13043950427": 0,
+    "13043932349": 0,
+    "13043922215": 0,
+    "13043922216": 0,
+    "13043922217": 0,
+    "13095628677": 0,
+    "13095603677": 0,
+    "13256760245": 50,
+    "13095637379": 0,
+    "13095603385": 0,
+    "13256760246": 50,
+    "13043924495": 0,
+    "13043924496": 0,
+    "13043932347": 0,
+    "13043924493": 0,
+    "13043945526": 0,
+    "13043945524": 0,
+    "13095638228": 0,
+    "13095637451": 0,
+    "13043921183": 0,
+    "13095613978": 0,
+    "13095637378": 0,
+    "13095603722": 0,
+    "13095603720": 75,
+    "13043932296": 0,
+    "13043932299": 0,
+    "13095613430": 0,
+    "13095628540": 75,
+    "13256755102": 75,
+    "13095637314": 0,
+    "13095603679": 75,
+    "13256760623": 75,
+    "13256755233": 75,
+    "13256755205": 75,
+    "13256755234": 75,
+    "13043936421": 0,
+    "13043936422": 0,
+    "13043936423": 0,
+    "13043941389": 0,
+    "13043936424": 0,
+    "13043943240": 0,
+    "13043943242": 0,
+    "13043943244": 0,
+    "13043941395": 0,
+    "13043941393": 0,
+    "13095614175": 0,
+    "13095603678": 0,
+    "13095603531": 0,
+    "13095614176": 0,
+    "13095603889": 0,
+    "13043932350": 0,
+    "13043936420": 0,
+    "13256755103": 25,
+    "13256755204": 75,
+    "13256755193": 50,
+    "13277158044": 75,
+    "13043921754": 0,
+    "13095638257": 0,
+    "13095602832": 0,
+    "13095613982": 0,
+    "13428203940": 100,
+    "13098327837": 100,
+    "13098295887": 100,
+    "13127441793": 100,
+    "13098328358": 0,
+    "13098327364": 0,
+    "13127948545": 100,
+    "13238699549": 100,
+    "13098338467": 25,
+    "13098367009": 25,
+    "13098306630": 0,
+    "13098338326": 0,
+    "13098327946": 75,
+    "13212064635": 25,
+    "13212017532": 0,
+    "13212064416": 0,
+    "13315637430": 0,
+    "13315624518": 25,
+    "13315655864": 0,
+    "13098327907": 50,
+    "13098326970": 100,
+    "13098333423": 0,
+    "13098338352": 0,
+    "13098337112": 100,
+    "13098334682": 100,
+    "13098338054": 51.7,
+    "13278839703": 50,
+    "13346969104": 50
+   }
   }
  ],
- "_huella": "30c3d44e896f",
- "cambiosLectura": [],
+ "_huella": "e541360c1161",
+ "cambiosLectura": [
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de tanques de carga",
+   "campo": "$ Incurrido",
+   "antes": "0",
+   "ahora": "43255.23"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Limpieza de Tanques de Lastre",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "43255.23"
+  },
+  {
+   "tablero": "P2. Cubierta",
+   "trabajo": "Mantenimiento a acomodaciones",
+   "campo": "$ Incurrido",
+   "antes": "—",
+   "ahora": "10165"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",
@@ -15504,19 +15741,19 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0110 · Green Harbor — Limpieza de tanques de carga y slop\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0110 · Green Harbor — Limpieza de tanques de carga y slop\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0111 · Green Harbor — Limpieza de tanques, saldo\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0111 · Green Harbor — Limpieza de tanques, saldo\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0088 · Green Harbor — Impermeabilización de acomodaciones\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0088 · Green Harbor — Impermeabilización de acomodaciones\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
-   "texto": "Contabilidad Kelly Trader · \"0089 · Green Harbor — Renovación en acomodaciones\": sin monto, trabajo enlazado; no suma en los totales."
+   "texto": "Contabilidad Kelly Trader · \"0089 · Green Harbor — Renovación en acomodaciones\": sin monto; no suma en los totales."
   },
   {
    "nivel": "aviso",
