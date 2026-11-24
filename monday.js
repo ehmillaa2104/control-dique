@@ -15758,72 +15758,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "1dcd365cf968",
- "cambiosLectura": [
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-24"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-24"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "50%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-24"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-24"
-  }
- ],
+ "_huella": "716214e5d8b4",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
