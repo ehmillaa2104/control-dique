@@ -5219,7 +5219,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 62.4,
+     "pct": 66.2,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5292,10 +5292,10 @@ window.DIQUE_MONDAY = {
        "id": "13396532855",
        "nombre": "§05 · Pintura obra muerta",
        "peso": 5.44,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 3.808,
        "medicion": null,
        "monto": 42518,
        "nota": null
@@ -8393,13 +8393,13 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 7,
    "duracion": 43,
-   "avanceDias": 27.84
+   "avanceDias": 29.17
   },
   "total": {
    "lineas": 199,
    "conDuracion": 54,
    "duracion": 114,
-   "avanceDias": 72.41
+   "avanceDias": 73.74000000000001
   }
  },
  "historial": [
@@ -15571,7 +15571,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-24",
-   "avance": 63.52,
+   "avance": 64.68,
    "pct": {
     "13256760608": 50,
     "13256760158": 50,
@@ -15769,20 +15769,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 100,
-    "13098338054": 62.4,
+    "13098338054": 66.2,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "0288db86d5e2",
+ "_huella": "731957b15991",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "51.7 %",
-   "ahora": "62.4 %"
+   "antes": "62.4 %",
+   "ahora": "66.2 %"
   }
  ],
  "observaciones": [
@@ -15836,7 +15836,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 62.4 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 66.2 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
