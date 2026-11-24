@@ -16,6 +16,7 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reporte del superintendente y seguimiento de obra en taller (24 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "La salida del astillero pasa del 25 de noviembre al 1 de diciembre: la camisa del eje de cola no ha salido; falta llevarla al taller y, una vez terminada, montarla y hacer pruebas", "extra": "24 nov" },
           { "txt": "Bow Thruster: piezas reconstruidas en taller tras el deterioro hallado el 19 nov; el 25 nov inicia el armado e instalación", "extra": "24 nov" },
           { "txt": "Tanque 2 babor y tanque 3 estribor terminados: pruebas de tintas conformes y fugas rectificadas", "extra": "24 nov" },
           { "txt": "Casco pintado al 70 %; lo que falta es la rotulación", "extra": "24 nov" },

@@ -2864,7 +2864,7 @@
       "id": "13346969104",
       "name": "Estadia, Viaje y transporte",
       "created_at": "2026-10-21T14:44:49Z",
-      "updated_at": "2026-10-27T15:23:11Z",
+      "updated_at": "2026-11-24T22:17:33Z",
       "group": {
        "id": "group_mm7dsvgg",
        "title": "Técnico"
@@ -2916,12 +2916,12 @@
        {
         "id": "pulse_updated_mm7ge32a",
         "type": "last_updated",
-        "text": "2026-10-27 15:23:11 UTC"
+        "text": "2026-11-24 22:17:33 UTC"
        },
        {
         "id": "color_mm7vv5nh",
         "type": "status",
-        "text": "50%"
+        "text": "75%"
        },
        {
         "id": "numeric_mm7v7xt9",
@@ -29443,7 +29443,7 @@
       "id": "13233510296",
       "name": "Traslado a Panama",
       "created_at": "2026-10-07T21:27:00Z",
-      "updated_at": "2026-11-13T16:59:52Z",
+      "updated_at": "2026-11-24T22:18:43Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -29478,7 +29478,7 @@
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-11-13 16:59:52 UTC"
+        "text": "2026-11-24 22:18:43 UTC"
        }
       ],
       "subitems": []

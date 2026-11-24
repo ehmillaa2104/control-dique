@@ -192,7 +192,7 @@ window.DIQUE_MONDAY = {
     "2026-11-28"
    ],
    "diferencia": 3,
-   "actualizado": "2026-11-13"
+   "actualizado": "2026-11-24"
   },
   {
    "id": "13095528126",
@@ -5720,8 +5720,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Estadia, Viaje y transporte",
      "grupo": "Técnico",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "75%",
+     "pct": 75,
      "cancelado": false,
      "duracion": null,
      "tipo": "",
@@ -5737,7 +5737,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081177348"
      ],
-     "actualizado": "2026-10-27",
+     "actualizado": "2026-11-24",
      "costo": "preliminar"
     }
    ]
@@ -15754,46 +15754,18 @@ window.DIQUE_MONDAY = {
     "13098334682": 100,
     "13098338054": 83.1,
     "13278839703": 50,
-    "13346969104": 50
+    "13346969104": 75
    }
   }
  ],
- "_huella": "31d557da16ac",
+ "_huella": "28263e69b2d4",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-10-21 a 2026-11-19",
-   "ahora": "2026-10-21 a 2026-12-01"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "3",
-   "ahora": "15"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "30",
-   "ahora": "42"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-11-25 a 2026-11-25",
-   "ahora": "2026-12-01 a 2026-12-01"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Diferencia",
-   "antes": "2",
-   "ahora": "8"
+   "tablero": "P3. Técnico",
+   "trabajo": "Estadia, Viaje y transporte",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "75%"
   }
  ],
  "observaciones": [
