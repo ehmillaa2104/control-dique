@@ -12951,7 +12951,7 @@
       "id": "13256760608",
       "name": "Codo de entrada al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T16:54:59Z",
+      "updated_at": "2026-11-24T22:41:44Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -13003,17 +13003,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 16:54:59 UTC"
+        "text": "2026-11-24 22:41:44 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "50%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-24"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -13044,7 +13044,7 @@
       "id": "13256760158",
       "name": "Codo de entrada de aceite al cooler de aceite de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T16:55:04Z",
+      "updated_at": "2026-11-24T22:41:44Z",
       "group": {
        "id": "group_mm7dtwce",
        "title": "1.1 Motores Principales"
@@ -13096,17 +13096,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 16:55:04 UTC"
+        "text": "2026-11-24 22:41:44 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "50%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-24"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -20484,7 +20484,7 @@
       "id": "13373451881",
       "name": "Motor electrico de Bow Thruster",
       "created_at": "2026-10-23T21:38:18Z",
-      "updated_at": "2026-11-20T19:29:33Z",
+      "updated_at": "2026-11-24T22:41:43Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20536,12 +20536,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:29:33 UTC"
+        "text": "2026-11-24 22:41:43 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "50%"
        },
        {
         "id": "date_mm7yv15j",
@@ -26157,7 +26157,7 @@
       "id": "13256760623",
       "name": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:22:41Z",
+      "updated_at": "2026-11-24T22:41:45Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -26209,17 +26209,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:22:41 UTC"
+        "text": "2026-11-24 22:41:45 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-24"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -26250,7 +26250,7 @@
       "id": "13256755233",
       "name": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:22:43Z",
+      "updated_at": "2026-11-24T22:41:44Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -26302,17 +26302,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:22:43 UTC"
+        "text": "2026-11-24 22:41:44 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-24"
        },
        {
         "id": "numeric_mm7yw5hx",

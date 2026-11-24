@@ -262,8 +262,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Codo de entrada al cooler de aceite de máquina principal",
      "grupo": "1.1 Motores Principales",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -275,11 +275,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 1500,
      "po": null,
      "incurrido": 457.43,
-     "fin": null,
+     "fin": "2026-11-24",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-24",
      "costo": "aprobado"
     },
     {
@@ -287,8 +287,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Codo de entrada de aceite al cooler de aceite de máquina principal",
      "grupo": "1.1 Motores Principales",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -300,11 +300,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 1500,
      "po": null,
      "incurrido": -432.38,
-     "fin": null,
+     "fin": "2026-11-24",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-24",
      "costo": "aprobado"
     },
     {
@@ -2287,8 +2287,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Motor electrico de Bow Thruster",
      "grupo": "1.4 Bow Thruster",
      "fase": "Dique",
-     "estado": "25%",
-     "pct": 25,
+     "estado": "50%",
+     "pct": 50,
      "cancelado": false,
      "duracion": 1,
      "tipo": "",
@@ -2304,7 +2304,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-24",
      "costo": ""
     },
     {
@@ -3812,8 +3812,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3825,11 +3825,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 1500,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-24",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-24",
      "costo": "aprobado"
     },
     {
@@ -3837,8 +3837,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
      "grupo": "1.18 Sistema de Refrigeración",
      "fase": "Dique",
-     "estado": "75%",
-     "pct": 75,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3850,11 +3850,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 1500,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-24",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-24",
      "costo": "aprobado"
     },
     {
@@ -8364,7 +8364,7 @@ window.DIQUE_MONDAY = {
    "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 21.82
+   "avanceDias": 23.57
   },
   "cubierta": {
    "lineas": 18,
@@ -8382,7 +8382,7 @@ window.DIQUE_MONDAY = {
    "lineas": 199,
    "conDuracion": 54,
    "duracion": 114,
-   "avanceDias": 79.655
+   "avanceDias": 81.405
   }
  },
  "historial": [
@@ -15554,10 +15554,10 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-24",
-   "avance": 69.87,
+   "avance": 71.41,
    "pct": {
-    "13256760608": 50,
-    "13256760158": 50,
+    "13256760608": 100,
+    "13256760158": 100,
     "13043921163": 0,
     "13043943307": 0,
     "13095643040": 0,
@@ -15637,7 +15637,7 @@ window.DIQUE_MONDAY = {
     "13095569998": 75,
     "13043941391": 0,
     "13095616904": 0,
-    "13373451881": 25,
+    "13373451881": 50,
     "13373417444": 75,
     "13043924545": 0,
     "13043924546": 0,
@@ -15698,8 +15698,8 @@ window.DIQUE_MONDAY = {
     "13256755102": 75,
     "13095637314": 0,
     "13095603679": 75,
-    "13256760623": 75,
-    "13256755233": 75,
+    "13256760623": 100,
+    "13256755233": 100,
     "13256755205": 75,
     "13256755234": 75,
     "13043936421": 0,
@@ -15758,63 +15758,70 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "4de0c1f6205a",
+ "_huella": "1dcd365cf968",
  "cambiosLectura": [
   {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Fecha Real",
-   "antes": "2026-12-01 a 2026-12-04",
-   "ahora": "2026-12-01 a 2026-12-03"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Diferencia",
-   "antes": "9",
-   "ahora": "8"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada al cooler de aceite de máquina principal",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-24"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Duración",
-   "antes": "4",
-   "ahora": "3"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-12-04 a 2026-12-07",
-   "ahora": "2026-12-01 a 2026-12-06"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Codo de entrada de aceite al cooler de aceite de máquina principal",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-24"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "7",
-   "ahora": "6"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Motor electrico de Bow Thruster",
+   "campo": "Estado",
+   "antes": "25%",
+   "ahora": "50%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "4",
-   "ahora": "6"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "Estado",
+   "antes": "75%",
+   "ahora": "100%"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "On Hire (Estimado)",
-   "campo": "Fecha Real",
-   "antes": "2026-12-01 a 2026-12-01",
-   "ahora": "2026-12-06 a 2026-12-06"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de máquina principal",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-24"
   },
   {
-   "tablero": "Cronograma",
-   "trabajo": "On Hire (Estimado)",
-   "campo": "Diferencia",
-   "antes": "0",
-   "ahora": "5"
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "Estado",
+   "antes": "75%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Compra de materiales - Válvula de descarga de agua salada de los generadores",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-24"
   }
  ],
  "observaciones": [
@@ -15836,7 +15843,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 30 en ejecución · 3 finalizado(s) · 0 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 26 en ejecución · 7 finalizado(s) · 0 por iniciar."
   },
   {
    "nivel": "aviso",
