@@ -182,16 +182,16 @@ window.DIQUE_MONDAY = {
    "grupo": "Post Dique",
    "nombre": "Traslado a Panama",
    "estado": "No Iniciado",
-   "duracion": 4,
+   "duracion": 3,
    "base": [
     "2026-11-23",
     "2026-11-25"
    ],
    "real": [
     "2026-12-01",
-    "2026-12-04"
+    "2026-12-03"
    ],
-   "diferencia": 9,
+   "diferencia": 8,
    "actualizado": "2026-11-24"
   },
   {
@@ -199,16 +199,16 @@ window.DIQUE_MONDAY = {
    "grupo": "Post Dique",
    "nombre": "POST-DIQUE (Ejecución)",
    "estado": "No Iniciado",
-   "duracion": 4,
+   "duracion": 6,
    "base": [
     "2026-11-25",
     "2026-11-30"
    ],
    "real": [
-    "2026-12-04",
-    "2026-12-07"
+    "2026-12-01",
+    "2026-12-06"
    ],
-   "diferencia": 7,
+   "diferencia": 6,
    "actualizado": "2026-11-24"
   },
   {
@@ -222,11 +222,11 @@ window.DIQUE_MONDAY = {
     "2026-12-01"
    ],
    "real": [
-    "2026-12-01",
-    "2026-12-01"
+    "2026-12-06",
+    "2026-12-06"
    ],
-   "diferencia": 0,
-   "actualizado": "2026-10-27"
+   "diferencia": 5,
+   "actualizado": "2026-11-24"
   },
   {
    "id": "13095528128",
@@ -15758,21 +15758,63 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "733e18d8d0c5",
+ "_huella": "4de0c1f6205a",
  "cambiosLectura": [
   {
    "tablero": "Cronograma",
    "trabajo": "Traslado a Panama",
    "campo": "Fecha Real",
-   "antes": "2026-11-25 a 2026-11-28",
-   "ahora": "2026-12-01 a 2026-12-04"
+   "antes": "2026-12-01 a 2026-12-04",
+   "ahora": "2026-12-01 a 2026-12-03"
   },
   {
    "tablero": "Cronograma",
    "trabajo": "Traslado a Panama",
    "campo": "Diferencia",
-   "antes": "3",
-   "ahora": "9"
+   "antes": "9",
+   "ahora": "8"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Traslado a Panama",
+   "campo": "Duración",
+   "antes": "4",
+   "ahora": "3"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-12-04 a 2026-12-07",
+   "ahora": "2026-12-01 a 2026-12-06"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "7",
+   "ahora": "6"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Duración",
+   "antes": "4",
+   "ahora": "6"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "On Hire (Estimado)",
+   "campo": "Fecha Real",
+   "antes": "2026-12-01 a 2026-12-01",
+   "ahora": "2026-12-06 a 2026-12-06"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "On Hire (Estimado)",
+   "campo": "Diferencia",
+   "antes": "0",
+   "ahora": "5"
   }
  ],
  "observaciones": [
@@ -15846,19 +15888,19 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (75%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
+   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (75%) en Post-dique, que según el Cronograma empieza el 2026-12-01; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
+   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-01; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
+   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-01; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Gasto de Clase\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
+   "texto": "P3. Técnico · \"Gasto de Clase\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-12-01; revisar la fase."
   },
   {
    "nivel": "aviso",
