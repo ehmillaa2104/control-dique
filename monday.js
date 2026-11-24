@@ -188,10 +188,10 @@ window.DIQUE_MONDAY = {
     "2026-11-25"
    ],
    "real": [
-    "2026-11-25",
-    "2026-11-28"
+    "2026-12-01",
+    "2026-12-04"
    ],
-   "diferencia": 3,
+   "diferencia": 9,
    "actualizado": "2026-11-24"
   },
   {
@@ -15758,21 +15758,21 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "3a7938e4b1cf",
+ "_huella": "733e18d8d0c5",
  "cambiosLectura": [
   {
    "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
+   "trabajo": "Traslado a Panama",
    "campo": "Fecha Real",
-   "antes": "2026-11-28 a 2026-12-01",
-   "ahora": "2026-12-04 a 2026-12-07"
+   "antes": "2026-11-25 a 2026-11-28",
+   "ahora": "2026-12-01 a 2026-12-04"
   },
   {
    "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
+   "trabajo": "Traslado a Panama",
    "campo": "Diferencia",
-   "antes": "1",
-   "ahora": "7"
+   "antes": "3",
+   "ahora": "9"
   }
  ],
  "observaciones": [
@@ -15783,10 +15783,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma: entre 2026-12-02 y 2026-12-03 no hay ninguna actividad cargada (hueco de 2 días)."
   },
   {
    "nivel": "info",
