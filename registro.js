@@ -16,6 +16,7 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reporte del superintendente y seguimiento de obra en taller (24 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "Bow Thruster: piezas reconstruidas en taller tras el deterioro hallado el 19 nov; el 25 nov inicia el armado e instalación", "extra": "24 nov" },
           { "txt": "Tanque 2 babor y tanque 3 estribor terminados: pruebas de tintas conformes y fugas rectificadas", "extra": "24 nov" },
           { "txt": "Casco pintado al 70 %; lo que falta es la rotulación", "extra": "24 nov" },
           { "txt": "El tanque 1 estribor es el más atrasado: no se cierra hacia proa porque todavía se instalan láminas en el casco de esa zona", "extra": "24 nov" }
@@ -32,21 +33,21 @@ window.DIQUE_REGISTRO = {
           { "txt": "Insertos de casco: costado de babor en la zona de máquinas 60 %; fondo bajo la reductora 40 %, falta cortar y colocar la lámina", "extra": "24 nov" }
         ] },
         { "zona": "Propulsión y gobierno", "items": [
-          { "txt": "Thruster: las piezas salieron reconstruidas del taller, con recargue y torneado a medida, aro nuevo maquinado y buje montado; el armado arranca el 25 nov", "extra": "24 nov" },
+          { "txt": "Bow Thruster: las piezas salieron reconstruidas del taller, con recargue y torneado a medida, aro nuevo maquinado y buje montado", "extra": "24 nov" },
           { "txt": "Eje de cola: la camisa está atascada y se extrae aplicando calor, con aparejo de cadena montado", "extra": "24 nov" },
           { "txt": "Coupling: continúa la extracción", "extra": "24 nov" },
           { "txt": "Timón: caja de sello retirada y sellos mandados a fabricar", "extra": "24 nov" }
         ] }
       ],
       "medios": [
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_01_aro-maquinado.jpg", "texto": "Aro nuevo maquinado para el thruster, con los asientos torneados y los huecos avellanados; al fondo, la carcasa de bronce original con sus picaduras", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_02_aro-detalle.jpg", "texto": "Detalle de los dos asientos concéntricos del aro nuevo", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_03_aro-asientos.jpg", "texto": "El aro nuevo completo sobre el banco del taller", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_04_alojamiento-buje.jpg", "texto": "Alojamiento del thruster reconstruido, con el buje nuevo montado en el diámetro interno", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_05_alojamiento.jpg", "texto": "El alojamiento reconstruido visto de frente", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_06_taller.jpg", "texto": "Las dos piezas terminadas en el banco del taller", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "video", "archivo": "registro/s10/n24_thruster_07_video-torno.mp4", "texto": "La pieza girando en el torno durante el recargue, previo al maquinado a medida", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
-        { "tipo": "video", "archivo": "registro/s10/n24_thruster_08_video-piezas.mp4", "texto": "Recorrido por las dos piezas del thruster ya reconstruidas", "grupo": "Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_01_aro-maquinado.jpg", "texto": "Aro nuevo maquinado para el Bow Thruster, con los asientos torneados y los huecos avellanados; al fondo, la carcasa de bronce original con sus picaduras", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_02_aro-detalle.jpg", "texto": "Detalle de los dos asientos concéntricos del aro nuevo", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_03_aro-asientos.jpg", "texto": "El aro nuevo completo sobre el banco del taller", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_04_alojamiento-buje.jpg", "texto": "Alojamiento del Bow Thruster reconstruido, con el buje nuevo montado en el diámetro interno", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_05_alojamiento.jpg", "texto": "El alojamiento reconstruido visto de frente", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n24_thruster_06_taller.jpg", "texto": "Las dos piezas terminadas en el banco del taller", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "video", "archivo": "registro/s10/n24_thruster_07_video-torno.mp4", "texto": "La pieza girando en el torno durante el recargue, previo al maquinado a medida", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
+        { "tipo": "video", "archivo": "registro/s10/n24_thruster_08_video-piezas.mp4", "texto": "Recorrido por las dos piezas del Bow Thruster ya reconstruidas", "grupo": "Bow Thruster · piezas reconstruidas · 24 nov" },
         { "tipo": "video", "archivo": "registro/s10/n24_eje_01_video-camisa.mp4", "texto": "Extracción de la camisa del eje: está atascada y se le aplica calor mientras el aparejo de cadena tira", "grupo": "Eje de cola · extracción de la camisa · 24 nov" },
         { "tipo": "foto", "archivo": "registro/s10/n24_tanque1p_01.jpg", "texto": "Tanque 1 babor: láminas nuevas instaladas y soldadura en paralelo; en el acero viejo se ven marcadas las medidas de espesor", "grupo": "Tanque 1 babor · láminas al 85 %, soldadura al 70 % · 24 nov" },
         { "tipo": "foto", "archivo": "registro/s10/n24_tanque1p_02.jpg", "texto": "Tanque 1 babor: láminas nuevas instaladas y soldadura en paralelo; en el acero viejo se ven marcadas las medidas de espesor", "grupo": "Tanque 1 babor · láminas al 85 %, soldadura al 70 % · 24 nov" },
