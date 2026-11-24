@@ -1,5 +1,5 @@
 {
- "extraido": "2026-11-23",
+ "extraido": "2026-11-24",
  "boards": [
   {
    "id": "18435454602",
@@ -1559,7 +1559,7 @@
         "id": "13396487490",
         "name": "§04 · Pintura obra viva",
         "created_at": "2026-10-27T15:20:14Z",
-        "updated_at": "2026-11-20T19:29:55Z",
+        "updated_at": "2026-11-24T15:50:30Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1569,7 +1569,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "0%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1585,7 +1585,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "9.079"
          }
         ],
         "updates": []
@@ -1924,7 +1924,7 @@
         "id": "13396533613",
         "name": "§13 · Acero — Tanque 2 Babor (MGO 2P) · corte",
         "created_at": "2026-10-27T15:20:26Z",
-        "updated_at": "2026-11-11T13:49:43Z",
+        "updated_at": "2026-11-24T15:50:28Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1934,7 +1934,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "80%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1950,7 +1950,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.9048"
+          "display_value": "1.131"
          }
         ],
         "updates": [
@@ -2594,7 +2594,7 @@
         "id": "13488449266",
         "name": "§13 · Acero — Tanque 2 Babor (MGO 2P) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-13T18:42:23Z",
+        "updated_at": "2026-11-24T15:50:28Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2604,7 +2604,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2620,7 +2620,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.5834"
+          "display_value": "2.639"
          }
         ],
         "updates": []
@@ -2664,7 +2664,42 @@
         "id": "13488466697",
         "name": "§13 · Acero — Tanque 3 Estribor (IFO 3S) · instalación",
         "created_at": "2026-11-06T13:59:53Z",
-        "updated_at": "2026-11-13T18:43:57Z",
+        "updated_at": "2026-11-24T15:50:29Z",
+        "column_values": [
+         {
+          "id": "numeric_mm8hc0s8",
+          "type": "numbers",
+          "text": "2.639"
+         },
+         {
+          "id": "color_mm8h3zc7",
+          "type": "status",
+          "text": "100%"
+         },
+         {
+          "id": "date_mm8hj8rm",
+          "type": "date",
+          "text": "2026-11-13"
+         },
+         {
+          "id": "text_mm8hf5gw",
+          "type": "text",
+          "text": "$20,614 (70 % de 29,448)"
+         },
+         {
+          "id": "formula_mm8hh39t",
+          "type": "formula",
+          "text": "",
+          "display_value": "2.639"
+         }
+        ],
+        "updates": []
+       },
+       {
+        "id": "13488448724",
+        "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
+        "created_at": "2026-11-06T13:59:53Z",
+        "updated_at": "2026-11-24T15:50:29Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2691,41 +2726,6 @@
           "type": "formula",
           "text": "",
           "display_value": "2.3751"
-         }
-        ],
-        "updates": []
-       },
-       {
-        "id": "13488448724",
-        "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
-        "created_at": "2026-11-06T13:59:53Z",
-        "updated_at": "2026-11-13T18:43:58Z",
-        "column_values": [
-         {
-          "id": "numeric_mm8hc0s8",
-          "type": "numbers",
-          "text": "2.639"
-         },
-         {
-          "id": "color_mm8h3zc7",
-          "type": "status",
-          "text": "85%"
-         },
-         {
-          "id": "date_mm8hj8rm",
-          "type": "date",
-          "text": "2026-11-13"
-         },
-         {
-          "id": "text_mm8hf5gw",
-          "type": "text",
-          "text": "$20,614 (70 % de 29,448)"
-         },
-         {
-          "id": "formula_mm8hh39t",
-          "type": "formula",
-          "text": "",
-          "display_value": "0"
          }
         ],
         "updates": []
