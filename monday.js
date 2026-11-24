@@ -127,23 +127,6 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-10-27"
   },
   {
-   "id": "13095528124",
-   "grupo": "Dique",
-   "nombre": "DIQUE (Ejecución)",
-   "estado": "En curso",
-   "duracion": 30,
-   "base": [
-    "2026-10-19",
-    "2026-11-16"
-   ],
-   "real": [
-    "2026-10-21",
-    "2026-11-19"
-   ],
-   "diferencia": 3,
-   "actualizado": "2026-10-30"
-  },
-  {
    "id": "13430387154",
    "grupo": "Dique",
    "nombre": "Varada",
@@ -161,21 +144,21 @@ window.DIQUE_MONDAY = {
    "actualizado": "2026-11-12"
   },
   {
-   "id": "13233513509",
+   "id": "13095528124",
    "grupo": "Dique",
-   "nombre": "Trabajos adicionales de dique * soldadura, tanques de lastre, culminacion de trabajos",
-   "estado": "No Iniciado",
-   "duracion": 7,
+   "nombre": "DIQUE (Ejecución)",
+   "estado": "En curso",
+   "duracion": 42,
    "base": [
-    "2026-11-16",
-    "2026-11-22"
+    "2026-10-19",
+    "2026-11-16"
    ],
    "real": [
-    "2026-11-17",
-    "2026-11-23"
+    "2026-10-21",
+    "2026-12-01"
    ],
-   "diferencia": 1,
-   "actualizado": "2026-10-27"
+   "diferencia": 15,
+   "actualizado": "2026-11-24"
   },
   {
    "id": "13095528125",
@@ -188,11 +171,11 @@ window.DIQUE_MONDAY = {
     "2026-11-23"
    ],
    "real": [
-    "2026-11-25",
-    "2026-11-25"
+    "2026-12-01",
+    "2026-12-01"
    ],
-   "diferencia": 2,
-   "actualizado": "2026-11-13"
+   "diferencia": 8,
+   "actualizado": "2026-11-24"
   },
   {
    "id": "13233510296",
@@ -15775,14 +15758,42 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "2bc134236f0b",
+ "_huella": "31d557da16ac",
  "cambiosLectura": [
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "76.8 %",
-   "ahora": "83.1 %"
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-10-21 a 2026-11-19",
+   "ahora": "2026-10-21 a 2026-12-01"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "3",
+   "ahora": "15"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Duración",
+   "antes": "30",
+   "ahora": "42"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Salida del astillero",
+   "campo": "Fecha Real",
+   "antes": "2026-11-25 a 2026-11-25",
+   "ahora": "2026-12-01 a 2026-12-01"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "Salida del astillero",
+   "campo": "Diferencia",
+   "antes": "2",
+   "ahora": "8"
   }
  ],
  "observaciones": [
