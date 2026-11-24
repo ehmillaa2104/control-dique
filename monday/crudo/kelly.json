@@ -1664,7 +1664,7 @@
         "id": "13396516945",
         "name": "§07 · Rejillas y cajas de mar",
         "created_at": "2026-10-27T15:20:17Z",
-        "updated_at": "2026-11-24T21:49:08Z",
+        "updated_at": "2026-11-24T22:03:18Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1674,7 +1674,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "75%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1690,7 +1690,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.3675"
+          "display_value": "0.392"
          }
         ],
         "updates": []
@@ -1734,7 +1734,7 @@
         "id": "13396516949",
         "name": "§09 · Protección catódica (ánodos)",
         "created_at": "2026-10-27T15:20:20Z",
-        "updated_at": "2026-11-24T21:46:53Z",
+        "updated_at": "2026-11-24T22:05:35Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1744,7 +1744,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "90%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1760,7 +1760,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.747"
+          "display_value": "0.83"
          }
         ],
         "updates": []
@@ -1844,7 +1844,7 @@
         "id": "13396533611",
         "name": "§13 · Acero — Tanque 1 Babor (IFO 1P) · corte",
         "created_at": "2026-10-27T15:20:24Z",
-        "updated_at": "2026-11-11T13:49:43Z",
+        "updated_at": "2026-11-24T22:06:24Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1964,7 +1964,7 @@
         "id": "13396533614",
         "name": "§13 · Acero — Estructura interna y sobre cubierta",
         "created_at": "2026-10-27T15:20:27Z",
-        "updated_at": "2026-11-20T19:31:44Z",
+        "updated_at": "2026-11-24T22:06:43Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1974,7 +1974,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1990,7 +1990,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "5.51"
+          "display_value": "7.714"
          }
         ],
         "updates": []
@@ -2069,7 +2069,7 @@
         "id": "13396519502",
         "name": "§16 · Sistema de gobierno",
         "created_at": "2026-10-27T15:20:31Z",
-        "updated_at": "2026-11-20T19:31:59Z",
+        "updated_at": "2026-11-24T22:07:10Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2079,7 +2079,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2095,7 +2095,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.535"
+          "display_value": "0.856"
          }
         ],
         "updates": []
@@ -2139,7 +2139,7 @@
         "id": "13396519505",
         "name": "§18 · Trabajos varios",
         "created_at": "2026-10-27T15:20:34Z",
-        "updated_at": "2026-11-24T21:49:32Z",
+        "updated_at": "2026-11-24T22:07:50Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2149,7 +2149,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "70%"
+          "text": "80%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2165,7 +2165,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.876"
+          "display_value": "2.144"
          }
         ],
         "updates": []
@@ -2449,7 +2449,7 @@
         "id": "13457167596",
         "name": "§13 · Acero — Lámina plana cubierta y costado",
         "created_at": "2026-11-03T19:39:42Z",
-        "updated_at": "2026-11-24T21:51:02Z",
+        "updated_at": "2026-11-24T22:08:45Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2459,7 +2459,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "85%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2475,7 +2475,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "3.996"
+          "display_value": "0"
          }
         ],
         "updates": [
@@ -2524,7 +2524,7 @@
         "id": "13488448723",
         "name": "§13 · Acero — Tanque 3 Babor (IFO 3P) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-13T18:42:23Z",
+        "updated_at": "2026-11-24T22:09:21Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2534,7 +2534,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2550,7 +2550,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.3195"
+          "display_value": "2.3751"
          }
         ],
         "updates": []
@@ -2629,7 +2629,7 @@
         "id": "13488448934",
         "name": "§13 · Acero — Tanque 2 Estribor (MGO 2S) · instalación",
         "created_at": "2026-11-06T13:59:52Z",
-        "updated_at": "2026-11-13T18:42:22Z",
+        "updated_at": "2026-11-24T22:09:55Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2639,7 +2639,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "75%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2655,7 +2655,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.5834"
+          "display_value": "1.97925"
          }
         ],
         "updates": []
@@ -2734,7 +2734,7 @@
         "id": "13488437762",
         "name": "§13 · Acero — Tanque 5 Estribor (IFO 5S) · instalación",
         "created_at": "2026-11-06T13:59:54Z",
-        "updated_at": "2026-11-13T18:42:25Z",
+        "updated_at": "2026-11-24T22:10:18Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2744,7 +2744,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "80%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2760,7 +2760,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.1112"
+          "display_value": "2.3751"
          }
         ],
         "updates": []

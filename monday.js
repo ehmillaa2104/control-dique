@@ -5219,7 +5219,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 76.8,
+     "pct": 83.1,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5316,10 +5316,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516945",
        "nombre": "§07 · Rejillas y cajas de mar",
        "peso": 0.49,
-       "avance": "75%",
-       "pct": 75,
+       "avance": "80%",
+       "pct": 80,
        "cancelado": false,
-       "ponderado": 0.3675,
+       "ponderado": 0.392,
        "medicion": null,
        "monto": 3854,
        "nota": null
@@ -5340,10 +5340,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516949",
        "nombre": "§09 · Protección catódica (ánodos)",
        "peso": 0.83,
-       "avance": "90%",
-       "pct": 90,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.747,
+       "ponderado": 0.83,
        "medicion": null,
        "monto": 6468,
        "nota": null
@@ -5424,10 +5424,10 @@ window.DIQUE_MONDAY = {
        "id": "13396533614",
        "nombre": "§13 · Acero — Estructura interna y sobre cubierta",
        "peso": 11.02,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 5.51,
+       "ponderado": 7.714,
        "medicion": null,
        "monto": 86203,
        "nota": null
@@ -5460,10 +5460,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519502",
        "nombre": "§16 · Sistema de gobierno",
        "peso": 1.07,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "80%",
+       "pct": 80,
        "cancelado": false,
-       "ponderado": 0.535,
+       "ponderado": 0.856,
        "medicion": null,
        "monto": 8357,
        "nota": null
@@ -5484,10 +5484,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519505",
        "nombre": "§18 · Trabajos varios",
        "peso": 2.68,
-       "avance": "70%",
-       "pct": 70,
+       "avance": "80%",
+       "pct": 80,
        "cancelado": false,
-       "ponderado": 1.876,
+       "ponderado": 2.144,
        "medicion": null,
        "monto": 20999,
        "nota": null
@@ -5598,10 +5598,10 @@ window.DIQUE_MONDAY = {
        "id": "13457167596",
        "nombre": "§13 · Acero — Lámina plana cubierta y costado",
        "peso": 6.66,
-       "avance": "60%",
-       "pct": 60,
+       "avance": "85%",
+       "pct": 85,
        "cancelado": false,
-       "ponderado": 3.996,
+       "ponderado": 5.661,
        "medicion": "2026-11-10",
        "monto": 52074,
        "nota": {
@@ -5625,10 +5625,10 @@ window.DIQUE_MONDAY = {
        "id": "13488448723",
        "nombre": "§13 · Acero — Tanque 3 Babor (IFO 3P) · instalación",
        "peso": 2.64,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 1.32,
+       "ponderado": 2.376,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5661,10 +5661,10 @@ window.DIQUE_MONDAY = {
        "id": "13488448934",
        "nombre": "§13 · Acero — Tanque 2 Estribor (MGO 2S) · instalación",
        "peso": 2.64,
-       "avance": "60%",
-       "pct": 60,
+       "avance": "75%",
+       "pct": 75,
        "cancelado": false,
-       "ponderado": 1.584,
+       "ponderado": 1.98,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5697,10 +5697,10 @@ window.DIQUE_MONDAY = {
        "id": "13488437762",
        "nombre": "§13 · Acero — Tanque 5 Estribor (IFO 5S) · instalación",
        "peso": 2.64,
-       "avance": "80%",
-       "pct": 80,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 2.112,
+       "ponderado": 2.376,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -8393,13 +8393,13 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 7,
    "duracion": 43,
-   "avanceDias": 32.879999999999995
+   "avanceDias": 35.085
   },
   "total": {
    "lineas": 199,
    "conDuracion": 54,
    "duracion": 114,
-   "avanceDias": 77.44999999999999
+   "avanceDias": 79.655
   }
  },
  "historial": [
@@ -15571,7 +15571,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-24",
-   "avance": 67.94,
+   "avance": 69.87,
    "pct": {
     "13256760608": 50,
     "13256760158": 50,
@@ -15769,20 +15769,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 100,
-    "13098338054": 76.8,
+    "13098338054": 83.1,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "0030ac7df238",
+ "_huella": "2bc134236f0b",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "73.3 %",
-   "ahora": "76.8 %"
+   "antes": "76.8 %",
+   "ahora": "83.1 %"
   }
  ],
  "observaciones": [
@@ -15831,8 +15831,12 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
+   "nivel": "aviso",
+   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Lámina plana cubierta y costado: la columna Avance ponderado de Monday dice 0 y Peso × Avance da 5.66. El dashboard usa 5.66; en Monday falta la etiqueta \"85%\" en la fórmula."
+  },
+  {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 76.8 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 83.1 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
