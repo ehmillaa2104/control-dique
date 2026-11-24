@@ -5219,7 +5219,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 73.3,
+     "pct": 76.8,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5316,10 +5316,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516945",
        "nombre": "§07 · Rejillas y cajas de mar",
        "peso": 0.49,
-       "avance": "60%",
-       "pct": 60,
+       "avance": "75%",
+       "pct": 75,
        "cancelado": false,
-       "ponderado": 0.294,
+       "ponderado": 0.3675,
        "medicion": null,
        "monto": 3854,
        "nota": null
@@ -5484,10 +5484,10 @@ window.DIQUE_MONDAY = {
        "id": "13396519505",
        "nombre": "§18 · Trabajos varios",
        "peso": 2.68,
-       "avance": "30%",
-       "pct": 30,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 0.804,
+       "ponderado": 1.876,
        "medicion": null,
        "monto": 20999,
        "nota": null
@@ -5598,10 +5598,10 @@ window.DIQUE_MONDAY = {
        "id": "13457167596",
        "nombre": "§13 · Acero — Lámina plana cubierta y costado",
        "peso": 6.66,
-       "avance": "40%",
-       "pct": 40,
+       "avance": "60%",
+       "pct": 60,
        "cancelado": false,
-       "ponderado": 2.664,
+       "ponderado": 3.996,
        "medicion": "2026-11-10",
        "monto": 52074,
        "nota": {
@@ -5613,10 +5613,10 @@ window.DIQUE_MONDAY = {
        "id": "13488448933",
        "nombre": "§13 · Acero — Tanque 1 Babor (IFO 1P) · instalación",
        "peso": 2.64,
-       "avance": "75%",
-       "pct": 75,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 1.98,
+       "ponderado": 2.64,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -5637,10 +5637,10 @@ window.DIQUE_MONDAY = {
        "id": "13488466695",
        "nombre": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
        "peso": 2.64,
-       "avance": "55%",
-       "pct": 55,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 1.452,
+       "ponderado": 1.848,
        "medicion": "2026-11-13",
        "monto": 20614,
        "nota": null
@@ -8393,13 +8393,13 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 7,
    "duracion": 43,
-   "avanceDias": 31.655
+   "avanceDias": 32.879999999999995
   },
   "total": {
    "lineas": 199,
    "conDuracion": 54,
    "duracion": 114,
-   "avanceDias": 76.225
+   "avanceDias": 77.44999999999999
   }
  },
  "historial": [
@@ -15571,7 +15571,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-24",
-   "avance": 66.86,
+   "avance": 67.94,
    "pct": {
     "13256760608": 50,
     "13256760158": 50,
@@ -15769,20 +15769,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 100,
-    "13098338054": 73.3,
+    "13098338054": 76.8,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "c97f3a485fa1",
+ "_huella": "0030ac7df238",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "66.2 %",
-   "ahora": "73.3 %"
+   "antes": "73.3 %",
+   "ahora": "76.8 %"
   }
  ],
  "observaciones": [
@@ -15831,12 +15831,8 @@ window.DIQUE_MONDAY = {
    "texto": "P2. Cubierta: preliminar US$ 134,920 · en revisión US$ 0 (0) · aprobado US$ 127,420 (12) · sin enviar a revisión 0."
   },
   {
-   "nivel": "aviso",
-   "texto": "P3. Técnico · \"Astillero\" · §13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación: la columna Avance ponderado de Monday dice 0 y Peso × Avance da 1.45. El dashboard usa 1.45; en Monday falta la etiqueta \"55%\" en la fórmula."
-  },
-  {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 73.3 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 76.8 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",

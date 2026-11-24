@@ -1664,7 +1664,7 @@
         "id": "13396516945",
         "name": "§07 · Rejillas y cajas de mar",
         "created_at": "2026-10-27T15:20:17Z",
-        "updated_at": "2026-11-20T19:31:05Z",
+        "updated_at": "2026-11-24T21:49:08Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1674,7 +1674,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "75%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1690,7 +1690,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.294"
+          "display_value": "0.3675"
          }
         ],
         "updates": []
@@ -2139,7 +2139,7 @@
         "id": "13396519505",
         "name": "§18 · Trabajos varios",
         "created_at": "2026-10-27T15:20:34Z",
-        "updated_at": "2026-11-20T19:34:21Z",
+        "updated_at": "2026-11-24T21:49:32Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2149,7 +2149,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "30%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2165,7 +2165,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.804"
+          "display_value": "1.876"
          }
         ],
         "updates": []
@@ -2449,7 +2449,7 @@
         "id": "13457167596",
         "name": "§13 · Acero — Lámina plana cubierta y costado",
         "created_at": "2026-11-03T19:39:42Z",
-        "updated_at": "2026-11-11T13:49:03Z",
+        "updated_at": "2026-11-24T21:51:02Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2459,7 +2459,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "40%"
+          "text": "60%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2475,7 +2475,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "2.664"
+          "display_value": "3.996"
          }
         ],
         "updates": [
@@ -2489,7 +2489,7 @@
         "id": "13488448933",
         "name": "§13 · Acero — Tanque 1 Babor (IFO 1P) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-13T18:42:21Z",
+        "updated_at": "2026-11-24T21:51:19Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2499,7 +2499,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "75%"
+          "text": "100%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2515,7 +2515,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.97925"
+          "display_value": "2.639"
          }
         ],
         "updates": []
@@ -2559,7 +2559,7 @@
         "id": "13488466695",
         "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-13T18:43:56Z",
+        "updated_at": "2026-11-24T21:53:24Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2569,7 +2569,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "55%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2585,7 +2585,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "1.8473"
          }
         ],
         "updates": []
@@ -2699,7 +2699,7 @@
         "id": "13488448724",
         "name": "§13 · Acero — Tanque 5 Babor (IFO 5P) · instalación",
         "created_at": "2026-11-06T13:59:53Z",
-        "updated_at": "2026-11-24T15:50:29Z",
+        "updated_at": "2026-11-24T21:53:45Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
