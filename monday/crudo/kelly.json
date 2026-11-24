@@ -1489,7 +1489,7 @@
         "id": "13396487487",
         "name": "§02 · Servicios",
         "created_at": "2026-10-27T15:20:11Z",
-        "updated_at": "2026-11-20T19:30:21Z",
+        "updated_at": "2026-11-24T21:46:18Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1499,7 +1499,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1515,7 +1515,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "5.355"
+          "display_value": "7.497"
          }
         ],
         "updates": []
@@ -1524,7 +1524,7 @@
         "id": "13396487489",
         "name": "§03 · HSE / gas free",
         "created_at": "2026-10-27T15:20:12Z",
-        "updated_at": "2026-11-20T19:30:35Z",
+        "updated_at": "2026-11-24T21:46:03Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1534,7 +1534,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "60%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1550,7 +1550,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.504"
+          "display_value": "0.588"
          }
         ],
         "updates": []
@@ -1559,7 +1559,7 @@
         "id": "13396487490",
         "name": "§04 · Pintura obra viva",
         "created_at": "2026-10-27T15:20:14Z",
-        "updated_at": "2026-11-24T15:50:30Z",
+        "updated_at": "2026-11-24T21:46:27Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1569,7 +1569,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "70%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1585,7 +1585,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "9.079"
+          "display_value": "11.673"
          }
         ],
         "updates": []
@@ -1594,7 +1594,7 @@
         "id": "13396532855",
         "name": "§05 · Pintura obra muerta",
         "created_at": "2026-10-27T15:20:15Z",
-        "updated_at": "2026-11-24T21:43:55Z",
+        "updated_at": "2026-11-24T21:45:57Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1604,7 +1604,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "70%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1620,7 +1620,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "3.808"
+          "display_value": "4.896"
          }
         ],
         "updates": []
@@ -1629,7 +1629,7 @@
         "id": "13396516943",
         "name": "§06 · Otras pinturas y marcas",
         "created_at": "2026-10-27T15:20:16Z",
-        "updated_at": "2026-10-27T15:21:28Z",
+        "updated_at": "2026-11-24T21:46:31Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1639,7 +1639,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "0%"
+          "text": "60%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1655,7 +1655,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "0.342"
          }
         ],
         "updates": []
@@ -1699,7 +1699,7 @@
         "id": "13396516947",
         "name": "§08 · Thruster",
         "created_at": "2026-10-27T15:20:19Z",
-        "updated_at": "2026-11-20T19:30:53Z",
+        "updated_at": "2026-11-24T21:46:39Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1709,7 +1709,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "75%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1725,7 +1725,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.105"
+          "display_value": "0.1575"
          }
         ],
         "updates": []
@@ -1734,7 +1734,7 @@
         "id": "13396516949",
         "name": "§09 · Protección catódica (ánodos)",
         "created_at": "2026-10-27T15:20:20Z",
-        "updated_at": "2026-10-27T15:21:27Z",
+        "updated_at": "2026-11-24T21:46:53Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -1744,7 +1744,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "0%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -1760,7 +1760,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0"
+          "display_value": "0.747"
          }
         ],
         "updates": []

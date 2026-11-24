@@ -116,7 +116,8 @@
       cubierta: { id: "18432105237", e: "color_mm7y4j97", d: "numeric_mm7y9sbv", pr: "numeric_mm7yw4b3", po: "lookup_mm7y2awx", inc: "lookup_mm7ybkjg" },
       tecnico: { id: "18432105438", e: "color_mm7vv5nh", d: "numeric_mm7v7xt9", pr: "numeric_mm7y6h6f", po: "lookup_mm7ywkfv", inc: "lookup_mm7ym614" }
     };
-    const PCT = { "0%": 0, "25%": 25, "50%": 50, "75%": 75, "100%": 100 };
+    // Cualquier etiqueta "NN%" (desde el 11 nov hay 93 %, 96 %…), igual que generar.py
+    const pctDe = (e) => { const m = /^\s*(\d{1,3})\s*%\s*$/.exec(e || ""); return m ? +m[1] : 0; };
     const lineas = new Map(); // id -> costos leídos del crudo (para comprobar los centros de costo)
     const tot = { n: 0, conD: 0, dur: 0, avd: 0, sol: 0, rev: 0, apr: 0, pro: 0, po: 0, inc: 0 };
     const avRows = [], costRows = [], subRows = [];
@@ -135,9 +136,11 @@
         // Con subelementos que tienen Peso (partidas del Astillero), el avance es Σ Avance ponderado / Σ Peso de los no cancelados
         const subs = (it.subitems || []).filter((s) => s.column_values.some((x) => x.id === SUB.peso) && val(s, SUB.avance) !== "Cancelado" && num(val(s, SUB.peso)) > 0);
         const sp = subs.reduce((x, s) => x + num(val(s, SUB.peso)), 0);
-        const p = sp ? (subs.reduce((x, s) => x + (num(val(s, SUB.pond)) || 0), 0) / sp) * 100 : PCT[e] || 0;
+        const p = sp ? (subs.reduce((x, s) => x + num(val(s, SUB.peso)) * pctDe(val(s, SUB.avance)), 0) / sp) : pctDe(e);
+        // La fórmula "Avance ponderado" de Monday no conoce todas las etiquetas (p. ej. 55 %): se calcula Peso × Avance y se avisa si difiere
+        const pondM = sp ? (subs.reduce((x, s) => x + (num(val(s, SUB.pond)) || 0), 0) / sp) * 100 : 0;
         if (sp) subRows.push(`<tr><td><b>${esc(it.name)}</b><div class="muted">${esc(b.name)} · Estado en Monday: ${esc(e || "vacío")}</div></td><td class="n">${subs.length}</td><td class="n">${sp.toFixed(2)}%</td><td class="n"><b>${p.toFixed(1)}%</b></td>
-          <td>${resumen([Math.abs(sp - 100) < 0.5 ? mark("ok", "pesos suman 100 %") : mark("warn", `pesos suman ${sp.toFixed(2)} %`), Math.abs(((a.trabajos.find((t) => t.id === it.id) || {}).pct || 0) - Math.round(p * 10) / 10) < 0.05 ? mark("ok", "avance igual en el dashboard") : mark("err", "avance distinto en el dashboard")])}</td></tr>`);
+          <td>${resumen([Math.abs(sp - 100) < 0.5 ? mark("ok", "pesos suman 100 %") : mark("warn", `pesos suman ${sp.toFixed(2)} %`), Math.abs(((a.trabajos.find((t) => t.id === it.id) || {}).pct || 0) - Math.round(p * 10) / 10) < 0.05 ? mark("ok", "avance igual en el dashboard") : mark("err", "avance distinto en el dashboard")].concat(Math.abs(pondM - p) < 0.1 ? [] : [mark("warn", `la fórmula Avance ponderado de Monday da ${pondM.toFixed(1)} %`)]))}</td></tr>`);
         if (d > 0) { r.conD++; r.dur += d; r.avd += (d * p) / 100; }
         r.sol += L.sol; r.rev += L.rev; r.apr += L.apr; r.pro += L.pro; r.po += L.po; r.inc += L.inc;
       });

@@ -5219,7 +5219,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 66.2,
+     "pct": 73.3,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5256,10 +5256,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487487",
        "nombre": "§02 · Servicios",
        "peso": 10.71,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 5.355,
+       "ponderado": 7.497,
        "medicion": null,
        "monto": 83872,
        "nota": null
@@ -5268,10 +5268,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487489",
        "nombre": "§03 · HSE / gas free",
        "peso": 0.84,
-       "avance": "60%",
-       "pct": 60,
+       "avance": "70%",
+       "pct": 70,
        "cancelado": false,
-       "ponderado": 0.504,
+       "ponderado": 0.588,
        "medicion": null,
        "monto": 6558,
        "nota": null
@@ -5280,10 +5280,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487490",
        "nombre": "§04 · Pintura obra viva",
        "peso": 12.97,
-       "avance": "70%",
-       "pct": 70,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 9.079,
+       "ponderado": 11.673,
        "medicion": null,
        "monto": 101450,
        "nota": null
@@ -5292,10 +5292,10 @@ window.DIQUE_MONDAY = {
        "id": "13396532855",
        "nombre": "§05 · Pintura obra muerta",
        "peso": 5.44,
-       "avance": "70%",
-       "pct": 70,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 3.808,
+       "ponderado": 4.896,
        "medicion": null,
        "monto": 42518,
        "nota": null
@@ -5304,10 +5304,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516943",
        "nombre": "§06 · Otras pinturas y marcas",
        "peso": 0.57,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "60%",
+       "pct": 60,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.342,
        "medicion": null,
        "monto": 4426,
        "nota": null
@@ -5328,10 +5328,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516947",
        "nombre": "§08 · Thruster",
        "peso": 0.21,
-       "avance": "50%",
-       "pct": 50,
+       "avance": "75%",
+       "pct": 75,
        "cancelado": false,
-       "ponderado": 0.105,
+       "ponderado": 0.1575,
        "medicion": null,
        "monto": 1626,
        "nota": null
@@ -5340,10 +5340,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516949",
        "nombre": "§09 · Protección catódica (ánodos)",
        "peso": 0.83,
-       "avance": "0%",
-       "pct": 0,
+       "avance": "90%",
+       "pct": 90,
        "cancelado": false,
-       "ponderado": 0.0,
+       "ponderado": 0.747,
        "medicion": null,
        "monto": 6468,
        "nota": null
@@ -8393,13 +8393,13 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 7,
    "duracion": 43,
-   "avanceDias": 29.17
+   "avanceDias": 31.655
   },
   "total": {
    "lineas": 199,
    "conDuracion": 54,
    "duracion": 114,
-   "avanceDias": 73.74000000000001
+   "avanceDias": 76.225
   }
  },
  "historial": [
@@ -15571,7 +15571,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-24",
-   "avance": 64.68,
+   "avance": 66.86,
    "pct": {
     "13256760608": 50,
     "13256760158": 50,
@@ -15769,20 +15769,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 100,
-    "13098338054": 66.2,
+    "13098338054": 73.3,
     "13278839703": 50,
     "13346969104": 50
    }
   }
  ],
- "_huella": "731957b15991",
+ "_huella": "c97f3a485fa1",
  "cambiosLectura": [
   {
    "tablero": "P3. Técnico",
    "trabajo": "Astillero",
    "campo": "Avance (subelementos)",
-   "antes": "62.4 %",
-   "ahora": "66.2 %"
+   "antes": "66.2 %",
+   "ahora": "73.3 %"
   }
  ],
  "observaciones": [
@@ -15836,7 +15836,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 66.2 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 73.3 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
