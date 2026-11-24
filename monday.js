@@ -205,11 +205,11 @@ window.DIQUE_MONDAY = {
     "2026-11-30"
    ],
    "real": [
-    "2026-11-28",
-    "2026-12-01"
+    "2026-12-04",
+    "2026-12-07"
    ],
-   "diferencia": 1,
-   "actualizado": "2026-11-13"
+   "diferencia": 7,
+   "actualizado": "2026-11-24"
   },
   {
    "id": "13095528127",
@@ -15758,14 +15758,21 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "28263e69b2d4",
+ "_huella": "3a7938e4b1cf",
  "cambiosLectura": [
   {
-   "tablero": "P3. Técnico",
-   "trabajo": "Estadia, Viaje y transporte",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "75%"
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-11-28 a 2026-12-01",
+   "ahora": "2026-12-04 a 2026-12-07"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "POST-DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "1",
+   "ahora": "7"
   }
  ],
  "observaciones": [
@@ -15776,6 +15783,10 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
+  },
+  {
+   "nivel": "aviso",
+   "texto": "Cronograma: entre 2026-12-02 y 2026-12-03 no hay ninguna actividad cargada (hueco de 2 días)."
   },
   {
    "nivel": "info",
@@ -15839,19 +15850,19 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "aviso",
-   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (75%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+   "texto": "P1. Ingeniería · \"Imprevisto\": tiene avance (75%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+   "texto": "P2. Cubierta · \"Materiales cubierta\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+   "texto": "P2. Cubierta · \"Reparaciones en cubierta (aceros y soldadura)\": tiene avance (25%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
   },
   {
    "nivel": "aviso",
-   "texto": "P3. Técnico · \"Gasto de Clase\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-11-28; revisar la fase."
+   "texto": "P3. Técnico · \"Gasto de Clase\": tiene avance (50%) en Post-dique, que según el Cronograma empieza el 2026-12-04; revisar la fase."
   },
   {
    "nivel": "aviso",
