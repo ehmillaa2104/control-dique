@@ -20,10 +20,9 @@ window.DIQUE_REGISTRO = {
           { "txt": "Eje de cola: al salir la camisa quedó a la vista un daño en el eje — rayado axial profundo y una fisura marcada en la zona donde asentaba la camisa. El 27 nov el eje salió completo hacia un taller especializado. La fecha de salida del dique queda sujeta al diagnóstico, la mecanización y la entrega del eje, todavía sin plazo confirmado", "extra": "27 nov" },
           { "txt": "Casco 100 % pintado y rotulado: nombre, número IMO y puerto de registro ya están en la proa", "extra": "terminado · 27 nov" },
           { "txt": "Tanques de carga: 2P, 3P, 3S y 5S terminados con pruebas de tintas; los que siguen abiertos van entre 90 y 95 %", "extra": "27 nov" },
-          { "txt": "La salida del astillero pasa del 25 de noviembre al 1 de diciembre por la camisa del eje de cola: el 26 nov se logró desplazar junto con el acople; falta terminar de extraer el eje, mecanizarlo en un taller especializado, montarlo y hacer pruebas", "extra": "26 nov" },
+          { "txt": "Nueva fecha estimada de salida del astillero: 7 de diciembre (antes 25 nov y luego 1 dic), por el eje de cola: falta mecanizarlo en el taller especializado, montarlo y hacer pruebas. Con eso, el traslado a Panamá queda del 8 al 11 dic, el post-dique del 11 al 16 dic y el On Hire el 17 dic", "extra": "27 nov" },
           { "txt": "Bow Thruster: piezas reconstruidas en taller tras el deterioro hallado el 19 nov; el 25 nov inicia el armado e instalación", "extra": "24 nov" },
           { "txt": "Tanque 2 babor y tanque 3 estribor terminados: pruebas de tintas conformes y fugas rectificadas", "extra": "24 nov" },
-          { "txt": "Casco pintado; falta la rotulación", "extra": "24 nov" },
           { "txt": "El tanque 1 estribor es el más atrasado: no se cierra hacia proa porque todavía se instalan láminas en el casco de esa zona", "extra": "24 nov" }
         ] },
         { "zona": "Propulsión y gobierno", "items": [

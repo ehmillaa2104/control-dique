@@ -148,17 +148,17 @@ window.DIQUE_MONDAY = {
    "grupo": "Dique",
    "nombre": "DIQUE (Ejecución)",
    "estado": "En curso",
-   "duracion": 42,
+   "duracion": 48,
    "base": [
     "2026-10-19",
     "2026-11-16"
    ],
    "real": [
     "2026-10-21",
-    "2026-12-01"
+    "2026-12-07"
    ],
-   "diferencia": 15,
-   "actualizado": "2026-11-24"
+   "diferencia": 21,
+   "actualizado": "2026-11-27"
   },
   {
    "id": "13095528125",
@@ -16429,8 +16429,30 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "ed77e790e12b",
- "cambiosLectura": [],
+ "_huella": "d223076ed6d0",
+ "cambiosLectura": [
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Fecha Real",
+   "antes": "2026-10-21 a 2026-12-01",
+   "ahora": "2026-10-21 a 2026-12-07"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Diferencia",
+   "antes": "15",
+   "ahora": "21"
+  },
+  {
+   "tablero": "Cronograma",
+   "trabajo": "DIQUE (Ejecución)",
+   "campo": "Duración",
+   "antes": "42",
+   "ahora": "48"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",
@@ -16439,10 +16461,6 @@ window.DIQUE_MONDAY = {
   {
    "nivel": "info",
    "texto": "Cronograma · \"Presentación de Informe Final\": sin Fecha Real; no se dibuja."
-  },
-  {
-   "nivel": "aviso",
-   "texto": "Cronograma: entre 2026-12-02 y 2026-12-07 no hay ninguna actividad cargada (hueco de 6 días)."
   },
   {
    "nivel": "info",
