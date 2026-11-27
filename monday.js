@@ -1412,8 +1412,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Bomba de carga #5 de babor — fuga interna",
      "grupo": "1.3 Bombas",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "80%",
+     "pct": 80,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -1429,7 +1429,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-27",
      "costo": "aprobado"
     },
     {
@@ -2612,8 +2612,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Panel de sistema de alarma 95-98%",
      "grupo": "1.12 Sistema Eléctrico General",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "100%",
+     "pct": 100,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -2625,11 +2625,11 @@ window.DIQUE_MONDAY = {
      "proyectado": 3600,
      "po": null,
      "incurrido": null,
-     "fin": null,
+     "fin": "2026-11-27",
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-27",
      "costo": "aprobado"
     },
     {
@@ -3212,8 +3212,8 @@ window.DIQUE_MONDAY = {
      "nombre": "Grúa de medianía — limit switch, controles y mangueras",
      "grupo": "1.13 Grúas",
      "fase": "Dique",
-     "estado": "50%",
-     "pct": 50,
+     "estado": "90%",
+     "pct": 90,
      "cancelado": false,
      "duracion": 1,
      "tipo": "Correctivo",
@@ -3229,7 +3229,7 @@ window.DIQUE_MONDAY = {
      "cc": [
       "13081201432"
      ],
-     "actualizado": "2026-11-20",
+     "actualizado": "2026-11-27",
      "costo": "aprobado"
     },
     {
@@ -8364,7 +8364,7 @@ window.DIQUE_MONDAY = {
    "lineas": 172,
    "conDuracion": 33,
    "duracion": 33,
-   "avanceDias": 23.57
+   "avanceDias": 24.77
   },
   "cubierta": {
    "lineas": 19,
@@ -8382,7 +8382,7 @@ window.DIQUE_MONDAY = {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 115,
-   "avanceDias": 82.155
+   "avanceDias": 83.35499999999999
   }
  },
  "historial": [
@@ -16170,7 +16170,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-27",
-   "avance": 71.44,
+   "avance": 72.48,
    "pct": {
     "13256760608": 100,
     "13256760158": 100,
@@ -16218,7 +16218,7 @@ window.DIQUE_MONDAY = {
     "13428159726": 100,
     "13256760157": 100,
     "13256755192": 75,
-    "13256755203": 50,
+    "13256755203": 80,
     "13256744926": 75,
     "13256760609": 93,
     "13256744868": 93,
@@ -16266,7 +16266,7 @@ window.DIQUE_MONDAY = {
     "13095643937": 100,
     "13095604536": 0,
     "13095613807": 0,
-    "13277138828": 50,
+    "13277138828": 100,
     "13277158049": 25,
     "13277104868": 25,
     "13277169481": 75,
@@ -16290,7 +16290,7 @@ window.DIQUE_MONDAY = {
     "13043922217": 0,
     "13095628677": 0,
     "13095603677": 0,
-    "13256760245": 50,
+    "13256760245": 90,
     "13095637379": 0,
     "13095603385": 0,
     "13256760246": 50,
@@ -16375,8 +16375,37 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "6ad238a973f7",
- "cambiosLectura": [],
+ "_huella": "1c72acaef4d9",
+ "cambiosLectura": [
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Bomba de carga #5 de babor — fuga interna",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "80%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel de sistema de alarma 95-98%",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "100%"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Panel de sistema de alarma 95-98%",
+   "campo": "Fecha Fin",
+   "antes": "—",
+   "ahora": "2026-11-27"
+  },
+  {
+   "tablero": "P1. Ingeniería",
+   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
+   "campo": "Estado",
+   "antes": "50%",
+   "ahora": "90%"
+  }
+ ],
  "observaciones": [
   {
    "nivel": "info",
@@ -16396,7 +16425,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 26 en ejecución · 7 finalizado(s) · 0 por iniciar."
+   "texto": "P1. Ingeniería: 33 trabajo(s) planificado(s) · 25 en ejecución · 8 finalizado(s) · 0 por iniciar."
   },
   {
    "nivel": "aviso",
