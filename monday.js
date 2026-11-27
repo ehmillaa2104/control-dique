@@ -5202,7 +5202,7 @@ window.DIQUE_MONDAY = {
      "grupo": "Técnico",
      "fase": "Dique",
      "estado": "0%",
-     "pct": 83.1,
+     "pct": 85.2,
      "cancelado": false,
      "duracion": 35,
      "tipo": "Mandatorio",
@@ -5263,10 +5263,10 @@ window.DIQUE_MONDAY = {
        "id": "13396487490",
        "nombre": "§04 · Pintura obra viva",
        "peso": 12.97,
-       "avance": "90%",
-       "pct": 90,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 11.673,
+       "ponderado": 12.97,
        "medicion": null,
        "monto": 101450,
        "nota": null
@@ -5275,10 +5275,10 @@ window.DIQUE_MONDAY = {
        "id": "13396532855",
        "nombre": "§05 · Pintura obra muerta",
        "peso": 5.44,
-       "avance": "90%",
-       "pct": 90,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 4.896,
+       "ponderado": 5.44,
        "medicion": null,
        "monto": 42518,
        "nota": null
@@ -5287,10 +5287,10 @@ window.DIQUE_MONDAY = {
        "id": "13396516943",
        "nombre": "§06 · Otras pinturas y marcas",
        "peso": 0.57,
-       "avance": "60%",
-       "pct": 60,
+       "avance": "100%",
+       "pct": 100,
        "cancelado": false,
-       "ponderado": 0.342,
+       "ponderado": 0.57,
        "medicion": null,
        "monto": 4426,
        "nota": null
@@ -8376,13 +8376,13 @@ window.DIQUE_MONDAY = {
    "lineas": 9,
    "conDuracion": 7,
    "duracion": 43,
-   "avanceDias": 35.085
+   "avanceDias": 35.82
   },
   "total": {
    "lineas": 200,
    "conDuracion": 55,
    "duracion": 115,
-   "avanceDias": 83.35499999999999
+   "avanceDias": 84.09
   }
  },
  "historial": [
@@ -16170,7 +16170,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "fecha": "2026-11-27",
-   "avance": 72.48,
+   "avance": 73.12,
    "pct": {
     "13256760608": 100,
     "13256760158": 100,
@@ -16369,41 +16369,20 @@ window.DIQUE_MONDAY = {
     "13098338352": 0,
     "13098337112": 100,
     "13098334682": 100,
-    "13098338054": 83.1,
+    "13098338054": 85.2,
     "13278839703": 50,
     "13346969104": 75
    }
   }
  ],
- "_huella": "1c72acaef4d9",
+ "_huella": "5cc8c7d243c1",
  "cambiosLectura": [
   {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "80%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel de sistema de alarma 95-98%",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "90%"
+   "tablero": "P3. Técnico",
+   "trabajo": "Astillero",
+   "campo": "Avance (subelementos)",
+   "antes": "83.1 %",
+   "ahora": "85.2 %"
   }
  ],
  "observaciones": [
@@ -16457,7 +16436,7 @@ window.DIQUE_MONDAY = {
   },
   {
    "nivel": "info",
-   "texto": "P3. Técnico · \"Astillero\": avance 83.1 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
+   "texto": "P3. Técnico · \"Astillero\": avance 85.2 % calculado de 35 subelementos (Σ Avance ponderado / Σ Peso); su Estado en Monday dice 0%."
   },
   {
    "nivel": "aviso",
