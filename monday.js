@@ -7661,6 +7661,60 @@ window.DIQUE_MONDAY = {
  ],
  "cambios": [
   {
+   "id": "13663306324",
+   "nombre": "Extracción extraordinaria del eje de cola",
+   "creado": "2026-11-27",
+   "tipo": "Costo",
+   "costo": null,
+   "dias": null,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [],
+   "actualizado": "2026-11-27"
+  },
+  {
+   "id": "13663289970",
+   "nombre": "Reparación del eje de cola en taller externo: corte, relleno, mecanizado y pulido",
+   "creado": "2026-11-27",
+   "tipo": "Alcance, Costo, Tiempo",
+   "costo": null,
+   "dias": 6,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [],
+   "actualizado": "2026-11-27"
+  },
+  {
+   "id": "13663263893",
+   "nombre": "Bote de caída libre: bajarlo, pintarlo y mantenimiento de estructura y pescante",
+   "creado": "2026-11-27",
+   "tipo": "Alcance",
+   "costo": 4000,
+   "dias": null,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.2.1 Cuenta de Astillero",
+   "actividades": [
+    "13315624594"
+   ],
+   "actualizado": "2026-11-27"
+  },
+  {
+   "id": "13663203576",
+   "nombre": "Provisiones, agua y transporte por la extensión de la estadía",
+   "creado": "2026-11-27",
+   "tipo": "Costo",
+   "costo": null,
+   "dias": null,
+   "estado": "Solicitado",
+   "aprobado": null,
+   "cc": "2.1.5 Alimentación y compras varias (Nave)",
+   "actividades": [],
+   "actualizado": "2026-11-27"
+  },
+  {
    "id": "13575529238",
    "nombre": "Pérdida de día por lluvia — sábado 14 de noviembre",
    "creado": "2026-11-17",
@@ -16375,205 +16429,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "bebc4af11984",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Fecha Real",
-   "antes": "2026-12-01 a 2026-12-01",
-   "ahora": "2026-12-07 a 2026-12-07"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Salida del astillero",
-   "campo": "Diferencia",
-   "antes": "8",
-   "ahora": "14"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Fecha Real",
-   "antes": "2026-12-01 a 2026-12-03",
-   "ahora": "2026-12-08 a 2026-12-11"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Diferencia",
-   "antes": "8",
-   "ahora": "16"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "Traslado a Panama",
-   "campo": "Duración",
-   "antes": "3",
-   "ahora": "4"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-12-01 a 2026-12-06",
-   "ahora": "2026-12-11 a 2026-12-16"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "POST-DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "6",
-   "ahora": "16"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "On Hire (Estimado)",
-   "campo": "Fecha Real",
-   "antes": "2026-12-06 a 2026-12-06",
-   "ahora": "2026-12-17 a 2026-12-17"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "On Hire (Estimado)",
-   "campo": "Diferencia",
-   "antes": "5",
-   "ahora": "16"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bomba de carga #5 de babor — fuga interna",
-   "campo": "Estado",
-   "antes": "80%",
-   "ahora": "96%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Estado",
-   "antes": "50%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor electrico de Bow Thruster",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Motor eléctrico para reemplazar la araña de acople",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "93%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "Estado",
-   "antes": "25%",
-   "ahora": "0%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Panel contra incendio",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Indicador De Angulo de Timón",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Grúa de medianía — limit switch, controles y mangueras",
-   "campo": "Estado",
-   "antes": "90%",
-   "ahora": "83%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Winche de proa estribor — motor hidráulico sin fuerza",
-   "campo": "Fase",
-   "antes": "Dique",
-   "ahora": "Post-dique"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
-   "campo": "Estado",
-   "antes": "75%",
-   "ahora": "100%"
-  },
-  {
-   "tablero": "P1. Ingeniería",
-   "trabajo": "Compra de materiales - Línea de succión de agua salada de los generadores",
-   "campo": "Fecha Fin",
-   "antes": "—",
-   "ahora": "2026-11-27"
-  },
-  {
-   "tablero": "P2. Cubierta",
-   "trabajo": "Bote Salvavidas – Alquiler andamio para Mantenimiento",
-   "campo": "$ Proyectado",
-   "antes": "—",
-   "ahora": "2415"
-  },
-  {
-   "tablero": "P3. Técnico",
-   "trabajo": "Astillero",
-   "campo": "Avance (subelementos)",
-   "antes": "85.2 %",
-   "ahora": "86.4 %"
-  }
- ],
+ "_huella": "ed77e790e12b",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
