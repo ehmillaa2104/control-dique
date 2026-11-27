@@ -2104,7 +2104,7 @@
         "id": "13396519503",
         "name": "§17 · Mantenimiento de válvulas y filtros",
         "created_at": "2026-10-27T15:20:33Z",
-        "updated_at": "2026-11-20T19:32:07Z",
+        "updated_at": "2026-11-27T20:00:39Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2114,7 +2114,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "50%"
+          "text": "70%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2130,7 +2130,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "0.82"
+          "display_value": "1.148"
          }
         ],
         "updates": []
@@ -2559,7 +2559,7 @@
         "id": "13488466695",
         "name": "§13 · Acero — Tanque 1 Estribor (IFO 1S) · instalación",
         "created_at": "2026-11-06T13:59:51Z",
-        "updated_at": "2026-11-24T21:53:24Z",
+        "updated_at": "2026-11-27T20:00:19Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2569,7 +2569,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "70%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2585,7 +2585,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.8473"
+          "display_value": "2.3751"
          }
         ],
         "updates": []
@@ -2629,7 +2629,7 @@
         "id": "13488448934",
         "name": "§13 · Acero — Tanque 2 Estribor (MGO 2S) · instalación",
         "created_at": "2026-11-06T13:59:52Z",
-        "updated_at": "2026-11-24T22:09:55Z",
+        "updated_at": "2026-11-27T20:00:26Z",
         "column_values": [
          {
           "id": "numeric_mm8hc0s8",
@@ -2639,7 +2639,7 @@
          {
           "id": "color_mm8h3zc7",
           "type": "status",
-          "text": "75%"
+          "text": "90%"
          },
          {
           "id": "date_mm8hj8rm",
@@ -2655,7 +2655,7 @@
           "id": "formula_mm8hh39t",
           "type": "formula",
           "text": "",
-          "display_value": "1.97925"
+          "display_value": "2.3751"
          }
         ],
         "updates": []
@@ -4699,7 +4699,7 @@
       "id": "13315624594",
       "name": "Bote Salvavidas – Alquiler andamio para Mantenimiento",
       "created_at": "2026-10-16T21:23:14Z",
-      "updated_at": "2026-11-26T19:24:03Z",
+      "updated_at": "2026-11-27T20:05:04Z",
       "group": {
        "id": "group_mm7d9fb0",
        "title": "Seguridad"
@@ -4751,7 +4751,7 @@
        {
         "id": "pulse_updated_mm7ga065",
         "type": "last_updated",
-        "text": "2026-11-26 19:24:03 UTC"
+        "text": "2026-11-27 20:05:04 UTC"
        },
        {
         "id": "date_mm7ya280",
@@ -4766,7 +4766,7 @@
        {
         "id": "numeric_mm7yw4b3",
         "type": "numbers",
-        "text": ""
+        "text": "2415"
        },
        {
         "id": "numeric_mm7y9sbv",
@@ -5533,7 +5533,7 @@
         "id": "formula_mm7ydqr4",
         "type": "formula",
         "text": "",
-        "display_value": "26350"
+        "display_value": "28765"
        },
        {
         "id": "board_relation_mm7a4ck0",
@@ -17229,7 +17229,7 @@
       "id": "13256755203",
       "name": "Bomba de carga #5 de babor — fuga interna",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-27T15:32:27Z",
+      "updated_at": "2026-11-27T20:02:12Z",
       "group": {
        "id": "group_mm7d4ygd",
        "title": "1.3 Bombas"
@@ -17281,12 +17281,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-27 15:32:27 UTC"
+        "text": "2026-11-27 20:02:12 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "80%"
+        "text": "96%"
        },
        {
         "id": "date_mm7yv15j",
@@ -20205,7 +20205,7 @@
       "id": "13095569998",
       "name": "Bow thruster — sistema electro-hidráulico, sellos y aceite",
       "created_at": "2026-09-21T16:18:54Z",
-      "updated_at": "2026-11-20T19:23:27Z",
+      "updated_at": "2026-11-27T20:04:57Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20257,17 +20257,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:23:27 UTC"
+        "text": "2026-11-27 20:04:57 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -20484,7 +20484,7 @@
       "id": "13373451881",
       "name": "Motor electrico de Bow Thruster",
       "created_at": "2026-10-23T21:38:18Z",
-      "updated_at": "2026-11-24T22:41:43Z",
+      "updated_at": "2026-11-27T20:05:09Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20536,17 +20536,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-24 22:41:43 UTC"
+        "text": "2026-11-27 20:05:09 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "50%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -20577,7 +20577,7 @@
       "id": "13373417444",
       "name": "Motor eléctrico para reemplazar la araña de acople",
       "created_at": "2026-10-23T21:39:46Z",
-      "updated_at": "2026-11-20T19:29:54Z",
+      "updated_at": "2026-11-27T20:05:22Z",
       "group": {
        "id": "group_mm7dbaz2",
        "title": "1.4 Bow Thruster"
@@ -20629,12 +20629,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:29:54 UTC"
+        "text": "2026-11-27 20:05:22 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "93%"
        },
        {
         "id": "date_mm7yv15j",
@@ -22065,7 +22065,7 @@
       "id": "13277138491",
       "name": "Panel contra incendio",
       "created_at": "2026-10-13T14:45:34Z",
-      "updated_at": "2026-11-20T19:30:53Z",
+      "updated_at": "2026-11-27T20:07:11Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -22074,7 +22074,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -22117,12 +22117,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:30:53 UTC"
+        "text": "2026-11-27 20:07:11 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "25%"
+        "text": "0%"
        },
        {
         "id": "date_mm7yv15j",
@@ -22158,7 +22158,7 @@
       "id": "13277157364",
       "name": "Indicador De Angulo de Timón",
       "created_at": "2026-10-13T14:45:35Z",
-      "updated_at": "2026-11-11T15:26:33Z",
+      "updated_at": "2026-11-27T20:07:32Z",
       "group": {
        "id": "group_mm7dkn1n",
        "title": "1.12 Sistema Eléctrico General"
@@ -22210,7 +22210,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-11 15:26:33 UTC"
+        "text": "2026-11-27 20:07:32 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -22220,7 +22220,7 @@
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -23925,7 +23925,7 @@
       "id": "13256760245",
       "name": "Grúa de medianía — limit switch, controles y mangueras",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-27T15:32:26Z",
+      "updated_at": "2026-11-27T20:09:22Z",
       "group": {
        "id": "group_mm7d4a01",
        "title": "1.13 Grúas"
@@ -23977,12 +23977,12 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-27 15:32:26 UTC"
+        "text": "2026-11-27 20:09:22 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "90%"
+        "text": "83%"
        },
        {
         "id": "date_mm7yv15j",
@@ -24204,7 +24204,7 @@
       "id": "13256760246",
       "name": "Winche de proa estribor — motor hidráulico sin fuerza",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:34:40Z",
+      "updated_at": "2026-11-27T20:10:35Z",
       "group": {
        "id": "group_mm7dc52c",
        "title": "1.14 Winches"
@@ -24213,7 +24213,7 @@
        {
         "id": "color_mm6wsp0z",
         "type": "status",
-        "text": "Dique"
+        "text": "Post-dique"
        },
        {
         "id": "dropdown_mm70s99n",
@@ -24256,7 +24256,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:34:40 UTC"
+        "text": "2026-11-27 20:10:35 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -26064,7 +26064,7 @@
       "id": "13095603679",
       "name": "Compra de materiales - Válvulas de tomas de mar y línea madre de enfriamiento",
       "created_at": "2026-09-21T16:19:02Z",
-      "updated_at": "2026-11-20T19:22:42Z",
+      "updated_at": "2026-11-27T20:12:40Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -26116,17 +26116,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:22:42 UTC"
+        "text": "2026-11-27 20:12:40 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -26343,7 +26343,7 @@
       "id": "13256755205",
       "name": "Compra de materiales - Válvula de succión de bomba de agua dulce auxiliar de máquina principal",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:22:46Z",
+      "updated_at": "2026-11-27T20:12:41Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -26395,17 +26395,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:22:46 UTC"
+        "text": "2026-11-27 20:12:41 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -26436,7 +26436,7 @@
       "id": "13256755234",
       "name": "Compra de materiales - Línea de succión de agua salada de los generadores",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:22:48Z",
+      "updated_at": "2026-11-27T20:12:43Z",
       "group": {
        "id": "group_mm7dhnbe",
        "title": "1.18 Sistema de Refrigeración"
@@ -26488,17 +26488,17 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:22:48 UTC"
+        "text": "2026-11-27 20:12:43 UTC"
        },
        {
         "id": "color_mm7yb2cs",
         "type": "status",
-        "text": "75%"
+        "text": "100%"
        },
        {
         "id": "date_mm7yv15j",
         "type": "date",
-        "text": ""
+        "text": "2026-11-27"
        },
        {
         "id": "numeric_mm7yw5hx",
@@ -28110,7 +28110,7 @@
       "id": "13256755103",
       "name": "Línea de overflow hacia el sludge tank",
       "created_at": "2026-10-10T20:08:12Z",
-      "updated_at": "2026-11-20T19:37:01Z",
+      "updated_at": "2026-11-27T20:13:43Z",
       "group": {
        "id": "group_mm832tvw",
        "title": "1.22 Sistema de Sentinas, Lodos y Aguas Residuales"
@@ -28162,7 +28162,7 @@
        {
         "id": "pulse_updated_mm7g2q1g",
         "type": "last_updated",
-        "text": "2026-11-20 19:37:01 UTC"
+        "text": "2026-11-27 20:13:43 UTC"
        },
        {
         "id": "color_mm7yb2cs",
@@ -29399,7 +29399,7 @@
       "id": "13095528125",
       "name": "Salida del astillero",
       "created_at": "2026-09-21T16:11:12Z",
-      "updated_at": "2026-11-24T22:11:55Z",
+      "updated_at": "2026-11-27T19:35:04Z",
       "group": {
        "id": "group_mm7dgarz",
        "title": "Dique"
@@ -29418,7 +29418,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-12-01 - 2026-12-01"
+        "text": "2026-12-07 - 2026-12-07"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -29429,12 +29429,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "8"
+        "display_value": "14"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-11-24 22:11:55 UTC"
+        "text": "2026-11-27 19:35:04 UTC"
        }
       ],
       "subitems": []
@@ -29443,7 +29443,7 @@
       "id": "13233510296",
       "name": "Traslado a Panama",
       "created_at": "2026-10-07T21:27:00Z",
-      "updated_at": "2026-11-24T22:26:25Z",
+      "updated_at": "2026-11-27T20:09:43Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -29457,12 +29457,12 @@
        {
         "id": "numeric_mm6zgcqw",
         "type": "numbers",
-        "text": "3"
+        "text": "4"
        },
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-12-01 - 2026-12-03"
+        "text": "2026-12-08 - 2026-12-11"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -29473,12 +29473,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "8"
+        "display_value": "16"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-11-24 22:26:25 UTC"
+        "text": "2026-11-27 20:09:43 UTC"
        }
       ],
       "subitems": []
@@ -29487,7 +29487,7 @@
       "id": "13095528126",
       "name": "POST-DIQUE  (Ejecución)",
       "created_at": "2026-09-21T16:11:12Z",
-      "updated_at": "2026-11-24T22:26:44Z",
+      "updated_at": "2026-11-27T20:10:05Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -29506,7 +29506,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-12-01 - 2026-12-06"
+        "text": "2026-12-11 - 2026-12-16"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -29517,12 +29517,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "6"
+        "display_value": "16"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-11-24 22:26:44 UTC"
+        "text": "2026-11-27 20:10:05 UTC"
        }
       ],
       "subitems": []
@@ -29531,7 +29531,7 @@
       "id": "13095528127",
       "name": "On Hire (Estimado)",
       "created_at": "2026-09-21T16:11:13Z",
-      "updated_at": "2026-11-24T22:26:53Z",
+      "updated_at": "2026-11-27T20:10:09Z",
       "group": {
        "id": "group_mm7d8a03",
        "title": "Post Dique"
@@ -29550,7 +29550,7 @@
        {
         "id": "timerange_mm78kjs",
         "type": "timeline",
-        "text": "2026-12-06 - 2026-12-06"
+        "text": "2026-12-17 - 2026-12-17"
        },
        {
         "id": "timerange_mm7yfj5p",
@@ -29561,12 +29561,12 @@
         "id": "formula_mm7ygv4s",
         "type": "formula",
         "text": "",
-        "display_value": "5"
+        "display_value": "16"
        },
        {
         "id": "pulse_updated_mm7gn7r8",
         "type": "last_updated",
-        "text": "2026-11-24 22:26:53 UTC"
+        "text": "2026-11-27 20:10:09 UTC"
        }
       ],
       "subitems": []
