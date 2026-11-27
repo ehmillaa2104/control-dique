@@ -16429,30 +16429,8 @@ window.DIQUE_MONDAY = {
    }
   }
  ],
- "_huella": "d223076ed6d0",
- "cambiosLectura": [
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Fecha Real",
-   "antes": "2026-10-21 a 2026-12-01",
-   "ahora": "2026-10-21 a 2026-12-07"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Diferencia",
-   "antes": "15",
-   "ahora": "21"
-  },
-  {
-   "tablero": "Cronograma",
-   "trabajo": "DIQUE (Ejecución)",
-   "campo": "Duración",
-   "antes": "42",
-   "ahora": "48"
-  }
- ],
+ "_huella": "057f7eb521da",
+ "cambiosLectura": [],
  "observaciones": [
   {
    "nivel": "info",
