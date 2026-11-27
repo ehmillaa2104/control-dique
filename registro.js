@@ -16,6 +16,7 @@ window.DIQUE_REGISTRO = {
       "fuente": "Reportes del superintendente (24 y 27 nov), seguimiento de obra en taller e informes diarios de Ingeniería (23 al 26 nov)",
       "avance": [
         { "zona": "Temas importantes", "items": [
+          { "txt": "Bote de caída libre: solicitud nueva del capitán, aprovechando el tiempo que abre el atraso del eje. El 27 nov se bajó con grúa hasta el piso del dique para pintarlo y hacer mantenimiento preventivo al bote, su estructura soporte y el pescante. Los andamios ya están cotizados y aprobados; el tiempo de grúa lo cobra el astillero aparte", "extra": "27 nov" },
           { "txt": "Eje de cola: al salir la camisa quedó a la vista un daño en el eje — rayado axial profundo y una fisura marcada en la zona donde asentaba la camisa. El 27 nov el eje salió completo hacia un taller especializado. La fecha de salida del dique queda sujeta al diagnóstico, la mecanización y la entrega del eje, todavía sin plazo confirmado", "extra": "27 nov" },
           { "txt": "Casco 100 % pintado y rotulado: nombre, número IMO y puerto de registro ya están en la proa", "extra": "terminado · 27 nov" },
           { "txt": "Tanques de carga: 2P, 3P, 3S y 5S terminados con pruebas de tintas; los que siguen abiertos van entre 90 y 95 %", "extra": "27 nov" },
@@ -42,6 +43,10 @@ window.DIQUE_REGISTRO = {
           { "txt": "Alarmas de alto nivel de los tanques de carga: verificación terminada", "extra": "terminado · 24 nov" },
           { "txt": "Tuberías de la sala de máquinas: desmontaje, fabricación e instalación, casi terminados; limpieza de la sentina antes del corte de plancha (23 nov)", "extra": "26 nov" }
         ] },
+        { "zona": "Cubierta y salvamento", "items": [
+          { "txt": "Bote de caída libre desembarcado: la grúa del astillero lo descolgó del pescante y lo asentó en el piso del dique, donde quedó asegurado por el personal. Desde ahí se le hará limpieza, pintura y mantenimiento al casco del bote, a su estructura soporte y al pescante", "extra": "27 nov" },
+          { "txt": "El bote llevaba la marca OUT OF SERVICE en el costado; el trabajo busca devolverlo a condición operativa junto con el resto del equipo de salvamento", "extra": "27 nov" }
+        ] },
         { "zona": "Obra viva", "items": [
           { "txt": "Casco terminado: obra viva, obra muerta, franja de flotación y rotulación de proa con nombre, número IMO y puerto de registro", "extra": "terminado · 27 nov" },
           { "txt": "Casco pintado: obra viva, obra muerta y franja de flotación; queda pendiente la rotulación", "extra": "24 nov" }
@@ -60,6 +65,10 @@ window.DIQUE_REGISTRO = {
         ] }
       ],
       "medios": [
+        { "tipo": "foto", "archivo": "registro/s10/n27_bote_01_izaje.jpg", "texto": "Bote de caída libre suspendido de la grúa del astillero, ya librado del pescante", "grupo": "Bote de caída libre · 27 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n27_bote_02_descenso.jpg", "texto": "Descenso del bote hacia el piso del dique, con el buque al fondo en la cuna", "grupo": "Bote de caída libre · 27 nov" },
+        { "tipo": "foto", "archivo": "registro/s10/n27_bote_03_en-muelle.jpg", "texto": "Bote asentado en el piso del dique y asegurado por el personal, listo para limpieza, pintura y mantenimiento", "grupo": "Bote de caída libre · 27 nov" },
+        { "tipo": "video", "archivo": "registro/s10/n27_bote_04_video-maniobra.mp4", "texto": "Maniobra de descenso del bote con la grúa del astillero", "grupo": "Bote de caída libre · 27 nov" },
         { "tipo": "foto", "archivo": "registro/s10/n27_eje_01_salida-taller.jpg", "texto": "Eje de cola extraído completo y cargado para llevarlo al taller especializado", "grupo": "Eje de cola · 27 nov" },
         { "tipo": "foto", "archivo": "registro/s10/n27_eje_02_alojamiento-buje.jpg", "texto": "Alojamiento con brida y buje de bronce desmontados: los cojinetes quedan accesibles para medición", "grupo": "Eje de cola · 27 nov" },
         { "tipo": "foto", "archivo": "registro/s10/n27_eje_03_dano-marcado.jpg", "texto": "Asiento de la camisa: rayado axial profundo y fisura abierta en el escalón de diámetro; la zona quedó marcada con cinta", "grupo": "Eje de cola · 27 nov" },
